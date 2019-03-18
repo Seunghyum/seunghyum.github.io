@@ -1,0 +1,3 @@
+
+jekyll serve --draft 초안을 같이 표시한다.
+jekyll serve --livereload 수정마다 새로고침된다
