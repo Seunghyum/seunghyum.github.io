@@ -1,2 +1,94 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-03-18T13:15:01+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Developer Dave</title><subtitle>JS, 데이터 시각화에 
-관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-03-18T23:45:09+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Developer Dave</title><subtitle>JS, 데이터 시각화에 
+관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">SGIS-shpToGeojson</title><link href="http://localhost:4000/data_processing/SGIS-shpToGeojson/" rel="alternate" type="text/html" title="SGIS-shpToGeojson" /><published>2018-09-28T00:00:00+09:00</published><updated>2018-09-28T00:00:00+09:00</updated><id>http://localhost:4000/data_processing/SGIS-shpToGeojson</id><content type="html" xml:base="http://localhost:4000/data_processing/SGIS-shpToGeojson/">&lt;h2 id=&quot;sgis에서-받은-지도데이터shp를-geojson으로-변경하는-작업-내용&quot;&gt;SGIS에서 받은 지도데이터(.shp)를 geojson으로 변경하는 작업 내용&lt;/h2&gt;
+
+&lt;p&gt;2018년에 쓴 글을 재업로드하였습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;지도데이터-가공-과정&quot;&gt;지도데이터 가공 과정&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;shapefile을 simplify를 진행.
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;우선 mapshaper라는 shp파일 에디팅 툴로 편집. &lt;a href=&quot;http://mapshaper.org/&quot;&gt;GUI온라인툴&lt;/a&gt;도 있음. 본인은 node CUI로 진행.&lt;/p&gt;
+
+        &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ mapshaper -i 전환할 파일 \
+            encoding=euc-kr  \
+            -simplify weighted 0.5% \ // 0.5%로 단순화
+            -o format=shapefile \
+            바뀐 파일명.shp
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;shapefile(R) -&amp;gt; geojson 전환
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/ogr2ogr&quot;&gt;ogr2ogr npm 라이브러리&lt;/a&gt;를 사용
+        &lt;ul&gt;
+          &lt;li&gt;커맨드 :
+            &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ ogr2ogr -f GeoJSON -t_srs crs:84 [geo json파일명] [shp파일명] 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;            &lt;/div&gt;
+          &lt;/li&gt;
+          &lt;li&gt;중요설명 : -t_srs crs:84 로 해줘야 제대로 projection이 됨(지도 투영법).&lt;/li&gt;
+          &lt;li&gt;-&amp;gt; 0.5%로 했더니 3~4MB인데 렌더링 시 느리다면 더 작게하는 것을 추천&lt;/li&gt;
+          &lt;li&gt;-&amp;gt; mapshaper로도 geojson을 만들 수 있지만 투영법 옵션이(-proj) 잘 안먹혀서 ogr2ogr, geo2topo를 적용함.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;만일 geojson에서 한글이 깨져서 나오는 경우&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;한글인코딩 문제
+    &lt;ul&gt;
+      &lt;li&gt;shpfile의 인코딩 에러. QGIS를 설치(로컬에서 shpfile을 수정할 수 있음)&lt;/li&gt;
+      &lt;li&gt;QGIS 상단네비게이션 바의 “속성 테이블” 열기를 클릭해보면 한글 깨지는 것을 확인가능.&lt;/li&gt;
+      &lt;li&gt;링크 로 들어가서 지시대로 하면 shpfile 인코딩에러 수정…. 아… 내 삽질….&lt;/li&gt;
+      &lt;li&gt;shpfile로 다운로드는 해당 레이어를 우클릭  후 다른이름으로 저장하기 누르면 됨. 이후 다시 mapshaper, ogr2ogr 하면 됨.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;projection(좌표계) 문제
+    &lt;ul&gt;
+      &lt;li&gt;막상 위의 한글문제를 해결해도 geojson파일을 열어보면 좌표계가 127.023168001711184, 37.578041688607954 의 형태가 아님.&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;이 문제는 한글 인코등 해결처럼 속성에서 좌표계를 스크롤 맨 밑의 사용자 정의 좌표계를&lt;/p&gt;
+
+        &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+proj=tmerc +lat_0=38 +lon_0=127.5 +k=0.9996 +x_0=1000000 +y_0=2000000 +ellps=GRS80 +units=m +no_defs 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+
+        &lt;p&gt;로 정의 해야함. 정의한 다음 다시 다른 이름을 다운로드 진행.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;geojson -&amp;gt; topojson으로 전환&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;npm topojson-client 설치&lt;/li&gt;
+  &lt;li&gt;커맨드 : geo2topo [geo-json파일] &amp;gt; [topo-json파일]&lt;/li&gt;
+  &lt;li&gt;topojson 라이브러리는 현재 커맨드라인 툴이 사용불가. 반드시 topojson-client 설치 후 geo2topo로 할것. -Note also that topojson/topojson is no longer the command-line tools for manipulating TopoJSON — that’s all been put in the topojson/topojson-client repository.(출처)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;-&amp;gt; 0.5%로 했더니 3~4MB인데 렌더링 시 느리다면 더 작게하는 것을 추천&lt;/p&gt;
+
+&lt;p&gt;-&amp;gt; mapshaper로도 topojson, geojson을 만들 수 있지만 투영법 옵션이(-proj) 잘 안먹혀서 ogr2ogr, geo2topo를 적용함.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;느낀점 및 팁&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;gis데이터 가공은 projection(투영법) 설정이 중요.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;활용가능한 결과물&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;통계청 파일 및 GeoJson 가공 데이터 파일&lt;/li&gt;
+      &lt;li&gt;이름_simple.shp : 0.5%로 simplify한 shapefile&lt;/li&gt;
+      &lt;li&gt;이름_geo.json : 가공한 GeoJson 파일&lt;/li&gt;
+      &lt;li&gt;index.html : 예제 코드 &lt;a href=&quot;https://browsersync.io/&quot;&gt;browser-sync&lt;/a&gt; 같은 툴로 Application 형태로 띄워야 에러가 안남. 이유는 모르겠지만 포트로 안 띄우면 에러.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;주의사항&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;geojson까지만 변경함. topojson까지는 변경하지 않음.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Shp" /><category term="GeoJson" /><category term="TopoJson" /><summary type="html">SGIS에서 받은 지도데이터(.shp)를 geojson으로 변경하는 작업 내용</summary></entry></feed>
