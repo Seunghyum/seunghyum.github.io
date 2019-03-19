@@ -29,7 +29,10 @@ layout: archive
   {% for tag in site.tags %}
     {% if tag[1].size == i %}
       <section id="{{ tag[0] | slugify | downcase }}" class="taxonomy__section">
-        <h2 class="archive__subtitle">{{ tag[0] }}</h2>
+        <!-- <h2 class="archive__subtitle">{{ tag[0] }}</h2> -->
+        <button class="btn btn--info btn--small">
+          <i class="fas fa-tag"></i> &nbsp;{{ tag[0] }}
+        </button>
         <div class="entries-{{ page.entries_layout | default: 'list' }}">
           {% for post in tag.last %}
             {% include archive-single.html type=page.entries_layout %}

@@ -3,6 +3,7 @@
    ========================================================================== */
 
 #main {
+  padding-top:15px;
   @include clearfix;
   margin-left: auto;
   margin-right: auto;
@@ -20,6 +21,7 @@
 }
 
 .page {
+  padding-left: 30px;
   @include breakpoint($large) {
     float: right;
     width: calc(100% - #{$right-sidebar-width-narrow});
