@@ -6,7 +6,7 @@
 - 로컬 서버 띄우기
   - jekyll serve --draft # 초안을 같이 표시한다.
   - jekyll serve --livereload # 수정마다 새로고침된다.
-  - JEKYLL_ENV=production jekyll serve
+  - JEKYLL_ENV=production jekyll serve  --livereload
 - 빌드
   - JEKYLL_ENV=production jekyll build
 
