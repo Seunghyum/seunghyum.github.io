@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EA%B0%80%EA%B3%B5/SGIS-shpToGeojson/</loc>
+<loc>/%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EA%B0%80%EA%B3%B5/SGIS-shpToGeojson/</loc>
 <lastmod>2018-09-28T00:00:00+09:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/about/</loc>
+<loc>/about/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/categories/</loc>
+<loc>/categories/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/</loc>
+<loc>/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/tags/</loc>
+<loc>/tags/</loc>
 </url>
 </urlset>
