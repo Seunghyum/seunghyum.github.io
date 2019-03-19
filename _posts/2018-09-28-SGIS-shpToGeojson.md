@@ -3,6 +3,7 @@ layout: posts
 title:  "SGIS-shpToGeojson"
 categories: [데이터 가공]
 tags: [ShapeFile, GeoJson, TopoJson]
+comments: true
 toc: true
 ---
 

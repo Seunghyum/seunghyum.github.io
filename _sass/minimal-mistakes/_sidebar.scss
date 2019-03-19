@@ -7,6 +7,10 @@
    ========================================================================== */
 
 .sidebar {
+  // background-image: url("/assets/images/bg_3.jpg");
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-size: cover;
   @include clearfix();
   @include breakpoint(max-width $large) {
     /* fix z-index order of follow links */

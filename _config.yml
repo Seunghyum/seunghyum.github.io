@@ -299,5 +299,10 @@ defaults:
     values:
       layout: single
       author_profile: true
+      comments: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
 
 google_fonts: "Noto+Sans+KR:400,700"
