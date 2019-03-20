@@ -75,7 +75,7 @@ Prodo님이 들어왔습니다.
 입출력 예 #1
 문제의 설명과 같다.
 
-## 나의 풀이
+## 나의 답안
 ```javascript
 function solution(record) {
     let accounts = [], events = [], answer = [];
@@ -178,5 +178,5 @@ describe('test1', () => {
 ```
 
 그러다보니 한 유저가 닉네임을 변경할때마다 모든 객체들을 탐색해야했다. 
-문제를 풀고 [카카오의 해설](http://tech.kakao.com/2018/09/21/kakao-blind-recruitment-for2019-round-1/) 을 보니 두 연결배열에 각각 accouts와 events에 담아 관리하면 쉽다는 해설을 보고 코드를 다시 짰다. 
+문제를 풀고 [카카오의 해설](http://tech.kakao.com/2018/09/21/kakao-blind-recruitment-for2019-round-1/) 을 보니 ***두 연결배열에 각각 accouts와 events에 담아 관리하면 쉽다***는 해설을 보고 코드를 다시 짰다. 
 해설을 보고나니 너무 간단해 허탈했다. 아직 갈길이 먼 것 같다.
