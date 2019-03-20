@@ -79,4 +79,48 @@ stringfiedResult는 그값들의 좌표값들이다.
 stringfiedResult에서 없는 좌표값을 찾는 것이 내가 생각한 답이었다.
 
 ## 다른 사람들의 풀이
-- 나와는 다른 작성자분께 문의하여 답을 분석해볼 예정이다.
+
+[YanghaKoo 님이 푸신 식](https://github.com/YanghaKoo/algorithm-study/blob/master/NAVERLINE/demo/demo1.js)을 보면 더 간단하다. 
+```javascript
+function solution(v) {
+  var a = {}
+  var b = {}
+  const answer = []
+  
+  v.forEach(r => {
+    if(a[r[0]]){
+      a[r[0]] = a[r[0]] +1
+    }else{
+      a[r[0]] = 1
+    }
+
+    if(b[r[1]]){
+      b[r[1]] = b[r[1]] +1
+    }else{
+      b[r[1]] = 1
+    }
+
+  });
+
+  for(var i in a){
+    if(a[i] === 1) {
+      answer.push(Number(i))
+      break;
+    }
+  }
+  
+  for(var i in b){
+    if(b[i] === 1) {
+      answer.push(Number(i))
+      break;
+    }
+  }
+
+  return answer
+}
+```
+연결배열로 input 값으로 주어진 각 숫자들의 출현빈도를 뽑고  
+뽑은 것들중 1번 출현한 숫자의 x,y축 값을 리턴하여 답을 내고 있다.
+
+내 답의 경우 JSON.stringfy 매서드로 배열을 문자화시켜 그것들을 비교하고 있다.  
+문자화 연산의 비용을 고려하자면 연결배열로 문제를 해결하는 방법이 더 효율적일 것 같다.
