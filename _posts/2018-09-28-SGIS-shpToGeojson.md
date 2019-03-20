@@ -3,6 +3,7 @@ layout: posts
 title:  "SGIS-shpToGeojson"
 categories: [데이터 가공]
 tags: [ShapeFile, GeoJson, TopoJson]
+comments: true
 toc: true
 ---
 
@@ -15,7 +16,7 @@ toc: true
 - shapefile을 simplify를 진행. 
   - 우선 mapshaper라는 shp파일 에디팅 툴로 편집. [GUI온라인툴](http://mapshaper.org/)도 있음. 본인은 node CUI로 진행. 
 
-    ```
+    ```bash
     $ mapshaper -i 전환할 파일 \
                 encoding=euc-kr  \
                 -simplify weighted 0.5% \ // 0.5%로 단순화
@@ -26,7 +27,7 @@ toc: true
 - shapefile(R) -> geojson 전환
   - [ogr2ogr npm 라이브러리](https://www.npmjs.com/package/ogr2ogr)를 사용 
     - 커맨드 : 
-    ```
+    ```bash
     $ ogr2ogr -f GeoJSON -t_srs crs:84 [geo json파일명] [shp파일명] 
     ```
     - 중요설명 : -t_srs crs:84 로 해줘야 제대로 projection이 됨(지도 투영법).
@@ -45,7 +46,7 @@ toc: true
   - 막상 위의 한글문제를 해결해도 geojson파일을 열어보면 좌표계가 127.023168001711184, 37.578041688607954 의 형태가 아님. 
   - 이 문제는 한글 인코등 해결처럼 속성에서 좌표계를 스크롤 맨 밑의 사용자 정의 좌표계를 
     
-    ``` 
+    ```bash
     +proj=tmerc +lat_0=38 +lon_0=127.5 +k=0.9996 +x_0=1000000 +y_0=2000000 +ellps=GRS80 +units=m +no_defs 
     ```
 

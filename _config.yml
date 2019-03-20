@@ -295,7 +295,7 @@ defaults:
       related: true
   - scope:
       path: '_pages'
-      type: 'pages'
+      type: pages
     values:
       layout: single
       author_profile: true
