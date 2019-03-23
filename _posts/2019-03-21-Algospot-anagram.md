@@ -5,12 +5,13 @@ categories: [코딩 테스트]
 tags: [Javascript]
 comments: true
 ---
+
 ## 설명
 각 문자열의 알파벳을 재배열하였을때 같은 단어가 되는 단어들.  
 <br>
 ![Anagram - Wikipedia](https://upload.wikimedia.org/wikipedia/commons/3/33/Anagram_Listen_%3D_Silent.gif)
 ### 예시
-tab - bat
+tab - bat  
 github - hbuitg
 
 ## 풀어본 문제
@@ -83,17 +84,13 @@ function solution(v) {
       else stringsStats[strings[j]] = 1
     }
     let answer = "";
-    console.log("stringsStats : ", stringsStats)
-    console.log("reduceStrings : ", reduceStrings(strings, stringsStats, answer))
 
   }
   // return answer
 }
 
 function reduceStrings(strings, stringsStats, answer) {
-  // let stringArray = [...strings],
-  // let stats = {...stringsStats},
-  let stats = stringsStats,
+  let stats = {...stringsStats},
       stringArray = [],
       newAnswer = answer;
   

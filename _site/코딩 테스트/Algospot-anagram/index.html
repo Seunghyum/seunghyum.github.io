@@ -276,7 +276,7 @@
 <br />
 <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Anagram_Listen_%3D_Silent.gif" alt="Anagram - Wikipedia" /></p>
 <h3 id="예시">예시</h3>
-<p>tab - bat
+<p>tab - bat<br />
 github - hbuitg</p>
 
 <h2 id="풀어본-문제">풀어본 문제</h2>
@@ -349,17 +349,13 @@ aabcdd
       <span class="k">else</span> <span class="nx">stringsStats</span><span class="p">[</span><span class="nx">strings</span><span class="p">[</span><span class="nx">j</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="p">}</span>
     <span class="kd">let</span> <span class="nx">answer</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"stringsStats : "</span><span class="p">,</span> <span class="nx">stringsStats</span><span class="p">)</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"reduceStrings : "</span><span class="p">,</span> <span class="nx">reduceStrings</span><span class="p">(</span><span class="nx">strings</span><span class="p">,</span> <span class="nx">stringsStats</span><span class="p">,</span> <span class="nx">answer</span><span class="p">))</span>
 
   <span class="p">}</span>
   <span class="c1">// return answer</span>
 <span class="p">}</span>
 
 <span class="kd">function</span> <span class="nx">reduceStrings</span><span class="p">(</span><span class="nx">strings</span><span class="p">,</span> <span class="nx">stringsStats</span><span class="p">,</span> <span class="nx">answer</span><span class="p">)</span> <span class="p">{</span>
-  <span class="c1">// let stringArray = [...strings],</span>
-  <span class="c1">// let stats = {...stringsStats},</span>
-  <span class="kd">let</span> <span class="nx">stats</span> <span class="o">=</span> <span class="nx">stringsStats</span><span class="p">,</span>
+  <span class="kd">let</span> <span class="nx">stats</span> <span class="o">=</span> <span class="p">{...</span><span class="nx">stringsStats</span><span class="p">},</span>
       <span class="nx">stringArray</span> <span class="o">=</span> <span class="p">[],</span>
       <span class="nx">newAnswer</span> <span class="o">=</span> <span class="nx">answer</span><span class="p">;</span>
   
