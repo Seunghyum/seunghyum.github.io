@@ -1,0 +1,646 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.15.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[코딩 테스트] Anagram 문제 - javascript - Developer Dave</title>
+<meta name="description" content="설명각 문자열의 알파벳을 재배열하였을때 같은 단어가 되는 단어들.예시tab - batgithub - hbuitg">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="Developer Dave">
+<meta property="og:title" content="[코딩 테스트] Anagram 문제 - javascript">
+<meta property="og:url" content="/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8/Algospot-anagram/">
+
+
+  <meta property="og:description" content="설명각 문자열의 알파벳을 재배열하였을때 같은 단어가 되는 단어들.예시tab - batgithub - hbuitg">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2019-03-21T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8/Algospot-anagram/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Moon Seung Hyun",
+      "url": null,
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Developer Dave Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--posts">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">Developer Dave</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about" >About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/" >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >Tags</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar text-center">
+      
+
+      
+        <img src="/assets/images/profile.jpeg" alt="Moon Seung Hyun" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    <div class="text-center">
+      
+        <h3 class="author__name" itemprop="name">Moon Seung Hyun</h3>
+        <p class="author__name" itemprop="name">Dave</p>
+      
+    </div>
+    
+      <p class="author__bio" itemprop="description">
+        Javascript, 데이터 시각화에 관심이 많은 개발자입니다.
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Suwon, Republic of Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:antmgu@gmail.com" rel="nofollow noopener noreferrer"><i class="far fa-fw fa-envelope" aria-hidden="true"></i> antmgu@gmail.com</a></li>
+          
+        
+          
+            <li><a href="https://github.com/Seunghyum" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+      
+
+      
+
+      <!-- 
+        <li>
+          <a href="mailto:antmgu@gmail.com">
+            <meta itemprop="email" content="antmgu@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> 이메일
+          </a>
+        </li>
+       -->
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title">[코딩 테스트] Anagram 문제 - javascript</h1>
+    
+    <h2 id="설명">설명</h2>
+<p>각 문자열의 알파벳을 재배열하였을때 같은 단어가 되는 단어들.<br />
+<br />
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Anagram_Listen_%3D_Silent.gif" alt="Anagram - Wikipedia" /></p>
+<h3 id="예시">예시</h3>
+<p>tab - bat
+github - hbuitg</p>
+
+<h2 id="풀어본-문제">풀어본 문제</h2>
+<ul>
+  <li>Algospot 문제</li>
+  <li>Baekjoon 문제</li>
+</ul>
+
+<h2 id="algospot-문제">Algospot 문제</h2>
+<ul>
+  <li><a href="https://algospot.com/judge/problem/read/ANAGRAM">바로가기 링크</a></li>
+</ul>
+
+<h2 id="예제-입력">예제 입력</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3
+weird wired
+apple angle
+apple elppa
+</code></pre></div></div>
+
+<h2 id="예제-출력">예제 출력</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Yes
+No.
+Yes
+</code></pre></div></div>
+
+<h2 id="내가-작성한-답안">내가 작성한 답안</h2>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">v</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">inputs</span> <span class="o">=</span> <span class="nx">v</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">),</span> 
+        <span class="nx">inputsLength</span> <span class="o">=</span> <span class="nx">inputs</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">answer</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
+
+  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">inputsLength</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">elements</span> <span class="o">=</span> <span class="nx">inputs</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">split</span><span class="p">(</span><span class="s2">" "</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">elements</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="nx">elements</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="nx">answer</span> <span class="o">+=</span> <span class="s2">"No.</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+    <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">answer</span> <span class="o">+=</span> <span class="nx">elements</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">split</span><span class="p">(</span><span class="s2">""</span><span class="p">).</span><span class="nx">sort</span><span class="p">().</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">reducer</span><span class="p">)</span> <span class="o">==</span> <span class="nx">elements</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">split</span><span class="p">(</span><span class="s2">""</span><span class="p">).</span><span class="nx">sort</span><span class="p">().</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">accumulator</span><span class="p">,</span> <span class="nx">currentValue</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">accumulator</span> <span class="o">+</span> <span class="nx">currentValue</span><span class="p">)</span> <span class="p">?</span> <span class="s2">"YES</span><span class="se">\n</span><span class="s2">"</span> <span class="p">:</span> <span class="s2">"No.</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">answer</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<h2 id="baekjoon-문제---anagram-generater">Baekjoon 문제 - Anagram Generater</h2>
+<ul>
+  <li><a href="https://www.acmicpc.net/problem/6443">바로가기 링크</a></li>
+</ul>
+
+<h2 id="입력값">입력값</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3
+aabc
+aabcdd
+</code></pre></div></div>
+
+<h2 id="내가-작성한-답안-1">내가 작성한 답안</h2>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">v</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">inputs</span> <span class="o">=</span> <span class="nx">v</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">),</span> 
+        <span class="nx">inputsLength</span> <span class="o">=</span> <span class="nx">inputs</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">answers</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
+  
+  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">inputsLength</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// 단어들 반복</span>
+    <span class="kd">const</span> <span class="nx">strings</span> <span class="o">=</span> <span class="nx">inputs</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">split</span><span class="p">(</span><span class="s2">""</span><span class="p">),</span>
+          <span class="nx">stringsLength</span> <span class="o">=</span> <span class="nx">strings</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+    <span class="kd">let</span> <span class="nx">stringsStats</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">j</span><span class="o">&lt;</span><span class="nx">stringsLength</span><span class="p">;</span><span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// {a: 2, b:1, c: 1}</span>
+      <span class="k">if</span><span class="p">(</span><span class="nx">stringsStats</span><span class="p">[</span><span class="nx">strings</span><span class="p">[</span><span class="nx">j</span><span class="p">]])</span> <span class="nx">stringsStats</span><span class="p">[</span><span class="nx">strings</span><span class="p">[</span><span class="nx">j</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span>
+      <span class="k">else</span> <span class="nx">stringsStats</span><span class="p">[</span><span class="nx">strings</span><span class="p">[</span><span class="nx">j</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="p">}</span>
+    <span class="kd">let</span> <span class="nx">answer</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"stringsStats : "</span><span class="p">,</span> <span class="nx">stringsStats</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"reduceStrings : "</span><span class="p">,</span> <span class="nx">reduceStrings</span><span class="p">(</span><span class="nx">strings</span><span class="p">,</span> <span class="nx">stringsStats</span><span class="p">,</span> <span class="nx">answer</span><span class="p">))</span>
+
+  <span class="p">}</span>
+  <span class="c1">// return answer</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">reduceStrings</span><span class="p">(</span><span class="nx">strings</span><span class="p">,</span> <span class="nx">stringsStats</span><span class="p">,</span> <span class="nx">answer</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// let stringArray = [...strings],</span>
+  <span class="c1">// let stats = {...stringsStats},</span>
+  <span class="kd">let</span> <span class="nx">stats</span> <span class="o">=</span> <span class="nx">stringsStats</span><span class="p">,</span>
+      <span class="nx">stringArray</span> <span class="o">=</span> <span class="p">[],</span>
+      <span class="nx">newAnswer</span> <span class="o">=</span> <span class="nx">answer</span><span class="p">;</span>
+  
+  <span class="k">for</span><span class="p">(</span><span class="nx">s</span> <span class="k">in</span> <span class="nx">stats</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">stats</span><span class="p">[</span><span class="nx">s</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">stats</span><span class="p">[</span><span class="nx">s</span><span class="p">];</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">stringArray</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span>
+      <span class="p">}</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">continue</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nx">stringArray</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">sa</span><span class="p">)</span><span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">newStringArray</span> <span class="o">=</span> <span class="p">[];</span> 
+    <span class="nx">newAnswer</span> <span class="o">+=</span> <span class="nx">sa</span><span class="p">;</span>
+    <span class="nx">stats</span><span class="p">[</span><span class="nx">sa</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="nx">s</span> <span class="k">in</span> <span class="nx">stats</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span><span class="p">(</span><span class="nx">stats</span><span class="p">[</span><span class="nx">s</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="nx">newStringArray</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span>
+      <span class="k">else</span> <span class="k">continue</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">newStringArray</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="nx">reduceStrings</span><span class="p">(</span><span class="nx">newStringArray</span><span class="p">,</span> <span class="nx">stats</span><span class="p">,</span> <span class="nx">newAnswer</span><span class="p">)</span>
+  <span class="p">})</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="느낀점">느낀점</h2>
+<p>처음 anagram 문제를 접한것은 같이 js를 공부하던 친구가 회사면접에서 받은 질문에서 시작되었다.<br />
+막상 나도 “그때 나였더라면 제대로 풀 수 있었을까?” 라는 생각에 접하게되었다.<br />
+아마 Youtube에 올라온 구글 면접 예시 영상의 분위기 였을것 같다. <a href="https://www.youtube.com/watch?v=BF3FLDAzWxo">링크</a></p>
+
+<p>그다음 비슷한 문제가 어디있지 하며 찾은게 Algospot의 문제와 Backjoon 사이트의 문제였다.</p>
+
+<p>Algospot의 문제는 생각했을때 비교적 간단했다. 두 문자열이 주어지고 같은지 비교만 하면 되었다.<br />
+하지만 Backjoon 사이트의 아나그램 문제를 풀어보며 <strong><em>“내가 js를 잘 이해하고 있는건가?”</em></strong> 라는 생각이 들었다.</p>
+
+<p>Backjoon 사이트의 아나그램 문제는 <strong>하나의 문자열을 주고 그것에 해당하는 아나그램을 산출하라</strong>는 문제였다.<br />
+제한 조건은</p>
+<ul>
+  <li>알파벳 순서대로 나열할것</li>
+  <li>대소문자 구분할것</li>
+  <li>입력받은 철자들 중 중복되는 철자들이 있을경우, 중복해서 출력할 수 있으나 하나만 출력하라. ex) google -&gt; ggoole이 하나만 출력</li>
+</ul>
+
+<h3 id="문자열-풀이방식">문자열 풀이방식</h3>
+<ol>
+  <li>받은 문자열을 array로 쪼개어 sorting하여 abc순으로 구성한다.</li>
+  <li>for문 재귀함수로 구성하여 n!로 문제를 해결</li>
+</ol>
+
+<p>이라고 생각했다. 하지만 이럴경우 중복되는 문자들이 있을때 적절하게 문제를 해결하지 못했다.<br />
+가령 [a,a,b,c]가 있을떄 첫번째 문자가 b가 나올경우 [a,a,c]가 남는다는 것이다.<br />
+a는 1개로 취급되어야하는데 2개로 취급된다는 것이다.</p>
+
+<p>내가 삽질을 하며 얻은 해결방법은</p>
+<ol>
+  <li>[a,a,b,c] 의 문자열을 루프를 돌때마다 하나씩 꺼내들고</li>
+  <li>{a:2, b:1, c:1}같은 형식의 객체로 루프를 돌때마다 문자열의 개수를 카운팅하고</li>
+  <li>카운팅한 객체들 중 0이 아닌 문자들을 배열에 담고[a,b,c]</li>
+  <li>1번을 다시 반복하며 배열에 문자가 하나도 없을때까지 반복한다.
+는 것이었다.</li>
+</ol>
+
+<p>하지만 이 루프를 돌며 반복하는 코드에서 스코프 문제가 발생했다.</p>
+
+
+<ul class="taxonomy__index">
+  
+  
+    <li>
+      <a href="#2019">
+        <strong>2019</strong> <span class="taxonomy__count">2</span>
+      </a>
+    </li>
+  
+    <li>
+      <a href="#2018">
+        <strong>2018</strong> <span class="taxonomy__count">1</span>
+      </a>
+    </li>
+  
+</ul>
+
+
+
+  <section id="2019" class="taxonomy__section">
+    <h2 class="archive__subtitle">2019</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8/Algospot-anagram/" rel="permalink">[코딩 테스트] Anagram 문제 - javascript
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">설명
+각 문자열의 알파벳을 재배열하였을때 같은 단어가 되는 단어들.
+
+
+예시
+tab - bat
+github - hbuitg
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8/Kakao-open-chatting-room/" rel="permalink">[코딩 테스트] 2019 카카오 신입 공채 1차 코딩 테스트 문제 with Javascript
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">오픈채팅방
+
+  문제 바로가기 링크
+  카카오의 설명 블로그
+
+    나의 답안
+    ```javascript
+function solution(record) {
+  let accounts = [], events = [], answer = [];
+
+    function setEn...</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
+  <section id="2018" class="taxonomy__section">
+    <h2 class="archive__subtitle">2018</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EA%B0%80%EA%B3%B5/SGIS-shpToGeojson/" rel="permalink">SGIS-shpToGeojson
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">SGIS에서 받은 지도데이터(.shp)를 geojson으로 변경하는 작업 내용
+
+</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
+
+  </div>
+</div>
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/Seunghyum" rel="nofollow noopener noreferrer"><i class="Seunghyum" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Moon Seung Hyun. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script data-search-pseudo-elements defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-136499960-1']);
+  
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8/Algospot-anagram/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8/Algospot-anagram"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://seunghyum.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+  </body>
+</html>

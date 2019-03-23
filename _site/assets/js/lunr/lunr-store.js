@@ -8,4 +8,9 @@ var store = [{
         "excerpt":"오픈채팅방 문제 바로가기 링크 카카오의 설명 블로그 나의 답안 function solution(record) { let accounts = [], events = [], answer = []; function setEnterProcess(message, userId, nickName) { const findAccountByUserId = accounts.find(a =&gt; a.userId == userId) if(findAccountByUserId &amp;&amp; findAccountByUserId.nickName !== nickName) findAccountByUserId.nickName = nickName; else accounts.push({userId, nickName}); events.push({message, userId}); } function...","categories": ["코딩 테스트"],
         "tags": ["Javascript"],
         "url": "/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8/Kakao-open-chatting-room/",
+        "teaser":null},{
+        "title": "[코딩 테스트] Anagram 문제 - javascript",
+        "excerpt":"설명 각 문자열의 알파벳을 재배열하였을때 같은 단어가 되는 단어들. 예시 tab - bat github - hbuitg 풀어본 문제 Algospot 문제 Baekjoon 문제 Algospot 문제 바로가기 링크 예제 입력 3 weird wired apple angle apple elppa 예제 출력 Yes No. Yes 내가 작성한 답안 function solution(v) { const inputs = v.split(\"\\n\"),...","categories": ["코딩 테스트"],
+        "tags": ["Javascript"],
+        "url": "/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8/Algospot-anagram/",
         "teaser":null}]
