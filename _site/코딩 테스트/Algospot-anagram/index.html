@@ -323,6 +323,8 @@ Yes
 
 </code></pre></div></div>
 
+<h2 id="더-좋은-방식-찾기---onlogn-보다-낮은방법">더 좋은 방식 찾기 - O(NlogN) 보다 낮은방법</h2>
+
 <h2 id="baekjoon-문제---anagram-generater">Baekjoon 문제 - Anagram Generater</h2>
 <ul>
   <li><a href="https://www.acmicpc.net/problem/6443">바로가기 링크</a></li>
@@ -340,42 +342,50 @@ aabcdd
         <span class="nx">inputsLength</span> <span class="o">=</span> <span class="nx">inputs</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
   <span class="kd">let</span> <span class="nx">answers</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
   
-  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">inputsLength</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// 단어들 반복</span>
+  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">inputsLength</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// 여러줄의 단어들 반복</span>
     <span class="kd">const</span> <span class="nx">strings</span> <span class="o">=</span> <span class="nx">inputs</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">split</span><span class="p">(</span><span class="s2">""</span><span class="p">),</span>
           <span class="nx">stringsLength</span> <span class="o">=</span> <span class="nx">strings</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
     <span class="kd">let</span> <span class="nx">stringsStats</span> <span class="o">=</span> <span class="p">{}</span>
+
     <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">j</span><span class="o">&lt;</span><span class="nx">stringsLength</span><span class="p">;</span><span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// {a: 2, b:1, c: 1}</span>
       <span class="k">if</span><span class="p">(</span><span class="nx">stringsStats</span><span class="p">[</span><span class="nx">strings</span><span class="p">[</span><span class="nx">j</span><span class="p">]])</span> <span class="nx">stringsStats</span><span class="p">[</span><span class="nx">strings</span><span class="p">[</span><span class="nx">j</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span>
       <span class="k">else</span> <span class="nx">stringsStats</span><span class="p">[</span><span class="nx">strings</span><span class="p">[</span><span class="nx">j</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="p">}</span>
-    <span class="kd">let</span> <span class="nx">answer</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
 
+    <span class="kd">let</span> <span class="nx">initArray</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span><span class="p">(</span><span class="nx">s</span> <span class="k">in</span> <span class="nx">stringsStats</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// [a,b,c]</span>
+      <span class="k">if</span><span class="p">(</span><span class="nx">stringsStats</span><span class="p">[</span><span class="nx">s</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="nx">initArray</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span>
+      <span class="k">else</span> <span class="k">continue</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="kd">let</span> <span class="nx">answer</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"initArray : "</span><span class="p">,</span> <span class="nx">initArray</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"stringsStats : "</span><span class="p">,</span> <span class="nx">stringsStats</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"reduceStrings : "</span><span class="p">,</span> <span class="nx">reduceStrings</span><span class="p">(</span><span class="nx">initArray</span><span class="p">,</span> <span class="nx">stringsStats</span><span class="p">,</span> <span class="nx">answer</span><span class="p">))</span>
   <span class="p">}</span>
   <span class="c1">// return answer</span>
 <span class="p">}</span>
 
 <span class="kd">function</span> <span class="nx">reduceStrings</span><span class="p">(</span><span class="nx">strings</span><span class="p">,</span> <span class="nx">stringsStats</span><span class="p">,</span> <span class="nx">answer</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kd">let</span> <span class="nx">stats</span> <span class="o">=</span> <span class="p">{...</span><span class="nx">stringsStats</span><span class="p">},</span>
-      <span class="nx">stringArray</span> <span class="o">=</span> <span class="p">[],</span>
-      <span class="nx">newAnswer</span> <span class="o">=</span> <span class="nx">answer</span><span class="p">;</span>
-  
-  <span class="k">for</span><span class="p">(</span><span class="nx">s</span> <span class="k">in</span> <span class="nx">stats</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span><span class="p">(</span><span class="nx">stats</span><span class="p">[</span><span class="nx">s</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">stats</span><span class="p">[</span><span class="nx">s</span><span class="p">];</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">stringArray</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span>
-      <span class="p">}</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="k">continue</span><span class="p">;</span>
-  <span class="p">}</span>
+  <span class="kd">let</span> <span class="nx">stringArray</span> <span class="o">=</span> <span class="p">[...</span><span class="nx">strings</span><span class="p">],</span>
+      <span class="nx">stats</span> <span class="o">=</span> <span class="p">{...</span><span class="nx">stringsStats</span><span class="p">};</span>
 
   <span class="nx">stringArray</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">sa</span><span class="p">)</span><span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">newStringArray</span> <span class="o">=</span> <span class="p">[];</span> 
-    <span class="nx">newAnswer</span> <span class="o">+=</span> <span class="nx">sa</span><span class="p">;</span>
+    <span class="nx">answer</span> <span class="o">+=</span> <span class="nx">sa</span><span class="p">;</span>
     <span class="nx">stats</span><span class="p">[</span><span class="nx">sa</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
+    
     <span class="k">for</span><span class="p">(</span><span class="nx">s</span> <span class="k">in</span> <span class="nx">stats</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">if</span><span class="p">(</span><span class="nx">stats</span><span class="p">[</span><span class="nx">s</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="nx">newStringArray</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span>
-      <span class="k">else</span> <span class="k">continue</span><span class="p">;</span>
+      <span class="k">if</span><span class="p">(</span><span class="nx">stats</span><span class="p">[</span><span class="nx">s</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="nx">newStringArray</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
     <span class="p">}</span>
-    <span class="k">if</span><span class="p">(</span><span class="nx">newStringArray</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="nx">reduceStrings</span><span class="p">(</span><span class="nx">newStringArray</span><span class="p">,</span> <span class="nx">stats</span><span class="p">,</span> <span class="nx">newAnswer</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"sa : "</span><span class="p">,</span> <span class="nx">sa</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"stringArray : "</span><span class="p">,</span> <span class="nx">stringArray</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"stats : "</span><span class="p">,</span> <span class="nx">stats</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"newStringArray : "</span><span class="p">,</span> <span class="nx">newStringArray</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"answer : "</span><span class="p">,</span> <span class="nx">answer</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"========="</span><span class="p">)</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">newStringArray</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="nx">reduceStrings</span><span class="p">(</span><span class="nx">newStringArray</span><span class="p">,</span> <span class="nx">stats</span><span class="p">,</span> <span class="nx">answer</span><span class="p">);</span>
+    <span class="k">else</span> <span class="p">(</span><span class="nx">answer</span> <span class="o">+=</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">);</span>
   <span class="p">})</span>
 <span class="p">}</span>
 </code></pre></div></div>

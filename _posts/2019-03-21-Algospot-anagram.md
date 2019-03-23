@@ -57,6 +57,8 @@ function solution(v) {
 
 ```
 
+## 더 좋은 방식 찾기 - O(NlogN) 보다 낮은방법
+
 ## Baekjoon 문제 - Anagram Generater
 - [바로가기 링크](https://www.acmicpc.net/problem/6443)
 
@@ -75,42 +77,50 @@ function solution(v) {
         inputsLength = inputs.length;
   let answers = "";
   
-  for(let i=1;i<inputsLength;i++) { // 단어들 반복
+  for(let i=1;i<inputsLength;i++) { // 여러줄의 단어들 반복
     const strings = inputs[i].split(""),
           stringsLength = strings.length;
     let stringsStats = {}
+
     for(let j=0;j<stringsLength;j++) { // {a: 2, b:1, c: 1}
       if(stringsStats[strings[j]]) stringsStats[strings[j]] += 1
       else stringsStats[strings[j]] = 1
     }
-    let answer = "";
 
+    let initArray = []
+    for(s in stringsStats) {  // [a,b,c]
+      if(stringsStats[s] > 0) initArray.push(s)
+      else continue;
+    }
+    
+    let answer = "";
+    console.log("initArray : ", initArray)
+    console.log("stringsStats : ", stringsStats)
+    console.log("reduceStrings : ", reduceStrings(initArray, stringsStats, answer))
   }
   // return answer
 }
 
 function reduceStrings(strings, stringsStats, answer) {
-  let stats = {...stringsStats},
-      stringArray = [],
-      newAnswer = answer;
-  
-  for(s in stats) {
-    if(stats[s] > 0) {
-      for(let i=0;i<stats[s];i++) {
-        stringArray.push(s)
-      }
-    } else continue;
-  }
+  let stringArray = [...strings],
+      stats = {...stringsStats};
 
   stringArray.forEach((sa)=> {
     newStringArray = []; 
-    newAnswer += sa;
+    answer += sa;
     stats[sa] -= 1;
+    
     for(s in stats) {
-      if(stats[s] > 0) newStringArray.push(s)
-      else continue;
+      if(stats[s] > 0) newStringArray.push(s);
     }
-    if(newStringArray.length > 0) reduceStrings(newStringArray, stats, newAnswer)
+    console.log("sa : ", sa)
+    console.log("stringArray : ", stringArray)
+    console.log("stats : ", stats)
+    console.log("newStringArray : ", newStringArray)
+    console.log("answer : ", answer)
+    console.log("=========")
+    if(newStringArray.length > 0) reduceStrings(newStringArray, stats, answer);
+    else (answer += "\n");
   })
 }
 ```
