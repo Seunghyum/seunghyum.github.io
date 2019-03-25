@@ -13,4 +13,9 @@ var store = [{
         "excerpt":"설명 각 문자열의 알파벳을 재배열하였을때 같은 단어가 되는 단어들. 예시 tab - bat github - hbuitg 풀어본 문제 Algospot 문제 Baekjoon 문제 Algospot 문제 바로가기 링크 예제 입력 3 weird wired apple angle apple elppa 예제 출력 Yes No. Yes 내가 작성한 답안 function solution(v) { const inputs = v.split(\"\\n\"),...","categories": ["코딩 테스트"],
         "tags": ["Javascript"],
         "url": "/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8/Algospot-anagram/",
+        "teaser":null},{
+        "title": "[코딩 테스트] 매일프로그래밍 - 피보나치 배열",
+        "excerpt":"문제 피보나치 배열은 0과 1로 시작하며, 다음 피보나치 수는 바로 앞의 두 피보나치 수의 합이 된다. 정수 N이 주어지면, N보다 작은 모든 짝수 피보나치 수의 합을 구하여라. Fibonacci sequence starts with 0 and 1 where each fibonacci number is a sum of two previous fibonacci numbers. Given an integer N,...","categories": ["코딩 테스트"],
+        "tags": ["Javascript"],
+        "url": "/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8/Every-Day-Programming/",
         "teaser":null}]
