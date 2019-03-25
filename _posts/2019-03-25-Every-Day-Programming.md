@@ -1,7 +1,7 @@
 ---
 layout: posts
-title:  "[코딩 테스트] 매일프로그래밍 - 피보나치 배열"
-categories: [코딩 테스트]
+title:  "[코딩 테스트] 매일프로그래밍 - 피보나치 배열 2019-03-25"
+categories: [코딩 테스트, 매일프로그래밍]
 tags: [Javascript]
 comments: true
 ---
@@ -33,6 +33,7 @@ A(n+1) = A(n) + A(n-1)
 34
 
 ```javascript
+// 처음 답
 function solution(n) {
   if(n < 2) return 0
   let initN = [1,1], output = 0, result = 0;
@@ -44,6 +45,21 @@ function solution(n) {
   }
 
   return result
+}
+
+// 수정 후
+function solution(n) {
+  if(n < 2) return 0
+  let x = 1, y = 1, sum = 0;
+
+  while(n > x) {
+    if(x%2 == 0) sum += x
+    let z = x + y
+    x = y
+    y = z
+  }
+
+  return sum
 }
 ```
 
