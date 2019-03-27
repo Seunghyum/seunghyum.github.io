@@ -6,18 +6,18 @@ tags: [Javascript, BinarySearch, Set, Continue]
 comments: true
 ---
 
-# 문제
+## 문제
 list라는 행렬과 k라는 자연수가 주어짐. list의 두 값을 합하여 k값을 만들 수 있으면 true, 없으면 false를 리턴해라.
 보너스 : 한줄 표기
 
-# 입력
+## 입력
 ```javascript
 let list = [3, 9, 10, 14], k = 12
 solution(list, k) // => true
 ```
 
-# 내가 풀어본 풀이
-## 방법1 - 처음 풀어본 답안
+## 내가 풀어본 풀이
+### 방법1 - 처음 풀어본 답안
 ```javascript
 function solution(list, k) {
   for(let i = 0; i<list.length;i++) {
@@ -33,7 +33,7 @@ function solution(list, k) {
 ```
 풀어보고 나니 이 방식보다 더 좋은 방식. 한줄에 풀 수 있는 방식이 있나 궁금해졌다. 시간복잡도는 O(N^2)이다.
 
-## 방법2 - 한줄에 풀어본 답안
+### 방법2 - 한줄에 풀어본 답안
 ```javascript
 function solution(list, k) {
   return list.some((currentVal,idx) => list.slice(idx+1).includes(k - currentVal))
@@ -52,7 +52,7 @@ benchmark를 해도 for문 중첩이 9 더 좋은 퍼포먼스를 내었다. [js
 <br>
 ***slice 매서드***와 ***includes 매서드***가 움직이는 방법식을 확인해보고 위의 한줄코드가 더 좋은 것인지 파악해봐야겠다.  
 
-## slice 매서드 폴리필
+### slice 매서드 폴리필
 ```javascript
 // https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
 
@@ -102,7 +102,7 @@ Array.prototype.slice = function(begin, end) {
 ```
 해당 배열을 for문으로 돌면서 조건과 일치하는 엘리먼트들을 가져옴. 
 
-## includes 매서드 폴리필
+### includes 매서드 폴리필
 ```javascript
 // https://tc39.github.io/ecma262/#sec-array.prototype.includes
 if (!Array.prototype.includes) {
@@ -156,7 +156,7 @@ function solution(list, k) {
 }
 ```
 
-# 다른 사람들의 풀이 - Set을 이용
+## 다른 사람들의 풀이 - Set을 이용
 iterate 하면서 이터레이팅 한 수들을 기억하여 찾아내는 방법.
 ```javascript
 function solution(list, k) {
@@ -171,7 +171,7 @@ function solution(list, k) {
 Set으로 이터레이팅하고있는 엘리먼트들을 기억하며 반복문을 돌린다.
 이때의 시간복잡도는 O(N)라고 한다. ==> 이해가 잘안간다. 결국 has 매서드로 다시 seen을 한바퀴 도는게 아닌가?
 
-# 다른 사람들의 풀이 - 이진탐색으로 구하기 - 시간복잡도 O(nlogN) + O(1)
+## 다른 사람들의 풀이 - 이진탐색으로 구하기 - 시간복잡도 O(nlogN) + O(1)
 ```javascript
 function binarySearch (list, value) {
   // initial values for start, middle and end
@@ -214,8 +214,7 @@ function solution(list, k) {
 개념적으로 보자면 그래프에서 보듯이 어느 시점에서는 O(nlogN)이 O(n)보다 효율적이다.  
 그래서 두가지 방법을 혼용하는 것이 나은것 같다.
 
-
-## 이해하는데 필요한 개념 & 궁금한점
+### 이해하는데 필요한 개념 & 궁금한점
 1. 시간복잡도 Big O 표기법 개념
   - <이진탐색으로 구하기>에서 왜 for문 자체도 복잡도가 O(1)인지?
   - 이런 방식이라면 내가 한줄로 정의한 시간복잡도도 맞지 않은건지.

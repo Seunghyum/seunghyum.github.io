@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: archive
 permalink: /about/
 title: "About Developer Dave"
 author_profile: true

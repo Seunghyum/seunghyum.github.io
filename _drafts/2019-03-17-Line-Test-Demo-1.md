@@ -1,7 +1,7 @@
 ---
 layout: posts
-title:  "[코딩 테스트] 2019 라인 테스트 데모 문제풀이 - 2"
-categories: [코딩 테스트]
+title:  "[CodingTest] 2019 라인 테스트 데모 문제풀이 - 2"
+categories: [CodingTest]
 tags: [Javascript]
 comments: true
 ---

@@ -266,26 +266,23 @@
   
   </div>
 
-  
   <div class="archive">
-    <br>
     
+      <br>
       <h1 id="page-title" class="page__title">[CodingTest] 배열의 두 값을 합하여 k값 만들기</h1>
     
     <br>
-<br>
-<br>
-<h1 id="문제">문제</h1>
+<h2 id="문제">문제</h2>
 <p>list라는 행렬과 k라는 자연수가 주어짐. list의 두 값을 합하여 k값을 만들 수 있으면 true, 없으면 false를 리턴해라.
 보너스 : 한줄 표기</p>
 
-<h1 id="입력">입력</h1>
+<h2 id="입력">입력</h2>
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">14</span><span class="p">],</span> <span class="nx">k</span> <span class="o">=</span> <span class="mi">12</span>
 <span class="nx">solution</span><span class="p">(</span><span class="nx">list</span><span class="p">,</span> <span class="nx">k</span><span class="p">)</span> <span class="c1">// =&gt; true</span>
 </code></pre></div></div>
 
-<h1 id="내가-풀어본-풀이">내가 풀어본 풀이</h1>
-<h2 id="방법1---처음-풀어본-답안">방법1 - 처음 풀어본 답안</h2>
+<h2 id="내가-풀어본-풀이">내가 풀어본 풀이</h2>
+<h3 id="방법1---처음-풀어본-답안">방법1 - 처음 풀어본 답안</h3>
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">list</span><span class="p">,</span> <span class="nx">k</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">list</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">j</span><span class="o">&lt;</span><span class="nx">list</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
@@ -300,7 +297,7 @@
 </code></pre></div></div>
 <p>풀어보고 나니 이 방식보다 더 좋은 방식. 한줄에 풀 수 있는 방식이 있나 궁금해졌다. 시간복잡도는 O(N^2)이다.</p>
 
-<h2 id="방법2---한줄에-풀어본-답안">방법2 - 한줄에 풀어본 답안</h2>
+<h3 id="방법2---한줄에-풀어본-답안">방법2 - 한줄에 풀어본 답안</h3>
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">list</span><span class="p">,</span> <span class="nx">k</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">return</span> <span class="nx">list</span><span class="p">.</span><span class="nx">some</span><span class="p">((</span><span class="nx">currentVal</span><span class="p">,</span><span class="nx">idx</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">list</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">idx</span><span class="o">+</span><span class="mi">1</span><span class="p">).</span><span class="nx">includes</span><span class="p">(</span><span class="nx">k</span> <span class="o">-</span> <span class="nx">currentVal</span><span class="p">))</span>
 <span class="p">}</span>
@@ -320,7 +317,7 @@ benchmark를 해도 for문 중첩이 9 더 좋은 퍼포먼스를 내었다. <a 
 <strong><em>slice 매서드</em></strong>와 <strong><em>includes 매서드</em></strong>가 움직이는 방법식을 확인해보고 위의 한줄코드가 더 좋은 것인지 파악해봐야겠다.</li>
 </ul>
 
-<h2 id="slice-매서드-폴리필">slice 매서드 폴리필</h2>
+<h3 id="slice-매서드-폴리필">slice 매서드 폴리필</h3>
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/slice</span>
 
 <span class="c1">// 필요한 부분만 가져옴</span>
@@ -369,7 +366,7 @@ benchmark를 해도 for문 중첩이 9 더 좋은 퍼포먼스를 내었다. <a 
 </code></pre></div></div>
 <p>해당 배열을 for문으로 돌면서 조건과 일치하는 엘리먼트들을 가져옴.</p>
 
-<h2 id="includes-매서드-폴리필">includes 매서드 폴리필</h2>
+<h3 id="includes-매서드-폴리필">includes 매서드 폴리필</h3>
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// https://tc39.github.io/ecma262/#sec-array.prototype.includes</span>
 <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">includes</span><span class="p">)</span> <span class="p">{</span>
   <span class="nb">Object</span><span class="p">.</span><span class="nx">defineProperty</span><span class="p">(</span><span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">,</span> <span class="s1">'includes'</span><span class="p">,</span> <span class="p">{</span>
@@ -424,7 +421,7 @@ benchmark를 해도 for문 중첩이 9 더 좋은 퍼포먼스를 내었다. <a 
   </li>
 </ul>
 
-<h1 id="다른-사람들의-풀이---set을-이용">다른 사람들의 풀이 - Set을 이용</h1>
+<h2 id="다른-사람들의-풀이---set을-이용">다른 사람들의 풀이 - Set을 이용</h2>
 <p>iterate 하면서 이터레이팅 한 수들을 기억하여 찾아내는 방법.</p>
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">list</span><span class="p">,</span> <span class="nx">k</span><span class="p">)</span> <span class="p">{</span>
   <span class="kd">let</span> <span class="nx">seen</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Set</span><span class="p">([]);</span>
@@ -438,7 +435,7 @@ benchmark를 해도 for문 중첩이 9 더 좋은 퍼포먼스를 내었다. <a 
 <p>Set으로 이터레이팅하고있는 엘리먼트들을 기억하며 반복문을 돌린다.
 이때의 시간복잡도는 O(N)라고 한다. ==&gt; 이해가 잘안간다. 결국 has 매서드로 다시 seen을 한바퀴 도는게 아닌가?</p>
 
-<h1 id="다른-사람들의-풀이---이진탐색으로-구하기---시간복잡도-onlogn--o1">다른 사람들의 풀이 - 이진탐색으로 구하기 - 시간복잡도 O(nlogN) + O(1)</h1>
+<h2 id="다른-사람들의-풀이---이진탐색으로-구하기---시간복잡도-onlogn--o1">다른 사람들의 풀이 - 이진탐색으로 구하기 - 시간복잡도 O(nlogN) + O(1)</h2>
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">binarySearch</span> <span class="p">(</span><span class="nx">list</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
   <span class="c1">// initial values for start, middle and end</span>
   <span class="kd">let</span> <span class="nx">start</span> <span class="o">=</span> <span class="mi">0</span>
@@ -480,7 +477,7 @@ benchmark를 해도 for문 중첩이 9 더 좋은 퍼포먼스를 내었다. <a 
 개념적으로 보자면 그래프에서 보듯이 어느 시점에서는 O(nlogN)이 O(n)보다 효율적이다.<br />
 그래서 두가지 방법을 혼용하는 것이 나은것 같다.</p>
 
-<h2 id="이해하는데-필요한-개념--궁금한점">이해하는데 필요한 개념 &amp; 궁금한점</h2>
+<h3 id="이해하는데-필요한-개념--궁금한점">이해하는데 필요한 개념 &amp; 궁금한점</h3>
 <ol>
   <li>시간복잡도 Big O 표기법 개념
     <ul>

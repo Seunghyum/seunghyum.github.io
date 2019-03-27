@@ -24,6 +24,7 @@ layout: archive
     {% endfor %}
   {% endfor %}
 </ul>
+<br>
 
 {% for i in (1..categories_max) reversed %}
   {% for category in site.categories %}
@@ -33,6 +34,8 @@ layout: archive
         <button class="btn btn--info btn--small">
           <i class="fas fa-tag"></i> &nbsp;{{ category[0] }}
         </button>
+        <br>
+        <br>
         <div class="entries-{{ page.entries_layout | default: 'list' }}">
           {% for post in category.last %}
             {% include archive-single.html type=page.entries_layout %}
