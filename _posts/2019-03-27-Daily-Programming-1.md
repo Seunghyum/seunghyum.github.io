@@ -22,7 +22,7 @@ solution(list, k) // => true
 function solution(list, k) {
   for(let i = 0; i<list.length;i++) {
     for(let j = 1; j<list.length;j++) {
-      if(list[i] + list[j] == k) return true
+      if(list[i] + list[j] == k) return true 
     }
   }
   return false
@@ -135,12 +135,12 @@ if (!Array.prototype.includes) {
 방법1의 경우 O(N^2)보다 방법2는 O(N^3) n번의 시간복잡도를 더 가지고 있다.  
 풀이해보자면  
 지금까지 내가 이해한 시간복잡도를 공식화 하자면  
-- 방법1 : n * n - 1 => O(N^2)
+- 방법1 : 2n^2 + 2n - 1 => O(N^2)
 ```javascript
 function solution(list, k) {
   for(let i = 0; i<list.length;i++) { // n
-    for(let j = 1; j<list.length;j++) { // n-1
-      if(list[i] + list[j] == k) return true
+    for(let j = 1; j<list.length;j++) { // n * (n-1)
+      if(list[i] + list[j] == k) return true // (n-1) * (n-1)
     }
   }
   return false
@@ -150,24 +150,29 @@ function solution(list, k) {
 ```javascript
 function solution(list, k) { 
   return list.some((currentVal,idx) => { // n
-    list.slice(idx+1) // n - 1
-        .includes(k - currentVal) // n - 1
+    list.slice(idx+1) // n * (n-1)
+        .includes(k - currentVal) // n * (n-1) * (n-1)
   })
 }
 ```
 
 ## 다른 사람들의 풀이 - Set을 이용
-iterate 하면서 이터레이팅 한 수들을 기억하여 찾아내는 방법.
 ```javascript
 function solution(list, k) {
-  let seen = new Set([]);
+  let seen = new Set();
   for (let num of list) {
     if(seen.has(k-num)) return true // O(1)
     seen.add(num)
   }
   return false
 }
+solution([3, 9, 10, 14], 12)
 ```
+iterate 하면서 이터레이팅 한 수들을 기억하여 찾아내는 방법.  
+배열의 요소들을 반복하면서
+set에 우리가 지금까지 봤던 수들을 넣고 (seen 변수)
+각 수마다 K값이 되기위해 필요한 수들을 seen에서 찾기
+
 Set으로 이터레이팅하고있는 엘리먼트들을 기억하며 반복문을 돌린다.
 이때의 시간복잡도는 O(N)라고 한다. ==> 이해가 잘안간다. 결국 has 매서드로 다시 seen을 한바퀴 도는게 아닌가?
 
@@ -175,9 +180,9 @@ Set으로 이터레이팅하고있는 엘리먼트들을 기억하며 반복문�
 ```javascript
 function binarySearch (list, value) {
   // initial values for start, middle and end
-  let start = 0
-  let stop = list.length - 1
-  let middle = Math.floor((start + stop) / 2)
+  let start = 0,
+      stop = list.length - 1,
+      middle = Math.floor((start + stop) / 2);
 
   // While the middle is not what we're looking for and the list does not have a single item
   while (list[middle] !== value && start < stop) {
@@ -196,13 +201,13 @@ function binarySearch (list, value) {
 }
 
 function solution(list, k) {
-  list.sort((a,b) => a-b); // O(nlogN)
+  list.sort((a,b) => a-b); // O(logN)
 
-  for(let i=0;i<list.length;i++) {
+  for(let i=0;i<list.length;i++) { // // O(n)
     let target = k-item,
-        j = binarySearch(list, target); // O(1)
+        j = binarySearch(list, target); // O(n*logN)
 
-    if(j == -1) continue;
+    if(j == -1) continue; // O(n*logN*1)
     else if(j != i) return true;
     else if(j + 1 < list.length && list[j + 1] == target) return true
     else if(j - 1 >= 0 && list[j - 1] == target) return true
@@ -211,13 +216,12 @@ function solution(list, k) {
 }
 ```
 ![Big O 표기법](/assets/images/BigO.jpg)
-개념적으로 보자면 그래프에서 보듯이 어느 시점에서는 O(nlogN)이 O(n)보다 효율적이다.  
+개념적으로 보자면 그래프에서 보듯이 어느 시점에서는 O(nlogN)이 O(n)보다 효율적일 수 있다.  
 그래서 두가지 방법을 혼용하는 것이 나은것 같다.
 
 ### 이해하는데 필요한 개념 & 궁금한점
 1. 시간복잡도 Big O 표기법 개념
-  - <이진탐색으로 구하기>에서 왜 for문 자체도 복잡도가 O(1)인지?
-  - 이런 방식이라면 내가 한줄로 정의한 시간복잡도도 맞지 않은건지.
 2. binary search 개념 및 구현
   - [구현 관련 블로그 설명](https://hackernoon.com/programming-with-js-binary-search-aaf86cef9cb3)
 3. 성능을 제대로 비교해볼 수 있는 Benchmark 라이브러리 적용.
+4. 어느시점에서 nlogN이 N보다 효율인지 알 수 있나?

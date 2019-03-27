@@ -286,7 +286,7 @@
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">list</span><span class="p">,</span> <span class="nx">k</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">list</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">j</span><span class="o">&lt;</span><span class="nx">list</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">if</span><span class="p">(</span><span class="nx">list</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">+</span> <span class="nx">list</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">==</span> <span class="nx">k</span><span class="p">)</span> <span class="k">return</span> <span class="kc">true</span>
+      <span class="k">if</span><span class="p">(</span><span class="nx">list</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">+</span> <span class="nx">list</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">==</span> <span class="nx">k</span><span class="p">)</span> <span class="k">return</span> <span class="kc">true</span> 
     <span class="p">}</span>
   <span class="p">}</span>
   <span class="k">return</span> <span class="kc">false</span>
@@ -399,11 +399,11 @@ benchmark를 해도 for문 중첩이 9 더 좋은 퍼포먼스를 내었다. <a 
 풀이해보자면<br />
 지금까지 내가 이해한 시간복잡도를 공식화 하자면</p>
 <ul>
-  <li>방법1 : n * n - 1 =&gt; O(N^2)
+  <li>방법1 : 2n^2 + 2n - 1 =&gt; O(N^2)
     <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">list</span><span class="p">,</span> <span class="nx">k</span><span class="p">)</span> <span class="p">{</span>
 <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">list</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// n</span>
-  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">j</span><span class="o">&lt;</span><span class="nx">list</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// n-1</span>
-    <span class="k">if</span><span class="p">(</span><span class="nx">list</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">+</span> <span class="nx">list</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">==</span> <span class="nx">k</span><span class="p">)</span> <span class="k">return</span> <span class="kc">true</span>
+  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">j</span><span class="o">&lt;</span><span class="nx">list</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// n * (n-1)</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">list</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">+</span> <span class="nx">list</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">==</span> <span class="nx">k</span><span class="p">)</span> <span class="k">return</span> <span class="kc">true</span> <span class="c1">// (n-1) * (n-1)</span>
   <span class="p">}</span>
 <span class="p">}</span>
 <span class="k">return</span> <span class="kc">false</span>
@@ -413,8 +413,8 @@ benchmark를 해도 for문 중첩이 9 더 좋은 퍼포먼스를 내었다. <a 
   <li>방법2 : n * (n-1) * (n-1) =&gt; O(N^3)
     <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">list</span><span class="p">,</span> <span class="nx">k</span><span class="p">)</span> <span class="p">{</span> 
 <span class="k">return</span> <span class="nx">list</span><span class="p">.</span><span class="nx">some</span><span class="p">((</span><span class="nx">currentVal</span><span class="p">,</span><span class="nx">idx</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="c1">// n</span>
-  <span class="nx">list</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">idx</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="c1">// n - 1</span>
-      <span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">k</span> <span class="o">-</span> <span class="nx">currentVal</span><span class="p">)</span> <span class="c1">// n - 1</span>
+  <span class="nx">list</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">idx</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="c1">// n * (n-1)</span>
+      <span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">k</span> <span class="o">-</span> <span class="nx">currentVal</span><span class="p">)</span> <span class="c1">// n * (n-1) * (n-1)</span>
 <span class="p">})</span>
 <span class="p">}</span>
 </code></pre></div>    </div>
@@ -422,25 +422,30 @@ benchmark를 해도 for문 중첩이 9 더 좋은 퍼포먼스를 내었다. <a 
 </ul>
 
 <h2 id="다른-사람들의-풀이---set을-이용">다른 사람들의 풀이 - Set을 이용</h2>
-<p>iterate 하면서 이터레이팅 한 수들을 기억하여 찾아내는 방법.</p>
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">list</span><span class="p">,</span> <span class="nx">k</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kd">let</span> <span class="nx">seen</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Set</span><span class="p">([]);</span>
+  <span class="kd">let</span> <span class="nx">seen</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Set</span><span class="p">();</span>
   <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">num</span> <span class="k">of</span> <span class="nx">list</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span><span class="p">(</span><span class="nx">seen</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="nx">k</span><span class="o">-</span><span class="nx">num</span><span class="p">))</span> <span class="k">return</span> <span class="kc">true</span> <span class="c1">// O(1)</span>
     <span class="nx">seen</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span>
   <span class="p">}</span>
   <span class="k">return</span> <span class="kc">false</span>
 <span class="p">}</span>
+<span class="nx">solution</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">14</span><span class="p">],</span> <span class="mi">12</span><span class="p">)</span>
 </code></pre></div></div>
+<p>iterate 하면서 이터레이팅 한 수들을 기억하여 찾아내는 방법.<br />
+배열의 요소들을 반복하면서
+set에 우리가 지금까지 봤던 수들을 넣고 (seen 변수)
+각 수마다 K값이 되기위해 필요한 수들을 seen에서 찾기</p>
+
 <p>Set으로 이터레이팅하고있는 엘리먼트들을 기억하며 반복문을 돌린다.
 이때의 시간복잡도는 O(N)라고 한다. ==&gt; 이해가 잘안간다. 결국 has 매서드로 다시 seen을 한바퀴 도는게 아닌가?</p>
 
 <h2 id="다른-사람들의-풀이---이진탐색으로-구하기---시간복잡도-onlogn--o1">다른 사람들의 풀이 - 이진탐색으로 구하기 - 시간복잡도 O(nlogN) + O(1)</h2>
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">binarySearch</span> <span class="p">(</span><span class="nx">list</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
   <span class="c1">// initial values for start, middle and end</span>
-  <span class="kd">let</span> <span class="nx">start</span> <span class="o">=</span> <span class="mi">0</span>
-  <span class="kd">let</span> <span class="nx">stop</span> <span class="o">=</span> <span class="nx">list</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span>
-  <span class="kd">let</span> <span class="nx">middle</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">((</span><span class="nx">start</span> <span class="o">+</span> <span class="nx">stop</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+  <span class="kd">let</span> <span class="nx">start</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nx">stop</span> <span class="o">=</span> <span class="nx">list</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="nx">middle</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">((</span><span class="nx">start</span> <span class="o">+</span> <span class="nx">stop</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">);</span>
 
   <span class="c1">// While the middle is not what we're looking for and the list does not have a single item</span>
   <span class="k">while</span> <span class="p">(</span><span class="nx">list</span><span class="p">[</span><span class="nx">middle</span><span class="p">]</span> <span class="o">!==</span> <span class="nx">value</span> <span class="o">&amp;&amp;</span> <span class="nx">start</span> <span class="o">&lt;</span> <span class="nx">stop</span><span class="p">)</span> <span class="p">{</span>
@@ -459,13 +464,13 @@ benchmark를 해도 for문 중첩이 9 더 좋은 퍼포먼스를 내었다. <a 
 <span class="p">}</span>
 
 <span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">list</span><span class="p">,</span> <span class="nx">k</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">list</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">a</span><span class="o">-</span><span class="nx">b</span><span class="p">);</span> <span class="c1">// O(nlogN)</span>
+  <span class="nx">list</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">a</span><span class="o">-</span><span class="nx">b</span><span class="p">);</span> <span class="c1">// O(logN)</span>
 
-  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">list</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">list</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// // O(n)</span>
     <span class="kd">let</span> <span class="nx">target</span> <span class="o">=</span> <span class="nx">k</span><span class="o">-</span><span class="nx">item</span><span class="p">,</span>
-        <span class="nx">j</span> <span class="o">=</span> <span class="nx">binarySearch</span><span class="p">(</span><span class="nx">list</span><span class="p">,</span> <span class="nx">target</span><span class="p">);</span> <span class="c1">// O(1)</span>
+        <span class="nx">j</span> <span class="o">=</span> <span class="nx">binarySearch</span><span class="p">(</span><span class="nx">list</span><span class="p">,</span> <span class="nx">target</span><span class="p">);</span> <span class="c1">// O(n*logN)</span>
 
-    <span class="k">if</span><span class="p">(</span><span class="nx">j</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">j</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span> <span class="c1">// O(n*logN*1)</span>
     <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">j</span> <span class="o">!=</span> <span class="nx">i</span><span class="p">)</span> <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
     <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">j</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="nx">list</span><span class="p">.</span><span class="nx">length</span> <span class="o">&amp;&amp;</span> <span class="nx">list</span><span class="p">[</span><span class="nx">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="nx">target</span><span class="p">)</span> <span class="k">return</span> <span class="kc">true</span>
     <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">j</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nx">list</span><span class="p">[</span><span class="nx">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="nx">target</span><span class="p">)</span> <span class="k">return</span> <span class="kc">true</span>
@@ -474,26 +479,19 @@ benchmark를 해도 for문 중첩이 9 더 좋은 퍼포먼스를 내었다. <a 
 <span class="p">}</span>
 </code></pre></div></div>
 <p><img src="/assets/images/BigO.jpg" alt="Big O 표기법" />
-개념적으로 보자면 그래프에서 보듯이 어느 시점에서는 O(nlogN)이 O(n)보다 효율적이다.<br />
+개념적으로 보자면 그래프에서 보듯이 어느 시점에서는 O(nlogN)이 O(n)보다 효율적일 수 있다.<br />
 그래서 두가지 방법을 혼용하는 것이 나은것 같다.</p>
 
 <h3 id="이해하는데-필요한-개념--궁금한점">이해하는데 필요한 개념 &amp; 궁금한점</h3>
 <ol>
-  <li>시간복잡도 Big O 표기법 개념
-    <ul>
-      <li>
-        <이진탐색으로 구하기="">에서 왜 for문 자체도 복잡도가 O(1)인지?
-</이진탐색으로>
-      </li>
-      <li>이런 방식이라면 내가 한줄로 정의한 시간복잡도도 맞지 않은건지.</li>
-    </ul>
-  </li>
+  <li>시간복잡도 Big O 표기법 개념</li>
   <li>binary search 개념 및 구현
     <ul>
       <li><a href="https://hackernoon.com/programming-with-js-binary-search-aaf86cef9cb3">구현 관련 블로그 설명</a></li>
     </ul>
   </li>
   <li>성능을 제대로 비교해볼 수 있는 Benchmark 라이브러리 적용.</li>
+  <li>어느시점에서 nlogN이 N보다 효율인지 알 수 있나?</li>
 </ol>
 
 <br>
@@ -505,7 +503,7 @@ benchmark를 해도 for문 중첩이 9 더 좋은 퍼포먼스를 내었다. <a 
   
     <li>
       <a href="#2019">
-        <strong>2019</strong> <span class="taxonomy__count">5</span>
+        <strong>2019</strong> <span class="taxonomy__count">6</span>
       </a>
     </li>
   
@@ -522,6 +520,40 @@ benchmark를 해도 for문 중첩이 9 더 좋은 퍼포먼스를 내었다. <a 
   <section id="2019" class="taxonomy__section">
     <h2 class="archive__subtitle">2019</h2>
     <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/data%20type/Data-Type/" rel="permalink">Data Type
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Set vs Array - 관련기사
+
+  Set
+    
+      유일값들의 배열이 필요할때(distinct)
+      집합의 개념이 필요할때(차집합, 교집합 등등 자체 메서드들이 많음.)
+      index가 필요 없을때
+      Array에서 중복값을 없앨때 =&gt; ...</p>
+  </article>
+</div>
+
       
         
 

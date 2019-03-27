@@ -28,4 +28,9 @@ var store = [{
         "excerpt":"문제 list라는 행렬과 k라는 자연수가 주어짐. list의 두 값을 합하여 k값을 만들 수 있으면 true, 없으면 false를 리턴해라. 보너스 : 한줄 표기 입력 let list = [3, 9, 10, 14], k = 12 solution(list, k) // =&gt; true 내가 풀어본 풀이 방법1 - 처음 풀어본 답안 function solution(list, k) {...","categories": ["CodingTest"],
         "tags": ["Javascript","BinarySearch","Set","Continue"],
         "url": "/codingtest/Daily-Programming-1/",
+        "teaser":null},{
+        "title": "Data Type",
+        "excerpt":"Set vs Array - 관련기사 Set 유일값들의 배열이 필요할때(distinct) 집합의 개념이 필요할때(차집합, 교집합 등등 자체 메서드들이 많음.) index가 필요 없을때 Array에서 중복값을 없앨때 =&gt; new Set([1,1,2,3]) // 1,2,3 set의 add()는 O(n)의 시간복잡도가 소요되지만, Array의 push는 N(1)의 시간복잡도. Array 요소들의 순서(order)가 필요할때 index가 필요할때 -&gt; Binary Search Map vs Object 관련기사...","categories": ["Data Type"],
+        "tags": ["Data Type"],
+        "url": "/data%20type/Data-Type/",
         "teaser":null}]
