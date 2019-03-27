@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-03-26T07:56:02+09:00</updated><id>/feed.xml</id><title type="html">Developer Dave</title><subtitle>JS, 데이터 시각화에 
-관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">[코딩 테스트] 매일프로그래밍 2019-03-26</title><link href="/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8/Every-Day-Programming/" rel="alternate" type="text/html" title="[코딩 테스트] 매일프로그래밍 2019-03-26" /><published>2019-03-26T00:00:00+09:00</published><updated>2019-03-26T00:00:00+09:00</updated><id>/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8/Every-Day-Programming</id><content type="html" xml:base="/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8/Every-Day-Programming/">&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-03-27T14:53:21+09:00</updated><id>/feed.xml</id><title type="html">Developer Dave</title><subtitle>JS, 데이터 시각화에 
+관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">[코딩 테스트] 매일 프로그래밍 - 2019-03-26</title><link href="/codingtest/everydayprogramming/Every-Day-Programming-2/" rel="alternate" type="text/html" title="[코딩 테스트] 매일 프로그래밍 - 2019-03-26" /><published>2019-03-26T00:00:00+09:00</published><updated>2019-03-26T00:00:00+09:00</updated><id>/codingtest/everydayprogramming/Every-Day-Programming-2</id><content type="html" xml:base="/codingtest/everydayprogramming/Every-Day-Programming-2/">&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
 &lt;p&gt;정수 배열(int array)가 주어지면 가장 큰 이어지는 원소들의 합을 구하시오. 단, 시간복잡도는 O(n).&lt;/p&gt;
 
 &lt;p&gt;Given an integer array, find the largest consecutive sum of elements.&lt;/p&gt;
@@ -41,29 +41,32 @@ Output: 9 // 2 + 4 + (-2) + (-3) + 8
   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;maxSum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><summary type="html">문제 정수 배열(int array)가 주어지면 가장 큰 이어지는 원소들의 합을 구하시오. 단, 시간복잡도는 O(n).</summary></entry><entry><title type="html">[코딩 테스트] 매일프로그래밍 - 피보나치 배열 2019-03-25</title><link href="/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8/%EB%A7%A4%EC%9D%BC%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/Every-Day-Programming/" rel="alternate" type="text/html" title="[코딩 테스트] 매일프로그래밍 - 피보나치 배열 2019-03-25" /><published>2019-03-25T00:00:00+09:00</published><updated>2019-03-25T00:00:00+09:00</updated><id>/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8/%EB%A7%A4%EC%9D%BC%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/Every-Day-Programming</id><content type="html" xml:base="/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8/%EB%A7%A4%EC%9D%BC%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/Every-Day-Programming/">&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
-&lt;p&gt;피보나치 배열은 0과 1로 시작하며, 다음 피보나치 수는 바로 앞의 두 피보나치 수의 합이 된다.&lt;br /&gt;
-정수 N이 주어지면, N보다 작은 모든 짝수 피보나치 수의 합을 구하여라.&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-Fibonacci sequence starts with 0 and 1 where each fibonacci number is a sum of two previous fibonacci numbers. Given an integer N, find the sum of all even fibonacci numbers.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><summary type="html">문제 정수 배열(int array)가 주어지면 가장 큰 이어지는 원소들의 합을 구하시오. 단, 시간복잡도는 O(n).</summary></entry><entry><title type="html">[코딩 테스트] 매일 프로그래밍 - 피보나치 배열 2019-03-25</title><link href="/codingtest/everydayprogramming/Every-Day-Programming-1/" rel="alternate" type="text/html" title="[코딩 테스트] 매일 프로그래밍 - 피보나치 배열 2019-03-25" /><published>2019-03-25T00:00:00+09:00</published><updated>2019-03-25T00:00:00+09:00</updated><id>/codingtest/everydayprogramming/Every-Day-Programming-1</id><content type="html" xml:base="/codingtest/everydayprogramming/Every-Day-Programming-1/">&lt;!-- ## 문제
+피보나치 배열은 0과 1로 시작하며, 다음 피보나치 수는 바로 앞의 두 피보나치 수의 합이 된다.  
+정수 N이 주어지면, N보다 작은 모든 짝수 피보나치 수의 합을 구하여라.  
+&lt;br&gt;
+&lt;br&gt;
+Fibonacci sequence starts with 0 and 1 where each fibonacci number is a sum of two previous fibonacci numbers. Given an integer N, find the sum of all even fibonacci numbers. --&gt;
 
-&lt;h2 id=&quot;예제&quot;&gt;예제&lt;/h2&gt;
+&lt;!-- ## 예제
 
-&lt;p&gt;Input: N = 12&lt;/p&gt;
+Input: N = 12  
 
-&lt;p&gt;Output: 10 // 0, 1, 2, 3, 5, 8 중 짝수인 2 + 8 = 10.&lt;/p&gt;
+Output: 10 // 0, 1, 2, 3, 5, 8 중 짝수인 2 + 8 = 10. --&gt;
 
-&lt;h2 id=&quot;풀이&quot;&gt;풀이&lt;/h2&gt;
-&lt;p&gt;A(n+1) = A(n) + A(n-1)
+&lt;!-- ## 풀이
+A(n+1) = A(n) + A(n-1)
 1 = 1+0
-2 = 1+1 &lt;strong&gt;&lt;em&gt;// 2^0&lt;/em&gt;&lt;/strong&gt;
-3 = 2+1 &lt;strong&gt;&lt;em&gt;// 2^1 + 2^0 **&lt;/em&gt;
-5 = 3 + 2 **&lt;em&gt;// 5 = (2+1) + 2 // 2^1 + 2^1 + 2^0&lt;/em&gt;&lt;/strong&gt;
-8 = 5 + 3 &lt;strong&gt;&lt;em&gt;// 8 = (2+2+1) + (2+1) // 2^2 + 1 + 2^1 + 2^1 + 1&lt;/em&gt;&lt;/strong&gt;
-13 = 8 + 5 &lt;strong&gt;&lt;em&gt;// 8 = (2+2+1 + 2+1) + (2+2+1) // 2^3 + 2^2 + 1&lt;/em&gt;&lt;/strong&gt;
+2 = 1+1 ***// 2^0***
+3 = 2+1 ***// 2^1 + 2^0 ***
+5 = 3 + 2 ***// 5 = (2+1) + 2 // 2^1 + 2^1 + 2^0***
+8 = 5 + 3 ***// 8 = (2+2+1) + (2+1) // 2^2 + 1 + 2^1 + 2^1 + 1***
+13 = 8 + 5 ***// 8 = (2+2+1 + 2+1) + (2+2+1) // 2^3 + 2^2 + 1***
 21
-34&lt;/p&gt;
+34
+.
+.
+. --&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// 처음 답&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -95,54 +98,53 @@ Fibonacci sequence starts with 0 and 1 where each fibonacci number is a sum of t
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;정답---python&quot;&gt;정답 - python&lt;/h2&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;evenFibSum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;z&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><summary type="html">문제 피보나치 배열은 0과 1로 시작하며, 다음 피보나치 수는 바로 앞의 두 피보나치 수의 합이 된다. 정수 N이 주어지면, N보다 작은 모든 짝수 피보나치 수의 합을 구하여라. Fibonacci sequence starts with 0 and 1 where each fibonacci number is a sum of two previous fibonacci numbers. Given an integer N, find the sum of all even fibonacci numbers.</summary></entry><entry><title type="html">[코딩 테스트] Anagram 문제 - javascript</title><link href="/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8/Algospot-anagram/" rel="alternate" type="text/html" title="[코딩 테스트] Anagram 문제 - javascript" /><published>2019-03-21T00:00:00+09:00</published><updated>2019-03-21T00:00:00+09:00</updated><id>/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8/Algospot-anagram</id><content type="html" xml:base="/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8/Algospot-anagram/">&lt;h2 id=&quot;설명&quot;&gt;설명&lt;/h2&gt;
-&lt;p&gt;각 문자열의 알파벳을 재배열하였을때 같은 단어가 되는 단어들.&lt;br /&gt;
-&lt;br /&gt;
-&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/3/33/Anagram_Listen_%3D_Silent.gif&quot; alt=&quot;Anagram - Wikipedia&quot; /&gt;&lt;/p&gt;
-&lt;h3 id=&quot;예시&quot;&gt;예시&lt;/h3&gt;
-&lt;p&gt;tab - bat&lt;br /&gt;
-github - hbuitg&lt;/p&gt;
+&lt;!-- ## 정답 - python
+```python
+int evenFibSum(int N) {
+  int sum = 0;
+  int x = 1;
+  int y = 2;
+  while (x &lt;= N) {
+    if (x % 2 == 0) {
+      sum += x;
+    }
+    int z = x + y;
+    x = y;
+    y = z;
+  }
+  return sum;
+}
+``` --&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><summary type="html"></summary></entry><entry><title type="html">[코딩 테스트] Algospot - Anagram 문제</title><link href="/codingtest/algospot/Algospot-anagram/" rel="alternate" type="text/html" title="[코딩 테스트] Algospot - Anagram 문제" /><published>2019-03-21T00:00:00+09:00</published><updated>2019-03-21T00:00:00+09:00</updated><id>/codingtest/algospot/Algospot-anagram</id><content type="html" xml:base="/codingtest/algospot/Algospot-anagram/">&lt;!-- ## 설명
+각 문자열의 알파벳을 재배열하였을때 같은 단어가 되는 단어들.  
+&lt;br&gt;
+![Anagram - Wikipedia](https://upload.wikimedia.org/wikipedia/commons/3/33/Anagram_Listen_%3D_Silent.gif)
+### 예시
+tab - bat  
+github - hbuitg
 
-&lt;h2 id=&quot;풀어본-문제&quot;&gt;풀어본 문제&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Algospot 문제&lt;/li&gt;
-  &lt;li&gt;Baekjoon 문제&lt;/li&gt;
-&lt;/ul&gt;
+## 풀어본 문제
+- Algospot 문제
+- Baekjoon 문제
 
-&lt;h2 id=&quot;algospot-문제&quot;&gt;Algospot 문제&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://algospot.com/judge/problem/read/ANAGRAM&quot;&gt;바로가기 링크&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+## Algospot 문제
+- [바로가기 링크](https://algospot.com/judge/problem/read/ANAGRAM)
 
-&lt;h2 id=&quot;예제-입력&quot;&gt;예제 입력&lt;/h2&gt;
+## 예제 입력
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;3
+```
+3
 weird wired
 apple angle
 apple elppa
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+```
 
-&lt;h2 id=&quot;예제-출력&quot;&gt;예제 출력&lt;/h2&gt;
+## 예제 출력
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Yes
+```
+Yes
 No.
 Yes
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+``` --&gt;
 
 &lt;h2 id=&quot;내가-작성한-답안&quot;&gt;내가 작성한 답안&lt;/h2&gt;
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -169,11 +171,12 @@ Yes
   &lt;li&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/6443&quot;&gt;바로가기 링크&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;입력값&quot;&gt;입력값&lt;/h2&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;3
+&lt;!-- ## 입력값
+```
+3
 aabc
 aabcdd
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+``` --&gt;
 
 &lt;h2 id=&quot;내가-작성한-답안-1&quot;&gt;내가 작성한 답안&lt;/h2&gt;
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -266,7 +269,7 @@ a는 1개로 취급되어야하는데 2개로 취급된다는 것이다.&lt;/p&g
 는 것이었다.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;하지만 이 루프를 돌며 반복하는 코드에서 스코프 문제가 발생했다.&lt;/p&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><summary type="html">설명 각 문자열의 알파벳을 재배열하였을때 같은 단어가 되는 단어들. 예시 tab - bat github - hbuitg</summary></entry><entry><title type="html">[코딩 테스트] 2019 카카오 신입 공채 1차 코딩 테스트 문제 with Javascript</title><link href="/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8/Kakao-open-chatting-room/" rel="alternate" type="text/html" title="[코딩 테스트] 2019 카카오 신입 공채 1차 코딩 테스트 문제 with Javascript" /><published>2019-03-20T00:00:00+09:00</published><updated>2019-03-20T00:00:00+09:00</updated><id>/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8/Kakao-open-chatting-room</id><content type="html" xml:base="/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8/Kakao-open-chatting-room/">&lt;h1 id=&quot;오픈채팅방&quot;&gt;오픈채팅방&lt;/h1&gt;
+&lt;p&gt;하지만 이 루프를 돌며 반복하는 코드에서 스코프 문제가 발생했다.&lt;/p&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><summary type="html">&amp;lt;!– ## 설명 각 문자열의 알파벳을 재배열하였을때 같은 단어가 되는 단어들. 예시 tab - bat github - hbuitg</summary></entry><entry><title type="html">[코딩 테스트] 2019 카카오 신입 공채 1차 코딩 테스트 문제 with Javascript</title><link href="/codingtest/kakao/Kakao-open-chatting-room/" rel="alternate" type="text/html" title="[코딩 테스트] 2019 카카오 신입 공채 1차 코딩 테스트 문제 with Javascript" /><published>2019-03-20T00:00:00+09:00</published><updated>2019-03-20T00:00:00+09:00</updated><id>/codingtest/kakao/Kakao-open-chatting-room</id><content type="html" xml:base="/codingtest/kakao/Kakao-open-chatting-room/">&lt;h1 id=&quot;오픈채팅방&quot;&gt;오픈채팅방&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.welcomekakao.com/learn/courses/30/lessons/42888&quot;&gt;문제 바로가기 링크&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://tech.kakao.com/2018/09/21/kakao-blind-recruitment-for2019-round-1/&quot;&gt;카카오의 설명 블로그&lt;/a&gt;
@@ -372,7 +375,7 @@ a는 1개로 취급되어야하는데 2개로 취급된다는 것이다.&lt;/p&g
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;그러다보니 한 유저가 닉네임을 변경할때마다 모든 객체들을 탐색해야했다.&lt;br /&gt;
 문제를 풀고 &lt;a href=&quot;http://tech.kakao.com/2018/09/21/kakao-blind-recruitment-for2019-round-1/&quot;&gt;카카오의 해설&lt;/a&gt; 을 보니 &lt;strong&gt;&lt;em&gt;“두 연결배열에 각각 accouts와 events에 담아 관리하면 쉽다”&lt;/em&gt;&lt;/strong&gt;는 해설을 보고 코드를 다시 짰다. &lt;br /&gt;
-해설을 보고나니 너무 간단해 허탈했다. 아직 갈길이 먼 것 같다.&lt;/p&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><summary type="html">오픈채팅방 문제 바로가기 링크 카카오의 설명 블로그 나의 답안 ```javascript function solution(record) { let accounts = [], events = [], answer = []; function setEnterProcess(message, userId, nickName) { const findAccountByUserId = accounts.find(a =&amp;gt; a.userId == userId)</summary></entry><entry><title type="html">SGIS-shpToGeojson</title><link href="/%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EA%B0%80%EA%B3%B5/SGIS-shpToGeojson/" rel="alternate" type="text/html" title="SGIS-shpToGeojson" /><published>2018-09-28T00:00:00+09:00</published><updated>2018-09-28T00:00:00+09:00</updated><id>/%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EA%B0%80%EA%B3%B5/SGIS-shpToGeojson</id><content type="html" xml:base="/%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EA%B0%80%EA%B3%B5/SGIS-shpToGeojson/">&lt;h2 id=&quot;sgis에서-받은-지도데이터shp를-geojson으로-변경하는-작업-내용&quot;&gt;SGIS에서 받은 지도데이터(.shp)를 geojson으로 변경하는 작업 내용&lt;/h2&gt;
+해설을 보고나니 너무 간단해 허탈했다. 아직 갈길이 먼 것 같다.&lt;/p&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><summary type="html">오픈채팅방 문제 바로가기 링크 카카오의 설명 블로그 나의 답안 ```javascript function solution(record) { let accounts = [], events = [], answer = []; function setEnterProcess(message, userId, nickName) { const findAccountByUserId = accounts.find(a =&amp;gt; a.userId == userId)</summary></entry><entry><title type="html">SGIS-shpToGeojson</title><link href="/dataprocessing/SGIS-shpToGeojson/" rel="alternate" type="text/html" title="SGIS-shpToGeojson" /><published>2018-09-28T00:00:00+09:00</published><updated>2018-09-28T00:00:00+09:00</updated><id>/dataprocessing/SGIS-shpToGeojson</id><content type="html" xml:base="/dataprocessing/SGIS-shpToGeojson/">&lt;h2 id=&quot;sgis에서-받은-지도데이터shp를-geojson으로-변경하는-작업-내용&quot;&gt;SGIS에서 받은 지도데이터(.shp)를 geojson으로 변경하는 작업 내용&lt;/h2&gt;
 
 &lt;p&gt;2018년에 쓴 글을 재업로드하였습니다.&lt;/p&gt;
 
@@ -464,4 +467,4 @@ a는 1개로 취급되어야하는데 2개로 취급된다는 것이다.&lt;/p&g
       &lt;li&gt;geojson까지만 변경함. topojson까지는 변경하지 않음.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="ShapeFile" /><category term="GeoJson" /><category term="TopoJson" /><summary type="html">SGIS에서 받은 지도데이터(.shp)를 geojson으로 변경하는 작업 내용</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="ShapeFile" /><category term="GeoJson" /><category term="TopoJson" /><category term="데이터 가공" /><summary type="html">SGIS에서 받은 지도데이터(.shp)를 geojson으로 변경하는 작업 내용</summary></entry></feed>

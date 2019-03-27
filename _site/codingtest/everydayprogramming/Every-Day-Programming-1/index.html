@@ -9,19 +9,19 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[코딩 테스트] 매일프로그래밍 - 피보나치 배열 2019-03-25 - Developer Dave</title>
-<meta name="description" content="문제피보나치 배열은 0과 1로 시작하며, 다음 피보나치 수는 바로 앞의 두 피보나치 수의 합이 된다.정수 N이 주어지면, N보다 작은 모든 짝수 피보나치 수의 합을 구하여라.Fibonacci sequence starts with 0 and 1 where each fibonacci number is a sum of two previous fibonacci numbers. Given an integer N, find the sum of all even fibonacci numbers.">
+<!-- begin _includes/seo.html --><title>[코딩 테스트] 매일 프로그래밍 - 피보나치 배열 2019-03-25 - Developer Dave</title>
+<meta name="description" content="">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Developer Dave">
-<meta property="og:title" content="[코딩 테스트] 매일프로그래밍 - 피보나치 배열 2019-03-25">
-<meta property="og:url" content="/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8/%EB%A7%A4%EC%9D%BC%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/Every-Day-Programming/">
+<meta property="og:title" content="[코딩 테스트] 매일 프로그래밍 - 피보나치 배열 2019-03-25">
+<meta property="og:url" content="/codingtest/everydayprogramming/Every-Day-Programming-1/">
 
 
-  <meta property="og:description" content="문제피보나치 배열은 0과 1로 시작하며, 다음 피보나치 수는 바로 앞의 두 피보나치 수의 합이 된다.정수 N이 주어지면, N보다 작은 모든 짝수 피보나치 수의 합을 구하여라.Fibonacci sequence starts with 0 and 1 where each fibonacci number is a sum of two previous fibonacci numbers. Given an integer N, find the sum of all even fibonacci numbers.">
+  <meta property="og:description" content="">
 
 
 
@@ -40,7 +40,7 @@
   
 
 
-<link rel="canonical" href="/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8/%EB%A7%A4%EC%9D%BC%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/Every-Day-Programming/">
+<link rel="canonical" href="/codingtest/everydayprogramming/Every-Day-Programming-1/">
 
 
 
@@ -269,31 +269,34 @@
 
   <div class="archive">
     
-      <h1 id="page-title" class="page__title">[코딩 테스트] 매일프로그래밍 - 피보나치 배열 2019-03-25</h1>
+      <h1 id="page-title" class="page__title">[코딩 테스트] 매일 프로그래밍 - 피보나치 배열 2019-03-25</h1>
     
-    <h2 id="문제">문제</h2>
-<p>피보나치 배열은 0과 1로 시작하며, 다음 피보나치 수는 바로 앞의 두 피보나치 수의 합이 된다.<br />
-정수 N이 주어지면, N보다 작은 모든 짝수 피보나치 수의 합을 구하여라.<br />
-<br />
-<br />
-Fibonacci sequence starts with 0 and 1 where each fibonacci number is a sum of two previous fibonacci numbers. Given an integer N, find the sum of all even fibonacci numbers.</p>
+    <!-- ## 문제
+피보나치 배열은 0과 1로 시작하며, 다음 피보나치 수는 바로 앞의 두 피보나치 수의 합이 된다.  
+정수 N이 주어지면, N보다 작은 모든 짝수 피보나치 수의 합을 구하여라.  
+<br>
+<br>
+Fibonacci sequence starts with 0 and 1 where each fibonacci number is a sum of two previous fibonacci numbers. Given an integer N, find the sum of all even fibonacci numbers. -->
 
-<h2 id="예제">예제</h2>
+<!-- ## 예제
 
-<p>Input: N = 12</p>
+Input: N = 12  
 
-<p>Output: 10 // 0, 1, 2, 3, 5, 8 중 짝수인 2 + 8 = 10.</p>
+Output: 10 // 0, 1, 2, 3, 5, 8 중 짝수인 2 + 8 = 10. -->
 
-<h2 id="풀이">풀이</h2>
-<p>A(n+1) = A(n) + A(n-1)
+<!-- ## 풀이
+A(n+1) = A(n) + A(n-1)
 1 = 1+0
-2 = 1+1 <strong><em>// 2^0</em></strong>
-3 = 2+1 <strong><em>// 2^1 + 2^0 **</em>
-5 = 3 + 2 **<em>// 5 = (2+1) + 2 // 2^1 + 2^1 + 2^0</em></strong>
-8 = 5 + 3 <strong><em>// 8 = (2+2+1) + (2+1) // 2^2 + 1 + 2^1 + 2^1 + 1</em></strong>
-13 = 8 + 5 <strong><em>// 8 = (2+2+1 + 2+1) + (2+2+1) // 2^3 + 2^2 + 1</em></strong>
+2 = 1+1 ***// 2^0***
+3 = 2+1 ***// 2^1 + 2^0 ***
+5 = 3 + 2 ***// 5 = (2+1) + 2 // 2^1 + 2^1 + 2^0***
+8 = 5 + 3 ***// 8 = (2+2+1) + (2+1) // 2^2 + 1 + 2^1 + 2^1 + 1***
+13 = 8 + 5 ***// 8 = (2+2+1 + 2+1) + (2+2+1) // 2^3 + 2^2 + 1***
 21
-34</p>
+34
+.
+.
+. -->
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 처음 답</span>
 <span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
@@ -325,22 +328,23 @@ Fibonacci sequence starts with 0 and 1 where each fibonacci number is a sum of t
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h2 id="정답---python">정답 - python</h2>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">int</span> <span class="n">evenFibSum</span><span class="p">(</span><span class="nb">int</span> <span class="n">N</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nb">int</span> <span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="nb">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-  <span class="nb">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
-  <span class="k">while</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="n">N</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nb">sum</span> <span class="o">+=</span> <span class="n">x</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="nb">int</span> <span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">;</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">y</span><span class="p">;</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="n">z</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="k">return</span> <span class="nb">sum</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
+<!-- ## 정답 - python
+```python
+int evenFibSum(int N) {
+  int sum = 0;
+  int x = 1;
+  int y = 2;
+  while (x <= N) {
+    if (x % 2 == 0) {
+      sum += x;
+    }
+    int z = x + y;
+    x = y;
+    y = z;
+  }
+  return sum;
+}
+``` -->
 
 
 <ul class="taxonomy__index">
@@ -375,7 +379,7 @@ Fibonacci sequence starts with 0 and 1 where each fibonacci number is a sum of t
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8/Every-Day-Programming/" rel="permalink">[코딩 테스트] 매일프로그래밍 2019-03-26
+        <a href="/codingtest/everydayprogramming/Every-Day-Programming-2/" rel="permalink">[코딩 테스트] 매일 프로그래밍 - 2019-03-26
 </a>
       
     </h2>
@@ -405,7 +409,7 @@ Fibonacci sequence starts with 0 and 1 where each fibonacci number is a sum of t
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8/%EB%A7%A4%EC%9D%BC%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/Every-Day-Programming/" rel="permalink">[코딩 테스트] 매일프로그래밍 - 피보나치 배열 2019-03-25
+        <a href="/codingtest/everydayprogramming/Every-Day-Programming-1/" rel="permalink">[코딩 테스트] 매일 프로그래밍 - 피보나치 배열 2019-03-25
 </a>
       
     </h2>
@@ -415,15 +419,12 @@ Fibonacci sequence starts with 0 and 1 where each fibonacci number is a sum of t
 
 
 
-  1 분 소요
+  최대 1 분 소요
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">문제
-피보나치 배열은 0과 1로 시작하며, 다음 피보나치 수는 바로 앞의 두 피보나치 수의 합이 된다.
-정수 N이 주어지면, N보다 작은 모든 짝수 피보나치 수의 합을 구하여라.
+    <p class="archive__item-excerpt" itemprop="description">
 
-
-Fibonacci sequence starts with 0 and 1 where each fibon...</p>
+</p>
   </article>
 </div>
 
@@ -437,7 +438,7 @@ Fibonacci sequence starts with 0 and 1 where each fibon...</p>
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8/Algospot-anagram/" rel="permalink">[코딩 테스트] Anagram 문제 - javascript
+        <a href="/codingtest/algospot/Algospot-anagram/" rel="permalink">[코딩 테스트] Algospot - Anagram 문제
 </a>
       
     </h2>
@@ -450,7 +451,7 @@ Fibonacci sequence starts with 0 and 1 where each fibon...</p>
   2 분 소요
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">설명
+    <p class="archive__item-excerpt" itemprop="description">&lt;!– ## 설명
 각 문자열의 알파벳을 재배열하였을때 같은 단어가 되는 단어들.
 
 
@@ -472,7 +473,7 @@ github - hbuitg
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8/Kakao-open-chatting-room/" rel="permalink">[코딩 테스트] 2019 카카오 신입 공채 1차 코딩 테스트 문제 with Javascript
+        <a href="/codingtest/kakao/Kakao-open-chatting-room/" rel="permalink">[코딩 테스트] 2019 카카오 신입 공채 1차 코딩 테스트 문제 with Javascript
 </a>
       
     </h2>
@@ -517,7 +518,7 @@ function solution(record) {
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EA%B0%80%EA%B3%B5/SGIS-shpToGeojson/" rel="permalink">SGIS-shpToGeojson
+        <a href="/dataprocessing/SGIS-shpToGeojson/" rel="permalink">SGIS-shpToGeojson
 </a>
       
     </h2>
@@ -606,8 +607,8 @@ function solution(record) {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8/%EB%A7%A4%EC%9D%BC%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/Every-Day-Programming/";  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = "/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8/%EB%A7%A4%EC%9D%BC%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/Every-Day-Programming"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      this.page.url = "/codingtest/everydayprogramming/Every-Day-Programming-1/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/codingtest/everydayprogramming/Every-Day-Programming-1"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');

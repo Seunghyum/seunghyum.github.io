@@ -1,12 +1,12 @@
 ---
 layout: posts
-title:  "[코딩 테스트] Anagram 문제 - javascript"
-categories: [코딩 테스트]
+title:  "[코딩 테스트] Algospot - Anagram 문제"
+categories: [CodingTest, Algospot]
 tags: [Javascript]
 comments: true
 ---
 
-## 설명
+<!-- ## 설명
 각 문자열의 알파벳을 재배열하였을때 같은 단어가 되는 단어들.  
 <br>
 ![Anagram - Wikipedia](https://upload.wikimedia.org/wikipedia/commons/3/33/Anagram_Listen_%3D_Silent.gif)
@@ -36,7 +36,7 @@ apple elppa
 Yes
 No.
 Yes
-```
+``` -->
 
 ## 내가 작성한 답안
 ```javascript
@@ -63,12 +63,12 @@ function solution(v) {
 - [바로가기 링크](https://www.acmicpc.net/problem/6443)
 
 
-## 입력값
+<!-- ## 입력값
 ```
 3
 aabc
 aabcdd
-```
+``` -->
 
 ## 내가 작성한 답안
 ```javascript

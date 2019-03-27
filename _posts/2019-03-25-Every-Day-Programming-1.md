@@ -1,27 +1,27 @@
 ---
 layout: posts
-title:  "[코딩 테스트] 매일프로그래밍 - 피보나치 배열 2019-03-25"
-categories: [코딩 테스트, 매일프로그래밍]
+title:  "[코딩 테스트] 매일 프로그래밍 - 피보나치 배열 2019-03-25"
+categories: [CodingTest, EverydayProgramming]
 tags: [Javascript]
 comments: true
 ---
 
-## 문제
+<!-- ## 문제
 피보나치 배열은 0과 1로 시작하며, 다음 피보나치 수는 바로 앞의 두 피보나치 수의 합이 된다.  
 정수 N이 주어지면, N보다 작은 모든 짝수 피보나치 수의 합을 구하여라.  
 <br>
 <br>
-Fibonacci sequence starts with 0 and 1 where each fibonacci number is a sum of two previous fibonacci numbers. Given an integer N, find the sum of all even fibonacci numbers.
+Fibonacci sequence starts with 0 and 1 where each fibonacci number is a sum of two previous fibonacci numbers. Given an integer N, find the sum of all even fibonacci numbers. -->
 
 
-## 예제
+<!-- ## 예제
 
 Input: N = 12  
 
-Output: 10 // 0, 1, 2, 3, 5, 8 중 짝수인 2 + 8 = 10.
+Output: 10 // 0, 1, 2, 3, 5, 8 중 짝수인 2 + 8 = 10. -->
 
 
-## 풀이
+<!-- ## 풀이
 A(n+1) = A(n) + A(n-1)
 1 = 1+0
 2 = 1+1 ***// 2^0***
@@ -31,6 +31,9 @@ A(n+1) = A(n) + A(n-1)
 13 = 8 + 5 ***// 8 = (2+2+1 + 2+1) + (2+2+1) // 2^3 + 2^2 + 1***
 21
 34
+.
+.
+. -->
 
 ```javascript
 // 처음 답
@@ -63,7 +66,7 @@ function solution(n) {
 }
 ```
 
-## 정답 - python
+<!-- ## 정답 - python
 ```python
 int evenFibSum(int N) {
   int sum = 0;
@@ -79,4 +82,4 @@ int evenFibSum(int N) {
   }
   return sum;
 }
-```
+``` -->

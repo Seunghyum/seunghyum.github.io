@@ -1,7 +1,7 @@
 ---
 layout: posts
-title:  "[코딩 테스트] 매일프로그래밍 2019-03-26"
-categories: [코딩 테스트]
+title:  "[코딩 테스트] 매일 프로그래밍 - 2019-03-26"
+categories: [CodingTest, EverydayProgramming]
 tags: [Javascript]
 comments: true
 ---
