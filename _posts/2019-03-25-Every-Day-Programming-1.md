@@ -1,8 +1,8 @@
 ---
 layout: posts
-title:  "[코딩 테스트] 매일 프로그래밍 - 피보나치 배열 2019-03-25"
+title:  "[CodingTest] 매일 프로그래밍 - 피보나치 배열 2019-03-25"
 categories: [CodingTest, EverydayProgramming]
-tags: [Javascript]
+tags: [Javascript, Finished]
 comments: true
 ---
 
