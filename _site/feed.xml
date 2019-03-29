@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-03-28T13:17:49+09:00</updated><id>/feed.xml</id><title type="html">Developer Dave</title><subtitle>JS, 데이터 시각화에 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-03-29T15:28:41+09:00</updated><id>/feed.xml</id><title type="html">Developer Dave</title><subtitle>JS, 데이터 시각화에 
 관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">[CodingTest] 배열의 두 값을 합하여 k값 만들기</title><link href="/codingtest/Daily-Programming-1/" rel="alternate" type="text/html" title="[CodingTest] 배열의 두 값을 합하여 k값 만들기" /><published>2019-03-27T00:00:00+09:00</published><updated>2019-03-27T00:00:00+09:00</updated><id>/codingtest/Daily-Programming-1</id><content type="html" xml:base="/codingtest/Daily-Programming-1/">&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
-&lt;p&gt;list라는 행렬과 k라는 자연수가 주어짐. list의 두 값을 합하여 k값을 만들 수 있으면 true, 없으면 false를 리턴해라.
+&lt;p&gt;list라는 행렬과 k라는 자연수가 주어짐. list의 두 값을 합하여 k값을 만들 수 있으면 true, 없으면 false를 리턴해라.&lt;br /&gt;
 보너스 : 한줄 표기&lt;/p&gt;
 
 &lt;h2 id=&quot;입력&quot;&gt;입력&lt;/h2&gt;
@@ -233,7 +233,7 @@ set에 우리가 지금까지 봤던 수들을 넣고 (seen 변수)
   &lt;li&gt;Array
     &lt;ul&gt;
       &lt;li&gt;요소들의 순서(order)가 필요할때&lt;/li&gt;
-      &lt;li&gt;index가 필요할때 -&amp;gt; Binary Search&lt;/li&gt;
+      &lt;li&gt;index가 필요할때 -&amp;gt; Binaory Search&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -260,7 +260,7 @@ set에 우리가 지금까지 봤던 수들을 넣고 (seen 변수)
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://medium.com/siliconwat/data-structures-in-javascript-1b9aed0ea17c&quot;&gt;data-structures-in-javascript&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://cooervo.github.io/Algorithms-DataStructures-BigONotation/data-structures.html&quot;&gt;링크&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Data Type" /><summary type="html">Set vs Array - 관련기사 Set 유일값들의 배열이 필요할때(distinct) 집합의 개념이 필요할때(차집합, 교집합 등등 자체 메서드들이 많음.) index가 필요 없을때 Array에서 중복값을 없앨때 =&amp;gt; new Set([1,1,2,3]) // 1,2,3 set의 add()는 O(n)의 시간복잡도가 소요되지만, Array의 push는 N(1)의 시간복잡도. Array 요소들의 순서(order)가 필요할때 index가 필요할때 -&amp;gt; Binary Search</summary></entry><entry><title type="html">[CodingTest] 매일 프로그래밍 - 2019-03-26</title><link href="/codingtest/everydayprogramming/Every-Day-Programming-2/" rel="alternate" type="text/html" title="[CodingTest] 매일 프로그래밍 - 2019-03-26" /><published>2019-03-26T00:00:00+09:00</published><updated>2019-03-26T00:00:00+09:00</updated><id>/codingtest/everydayprogramming/Every-Day-Programming-2</id><content type="html" xml:base="/codingtest/everydayprogramming/Every-Day-Programming-2/">&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Data Type" /><summary type="html">Set vs Array - 관련기사 Set 유일값들의 배열이 필요할때(distinct) 집합의 개념이 필요할때(차집합, 교집합 등등 자체 메서드들이 많음.) index가 필요 없을때 Array에서 중복값을 없앨때 =&amp;gt; new Set([1,1,2,3]) // 1,2,3 set의 add()는 O(n)의 시간복잡도가 소요되지만, Array의 push는 N(1)의 시간복잡도. Array 요소들의 순서(order)가 필요할때 index가 필요할때 -&amp;gt; Binaory Search</summary></entry><entry><title type="html">[CodingTest] 매일 프로그래밍 - 2019-03-26</title><link href="/codingtest/everydayprogramming/Every-Day-Programming-2/" rel="alternate" type="text/html" title="[CodingTest] 매일 프로그래밍 - 2019-03-26" /><published>2019-03-26T00:00:00+09:00</published><updated>2019-03-26T00:00:00+09:00</updated><id>/codingtest/everydayprogramming/Every-Day-Programming-2</id><content type="html" xml:base="/codingtest/everydayprogramming/Every-Day-Programming-2/">&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
 &lt;p&gt;정수 배열(int array)가 주어지면 가장 큰 이어지는 원소들의 합을 구하시오. 단, 시간복잡도는 O(n).&lt;/p&gt;
 
 &lt;p&gt;Given an integer array, find the largest consecutive sum of elements.&lt;/p&gt;

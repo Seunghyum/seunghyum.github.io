@@ -7,7 +7,7 @@ comments: true
 ---
 
 ## 문제
-list라는 행렬과 k라는 자연수가 주어짐. list의 두 값을 합하여 k값을 만들 수 있으면 true, 없으면 false를 리턴해라.
+list라는 행렬과 k라는 자연수가 주어짐. list의 두 값을 합하여 k값을 만들 수 있으면 true, 없으면 false를 리턴해라.  
 보너스 : 한줄 표기
 
 ## 입력
