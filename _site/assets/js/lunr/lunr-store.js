@@ -4,6 +4,11 @@ var store = [{
         "tags": ["ShapeFile","GeoJson","TopoJson","데이터 가공"],
         "url": "/dataprocessing/SGIS-shpToGeojson/",
         "teaser":null},{
+        "title": "[CodingTest] 별(*) 박스 만들기",
+        "excerpt":"문제 설명     별(*) 박스 만들기   입력값 a(rows)와 b(cols)에 해당하는 별박스 만들기   예시 - 1  입력  4 2  출력  **** ****   예시 - 2  입력  3 5  출력  *** *** *** *** ***   내가 작성한 정답  solution(a,b) {   return (\"*\".repeat(a) + \"\\n\").repeat(b); }  ","categories": ["CodingTest"],
+        "tags": ["Javascript"],
+        "url": "/codingtest/star-box/",
+        "teaser":null},{
         "title": "[CodingTest] 2019 카카오 신입 공채 1차 CodingTest 문제 with Javascript",
         "excerpt":"오픈채팅방 문제 바로가기 링크 카카오의 설명 블로그 나의 답안 function solution(record) { let accounts = [], events = [], answer = []; function setEnterProcess(message, userId, nickName) { const findAccountByUserId = accounts.find(a =&gt; a.userId == userId) if(findAccountByUserId &amp;&amp; findAccountByUserId.nickName !== nickName) findAccountByUserId.nickName = nickName; else accounts.push({userId, nickName}); events.push({message, userId}); } function...","categories": ["CodingTest","Kakao"],
         "tags": ["Javascript","Finished"],
