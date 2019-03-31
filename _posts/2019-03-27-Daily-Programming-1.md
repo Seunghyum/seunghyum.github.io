@@ -31,7 +31,7 @@ function solution(list, k) {
 // 198,911,753 ops/s ±0.73%
 // fastest
 ```
-풀어보고 나니 이 방식보다 더 좋은 방식. 한줄에 풀 수 있는 방식이 있나 궁금해졌다. 시간복잡도는 O(N^2)이다.
+풀어보고 나니 이 방식보다 더 좋은 방식. 한줄에 풀 수 있는 방식이 있나 궁금해졌다. 시간복잡도는 O(N<sup>2</sup>)이다.
 
 ### 방법2 - 한줄에 풀어본 답안
 ```javascript
@@ -47,7 +47,7 @@ function solution(list, k) {
 - 루프(n)를 돌며 계속해서 slice를 해야한다는점.  
 - 루프(n)를 돌며 계속해서 includes매서드로 해당 인자가 포함되어있는지를 체크해야한다는점 
 때문에 효율적인지에 대한 의문이 있다.  
-차라리 중첩 for문으로 O(N^2)번 푸는게 낫지 않을까 라는 생각이 든다.  
+차라리 중첩 for문으로 O(N<sup>2</sup>)번 푸는게 낫지 않을까 라는 생각이 든다.  
 benchmark를 해도 for문 중첩이 9 더 좋은 퍼포먼스를 내었다. [jsBench](https://jsbench.me/)
 <br>
 ***slice 매서드***와 ***includes 매서드***가 움직이는 방법식을 확인해보고 위의 한줄코드가 더 좋은 것인지 파악해봐야겠다.  
@@ -132,10 +132,10 @@ if (!Array.prototype.includes) {
 ```
 위를 보면 includes매서드는 while문으로 배열을 탐색하고 찾으면 리턴하는 구조.
 <br>
-방법1의 경우 O(N^2)보다 방법2는 O(N^3) n번의 시간복잡도를 더 가지고 있다.  
+방법1의 경우 O(N<sup>2</sup>)보다 방법2는 O(N<sup>3</sup>) n번의 시간복잡도를 더 가지고 있다.  
 풀이해보자면  
 지금까지 내가 이해한 시간복잡도를 공식화 하자면  
-- 방법1 : 2n^2 + 2n - 1 => O(N^2)
+- 방법1 : 2n<sup>2</sup> + 2n - 1 => O(N<sup>2</sup>)
 ```javascript
 function solution(list, k) {
   for(let i = 0; i<list.length;i++) { // n
@@ -146,7 +146,7 @@ function solution(list, k) {
   return false
 }
 ```
-- 방법2 : n * (n-1) * (n-1) => O(N^3)
+- 방법2 : n * (n-1) * (n-1) => O(N<sup>3</sup>)
 ```javascript
 function solution(list, k) { 
   return list.some((currentVal,idx) => { // n

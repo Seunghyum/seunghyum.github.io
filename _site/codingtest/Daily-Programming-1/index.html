@@ -295,7 +295,7 @@
 <span class="c1">// 198,911,753 ops/s ±0.73%</span>
 <span class="c1">// fastest</span>
 </code></pre></div></div>
-<p>풀어보고 나니 이 방식보다 더 좋은 방식. 한줄에 풀 수 있는 방식이 있나 궁금해졌다. 시간복잡도는 O(N^2)이다.</p>
+<p>풀어보고 나니 이 방식보다 더 좋은 방식. 한줄에 풀 수 있는 방식이 있나 궁금해졌다. 시간복잡도는 O(N<sup>2</sup>)이다.</p>
 
 <h3 id="방법2---한줄에-풀어본-답안">방법2 - 한줄에 풀어본 답안</h3>
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">list</span><span class="p">,</span> <span class="nx">k</span><span class="p">)</span> <span class="p">{</span>
@@ -311,7 +311,7 @@
   <li>루프(n)를 돌며 계속해서 slice를 해야한다는점.</li>
   <li>루프(n)를 돌며 계속해서 includes매서드로 해당 인자가 포함되어있는지를 체크해야한다는점 
 때문에 효율적인지에 대한 의문이 있다.<br />
-차라리 중첩 for문으로 O(N^2)번 푸는게 낫지 않을까 라는 생각이 든다.<br />
+차라리 중첩 for문으로 O(N<sup>2</sup>)번 푸는게 낫지 않을까 라는 생각이 든다.<br />
 benchmark를 해도 for문 중첩이 9 더 좋은 퍼포먼스를 내었다. <a href="https://jsbench.me/">jsBench</a>
 <br />
 <strong><em>slice 매서드</em></strong>와 <strong><em>includes 매서드</em></strong>가 움직이는 방법식을 확인해보고 위의 한줄코드가 더 좋은 것인지 파악해봐야겠다.</li>
@@ -395,11 +395,11 @@ benchmark를 해도 for문 중첩이 9 더 좋은 퍼포먼스를 내었다. <a 
 </code></pre></div></div>
 <p>위를 보면 includes매서드는 while문으로 배열을 탐색하고 찾으면 리턴하는 구조.
 <br />
-방법1의 경우 O(N^2)보다 방법2는 O(N^3) n번의 시간복잡도를 더 가지고 있다.<br />
+방법1의 경우 O(N<sup>2</sup>)보다 방법2는 O(N<sup>3</sup>) n번의 시간복잡도를 더 가지고 있다.<br />
 풀이해보자면<br />
 지금까지 내가 이해한 시간복잡도를 공식화 하자면</p>
 <ul>
-  <li>방법1 : 2n^2 + 2n - 1 =&gt; O(N^2)
+  <li>방법1 : 2n<sup>2</sup> + 2n - 1 =&gt; O(N<sup>2</sup>)
     <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">list</span><span class="p">,</span> <span class="nx">k</span><span class="p">)</span> <span class="p">{</span>
 <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">list</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// n</span>
   <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">j</span><span class="o">&lt;</span><span class="nx">list</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// n * (n-1)</span>
@@ -410,7 +410,7 @@ benchmark를 해도 for문 중첩이 9 더 좋은 퍼포먼스를 내었다. <a 
 <span class="p">}</span>
 </code></pre></div>    </div>
   </li>
-  <li>방법2 : n * (n-1) * (n-1) =&gt; O(N^3)
+  <li>방법2 : n * (n-1) * (n-1) =&gt; O(N<sup>3</sup>)
     <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">list</span><span class="p">,</span> <span class="nx">k</span><span class="p">)</span> <span class="p">{</span> 
 <span class="k">return</span> <span class="nx">list</span><span class="p">.</span><span class="nx">some</span><span class="p">((</span><span class="nx">currentVal</span><span class="p">,</span><span class="nx">idx</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="c1">// n</span>
   <span class="nx">list</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">idx</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="c1">// n * (n-1)</span>
@@ -503,7 +503,7 @@ set에 우리가 지금까지 봤던 수들을 넣고 (seen 변수)
   
     <li>
       <a href="#2019">
-        <strong>2019</strong> <span class="taxonomy__count">6</span>
+        <strong>2019</strong> <span class="taxonomy__count">7</span>
       </a>
     </li>
   
@@ -520,6 +520,37 @@ set에 우리가 지금까지 봤던 수들을 넣고 (seen 변수)
   <section id="2019" class="taxonomy__section">
     <h2 class="archive__subtitle">2019</h2>
     <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/Daily-Programming-2/" rel="permalink">[CodingTest] i를 제외한 배열 요소들의 곱
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">문제
+정수 배열이 주어지면 인덱스 i에 해당하는 값 이외의 모든 값들의 곱인 배열을 구하여라.
+보너스 : 나눗셈을 안쓰고 풀기
+
+</p>
+  </article>
+</div>
+
       
         
 
