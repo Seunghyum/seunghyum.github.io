@@ -9,6 +9,11 @@ var store = [{
         "tags": ["Javascript"],
         "url": "/codingtest/star-box/",
         "teaser":null},{
+        "title": "[CodingTest] 2019 라인 테스트 데모 문제풀이 - 2",
+        "excerpt":"문제 직사각형을 만드는 데 필요한 4개의 점 중 3개의 좌표가 주어질 때, 나머지 한 점의 좌표를 구하려고 합니다. 점 3개의 좌표가 들어있는 배열 v가 매개변수로 주어질 때, 직사각형을 만드는 데 필요한 나머지 한 점의 좌표를 return 하도록 solution 함수를 완성해주세요. 단, 직사각형의 각 변은 x축, y축에 평행하며, 반드시 직사각형을 만들...","categories": ["CodingTest"],
+        "tags": ["Javascript"],
+        "url": "/codingtest/Line-Test-Demo-1/",
+        "teaser":null},{
         "title": "[CodingTest] 2019 카카오 신입 공채 1차 CodingTest 문제 with Javascript",
         "excerpt":"오픈채팅방 문제 바로가기 링크 카카오의 설명 블로그 나의 답안 function solution(record) { let accounts = [], events = [], answer = []; function setEnterProcess(message, userId, nickName) { const findAccountByUserId = accounts.find(a =&gt; a.userId == userId) if(findAccountByUserId &amp;&amp; findAccountByUserId.nickName !== nickName) findAccountByUserId.nickName = nickName; else accounts.push({userId, nickName}); events.push({message, userId}); } function...","categories": ["CodingTest","Kakao"],
         "tags": ["Javascript","Finished"],
@@ -29,9 +34,14 @@ var store = [{
         "tags": ["Javascript"],
         "url": "/codingtest/everydayprogramming/Every-Day-Programming-2/",
         "teaser":null},{
+        "title": "Sorting Algorithms",
+        "excerpt":"읽고 정리해야하는 기사     링크  ","categories": ["Sorting Algorithms"],
+        "tags": ["Sorting Algorithms"],
+        "url": "/sorting%20algorithms/Sorting-Algorithms/",
+        "teaser":null},{
         "title": "[CodingTest] 배열의 두 값을 합하여 k값 만들기",
         "excerpt":"문제 list라는 행렬과 k라는 자연수가 주어짐. list의 두 값을 합하여 k값을 만들 수 있으면 true, 없으면 false를 리턴해라. 보너스 : 한줄 표기 입력 let list = [3, 9, 10, 14], k = 12 solution(list, k) // =&gt; true 내가 풀어본 풀이 방법1 - 처음 풀어본 답안 function solution(list, k) {...","categories": ["CodingTest"],
-        "tags": ["Javascript","BinarySearch","Set","Continue"],
+        "tags": ["Javascript","BinarySearch","Set"],
         "url": "/codingtest/Daily-Programming-1/",
         "teaser":null},{
         "title": "Data Type",
@@ -39,8 +49,18 @@ var store = [{
         "tags": ["Data Type"],
         "url": "/data%20type/Data-Type/",
         "teaser":null},{
+        "title": "Big O",
+        "excerpt":"Big O     CheetSheet   CheetSheet  ","categories": ["Big O"],
+        "tags": ["Big O"],
+        "url": "/big%20o/Big-O/",
+        "teaser":null},{
         "title": "[CodingTest] i를 제외한 배열 요소들의 곱",
         "excerpt":"문제 정수 배열이 주어지면 인덱스 i에 해당하는 값 이외의 모든 값들의 곱인 배열을 구하여라. 보너스 : 나눗셈을 안쓰고 풀기 예시 [1,2,3] =&gt; [6,3,2] [1,2,3,4,5 ] =&gt; [120, 60, 40, 30, 24] 나눗셈이 있는 풀이법 // 2n =&gt; O(n) function solution(arr) { const max = arr.reduce((a,b)=&gt;a*b); // n let answer =...","categories": ["CodingTest"],
-        "tags": ["Javascript","BinarySearch","Set","Continue"],
+        "tags": ["Javascript","BinarySearch","Set"],
         "url": "/codingtest/Daily-Programming-2/",
+        "teaser":null},{
+        "title": "[CodingTest] ",
+        "excerpt":"주어지는 정수 배열은 1이 공차인 일련의 숫자. 이어지는 값이 중 일련의 숫자값이 가장 길고 값이 비었거나 가장 작은 이어지는 값을 찾아라. 입력값 : integer array 주의사항 : 중복값, 음수도 포함될 수 있음. 예시 [3, 4, -1, 1] =&gt; 2 [1, 2, 0] =&gt; 3 내 풀이법 // O(logN) function solution(arr)...","categories": ["CodingTest"],
+        "tags": ["Javascript"],
+        "url": "/codingtest/Daily-Programming-3/",
         "teaser":null}]

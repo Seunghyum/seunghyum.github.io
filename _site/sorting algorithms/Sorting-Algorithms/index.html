@@ -9,38 +9,38 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[CodingTest] i를 제외한 배열 요소들의 곱 - Developer Dave</title>
-<meta name="description" content="문제정수 배열이 주어지면 인덱스 i에 해당하는 값 이외의 모든 값들의 곱인 배열을 구하여라.보너스 : 나눗셈을 안쓰고 풀기">
+<!-- begin _includes/seo.html --><title>Sorting Algorithms - Developer Dave</title>
+<meta name="description" content="읽고 정리해야하는 기사  링크">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Developer Dave">
-<meta property="og:title" content="[CodingTest] i를 제외한 배열 요소들의 곱">
-<meta property="og:url" content="/codingtest/Daily-Programming-2/">
+<meta property="og:title" content="Sorting Algorithms">
+<meta property="og:url" content="/sorting%20algorithms/Sorting-Algorithms/">
 
 
-  <meta property="og:description" content="문제정수 배열이 주어지면 인덱스 i에 해당하는 값 이외의 모든 값들의 곱인 배열을 구하여라.보너스 : 나눗셈을 안쓰고 풀기">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2019-03-28T00:00:00+09:00">
+  <meta property="og:description" content="읽고 정리해야하는 기사  링크">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2019-03-27T00:00:00+09:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="/codingtest/Daily-Programming-2/">
+
+<link rel="canonical" href="/sorting%20algorithms/Sorting-Algorithms/">
 
 
 
@@ -144,212 +144,15 @@
 
 <div id="main" role="main">
   
-  <div class="sidebar sticky">
-  
-
-
-<div itemscope itemtype="https://schema.org/Person">
-
-  
-    <div class="author__avatar text-center">
-      
-
-      
-        <img src="/assets/images/profile.jpeg" alt="Moon Seung Hyun" itemprop="image">
-      
-    </div>
-  
-
-  <div class="author__content">
-    <div class="text-center">
-      
-        <h3 class="author__name" itemprop="name">Moon Seung Hyun</h3>
-        <p class="author__name" itemprop="name">Dave</p>
-      
-    </div>
-    
-      <p class="author__bio" itemprop="description">
-        Javascript, 데이터 시각화에 관심이 많은 개발자입니다.
-      </p>
-    
-  </div>
-
-  <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">팔로우</button>
-    <ul class="author__urls social-icons">
-      
-        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
-          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Suwon, Republic of Korea</span>
-        </li>
-      
-
-      
-        
-          
-            <li><a href="mailto:antmgu@gmail.com" rel="nofollow noopener noreferrer"><i class="far fa-fw fa-envelope" aria-hidden="true"></i> antmgu@gmail.com</a></li>
-          
-        
-          
-            <li><a href="https://github.com/Seunghyum" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
-          
-        
-      
-
-      
-
-      <!-- 
-        <li>
-          <a href="mailto:antmgu@gmail.com">
-            <meta itemprop="email" content="antmgu@gmail.com" />
-            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> 이메일
-          </a>
-        </li>
-       -->
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      <!--
-  <li>
-    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
-      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
-    </a>
-  </li>
--->
-    </ul>
-  </div>
-</div>
-
-  
-  </div>
-
   <div class="archive">
     
       <br>
-      <h1 id="page-title" class="page__title">[CodingTest] i를 제외한 배열 요소들의 곱</h1>
+      <h1 id="page-title" class="page__title">Sorting Algorithms</h1>
     
     <br>
-<h2 id="문제">문제</h2>
-<p>정수 배열이 주어지면 인덱스 i에 해당하는 값 이외의 모든 값들의 곱인 배열을 구하여라.<br />
-보너스 : 나눗셈을 안쓰고 풀기</p>
-
-<h2 id="예시">예시</h2>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1,2,3] =&gt; [6,3,2]
-[1,2,3,4,5 ] =&gt; [120, 60, 40, 30, 24]
-</code></pre></div></div>
-
-<h2 id="나눗셈이-있는-풀이법">나눗셈이 있는 풀이법</h2>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 2n =&gt; O(n)</span>
-<span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kd">const</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span><span class="o">=&gt;</span><span class="nx">a</span><span class="o">*</span><span class="nx">b</span><span class="p">);</span> <span class="c1">// n</span>
-  <span class="kd">let</span> <span class="nx">answer</span> <span class="o">=</span> <span class="p">[];</span>
-  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">el</span> <span class="k">of</span> <span class="nx">arr</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// n + n</span>
-    <span class="nx">answer</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">max</span><span class="o">/</span><span class="nx">el</span><span class="p">)</span>
-  <span class="p">}</span>
-  <span class="k">return</span> <span class="nx">answer</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<h2 id="나눗셈-없는-풀이법">나눗셈 없는 풀이법</h2>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// n^2 = N(n^2)</span>
-<span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">el</span> <span class="o">=&gt;</span> <span class="c1">// n</span>
-    <span class="nx">arr</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="c1">// n</span>
-      <span class="k">return</span> <span class="nx">el</span> <span class="o">==</span> <span class="nx">b</span> <span class="p">?</span> <span class="nx">a</span> <span class="p">:</span> <span class="nx">a</span><span class="o">*</span><span class="nx">b</span>
-    <span class="p">},</span><span class="mi">1</span><span class="p">)</span>
-  <span class="p">)</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<h2 id="느낀점">느낀점</h2>
+<h2 id="읽고-정리해야하는-기사">읽고 정리해야하는 기사</h2>
 <ul>
-  <li>O(N<sup>2</sup>) 이외의 풀이법은 생각이 나지 않음.</li>
-</ul>
-
-<h2 id="답변-및-해설">답변 및 해설</h2>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// Generate prefix solution</span>
-    <span class="kd">let</span> <span class="nx">prefix_products</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span><span class="p">(</span><span class="nx">el</span> <span class="k">of</span> <span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">if</span> <span class="p">(</span><span class="nx">prefix_products</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="nx">prefix_products</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">prefix_products</span><span class="p">[</span><span class="nx">prefix_products</span><span class="p">.</span><span class="nx">length</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="nx">el</span><span class="p">)</span>
-      <span class="k">else</span> <span class="nx">prefix_products</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">el</span><span class="p">)</span>
-    <span class="p">}</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"prefix_products : "</span><span class="p">,</span> <span class="nx">prefix_products</span><span class="p">)</span>
-
-    <span class="c1">// Generate suffix solution</span>
-    <span class="kd">let</span> <span class="nx">suffix_products</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span><span class="p">(</span><span class="nx">el</span> <span class="k">of</span> <span class="p">[...</span><span class="nx">arr</span><span class="p">].</span><span class="nx">reverse</span><span class="p">())</span> <span class="p">{</span>
-      <span class="k">if</span><span class="p">(</span><span class="nx">suffix_products</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="nx">suffix_products</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">suffix_products</span><span class="p">[</span><span class="nx">suffix_products</span><span class="p">.</span><span class="nx">length</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="nx">el</span><span class="p">)</span>
-      <span class="k">else</span> <span class="nx">suffix_products</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">el</span><span class="p">)</span>
-    <span class="p">}</span>
-    <span class="nx">suffix_products</span> <span class="o">=</span> <span class="p">[...</span><span class="nx">suffix_products</span><span class="p">].</span><span class="nx">reverse</span><span class="p">();</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"suffix_products : "</span><span class="p">,</span> <span class="nx">suffix_products</span><span class="p">)</span>
-
-    <span class="c1">// Generate result</span>
-    <span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">if</span><span class="p">(</span><span class="nx">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="nx">result</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">suffix_products</span><span class="p">[</span><span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span> <span class="c1">// 첫 엘리먼트</span>
-      <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">==</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="nx">result</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">prefix_products</span><span class="p">[</span><span class="nx">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span> <span class="c1">// 마지막 엘리먼트</span>
-      <span class="k">else</span> <span class="nx">result</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">prefix_products</span><span class="p">[</span><span class="nx">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="nx">suffix_products</span><span class="p">[</span><span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span>
-    <span class="p">}</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"result : "</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span>
-    <span class="k">return</span> <span class="nx">result</span>
-<span class="p">}</span>
-</code></pre></div></div>
-<p>해결방법 : 루프를 돌면서 해당 인덱스(i)의 prefix(앞부분들)와 suffix(뒷부분들)의 값들을 구해서 곱하는 방법.</p>
-
-<p>prefix는 i번째의 앞부분들의 수의 곱<br />
-suffix는 i번째의 뒷부분들의 수의 곱</p>
-
-<p>result는 루프를 돌면서 i번째 앞부분들의 곲과 뒷부분들의 곱에 해당하는 element 값들 간의 곱</p>
-
-<p><strong>아이디어</strong></p>
-<ul>
-  <li>n<sup>2</sup>이외의 방법을 위해 여러가지 n을 만들어 풀기.</li>
-  <li>i번째의 앞부분들의 곱과 뒷부분들의 곱에 해당하는 array추출.</li>
+  <li><a href="https://medium.com/@ssbothwell/sorting-algorithms-and-big-o-analysis-332ce7b8e3a1">링크</a></li>
 </ul>
 
 <br>
@@ -513,7 +316,7 @@ suffix는 i번째의 뒷부분들의 수의 곱</p>
 
 
 
-  4 분 소요
+  2 분 소요
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">문제
@@ -838,8 +641,8 @@ function solution(record) {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "/codingtest/Daily-Programming-2/";  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = "/codingtest/Daily-Programming-2"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      this.page.url = "/sorting%20algorithms/Sorting-Algorithms/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/sorting%20algorithms/Sorting-Algorithms"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');
