@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-04-06T12:01:26+09:00</updated><id>/feed.xml</id><title type="html">Developer Dave</title><subtitle>JS, 데이터 시각화에 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-04-06T12:13:31+09:00</updated><id>/feed.xml</id><title type="html">Developer Dave</title><subtitle>JS, 데이터 시각화에 
 관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">Network - HTTP 정리</title><link href="/network/Network/" rel="alternate" type="text/html" title="Network - HTTP 정리" /><published>2019-04-06T00:00:00+09:00</published><updated>2019-04-06T00:00:00+09:00</updated><id>/network/Network</id><content type="html" xml:base="/network/Network/">&lt;h2 id=&quot;참고&quot;&gt;참고&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;책&lt;/li&gt;
@@ -120,12 +120,17 @@ HTTP 데이터 -&amp;gt; TCP 헤더 -&amp;gt; IP 헤더 -&amp;gt; Eternet 헤더
 &lt;p&gt;URL은 URI의 서브셋이다. (URI = URL + URN)&lt;/p&gt;
 
 &lt;p&gt;URN(Uniform Resource Name)은 
-URL 포맷&lt;/p&gt;
-
-&lt;p&gt;예시&lt;/p&gt;
+&lt;br /&gt;&lt;br /&gt;
+URL 포맷&lt;br /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/images/URL_syntax.png&quot; alt=&quot;URL_syntax&quot; /&gt;
+&lt;br /&gt;&lt;br /&gt;
+URL 설명&lt;br /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/images/URL_explain.png&quot; alt=&quot;URL_explain&quot; /&gt;
+&lt;br /&gt;&lt;br /&gt;
+예시&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;http://user:pass@www.aaa.com:80/dir/index.html?uid=12#head1
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;p&gt;&lt;br /&gt;
 예시 풀이&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  http://    user:pass   @www.aaa.com     :80     /dir/index.html    ?uid=12           #head1
 스키마(http),   자격정보,       서버주소,      서버포트,     계층적파일경로,     쿼리문자열,     프래그먼트식별자(#head1)
@@ -153,7 +158,9 @@ URL 포맷&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;신뢰성 - TCP는 메시지 수신을 확인하지만 UDP는 수신자가 메시지를 수신했는지 확인할 수 없다.&lt;/li&gt;
   &lt;li&gt;순서 정렬 - TCP에서는 메시지가 보내진 순서를 보장하기 위해 재조립하지만 UDP는 메시지 도착 순서를 예측할 수 없다.&lt;/li&gt;
-  &lt;li&gt;부하 - TCP보다 속도가 일반적으로 빠르고 오버헤드가 적다.&lt;/li&gt;
+  &lt;li&gt;부하 - TCP보다 속도가 일반적으로 빠르고 오버헤드가 적다.
+&lt;br /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/images/tcp_vs_udp.jpg&quot; alt=&quot;tcp_vs_udp&quot; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;간단한-프로토콜-http&quot;&gt;간단한 프로토콜 HTTP&lt;/h2&gt;
@@ -177,7 +184,7 @@ HTTP1.1지속연결 표준동작
 HTTP1.0에서는 정식사양이 아님.
 &lt;br /&gt;
 &lt;br /&gt;
-HTTP는 스테이트리스(Stateless)프로토콜이다.
+HTTP는 &lt;strong&gt;스테이트리스(Stateless)프로토콜&lt;/strong&gt;이다.
 &lt;br /&gt;
 과거에 교환했던 리퀘스트와 리스폰스의 상태를 관리하지 않음.
 &lt;br /&gt;
