@@ -43,4 +43,9 @@ var store = [{
         "excerpt":"문제 정수 배열이 주어지면 인덱스 i에 해당하는 값 이외의 모든 값들의 곱인 배열을 구하여라. 보너스 : 나눗셈을 안쓰고 풀기 예시 [1,2,3] =&gt; [6,3,2] [1,2,3,4,5 ] =&gt; [120, 60, 40, 30, 24] 나눗셈이 있는 풀이법 // 2n =&gt; O(n) function solution(arr) { const max = arr.reduce((a,b)=&gt;a*b); // n let answer =...","categories": ["CodingTest"],
         "tags": ["Javascript","BinarySearch","Set"],
         "url": "/codingtest/Daily-Programming-2/",
+        "teaser":null},{
+        "title": "Network - HTTP 정리",
+        "excerpt":"참고 책 그림으로 배우는 http &amp; network http 완벽가이드 참고 사이트 그림으로 배우는 http &amp; network 정리글 http 완벽가이드 읽는법 zerocho 님 블로그 시리즈 wiki 백과(URI, URL, UDP) 글 작성 로그 및 수정 계획 2019.04.06 그림으로 배우는 http &amp; network 정리글 블로그를 읽고 정리한 글 실제 책(그림으로 배우는 http &amp;...","categories": ["Network"],
+        "tags": ["Network","HTTP","TCP/IP"],
+        "url": "/network/Network/",
         "teaser":null}]
