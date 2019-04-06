@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Network - HTTP 정리 - Developer Dave</title>
-<meta name="description" content="참고  책  그림으로 배우는 http &amp; network  http 완벽가이드  참고 사이트          그림으로 배우는 http &amp; network 정리글      http 완벽가이드 읽는법      zerocho 님 블로그 시리즈      wiki 백과(URI, URL, UDP)      ">
+<meta name="description" content="참고  책          그림으로 배우는 http &amp; network      http 완벽가이드        참고 사이트          그림으로 배우는 http &amp; network 정리글      http 완벽가이드 읽는법      zerocho 님 블로그 시리즈      wiki 백과(URI, URL, UDP)      ">
 
 
 
@@ -21,7 +21,7 @@
 <meta property="og:url" content="/network/Network/">
 
 
-  <meta property="og:description" content="참고  책  그림으로 배우는 http &amp; network  http 완벽가이드  참고 사이트          그림으로 배우는 http &amp; network 정리글      http 완벽가이드 읽는법      zerocho 님 블로그 시리즈      wiki 백과(URI, URL, UDP)      ">
+  <meta property="og:description" content="참고  책          그림으로 배우는 http &amp; network      http 완벽가이드        참고 사이트          그림으로 배우는 http &amp; network 정리글      http 완벽가이드 읽는법      zerocho 님 블로그 시리즈      wiki 백과(URI, URL, UDP)      ">
 
 
 
@@ -274,11 +274,14 @@
     <br>
 <h2 id="참고">참고</h2>
 <ul>
-  <li>책</li>
-  <li><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=51908132">그림으로 배우는 http &amp; network</a></li>
-  <li><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=49731592">http 완벽가이드</a>
+  <li>책
+    <ul>
+      <li><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=51908132">그림으로 배우는 http &amp; network</a></li>
+      <li><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=49731592">http 완벽가이드</a>
 <br />
 <br /></li>
+    </ul>
+  </li>
   <li>참고 사이트
     <ul>
       <li><a href="http://vnthf.logdown.com/posts/2016/06/21/http">그림으로 배우는 http &amp; network 정리글</a></li>
@@ -314,23 +317,26 @@
 
 <p>인터넷과 관련된 프로토콜을 모아놓은 것</p>
 
-<p>대부분, IP프로토콜을 사용한 통신에서 사용되고 있는 프로토콜을 총칭해서 TCP/IP라고 함
-설계를 편하게 하고 유지보수를 위해서 계층화가 되어있음. 4계층</p>
+<p>대부분, IP프로토콜을 사용한 통신에서 사용되고 있는 프로토콜을 총칭해서 TCP/IP라고 함.<br />
+설계를 편하게 하고 유지보수를 위해서 계층화가 되어있음.</p>
 <ul>
-  <li>애플리케이션 계층 - 유저에서 제공되는 에플리케이션 (FTP, DNS, HTTP)</li>
-  <li>트랜스포트 계층 - 에플리케이션 계층에 네트워크로 접속되어 있는 컴퓨터사이의 데이터흐름을 제공(TCP, UDP)</li>
-  <li>네트워크 계층 - 네트워크 상에서 패킷의 이동을 다룸. 여러대의 컴퓨터랑 네트워크 기기사이에서 길을 찾는 것(IP)</li>
-  <li>링크 계층 - 네트워크의 하드웨어적인 면 (케이블 등등)
+  <li>4계층
+    <ul>
+      <li>애플리케이션 계층 - 유저에서 제공되는 에플리케이션 (FTP, DNS, HTTP)</li>
+      <li>트랜스포트 계층 - 에플리케이션 계층에 네트워크로 접속되어 있는 컴퓨터사이의 데이터흐름을 제공(TCP, UDP)</li>
+      <li>네트워크 계층 - 네트워크 상에서 패킷의 이동을 다룸. 여러대의 컴퓨터랑 네트워크 기기사이에서 길을 찾는 것(IP)</li>
+      <li>링크 계층 - 네트워크의 하드웨어적인 면 (케이블 등등)
+<br />
 HTTP 데이터 -&gt; TCP 헤더 -&gt; IP 헤더 -&gt; Eternet 헤더</li>
+    </ul>
+  </li>
 </ul>
 
 <h2 id="ip">IP</h2>
 
 <ul>
   <li>배송을 담당. 개개의 패킷을 상대방에게 전달. IP주소와 MAC(변경 불가)주소를 통해서 통신</li>
-  <li>
-    <p>어느 누구도 길에대한 정확한 위치를 알고 있지 않음(물어물어 찾아감)</p>
-  </li>
+  <li>어느 누구도 길에대한 정확한 위치를 알고 있지 않음(물어물어 찾아감)</li>
   <li>네트워크에 존재하는 각 컴퓨터를 식별하기 위해 각각에 서로 다른 값을 할당한 것. 각 기기에 할당되는 것이 아니라 기기에 장착된 각각의 네트워크용 하드웨어에 할당 됨. 즉, 복수의 네트워크하드웨어를 장착한 기기는 복수의 주소 할당.</li>
   <li>MAC(Media Access Control Address) 주소 :  IEEE에서 표준화된 LAN 방식의 기기는 모두 같은 형식의 주소를 사용하는데 이 주소를 가르킴. MAC주소를 사용하여 목적지를 찾아갈때는 ARP라는 프로토콜이 사용됨</li>
   <li>IP주소는 변경가능하나, MAC주소는 변경불가.</li>
@@ -340,16 +346,15 @@ HTTP 데이터 -&gt; TCP 헤더 -&gt; IP 헤더 -&gt; Eternet 헤더</li>
 
 <ul>
   <li>신뢰성을 담당
-바이트 스트림 서비스</li>
+    <ul>
+      <li>바이트 스트림 서비스<br />
+: 큰 데이터를 보내기위에 TCP세그먼트라고 불리우는 단위 패킷으로 작개 분해하여 관리하는것. 대용량의 데이터를 보내기 쉽게 작게 분해햐여 상대에게 보내고, 정확하게 도착했는지 확인하는 역할.</li>
+      <li>TCP Three way hand shaking (STN/ACK 플래그 사용)<br />
+: SYN으로 보내면 SYN/ACK 플래그로 패킷 수신한 사실을 전하면 ACK 플래그를 다시 보내 완료되었음을 전송. 도중에 끊키면 다시 반복
+<img src="/assets/images/3way_hand_shake.png" alt="TCP Three way hand shaking (STN/ACK 플래그 사용)" /></li>
+    </ul>
+  </li>
 </ul>
-
-<dl>
-  <dt>: 큰 데이터를 보내기위에 TCP세그먼트라고 불리우는 단위 패킷으로 작개 분해하여 관리하는것. 대용량의 데이터를 보내기 쉽게 작게 분해햐여 상대에게 보내고, 정확하게 도착했는지 확인하는 역할.</dt>
-  <dt>쓰리웨이 핸드 쉐이킹 (STN/ACK 플래그 사용)</dt>
-  <dd>
-    <p>SYN으로 보내면 SYN/ACK 플래그로 패킷 수신한 사실을 전하면 ACK 플래그를 다시 보내 완료되었음을 전송. 도중에 끊키면 다시 반복</p>
-  </dd>
-</dl>
 
 <h2 id="dnsdomain-name-system">DNS(Domain Name System)</h2>
 
@@ -364,8 +369,8 @@ HTTP 데이터 -&gt; TCP 헤더 -&gt; IP 헤더 -&gt; Eternet 헤더</li>
 
 <h2 id="uri-url">URI, URL</h2>
 
-<p>URI. Uniform Resource Identifiers
-스키마를 나타내는 리소스를 식별하기 위한 식별자.
+<p>URI(Uniform Resource Identifiers)<br />
+스키마를 나타내는 리소스를 식별하기 위한 식별자.<br />
 스키마: 리소스를 얻기위한 수단에 이름을 붙이는 방법. (http, ftp, mailto, file, telnet 등).</p>
 
 <ul>
@@ -392,8 +397,7 @@ HTTP 데이터 -&gt; TCP 헤더 -&gt; IP 헤더 -&gt; Eternet 헤더</li>
 
 <p>URL은 URI의 서브셋이다. (URI = URL + URN)</p>
 
-<p>URN(Uniform Resource Name)은 
-<br /><br />
+<p><br /><br />
 URL 포맷<br /><br />
 <img src="/assets/images/URL_syntax.png" alt="URL_syntax" />
 <br /><br />
@@ -410,20 +414,25 @@ URL 설명<br /><br />
 </code></pre></div></div>
 
 <ul>
-  <li>스키마 : 리소스를 얻기위해 사용하는 프로토콜을 지시. 대소문자 무시, 마지막에 콜론(:)이 붙음. “data:”, “javascript:”같이 데이터와 프로그램도 지정 가능</li>
-  <li>자격정보(=크리덴셜) : 서버로부터 리소스를 취득하려면 자격정보가 필요. 유저명과 패스워드 지정. 이것은 옵션</li>
-  <li>서버주소 : DNS이름(www.aaa.com)이나, IPv4주소(192.168.1.1)나, IPv6주소([0:0:0:0:0:0:0:1])를 쓸 수 있음</li>
+  <li>스키마
+    <ul>
+      <li>리소스를 얻기위해 사용하는 프로토콜을 지시.</li>
+      <li>대소문자 무시, 마지막에 콜론(:)이 붙음.</li>
+      <li>“data:”, “javascript:”같이 데이터와 프로그램도 지정 가능.</li>
+    </ul>
+  </li>
+  <li>자격정보(=크리덴셜)
+    <ul>
+      <li>서버로부터 리소스를 취득하려면 자격정보가 필요.</li>
+      <li>유저명과 패스워드 지정. 이것은 옵션.</li>
+    </ul>
+  </li>
+  <li>서버주소 : DNS이름(www.aaa.com)이나, IPv4주소(192.168.1.1)나, IPv6주소([0:0:0:0:0:0:0:1])를 쓸 수 있음.</li>
   <li>서버포트 : 서버의 접속대상이 되는 네트워크 포트 번호 지정. 이것도 옵션. 생략시 디폴트 포트가 사용</li>
   <li>계층적 파일경로 : 특정 리소스를 식별하기 위해 서버상의 파일 패스를 지정.</li>
   <li>쿼리문자열 : 파일 패스로 지정된 리소스에 임의의 파라미터를 넘겨주기 위해 쿼리문자열을 사용. 옵션값</li>
   <li>프래그먼트 식별자 : 취득한 리소스에서 서브리소스 (도큐먼트 중간에 위치)를 가리키기 위해서 사용. 옵션값</li>
 </ul>
-
-<p>RFC. Request For Comments</p>
-
-<p>HTTP에서 정한 몇가지 기술 사양</p>
-
-<p>기본적으로 HTTP를 사용하는 클라이언트나 서버는 RFC를 따른다. 그러나 일부에서는 따르지않는 데도 있고 더나아가 독자적으로 확장하는 경우도 있다.</p>
 
 <h3 id="udp와-tcp-비교편집">UDP와 TCP 비교[편집]</h3>
 
@@ -550,22 +559,24 @@ HTTP는 <strong>스테이트리스(Stateless)프로토콜</strong>이다.
 
 
 
-  4 분 소요
+  3 분 소요
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">참고
 
   책
-  그림으로 배우는 http &amp; network
-  http 완벽가이드
+    
+      그림으로 배우는 http &amp; network
+      http 완벽가이드
 
 
+    
+  
   참고 사이트
     
       그림으로 배우는 http &amp; network 정리글
       http 완벽가이드 읽는법
-      zerocho 님 블로그 시리즈
-      w...</p>
+      zero...</p>
   </article>
 </div>
 
