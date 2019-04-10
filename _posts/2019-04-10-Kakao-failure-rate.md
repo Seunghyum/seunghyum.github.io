@@ -62,6 +62,12 @@ function solution(N, stages) {
 }
 ```
 
+## 결과 비교
+<h4 class="text-center" style="width: 49%; display: inline-block; margin-bottom: 5px;" > 나의 첫답안 </h4>
+<h4 class="text-center" style="width: 49%; display: inline-block; margin-bottom: 5px;" > 나의 수정한 답안 </h4>
+<img style="width: 49%; display: inline-block;" src="/assets/images/kakao-failure-rate-1a.png"/>
+<img style="width: 49%; display: inline-block;" src="/assets/images/kakao-failure-rate-2a.png"/>
+
 ## 공부해야할 자료
 sort 매서드는 merge sort라고 한다. [관련링크](https://www.quora.com/What-is-the-time-complexity-of-JavaScripts-sort-function)  
 다른 sort들의 특징과 장점을 봐야겠다.
