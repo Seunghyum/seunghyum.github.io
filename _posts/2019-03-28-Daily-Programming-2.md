@@ -79,7 +79,7 @@ function solution(arr) {
 prefix는 i번째의 앞부분들의 수의 곱  
 suffix는 i번째의 뒷부분들의 수의 곱  
   
-result는 루프를 돌면서 i번째 앞부분들의 곲과 뒷부분들의 곱에 해당하는 element 값들 간의 곱  
+result는 루프를 돌면서 i번째 앞부분들의 곱과 뒷부분들의 곱에 해당하는 element 값들 간의 곱  
   
 **아이디어**
 - n<sup>2</sup>이외의 방법을 위해 여러가지 n을 만들어 풀기.
