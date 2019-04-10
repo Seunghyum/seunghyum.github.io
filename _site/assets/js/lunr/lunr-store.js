@@ -30,9 +30,9 @@ var store = [{
         "url": "/codingtest/everydayprogramming/Every-Day-Programming-2/",
         "teaser":null},{
         "title": "[CodingTest] 배열의 두 값을 합하여 k값 만들기",
-        "excerpt":"문제 list라는 행렬과 k라는 자연수가 주어짐. list의 두 값을 합하여 k값을 만들 수 있으면 true, 없으면 false를 리턴해라. 보너스 : 한줄 표기 입력 let list = [3, 9, 10, 14], k = 12 solution(list, k) // =&gt; true 내가 풀어본 풀이 방법1 - 처음 풀어본 답안 function solution(list, k) {...","categories": ["CodingTest"],
+        "excerpt":"문제 list라는 행렬과 k라는 자연수가 주어짐. list의 두 값을 합하여 k값을 만들 수 있으면 true, 없으면 false를 리턴해라. 보너스 : 한줄 표기 입력 let list = [3, 9, 10, 14], k = 12 solution(list, k) // =&gt; true 내가 풀어본 풀이 방법1 - 처음 풀어본 답안 function solution(list, k) {...","categories": ["CodingTest","DailyProgramming"],
         "tags": ["Javascript","BinarySearch","Set"],
-        "url": "/codingtest/Daily-Programming-1/",
+        "url": "/codingtest/dailyprogramming/Daily-Programming-1/",
         "teaser":null},{
         "title": "Data Type",
         "excerpt":"Set vs Array - 관련기사 Set 유일값들의 배열이 필요할때(distinct) 집합의 개념이 필요할때(차집합, 교집합 등등 자체 메서드들이 많음.) index가 필요 없을때 Array에서 중복값을 없앨때 =&gt; new Set([1,1,2,3]) // 1,2,3 set의 add()는 O(n)의 시간복잡도가 소요되지만, Array의 push는 N(1)의 시간복잡도. Array 요소들의 순서(order)가 필요할때 index가 필요할때 -&gt; Binaory Search Map vs Object 관련기사...","categories": ["Data Type"],
@@ -40,9 +40,9 @@ var store = [{
         "url": "/data%20type/Data-Type/",
         "teaser":null},{
         "title": "[CodingTest] i를 제외한 배열 요소들의 곱",
-        "excerpt":"문제 정수 배열이 주어지면 인덱스 i에 해당하는 값 이외의 모든 값들의 곱인 배열을 구하여라. 보너스 : 나눗셈을 안쓰고 풀기 예시 [1,2,3] =&gt; [6,3,2] [1,2,3,4,5 ] =&gt; [120, 60, 40, 30, 24] 나눗셈이 있는 풀이법 // 2n =&gt; O(n) function solution(arr) { const max = arr.reduce((a,b)=&gt;a*b); // n let answer =...","categories": ["CodingTest"],
+        "excerpt":"문제 정수 배열이 주어지면 인덱스 i에 해당하는 값 이외의 모든 값들의 곱인 배열을 구하여라. 보너스 : 나눗셈을 안쓰고 풀기 예시 [1,2,3] =&gt; [6,3,2] [1,2,3,4,5 ] =&gt; [120, 60, 40, 30, 24] 나눗셈이 있는 풀이법 // 2n =&gt; O(n) function solution(arr) { const max = arr.reduce((a,b)=&gt;a*b); // n let answer =...","categories": ["CodingTest","DailyProgramming"],
         "tags": ["Javascript","BinarySearch","Set"],
-        "url": "/codingtest/Daily-Programming-2/",
+        "url": "/codingtest/dailyprogramming/Daily-Programming-2/",
         "teaser":null},{
         "title": "[Syntax] 새로 알게된 파이썬 문법 정리",
         "excerpt":"chaning comparison 파이썬은 chaning comparison이라는 신기한 문법이 있다. 참고 if a &lt; b and b &lt; c : (...) 라는 구문이 if a &lt; b &lt; c : (...) 으로 연산된다. 직관적인 문법이 인상적. Comparison operator Chaining 이라고 불린다. Slice operater 문자열, tuples, dictionaries, lists 에 모두 적용가능. [start:end] [1:5]...","categories": ["Python","Syntax"],

@@ -6,7 +6,6 @@ tags: [Javascript, Finished]
 comments: true
 ---
 
-
 ## 오픈채팅방
 - [문제 바로가기 링크](https://www.welcomekakao.com/learn/courses/30/lessons/42889)
 - [카카오의 설명 블로그](http://tech.kakao.com/2018/09/21/kakao-blind-recruitment-for2019-round-1/)

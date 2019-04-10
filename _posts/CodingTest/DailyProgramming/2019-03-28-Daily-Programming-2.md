@@ -1,7 +1,7 @@
 ---
 layout: posts
 title:  "[CodingTest] i를 제외한 배열 요소들의 곱"
-categories: [CodingTest]
+categories: [CodingTest, DailyProgramming]
 tags: [Javascript, BinarySearch, Set]
 comments: true
 ---

@@ -1,7 +1,7 @@
 ---
 layout: posts
 title:  "[CodingTest] 배열의 두 값을 합하여 k값 만들기"
-categories: [CodingTest]
+categories: [CodingTest, DailyProgramming]
 tags: [Javascript, BinarySearch, Set]
 comments: true
 ---
