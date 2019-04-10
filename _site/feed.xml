@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-04-10T16:56:48+09:00</updated><id>/feed.xml</id><title type="html">Developer Dave</title><subtitle>JS, 데이터 시각화에 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-04-10T17:01:14+09:00</updated><id>/feed.xml</id><title type="html">Developer Dave</title><subtitle>JS, 데이터 시각화에 
 관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">[CodingTest] 2019 카카오 신입 공채 1차 - 2번 실패율 문제 with Javascript</title><link href="/codingtest/kakao/Kakao-failure-rate/" rel="alternate" type="text/html" title="[CodingTest] 2019 카카오 신입 공채 1차 - 2번 실패율 문제 with Javascript" /><published>2019-04-10T00:00:00+09:00</published><updated>2019-04-10T00:00:00+09:00</updated><id>/codingtest/kakao/Kakao-failure-rate</id><content type="html" xml:base="/codingtest/kakao/Kakao-failure-rate/">&lt;h2 id=&quot;오픈채팅방&quot;&gt;오픈채팅방&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.welcomekakao.com/learn/courses/30/lessons/42889&quot;&gt;문제 바로가기 링크&lt;/a&gt;&lt;/li&gt;
@@ -57,8 +57,8 @@
 &lt;h2 id=&quot;결과-비교&quot;&gt;결과 비교&lt;/h2&gt;
 &lt;h4 class=&quot;text-center&quot; style=&quot;width: 49%; display: inline-block; margin-bottom: 5px;&quot;&gt; 나의 첫답안 &lt;/h4&gt;
 &lt;h4 class=&quot;text-center&quot; style=&quot;width: 49%; display: inline-block; margin-bottom: 5px;&quot;&gt; 나의 수정한 답안 &lt;/h4&gt;
-&lt;p&gt;&lt;img style=&quot;width: 49%; display: inline-block;&quot; src=&quot;/assets/images/kakao-failure-rate-1a.png&quot; /&gt;
-&lt;img style=&quot;width: 49%; display: inline-block;&quot; src=&quot;/assets/images/kakao-failure-rate-2a.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img style=&quot;width: 49%; display: inline-block;&quot; src=&quot;/assets/images/kakao-failure-rate-1a-min.png&quot; /&gt;
+&lt;img style=&quot;width: 49%; display: inline-block;&quot; src=&quot;/assets/images/kakao-failure-rate-2a-min.png&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;공부해야할-자료&quot;&gt;공부해야할 자료&lt;/h2&gt;
 &lt;p&gt;sort 매서드는 merge sort라고 한다. &lt;a href=&quot;https://www.quora.com/What-is-the-time-complexity-of-JavaScripts-sort-function&quot;&gt;관련링크&lt;/a&gt;&lt;br /&gt;
