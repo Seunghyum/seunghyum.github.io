@@ -24,15 +24,15 @@ author_profile: true
 #### In Company
 ## Slowalk 
 
-| <center>Company</center> | <center>Project</center> | <center>Role</center> |
-|:--------:|:--------:|:--------|
-| 서울시금천<br>직장맘지원센터 | 희망별빛 캠페인 페이지 | [Full Stack](#){: .btn .btn--danger}  전체 담당. 간단한 원페이지 |
-| 한국백혈병<br>어린이재단 | 금천직장맘 홈페이지 | [Full Stack](#){: .btn .btn--danger} 전체 담당. 커뮤니티 게시판 전반적인 기능 + 상담기능 + 관리자 페이지  |
-| 언론재단 | 뉴스트러스트 프로젝트 1차년도 웹 페이지 | [Full Stack](#){: .btn .btn--danger} 데이터 가공 코어 개발은 시니어 개발자분이 담당. 기본적인 데이터 가공 + Read기능 위주의 홈페이지 |
-| 언론재단 | 뉴스트러스트 프로젝트 2차년도 웹 페이지 | [Frontend](#){: .btn .btn--info} 데이터 가공 코어 개발은 시니어 개발자분이 담당. 가공한 데이터 시각화. Read 기능 위주의 홈페이지. 설문조사 페이지 제작 |
-| 언론재단 | 뉴스트러스트 프로젝트 3차년도 서브 페이지 | [Full Stack](#){: .btn .btn--danger} 간단한 CRUD기능의 홈페이지 개발 |
-| 서울대학교<br>산학협력단 | 미세먼지 대기건강지수 웹 페이지 | [Full Stack](#){: .btn .btn--danger} 전체 담당. 지도 위주의  데이터 시각화 |
-| 국립암센터 | 암발생 지리정보 웹 페이지 | [Full Stack](#){: .btn .btn--danger} 전체 담당. 지도 + 차트를 통한 데이터 시각화, 클라이언트의 IDC의 서버 세팅 규정에 따라 서버 세팅 |
+| <center>Company</center> | <center>Project</center> | <center>Role</center> | <center>Detail</center> |
+|:--------:|:--------:|:--------|:--------|
+| 서울시금천<br>직장맘지원센터 | 희망별빛 캠페인 페이지 | [Full Stack](#){: .btn .btn--danger} | 전체 담당. 간단한 원페이지 |
+| 한국백혈병<br>어린이재단 | 금천직장맘 홈페이지 | [Full Stack](#){: .btn .btn--danger} | 전체 담당. 커뮤니티 게시판 전반적인 기능 + 상담기능 + 관리자 페이지  |
+| 언론재단 | 뉴스트러스트 프로젝트 1차년도 웹 페이지 | [Full Stack](#){: .btn .btn--danger} | 데이터 가공 코어 개발은 시니어 개발자분이 담당. 기본적인 데이터 가공 + Read기능 위주의 홈페이지 |
+| 언론재단 | 뉴스트러스트 프로젝트 2차년도 웹 페이지 | [Frontend](#){: .btn .btn--info} | 데이터 가공 코어 개발은 시니어 개발자분이 담당. 가공한 데이터 시각화. Read 기능 위주의 홈페이지. 설문조사 페이지 제작 |
+| 언론재단 | 뉴스트러스트 프로젝트 3차년도 서브 페이지 | [Full Stack](#){: .btn .btn--danger} | 간단한 CRUD기능의 홈페이지 개발 |
+| 서울대학교<br>산학협력단 | 미세먼지 대기건강지수 웹 페이지 | [Full Stack](#){: .btn .btn--danger} | 전체 담당. 지도 위주의  데이터 시각화 |
+| 국립암센터 | 암발생 지리정보 웹 페이지 | [Full Stack](#){: .btn .btn--danger} | 전체 담당. 지도 + 차트를 통한 데이터 시각화, 클라이언트의 IDC의 서버 세팅 규정에 따라 서버 세팅 |
     
 ### 개인프로젝트 
 

@@ -2,7 +2,7 @@
 layout: posts
 title:  "[CodingTest] Algospot - Anagram 문제"
 categories: [CodingTest, Algospot]
-tags: [Javascript, Finished]
+tags: [Javascript]
 comments: true
 ---
 
