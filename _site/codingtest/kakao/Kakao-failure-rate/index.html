@@ -9,38 +9,38 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[CodingTest] 별(*) 박스 만들기 - Developer Dave</title>
-<meta name="description" content="문제 설명  별(*) 박스 만들기  입력값 a(rows)와 b(cols)에 해당하는 별박스 만들기">
+<!-- begin _includes/seo.html --><title>[CodingTest] 2019 카카오 신입 공채 1차 - 2번 실패율 문제 with Javascript - Developer Dave</title>
+<meta name="description" content="오픈채팅방  문제 바로가기 링크  카카오의 설명 블로그나의 첫답안function solution(N, stages) {  let st = stages, stats = [];  for(let i=1;i&lt;N+1;i++){ // n    let selectedNumbers=0, obj = {};    st = st.filter((s)=&gt;{ // n * n      if(s == i) selectedNumbers++;      else return true;    });    obj.name = i;    obj.per = (st.length == 0 ? 1 : selectedNumbers/st.length);    stats.push(obj)  }  stats.sort((a,b)=&gt; a.per - b.per &gt;= 0 ? -1 : 1) // n^2 + logN  return stats.map(s =&gt; s.name) // -&gt; O(n^2)}">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Developer Dave">
-<meta property="og:title" content="[CodingTest] 별(*) 박스 만들기">
-<meta property="og:url" content="/codingtest/star-box/">
+<meta property="og:title" content="[CodingTest] 2019 카카오 신입 공채 1차 - 2번 실패율 문제 with Javascript">
+<meta property="og:url" content="/codingtest/kakao/Kakao-failure-rate/">
 
 
-  <meta property="og:description" content="문제 설명  별(*) 박스 만들기  입력값 a(rows)와 b(cols)에 해당하는 별박스 만들기">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2019-03-16T00:00:00+09:00">
+  <meta property="og:description" content="오픈채팅방  문제 바로가기 링크  카카오의 설명 블로그나의 첫답안function solution(N, stages) {  let st = stages, stats = [];  for(let i=1;i&lt;N+1;i++){ // n    let selectedNumbers=0, obj = {};    st = st.filter((s)=&gt;{ // n * n      if(s == i) selectedNumbers++;      else return true;    });    obj.name = i;    obj.per = (st.length == 0 ? 1 : selectedNumbers/st.length);    stats.push(obj)  }  stats.sort((a,b)=&gt; a.per - b.per &gt;= 0 ? -1 : 1) // n^2 + logN  return stats.map(s =&gt; s.name) // -&gt; O(n^2)}">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2019-04-10T00:00:00+09:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="/codingtest/star-box/">
+
+<link rel="canonical" href="/codingtest/kakao/Kakao-failure-rate/">
 
 
 
@@ -269,41 +269,71 @@
   <div class="archive">
     
       <br>
-      <h1 id="page-title" class="page__title">[CodingTest] 별(*) 박스 만들기</h1>
+      <h1 id="page-title" class="page__title">[CodingTest] 2019 카카오 신입 공채 1차 - 2번 실패율 문제 with Javascript</h1>
     
     <br>
-<h2 id="문제-설명">문제 설명</h2>
-<dl>
-  <dt>별(*) 박스 만들기</dt>
-  <dd>입력값 a(rows)와 b(cols)에 해당하는 별박스 만들기</dd>
-</dl>
+<h2 id="오픈채팅방">오픈채팅방</h2>
+<ul>
+  <li><a href="https://www.welcomekakao.com/learn/courses/30/lessons/42889">문제 바로가기 링크</a></li>
+  <li><a href="http://tech.kakao.com/2018/09/21/kakao-blind-recruitment-for2019-round-1/">카카오의 설명 블로그</a>
+<br /></li>
+</ul>
 
-<h3 id="예시---1">예시 - 1</h3>
-<p>입력</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>4 2
-</code></pre></div></div>
-<p>출력</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>****
-****
-</code></pre></div></div>
-
-<h3 id="예시---2">예시 - 2</h3>
-<p>입력</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3 5
-</code></pre></div></div>
-<p>출력</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>***
-***
-***
-***
-***
-</code></pre></div></div>
-
-<h2 id="내가-작성한-정답">내가 작성한 정답</h2>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">solution</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="p">(</span><span class="s2">"*"</span><span class="p">.</span><span class="nx">repeat</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">).</span><span class="nx">repeat</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span>
+<h2 id="나의-첫답안">나의 첫답안</h2>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">N</span><span class="p">,</span> <span class="nx">stages</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">st</span> <span class="o">=</span> <span class="nx">stages</span><span class="p">,</span> <span class="nx">stats</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">N</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">){</span> <span class="c1">// n</span>
+    <span class="kd">let</span> <span class="nx">selectedNumbers</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{};</span>
+    <span class="nx">st</span> <span class="o">=</span> <span class="nx">st</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">s</span><span class="p">)</span><span class="o">=&gt;</span><span class="p">{</span> <span class="c1">// n * n</span>
+      <span class="k">if</span><span class="p">(</span><span class="nx">s</span> <span class="o">==</span> <span class="nx">i</span><span class="p">)</span> <span class="nx">selectedNumbers</span><span class="o">++</span><span class="p">;</span>
+      <span class="k">else</span> <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="p">});</span>
+    <span class="nx">obj</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">i</span><span class="p">;</span>
+    <span class="nx">obj</span><span class="p">.</span><span class="nx">per</span> <span class="o">=</span> <span class="p">(</span><span class="nx">st</span><span class="p">.</span><span class="nx">length</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">?</span> <span class="mi">1</span> <span class="p">:</span> <span class="nx">selectedNumbers</span><span class="o">/</span><span class="nx">st</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+    <span class="nx">stats</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span>
+  <span class="p">}</span>
+  <span class="nx">stats</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span><span class="o">=&gt;</span> <span class="nx">a</span><span class="p">.</span><span class="nx">per</span> <span class="o">-</span> <span class="nx">b</span><span class="p">.</span><span class="nx">per</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="p">?</span> <span class="o">-</span><span class="mi">1</span> <span class="p">:</span> <span class="mi">1</span><span class="p">)</span> <span class="c1">// n^2 + logN</span>
+  <span class="k">return</span> <span class="nx">stats</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">s</span> <span class="o">=&gt;</span> <span class="nx">s</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span> <span class="c1">// -&gt; O(n^2)</span>
 <span class="p">}</span>
 </code></pre></div></div>
+
+<h2 id="나의-수정한-답안">나의 수정한 답안</h2>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">N</span><span class="p">,</span> <span class="nx">stages</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">eaStats</span> <span class="o">=</span> <span class="p">{},</span> <span class="nx">perStats</span> <span class="o">=</span> <span class="p">[];</span>
+
+  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">el</span> <span class="k">of</span> <span class="nx">stages</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Array 인자값들의 갯수 통계를 내고 = easStats -&gt; n</span>
+    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">eaStats</span><span class="p">[</span><span class="nx">el</span><span class="p">])</span> <span class="nx">eaStats</span><span class="p">[</span><span class="nx">el</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">else</span> <span class="nx">eaStats</span><span class="p">[</span><span class="nx">el</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="kd">let</span> <span class="nx">stageUsers</span> <span class="o">=</span> <span class="nx">stages</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+
+  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">N</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">){</span> <span class="c1">// 갯수통계(eaStats)를 확률들의 통계(perStats)로 다시 변환하고 -&gt; 2n</span>
+    <span class="kd">let</span> <span class="nx">perStatsObj</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">eaStats</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="p">{</span>
+      <span class="nx">perStatsObj</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">i</span><span class="p">;</span>
+      <span class="nx">perStatsObj</span><span class="p">.</span><span class="nx">per</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+      <span class="nx">perStats</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">perStatsObj</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">perStatsObj</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">i</span>
+      <span class="nx">perStatsObj</span><span class="p">.</span><span class="nx">per</span> <span class="o">=</span> <span class="nx">stageUsers</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">?</span> <span class="mi">1</span> <span class="p">:</span> <span class="nx">eaStats</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">/</span><span class="nx">stageUsers</span><span class="p">;</span>
+      <span class="nx">stageUsers</span> <span class="o">=</span> <span class="nx">stageUsers</span> <span class="o">-</span> <span class="nx">eaStats</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+      <span class="nx">perStats</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">perStatsObj</span><span class="p">)</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="nx">perStats</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span><span class="o">=&gt;</span> <span class="nx">a</span><span class="p">.</span><span class="nx">per</span> <span class="o">-</span> <span class="nx">b</span><span class="p">.</span><span class="nx">per</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="p">?</span> <span class="o">-</span><span class="mi">1</span> <span class="p">:</span> <span class="mi">1</span><span class="p">)</span> <span class="c1">// 확률들의 통계(perStats)로 다시 변환하고 -&gt; 2n + nlogN</span>
+  <span class="k">return</span> <span class="nx">perStats</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">s</span> <span class="o">=&gt;</span> <span class="nx">s</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span> <span class="c1">// -&gt; O(nlogN)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="공부해야할-자료">공부해야할 자료</h2>
+<p>sort 매서드는 merge sort라고 한다. <a href="https://www.quora.com/What-is-the-time-complexity-of-JavaScripts-sort-function">관련링크</a><br />
+다른 sort들의 특징과 장점을 봐야겠다.</p>
+<ul>
+  <li><a href="https://khan4019.github.io/front-end-Interview-Questions/sort.html">JS Interview Question</a></li>
+  <li><a href="https://dev.to/wangonya/sorting-algorithms-with-javascript-part-1-4aca">Sort Algorithms with Javascript</a></li>
+</ul>
 
 <br>
 <br>
@@ -389,7 +419,7 @@ function solution(N, stages) {
 
 
 
-  4 분 소요
+  3 분 소요
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">참고
@@ -531,7 +561,7 @@ if a &lt; b &lt; c :
 
 
 
-  2 분 소요
+  4 분 소요
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">문제
@@ -621,7 +651,7 @@ list라는 행렬과 k라는 자연수가 주어짐. list의 두 값을 합하�
 
 
 
-  1 분 소요
+  2 분 소요
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">&lt;!– ## 설명
@@ -813,8 +843,8 @@ function solution(record) {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "/codingtest/star-box/";  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = "/codingtest/star-box"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      this.page.url = "/codingtest/kakao/Kakao-failure-rate/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/codingtest/kakao/Kakao-failure-rate"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');

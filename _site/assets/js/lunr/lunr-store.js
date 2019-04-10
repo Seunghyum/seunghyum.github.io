@@ -9,7 +9,7 @@ var store = [{
         "tags": ["Javascript"],
         "url": "/codingtest/star-box/",
         "teaser":null},{
-        "title": "[CodingTest] 2019 카카오 신입 공채 1차 CodingTest 문제 with Javascript",
+        "title": "[CodingTest] 2019 카카오 신입 공채 1차 - 1번 오픈채팅방 문제 with Javascript",
         "excerpt":"오픈채팅방 문제 바로가기 링크 카카오의 설명 블로그 나의 답안 function solution(record) { let accounts = [], events = [], answer = []; function setEnterProcess(message, userId, nickName) { const findAccountByUserId = accounts.find(a =&gt; a.userId == userId) if(findAccountByUserId &amp;&amp; findAccountByUserId.nickName !== nickName) findAccountByUserId.nickName = nickName; else accounts.push({userId, nickName}); events.push({message, userId}); } function...","categories": ["CodingTest","Kakao"],
         "tags": ["Javascript","Finished"],
         "url": "/codingtest/kakao/Kakao-open-chatting-room/",
@@ -44,8 +44,18 @@ var store = [{
         "tags": ["Javascript","BinarySearch","Set"],
         "url": "/codingtest/Daily-Programming-2/",
         "teaser":null},{
+        "title": "[Syntax] 새로 알게된 파이썬 문법 정리",
+        "excerpt":"chaning comparison 파이썬은 chaning comparison이라는 신기한 문법이 있다. 참고 if a &lt; b and b &lt; c : (...) 라는 구문이 if a &lt; b &lt; c : (...) 으로 연산된다. 직관적인 문법이 인상적. Comparison operator Chaining 이라고 불린다. Slice operater 문자열, tuples, dictionaries, lists 에 모두 적용가능. [start:end] [1:5]...","categories": ["Python","Syntax"],
+        "tags": ["Python"],
+        "url": "/python/syntax/Python-Syntax/",
+        "teaser":null},{
         "title": "Network - HTTP 정리",
         "excerpt":"참고 책 그림으로 배우는 http &amp; network http 완벽가이드 참고 사이트 그림으로 배우는 http &amp; network 정리글 http 완벽가이드 읽는법 zerocho 님 블로그 시리즈 wiki 백과(URI, URL, UDP) 글 작성 로그 및 수정 계획 2019.04.06 그림으로 배우는 http &amp; network 정리글 블로그를 읽고 정리한 글 실제 책(그림으로 배우는 http &amp;...","categories": ["Network"],
         "tags": ["Network","HTTP","TCP/IP"],
         "url": "/network/Network/",
+        "teaser":null},{
+        "title": "[CodingTest] 2019 카카오 신입 공채 1차 - 2번 실패율 문제 with Javascript",
+        "excerpt":"오픈채팅방 문제 바로가기 링크 카카오의 설명 블로그 나의 첫답안 function solution(N, stages) { let st = stages, stats = []; for(let i=1;i&lt;N+1;i++){ // n let selectedNumbers=0, obj = {}; st = st.filter((s)=&gt;{ // n * n if(s == i) selectedNumbers++; else return true; }); obj.name = i; obj.per = (st.length...","categories": ["CodingTest","Kakao"],
+        "tags": ["Javascript","Finished"],
+        "url": "/codingtest/kakao/Kakao-failure-rate/",
         "teaser":null}]

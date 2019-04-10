@@ -37,8 +37,16 @@
 <lastmod>2019-03-28T00:00:00+09:00</lastmod>
 </url>
 <url>
+<loc>/python/syntax/Python-Syntax/</loc>
+<lastmod>2019-04-03T00:00:00+09:00</lastmod>
+</url>
+<url>
 <loc>/network/Network/</loc>
 <lastmod>2019-04-06T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>/codingtest/kakao/Kakao-failure-rate/</loc>
+<lastmod>2019-04-10T00:00:00+09:00</lastmod>
 </url>
 <url>
 <loc>/about/</loc>
@@ -54,5 +62,8 @@
 </url>
 <url>
 <loc>/page2/</loc>
+</url>
+<url>
+<loc>/page3/</loc>
 </url>
 </urlset>

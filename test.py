@@ -1,33 +1,57 @@
-import logging
+# def num_encodings(s):
+#     if s.startswith('0'):
+#         return 0
+#     elif len(s) <= 1: # This covers empty string
+#         return 1
 
-def products(nums):
-    # Generate prefix products
-    prefix_products = []
-    for num in nums:
-        if prefix_products:
-            prefix_products.append(prefix_products[-1] * num)
-        else:
-            prefix_products.append(num)
-    print("prefix_products : ", " ".join(map(str, prefix_products)))
-    # Generate suffix products
-    suffix_products = []
-    for num in reversed(nums):
-        if suffix_products:
-            suffix_products.append(suffix_products[-1] * num)
-        else:
-            suffix_products.append(num)
-    suffix_products = list(reversed(suffix_products))
-    print("reversed(nums) : ",  " ".join(map(str, reversed(nums))))
-    print("suffix_products : ", " ".join(map(str, suffix_products)))
-    # Generate result
-    result = []
-    for i in range(len(nums)):
-        if i == 0:
-            result.append(suffix_products[i + 1])
-        elif i == len(nums) - 1:
-            result.append(prefix_products[i - 1])
-        else:
-            result.append(prefix_products[i - 1] * suffix_products[i + 1])
-    return result
+#     total = 0
 
-print("products : ", products([1,2,3]))
+#     if int(s[:2]) <= 26:
+#         total += num_encodings(s[2:])
+
+#     total += num_encodings(s[1:])
+#     return total
+
+# print(num_encodings("110011"))
+
+from collections import defaultdict
+
+def num_encodings(s):
+    # On lookup, this hashmap returns a default value of 0 if the key doesn't exist
+    # cache[i] gives us # of ways to encode the substring s[i:]
+    cache = defaultdict(int)
+    cache[len(s)] = 1 # Empty string is 1 valid encoding
+    print(dict(cache))
+    
+    print(*reversed(range(len(s))), sep=' ')
+
+    for i in reversed(range(len(s))):
+        if s[i].startswith('0'):
+            cache[i] = 0
+        elif i == len(s) - 1:
+            cache[i] = 1
+        else:
+            if int(s[i:i + 2]) <= 26:
+                cache[i] = cache[i + 2]
+            cache[i] += cache[i + 1]
+    print(dict(cache))
+    return cache[0]
+
+
+# print(num_encodings("11011"))
+# {5: 1}
+# 4 3 2 1 0
+# {5: 1, 4: 1, 3: 2, 2: 0, 1: 2, 0: 2}
+# 2
+
+# print(num_encodings("110011"))
+# {6: 1}
+# 5 4 3 2 1 0
+# {6: 1, 5: 1, 4: 2, 3: 0, 2: 0, 1: 0, 0: 0}
+# 0
+
+print(num_encodings("111"))
+{3: 1}
+2 1 0
+{3: 1, 2: 1, 1: 2, 0: 3}
+3

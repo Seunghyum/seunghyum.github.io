@@ -1,5 +1,66 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-04-06T12:38:54+09:00</updated><id>/feed.xml</id><title type="html">Developer Dave</title><subtitle>JS, 데이터 시각화에 
-관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">Network - HTTP 정리</title><link href="/network/Network/" rel="alternate" type="text/html" title="Network - HTTP 정리" /><published>2019-04-06T00:00:00+09:00</published><updated>2019-04-06T00:00:00+09:00</updated><id>/network/Network</id><content type="html" xml:base="/network/Network/">&lt;h2 id=&quot;참고&quot;&gt;참고&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-04-10T16:32:38+09:00</updated><id>/feed.xml</id><title type="html">Developer Dave</title><subtitle>JS, 데이터 시각화에 
+관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">[CodingTest] 2019 카카오 신입 공채 1차 - 2번 실패율 문제 with Javascript</title><link href="/codingtest/kakao/Kakao-failure-rate/" rel="alternate" type="text/html" title="[CodingTest] 2019 카카오 신입 공채 1차 - 2번 실패율 문제 with Javascript" /><published>2019-04-10T00:00:00+09:00</published><updated>2019-04-10T00:00:00+09:00</updated><id>/codingtest/kakao/Kakao-failure-rate</id><content type="html" xml:base="/codingtest/kakao/Kakao-failure-rate/">&lt;h2 id=&quot;오픈채팅방&quot;&gt;오픈채팅방&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.welcomekakao.com/learn/courses/30/lessons/42889&quot;&gt;문제 바로가기 링크&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://tech.kakao.com/2018/09/21/kakao-blind-recruitment-for2019-round-1/&quot;&gt;카카오의 설명 블로그&lt;/a&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;나의-첫답안&quot;&gt;나의 첫답안&lt;/h2&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;st&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stats&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// n&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;selectedNumbers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;st&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;st&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// n * n&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;selectedNumbers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;per&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;st&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;selectedNumbers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;st&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;stats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;stats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;per&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;per&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// n^2 + logN&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// -&amp;gt; O(n^2)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;나의-수정한-답안&quot;&gt;나의 수정한 답안&lt;/h2&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;eaStats&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{},&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;perStats&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Array 인자값들의 갯수 통계를 내고 = easStats -&amp;gt; n&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;eaStats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;eaStats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;eaStats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stageUsers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 갯수통계(eaStats)를 확률들의 통계(perStats)로 다시 변환하고 -&amp;gt; 2n&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;perStatsObj&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;eaStats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;perStatsObj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;perStatsObj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;per&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;perStats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;perStatsObj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;perStatsObj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;perStatsObj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;per&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stageUsers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;eaStats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stageUsers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;stageUsers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stageUsers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;eaStats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;perStats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;perStatsObj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;nx&quot;&gt;perStats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;per&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;per&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 확률들의 통계(perStats)로 다시 변환하고 -&amp;gt; 2n + nlogN&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;perStats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// -&amp;gt; O(nlogN)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;공부해야할-자료&quot;&gt;공부해야할 자료&lt;/h2&gt;
+&lt;p&gt;sort 매서드는 merge sort라고 한다. &lt;a href=&quot;https://www.quora.com/What-is-the-time-complexity-of-JavaScripts-sort-function&quot;&gt;관련링크&lt;/a&gt;&lt;br /&gt;
+다른 sort들의 특징과 장점을 봐야겠다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://khan4019.github.io/front-end-Interview-Questions/sort.html&quot;&gt;JS Interview Question&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dev.to/wangonya/sorting-algorithms-with-javascript-part-1-4aca&quot;&gt;Sort Algorithms with Javascript&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><category term="Finished" /><summary type="html">오픈채팅방 문제 바로가기 링크 카카오의 설명 블로그 나의 첫답안 function solution(N, stages) { let st = stages, stats = []; for(let i=1;i&amp;lt;N+1;i++){ // n let selectedNumbers=0, obj = {}; st = st.filter((s)=&amp;gt;{ // n * n if(s == i) selectedNumbers++; else return true; }); obj.name = i; obj.per = (st.length == 0 ? 1 : selectedNumbers/st.length); stats.push(obj) } stats.sort((a,b)=&amp;gt; a.per - b.per &amp;gt;= 0 ? -1 : 1) // n^2 + logN return stats.map(s =&amp;gt; s.name) // -&amp;gt; O(n^2) }</summary></entry><entry><title type="html">Network - HTTP 정리</title><link href="/network/Network/" rel="alternate" type="text/html" title="Network - HTTP 정리" /><published>2019-04-06T00:00:00+09:00</published><updated>2019-04-06T00:00:00+09:00</updated><id>/network/Network</id><content type="html" xml:base="/network/Network/">&lt;h2 id=&quot;참고&quot;&gt;참고&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;책
     &lt;ul&gt;
@@ -237,7 +298,26 @@ HTTP는 &lt;strong&gt;스테이트리스(Stateless)프로토콜&lt;/strong&gt;�
 
 &lt;p&gt;리소스를 가진 서버에 엑세스를 줄이는 것이 가능하기 때문에 통신량과 통신시간을 절약할 수 있다.&lt;/p&gt;
 
-&lt;p&gt;캐시의 유효기간&lt;/p&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Network" /><category term="HTTP" /><category term="TCP/IP" /><summary type="html">참고 책 그림으로 배우는 http &amp;amp; network http 완벽가이드 참고 사이트 그림으로 배우는 http &amp;amp; network 정리글 http 완벽가이드 읽는법 zerocho 님 블로그 시리즈 wiki 백과(URI, URL, UDP)</summary></entry><entry><title type="html">[CodingTest] i를 제외한 배열 요소들의 곱</title><link href="/codingtest/Daily-Programming-2/" rel="alternate" type="text/html" title="[CodingTest] i를 제외한 배열 요소들의 곱" /><published>2019-03-28T00:00:00+09:00</published><updated>2019-03-28T00:00:00+09:00</updated><id>/codingtest/Daily-Programming-2</id><content type="html" xml:base="/codingtest/Daily-Programming-2/">&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
+&lt;p&gt;캐시의 유효기간&lt;/p&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Network" /><category term="HTTP" /><category term="TCP/IP" /><summary type="html">참고 책 그림으로 배우는 http &amp;amp; network http 완벽가이드 참고 사이트 그림으로 배우는 http &amp;amp; network 정리글 http 완벽가이드 읽는법 zerocho 님 블로그 시리즈 wiki 백과(URI, URL, UDP)</summary></entry><entry><title type="html">[Syntax] 새로 알게된 파이썬 문법 정리</title><link href="/python/syntax/Python-Syntax/" rel="alternate" type="text/html" title="[Syntax] 새로 알게된 파이썬 문법 정리" /><published>2019-04-03T00:00:00+09:00</published><updated>2019-04-03T00:00:00+09:00</updated><id>/python/syntax/Python-Syntax</id><content type="html" xml:base="/python/syntax/Python-Syntax/">&lt;h2 id=&quot;chaning-comparison&quot;&gt;chaning comparison&lt;/h2&gt;
+&lt;p&gt;파이썬은 chaning comparison이라는 신기한 문법이 있다. &lt;a href=&quot;https://www.geeksforgeeks.org/chaining-comparison-operators-python/&quot;&gt;참고&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;라는 구문이&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;으로 연산된다. 직관적인 문법이 인상적. &lt;strong&gt;Comparison operator Chaining&lt;/strong&gt; 이라고 불린다.&lt;/p&gt;
+
+&lt;h2 id=&quot;slice-operater&quot;&gt;Slice operater&lt;/h2&gt;
+&lt;p&gt;문자열, tuples, dictionaries, lists 에 모두 적용가능.&lt;/p&gt;
+&lt;pre&gt;
+[start:end]
+
+[1:5] is equivalent to &quot;from 1 to 5&quot; (5 not included)
+[1:] is equivalent to &quot;1 to end&quot;
+[len(a):] is equivalent to &quot;from length of a to end&quot;
+&lt;/pre&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Python" /><summary type="html">chaning comparison 파이썬은 chaning comparison이라는 신기한 문법이 있다. 참고 if a &amp;lt; b and b &amp;lt; c : (...) 라는 구문이 if a &amp;lt; b &amp;lt; c : (...) 으로 연산된다. 직관적인 문법이 인상적. Comparison operator Chaining 이라고 불린다.</summary></entry><entry><title type="html">[CodingTest] i를 제외한 배열 요소들의 곱</title><link href="/codingtest/Daily-Programming-2/" rel="alternate" type="text/html" title="[CodingTest] i를 제외한 배열 요소들의 곱" /><published>2019-03-28T00:00:00+09:00</published><updated>2019-03-28T00:00:00+09:00</updated><id>/codingtest/Daily-Programming-2</id><content type="html" xml:base="/codingtest/Daily-Programming-2/">&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
 &lt;p&gt;정수 배열이 주어지면 인덱스 i에 해당하는 값 이외의 모든 값들의 곱인 배열을 구하여라.&lt;br /&gt;
 보너스 : 나눗셈을 안쓰고 풀기&lt;/p&gt;
 
@@ -338,7 +418,7 @@ suffix는 i번째의 뒷부분들의 수의 곱&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Map
     &lt;ul&gt;
-      &lt;li&gt;key가 어떤값도 될 수 있음.&lt;/li&gt;
+      &lt;li&gt;key가 어떤타입도 될 수 있음.&lt;/li&gt;
       &lt;li&gt;저장한 key의 순서가 유지됨.&lt;/li&gt;
       &lt;li&gt;Object의 변형. Object와 동일 연산시 비용이 더 들어감.&lt;/li&gt;
     &lt;/ul&gt;
@@ -846,7 +926,7 @@ a는 1개로 취급되어야하는데 2개로 취급된다는 것이다.&lt;/p&g
 는 것이었다.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;하지만 이 루프를 돌며 반복하는 코드에서 스코프 문제가 발생했다.&lt;/p&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><category term="Finished" /><summary type="html">&amp;lt;!– ## 설명 각 문자열의 알파벳을 재배열하였을때 같은 단어가 되는 단어들. 예시 tab - bat github - hbuitg</summary></entry><entry><title type="html">[CodingTest] 2019 카카오 신입 공채 1차 CodingTest 문제 with Javascript</title><link href="/codingtest/kakao/Kakao-open-chatting-room/" rel="alternate" type="text/html" title="[CodingTest] 2019 카카오 신입 공채 1차 CodingTest 문제 with Javascript" /><published>2019-03-20T00:00:00+09:00</published><updated>2019-03-20T00:00:00+09:00</updated><id>/codingtest/kakao/Kakao-open-chatting-room</id><content type="html" xml:base="/codingtest/kakao/Kakao-open-chatting-room/">&lt;h2 id=&quot;오픈채팅방&quot;&gt;오픈채팅방&lt;/h2&gt;
+&lt;p&gt;하지만 이 루프를 돌며 반복하는 코드에서 스코프 문제가 발생했다.&lt;/p&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><category term="Finished" /><summary type="html">&amp;lt;!– ## 설명 각 문자열의 알파벳을 재배열하였을때 같은 단어가 되는 단어들. 예시 tab - bat github - hbuitg</summary></entry><entry><title type="html">[CodingTest] 2019 카카오 신입 공채 1차 - 1번 오픈채팅방 문제 with Javascript</title><link href="/codingtest/kakao/Kakao-open-chatting-room/" rel="alternate" type="text/html" title="[CodingTest] 2019 카카오 신입 공채 1차 - 1번 오픈채팅방 문제 with Javascript" /><published>2019-03-20T00:00:00+09:00</published><updated>2019-03-20T00:00:00+09:00</updated><id>/codingtest/kakao/Kakao-open-chatting-room</id><content type="html" xml:base="/codingtest/kakao/Kakao-open-chatting-room/">&lt;h2 id=&quot;오픈채팅방&quot;&gt;오픈채팅방&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.welcomekakao.com/learn/courses/30/lessons/42888&quot;&gt;문제 바로가기 링크&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://tech.kakao.com/2018/09/21/kakao-blind-recruitment-for2019-round-1/&quot;&gt;카카오의 설명 블로그&lt;/a&gt;
@@ -952,127 +1032,4 @@ a는 1개로 취급되어야하는데 2개로 취급된다는 것이다.&lt;/p&g
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;그러다보니 한 유저가 닉네임을 변경할때마다 모든 객체들을 탐색해야했다.&lt;br /&gt;
 문제를 풀고 &lt;a href=&quot;http://tech.kakao.com/2018/09/21/kakao-blind-recruitment-for2019-round-1/&quot;&gt;카카오의 해설&lt;/a&gt; 을 보니 &lt;strong&gt;&lt;em&gt;“두 연결배열에 각각 accouts와 events에 담아 관리하면 쉽다”&lt;/em&gt;&lt;/strong&gt;는 해설을 보고 코드를 다시 짰다. &lt;br /&gt;
-해설을 보고나니 너무 간단해 허탈했다. 아직 갈길이 먼 것 같다.&lt;/p&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><category term="Finished" /><summary type="html">오픈채팅방 문제 바로가기 링크 카카오의 설명 블로그 나의 답안 ```javascript function solution(record) { let accounts = [], events = [], answer = []; function setEnterProcess(message, userId, nickName) { const findAccountByUserId = accounts.find(a =&amp;gt; a.userId == userId)</summary></entry><entry><title type="html">[CodingTest] 별(*) 박스 만들기</title><link href="/codingtest/star-box/" rel="alternate" type="text/html" title="[CodingTest] 별(*) 박스 만들기" /><published>2019-03-16T00:00:00+09:00</published><updated>2019-03-16T00:00:00+09:00</updated><id>/codingtest/star-box</id><content type="html" xml:base="/codingtest/star-box/">&lt;h2 id=&quot;문제-설명&quot;&gt;문제 설명&lt;/h2&gt;
-&lt;dl&gt;
-  &lt;dt&gt;별(*) 박스 만들기&lt;/dt&gt;
-  &lt;dd&gt;입력값 a(rows)와 b(cols)에 해당하는 별박스 만들기&lt;/dd&gt;
-&lt;/dl&gt;
-
-&lt;h3 id=&quot;예시---1&quot;&gt;예시 - 1&lt;/h3&gt;
-&lt;p&gt;입력&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;4 2
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;출력&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;****
-****
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;예시---2&quot;&gt;예시 - 2&lt;/h3&gt;
-&lt;p&gt;입력&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;3 5
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;출력&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;***
-***
-***
-***
-***
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;내가-작성한-정답&quot;&gt;내가 작성한 정답&lt;/h2&gt;
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;*&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;repeat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;repeat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><summary type="html">문제 설명 별(*) 박스 만들기 입력값 a(rows)와 b(cols)에 해당하는 별박스 만들기</summary></entry><entry><title type="html">SGIS-shpToGeojson</title><link href="/dataprocessing/SGIS-shpToGeojson/" rel="alternate" type="text/html" title="SGIS-shpToGeojson" /><published>2018-09-28T00:00:00+09:00</published><updated>2018-09-28T00:00:00+09:00</updated><id>/dataprocessing/SGIS-shpToGeojson</id><content type="html" xml:base="/dataprocessing/SGIS-shpToGeojson/">&lt;h2 id=&quot;sgis에서-받은-지도데이터shp를-geojson으로-변경하는-작업-내용&quot;&gt;SGIS에서 받은 지도데이터(.shp)를 geojson으로 변경하는 작업 내용&lt;/h2&gt;
-
-&lt;p&gt;2018년에 쓴 글을 재업로드하였습니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;지도데이터-가공-과정&quot;&gt;지도데이터 가공 과정&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;shapefile을 simplify를 진행.
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;우선 mapshaper라는 shp파일 에디팅 툴로 편집. &lt;a href=&quot;http://mapshaper.org/&quot;&gt;GUI온라인툴&lt;/a&gt;도 있음. 본인은 node CUI로 진행.&lt;/p&gt;
-
-        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mapshaper &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; 전환할 파일 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-            &lt;span class=&quot;nv&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;euc-kr  &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-            &lt;span class=&quot;nt&quot;&gt;-simplify&lt;/span&gt; weighted 0.5% &lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;// 0.5%로 단순화
-            &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;shapefile &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-            바뀐 파일명.shp
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;shapefile(R) -&amp;gt; geojson 전환
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/ogr2ogr&quot;&gt;ogr2ogr npm 라이브러리&lt;/a&gt;를 사용
-        &lt;ul&gt;
-          &lt;li&gt;커맨드 :
-            &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ogr2ogr &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; GeoJSON &lt;span class=&quot;nt&quot;&gt;-t_srs&lt;/span&gt; crs:84 &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;geo json파일명] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;shp파일명] 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;            &lt;/div&gt;
-          &lt;/li&gt;
-          &lt;li&gt;중요설명 : -t_srs crs:84 로 해줘야 제대로 projection이 됨(지도 투영법).&lt;/li&gt;
-          &lt;li&gt;-&amp;gt; 0.5%로 했더니 3~4MB인데 렌더링 시 느리다면 더 작게하는 것을 추천&lt;/li&gt;
-          &lt;li&gt;-&amp;gt; mapshaper로도 geojson을 만들 수 있지만 투영법 옵션이(-proj) 잘 안먹혀서 ogr2ogr, geo2topo를 적용함.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;만일 geojson에서 한글이 깨져서 나오는 경우&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;한글인코딩 문제
-    &lt;ul&gt;
-      &lt;li&gt;shpfile의 인코딩 에러. QGIS를 설치(로컬에서 shpfile을 수정할 수 있음)&lt;/li&gt;
-      &lt;li&gt;QGIS 상단네비게이션 바의 “속성 테이블” 열기를 클릭해보면 한글 깨지는 것을 확인가능.&lt;/li&gt;
-      &lt;li&gt;링크 로 들어가서 지시대로 하면 shpfile 인코딩에러 수정…. 아… 내 삽질….&lt;/li&gt;
-      &lt;li&gt;shpfile로 다운로드는 해당 레이어를 우클릭  후 다른이름으로 저장하기 누르면 됨. 이후 다시 mapshaper, ogr2ogr 하면 됨.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;projection(좌표계) 문제
-    &lt;ul&gt;
-      &lt;li&gt;막상 위의 한글문제를 해결해도 geojson파일을 열어보면 좌표계가 127.023168001711184, 37.578041688607954 의 형태가 아님.&lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;이 문제는 한글 인코등 해결처럼 속성에서 좌표계를 스크롤 맨 밑의 사용자 정의 좌표계를&lt;/p&gt;
-
-        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+proj&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;tmerc +lat_0&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;38 +lon_0&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;127.5 +k&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0.9996 +x_0&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1000000 +y_0&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2000000 +ellps&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;GRS80 +units&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;m +no_defs 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
-
-        &lt;p&gt;로 정의 해야함. 정의한 다음 다시 다른 이름을 다운로드 진행.&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;geojson -&amp;gt; topojson으로 전환&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;npm topojson-client 설치&lt;/li&gt;
-  &lt;li&gt;커맨드 : geo2topo [geo-json파일] &amp;gt; [topo-json파일]&lt;/li&gt;
-  &lt;li&gt;topojson 라이브러리는 현재 커맨드라인 툴이 사용불가. 반드시 topojson-client 설치 후 geo2topo로 할것. -Note also that topojson/topojson is no longer the command-line tools for manipulating TopoJSON — that’s all been put in the topojson/topojson-client repository.(출처)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;-&amp;gt; 0.5%로 했더니 3~4MB인데 렌더링 시 느리다면 더 작게하는 것을 추천&lt;/p&gt;
-
-&lt;p&gt;-&amp;gt; mapshaper로도 topojson, geojson을 만들 수 있지만 투영법 옵션이(-proj) 잘 안먹혀서 ogr2ogr, geo2topo를 적용함.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;느낀점 및 팁&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;gis데이터 가공은 projection(투영법) 설정이 중요.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;활용가능한 결과물&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;통계청 파일 및 GeoJson 가공 데이터 파일&lt;/li&gt;
-      &lt;li&gt;이름_simple.shp : 0.5%로 simplify한 shapefile&lt;/li&gt;
-      &lt;li&gt;이름_geo.json : 가공한 GeoJson 파일&lt;/li&gt;
-      &lt;li&gt;index.html : 예제 코드 &lt;a href=&quot;https://browsersync.io/&quot;&gt;browser-sync&lt;/a&gt; 같은 툴로 Application 형태로 띄워야 에러가 안남. 이유는 모르겠지만 포트로 안 띄우면 에러.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;주의사항&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;geojson까지만 변경함. topojson까지는 변경하지 않음.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="ShapeFile" /><category term="GeoJson" /><category term="TopoJson" /><category term="데이터 가공" /><summary type="html">SGIS에서 받은 지도데이터(.shp)를 geojson으로 변경하는 작업 내용</summary></entry></feed>
+해설을 보고나니 너무 간단해 허탈했다. 아직 갈길이 먼 것 같다.&lt;/p&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><category term="Finished" /><summary type="html">오픈채팅방 문제 바로가기 링크 카카오의 설명 블로그 나의 답안 ```javascript function solution(record) { let accounts = [], events = [], answer = []; function setEnterProcess(message, userId, nickName) { const findAccountByUserId = accounts.find(a =&amp;gt; a.userId == userId)</summary></entry></feed>
