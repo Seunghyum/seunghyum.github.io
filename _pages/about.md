@@ -52,7 +52,7 @@ author_profile: true
     - 2015년 정도에 실시했음. 현재 작동이 안될수도 있음.
     - 멋사 멤버 2명과 함께 작업.
 
-- [단국대 커뮤니티 만들기 서비스](https://github.com/Seunghyum/Dku-dankook_community_service)
+- [단국대 커뮤니티 서비스](https://github.com/Seunghyum/Dku-dankook_community_service)
   - 담당: 전반적인 기획 & 개발
   - 기술 스택: Ruby on Rails, MySQL, Nginx, JQuery, HTML & CSS
   - 기간: 2015년 2학기 겨울방학
