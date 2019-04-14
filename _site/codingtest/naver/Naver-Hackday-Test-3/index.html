@@ -299,9 +299,9 @@
 </ul>
 
 <h3 id="부족했던-점">부족했던 점</h3>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">N</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span> <span class="err">일경우를</span> <span class="err">못구함</span><span class="p">.</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">N</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span> <span class="c1">// 이 경우를 제대로 못구함.</span>
 </code></pre></div></div>
-<p>내 답은 단순히 아래로꺾은 선만을 고려하여 위로꺾은 선은 고려하지 않았다.<br />
+<p>내 답은 단순히 아래로꺾은선 만을 고려하였고 위로꺾은 선은 고려하지 않았다.<br />
 그래서 위의 예시처럼 첫번째 위로꺾은 선이 앞쪽에 배치될 경우 걸러내지 못했다.</p>
 
 <h2 id="수정한-답안">수정한 답안</h2>
@@ -318,6 +318,9 @@
 </code></pre></div></div>
 <h3 id="풀이해석-1">풀이해석</h3>
 <p>위처럼 아래로꺾은선, 위꺾은선 두가지를 고려할때 좋은 답이 나온다.</p>
+
+<h2 id="느낀점">느낀점</h2>
+<p>답에 대한 테스트케이스를 여러개 생각해서 검토하지 않아서 오류를 놓침.</p>
 
 <br>
 <br>
