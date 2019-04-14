@@ -22,8 +22,8 @@ function solution(A) {
       answer = 0;
   // 가장 많이 중복되는 el을 기준.
   // return = 기준 숫자의 반대편 숫자의 갯수 * 2 + 다른 숫자면들의 개수들 
-  for(var i = 0; i < A.length; i++) {
-    var el = A[i];
+  for(let i = 0; i < A.length; i++) {
+    let el = A[i];
     if(stats[el] == null) stats[el] = 1;
     else stats[el]++;  
     if(stats[el] > maxCount) {
@@ -31,11 +31,13 @@ function solution(A) {
       maxCount = stats[el];
     }
   }
-  for(s in stats) {
-    if(maxEl === s) continue;
-    else if(oppositeGroupA.has(maxEl) && oppositeGroupA.has(s)) answer += stats[s] * 2;
-    else if(oppositeGroupB.has(maxEl) && oppositeGroupB.has(s)) answer += stats[s] * 2;
-    else if(oppositeGroupC.has(maxEl) && oppositeGroupC.has(s)) answer += stats[s] * 2;
+  
+  for(let s in stats) {
+    let NumberS = Number(s);
+    if(maxEl == NumberS) continue;
+    else if(oppositeGroupA.has(maxEl) && oppositeGroupA.has(NumberS)) answer += stats[s] * 2;
+    else if(oppositeGroupB.has(maxEl) && oppositeGroupB.has(NumberS)) answer += stats[s] * 2;
+    else if(oppositeGroupC.has(maxEl) && oppositeGroupC.has(NumberS)) answer += stats[s] * 2;
     else answer += stats[s];
   }
   return answer;
@@ -44,4 +46,5 @@ function solution(A) {
 console.log("1,2,3 : ", solution([1,2,3]))
 console.log("1,1,6 : ", solution([1,1,6]))
 console.log("1,6,2,3 : ", solution([1,6,2,3]))
+console.log("1,1,2,3,6 : ", solution([1,1,2,3,6]))
 ```
