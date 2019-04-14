@@ -59,8 +59,7 @@ function solution(A) {
       maxEl = A[0], 
       maxCount = 1,
       answer = 0;
-  // 가장 많이 중복되는 el을 기준.
-  // return = 기준 숫자의 반대편 숫자의 갯수 * 2 + 다른 숫자면들의 개수들 
+      
   for(let i = 0; i < A.length; i++) {
     let el = A[i];
     if(stats[el] == null) stats[el] = 1;
@@ -71,7 +70,7 @@ function solution(A) {
     }
   }
 
-  let oppositeGroup;
+  let oppositeGroup; // for 루프 이전에 반대편 그룹을 선정하기
   if(oppositeGroupA.has(maxEl)) oppositeGroup = oppositeGroupA;
   else if(oppositeGroupB.has(maxEl)) oppositeGroup = oppositeGroupB;
   else if(oppositeGroupC.has(maxEl)) oppositeGroup = oppositeGroupC;
