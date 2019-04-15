@@ -51,10 +51,6 @@ console.log("1,1,2,3,6 : ", solution([1,1,2,3,6]))
 ## 수정한 답변
 ```javascript
 function solution(A) {
-  const oppositeGroupA = new Set([1,6]),
-        oppositeGroupB = new Set([2,5]),
-        oppositeGroupC = new Set([3,4]);
-  
   let stats = {},
       maxEl = A[0], 
       maxCount = 1,
@@ -70,19 +66,15 @@ function solution(A) {
     }
   }
 
-  let oppositeGroup; // for 루프 이전에 반대편 그룹을 선정하기
-  if(oppositeGroupA.has(maxEl)) oppositeGroup = oppositeGroupA;
-  else if(oppositeGroupB.has(maxEl)) oppositeGroup = oppositeGroupB;
-  else if(oppositeGroupC.has(maxEl)) oppositeGroup = oppositeGroupC;
-  
   for(let s in stats) {
     let NumberS = Number(s);
     if(maxEl == NumberS) continue;
-    else if(oppositeGroup.has(NumberS)) answer += stats[s] * 2;
+    else if(maxEl + NumberS === 7) answer += stats[s] * 2;
     else answer += stats[s];
   }
   return answer;
 }
 
-console.log("2,2,2,3,4,6 : ", solution([1,1,2,3,6]))
+console.log("2,2,2,3,4,5,6 : ", solution([2,2,2,3,4,5,6 ]))
 ```
+- 괜히 쓸데없이 oppositeGroupA 같은 형식으로 구하려고했다. 단순하게 ***maxEl + NumberS === 7*** 으로 했으면 더 좋았을텐데...
