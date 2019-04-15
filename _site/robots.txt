@@ -1,1 +1,1 @@
-Sitemap: /sitemap.xml
+Sitemap: https://seunghyum.github.io/sitemap.xml

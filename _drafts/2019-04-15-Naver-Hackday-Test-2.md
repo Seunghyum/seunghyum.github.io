@@ -11,7 +11,7 @@ comments: true
 
 ## 내가 작성한 답변
 ```javascript
-{
+let input = {
   x: 4
   l: {
     x:5, 
@@ -39,5 +39,9 @@ comments: true
       r: null,
     }
   }
+}
+
+function solution (T) {
+  T.
 }
 ```

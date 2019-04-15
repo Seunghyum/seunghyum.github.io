@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-04-15T13:07:10+09:00</updated><id>/feed.xml</id><title type="html">Developer Dave</title><subtitle>JS, 데이터 시각화에 
-관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">[CodingTest] 2019 네이버 핵데이 코드테스트 문제1 with Javascript</title><link href="/codingtest/naver/Naver-Hackday-Test-1/" rel="alternate" type="text/html" title="[CodingTest] 2019 네이버 핵데이 코드테스트 문제1 with Javascript" /><published>2019-04-15T00:00:00+09:00</published><updated>2019-04-15T00:00:00+09:00</updated><id>/codingtest/naver/Naver-Hackday-Test-1</id><content type="html" xml:base="/codingtest/naver/Naver-Hackday-Test-1/">&lt;h2 id=&quot;문제1&quot;&gt;문제1&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://seunghyum.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://seunghyum.github.io/" rel="alternate" type="text/html" /><updated>2019-04-15T18:03:07+09:00</updated><id>https://seunghyum.github.io/feed.xml</id><title type="html">Developer Dave</title><subtitle>JS, 데이터 시각화에 
+관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">[CodingTest] 2019 네이버 핵데이 코드테스트 문제1 with Javascript</title><link href="https://seunghyum.github.io/codingtest/naver/Naver-Hackday-Test-1/" rel="alternate" type="text/html" title="[CodingTest] 2019 네이버 핵데이 코드테스트 문제1 with Javascript" /><published>2019-04-15T00:00:00+09:00</published><updated>2019-04-15T00:00:00+09:00</updated><id>https://seunghyum.github.io/codingtest/naver/Naver-Hackday-Test-1</id><content type="html" xml:base="https://seunghyum.github.io/codingtest/naver/Naver-Hackday-Test-1/">&lt;h2 id=&quot;문제1&quot;&gt;문제1&lt;/h2&gt;
 &lt;p&gt;문제 받으면 작성할 예정.&lt;/p&gt;
 
 &lt;h2 id=&quot;내가-작성한-답변&quot;&gt;내가 작성한 답변&lt;/h2&gt;
@@ -70,7 +70,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;ul&gt;
   &lt;li&gt;괜히 쓸데없이 oppositeGroupA 같은 형식으로 구하려고했다. 단순하게 &lt;strong&gt;&lt;em&gt;maxEl + NumberS === 7&lt;/em&gt;&lt;/strong&gt; 으로 했으면 더 좋았을텐데…&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><summary type="html">문제1 문제 받으면 작성할 예정.</summary></entry><entry><title type="html">[CodingTest] 2019 네이버 핵데이 코드테스트 문제3 with Javascript</title><link href="/codingtest/naver/Naver-Hackday-Test-3/" rel="alternate" type="text/html" title="[CodingTest] 2019 네이버 핵데이 코드테스트 문제3 with Javascript" /><published>2019-04-14T00:00:00+09:00</published><updated>2019-04-14T00:00:00+09:00</updated><id>/codingtest/naver/Naver-Hackday-Test-3</id><content type="html" xml:base="/codingtest/naver/Naver-Hackday-Test-3/">&lt;h2 id=&quot;문제3&quot;&gt;문제3&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><summary type="html">문제1 문제 받으면 작성할 예정.</summary></entry><entry><title type="html">[CodingTest] 2019 네이버 핵데이 코드테스트 문제3 with Javascript</title><link href="https://seunghyum.github.io/codingtest/naver/Naver-Hackday-Test-3/" rel="alternate" type="text/html" title="[CodingTest] 2019 네이버 핵데이 코드테스트 문제3 with Javascript" /><published>2019-04-14T00:00:00+09:00</published><updated>2019-04-14T00:00:00+09:00</updated><id>https://seunghyum.github.io/codingtest/naver/Naver-Hackday-Test-3</id><content type="html" xml:base="https://seunghyum.github.io/codingtest/naver/Naver-Hackday-Test-3/">&lt;h2 id=&quot;문제3&quot;&gt;문제3&lt;/h2&gt;
 &lt;p&gt;문제 받으면 작성할 예정.&lt;/p&gt;
 
 &lt;h2 id=&quot;내가-작성한-답변---아래로꺾인선만-구하기&quot;&gt;내가 작성한 답변 - 아래로꺾인선만 구하기&lt;/h2&gt;
@@ -131,7 +131,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;느낀점&quot;&gt;느낀점&lt;/h2&gt;
-&lt;p&gt;답에 대한 테스트케이스를 여러개 생각해서 검토하지 않아서 오류를 놓침.&lt;/p&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><summary type="html">문제3 문제 받으면 작성할 예정.</summary></entry><entry><title type="html">[CodingTest] 2019 카카오 신입 공채 1차 - 2번 실패율 문제 with Javascript</title><link href="/codingtest/kakao/Kakao-failure-rate/" rel="alternate" type="text/html" title="[CodingTest] 2019 카카오 신입 공채 1차 - 2번 실패율 문제 with Javascript" /><published>2019-04-10T00:00:00+09:00</published><updated>2019-04-10T00:00:00+09:00</updated><id>/codingtest/kakao/Kakao-failure-rate</id><content type="html" xml:base="/codingtest/kakao/Kakao-failure-rate/">&lt;h2 id=&quot;오픈채팅방&quot;&gt;오픈채팅방&lt;/h2&gt;
+&lt;p&gt;답에 대한 테스트케이스를 여러개 생각해서 검토하지 않아서 오류를 놓침.&lt;/p&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><summary type="html">문제3 문제 받으면 작성할 예정.</summary></entry><entry><title type="html">[CodingTest] 2019 카카오 신입 공채 1차 - 2번 실패율 문제 with Javascript</title><link href="https://seunghyum.github.io/codingtest/kakao/Kakao-failure-rate/" rel="alternate" type="text/html" title="[CodingTest] 2019 카카오 신입 공채 1차 - 2번 실패율 문제 with Javascript" /><published>2019-04-10T00:00:00+09:00</published><updated>2019-04-10T00:00:00+09:00</updated><id>https://seunghyum.github.io/codingtest/kakao/Kakao-failure-rate</id><content type="html" xml:base="https://seunghyum.github.io/codingtest/kakao/Kakao-failure-rate/">&lt;h2 id=&quot;오픈채팅방&quot;&gt;오픈채팅방&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.welcomekakao.com/learn/courses/30/lessons/42889&quot;&gt;문제 바로가기 링크&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://tech.kakao.com/2018/09/21/kakao-blind-recruitment-for2019-round-1/&quot;&gt;카카오의 설명 블로그&lt;/a&gt;
@@ -198,21 +198,21 @@
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://khan4019.github.io/front-end-Interview-Questions/sort.html&quot;&gt;JS Interview Question&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://dev.to/wangonya/sorting-algorithms-with-javascript-part-1-4aca&quot;&gt;Sort Algorithms with Javascript&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><summary type="html">오픈채팅방 문제 바로가기 링크 카카오의 설명 블로그 나의 첫답안 function solution(N, stages) { let st = stages, stats = []; for(let i=1;i&amp;lt;N+1;i++){ // n let selectedNumbers=0, obj = {}; st = st.filter((s)=&amp;gt;{ // n * n if(s == i) selectedNumbers++; else return true; }); obj.name = i; obj.per = (st.length == 0 ? 1 : selectedNumbers/st.length); stats.push(obj) } stats.sort((a,b)=&amp;gt; a.per - b.per &amp;gt;= 0 ? -1 : 1) // n^2 + logN return stats.map(s =&amp;gt; s.name) // -&amp;gt; O(n^2) }</summary></entry><entry><title type="html">Network - HTTP 정리</title><link href="/network/Network/" rel="alternate" type="text/html" title="Network - HTTP 정리" /><published>2019-04-06T00:00:00+09:00</published><updated>2019-04-06T00:00:00+09:00</updated><id>/network/Network</id><content type="html" xml:base="/network/Network/">&lt;h2 id=&quot;참고&quot;&gt;참고&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><summary type="html">오픈채팅방 문제 바로가기 링크 카카오의 설명 블로그 나의 첫답안 function solution(N, stages) { let st = stages, stats = []; for(let i=1;i&amp;lt;N+1;i++){ // n let selectedNumbers=0, obj = {}; st = st.filter((s)=&amp;gt;{ // n * n if(s == i) selectedNumbers++; else return true; }); obj.name = i; obj.per = (st.length == 0 ? 1 : selectedNumbers/st.length); stats.push(obj) } stats.sort((a,b)=&amp;gt; a.per - b.per &amp;gt;= 0 ? -1 : 1) // n^2 + logN return stats.map(s =&amp;gt; s.name) // -&amp;gt; O(n^2) }</summary></entry><entry><title type="html">Network - HTTP 정리</title><link href="https://seunghyum.github.io/network/Network/" rel="alternate" type="text/html" title="Network - HTTP 정리" /><published>2019-04-06T00:00:00+09:00</published><updated>2019-04-06T00:00:00+09:00</updated><id>https://seunghyum.github.io/network/Network</id><content type="html" xml:base="https://seunghyum.github.io/network/Network/">&lt;h2 id=&quot;참고&quot;&gt;참고&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;책
     &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=51908132&quot;&gt;그림으로 배우는 http &amp;amp; network&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=49731592&quot;&gt;http 완벽가이드&lt;/a&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=51908132&quot; target=&quot;_blank&quot;&gt;그림으로 배우는 http &amp;amp; network&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=49731592&quot; target=&quot;_blank&quot;&gt;http 완벽가이드&lt;/a&gt;
 &lt;br /&gt;
 &lt;br /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;참고 사이트
     &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://vnthf.logdown.com/posts/2016/06/21/http&quot;&gt;그림으로 배우는 http &amp;amp; network 정리글&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://blog.npcode.com/2015/06/07/웹-프로그래머를-위한-http-완벽-가이드-읽는-법/&quot;&gt;http 완벽가이드 읽는법&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://www.zerocho.com/category/HTTP/post/5b344f3af94472001b17f2da&quot;&gt;zerocho 님 블로그 시리즈&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://vnthf.logdown.com/posts/2016/06/21/http&quot; target=&quot;_blank&quot;&gt;그림으로 배우는 http &amp;amp; network 정리글&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://blog.npcode.com/2015/06/07/웹-프로그래머를-위한-http-완벽-가이드-읽는-법/&quot; target=&quot;_blank&quot;&gt;http 완벽가이드 읽는법&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.zerocho.com/category/HTTP/post/5b344f3af94472001b17f2da&quot; target=&quot;_blank&quot;&gt;zerocho 님 블로그 시리즈&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;wiki 백과(URI, URL, UDP)
 &lt;br /&gt;
 &lt;br /&gt;&lt;/li&gt;
@@ -226,11 +226,11 @@
     &lt;ul&gt;
       &lt;li&gt;실제 책(그림으로 배우는 http &amp;amp; network) 읽고 한번 더 정리
         &lt;ul&gt;
-          &lt;li&gt;ch2 -&amp;gt; 트랜잭션 생성에 따른 통신 과정,&lt;/li&gt;
+          &lt;li&gt;&lt;del&gt;ch2 -&amp;gt; 트랜잭션 생성에 따른 통신 과정&lt;/del&gt; - 2019.04.15&lt;/li&gt;
           &lt;li&gt;ch3  -&amp;gt; 데이터 타입에 따른&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
-      &lt;li&gt;http 완벽 가이드 다시 읽고 정리 &amp;lt;- &lt;a href=&quot;https://blog.npcode.com/2015/06/07/웹-프로그래머를-위한-http-완벽-가이드-읽는-법/&quot;&gt;http 완벽가이드 읽는법&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;http 완벽 가이드 다시 읽고 정리 &amp;lt;- &lt;a href=&quot;https://blog.npcode.com/2015/06/07/웹-프로그래머를-위한-http-완벽-가이드-읽는-법/&quot; target=&quot;_blank&quot;&gt;http 완벽가이드 읽는법&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;CORS, CORB 에러 정리&lt;/li&gt;
       &lt;li&gt;쿠키 / 캐시 정리
 &lt;br /&gt;
@@ -250,8 +250,14 @@
     &lt;ul&gt;
       &lt;li&gt;애플리케이션 계층 - 유저에서 제공되는 에플리케이션 (FTP, DNS, HTTP)&lt;/li&gt;
       &lt;li&gt;트랜스포트 계층 - 에플리케이션 계층에 네트워크로 접속되어 있는 컴퓨터사이의 데이터흐름을 제공(TCP, UDP)&lt;/li&gt;
-      &lt;li&gt;네트워크 계층 - 네트워크 상에서 패킷의 이동을 다룸. 여러대의 컴퓨터랑 네트워크 기기사이에서 길을 찾는 것(IP)&lt;/li&gt;
+      &lt;li&gt;네트워크 계층 - 네트워크 상에서 패킷의 이동을 다룸. 여러대의 컴퓨터랑 네트워크 기기사이에서 길을 찾는 것(IP)
+        &lt;ul&gt;
+          &lt;li&gt;패킷 : 전송하는 데이터의 최소 단위&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
       &lt;li&gt;링크 계층 - 네트워크의 하드웨어적인 면 (케이블 등등)
+&lt;br /&gt;
+&lt;img src=&quot;/assets/images/tcp:ip_transfer_flow.png&quot; alt=&quot;TCP/IP 통신의 흐름&quot; /&gt;
 &lt;br /&gt;
 HTTP 데이터 -&amp;gt; TCP 헤더 -&amp;gt; IP 헤더 -&amp;gt; Eternet 헤더&lt;/li&gt;
     &lt;/ul&gt;
@@ -263,9 +269,9 @@ HTTP 데이터 -&amp;gt; TCP 헤더 -&amp;gt; IP 헤더 -&amp;gt; Eternet 헤더
 &lt;ul&gt;
   &lt;li&gt;배송을 담당. 개개의 패킷을 상대방에게 전달. IP주소와 MAC(변경 불가)주소를 통해서 통신&lt;/li&gt;
   &lt;li&gt;어느 누구도 길에대한 정확한 위치를 알고 있지 않음(물어물어 찾아감)&lt;/li&gt;
-  &lt;li&gt;네트워크에 존재하는 각 컴퓨터를 식별하기 위해 각각에 서로 다른 값을 할당한 것. 각 기기에 할당되는 것이 아니라 기기에 장착된 각각의 네트워크용 하드웨어에 할당 됨. 즉, 복수의 네트워크하드웨어를 장착한 기기는 복수의 주소 할당.&lt;/li&gt;
+  &lt;li&gt;네트워크에 존재하는 각 컴퓨터를 식별하기 위해 각각에 서로 다른 값을 할당한 것. &lt;strong&gt;각 기기에 할당되는 것이 아니라 기기에 장착된 각각의 네트워크용 하드웨어에 할당 됨.&lt;/strong&gt; 즉, 복수의 네트워크하드웨어를 장착한 기기는 복수의 주소 할당.&lt;/li&gt;
   &lt;li&gt;MAC(Media Access Control Address) 주소 :  IEEE에서 표준화된 LAN 방식의 기기는 모두 같은 형식의 주소를 사용하는데 이 주소를 가르킴. MAC주소를 사용하여 목적지를 찾아갈때는 ARP라는 프로토콜이 사용됨&lt;/li&gt;
-  &lt;li&gt;IP주소는 변경가능하나, MAC주소는 변경불가.&lt;/li&gt;
+  &lt;li&gt;&lt;u&gt;IP주소는 변경가능하나, MAC주소는 변경불가.&lt;/u&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;tcptransfer-control-protocol&quot;&gt;TCP(Transfer Control Protocol)&lt;/h2&gt;
@@ -274,7 +280,7 @@ HTTP 데이터 -&amp;gt; TCP 헤더 -&amp;gt; IP 헤더 -&amp;gt; Eternet 헤더
   &lt;li&gt;신뢰성을 담당
     &lt;ul&gt;
       &lt;li&gt;바이트 스트림 서비스&lt;br /&gt;
-: 큰 데이터를 보내기위에 TCP세그먼트라고 불리우는 단위 패킷으로 작개 분해하여 관리하는것. 대용량의 데이터를 보내기 쉽게 작게 분해햐여 상대에게 보내고, 정확하게 도착했는지 확인하는 역할.&lt;/li&gt;
+: 큰 데이터를 보내기위에 TCP세그먼트라고 불리우는 단위 패킷으로 작개 분해하여 관리하는것. 대용량의 데이터를 보내기 쉽게 작게 분해하여 상대에게 보내고, 정확하게 도착했는지 확인하는 역할.&lt;/li&gt;
       &lt;li&gt;TCP Three way hand shaking (STN/ACK 플래그 사용)&lt;br /&gt;
 : SYN으로 보내면 SYN/ACK 플래그로 패킷 수신한 사실을 전하면 ACK 플래그를 다시 보내 완료되었음을 전송. 도중에 끊키면 다시 반복
 &lt;img src=&quot;/assets/images/3way_hand_shake.png&quot; alt=&quot;TCP Three way hand shaking (STN/ACK 플래그 사용)&quot; /&gt;&lt;/li&gt;
@@ -386,26 +392,41 @@ HTTP응답
 &lt;br /&gt;
 TCP커넥션 종료
 &lt;br /&gt;
-&lt;br /&gt;
-HTTP1.1지속연결 표준동작
-&lt;br /&gt;
-HTTP1.0에서는 정식사양이 아님.
-&lt;br /&gt;
-&lt;br /&gt;
-HTTP는 &lt;strong&gt;스테이트리스(Stateless)프로토콜&lt;/strong&gt;이다.
-&lt;br /&gt;
-과거에 교환했던 리퀘스트와 리스폰스의 상태를 관리하지 않음.
-&lt;br /&gt;
-이점도 있지만 이로인한 문제를 해결하기 위한 시스템 : &lt;strong&gt;쿠키&lt;/strong&gt;
-&lt;br /&gt;
-클라이언트 상태 파악하기 위함.
+&lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;HTTP는 &lt;strong&gt;스테이트리스(Stateless)프로토콜&lt;/strong&gt;이다. &lt;u&gt;과거에 교환했던 리퀘스트와 리스폰스의 상태를 관리하지 않음.&lt;/u&gt;&lt;br /&gt;
+이점도 있지만 이로인한 문제를 해결하기 위한 시스템 : &lt;strong&gt;쿠키&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;쿠키---http-프로토콜의-스테이트리스-단점을-보완&quot;&gt;쿠키 - HTTP 프로토콜의 스테이트리스 단점을 보완.&lt;/h3&gt;
+&lt;p&gt;클라이언트 상태 파악하기 위함.
 &lt;br /&gt;
 서버에서 리스폰스로 보내진 Set-Cookie라는 헤더필드에 의해 쿠키를 클라이언트에 보존.
 &lt;br /&gt;
 다음번에 클라이언트가 같은 서버로 리퀘스트를 보낼 때, 자동으로 쿠키값을 넣어서 송신.
 &lt;br /&gt;
 서버는 클라이언트가 보내온 쿠키를 확인해서 어느 클라이언트가 접속했는지 체크하고 서버상의 기록을 확인해서 이전 상태를 알 수 있음.
-&lt;br /&gt;&lt;/p&gt;
+&lt;br /&gt;
+&lt;img src=&quot;/assets/images/http_cookie_principle.png&quot; alt=&quot;쿠키 작동&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;http-매서드&quot;&gt;HTTP 매서드&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;GET : 리소스 획득&lt;/li&gt;
+  &lt;li&gt;POST : 엔티티 전송.&lt;/li&gt;
+  &lt;li&gt;PUT : 파일전송. FTP에 의한 파일전송과 같이 리퀘스트 중에 포함된 엔티티를 리퀘스트 URI로 지정한 곳에 보존하다록 요구. 인증기능이 없어서 REST를 사용하는 경우에 사용. entity의 전체(ex - 모든 fields)를 바꿈(update)&lt;/li&gt;
+  &lt;li&gt;PATCH : entity의 일부만 바꿈(ex - 일부 fields)를 바꿈.
+    &lt;ul&gt;
+      &lt;li&gt;참고(스프링에서의 정의) PUT replaces an existing entity. If only a subset of data elements are provided, the rest will be replaced with empty or null.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;DELETE : 파일 삭제. PUT매서드와 반대. 인증기능이 없어서 REST를 사용하는 경우에 사용.&lt;/li&gt;
+  &lt;li&gt;HEAD : GET과 같은 기능이지만 메시지 바디는 반환 안함. URI 유효성과 리소스 갱신 시간을 확인하는 목적으로 사용.&lt;/li&gt;
+  &lt;li&gt;OPTIONS : 제공하고 있는 메소드의 문의. 리퀘스트 URI로 지정한 리소스가 제공하고 있는 메소드를 조사하는데 사용함.&lt;/li&gt;
+  &lt;li&gt;TRACE : 경로조사. 프록시등을 중계할떄 추적위해 사용. 크로스 사이트 트레이싱(XST) 같은 공격을 일으킬 수 있으므로 거의 안쓰임. “Max-Forwards”라는 헤더 필드에 수치를 포함시켜 요청하면 서버를 통과할때마다 그 수치를 줄여나감. 수치가 0이 된 곳을 끝으로 200 OK 리스폰스 보냄.&lt;/li&gt;
+  &lt;li&gt;CONNECT : 프록시에 터널링 요구. TCP 통신을 터널링 시키기 위해서 사용함. 주로 SSL, TLS등의 프로토콜로 암호화된 것을 터널링 시키기 위해서 사용.&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h2 id=&quot;http-상태-코드&quot;&gt;HTTP 상태 코드&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -436,7 +457,7 @@ HTTP는 &lt;strong&gt;스테이트리스(Stateless)프로토콜&lt;/strong&gt;�
 
 &lt;p&gt;리소스를 가진 서버에 엑세스를 줄이는 것이 가능하기 때문에 통신량과 통신시간을 절약할 수 있다.&lt;/p&gt;
 
-&lt;p&gt;캐시의 유효기간&lt;/p&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Network" /><category term="HTTP" /><category term="TCP/IP" /><summary type="html">참고 책 그림으로 배우는 http &amp;amp; network http 완벽가이드 참고 사이트 그림으로 배우는 http &amp;amp; network 정리글 http 완벽가이드 읽는법 zerocho 님 블로그 시리즈 wiki 백과(URI, URL, UDP)</summary></entry><entry><title type="html">[Syntax] 새로 알게된 파이썬 문법 정리</title><link href="/python/syntax/Python-Syntax/" rel="alternate" type="text/html" title="[Syntax] 새로 알게된 파이썬 문법 정리" /><published>2019-04-03T00:00:00+09:00</published><updated>2019-04-03T00:00:00+09:00</updated><id>/python/syntax/Python-Syntax</id><content type="html" xml:base="/python/syntax/Python-Syntax/">&lt;h2 id=&quot;chaning-comparison&quot;&gt;chaning comparison&lt;/h2&gt;
+&lt;p&gt;캐시의 유효기간&lt;/p&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Network" /><category term="HTTP" /><category term="TCP/IP" /><summary type="html">참고 책 그림으로 배우는 http &amp;amp; network http 완벽가이드 참고 사이트 그림으로 배우는 http &amp;amp; network 정리글 http 완벽가이드 읽는법 zerocho 님 블로그 시리즈 wiki 백과(URI, URL, UDP)</summary></entry><entry><title type="html">[Syntax] 새로 알게된 파이썬 문법 정리</title><link href="https://seunghyum.github.io/python/syntax/Python-Syntax/" rel="alternate" type="text/html" title="[Syntax] 새로 알게된 파이썬 문법 정리" /><published>2019-04-03T00:00:00+09:00</published><updated>2019-04-03T00:00:00+09:00</updated><id>https://seunghyum.github.io/python/syntax/Python-Syntax</id><content type="html" xml:base="https://seunghyum.github.io/python/syntax/Python-Syntax/">&lt;h2 id=&quot;chaning-comparison&quot;&gt;chaning comparison&lt;/h2&gt;
 &lt;p&gt;파이썬은 chaning comparison이라는 신기한 문법이 있다. &lt;a href=&quot;https://www.geeksforgeeks.org/chaining-comparison-operators-python/&quot;&gt;참고&lt;/a&gt;&lt;/p&gt;
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -455,7 +476,7 @@ HTTP는 &lt;strong&gt;스테이트리스(Stateless)프로토콜&lt;/strong&gt;�
 [1:5] is equivalent to &quot;from 1 to 5&quot; (5 not included)
 [1:] is equivalent to &quot;1 to end&quot;
 [len(a):] is equivalent to &quot;from length of a to end&quot;
-&lt;/pre&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Python" /><summary type="html">chaning comparison 파이썬은 chaning comparison이라는 신기한 문법이 있다. 참고 if a &amp;lt; b and b &amp;lt; c : (...) 라는 구문이 if a &amp;lt; b &amp;lt; c : (...) 으로 연산된다. 직관적인 문법이 인상적. Comparison operator Chaining 이라고 불린다.</summary></entry><entry><title type="html">[CodingTest] i를 제외한 배열 요소들의 곱</title><link href="/codingtest/dailyprogramming/Daily-Programming-2/" rel="alternate" type="text/html" title="[CodingTest] i를 제외한 배열 요소들의 곱" /><published>2019-03-28T00:00:00+09:00</published><updated>2019-03-28T00:00:00+09:00</updated><id>/codingtest/dailyprogramming/Daily-Programming-2</id><content type="html" xml:base="/codingtest/dailyprogramming/Daily-Programming-2/">&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
+&lt;/pre&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Python" /><summary type="html">chaning comparison 파이썬은 chaning comparison이라는 신기한 문법이 있다. 참고 if a &amp;lt; b and b &amp;lt; c : (...) 라는 구문이 if a &amp;lt; b &amp;lt; c : (...) 으로 연산된다. 직관적인 문법이 인상적. Comparison operator Chaining 이라고 불린다.</summary></entry><entry><title type="html">[CodingTest] i를 제외한 배열 요소들의 곱</title><link href="https://seunghyum.github.io/codingtest/dailyprogramming/Daily-Programming-2/" rel="alternate" type="text/html" title="[CodingTest] i를 제외한 배열 요소들의 곱" /><published>2019-03-28T00:00:00+09:00</published><updated>2019-03-28T00:00:00+09:00</updated><id>https://seunghyum.github.io/codingtest/dailyprogramming/Daily-Programming-2</id><content type="html" xml:base="https://seunghyum.github.io/codingtest/dailyprogramming/Daily-Programming-2/">&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
 &lt;p&gt;정수 배열이 주어지면 인덱스 i에 해당하는 값 이외의 모든 값들의 곱인 배열을 구하여라.&lt;br /&gt;
 보너스 : 나눗셈을 안쓰고 풀기&lt;/p&gt;
 
@@ -533,7 +554,7 @@ suffix는 i번째의 뒷부분들의 수의 곱&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;n&lt;sup&gt;2&lt;/sup&gt;이외의 방법을 위해 여러가지 n을 만들어 풀기.&lt;/li&gt;
   &lt;li&gt;i번째의 앞부분들의 곱과 뒷부분들의 곱에 해당하는 array추출.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><category term="BinarySearch" /><category term="Set" /><summary type="html">문제 정수 배열이 주어지면 인덱스 i에 해당하는 값 이외의 모든 값들의 곱인 배열을 구하여라. 보너스 : 나눗셈을 안쓰고 풀기</summary></entry><entry><title type="html">Data Type</title><link href="/data%20type/Data-Type/" rel="alternate" type="text/html" title="Data Type" /><published>2019-03-27T00:00:00+09:00</published><updated>2019-03-27T00:00:00+09:00</updated><id>/data%20type/Data-Type</id><content type="html" xml:base="/data%20type/Data-Type/">&lt;h2 id=&quot;set-vs-array---관련기사&quot;&gt;Set vs Array - &lt;a href=&quot;https://medium.com/front-end-weekly/es6-set-vs-array-what-and-when-efc055655e1a&quot;&gt;관련기사&lt;/a&gt;&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><category term="BinarySearch" /><category term="Set" /><summary type="html">문제 정수 배열이 주어지면 인덱스 i에 해당하는 값 이외의 모든 값들의 곱인 배열을 구하여라. 보너스 : 나눗셈을 안쓰고 풀기</summary></entry><entry><title type="html">Data Type</title><link href="https://seunghyum.github.io/data%20type/Data-Type/" rel="alternate" type="text/html" title="Data Type" /><published>2019-03-27T00:00:00+09:00</published><updated>2019-03-27T00:00:00+09:00</updated><id>https://seunghyum.github.io/data%20type/Data-Type</id><content type="html" xml:base="https://seunghyum.github.io/data%20type/Data-Type/">&lt;h2 id=&quot;set-vs-array---관련기사&quot;&gt;Set vs Array - &lt;a href=&quot;https://medium.com/front-end-weekly/es6-set-vs-array-what-and-when-efc055655e1a&quot;&gt;관련기사&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;Set
     &lt;ul&gt;
@@ -574,7 +595,7 @@ suffix는 i번째의 뒷부분들의 수의 곱&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://medium.com/siliconwat/data-structures-in-javascript-1b9aed0ea17c&quot;&gt;data-structures-in-javascript&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://cooervo.github.io/Algorithms-DataStructures-BigONotation/data-structures.html&quot;&gt;링크&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Data Type" /><summary type="html">Set vs Array - 관련기사 Set 유일값들의 배열이 필요할때(distinct) 집합의 개념이 필요할때(차집합, 교집합 등등 자체 메서드들이 많음.) index가 필요 없을때 Array에서 중복값을 없앨때 =&amp;gt; new Set([1,1,2,3]) // 1,2,3 set의 add()는 O(n)의 시간복잡도가 소요되지만, Array의 push는 N(1)의 시간복잡도. Array 요소들의 순서(order)가 필요할때 index가 필요할때 -&amp;gt; Binaory Search</summary></entry><entry><title type="html">[CodingTest] 배열의 두 값을 합하여 k값 만들기</title><link href="/codingtest/dailyprogramming/Daily-Programming-1/" rel="alternate" type="text/html" title="[CodingTest] 배열의 두 값을 합하여 k값 만들기" /><published>2019-03-27T00:00:00+09:00</published><updated>2019-03-27T00:00:00+09:00</updated><id>/codingtest/dailyprogramming/Daily-Programming-1</id><content type="html" xml:base="/codingtest/dailyprogramming/Daily-Programming-1/">&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Data Type" /><summary type="html">Set vs Array - 관련기사 Set 유일값들의 배열이 필요할때(distinct) 집합의 개념이 필요할때(차집합, 교집합 등등 자체 메서드들이 많음.) index가 필요 없을때 Array에서 중복값을 없앨때 =&amp;gt; new Set([1,1,2,3]) // 1,2,3 set의 add()는 O(n)의 시간복잡도가 소요되지만, Array의 push는 N(1)의 시간복잡도. Array 요소들의 순서(order)가 필요할때 index가 필요할때 -&amp;gt; Binaory Search</summary></entry><entry><title type="html">[CodingTest] 배열의 두 값을 합하여 k값 만들기</title><link href="https://seunghyum.github.io/codingtest/dailyprogramming/Daily-Programming-1/" rel="alternate" type="text/html" title="[CodingTest] 배열의 두 값을 합하여 k값 만들기" /><published>2019-03-27T00:00:00+09:00</published><updated>2019-03-27T00:00:00+09:00</updated><id>https://seunghyum.github.io/codingtest/dailyprogramming/Daily-Programming-1</id><content type="html" xml:base="https://seunghyum.github.io/codingtest/dailyprogramming/Daily-Programming-1/">&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
 &lt;p&gt;list라는 행렬과 k라는 자연수가 주어짐. list의 두 값을 합하여 k값을 만들 수 있으면 true, 없으면 false를 리턴해라.&lt;br /&gt;
 보너스 : 한줄 표기&lt;/p&gt;
 
@@ -794,7 +815,7 @@ set에 우리가 지금까지 봤던 수들을 넣고 (seen 변수)
   &lt;/li&gt;
   &lt;li&gt;성능을 제대로 비교해볼 수 있는 Benchmark 라이브러리 적용.&lt;/li&gt;
   &lt;li&gt;어느시점에서 nlogN이 N보다 효율인지 알 수 있나?&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><category term="BinarySearch" /><category term="Set" /><summary type="html">문제 list라는 행렬과 k라는 자연수가 주어짐. list의 두 값을 합하여 k값을 만들 수 있으면 true, 없으면 false를 리턴해라. 보너스 : 한줄 표기</summary></entry><entry><title type="html">[CodingTest] 매일 프로그래밍 - 2019-03-26</title><link href="/codingtest/everydayprogramming/Every-Day-Programming-2/" rel="alternate" type="text/html" title="[CodingTest] 매일 프로그래밍 - 2019-03-26" /><published>2019-03-26T00:00:00+09:00</published><updated>2019-03-26T00:00:00+09:00</updated><id>/codingtest/everydayprogramming/Every-Day-Programming-2</id><content type="html" xml:base="/codingtest/everydayprogramming/Every-Day-Programming-2/">&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
+&lt;/ol&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><category term="BinarySearch" /><category term="Set" /><summary type="html">문제 list라는 행렬과 k라는 자연수가 주어짐. list의 두 값을 합하여 k값을 만들 수 있으면 true, 없으면 false를 리턴해라. 보너스 : 한줄 표기</summary></entry><entry><title type="html">[CodingTest] 매일 프로그래밍 - 2019-03-26</title><link href="https://seunghyum.github.io/codingtest/everydayprogramming/Every-Day-Programming-2/" rel="alternate" type="text/html" title="[CodingTest] 매일 프로그래밍 - 2019-03-26" /><published>2019-03-26T00:00:00+09:00</published><updated>2019-03-26T00:00:00+09:00</updated><id>https://seunghyum.github.io/codingtest/everydayprogramming/Every-Day-Programming-2</id><content type="html" xml:base="https://seunghyum.github.io/codingtest/everydayprogramming/Every-Day-Programming-2/">&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
 &lt;p&gt;정수 배열(int array)가 주어지면 가장 큰 이어지는 원소들의 합을 구하시오. 단, 시간복잡도는 O(n).&lt;/p&gt;
 
 &lt;p&gt;Given an integer array, find the largest consecutive sum of elements.&lt;/p&gt;
@@ -836,7 +857,7 @@ Output: 9 // 2 + 4 + (-2) + (-3) + 8
   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;maxSum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><summary type="html">문제 정수 배열(int array)가 주어지면 가장 큰 이어지는 원소들의 합을 구하시오. 단, 시간복잡도는 O(n).</summary></entry><entry><title type="html">[CodingTest] 매일 프로그래밍 - 피보나치 배열 2019-03-25</title><link href="/codingtest/everydayprogramming/Every-Day-Programming-1/" rel="alternate" type="text/html" title="[CodingTest] 매일 프로그래밍 - 피보나치 배열 2019-03-25" /><published>2019-03-25T00:00:00+09:00</published><updated>2019-03-25T00:00:00+09:00</updated><id>/codingtest/everydayprogramming/Every-Day-Programming-1</id><content type="html" xml:base="/codingtest/everydayprogramming/Every-Day-Programming-1/">&lt;!-- ## 문제
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><summary type="html">문제 정수 배열(int array)가 주어지면 가장 큰 이어지는 원소들의 합을 구하시오. 단, 시간복잡도는 O(n).</summary></entry><entry><title type="html">[CodingTest] 매일 프로그래밍 - 피보나치 배열 2019-03-25</title><link href="https://seunghyum.github.io/codingtest/everydayprogramming/Every-Day-Programming-1/" rel="alternate" type="text/html" title="[CodingTest] 매일 프로그래밍 - 피보나치 배열 2019-03-25" /><published>2019-03-25T00:00:00+09:00</published><updated>2019-03-25T00:00:00+09:00</updated><id>https://seunghyum.github.io/codingtest/everydayprogramming/Every-Day-Programming-1</id><content type="html" xml:base="https://seunghyum.github.io/codingtest/everydayprogramming/Every-Day-Programming-1/">&lt;!-- ## 문제
 피보나치 배열은 0과 1로 시작하며, 다음 피보나치 수는 바로 앞의 두 피보나치 수의 합이 된다.  
 정수 N이 주어지면, N보다 작은 모든 짝수 피보나치 수의 합을 구하여라.  
 &lt;br&gt;

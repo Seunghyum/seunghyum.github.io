@@ -20,7 +20,7 @@ title                    : "Developer Dave"
 title_separator          : "-"
 name                     : "Moon Seung Hyun"
 description              : "JS, 데이터 시각화에 \n관심이 많은 개발자입니다."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://seunghyum.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -294,7 +294,7 @@ defaults:
       share: true
       related: true
   - scope:
-      path: '_pages'
+      path: ''
       type: pages
     values:
       layout: single

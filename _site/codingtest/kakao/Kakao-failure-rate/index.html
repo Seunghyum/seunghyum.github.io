@@ -18,7 +18,7 @@
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Developer Dave">
 <meta property="og:title" content="[CodingTest] 2019 카카오 신입 공채 1차 - 2번 실패율 문제 with Javascript">
-<meta property="og:url" content="/codingtest/kakao/Kakao-failure-rate/">
+<meta property="og:url" content="https://seunghyum.github.io/codingtest/kakao/Kakao-failure-rate/">
 
 
   <meta property="og:description" content="오픈채팅방  문제 바로가기 링크  카카오의 설명 블로그나의 첫답안function solution(N, stages) {  let st = stages, stats = [];  for(let i=1;i&lt;N+1;i++){ // n    let selectedNumbers=0, obj = {};    st = st.filter((s)=&gt;{ // n * n      if(s == i) selectedNumbers++;      else return true;    });    obj.name = i;    obj.per = (st.length == 0 ? 1 : selectedNumbers/st.length);    stats.push(obj)  }  stats.sort((a,b)=&gt; a.per - b.per &gt;= 0 ? -1 : 1) // n^2 + logN  return stats.map(s =&gt; s.name) // -&gt; O(n^2)}">
@@ -40,7 +40,7 @@
   
 
 
-<link rel="canonical" href="/codingtest/kakao/Kakao-failure-rate/">
+<link rel="canonical" href="https://seunghyum.github.io/codingtest/kakao/Kakao-failure-rate/">
 
 
 
@@ -53,7 +53,7 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Moon Seung Hyun",
-      "url": null,
+      "url": "https://seunghyum.github.io",
       "sameAs": null
     }
   </script>
@@ -485,7 +485,7 @@ function solution(N, stages) {
 
 
 
-  3 분 소요
+  4 분 소요
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">참고
@@ -909,7 +909,7 @@ function solution(record) {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "/codingtest/kakao/Kakao-failure-rate/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.url = "https://seunghyum.github.io/codingtest/kakao/Kakao-failure-rate/";  // Replace PAGE_URL with your page's canonical URL variable
       this.page.identifier = "/codingtest/kakao/Kakao-failure-rate"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     (function() { // DON'T EDIT BELOW THIS LINE
