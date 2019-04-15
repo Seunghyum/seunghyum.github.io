@@ -9,7 +9,7 @@ comments: true
 ## 문제3
 문제 받으면 작성할 예정.
 
-## 내가 작성한 답변
+## 내가 작성한 답변 - 아래로꺾인선만 구하기
 ```javascript
 function solution(N) {
   let maxUnderCurvedPoint = N[0];
