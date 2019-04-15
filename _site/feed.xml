@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://seunghyum.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://seunghyum.github.io/" rel="alternate" type="text/html" /><updated>2019-04-15T18:03:07+09:00</updated><id>https://seunghyum.github.io/feed.xml</id><title type="html">Developer Dave</title><subtitle>JS, 데이터 시각화에 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://seunghyum.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://seunghyum.github.io/" rel="alternate" type="text/html" /><updated>2019-04-15T18:34:35+09:00</updated><id>https://seunghyum.github.io/feed.xml</id><title type="html">Developer Dave</title><subtitle>JS, 데이터 시각화에 
 관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">[CodingTest] 2019 네이버 핵데이 코드테스트 문제1 with Javascript</title><link href="https://seunghyum.github.io/codingtest/naver/Naver-Hackday-Test-1/" rel="alternate" type="text/html" title="[CodingTest] 2019 네이버 핵데이 코드테스트 문제1 with Javascript" /><published>2019-04-15T00:00:00+09:00</published><updated>2019-04-15T00:00:00+09:00</updated><id>https://seunghyum.github.io/codingtest/naver/Naver-Hackday-Test-1</id><content type="html" xml:base="https://seunghyum.github.io/codingtest/naver/Naver-Hackday-Test-1/">&lt;h2 id=&quot;문제1&quot;&gt;문제1&lt;/h2&gt;
 &lt;p&gt;문제 받으면 작성할 예정.&lt;/p&gt;
 
@@ -437,27 +437,37 @@ TCP커넥션 종료
   &lt;li&gt;5xx 서버 에러(Server Error)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;http와-연계하는-웹서버&quot;&gt;HTTP와 연계하는 웹서버&lt;/h2&gt;
+&lt;h2 id=&quot;웹의-여러-애플리케이션&quot;&gt;웹의 여러 애플리케이션&lt;/h2&gt;
 
-&lt;h3 id=&quot;프록시&quot;&gt;프록시&lt;/h3&gt;
+&lt;h3 id=&quot;프록시--클라이언트와-서버사이에-위치한-http-중개자&quot;&gt;프록시 : 클라이언트와 서버사이에 위치한 HTTP 중개자&lt;/h3&gt;
 
-&lt;p&gt;서버와 클라이언트 사이에서 중계 프로그램&lt;/p&gt;
+&lt;p&gt;서버와 클라이언트 사이에서 중계 프로그램. &lt;strong&gt;웹 보안, 어플리케이션 통합, 성능 최적화에 쓰임.&lt;/strong&gt;&lt;br /&gt;
+모든 웹 트래픽 흐름속에서 신뢰할 만한 중개자 역할을 한다.&lt;br /&gt;
+요청과 응답을 필터링한다.&lt;br /&gt;
+무언가를 다운받을 때 애플리케이션 바이러스를 검출하거나, 초등학교 학생들에게서 성인 콘텐츠를 차단한다.
+&lt;img src=&quot;/assets/images/network_proxy_server.jpeg&quot; alt=&quot;프록시 서버&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;주로 보안을 위해 사용. 모든 웹 트래픽 흐름속에서 신뢰할 만한 중개자 역할을 한다.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;캐시--많이-찾는-웹페이지를-클라이언트-가까이에-보관하는-http-창고&quot;&gt;캐시 : 많이 찾는 웹페이지를 클라이언트 가까이에 보관하는 HTTP 창고&lt;/h3&gt;
 
-&lt;p&gt;요청과 응답을 필터링한다.&lt;/p&gt;
+&lt;p&gt;프록시서버와 클라이언트 로컬디스크에 보관된 리소스 사본.&lt;br /&gt;
+자주 찾는 것의 사본을 저장해두는 특별한 종류의 http프락시 서버다.&lt;br /&gt;
+리소스를 가진 서버에 엑세스를 줄이는 것이 가능하기 때문에 통신량과 통신시간을 절약할 수 있다.&lt;br /&gt;
+&lt;img src=&quot;/assets/images/network_cache_server.png&quot; alt=&quot;캐시 서버&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;무언가를 다운받을 때 애플리케이션 바이러스를 검출하거나, 초등학교 학생들에게서 성인 콘텐츠를 차단한다.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;게이트웨이--다른-애플리케이션과-연결된-특별한-웹서버&quot;&gt;게이트웨이 : 다른 애플리케이션과 연결된 특별한 웹서버&lt;/h3&gt;
 
-&lt;h3 id=&quot;캐시&quot;&gt;캐시&lt;/h3&gt;
+&lt;p&gt;다른 서버들의 중개자. 주로 HTTP 트래픽을 다른 프로토콜로 변환하기 위해 사용.&lt;br /&gt;
+게이트웨이는 언제나 스스로가 리소스를 갖고있는 진짜 서버인 것처럼 요청을 다룸.&lt;br /&gt;
+클라이언트는 자신이 게이트웨이와 통신하는 것을 알지못함.&lt;br /&gt;
+예를들어 HTTP/FTP 게이트웨이는 GTP URI에 대한 HTTP요청을 받아들인 뒤, FTP 프로토콜을 이용해 문서를 가져옴. 받아온 문서는 HTTP메시지에 담겨 클라이언트에게 보냄.&lt;br /&gt;
+&lt;img src=&quot;/assets/images/network_gateway_server.jpg&quot; alt=&quot;게이트웨이 서버&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;프록시서버와 클라이언트 로컬디스크에 보관된 리소스 사본&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;터널--단순히-http-통신을-전달하기만-하는-특별한-프락시&quot;&gt;터널 : 단순히 HTTP 통신을 전달하기만 하는 특별한 프락시&lt;/h3&gt;
 
-&lt;p&gt;자주 찾는 것의 사본을 저장해두는 특별한 종류의 http프락시 서버다.&lt;/p&gt;
-
-&lt;p&gt;리소스를 가진 서버에 엑세스를 줄이는 것이 가능하기 때문에 통신량과 통신시간을 절약할 수 있다.&lt;/p&gt;
-
-&lt;p&gt;캐시의 유효기간&lt;/p&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Network" /><category term="HTTP" /><category term="TCP/IP" /><summary type="html">참고 책 그림으로 배우는 http &amp;amp; network http 완벽가이드 참고 사이트 그림으로 배우는 http &amp;amp; network 정리글 http 완벽가이드 읽는법 zerocho 님 블로그 시리즈 wiki 백과(URI, URL, UDP)</summary></entry><entry><title type="html">[Syntax] 새로 알게된 파이썬 문법 정리</title><link href="https://seunghyum.github.io/python/syntax/Python-Syntax/" rel="alternate" type="text/html" title="[Syntax] 새로 알게된 파이썬 문법 정리" /><published>2019-04-03T00:00:00+09:00</published><updated>2019-04-03T00:00:00+09:00</updated><id>https://seunghyum.github.io/python/syntax/Python-Syntax</id><content type="html" xml:base="https://seunghyum.github.io/python/syntax/Python-Syntax/">&lt;h2 id=&quot;chaning-comparison&quot;&gt;chaning comparison&lt;/h2&gt;
+&lt;h3 id=&quot;에이전트--자동화된-http-요청을-만드는-준지능적-웹클라이언트&quot;&gt;에이전트 : 자동화된 HTTP 요청을 만드는 준지능적 웹클라이언트&lt;/h3&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Network" /><category term="HTTP" /><category term="TCP/IP" /><summary type="html">참고 책 그림으로 배우는 http &amp;amp; network http 완벽가이드 참고 사이트 그림으로 배우는 http &amp;amp; network 정리글 http 완벽가이드 읽는법 zerocho 님 블로그 시리즈 wiki 백과(URI, URL, UDP)</summary></entry><entry><title type="html">[Syntax] 새로 알게된 파이썬 문법 정리</title><link href="https://seunghyum.github.io/python/syntax/Python-Syntax/" rel="alternate" type="text/html" title="[Syntax] 새로 알게된 파이썬 문법 정리" /><published>2019-04-03T00:00:00+09:00</published><updated>2019-04-03T00:00:00+09:00</updated><id>https://seunghyum.github.io/python/syntax/Python-Syntax</id><content type="html" xml:base="https://seunghyum.github.io/python/syntax/Python-Syntax/">&lt;h2 id=&quot;chaning-comparison&quot;&gt;chaning comparison&lt;/h2&gt;
 &lt;p&gt;파이썬은 chaning comparison이라는 신기한 문법이 있다. &lt;a href=&quot;https://www.geeksforgeeks.org/chaining-comparison-operators-python/&quot;&gt;참고&lt;/a&gt;&lt;/p&gt;
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
