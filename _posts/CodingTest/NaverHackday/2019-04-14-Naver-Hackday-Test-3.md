@@ -48,6 +48,8 @@ function solution(N) {
   }
 }
 ```
+### 부족한 점
+다시생각해보니 위로 꺾인선만 고려하면 쉽게 답이 나옴.
 
 ## 수정한 답안2 - 위로꺾인선만 구하기
 ```javascript
@@ -56,7 +58,7 @@ function solution(N) {
   for(let i=0;i<=N.length;i++) {
     if(N[i]>N[i+1] && maxUpperCurvedPoint > N[i]) maxUpperCurvedPoint = N[i]; // 추가
   }
-  console.log("maxUpperCurvedPoint : ", maxUpperCurvedPoint )
+  
   for(let i=N.length-1;i>=0;i--) {
     if (maxUpperCurvedPoint < N[i]) return i; // 수정
   }
@@ -66,4 +68,5 @@ console.log("solution([3,-5,5,10]) : ", solution([3,-5,5,10]))
 ```
 
 ## 느낀점
-답에 대한 테스트케이스를 여러개 생각해서 검토하지 않아서 오류를 놓침.
+답에 대한 테스트케이스를 여러개 생각해서 검토하지 않아서 오류를 놓침. 
+여러가지 테스트케이스를 해보고 오류점검하는 버릇이 좀 더 들어야함.

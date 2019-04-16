@@ -316,6 +316,8 @@
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></div>
+<h3 id="부족한-점">부족한 점</h3>
+<p>다시생각해보니 위로 꺾인선만 고려하면 쉽게 답이 나옴.</p>
 
 <h2 id="수정한-답안2---위로꺾인선만-구하기">수정한 답안2 - 위로꺾인선만 구하기</h2>
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">N</span><span class="p">)</span> <span class="p">{</span>
@@ -323,7 +325,7 @@
   <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;=</span><span class="nx">N</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span><span class="p">(</span><span class="nx">N</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">&gt;</span><span class="nx">N</span><span class="p">[</span><span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="nx">maxUpperCurvedPoint</span> <span class="o">&gt;</span> <span class="nx">N</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="nx">maxUpperCurvedPoint</span> <span class="o">=</span> <span class="nx">N</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span> <span class="c1">// 추가</span>
   <span class="p">}</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"maxUpperCurvedPoint : "</span><span class="p">,</span> <span class="nx">maxUpperCurvedPoint</span> <span class="p">)</span>
+  
   <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="nx">N</span><span class="p">.</span><span class="nx">length</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="nx">i</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">maxUpperCurvedPoint</span> <span class="o">&lt;</span> <span class="nx">N</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="k">return</span> <span class="nx">i</span><span class="p">;</span> <span class="c1">// 수정</span>
   <span class="p">}</span>
@@ -333,7 +335,8 @@
 </code></pre></div></div>
 
 <h2 id="느낀점">느낀점</h2>
-<p>답에 대한 테스트케이스를 여러개 생각해서 검토하지 않아서 오류를 놓침.</p>
+<p>답에 대한 테스트케이스를 여러개 생각해서 검토하지 않아서 오류를 놓침. 
+여러가지 테스트케이스를 해보고 오류점검하는 버릇이 좀 더 들어야함.</p>
 
 <br>
 <br>
@@ -411,7 +414,7 @@
 
 
 
-  최대 1 분 소요
+  1 분 소요
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">문제3
