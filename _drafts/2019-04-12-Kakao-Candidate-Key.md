@@ -65,7 +65,7 @@ function solution(relation) {
   - [정리글](https://gmlwjd9405.github.io/2018/08/14/algorithm-dfs.html)
 
 
-## 다른사람의 답안
+## 다른사람의 답안 (bit를 이용한 연산)
 ```javascript
 function solution(relation) {
   const tuples = relation[0].length,

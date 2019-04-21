@@ -9,6 +9,3 @@
   - JEKYLL_ENV=production jekyll serve  --livereload --draft
 - 빌드
   - JEKYLL_ENV=production jekyll build
-
-# => 현재 폴더의 컨텐츠를 가지고 ./_site 에 사이트를 생성합니다.
-#    변경사항이 감지되면, 자동으로 다시 생성합니다.
