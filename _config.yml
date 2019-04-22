@@ -108,7 +108,7 @@ analytics:
 author:
   name             : "Moon Seung Hyun"
   nickname         : "Dave"
-  avatar           : "/assets/images/profile.jpeg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/profile_image.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "데이터 시각화에 관심이 많습니다 :)"
   location         : "Suwon, Republic of Korea"
   email            : "antmgu@gmail.com"
