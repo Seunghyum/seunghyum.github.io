@@ -5,7 +5,7 @@
 
   {% if author.avatar %}
     <div class="author__avatar text-center">
-      {% if author.avatar contains "://" %}
+      <!-- {% if author.avatar contains "://" %}
         {% assign author_src = author.avatar %}
       {% else %}
         {% assign author_src = author.avatar | relative_url %}
@@ -22,19 +22,20 @@
         </a>
       {% else %}
         <img src="{{ author_src }}" alt="{{ author.name }}" itemprop="image">
-      {% endif %}
+      {% endif %} -->
+      <img src="/assets/images/profile_image.png" alt="{{ author.name }}" itemprop="image">
     </div>
   {% endif %}
 
   <div class="author__content">
     <div class="text-center">
-      {% if author.home %}
+      <!-- {% if author.home %}
         <a href="{{ author_link }}"><h3 class="author__name" itemprop="name">{{ author.name }}</h3></a>
         <p class="author__name" itemprop="name">{{ author.nickname }}</p>
       {% else %}
         <h3 class="author__name" itemprop="name">{{ author.name }}</h3>
         <p class="author__name" itemprop="name">{{ author.nickname }}</p>
-      {% endif %}
+      {% endif %} -->
     </div>
     {% if author.bio %}
       <p class="author__bio" itemprop="description">

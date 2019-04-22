@@ -109,7 +109,7 @@ author:
   name             : "Moon Seung Hyun"
   nickname         : "Dave"
   avatar           : "/assets/images/profile.jpeg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Javascript, 데이터 시각화에 관심이 많은 개발자입니다."
+  bio              : "데이터 시각화에 관심이 많은 개발자입니다."
   location         : "Suwon, Republic of Korea"
   email            : "antmgu@gmail.com"
   links:

@@ -4,8 +4,8 @@
 
 ## 명령어
 - 로컬 서버 띄우기
-  - jekyll serve --draft # 초안을 같이 표시한다.
-  - jekyll serve --livereload # 수정마다 새로고침된다.
-  - JEKYLL_ENV=production jekyll serve  --livereload --draft
+  - bundle exec jekyll serve --draft # 초안을 같이 표시한다.
+  - bundle exec jekyll serve --livereload # 수정마다 새로고침된다.
+  - JEKYLL_ENV=production bundle exec jekyll serve  --livereload --draft
 - 빌드
-  - JEKYLL_ENV=production jekyll build
+  - JEKYLL_ENV=production bundle exec jekyll build
