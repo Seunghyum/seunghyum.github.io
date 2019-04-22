@@ -30,20 +30,14 @@ Kernel configured for up to 8 processors.
 Processor type: x86_64h (Intel x86-64h Haswell)
 Processors active: 0 1 2 3 4 5 6 7
 Primary memory available: 16.00 gigabytes
-Default processor set: 432 tasks, 2206 threads, 8 processors
-Load average: 2.16, Mach factor: 5.84
+Default processor set: 390 tasks, 1833 threads, 8 processors
+Load average: 2.03, Mach factor: 5.98
 /bin/machine           = unknown
 /usr/bin/oslevel       = unknown
 /bin/universe          = unknown
 
 PATH: /Users/seunghyunmoon/.rbenv/versions/2.6.2/bin
 PATH: /usr/local/Cellar/rbenv/1.1.2/libexec
-PATH: /Users/seunghyunmoon/.gem/ruby/2.6.2/bin
-PATH: /Users/seunghyunmoon/.rbenv/shims
-PATH: /Users/seunghyunmoon/.gem/ruby/2.6.2/bin
-PATH: /Users/seunghyunmoon/.rbenv/shims
-PATH: /Users/seunghyunmoon/.gem/ruby/2.6.0/bin
-PATH: /Users/seunghyunmoon/.rbenv/shims
 PATH: /Users/seunghyunmoon/.gem/ruby/2.6.2/bin
 PATH: /Users/seunghyunmoon/.rbenv/shims
 PATH: /usr/local/bin
