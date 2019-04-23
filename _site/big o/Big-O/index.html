@@ -9,38 +9,38 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Network - HTTP 정리 - eveloper Dave</title>
-<meta name="description" content="참고  책          그림으로 배우는 http &amp; network      http 완벽가이드        참고 사이트          그림으로 배우는 http &amp; network 정리글      http 완벽가이드 읽는법      zerocho 님 블로그 시리즈      wiki 백과(URI, URL, UDP)      ">
+<!-- begin _includes/seo.html --><title>Big O - eveloper Dave</title>
+<meta name="description" content="Big O  CheetSheet  CheetSheet">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="eveloper Dave">
-<meta property="og:title" content="Network - HTTP 정리">
-<meta property="og:url" content="https://seunghyum.github.io/network/Network/">
+<meta property="og:title" content="Big O">
+<meta property="og:url" content="https://seunghyum.github.io/big%20o/Big-O/">
 
 
-  <meta property="og:description" content="참고  책          그림으로 배우는 http &amp; network      http 완벽가이드        참고 사이트          그림으로 배우는 http &amp; network 정리글      http 완벽가이드 읽는법      zerocho 님 블로그 시리즈      wiki 백과(URI, URL, UDP)      ">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2019-04-06T00:00:00+09:00">
+  <meta property="og:description" content="Big O  CheetSheet  CheetSheet">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2019-03-28T00:00:00+09:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://seunghyum.github.io/network/Network/">
+
+<link rel="canonical" href="https://seunghyum.github.io/big%20o/Big-O/">
 
 
 
@@ -146,407 +146,17 @@
 
 <div id="main" role="main">
   
-  <div class="sidebar sticky">
-  
-
-
-<div itemscope itemtype="https://schema.org/Person">
-
-  
-    <div class="author__avatar text-center">
-      
-
-      
-        <img src="/assets/images/profile_image.png" alt="Moon Seung Hyun" itemprop="image">
-      
-      <!-- <img src="/assets/images/profile_image_sidebar.png" alt="Moon Seung Hyun" itemprop="image">
-      <img src="/assets/images/profile_image.png" alt="Moon Seung Hyun" itemprop="image"> -->
-    </div>
-  
-
-  <div class="author__content">
-    <div class="text-center">
-      <!-- 
-        <h3 class="author__name" itemprop="name">Moon Seung Hyun</h3>
-        <p class="author__name" itemprop="name">Dave</p>
-       -->
-    </div>
-    
-      <p class="author__bio text-center" itemprop="description">
-        데이터 시각화에 관심이 많습니다 :)
-      </p>
-    
-  </div>
-
-  <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">팔로우</button>
-    <ul class="author__urls text-center social-icons">
-      
-        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
-          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Suwon, Republic of Korea</span>
-        </li>
-      
-
-      
-        
-          
-            <li><a href="mailto:antmgu@gmail.com" rel="nofollow noopener noreferrer"><i class="far fa-fw fa-envelope" aria-hidden="true"></i> antmgu@gmail.com</a></li>
-          
-        
-          
-            <li><a href="https://github.com/Seunghyum" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> https://github.com/Seunghyum</a></li>
-          
-        
-      
-
-      
-
-      <!-- 
-        <li>
-          <a href="mailto:antmgu@gmail.com">
-            <meta itemprop="email" content="antmgu@gmail.com" />
-            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> 이메일
-          </a>
-        </li>
-       -->
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      <!--
-  <li>
-    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
-      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
-    </a>
-  </li>
--->
-    </ul>
-  </div>
-</div>
-
-  
-  </div>
-
   <div class="archive">
     
       <br>
-      <h1 id="page-title" class="page__title">Network - HTTP 정리</h1>
+      <h1 id="page-title" class="page__title">Big O</h1>
     
     <br>
-<h2 id="참고">참고</h2>
+<h2 id="big-o">Big O</h2>
 <ul>
-  <li>책
-    <ul>
-      <li><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=51908132" target="_blank">그림으로 배우는 http &amp; network</a></li>
-      <li><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=49731592" target="_blank">http 완벽가이드</a>
-<br />
-<br /></li>
-    </ul>
-  </li>
-  <li>참고 사이트
-    <ul>
-      <li><a href="http://vnthf.logdown.com/posts/2016/06/21/http" target="_blank">그림으로 배우는 http &amp; network 정리글</a></li>
-      <li><a href="https://blog.npcode.com/2015/06/07/웹-프로그래머를-위한-http-완벽-가이드-읽는-법/" target="_blank">http 완벽가이드 읽는법</a></li>
-      <li><a href="https://www.zerocho.com/category/HTTP/post/5b344f3af94472001b17f2da" target="_blank">zerocho 님 블로그 시리즈</a></li>
-      <li>wiki 백과(URI, URL, UDP)
-<br />
-<br /></li>
-    </ul>
-  </li>
+  <li><a href="http://bigocheatsheet.com/">CheetSheet</a></li>
+  <li><a href="http://cooervo.github.io/Algorithms-DataStructures-BigONotation/index.html">CheetSheet</a></li>
 </ul>
-
-<h2 id="글-작성-로그-및-수정-계획">글 작성 로그 및 수정 계획</h2>
-<ul>
-  <li>2019.04.06 그림으로 배우는 http &amp; network 정리글 블로그를 읽고 정리한 글
-    <ul>
-      <li>실제 책(그림으로 배우는 http &amp; network) 읽고 한번 더 정리
-        <ul>
-          <li><del>ch2 -&gt; 트랜잭션 생성에 따른 통신 과정</del> - 2019.04.15</li>
-          <li>ch3  -&gt; 데이터 타입에 따른</li>
-        </ul>
-      </li>
-      <li>http 완벽 가이드 다시 읽고 정리 &lt;- <a href="https://blog.npcode.com/2015/06/07/웹-프로그래머를-위한-http-완벽-가이드-읽는-법/" target="_blank">http 완벽가이드 읽는법</a></li>
-      <li>CORS, CORB 에러 정리</li>
-      <li>쿠키 / 캐시 정리
-<br />
-<br /></li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="tcpip">TCP/IP</h2>
-
-<p>인터넷과 관련된 프로토콜을 모아놓은 것</p>
-
-<p>대부분, IP프로토콜을 사용한 통신에서 사용되고 있는 프로토콜을 총칭해서 TCP/IP라고 함.<br />
-설계를 편하게 하고 유지보수를 위해서 계층화가 되어있음.</p>
-<ul>
-  <li>4계층
-    <ul>
-      <li>애플리케이션 계층 - 유저에서 제공되는 에플리케이션 (FTP, DNS, HTTP)</li>
-      <li>트랜스포트 계층 - 에플리케이션 계층에 네트워크로 접속되어 있는 컴퓨터사이의 데이터흐름을 제공(TCP, UDP)</li>
-      <li>네트워크 계층 - 네트워크 상에서 패킷의 이동을 다룸. 여러대의 컴퓨터랑 네트워크 기기사이에서 길을 찾는 것(IP)
-        <ul>
-          <li>패킷 : 전송하는 데이터의 최소 단위</li>
-        </ul>
-      </li>
-      <li>링크 계층 - 네트워크의 하드웨어적인 면 (케이블 등등)
-<br />
-<img src="/assets/images/tcp:ip_transfer_flow.png" alt="TCP/IP 통신의 흐름" />
-<br />
-HTTP 데이터 -&gt; TCP 헤더 -&gt; IP 헤더 -&gt; Eternet 헤더</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="ip">IP</h2>
-
-<ul>
-  <li>배송을 담당. 개개의 패킷을 상대방에게 전달. IP주소와 MAC(변경 불가)주소를 통해서 통신</li>
-  <li>어느 누구도 길에대한 정확한 위치를 알고 있지 않음(물어물어 찾아감)</li>
-  <li>네트워크에 존재하는 각 컴퓨터를 식별하기 위해 각각에 서로 다른 값을 할당한 것. <strong>각 기기에 할당되는 것이 아니라 기기에 장착된 각각의 네트워크용 하드웨어에 할당 됨.</strong> 즉, 복수의 네트워크하드웨어를 장착한 기기는 복수의 주소 할당.</li>
-  <li>MAC(Media Access Control Address) 주소 :  IEEE에서 표준화된 LAN 방식의 기기는 모두 같은 형식의 주소를 사용하는데 이 주소를 가르킴. MAC주소를 사용하여 목적지를 찾아갈때는 ARP라는 프로토콜이 사용됨</li>
-  <li><u>IP주소는 변경가능하나, MAC주소는 변경불가.</u></li>
-</ul>
-
-<h2 id="tcptransfer-control-protocol">TCP(Transfer Control Protocol)</h2>
-
-<ul>
-  <li>신뢰성을 담당
-    <ul>
-      <li>바이트 스트림 서비스<br />
-: 큰 데이터를 보내기위에 TCP세그먼트라고 불리우는 단위 패킷으로 작개 분해하여 관리하는것. 대용량의 데이터를 보내기 쉽게 작게 분해하여 상대에게 보내고, 정확하게 도착했는지 확인하는 역할.</li>
-      <li>TCP Three way hand shaking (STN/ACK 플래그 사용)<br />
-: SYN으로 보내면 SYN/ACK 플래그로 패킷 수신한 사실을 전하면 ACK 플래그를 다시 보내 완료되었음을 전송. 도중에 끊키면 다시 반복
-<img src="/assets/images/3way_hand_shake.png" alt="TCP Three way hand shaking (STN/ACK 플래그 사용)" /></li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="dnsdomain-name-system">DNS(Domain Name System)</h2>
-
-<p>: 도메인을 주면 IP주소를 반환해줌</p>
-
-<h2 id="http">HTTP</h2>
-
-<ul>
-  <li>클라이언트(웹브라우저)에서 서버까지 일련의 흐름을 결정하는 프로토콜</li>
-  <li>HTTP자체는 잘 변하지 않음. 현재는 1997년 공개된 HTTP/1.1을 대부분 쓰고있음. 2.0이 탄생되었지만 표준화까지 시간이 오래걸림</li>
-</ul>
-
-<h2 id="uri-url">URI, URL</h2>
-
-<p>URI(Uniform Resource Identifiers)<br />
-스키마를 나타내는 리소스를 식별하기 위한 식별자.<br />
-스키마: 리소스를 얻기위한 수단에 이름을 붙이는 방법. (http, ftp, mailto, file, telnet 등).</p>
-
-<ul>
-  <li>Uniform
-    <ul>
-      <li>통일된(Uniformity) 서식을 결정하는 것. 여러가지 종류의 리소스 지정을 구별없이 같은 맥락에서 사용할 수 있게 한다. (응??) 또한, 새로운 스키마(http:와 ftp등) 도입을 용이하게 함</li>
-    </ul>
-  </li>
-  <li>Resource
-    <ul>
-      <li>식별가능한 모든 것. (도큐먼트 파일, 이미지, 서비스(ex. 오늘의 일기예보) 등 다른 것과 구별할 수 있는 것은 모두 리소스) 단일한 부분만 아니라 복수의 집합도 리소스임</li>
-    </ul>
-  </li>
-  <li>Identifier
-    <ul>
-      <li>식별자. 식별 가능한 것을 참조하는 오브젝트.</li>
-    </ul>
-  </li>
-</ul>
-
-<p>URI는 리소스를 식별하기 위해 문자열 전반을 나타내는데 비해</p>
-
-<p>URL은 리소스의 장소(네트워크상의 위치)를 나타낸다.</p>
-
-<p>URL은 URI의 서브셋이다. (URI = URL + URN)</p>
-
-<p><br /><br />
-URL 포맷<br /><br />
-<img src="/assets/images/URL_syntax.png" alt="URL_syntax" />
-<br /><br />
-URL 설명<br /><br />
-<img src="/assets/images/URL_explain.png" alt="URL_explain" />
-<br /><br />
-예시</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://user:pass@www.aaa.com:80/dir/index.html?uid=12#head1
-</code></pre></div></div>
-<p><br />
-예시 풀이</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  http://    user:pass   @www.aaa.com     :80     /dir/index.html    ?uid=12           #head1
-스키마(http),   자격정보,       서버주소,      서버포트,     계층적파일경로,     쿼리문자열,     프래그먼트식별자(#head1)
-</code></pre></div></div>
-
-<ul>
-  <li>스키마
-    <ul>
-      <li>리소스를 얻기위해 사용하는 프로토콜을 지시.</li>
-      <li>대소문자 무시, 마지막에 콜론(:)이 붙음.</li>
-      <li>“data:”, “javascript:”같이 데이터와 프로그램도 지정 가능.</li>
-    </ul>
-  </li>
-  <li>자격정보(=크리덴셜)
-    <ul>
-      <li>서버로부터 리소스를 취득하려면 자격정보가 필요.</li>
-      <li>유저명과 패스워드 지정. 이것은 옵션.</li>
-    </ul>
-  </li>
-  <li>서버주소 : DNS이름(www.aaa.com)이나, IPv4주소(192.168.1.1)나, IPv6주소([0:0:0:0:0:0:0:1])를 쓸 수 있음.</li>
-  <li>서버포트 : 서버의 접속대상이 되는 네트워크 포트 번호 지정. 이것도 옵션. 생략시 디폴트 포트가 사용</li>
-  <li>계층적 파일경로 : 특정 리소스를 식별하기 위해 서버상의 파일 패스를 지정.</li>
-  <li>쿼리문자열 : 파일 패스로 지정된 리소스에 임의의 파라미터를 넘겨주기 위해 쿼리문자열을 사용. 옵션값</li>
-  <li>프래그먼트 식별자 : 취득한 리소스에서 서브리소스 (도큐먼트 중간에 위치)를 가리키기 위해서 사용. 옵션값</li>
-</ul>
-
-<h3 id="udp와-tcp-비교편집">UDP와 TCP 비교[편집]</h3>
-
-<p>TCP는 데이터를 주고 받을 양단 간에 먼저 연결을 설정하고 설정된 연결을 통해 양방향으로 데이터를 전송하지만, UDP는 연결을 설정하지 않고 수신자가 데이터를 받을 준비를 확인하는 단계를 거치지 않고 단방향으로 정보를 전송한다.</p>
-<ul>
-  <li>신뢰성 - TCP는 메시지 수신을 확인하지만 UDP는 수신자가 메시지를 수신했는지 확인할 수 없다.</li>
-  <li>순서 정렬 - TCP에서는 메시지가 보내진 순서를 보장하기 위해 재조립하지만 UDP는 메시지 도착 순서를 예측할 수 없다.</li>
-  <li>부하 - TCP보다 속도가 일반적으로 빠르고 오버헤드가 적다.
-<br /><br />
-<img src="/assets/images/tcp_vs_udp.jpg" alt="tcp_vs_udp" /></li>
-</ul>
-
-<h2 id="간단한-프로토콜-http">간단한 프로토콜 HTTP</h2>
-
-<p>하나의 트랜젝션
-<br />
-<br />
-TCP커넥션 연결 (쓰리웨이 핸드쉐이킹)
-<br />
-<br />
-HTTP요청
-<br />
-HTTP응답
-<br />
-<br />
-TCP커넥션 종료
-<br />
-<br /></p>
-<ul>
-  <li>HTTP는 <strong>스테이트리스(Stateless)프로토콜</strong>이다. <u>과거에 교환했던 리퀘스트와 리스폰스의 상태를 관리하지 않음.</u><br />
-이점도 있지만 이로인한 문제를 해결하기 위한 시스템 : <strong>쿠키</strong></li>
-</ul>
-
-<h3 id="쿠키---http-프로토콜의-스테이트리스-단점을-보완">쿠키 - HTTP 프로토콜의 스테이트리스 단점을 보완.</h3>
-<p>클라이언트 상태 파악하기 위함.
-<br />
-서버에서 리스폰스로 보내진 Set-Cookie라는 헤더필드에 의해 쿠키를 클라이언트에 보존.
-<br />
-다음번에 클라이언트가 같은 서버로 리퀘스트를 보낼 때, 자동으로 쿠키값을 넣어서 송신.
-<br />
-서버는 클라이언트가 보내온 쿠키를 확인해서 어느 클라이언트가 접속했는지 체크하고 서버상의 기록을 확인해서 이전 상태를 알 수 있음.
-<br />
-<img src="/assets/images/http_cookie_principle.png" alt="쿠키 작동" /></p>
-
-<h2 id="http-매서드">HTTP 매서드</h2>
-
-<ul>
-  <li>GET : 리소스 획득</li>
-  <li>POST : 엔티티 전송.</li>
-  <li>PUT : 파일전송. FTP에 의한 파일전송과 같이 리퀘스트 중에 포함된 엔티티를 리퀘스트 URI로 지정한 곳에 보존하다록 요구. 인증기능이 없어서 REST를 사용하는 경우에 사용. entity의 전체(ex - 모든 fields)를 바꿈(update)</li>
-  <li>PATCH : entity의 일부만 바꿈(ex - 일부 fields)를 바꿈.
-    <ul>
-      <li>참고(스프링에서의 정의) PUT replaces an existing entity. If only a subset of data elements are provided, the rest will be replaced with empty or null.</li>
-    </ul>
-  </li>
-  <li>DELETE : 파일 삭제. PUT매서드와 반대. 인증기능이 없어서 REST를 사용하는 경우에 사용.</li>
-  <li>HEAD : GET과 같은 기능이지만 메시지 바디는 반환 안함. URI 유효성과 리소스 갱신 시간을 확인하는 목적으로 사용.</li>
-  <li>OPTIONS : 제공하고 있는 메소드의 문의. 리퀘스트 URI로 지정한 리소스가 제공하고 있는 메소드를 조사하는데 사용함.</li>
-  <li>TRACE : 경로조사. 프록시등을 중계할떄 추적위해 사용. 크로스 사이트 트레이싱(XST) 같은 공격을 일으킬 수 있으므로 거의 안쓰임. “Max-Forwards”라는 헤더 필드에 수치를 포함시켜 요청하면 서버를 통과할때마다 그 수치를 줄여나감. 수치가 0이 된 곳을 끝으로 200 OK 리스폰스 보냄.</li>
-  <li>CONNECT : 프록시에 터널링 요구. TCP 통신을 터널링 시키기 위해서 사용함. 주로 SSL, TLS등의 프로토콜로 암호화된 것을 터널링 시키기 위해서 사용.</li>
-</ul>
-
-<h2 id="http-상태-코드">HTTP 상태 코드</h2>
-
-<ul>
-  <li>1xx 정보</li>
-  <li>2xx 성공(Success)</li>
-  <li>3xx 리다이렉트(Redirection)</li>
-  <li>4xx 클라이언트 에러(Client Error)</li>
-  <li>5xx 서버 에러(Server Error)</li>
-</ul>
-
-<h2 id="웹의-여러-애플리케이션">웹의 여러 애플리케이션</h2>
-
-<h3 id="프록시--클라이언트와-서버사이에-위치한-http-중개자">프록시 : 클라이언트와 서버사이에 위치한 HTTP 중개자</h3>
-
-<p>서버와 클라이언트 사이에서 중계 프로그램. <strong>웹 보안, 어플리케이션 통합, 성능 최적화에 쓰임.</strong><br />
-모든 웹 트래픽 흐름속에서 신뢰할 만한 중개자 역할을 한다.<br />
-요청과 응답을 필터링한다.<br />
-무언가를 다운받을 때 애플리케이션 바이러스를 검출하거나, 초등학교 학생들에게서 성인 콘텐츠를 차단한다.
-<img src="/assets/images/network_proxy_server.jpeg" alt="프록시 서버" /></p>
-
-<p><br /></p>
-<h3 id="캐시--많이-찾는-웹페이지를-클라이언트-가까이에-보관하는-http-창고">캐시 : 많이 찾는 웹페이지를 클라이언트 가까이에 보관하는 HTTP 창고</h3>
-
-<p>프록시서버와 클라이언트 로컬디스크에 보관된 리소스 사본.<br />
-자주 찾는 것의 사본을 저장해두는 특별한 종류의 http프락시 서버다.<br />
-리소스를 가진 서버에 엑세스를 줄이는 것이 가능하기 때문에 통신량과 통신시간을 절약할 수 있다.<br />
-<img src="/assets/images/network_cache_server.png" alt="캐시 서버" /></p>
-
-<p><br /></p>
-<h3 id="게이트웨이--다른-애플리케이션과-연결된-특별한-웹서버">게이트웨이 : 다른 애플리케이션과 연결된 특별한 웹서버</h3>
-
-<p>다른 서버들의 중개자. 주로 HTTP 트래픽을 다른 프로토콜로 변환하기 위해 사용.<br />
-게이트웨이는 언제나 스스로가 리소스를 갖고있는 진짜 서버인 것처럼 요청을 다룸.<br />
-클라이언트는 자신이 게이트웨이와 통신하는 것을 알지못함.<br />
-예를들어 HTTP/FTP 게이트웨이는 GTP URI에 대한 HTTP요청을 받아들인 뒤, FTP 프로토콜을 이용해 문서를 가져옴. 받아온 문서는 HTTP메시지에 담겨 클라이언트에게 보냄.<br />
-<img src="/assets/images/network_gateway_server.jpg" alt="게이트웨이 서버" /></p>
-
-<p><br /></p>
-<h3 id="터널--단순히-http-통신을-전달하기만-하는-특별한-프락시">터널 : 단순히 HTTP 통신을 전달하기만 하는 특별한 프락시</h3>
-
-<h3 id="에이전트--자동화된-http-요청을-만드는-준지능적-웹클라이언트">에이전트 : 자동화된 HTTP 요청을 만드는 준지능적 웹클라이언트</h3>
-
 
 <br>
 <br>
@@ -1354,8 +964,8 @@ function solution(record) {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://seunghyum.github.io/network/Network/";  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = "/network/Network"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      this.page.url = "https://seunghyum.github.io/big%20o/Big-O/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/big%20o/Big-O"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');
