@@ -9,38 +9,38 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>SGIS-shpToGeojson - eveloper Dave</title>
-<meta name="description" content="SGIS에서 받은 지도데이터(.shp)를 geojson으로 변경하는 작업 내용">
+<!-- begin _includes/seo.html --><title>[CodingTest] 벽안에 고인 빗물의 양 - eveloper Dave</title>
+<meta name="description" content="문제주어지는 행렬 arr(ex - [3,0,1,3,0,5])값의 인자들을 벽이라고 했을때 비가와서 물이 고이는 부분의 양을 구하여라.">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="eveloper Dave">
-<meta property="og:title" content="SGIS-shpToGeojson">
-<meta property="og:url" content="https://seunghyum.github.io/dataprocessing/SGIS-shpToGeojson/">
+<meta property="og:title" content="[CodingTest] 벽안에 고인 빗물의 양">
+<meta property="og:url" content="https://seunghyum.github.io/codingtest/dailyprogramming/Daily-Programming/">
 
 
-  <meta property="og:description" content="SGIS에서 받은 지도데이터(.shp)를 geojson으로 변경하는 작업 내용">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2018-09-28T00:00:00+09:00">
+  <meta property="og:description" content="문제주어지는 행렬 arr(ex - [3,0,1,3,0,5])값의 인자들을 벽이라고 했을때 비가와서 물이 고이는 부분의 양을 구하여라.">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2019-04-26T00:00:00+09:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://seunghyum.github.io/dataprocessing/SGIS-shpToGeojson/">
+
+<link rel="canonical" href="https://seunghyum.github.io/codingtest/dailyprogramming/Daily-Programming/">
 
 
 
@@ -273,102 +273,103 @@
   <div class="archive">
     
       <br>
-      <h1 id="page-title" class="page__title">SGIS-shpToGeojson</h1>
+      <h1 id="page-title" class="page__title">[CodingTest] 벽안에 고인 빗물의 양</h1>
     
     <br>
-<h2 id="sgis에서-받은-지도데이터shp를-geojson으로-변경하는-작업-내용">SGIS에서 받은 지도데이터(.shp)를 geojson으로 변경하는 작업 내용</h2>
+<h2 id="문제">문제</h2>
+<p>주어지는 행렬 arr(ex - [3,0,1,3,0,5])값의 인자들을 벽이라고 했을때 비가와서 물이 고이는 부분의 양을 구하여라.</p>
 
-<p>2018년에 쓴 글을 재업로드하였습니다.</p>
+<p><img src="/assets/images/2019-04-26-explain.png" alt="설명" /></p>
 
-<h3 id="지도데이터-가공-과정">지도데이터 가공 과정</h3>
+<h2 id="내가-생각한-풀이">내가 생각한 풀이</h2>
+
 <ul>
-  <li>shapefile을 simplify를 진행.
+  <li>풀어본 시간 : 1시간</li>
+  <li>중간까지 밖에 못함. 접근방법이 복잡해져서 방향을 잘못잡음.
     <ul>
-      <li>
-        <p>우선 mapshaper라는 shp파일 에디팅 툴로 편집. <a href="http://mapshaper.org/">GUI온라인툴</a>도 있음. 본인은 node CUI로 진행.</p>
-
-        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>mapshaper <span class="nt">-i</span> 전환할 파일 <span class="se">\</span>
-            <span class="nv">encoding</span><span class="o">=</span>euc-kr  <span class="se">\</span>
-            <span class="nt">-simplify</span> weighted 0.5% <span class="se">\ </span>// 0.5%로 단순화
-            <span class="nt">-o</span> <span class="nv">format</span><span class="o">=</span>shapefile <span class="se">\</span>
-            바뀐 파일명.shp
-</code></pre></div>        </div>
-      </li>
-    </ul>
-  </li>
-  <li>shapefile(R) -&gt; geojson 전환
-    <ul>
-      <li><a href="https://www.npmjs.com/package/ogr2ogr">ogr2ogr npm 라이브러리</a>를 사용
-        <ul>
-          <li>커맨드 :
-            <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>ogr2ogr <span class="nt">-f</span> GeoJSON <span class="nt">-t_srs</span> crs:84 <span class="o">[</span>geo json파일명] <span class="o">[</span>shp파일명] 
-</code></pre></div>            </div>
-          </li>
-          <li>중요설명 : -t_srs crs:84 로 해줘야 제대로 projection이 됨(지도 투영법).</li>
-          <li>-&gt; 0.5%로 했더니 3~4MB인데 렌더링 시 느리다면 더 작게하는 것을 추천</li>
-          <li>-&gt; mapshaper로도 geojson을 만들 수 있지만 투영법 옵션이(-proj) 잘 안먹혀서 ogr2ogr, geo2topo를 적용함.</li>
-        </ul>
-      </li>
+      <li>위로 꺾은 선들을 찾아서 각 구간마다 물이 고일수있는 max값을 찾고</li>
+      <li>해당 구간에서 max - arr[i] 값들의 합을 구하려고 했음</li>
     </ul>
   </li>
 </ul>
 
-<p><strong>만일 geojson에서 한글이 깨져서 나오는 경우</strong></p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">upperPoints</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="nx">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]}</span> <span class="c1">// {index: value, ...}</span>
+    <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&gt;</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="k">if</span><span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="kc">undefined</span><span class="p">)</span> <span class="nx">upperPoints</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
+        <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span> <span class="nx">upperPoints</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
+    <span class="p">}</span>
+
+    <span class="kd">let</span> <span class="nx">filteredPoints</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="nx">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]},</span> <span class="c1">// {index: value, ...}</span>
+        <span class="nx">startPoint</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="nx">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+    <span class="k">for</span><span class="p">((</span><span class="nx">p</span><span class="p">,</span><span class="nx">i</span><span class="p">)</span> <span class="k">of</span> <span class="nx">upperPoints</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="o">&amp;&amp;</span> <span class="nx">startPoint</span> <span class="o">&gt;=</span> <span class="nx">upperPoints</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="nx">i</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">{</span>
+            <span class="nx">filteredPoints</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">upperPoints</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// 중단함.</span>
+<span class="p">}</span> 
+</code></pre></div></div>
+
+<h3 id="정답풀이법">정답풀이법</h3>
 <ul>
-  <li>한글인코딩 문제
-    <ul>
-      <li>shpfile의 인코딩 에러. QGIS를 설치(로컬에서 shpfile을 수정할 수 있음)</li>
-      <li>QGIS 상단네비게이션 바의 “속성 테이블” 열기를 클릭해보면 한글 깨지는 것을 확인가능.</li>
-      <li>링크 로 들어가서 지시대로 하면 shpfile 인코딩에러 수정…. 아… 내 삽질….</li>
-      <li>shpfile로 다운로드는 해당 레이어를 우클릭  후 다른이름으로 저장하기 누르면 됨. 이후 다시 mapshaper, ogr2ogr 하면 됨.</li>
-    </ul>
-  </li>
-  <li>projection(좌표계) 문제
-    <ul>
-      <li>막상 위의 한글문제를 해결해도 geojson파일을 열어보면 좌표계가 127.023168001711184, 37.578041688607954 의 형태가 아님.</li>
-      <li>
-        <p>이 문제는 한글 인코등 해결처럼 속성에서 좌표계를 스크롤 맨 밑의 사용자 정의 좌표계를</p>
-
-        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+proj<span class="o">=</span>tmerc +lat_0<span class="o">=</span>38 +lon_0<span class="o">=</span>127.5 +k<span class="o">=</span>0.9996 +x_0<span class="o">=</span>1000000 +y_0<span class="o">=</span>2000000 +ellps<span class="o">=</span>GRS80 +units<span class="o">=</span>m +no_defs 
-</code></pre></div>        </div>
-
-        <p>로 정의 해야함. 정의한 다음 다시 다른 이름을 다운로드 진행.</p>
-      </li>
-    </ul>
-  </li>
+  <li>왼쪽과 오른쪽을 각각 돌며 각 index마다의 물이 고일 수 있는 max값 찾음.</li>
+  <li>왼쪽 / 오른쪽에서 찾은 max값들 중 min 값으로 [min - 해당 index] 값을 구해서 total로 더함.</li>
 </ul>
 
-<p><strong>geojson -&gt; topojson으로 전환</strong></p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 시간복잡도 O(n) 공간복잡도 O(n)</span>
+<span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">left_maxes</span> <span class="o">=</span> <span class="p">[],</span> 
+        <span class="nx">right_maxes</span> <span class="o">=</span> <span class="p">[],</span>
+        <span class="nx">current_left_max</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> 
+        <span class="nx">current_right_max</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> 
+        <span class="nx">total</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="nx">i</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">current_left_max</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">current_left_max</span><span class="p">,</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+        <span class="nx">left_maxes</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">current_left_max</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="nx">i</span><span class="p">;</span> <span class="nx">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">current_right_max</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">current_right_max</span><span class="p">,</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+        <span class="nx">right_maxes</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">current_right_max</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="nx">i</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">total</span> <span class="o">+=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">(</span><span class="nx">left_maxes</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span> <span class="nx">right_maxes</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="o">-</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">total</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<h3 id="업그레이드된-정답풀이법">업그레이드된 정답풀이법</h3>
 <ul>
-  <li>npm topojson-client 설치</li>
-  <li>커맨드 : geo2topo [geo-json파일] &gt; [topo-json파일]</li>
-  <li>topojson 라이브러리는 현재 커맨드라인 툴이 사용불가. 반드시 topojson-client 설치 후 geo2topo로 할것. -Note also that topojson/topojson is no longer the command-line tools for manipulating TopoJSON — that’s all been put in the topojson/topojson-client repository.(출처)</li>
+  <li>공간 복잡도를 O(1)로 만들기위해 left_maxes, right_maxes를 없앰.</li>
 </ul>
 
-<p>-&gt; 0.5%로 했더니 3~4MB인데 렌더링 시 느리다면 더 작게하는 것을 추천</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 시간복잡도 O(n) 공간복잡도 O(1)</span>
+<span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="mi">0</span>
 
-<p>-&gt; mapshaper로도 topojson, geojson을 만들 수 있지만 투영법 옵션이(-proj) 잘 안먹혀서 ogr2ogr, geo2topo를 적용함.</p>
+    <span class="kd">let</span> <span class="nx">total</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nx">max_i</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(...</span><span class="nx">arr</span><span class="p">)),</span>
+        <span class="nx">left_max</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="nx">right_max</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
 
-<ul>
-  <li><strong>느낀점 및 팁</strong>
-    <ul>
-      <li>gis데이터 가공은 projection(투영법) 설정이 중요.</li>
-    </ul>
-  </li>
-  <li><strong>활용가능한 결과물</strong>
-    <ul>
-      <li>통계청 파일 및 GeoJson 가공 데이터 파일</li>
-      <li>이름_simple.shp : 0.5%로 simplify한 shapefile</li>
-      <li>이름_geo.json : 가공한 GeoJson 파일</li>
-      <li>index.html : 예제 코드 <a href="https://browsersync.io/">browser-sync</a> 같은 툴로 Application 형태로 띄워야 에러가 안남. 이유는 모르겠지만 포트로 안 띄우면 에러.</li>
-    </ul>
-  </li>
-  <li><strong>주의사항</strong>
-    <ul>
-      <li>geojson까지만 변경함. topojson까지는 변경하지 않음.</li>
-    </ul>
-  </li>
-</ul>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="nx">max_i</span> <span class="o">&gt;</span> <span class="nx">i</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">total</span> <span class="o">+=</span> <span class="nx">left_max</span> <span class="o">-</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+        <span class="nx">left_max</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">left_max</span><span class="p">,</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+    <span class="p">}</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="o">-</span><span class="mi">2</span><span class="p">;</span> <span class="nx">max_i</span><span class="o">&lt;</span><span class="nx">i</span><span class="p">;</span> <span class="nx">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">total</span> <span class="o">+=</span> <span class="nx">right_max</span> <span class="o">-</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+        <span class="nx">right_max</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">right_max</span><span class="p">,</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">total</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <br>
 <br>
@@ -505,7 +506,7 @@
 
 
 
-  최대 1 분 소요
+  1 분 소요
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">문제3
@@ -715,7 +716,7 @@ if a &lt; b &lt; c :
 
 
 
-  2 분 소요
+  4 분 소요
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">문제
@@ -805,7 +806,7 @@ list라는 행렬과 k라는 자연수가 주어짐. list의 두 값을 합하�
 
 
 
-  1 분 소요
+  2 분 소요
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">&lt;!– ## 설명
@@ -997,8 +998,8 @@ function solution(record) {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://seunghyum.github.io/dataprocessing/SGIS-shpToGeojson/";  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = "/dataprocessing/SGIS-shpToGeojson"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      this.page.url = "https://seunghyum.github.io/codingtest/dailyprogramming/Daily-Programming/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/codingtest/dailyprogramming/Daily-Programming"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');

@@ -10,7 +10,7 @@ author_profile: true
 - 단국대학교 2014/02 ~ 2020/02 졸업예정
 
 ### 경험
-- [Slowalk](https://www.slowalk.co.kr/) 개발자 근무 2016/06 ~ 2019/4 퇴사예정
+- [Slowalk](https://www.slowalk.co.kr/) 개발자 근무 2016/06 ~ 2019/4 퇴사
 
 ### 기술 스택
 - 언어 : Node.js, Ruby on Rails, R(데이터 가공 및 시각화 테스트)
@@ -21,8 +21,8 @@ author_profile: true
 
 ### 주요 프로젝트
 
-#### In Company
-## Slowalk 
+## In Company
+### Slowalk 
 
 | <center>Company</center> | <center>Project</center> | <center>Role</center> | <center>Detail</center> |
 |:--------:|:--------:|:--------|:--------|
@@ -33,7 +33,7 @@ author_profile: true
 | 언론재단 | 뉴스트러스트 프로젝트 3차년도 서브 페이지 | [Full Stack](#){: .btn .btn--danger} | 간단한 CRUD기능의 홈페이지 개발 |
 | 서울대학교<br>산학협력단 | 미세먼지 대기건강지수 웹 페이지 | [Full Stack](#){: .btn .btn--danger} | 전체 담당. 지도 위주의  데이터 시각화 |
 | 국립암센터 | 암발생 지리정보 웹 페이지 | [Full Stack](#){: .btn .btn--danger} | 전체 담당. 지도 + 차트를 통한 데이터 시각화, 클라이언트의 IDC의 서버 세팅 규정에 따라 서버 세팅 |
-    
+
 ### 개인프로젝트 
 
 - [수원 국립도서관 도서목록 크롤링](https://github.com/Seunghyum/Crawler-Suwon_library)
@@ -61,3 +61,4 @@ author_profile: true
 
 ### 외부 활동
 - 멋쟁이 사자처럼 4기 중앙운영진
+
