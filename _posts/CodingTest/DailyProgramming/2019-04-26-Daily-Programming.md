@@ -6,9 +6,12 @@ tags: [Javascript, BinarySearch, Set]
 comments: true
 ---
 ## 문제
+
 주어지는 행렬 arr(ex - [3,0,1,3,0,5])값의 인자들을 벽이라고 했을때 비가와서 물이 고이는 부분의 양을 구하여라.
 
-![설명](/assets/images/2019-04-26-explain.png)
+<img src="/assets/images/2019-04-26-explain.png" style="max-width: 350px;" />
+
+답 : 8
 
 ## 내가 생각한 풀이
 
@@ -38,8 +41,10 @@ function solution(arr) {
 ```
 
 ### 정답풀이법 
-- 왼쪽과 오른쪽을 각각 돌며 각 index마다의 물이 고일 수 있는 max값 찾음.
-- 왼쪽 / 오른쪽에서 찾은 max값들 중 min 값으로 [min - 해당 index] 값을 구해서 total로 더함.
+
+- 아이디어
+  - 왼쪽과 오른쪽을 각각 돌며 각 index마다의 물이 고일 수 있는 max값 찾음.
+  - 왼쪽 / 오른쪽에서 찾은 max값들 중 min 값으로 [min - 해당 index] 값을 구해서 total로 더함.
 
 ```javascript
 // 시간복잡도 O(n) 공간복잡도 O(n)
@@ -65,11 +70,20 @@ function solution(arr) {
     }
     return total;
 }
-
 ```
 
 ### 업그레이드된 정답풀이법 
-- 공간 복잡도를 O(1)로 만들기위해 left_maxes, right_maxes를 없앰.
+
+- 목적
+  - 공간 복잡도를 O(1)로 만들기위해 left_maxes, right_maxes를 없앰.
+- 아이디어
+  - 가장 큰 수를 기점으로 오른쪽 / 왼쪽 나눔.
+
+- 단점
+  - 울퉁불퉁한 모양이면 답이 제대로 나오지만 계단형태의 그래프일 경우 답이 이상하게 나옴.
+  - arr = [1,2,3,4,5] 또는 [5,4,3,2,1]의 경우 답이 -3 나옴.
+  - arr = [5,2,6,1,8,9,9,7] 에 해당하는 답안이 이상함.
+  - arr = [3,0,1,3,0,5] 에만 잘 되는 답임.
 
 ```javascript
 // 시간복잡도 O(n) 공간복잡도 O(1)
@@ -90,6 +104,7 @@ function solution(arr) {
         total += right_max - arr[i];
         right_max = Math.max(right_max, arr[i]);
     }
+
     return total;
 }
 ```

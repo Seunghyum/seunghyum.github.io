@@ -75,7 +75,7 @@ var store = [{
         "url": "https://seunghyum.github.io/data%20type/Tree/",
         "teaser":null},{
         "title": "[CodingTest] 벽안에 고인 빗물의 양",
-        "excerpt":"문제 주어지는 행렬 arr(ex - [3,0,1,3,0,5])값의 인자들을 벽이라고 했을때 비가와서 물이 고이는 부분의 양을 구하여라. 내가 생각한 풀이 풀어본 시간 : 1시간 중간까지 밖에 못함. 접근방법이 복잡해져서 방향을 잘못잡음. 위로 꺾은 선들을 찾아서 각 구간마다 물이 고일수있는 max값을 찾고 해당 구간에서 max - arr[i] 값들의 합을 구하려고 했음 function solution(arr)...","categories": ["CodingTest","DailyProgramming"],
+        "excerpt":"문제 주어지는 행렬 arr(ex - [3,0,1,3,0,5])값의 인자들을 벽이라고 했을때 비가와서 물이 고이는 부분의 양을 구하여라. 답 : 8 내가 생각한 풀이 풀어본 시간 : 1시간 중간까지 밖에 못함. 접근방법이 복잡해져서 방향을 잘못잡음. 위로 꺾은 선들을 찾아서 각 구간마다 물이 고일수있는 max값을 찾고 해당 구간에서 max - arr[i] 값들의 합을 구하려고...","categories": ["CodingTest","DailyProgramming"],
         "tags": ["Javascript","BinarySearch","Set"],
         "url": "https://seunghyum.github.io/codingtest/dailyprogramming/Daily-Programming/",
         "teaser":null}]

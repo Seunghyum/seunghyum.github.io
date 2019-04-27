@@ -23,10 +23,10 @@ function solution(N) {
 ```
 ### 풀이해석
 - 예시  
-![풀이해석1](/assets/images/Naver-Hackday-solve-1_1.png)
+<img src="/assets/images/Naver-Hackday-solve-1_1.png" style="max-width: 400px;" />
 
 - 생각했던 과정  
-![풀이해석1](/assets/images/Naver-Hackday-solve-1_2.png)
+<img src="/assets/images/Naver-Hackday-solve-1_2.png" style="max-width: 300px;" />
 
 ### 부족했던 점
 ```javascript

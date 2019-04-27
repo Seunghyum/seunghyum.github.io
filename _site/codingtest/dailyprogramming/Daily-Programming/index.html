@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>[CodingTest] 벽안에 고인 빗물의 양 - eveloper Dave</title>
-<meta name="description" content="문제주어지는 행렬 arr(ex - [3,0,1,3,0,5])값의 인자들을 벽이라고 했을때 비가와서 물이 고이는 부분의 양을 구하여라.">
+<meta name="description" content="문제">
 
 
 
@@ -21,7 +21,7 @@
 <meta property="og:url" content="https://seunghyum.github.io/codingtest/dailyprogramming/Daily-Programming/">
 
 
-  <meta property="og:description" content="문제주어지는 행렬 arr(ex - [3,0,1,3,0,5])값의 인자들을 벽이라고 했을때 비가와서 물이 고이는 부분의 양을 구하여라.">
+  <meta property="og:description" content="문제">
 
 
 
@@ -277,9 +277,12 @@
     
     <br>
 <h2 id="문제">문제</h2>
+
 <p>주어지는 행렬 arr(ex - [3,0,1,3,0,5])값의 인자들을 벽이라고 했을때 비가와서 물이 고이는 부분의 양을 구하여라.</p>
 
-<p><img src="/assets/images/2019-04-26-explain.png" alt="설명" /></p>
+<p><img src="/assets/images/2019-04-26-explain.png" style="max-width: 350px;" /></p>
+
+<p>답 : 8</p>
 
 <h2 id="내가-생각한-풀이">내가 생각한 풀이</h2>
 
@@ -313,9 +316,14 @@
 </code></pre></div></div>
 
 <h3 id="정답풀이법">정답풀이법</h3>
+
 <ul>
-  <li>왼쪽과 오른쪽을 각각 돌며 각 index마다의 물이 고일 수 있는 max값 찾음.</li>
-  <li>왼쪽 / 오른쪽에서 찾은 max값들 중 min 값으로 [min - 해당 index] 값을 구해서 total로 더함.</li>
+  <li>아이디어
+    <ul>
+      <li>왼쪽과 오른쪽을 각각 돌며 각 index마다의 물이 고일 수 있는 max값 찾음.</li>
+      <li>왼쪽 / 오른쪽에서 찾은 max값들 중 min 값으로 [min - 해당 index] 값을 구해서 total로 더함.</li>
+    </ul>
+  </li>
 </ul>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 시간복잡도 O(n) 공간복잡도 O(n)</span>
@@ -341,12 +349,29 @@
     <span class="p">}</span>
     <span class="k">return</span> <span class="nx">total</span><span class="p">;</span>
 <span class="p">}</span>
-
 </code></pre></div></div>
 
 <h3 id="업그레이드된-정답풀이법">업그레이드된 정답풀이법</h3>
+
 <ul>
-  <li>공간 복잡도를 O(1)로 만들기위해 left_maxes, right_maxes를 없앰.</li>
+  <li>목적
+    <ul>
+      <li>공간 복잡도를 O(1)로 만들기위해 left_maxes, right_maxes를 없앰.</li>
+    </ul>
+  </li>
+  <li>아이디어
+    <ul>
+      <li>가장 큰 수를 기점으로 오른쪽 / 왼쪽 나눔.</li>
+    </ul>
+  </li>
+  <li>단점
+    <ul>
+      <li>울퉁불퉁한 모양이면 답이 제대로 나오지만 계단형태의 그래프일 경우 답이 이상하게 나옴.</li>
+      <li>arr = [1,2,3,4,5] 또는 [5,4,3,2,1]의 경우 답이 -3 나옴.</li>
+      <li>arr = [5,2,6,1,8,9,9,7] 에 해당하는 답안이 이상함.</li>
+      <li>arr = [3,0,1,3,0,5] 에만 잘 되는 답임.</li>
+    </ul>
+  </li>
 </ul>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 시간복잡도 O(n) 공간복잡도 O(1)</span>
@@ -367,6 +392,7 @@
         <span class="nx">total</span> <span class="o">+=</span> <span class="nx">right_max</span> <span class="o">-</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
         <span class="nx">right_max</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">right_max</span><span class="p">,</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
     <span class="p">}</span>
+
     <span class="k">return</span> <span class="nx">total</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></div>
@@ -421,7 +447,6 @@
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">문제
-주어지는 행렬 arr(ex - [3,0,1,3,0,5])값의 인자들을 벽이라고 했을때 비가와서 물이 고이는 부분의 양을 구하여라.
 
 </p>
   </article>
