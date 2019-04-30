@@ -1,6 +1,6 @@
 ---
 layout: posts
-title:  "[Algorithm] 유클리드 호제법 - 최대공약수 구하기"
+title:  "[Algorithm] 유클리드 호제법(최대공약수 구하기) 공부"
 categories: [Algorithm]
 tags: [Algorithm]
 comments: true
@@ -128,9 +128,11 @@ def gcd(m,n):
 ```
 
 ### 자바스크립트코드
-- [프리코드캠프 참고](https://guide.freecodecamp.org/algorithms/greatest-common-divisor-euclidean/)
+
+- [freeCodeCamp 참고](https://guide.freecodecamp.org/algorithms/greatest-common-divisor-euclidean/)
 
 #### Javascript Code to Perform GCD
+
 ```javascript
 function gcd(a, b) { // 단, a가 b보다 커야함.
   var R;
@@ -143,7 +145,7 @@ function gcd(a, b) { // 단, a가 b보다 커야함.
 }
 ```
 
-#### Javascript Code to Perform GCD using Recursion-
+#### Javascript Code to Perform GCD using Recursion
 
 ```javascript
 function gcd(a, b) { // 단, a가 b보다 커야함.

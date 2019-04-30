@@ -60,12 +60,12 @@ var store = [{
         "url": "https://seunghyum.github.io/codingtest/kakao/Kakao-failure-rate/",
         "teaser":null},{
         "title": "[CodingTest] 2019 네이버 핵데이 코드테스트 문제3 with Javascript",
-        "excerpt":"문제3 문제 받으면 작성할 예정. 내가 작성한 답변 - 아래로 꺾인선만 구하기 function solution(N) { let maxUnderCurvedPoint = N[0]; for(let i=0;i&lt;=N.length;i++) { if(N[i]&gt;N[i+1] &amp;&amp; maxUnderCurvedPoint &gt; N[i]) maxUnderCurvedPoint = N[i]; } for(let i=N.length-1;i&gt;=0;i--) { if (maxUnderCurvedPoint &lt; N[i]) return i-1 } } 풀이해석 예시 생각했던 과정 부족했던 점 N =...","categories": ["CodingTest","Naver"],
+        "excerpt":"문제3 문제를 알려줄 수 없다는 답변 받음. github에서 네이버 핵데이 검색하면 나옴. 내가 작성한 답변 - 아래로 꺾인선만 구하기 function solution(N) { let maxUnderCurvedPoint = N[0]; for(let i=0;i&lt;=N.length;i++) { if(N[i]&gt;N[i+1] &amp;&amp; maxUnderCurvedPoint &gt; N[i]) maxUnderCurvedPoint = N[i]; } for(let i=N.length-1;i&gt;=0;i--) { if (maxUnderCurvedPoint &lt; N[i]) return i-1 } } 풀이해석...","categories": ["CodingTest","Naver"],
         "tags": ["Javascript"],
         "url": "https://seunghyum.github.io/codingtest/naver/Naver-Hackday-Test-3/",
         "teaser":null},{
         "title": "[CodingTest] 2019 네이버 핵데이 코드테스트 문제1 with Javascript",
-        "excerpt":"문제1 문제 받으면 작성할 예정. 내가 작성한 답변 function solution(A) { const oppositeGroupA = new Set([1,6]), oppositeGroupB = new Set([2,5]), oppositeGroupC = new Set([3,4]); let stats = {}, maxEl = A[0], maxCount = 1, answer = 0; // 가장 많이 중복되는 el을 기준. // return = 기준 숫자의 반대편 숫자의...","categories": ["CodingTest","Naver"],
+        "excerpt":"문제1 문제를 알려줄 수 없다는 답변 받음. github에서 네이버 핵데이 검색하면 나옴. 내가 작성한 답변 function solution(A) { const oppositeGroupA = new Set([1,6]), oppositeGroupB = new Set([2,5]), oppositeGroupC = new Set([3,4]); let stats = {}, maxEl = A[0], maxCount = 1, answer = 0; // 가장 많이 중복되는 el을 기준....","categories": ["CodingTest","Naver"],
         "tags": ["Javascript"],
         "url": "https://seunghyum.github.io/codingtest/naver/Naver-Hackday-Test-1/",
         "teaser":null},{
@@ -79,7 +79,7 @@ var store = [{
         "tags": ["Javascript","BinarySearch","Set"],
         "url": "https://seunghyum.github.io/codingtest/dailyprogramming/Daily-Programming/",
         "teaser":null},{
-        "title": "[Algorithm] 유클리드 호제법 - 최대공약수 구하기",
+        "title": "[Algorithm] 유클리드 호제법(최대공약수 구하기) 공부",
         "excerpt":"정의 유클리드 호제법(- 互除法, Euclidean Algorithm)은 2개의 자연수 또는 정식(整式)의 최대공약수(Greatest Common Divisor)를 구하는 알고리즘의 하나이다. 호제법이란 말은 두 수가 서로(互) 상대방 수를 나누어(除)서 결국 원하는 수를 얻는 알고리즘을 나타낸다. 2개의 자연수(또는 정식) a, b에 대해서 a를 b로 나눈 나머지를 r이라 하면(단, a&gt;b), a와 b의 최대공약수는 b와 r의 최대공약수와 같다....","categories": ["Algorithm"],
         "tags": ["Algorithm"],
         "url": "https://seunghyum.github.io/algorithm/Euclidean-algorithm/",

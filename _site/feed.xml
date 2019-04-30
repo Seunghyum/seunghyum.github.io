@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://seunghyum.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://seunghyum.github.io/" rel="alternate" type="text/html" /><updated>2019-05-01T00:32:07+09:00</updated><id>https://seunghyum.github.io/feed.xml</id><title type="html">eveloper Dave</title><subtitle>JS, 데이터 시각화에 
-관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">[Algorithm] 유클리드 호제법 - 최대공약수 구하기</title><link href="https://seunghyum.github.io/algorithm/Euclidean-algorithm/" rel="alternate" type="text/html" title="[Algorithm] 유클리드 호제법 - 최대공약수 구하기" /><published>2019-04-30T00:00:00+09:00</published><updated>2019-04-30T00:00:00+09:00</updated><id>https://seunghyum.github.io/algorithm/Euclidean%20algorithm</id><content type="html" xml:base="https://seunghyum.github.io/algorithm/Euclidean-algorithm/">&lt;h2 id=&quot;정의&quot;&gt;정의&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://seunghyum.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://seunghyum.github.io/" rel="alternate" type="text/html" /><updated>2019-05-01T02:08:55+09:00</updated><id>https://seunghyum.github.io/feed.xml</id><title type="html">eveloper Dave</title><subtitle>JS, 데이터 시각화에 
+관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">[Algorithm] 유클리드 호제법(최대공약수 구하기) 공부</title><link href="https://seunghyum.github.io/algorithm/Euclidean-algorithm/" rel="alternate" type="text/html" title="[Algorithm] 유클리드 호제법(최대공약수 구하기) 공부" /><published>2019-04-30T00:00:00+09:00</published><updated>2019-04-30T00:00:00+09:00</updated><id>https://seunghyum.github.io/algorithm/Euclidean%20algorithm</id><content type="html" xml:base="https://seunghyum.github.io/algorithm/Euclidean-algorithm/">&lt;h2 id=&quot;정의&quot;&gt;정의&lt;/h2&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;유클리드 호제법(- 互除法, Euclidean Algorithm)은 2개의 자연수 또는 정식(整式)의 &lt;strong&gt;최대공약수(Greatest Common Divisor)&lt;/strong&gt;를 구하는 알고리즘의 하나이다.&lt;/p&gt;
@@ -140,11 +140,13 @@ GCD(270,192) = GCD(192,78) = GCD(78,36) = GCD(36,6) = GCD(6,0) = 6 &lt;br /&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;자바스크립트코드&quot;&gt;자바스크립트코드&lt;/h3&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://guide.freecodecamp.org/algorithms/greatest-common-divisor-euclidean/&quot;&gt;프리코드캠프 참고&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://guide.freecodecamp.org/algorithms/greatest-common-divisor-euclidean/&quot;&gt;freeCodeCamp 참고&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;javascript-code-to-perform-gcd&quot;&gt;Javascript Code to Perform GCD&lt;/h4&gt;
+
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gcd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 단, a가 b보다 커야함.&lt;/span&gt;
   &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -156,7 +158,7 @@ GCD(270,192) = GCD(192,78) = GCD(78,36) = GCD(36,6) = GCD(6,0) = 6 &lt;br /&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;javascript-code-to-perform-gcd-using-recursion-&quot;&gt;Javascript Code to Perform GCD using Recursion-&lt;/h4&gt;
+&lt;h4 id=&quot;javascript-code-to-perform-gcd-using-recursion&quot;&gt;Javascript Code to Perform GCD using Recursion&lt;/h4&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gcd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 단, a가 b보다 커야함.&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -293,7 +295,7 @@ GCD(270,192) = GCD(192,78) = GCD(78,36) = GCD(36,6) = GCD(6,0) = 6 &lt;br /&gt;
 &lt;p&gt;&lt;img src=&quot;/assets/images/tree-basic-structure.png&quot; alt=&quot;트리 기본구조&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;이진탐색트리&quot;&gt;이진탐색트리&lt;/h2&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Data Type" /><summary type="html">그래프</summary></entry><entry><title type="html">[CodingTest] 2019 네이버 핵데이 코드테스트 문제1 with Javascript</title><link href="https://seunghyum.github.io/codingtest/naver/Naver-Hackday-Test-1/" rel="alternate" type="text/html" title="[CodingTest] 2019 네이버 핵데이 코드테스트 문제1 with Javascript" /><published>2019-04-15T00:00:00+09:00</published><updated>2019-04-15T00:00:00+09:00</updated><id>https://seunghyum.github.io/codingtest/naver/Naver-Hackday-Test-1</id><content type="html" xml:base="https://seunghyum.github.io/codingtest/naver/Naver-Hackday-Test-1/">&lt;h2 id=&quot;문제1&quot;&gt;문제1&lt;/h2&gt;
-&lt;p&gt;문제 받으면 작성할 예정.&lt;/p&gt;
+&lt;p&gt;문제를 알려줄 수 없다는 답변 받음. &lt;strong&gt;github에서 네이버 핵데이&lt;/strong&gt; 검색하면 나옴.&lt;/p&gt;
 
 &lt;h2 id=&quot;내가-작성한-답변&quot;&gt;내가 작성한 답변&lt;/h2&gt;
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -363,8 +365,8 @@ GCD(270,192) = GCD(192,78) = GCD(78,36) = GCD(36,6) = GCD(6,0) = 6 &lt;br /&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;ul&gt;
   &lt;li&gt;괜히 쓸데없이 oppositeGroupA 같은 형식으로 구하려고했다. 단순하게 &lt;strong&gt;&lt;em&gt;maxEl + NumberS === 7&lt;/em&gt;&lt;/strong&gt; 으로 했으면 더 좋았을텐데…&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><summary type="html">문제1 문제 받으면 작성할 예정.</summary></entry><entry><title type="html">[CodingTest] 2019 네이버 핵데이 코드테스트 문제3 with Javascript</title><link href="https://seunghyum.github.io/codingtest/naver/Naver-Hackday-Test-3/" rel="alternate" type="text/html" title="[CodingTest] 2019 네이버 핵데이 코드테스트 문제3 with Javascript" /><published>2019-04-14T00:00:00+09:00</published><updated>2019-04-14T00:00:00+09:00</updated><id>https://seunghyum.github.io/codingtest/naver/Naver-Hackday-Test-3</id><content type="html" xml:base="https://seunghyum.github.io/codingtest/naver/Naver-Hackday-Test-3/">&lt;h2 id=&quot;문제3&quot;&gt;문제3&lt;/h2&gt;
-&lt;p&gt;문제 받으면 작성할 예정.&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><summary type="html">문제1 문제를 알려줄 수 없다는 답변 받음. github에서 네이버 핵데이 검색하면 나옴.</summary></entry><entry><title type="html">[CodingTest] 2019 네이버 핵데이 코드테스트 문제3 with Javascript</title><link href="https://seunghyum.github.io/codingtest/naver/Naver-Hackday-Test-3/" rel="alternate" type="text/html" title="[CodingTest] 2019 네이버 핵데이 코드테스트 문제3 with Javascript" /><published>2019-04-14T00:00:00+09:00</published><updated>2019-04-14T00:00:00+09:00</updated><id>https://seunghyum.github.io/codingtest/naver/Naver-Hackday-Test-3</id><content type="html" xml:base="https://seunghyum.github.io/codingtest/naver/Naver-Hackday-Test-3/">&lt;h2 id=&quot;문제3&quot;&gt;문제3&lt;/h2&gt;
+&lt;p&gt;문제를 알려줄 수 없다는 답변 받음. &lt;strong&gt;github에서 네이버 핵데이&lt;/strong&gt; 검색하면 나옴.&lt;/p&gt;
 
 &lt;h2 id=&quot;내가-작성한-답변---아래로-꺾인선만-구하기&quot;&gt;내가 작성한 답변 - 아래로 꺾인선만 구하기&lt;/h2&gt;
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -427,7 +429,7 @@ GCD(270,192) = GCD(192,78) = GCD(78,36) = GCD(36,6) = GCD(6,0) = 6 &lt;br /&gt;
 
 &lt;h2 id=&quot;느낀점&quot;&gt;느낀점&lt;/h2&gt;
 &lt;p&gt;답에 대한 테스트케이스를 여러개 생각해서 검토하지 않아서 오류를 놓침. 
-여러가지 테스트케이스를 해보고 오류점검하는 버릇이 좀 더 들어야함.&lt;/p&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><summary type="html">문제3 문제 받으면 작성할 예정.</summary></entry><entry><title type="html">[CodingTest] 2019 카카오 신입 공채 1차 - 2번 실패율 문제 with Javascript</title><link href="https://seunghyum.github.io/codingtest/kakao/Kakao-failure-rate/" rel="alternate" type="text/html" title="[CodingTest] 2019 카카오 신입 공채 1차 - 2번 실패율 문제 with Javascript" /><published>2019-04-10T00:00:00+09:00</published><updated>2019-04-10T00:00:00+09:00</updated><id>https://seunghyum.github.io/codingtest/kakao/Kakao-failure-rate</id><content type="html" xml:base="https://seunghyum.github.io/codingtest/kakao/Kakao-failure-rate/">&lt;h2 id=&quot;오픈채팅방&quot;&gt;오픈채팅방&lt;/h2&gt;
+여러가지 테스트케이스를 해보고 오류점검하는 버릇이 좀 더 들어야함.&lt;/p&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><summary type="html">문제3 문제를 알려줄 수 없다는 답변 받음. github에서 네이버 핵데이 검색하면 나옴.</summary></entry><entry><title type="html">[CodingTest] 2019 카카오 신입 공채 1차 - 2번 실패율 문제 with Javascript</title><link href="https://seunghyum.github.io/codingtest/kakao/Kakao-failure-rate/" rel="alternate" type="text/html" title="[CodingTest] 2019 카카오 신입 공채 1차 - 2번 실패율 문제 with Javascript" /><published>2019-04-10T00:00:00+09:00</published><updated>2019-04-10T00:00:00+09:00</updated><id>https://seunghyum.github.io/codingtest/kakao/Kakao-failure-rate</id><content type="html" xml:base="https://seunghyum.github.io/codingtest/kakao/Kakao-failure-rate/">&lt;h2 id=&quot;오픈채팅방&quot;&gt;오픈채팅방&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.welcomekakao.com/learn/courses/30/lessons/42889&quot;&gt;문제 바로가기 링크&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://tech.kakao.com/2018/09/21/kakao-blind-recruitment-for2019-round-1/&quot;&gt;카카오의 설명 블로그&lt;/a&gt;
