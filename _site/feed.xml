@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://seunghyum.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://seunghyum.github.io/" rel="alternate" type="text/html" /><updated>2019-05-01T00:12:06+09:00</updated><id>https://seunghyum.github.io/feed.xml</id><title type="html">eveloper Dave</title><subtitle>JS, 데이터 시각화에 
-관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">[Algorithm] 유클리드 호제법 - 최대공약수 구하기</title><link href="https://seunghyum.github.io/algorithm/Euclidean-algorithm/" rel="alternate" type="text/html" title="[Algorithm] 유클리드 호제법 - 최대공약수 구하기" /><published>2019-04-30T00:00:00+09:00</published><updated>2019-04-30T00:00:00+09:00</updated><id>https://seunghyum.github.io/algorithm/Euclidean%20algorithm</id><content type="html" xml:base="https://seunghyum.github.io/algorithm/Euclidean-algorithm/">&lt;p&gt;유클리드 호제법&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://seunghyum.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://seunghyum.github.io/" rel="alternate" type="text/html" /><updated>2019-05-01T00:32:07+09:00</updated><id>https://seunghyum.github.io/feed.xml</id><title type="html">eveloper Dave</title><subtitle>JS, 데이터 시각화에 
+관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">[Algorithm] 유클리드 호제법 - 최대공약수 구하기</title><link href="https://seunghyum.github.io/algorithm/Euclidean-algorithm/" rel="alternate" type="text/html" title="[Algorithm] 유클리드 호제법 - 최대공약수 구하기" /><published>2019-04-30T00:00:00+09:00</published><updated>2019-04-30T00:00:00+09:00</updated><id>https://seunghyum.github.io/algorithm/Euclidean%20algorithm</id><content type="html" xml:base="https://seunghyum.github.io/algorithm/Euclidean-algorithm/">&lt;h2 id=&quot;정의&quot;&gt;정의&lt;/h2&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;유클리드 호제법(- 互除法, Euclidean Algorithm)은 2개의 자연수 또는 정식(整式)의 &lt;strong&gt;최대공약수(Greatest Common Divisor)&lt;/strong&gt;를 구하는 알고리즘의 하나이다.&lt;/p&gt;
@@ -18,8 +18,16 @@
 &lt;br /&gt;&lt;/p&gt;
 &lt;hr /&gt;
 
-&lt;h2 id=&quot;예시-설명---gcd270192&quot;&gt;예시 설명 - GCD(270,192)&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/the-euclidean-algorithm&quot;&gt;칸아카데미 참고&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;설명&quot;&gt;설명&lt;/h2&gt;
+
+&lt;h3 id=&quot;글설명&quot;&gt;글설명&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/the-euclidean-algorithm&quot;&gt;칸아카데미 참고&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;270과 192의 최대공약수 - &lt;strong&gt;&lt;em&gt;GCD(270,192)&lt;/em&gt;&lt;/strong&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;ol&gt;
   &lt;li&gt;&lt;strong&gt;GCD(270,192)&lt;/strong&gt; - 270과 192의 최대공약수 찾기
@@ -76,7 +84,20 @@ GCD(270,192) = GCD(192,78) = GCD(78,36) = GCD(36,6) = GCD(6,0) = 6 &lt;br /&gt;
 &lt;strong&gt;&lt;em&gt;GCD(270,192) = 6&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&quot;파이썬-코드&quot;&gt;파이썬 코드&lt;/h2&gt;
+&lt;h2 id=&quot;그림설명&quot;&gt;그림설명&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;106와 16의 최대공약수 구하기 - &lt;strong&gt;&lt;em&gt;GCD(106,16)&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/algorithm/GCD-ex.png&quot; alt=&quot;GCD-ex2&quot; /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;관련-코드&quot;&gt;관련 코드&lt;/h2&gt;
+
+&lt;h3 id=&quot;파이썬-코드&quot;&gt;파이썬 코드&lt;/h3&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# 방법1
 &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;gcd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# gcd == &quot;Greatest Common Divisor&quot;
@@ -109,7 +130,7 @@ GCD(270,192) = GCD(192,78) = GCD(78,36) = GCD(36,6) = GCD(6,0) = 6 &lt;br /&gt;
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;자바코드&quot;&gt;자바코드&lt;/h2&gt;
+&lt;h3 id=&quot;자바코드&quot;&gt;자바코드&lt;/h3&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;gcd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
  &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
@@ -118,10 +139,12 @@ GCD(270,192) = GCD(192,78) = GCD(78,36) = GCD(36,6) = GCD(6,0) = 6 &lt;br /&gt;
  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;자바스크립트코드&quot;&gt;자바스크립트코드&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://guide.freecodecamp.org/algorithms/greatest-common-divisor-euclidean/&quot;&gt;프리코드캠프 참고&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;자바스크립트코드&quot;&gt;자바스크립트코드&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://guide.freecodecamp.org/algorithms/greatest-common-divisor-euclidean/&quot;&gt;프리코드캠프 참고&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h3 id=&quot;javascript-code-to-perform-gcd&quot;&gt;Javascript Code to Perform GCD&lt;/h3&gt;
+&lt;h4 id=&quot;javascript-code-to-perform-gcd&quot;&gt;Javascript Code to Perform GCD&lt;/h4&gt;
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gcd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 단, a가 b보다 커야함.&lt;/span&gt;
   &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -133,7 +156,7 @@ GCD(270,192) = GCD(192,78) = GCD(78,36) = GCD(36,6) = GCD(6,0) = 6 &lt;br /&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;javascript-code-to-perform-gcd-using-recursion-&quot;&gt;Javascript Code to Perform GCD using Recursion-&lt;/h3&gt;
+&lt;h4 id=&quot;javascript-code-to-perform-gcd-using-recursion-&quot;&gt;Javascript Code to Perform GCD using Recursion-&lt;/h4&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gcd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 단, a가 b보다 커야함.&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -141,7 +164,7 @@ GCD(270,192) = GCD(192,78) = GCD(78,36) = GCD(36,6) = GCD(6,0) = 6 &lt;br /&gt;
   &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gcd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Algorithm" /><summary type="html">유클리드 호제법</summary></entry><entry><title type="html">[CodingTest] 벽안에 고인 빗물의 양</title><link href="https://seunghyum.github.io/codingtest/dailyprogramming/Daily-Programming/" rel="alternate" type="text/html" title="[CodingTest] 벽안에 고인 빗물의 양" /><published>2019-04-26T00:00:00+09:00</published><updated>2019-04-26T00:00:00+09:00</updated><id>https://seunghyum.github.io/codingtest/dailyprogramming/Daily-Programming</id><content type="html" xml:base="https://seunghyum.github.io/codingtest/dailyprogramming/Daily-Programming/">&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Algorithm" /><summary type="html">정의</summary></entry><entry><title type="html">[CodingTest] 벽안에 고인 빗물의 양</title><link href="https://seunghyum.github.io/codingtest/dailyprogramming/Daily-Programming/" rel="alternate" type="text/html" title="[CodingTest] 벽안에 고인 빗물의 양" /><published>2019-04-26T00:00:00+09:00</published><updated>2019-04-26T00:00:00+09:00</updated><id>https://seunghyum.github.io/codingtest/dailyprogramming/Daily-Programming</id><content type="html" xml:base="https://seunghyum.github.io/codingtest/dailyprogramming/Daily-Programming/">&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
 
 &lt;p&gt;주어지는 행렬 arr(ex - [3,0,1,3,0,5])값의 인자들을 벽이라고 했을때 비가와서 물이 고이는 부분의 양을 구하여라.&lt;/p&gt;
 

@@ -6,7 +6,7 @@ tags: [Algorithm]
 comments: true
 ---
 
-유클리드 호제법
+## 정의
 
 > 유클리드 호제법(- 互除法, Euclidean Algorithm)은 2개의 자연수 또는 정식(整式)의 **최대공약수(Greatest Common Divisor)**를 구하는 알고리즘의 하나이다. 
 > 
@@ -23,8 +23,14 @@ comments: true
 <br>
 <hr>
 
-## 예시 설명 - GCD(270,192)
-[칸아카데미 참고](https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/the-euclidean-algorithm)
+## 설명
+
+### 글설명
+
+- [칸아카데미 참고](https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/the-euclidean-algorithm)
+- 270과 192의 최대공약수 - ***GCD(270,192)***
+<br>
+<br>
 
 1. **GCD(270,192)** - 270과 192의 최대공약수 찾기
    - A=270, B=192
@@ -66,7 +72,18 @@ comments: true
 > GCD(270,192) = GCD(192,78) = GCD(78,36) = GCD(36,6) = GCD(6,0) = 6 <br>
 > ***GCD(270,192) = 6***
 
-## 파이썬 코드
+## 그림설명
+
+- 106와 16의 최대공약수 구하기 - ***GCD(106,16)***
+
+![GCD-ex2](/assets/images/posts/algorithm/GCD-ex.png)
+<br>
+<br>
+<hr>
+
+## 관련 코드
+
+### 파이썬 코드
 
 ```python
 # 방법1
@@ -100,7 +117,7 @@ def gcd(m,n):
 
 ```
 
-## 자바코드
+### 자바코드
 
 ```java
  public static int gcd(int p, int q)
@@ -110,10 +127,10 @@ def gcd(m,n):
  }
 ```
 
-## 자바스크립트코드
-[프리코드캠프 참고](https://guide.freecodecamp.org/algorithms/greatest-common-divisor-euclidean/)
+### 자바스크립트코드
+- [프리코드캠프 참고](https://guide.freecodecamp.org/algorithms/greatest-common-divisor-euclidean/)
 
-### Javascript Code to Perform GCD
+#### Javascript Code to Perform GCD
 ```javascript
 function gcd(a, b) { // 단, a가 b보다 커야함.
   var R;
@@ -126,7 +143,7 @@ function gcd(a, b) { // 단, a가 b보다 커야함.
 }
 ```
 
-### Javascript Code to Perform GCD using Recursion-
+#### Javascript Code to Perform GCD using Recursion-
 
 ```javascript
 function gcd(a, b) { // 단, a가 b보다 커야함.
