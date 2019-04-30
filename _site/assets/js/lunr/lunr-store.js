@@ -60,7 +60,7 @@ var store = [{
         "url": "https://seunghyum.github.io/codingtest/kakao/Kakao-failure-rate/",
         "teaser":null},{
         "title": "[CodingTest] 2019 네이버 핵데이 코드테스트 문제3 with Javascript",
-        "excerpt":"문제3 문제 받으면 작성할 예정. 내가 작성한 답변 - 아래로꺾인선만 구하기 function solution(N) { let maxUnderCurvedPoint = N[0]; for(let i=0;i&lt;=N.length;i++) { if(N[i]&gt;N[i+1] &amp;&amp; maxUnderCurvedPoint &gt; N[i]) maxUnderCurvedPoint = N[i]; } for(let i=N.length-1;i&gt;=0;i--) { if (maxUnderCurvedPoint &lt; N[i]) return i-1 } } 풀이해석 예시 생각했던 과정 부족했던 점 N = [0,4,-1,3,10]...","categories": ["CodingTest","Naver"],
+        "excerpt":"문제3 문제 받으면 작성할 예정. 내가 작성한 답변 - 아래로 꺾인선만 구하기 function solution(N) { let maxUnderCurvedPoint = N[0]; for(let i=0;i&lt;=N.length;i++) { if(N[i]&gt;N[i+1] &amp;&amp; maxUnderCurvedPoint &gt; N[i]) maxUnderCurvedPoint = N[i]; } for(let i=N.length-1;i&gt;=0;i--) { if (maxUnderCurvedPoint &lt; N[i]) return i-1 } } 풀이해석 예시 생각했던 과정 부족했던 점 N =...","categories": ["CodingTest","Naver"],
         "tags": ["Javascript"],
         "url": "https://seunghyum.github.io/codingtest/naver/Naver-Hackday-Test-3/",
         "teaser":null},{
