@@ -9,38 +9,38 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[CodingTest] 매일 프로그래밍 - 피보나치 배열 2019-03-25 - eveloper Dave</title>
-<meta name="description" content="">
+<!-- begin _includes/seo.html --><title>[Algorithm] 유클리드 호제법 - 최대공약수 구하기 - eveloper Dave</title>
+<meta name="description" content="유클리드 호제법">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="eveloper Dave">
-<meta property="og:title" content="[CodingTest] 매일 프로그래밍 - 피보나치 배열 2019-03-25">
-<meta property="og:url" content="https://seunghyum.github.io/codingtest/everydayprogramming/Every-Day-Programming-1/">
+<meta property="og:title" content="[Algorithm] 유클리드 호제법 - 최대공약수 구하기">
+<meta property="og:url" content="https://seunghyum.github.io/algorithm/Euclidean-algorithm/">
 
 
-  <meta property="og:description" content="">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2019-03-25T00:00:00+09:00">
+  <meta property="og:description" content="유클리드 호제법">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2019-04-30T00:00:00+09:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://seunghyum.github.io/codingtest/everydayprogramming/Every-Day-Programming-1/">
+
+<link rel="canonical" href="https://seunghyum.github.io/algorithm/Euclidean-algorithm/">
 
 
 
@@ -273,83 +273,152 @@
   <div class="archive">
     
       <br>
-      <h1 id="page-title" class="page__title">[CodingTest] 매일 프로그래밍 - 피보나치 배열 2019-03-25</h1>
+      <h1 id="page-title" class="page__title">[Algorithm] 유클리드 호제법 - 최대공약수 구하기</h1>
     
     <br>
-<!-- ## 문제
-피보나치 배열은 0과 1로 시작하며, 다음 피보나치 수는 바로 앞의 두 피보나치 수의 합이 된다.  
-정수 N이 주어지면, N보다 작은 모든 짝수 피보나치 수의 합을 구하여라.  
-<br>
-<br>
-Fibonacci sequence starts with 0 and 1 where each fibonacci number is a sum of two previous fibonacci numbers. Given an integer N, find the sum of all even fibonacci numbers. -->
+<p>유클리드 호제법</p>
 
-<!-- ## 예제
+<blockquote>
+  <p>유클리드 호제법(- 互除法, Euclidean Algorithm)은 2개의 자연수 또는 정식(整式)의 <strong>최대공약수(Greatest Common Divisor)</strong>를 구하는 알고리즘의 하나이다.</p>
 
-Input: N = 12  
+  <p>호제법이란 말은 두 수가 서로(互) 상대방 수를 나누어(除)서 결국 원하는 수를 얻는 알고리즘을 나타낸다.</p>
 
-Output: 10 // 0, 1, 2, 3, 5, 8 중 짝수인 2 + 8 = 10. -->
+  <p><u>2개의 자연수(또는 정식) a, b에 대해서 a를 b로 나눈 나머지를 r이라 하면(단, a&gt;b), a와 b의 최대공약수는 b와 r의 최대공약수와 같다. <br />
+이 성질에 따라, b를 r로 나눈 나머지 r'를 구하고, 다시 r을 r'로 나눈 나머지를 구하는 과정을 반복하여 나머지가 0이 되었을 때 나누는 수가 a와 b의 최대공약수이다. </u></p>
 
-<!-- ## 풀이
-A(n+1) = A(n) + A(n-1)
-1 = 1+0
-2 = 1+1 ***// 2^0***
-3 = 2+1 ***// 2^1 + 2^0 ***
-5 = 3 + 2 ***// 5 = (2+1) + 2 // 2^1 + 2^1 + 2^0***
-8 = 5 + 3 ***// 8 = (2+2+1) + (2+1) // 2^2 + 1 + 2^1 + 2^1 + 1***
-13 = 8 + 5 ***// 8 = (2+2+1 + 2+1) + (2+2+1) // 2^3 + 2^2 + 1***
-21
-34
-.
-.
-. -->
+  <p>이는 명시적으로 기술된 가장 오래된 알고리즘으로서도 알려져 있으며, 기원전 300년경에 쓰인 유클리드의 《원론》 제7권, 명제 1부터 3까지에 해당한다.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 처음 답</span>
-<span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span><span class="p">(</span><span class="nx">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="k">return</span> <span class="mi">0</span>
-  <span class="kd">let</span> <span class="nx">initN</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="nx">output</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">result</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <p><small> - 위키백과, 우리 모두의 백과사전.</small></p>
+</blockquote>
 
-  <span class="k">while</span><span class="p">(</span><span class="nx">n</span> <span class="o">&gt;</span> <span class="nx">initN</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="nx">initN</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="p">{</span>
-    <span class="nx">output</span> <span class="o">=</span> <span class="nx">initN</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="nx">initN</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-    <span class="nx">initN</span> <span class="o">=</span> <span class="p">[</span><span class="nx">initN</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nx">output</span><span class="p">]</span>
-    <span class="k">if</span><span class="p">(</span><span class="nx">output</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="nx">result</span> <span class="o">+=</span> <span class="nx">output</span>
+<p><br />
+<br /></p>
+<hr />
+
+<h2 id="예시-설명---gcd270192">예시 설명 - GCD(270,192)</h2>
+<p><a href="https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/the-euclidean-algorithm">칸아카데미 참고</a></p>
+
+<ol>
+  <li><strong>GCD(270,192)</strong> - 270과 192의 최대공약수 찾기
+    <ul>
+      <li>A=270, B=192</li>
+      <li>A ≠ 0</li>
+      <li>B ≠ 0</li>
+    </ul>
+
+    <p><u>270 = 192 * 1 +78</u>
+<br /></p>
+  </li>
+  <li><strong><em>GCD(270,192)=GCD(192,78)</em></strong> - 이기 때문에 192와 78의 최대공약수 찾기
+    <ul>
+      <li>A=192, B=78</li>
+      <li>A ≠0</li>
+      <li>B ≠0</li>
+    </ul>
+
+    <p><u>192 = 78 * 2 + 36</u>
+ <br /></p>
+  </li>
+  <li><strong><em>GCD(192,78)=GCD(78,36)</em></strong> - 이기 때문에 78과 36의 최대공약수 찾기
+    <ul>
+      <li>A=78, B=36</li>
+      <li>A ≠0</li>
+      <li>B ≠0</li>
+    </ul>
+
+    <p><u>78 = 36 * 2 + 6</u>
+ <br /></p>
+  </li>
+  <li><strong><em>GCD(78,36)=GCD(36,6)</em></strong> - 이기 때문에 36과 6의 최대공약수 찾기
+    <ul>
+      <li>A=36, B=6</li>
+      <li>A ≠0</li>
+      <li>B ≠0
+ <u>36 = 6 * 6 + 0</u>
+ <br /></li>
+    </ul>
+  </li>
+  <li><strong><em>GCD(36,6)=GCD(6,0)</em></strong> - 이기 때문에 6과 0의 최대공약수 찾기
+    <ul>
+      <li>A=6, B=0</li>
+      <li>A ≠0</li>
+      <li>B =0, GCD(6,0)=6</li>
+    </ul>
+  </li>
+</ol>
+
+<blockquote>
+  <p>지금까지의 과정 : <br />
+GCD(270,192) = GCD(192,78) = GCD(78,36) = GCD(36,6) = GCD(6,0) = 6 <br />
+<strong><em>GCD(270,192) = 6</em></strong></p>
+</blockquote>
+
+<h2 id="파이썬-코드">파이썬 코드</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 방법1
+</span><span class="k">def</span> <span class="nf">gcd</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">):</span> <span class="c1"># gcd == "Greatest Common Divisor"
+</span>	<span class="k">if</span> <span class="n">m</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+		<span class="n">m</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span>
+	<span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+		<span class="k">return</span> <span class="n">m</span>
+    <span class="k">if</span> <span class="n">m</span> <span class="o">%</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+		<span class="k">return</span> <span class="n">n</span>
+	<span class="k">else</span><span class="p">:</span>
+		<span class="k">return</span> <span class="n">gcd</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="o">%</span><span class="n">n</span><span class="p">)</span>
+
+
+<span class="c1"># 방법2
+</span><span class="k">def</span> <span class="nf">gcd</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">while</span> <span class="n">n</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+       <span class="n">t</span> <span class="o">=</span> <span class="n">m</span><span class="o">%</span><span class="n">n</span>
+       <span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">t</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">abs</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+<span class="c1"># 방법3
+</span><span class="k">def</span> <span class="nf">gcd</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">while</span> <span class="n">n</span><span class="err">!</span> <span class="o">=</span> <span class="mi">0</span><span class="p">:</span>
+	    <span class="k">if</span> <span class="n">m</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+		    <span class="n">m</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span>
+	    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+		    <span class="k">return</span> <span class="n">m</span>
+	    <span class="k">if</span> <span class="n">m</span> <span class="o">%</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+		    <span class="k">return</span> <span class="n">n</span>
+
+</code></pre></div></div>
+
+<h2 id="자바코드">자바코드</h2>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">gcd</span><span class="o">(</span><span class="kt">int</span> <span class="n">p</span><span class="o">,</span> <span class="kt">int</span> <span class="n">q</span><span class="o">)</span>
+ <span class="o">{</span>
+	<span class="k">if</span> <span class="o">(</span><span class="n">q</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="k">return</span> <span class="n">p</span><span class="o">;</span>
+	<span class="k">return</span> <span class="nf">gcd</span><span class="o">(</span><span class="n">q</span><span class="o">,</span> <span class="n">p</span><span class="o">%</span><span class="n">q</span><span class="o">);</span>
+ <span class="o">}</span>
+</code></pre></div></div>
+
+<h2 id="자바스크립트코드">자바스크립트코드</h2>
+<p><a href="https://guide.freecodecamp.org/algorithms/greatest-common-divisor-euclidean/">프리코드캠프 참고</a></p>
+
+<h3 id="javascript-code-to-perform-gcd">Javascript Code to Perform GCD</h3>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">gcd</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// 단, a가 b보다 커야함.</span>
+  <span class="kd">var</span> <span class="nx">R</span><span class="p">;</span>
+  <span class="k">while</span> <span class="p">((</span><span class="nx">a</span> <span class="o">%</span> <span class="nx">b</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>  <span class="p">{</span>
+    <span class="nx">R</span> <span class="o">=</span> <span class="nx">a</span> <span class="o">%</span> <span class="nx">b</span><span class="p">;</span>
+    <span class="nx">a</span> <span class="o">=</span> <span class="nx">b</span><span class="p">;</span>
+    <span class="nx">b</span> <span class="o">=</span> <span class="nx">R</span><span class="p">;</span>
   <span class="p">}</span>
-
-  <span class="k">return</span> <span class="nx">result</span>
-<span class="p">}</span>
-
-<span class="c1">// 수정 후</span>
-<span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span><span class="p">(</span><span class="nx">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="k">return</span> <span class="mi">0</span>
-  <span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">y</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-
-  <span class="k">while</span><span class="p">(</span><span class="nx">n</span> <span class="o">&gt;</span> <span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span><span class="p">(</span><span class="nx">x</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="nx">sum</span> <span class="o">+=</span> <span class="nx">x</span>
-    <span class="kd">let</span> <span class="nx">z</span> <span class="o">=</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span>
-    <span class="nx">x</span> <span class="o">=</span> <span class="nx">y</span>
-    <span class="nx">y</span> <span class="o">=</span> <span class="nx">z</span>
-  <span class="p">}</span>
-
-  <span class="k">return</span> <span class="nx">sum</span>
+  <span class="k">return</span> <span class="nx">b</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
-<!-- ## 정답 - python
-```python
-int evenFibSum(int N) {
-  int sum = 0;
-  int x = 1;
-  int y = 2;
-  while (x <= N) {
-    if (x % 2 == 0) {
-      sum += x;
-    }
-    int z = x + y;
-    x = y;
-    y = z;
-  }
-  return sum;
-}
-``` -->
+<h3 id="javascript-code-to-perform-gcd-using-recursion-">Javascript Code to Perform GCD using Recursion-</h3>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">gcd</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// 단, a가 b보다 커야함.</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nx">a</span><span class="p">;</span>
+  <span class="k">else</span>
+    <span class="k">return</span> <span class="nx">gcd</span><span class="p">(</span><span class="nx">b</span><span class="p">,</span> <span class="p">(</span><span class="nx">a</span> <span class="o">%</span> <span class="nx">b</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <br>
 <br>
@@ -514,7 +583,7 @@ int evenFibSum(int N) {
 
 
 
-  최대 1 분 소요
+  1 분 소요
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">문제3
@@ -724,7 +793,7 @@ if a &lt; b &lt; c :
 
 
 
-  2 분 소요
+  4 분 소요
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">문제
@@ -1006,8 +1075,8 @@ function solution(record) {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://seunghyum.github.io/codingtest/everydayprogramming/Every-Day-Programming-1/";  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = "/codingtest/everydayprogramming/Every-Day-Programming-1"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      this.page.url = "https://seunghyum.github.io/algorithm/Euclidean-algorithm/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/algorithm/Euclidean algorithm"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');

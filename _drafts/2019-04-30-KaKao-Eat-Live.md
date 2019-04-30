@@ -51,7 +51,8 @@ Brute Force 문제였다. Object Array로 풀수있는 방법 중 좋은 방식�
 
 정답들의 풀이 골격은
 1. food_times 배열을 값과 인덱스로 Object Array을 만들고
-2. 값이 있는 것들에 해당하는 row로만 
+2. 각 줄마다 값이 있는 것들만 측정해서 k값을 지워나가고
+3. k값을 
 
 <hr>
 

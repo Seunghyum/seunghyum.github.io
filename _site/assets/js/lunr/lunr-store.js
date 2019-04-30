@@ -78,4 +78,9 @@ var store = [{
         "excerpt":"문제 주어지는 행렬 arr(ex - [3,0,1,3,0,5])값의 인자들을 벽이라고 했을때 비가와서 물이 고이는 부분의 양을 구하여라. 답 : 8 내가 생각한 풀이 풀어본 시간 : 1시간 중간까지 밖에 못함. 접근방법이 복잡해져서 방향을 잘못잡음. 위로 꺾은 선들을 찾아서 각 구간마다 물이 고일수있는 max값을 찾고 해당 구간에서 max - arr[i] 값들의 합을 구하려고...","categories": ["CodingTest","DailyProgramming"],
         "tags": ["Javascript","BinarySearch","Set"],
         "url": "https://seunghyum.github.io/codingtest/dailyprogramming/Daily-Programming/",
+        "teaser":null},{
+        "title": "[Algorithm] 유클리드 호제법 - 최대공약수 구하기",
+        "excerpt":"유클리드 호제법 유클리드 호제법(- 互除法, Euclidean Algorithm)은 2개의 자연수 또는 정식(整式)의 최대공약수(Greatest Common Divisor)를 구하는 알고리즘의 하나이다. 호제법이란 말은 두 수가 서로(互) 상대방 수를 나누어(除)서 결국 원하는 수를 얻는 알고리즘을 나타낸다. 2개의 자연수(또는 정식) a, b에 대해서 a를 b로 나눈 나머지를 r이라 하면(단, a&gt;b), a와 b의 최대공약수는 b와 r의 최대공약수와...","categories": ["Algorithm"],
+        "tags": ["Algorithm"],
+        "url": "https://seunghyum.github.io/algorithm/Euclidean-algorithm/",
         "teaser":null}]
