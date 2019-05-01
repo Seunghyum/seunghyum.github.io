@@ -9,16 +9,16 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Data Type - eveloper Dave</title>
+<!-- begin _includes/seo.html --><title>[DataType] Map &amp; Set - eveloper Dave</title>
 <meta name="description" content="Set vs Array - 관련기사  Set          유일값들의 배열이 필요할때(distinct)      집합의 개념이 필요할때(차집합, 교집합 등등 자체 메서드들이 많음.)      index가 필요 없을때      Array에서 중복값을 없앨때 =&gt; new Set([1,1,2,3]) // 1,2,3      set의 add()는 O(n)의 시간복잡도가 소요되지만, Array의 push는 N(1)의 시간복잡도.        Array          요소들의 순서(order)가 필요할때      index가 필요할때 -&gt; Binaory Search      ">
 
 
 
 <meta property="og:type" content="article">
-<meta property="og:locale" content="ko_KR">
+<meta property="og:locale" content="ko">
 <meta property="og:site_name" content="eveloper Dave">
-<meta property="og:title" content="Data Type">
-<meta property="og:url" content="https://seunghyum.github.io/data%20type/Data-Type/">
+<meta property="og:title" content="[DataType] Map &amp; Set">
+<meta property="og:url" content="https://seunghyum.github.io/data%20type/Map-Set/">
 
 
   <meta property="og:description" content="Set vs Array - 관련기사  Set          유일값들의 배열이 필요할때(distinct)      집합의 개념이 필요할때(차집합, 교집합 등등 자체 메서드들이 많음.)      index가 필요 없을때      Array에서 중복값을 없앨때 =&gt; new Set([1,1,2,3]) // 1,2,3      set의 add()는 O(n)의 시간복잡도가 소요되지만, Array의 push는 N(1)의 시간복잡도.        Array          요소들의 순서(order)가 필요할때      index가 필요할때 -&gt; Binaory Search      ">
@@ -40,7 +40,7 @@
   
 
 
-<link rel="canonical" href="https://seunghyum.github.io/data%20type/Data-Type/">
+<link rel="canonical" href="https://seunghyum.github.io/data%20type/Map-Set/">
 
 
 
@@ -101,7 +101,6 @@
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
 <!-- end custom head snippets -->
-
   </head>
 
   <body class="layout--posts">
@@ -128,6 +127,13 @@
               <a href="/tags/" >Tags</a>
             </li></ul>
         
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">토글 메뉴</span>
           <div class="navicon"></div>
@@ -142,6 +148,42 @@
     <div class="initial-content">
       
 
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="https://seunghyum.github.io/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/categories/#data-type" itemprop="item"><span itemprop="name">Data type</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">[DataType] Map & Set</li>
+      
+    
+  </ol>
+</nav>
+
+  
 
 
 <div id="main" role="main">
@@ -272,8 +314,7 @@
 
   <div class="archive">
     
-      <br>
-      <h1 id="page-title" class="page__title">Data Type</h1>
+      <h1 id="page-title" class="page__title">[DataType] Map & Set</h1>
     
     <br>
 <h2 id="set-vs-array---관련기사">Set vs Array - <a href="https://medium.com/front-end-weekly/es6-set-vs-array-what-and-when-efc055655e1a">관련기사</a></h2>
@@ -328,7 +369,7 @@
   
     <li>
       <a href="#2019">
-        <strong>2019</strong> <span class="taxonomy__count">16</span>
+        <strong>2019</strong> <span class="taxonomy__count">15</span>
       </a>
     </li>
   
@@ -398,35 +439,6 @@
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">문제
-
-</p>
-  </article>
-</div>
-
-      
-        
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/data%20type/Tree/" rel="permalink">Data Type - 트리 구조
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  최대 1 분 소요
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">그래프
 
 </p>
   </article>
@@ -648,7 +660,7 @@ if a &lt; b &lt; c :
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/data%20type/Data-Type/" rel="permalink">Data Type
+        <a href="/data%20type/Map-Set/" rel="permalink">[DataType] Map &amp; Set
 </a>
       
     </h2>
@@ -915,6 +927,12 @@ function solution(record) {
     </div>
 
     
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <div id="results" class="results"></div></div>
+
+      </div>
+    
 
     <div class="page__footer">
       <footer>
@@ -951,12 +969,16 @@ function solution(record) {
 
 
 
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
 
 
 
   <script type="text/javascript">
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-136499960-1']);
+  _gaq.push(['_setAccount', 'UA-65881210-5']);
   
   _gaq.push(['_trackPageview']);
 
@@ -974,8 +996,8 @@ function solution(record) {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://seunghyum.github.io/data%20type/Data-Type/";  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = "/data%20type/Data-Type"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      this.page.url = "https://seunghyum.github.io/data%20type/Map-Set/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/data%20type/Map-Set"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');
