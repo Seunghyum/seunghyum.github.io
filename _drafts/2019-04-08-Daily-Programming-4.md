@@ -1,8 +1,8 @@
 ---
 layout: posts
 title:  "[CodingTest] 숫자값 인코딩 조합구하기"
-categories: [CodingTest, DailyProgramming]
-tags: [Javascript]
+categories: [CodingTest]
+tags: [Javascript, DailyProgramming]
 comments: true
 ---
 

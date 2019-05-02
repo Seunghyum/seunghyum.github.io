@@ -9,38 +9,38 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[CodingTest] 2019 네이버 핵데이 코드테스트 문제3 with Javascript - eveloper Dave</title>
-<meta name="description" content="문제3문제를 알려줄 수 없다는 답변 받음. github에서 네이버 핵데이 검색하면 나옴.">
+<!-- begin _includes/seo.html --><title>[CodingTest] 벽안에 고인 빗물의 양 - eveloper Dave</title>
+<meta name="description" content="문제">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko">
 <meta property="og:site_name" content="eveloper Dave">
-<meta property="og:title" content="[CodingTest] 2019 네이버 핵데이 코드테스트 문제3 with Javascript">
-<meta property="og:url" content="https://seunghyum.github.io/codingtest/naver/Naver-Hackday-Test-3/">
+<meta property="og:title" content="[CodingTest] 벽안에 고인 빗물의 양">
+<meta property="og:url" content="https://seunghyum.github.io/codingtest/Daily-Programming/">
 
 
-  <meta property="og:description" content="문제3문제를 알려줄 수 없다는 답변 받음. github에서 네이버 핵데이 검색하면 나옴.">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2019-04-14T00:00:00+09:00">
+  <meta property="og:description" content="문제">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2019-04-26T00:00:00+09:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://seunghyum.github.io/codingtest/naver/Naver-Hackday-Test-3/">
+
+<link rel="canonical" href="https://seunghyum.github.io/codingtest/Daily-Programming/">
 
 
 
@@ -177,17 +177,7 @@
     
       
       
-        
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/categories/#naver" itemprop="item"><span itemprop="name">Naver</span></a>
-          <meta itemprop="position" content="3" />
-        </li>
-        <span class="sep">/</span>
-      
-    
-      
-      
-        <li class="current">[CodingTest] 2019 네이버 핵데이 코드테스트 문제3 with Javascript</li>
+        <li class="current">[CodingTest] 벽안에 고인 빗물의 양</li>
       
     
   </ol>
@@ -324,74 +314,129 @@
 
   <div class="archive">
     
-      <h1 id="page-title" class="page__title">[CodingTest] 2019 네이버 핵데이 코드테스트 문제3 with Javascript</h1>
+      <h1 id="page-title" class="page__title">[CodingTest] 벽안에 고인 빗물의 양</h1>
     
     <br>
-<h2 id="문제3">문제3</h2>
-<p>문제를 알려줄 수 없다는 답변 받음. <strong>github에서 네이버 핵데이</strong> 검색하면 나옴.</p>
+<h2 id="문제">문제</h2>
 
-<h2 id="내가-작성한-답변---아래로-꺾인선만-구하기">내가 작성한 답변 - 아래로 꺾인선만 구하기</h2>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">N</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kd">let</span> <span class="nx">maxUnderCurvedPoint</span> <span class="o">=</span> <span class="nx">N</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
-  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;=</span><span class="nx">N</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span><span class="p">(</span><span class="nx">N</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">&gt;</span><span class="nx">N</span><span class="p">[</span><span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="nx">maxUnderCurvedPoint</span> <span class="o">&gt;</span> <span class="nx">N</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="nx">maxUnderCurvedPoint</span> <span class="o">=</span> <span class="nx">N</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
-  <span class="p">}</span>
-  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="nx">N</span><span class="p">.</span><span class="nx">length</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="nx">i</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">maxUnderCurvedPoint</span> <span class="o">&lt;</span> <span class="nx">N</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="k">return</span> <span class="nx">i</span><span class="o">-</span><span class="mi">1</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
-<h3 id="풀이해석">풀이해석</h3>
+<p>주어지는 행렬 arr(ex - [3,0,1,3,0,5])값의 인자들을 벽이라고 했을때 비가와서 물이 고이는 부분의 양을 구하여라.</p>
+
+<p><img src="/assets/images/2019-04-26-explain.png" style="max-width: 350px;" /></p>
+
+<p>답 : 8</p>
+
+<h2 id="내가-생각한-풀이">내가 생각한 풀이</h2>
+
 <ul>
-  <li>
-    <p>예시<br />
-<img src="/assets/images/Naver-Hackday-solve-1_1.png" style="max-width: 400px;" /></p>
-  </li>
-  <li>
-    <p>생각했던 과정<br />
-<img src="/assets/images/Naver-Hackday-solve-1_2.png" style="max-width: 300px;" /></p>
+  <li>풀어본 시간 : 1시간</li>
+  <li>중간까지 밖에 못함. 접근방법이 복잡해져서 방향을 잘못잡음.
+    <ul>
+      <li>위로 꺾은 선들을 찾아서 각 구간마다 물이 고일수있는 max값을 찾고</li>
+      <li>해당 구간에서 max - arr[i] 값들의 합을 구하려고 했음</li>
+    </ul>
   </li>
 </ul>
 
-<h3 id="부족했던-점">부족했던 점</h3>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">N</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span> <span class="c1">// 이 경우를 제대로 못구함.</span>
-</code></pre></div></div>
-<p>내 답은 단순히 아래로꺾은선 만을 고려하였고 위로꺾은 선은 고려하지 않았다.<br />
-그래서 위의 예시처럼 첫번째 위로꺾은 선이 앞쪽에 배치될 경우 걸러내지 못했다.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">upperPoints</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="nx">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]}</span> <span class="c1">// {index: value, ...}</span>
+    <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&gt;</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="k">if</span><span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="kc">undefined</span><span class="p">)</span> <span class="nx">upperPoints</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
+        <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span> <span class="nx">upperPoints</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
+    <span class="p">}</span>
 
-<h2 id="수정한-답안1---위로꺾인선-아래로꺾인선-구하기">수정한 답안1 - 위로꺾인선, 아래로꺾인선 구하기</h2>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">N</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kd">let</span> <span class="nx">maxUnderCurvedPoint</span> <span class="o">=</span> <span class="nx">N</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nx">maxUpperCurvedPoint</span> <span class="o">=</span> <span class="nx">N</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
-  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;=</span><span class="nx">N</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span><span class="p">(</span><span class="nx">N</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">&lt;</span><span class="nx">N</span><span class="p">[</span><span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="nx">maxUnderCurvedPoint</span> <span class="o">&lt;</span> <span class="nx">N</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="nx">maxUnderCurvedPoint</span> <span class="o">=</span> <span class="nx">N</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
-    <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">N</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">&gt;</span><span class="nx">N</span><span class="p">[</span><span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="nx">maxUpperCurvedPoint</span> <span class="o">&lt;</span> <span class="nx">N</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="nx">maxUpperCurvedPoint</span> <span class="o">=</span> <span class="nx">N</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span> <span class="c1">// 추가</span>
-  <span class="p">}</span>
-  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="nx">N</span><span class="p">.</span><span class="nx">length</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="nx">i</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">maxUnderCurvedPoint</span> <span class="o">&lt;</span> <span class="nx">N</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="nx">maxUpperCurvedPoint</span> <span class="o">&lt;</span> <span class="nx">N</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="k">return</span> <span class="nx">i</span><span class="p">;</span> <span class="c1">// 수정</span>
-  <span class="p">}</span>
+    <span class="kd">let</span> <span class="nx">filteredPoints</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="nx">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]},</span> <span class="c1">// {index: value, ...}</span>
+        <span class="nx">startPoint</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="nx">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+    <span class="k">for</span><span class="p">((</span><span class="nx">p</span><span class="p">,</span><span class="nx">i</span><span class="p">)</span> <span class="k">of</span> <span class="nx">upperPoints</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="o">&amp;&amp;</span> <span class="nx">startPoint</span> <span class="o">&gt;=</span> <span class="nx">upperPoints</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="nx">i</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">{</span>
+            <span class="nx">filteredPoints</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">upperPoints</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// 중단함.</span>
+<span class="p">}</span> 
+</code></pre></div></div>
+
+<h3 id="정답풀이법">정답풀이법</h3>
+
+<ul>
+  <li>아이디어
+    <ul>
+      <li>왼쪽과 오른쪽을 각각 돌며 각 index마다의 물이 고일 수 있는 max값 찾음.</li>
+      <li>왼쪽 / 오른쪽에서 찾은 max값들 중 min 값으로 [min - 해당 index] 값을 구해서 total로 더함.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 시간복잡도 O(n) 공간복잡도 O(n)</span>
+<span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">left_maxes</span> <span class="o">=</span> <span class="p">[],</span> 
+        <span class="nx">right_maxes</span> <span class="o">=</span> <span class="p">[],</span>
+        <span class="nx">current_left_max</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> 
+        <span class="nx">current_right_max</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> 
+        <span class="nx">total</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="nx">i</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">current_left_max</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">current_left_max</span><span class="p">,</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+        <span class="nx">left_maxes</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">current_left_max</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="nx">i</span><span class="p">;</span> <span class="nx">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">current_right_max</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">current_right_max</span><span class="p">,</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+        <span class="nx">right_maxes</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">current_right_max</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="nx">i</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">total</span> <span class="o">+=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">(</span><span class="nx">left_maxes</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span> <span class="nx">right_maxes</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="o">-</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">total</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></div>
-<h3 id="부족한-점">부족한 점</h3>
-<p>다시생각해보니 위로 꺾인선만 고려하면 쉽게 답이 나옴.</p>
 
-<h2 id="수정한-답안2---위로꺾인선만-구하기">수정한 답안2 - 위로꺾인선만 구하기</h2>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">N</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kd">let</span> <span class="nx">maxUpperCurvedPoint</span> <span class="o">=</span> <span class="nx">N</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
-  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;=</span><span class="nx">N</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span><span class="p">(</span><span class="nx">N</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">&gt;</span><span class="nx">N</span><span class="p">[</span><span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="nx">maxUpperCurvedPoint</span> <span class="o">&gt;</span> <span class="nx">N</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="nx">maxUpperCurvedPoint</span> <span class="o">=</span> <span class="nx">N</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span> <span class="c1">// 추가</span>
-  <span class="p">}</span>
-  
-  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="nx">N</span><span class="p">.</span><span class="nx">length</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="nx">i</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">maxUpperCurvedPoint</span> <span class="o">&lt;</span> <span class="nx">N</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="k">return</span> <span class="nx">i</span><span class="p">;</span> <span class="c1">// 수정</span>
-  <span class="p">}</span>
+<h3 id="업그레이드된-정답풀이법">업그레이드된 정답풀이법</h3>
+
+<ul>
+  <li>목적
+    <ul>
+      <li>공간 복잡도를 O(1)로 만들기위해 left_maxes, right_maxes를 없앰.</li>
+    </ul>
+  </li>
+  <li>아이디어
+    <ul>
+      <li>가장 큰 수를 기점으로 오른쪽 / 왼쪽 나눔.</li>
+    </ul>
+  </li>
+  <li>단점
+    <ul>
+      <li>울퉁불퉁한 모양이면 답이 제대로 나오지만 계단형태의 그래프일 경우 답이 이상하게 나옴.</li>
+      <li>arr = [1,2,3,4,5] 또는 [5,4,3,2,1]의 경우 답이 -3 나옴.</li>
+      <li>arr = [5,2,6,1,8,9,9,7] 에 해당하는 답안이 이상함.</li>
+      <li>arr = [3,0,1,3,0,5] 에만 잘 되는 답임.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 시간복잡도 O(n) 공간복잡도 O(1)</span>
+<span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="mi">0</span>
+
+    <span class="kd">let</span> <span class="nx">total</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nx">max_i</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(...</span><span class="nx">arr</span><span class="p">)),</span>
+        <span class="nx">left_max</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="nx">right_max</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="nx">max_i</span> <span class="o">&gt;</span> <span class="nx">i</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">total</span> <span class="o">+=</span> <span class="nx">left_max</span> <span class="o">-</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+        <span class="nx">left_max</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">left_max</span><span class="p">,</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+    <span class="p">}</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="o">-</span><span class="mi">2</span><span class="p">;</span> <span class="nx">max_i</span><span class="o">&lt;</span><span class="nx">i</span><span class="p">;</span> <span class="nx">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">total</span> <span class="o">+=</span> <span class="nx">right_max</span> <span class="o">-</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+        <span class="nx">right_max</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">right_max</span><span class="p">,</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nx">total</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"solution([-5,-5,3,10]) : "</span><span class="p">,</span> <span class="nx">solution</span><span class="p">([</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">10</span><span class="p">]))</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"solution([3,-5,5,10]) : "</span><span class="p">,</span> <span class="nx">solution</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">]))</span>
 </code></pre></div></div>
-
-<h2 id="느낀점">느낀점</h2>
-<p>답에 대한 테스트케이스를 여러개 생각해서 검토하지 않아서 오류를 놓침. 
-여러가지 테스트케이스를 해보고 오류점검하는 버릇이 좀 더 들어야함.</p>
 
 <br>
 <br>
@@ -402,7 +447,7 @@
   
     <li>
       <a href="#2019">
-        <strong>2019</strong> <span class="taxonomy__count">16</span>
+        <strong>2019</strong> <span class="taxonomy__count">17</span>
       </a>
     </li>
   
@@ -491,7 +536,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/codingtest/dailyprogramming/Daily-Programming/" rel="permalink">[CodingTest] 벽안에 고인 빗물의 양
+        <a href="/codingtest/Daily-Programming/" rel="permalink">[CodingTest] 벽안에 고인 빗물의 양
 </a>
       
     </h2>
@@ -520,7 +565,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/codingtest/naver/Naver-Hackday-Test-1/" rel="permalink">[CodingTest] 2019 네이버 핵데이 코드테스트 문제1 with Javascript
+        <a href="/codingtest/Naver-Hackday-Test-1/" rel="permalink">[CodingTest] 2019 네이버 핵데이 코드테스트 문제1 with Javascript
 </a>
       
     </h2>
@@ -550,7 +595,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/codingtest/naver/Naver-Hackday-Test-3/" rel="permalink">[CodingTest] 2019 네이버 핵데이 코드테스트 문제3 with Javascript
+        <a href="/codingtest/Naver-Hackday-Test-3/" rel="permalink">[CodingTest] 2019 네이버 핵데이 코드테스트 문제3 with Javascript
 </a>
       
     </h2>
@@ -580,7 +625,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/codingtest/kakao/Kakao-failure-rate/" rel="permalink">[CodingTest] 2019 카카오 신입 공채 1차 - 2번 실패율 문제 with Javascript
+        <a href="/codingtest/Kakao-failure-rate/" rel="permalink">[CodingTest] 2019 카카오 신입 공채 1차 - 2번 실패율 문제 with Javascript
 </a>
       
     </h2>
@@ -695,7 +740,7 @@ if a &lt; b &lt; c :
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/codingtest/dailyprogramming/Daily-Programming-2/" rel="permalink">[CodingTest] i를 제외한 배열 요소들의 곱
+        <a href="/codingtest/Daily-Programming-2/" rel="permalink">[CodingTest] i를 제외한 배열 요소들의 곱
 </a>
       
     </h2>
@@ -760,7 +805,7 @@ if a &lt; b &lt; c :
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/codingtest/dailyprogramming/Daily-Programming-1/" rel="permalink">[CodingTest] 배열의 두 값을 합하여 k값 만들기
+        <a href="/codingtest/Daily-Programming-1/" rel="permalink">[CodingTest] 배열의 두 값을 합하여 k값 만들기
 </a>
       
     </h2>
@@ -791,7 +836,7 @@ list라는 행렬과 k라는 자연수가 주어짐. list의 두 값을 합하�
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/codingtest/everydayprogramming/Every-Day-Programming-2/" rel="permalink">[CodingTest] 매일 프로그래밍 - 2019-03-26
+        <a href="/codingtest/Every-Day-Programming-2/" rel="permalink">[CodingTest] 매일 프로그래밍 - 2019-03-26
 </a>
       
     </h2>
@@ -821,7 +866,7 @@ list라는 행렬과 k라는 자연수가 주어짐. list의 두 값을 합하�
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/codingtest/everydayprogramming/Every-Day-Programming-1/" rel="permalink">[CodingTest] 매일 프로그래밍 - 피보나치 배열 2019-03-25
+        <a href="/codingtest/Every-Day-Programming-1/" rel="permalink">[CodingTest] 매일 프로그래밍 - 피보나치 배열 2019-03-25
 </a>
       
     </h2>
@@ -850,7 +895,7 @@ list라는 행렬과 k라는 자연수가 주어짐. list의 두 값을 합하�
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/codingtest/algospot/Algospot-anagram/" rel="permalink">[CodingTest] Algospot - Anagram 문제
+        <a href="/codingtest/Algospot-anagram/" rel="permalink">[CodingTest] Algospot - Anagram 문제
 </a>
       
     </h2>
@@ -909,6 +954,35 @@ function solution(record) {
   let accounts = [], events = [], answer = [];
 
     function setEn...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/Rectangle-empty-point/" rel="permalink">[CodingTest] 직사각형의 한점 좌표값 유추하기
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">문제
+
+</p>
   </article>
 </div>
 
@@ -1062,8 +1136,8 @@ function solution(record) {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://seunghyum.github.io/codingtest/naver/Naver-Hackday-Test-3/";  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = "/codingtest/naver/Naver-Hackday-Test-3"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      this.page.url = "https://seunghyum.github.io/codingtest/Daily-Programming/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/codingtest/Daily-Programming"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');

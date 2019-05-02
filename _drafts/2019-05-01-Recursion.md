@@ -2,7 +2,7 @@
 layout: posts
 title:  "[Algorithm] 순환(Recursion) 알고리즘 공부"
 categories: [Algorithm]
-tags: [Algorithm]
+tags: [Recursion]
 comments: true
 ---
 

@@ -1,8 +1,8 @@
 ---
 layout: posts
 title:  "[CodingTest] Algospot - Anagram 문제"
-categories: [CodingTest, Algospot]
-tags: [Javascript]
+categories: [CodingTest]
+tags: [Javascript, Algospot]
 comments: true
 ---
 

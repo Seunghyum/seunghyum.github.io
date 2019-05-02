@@ -1,8 +1,8 @@
 ---
 layout: posts
 title:  "[CodingTest] 매일 프로그래밍 - 2019-03-26"
-categories: [CodingTest, EverydayProgramming]
-tags: [Javascript]
+categories: [CodingTest]
+tags: [Javascript, EverydayProgramming]
 comments: true
 ---
 ## 문제

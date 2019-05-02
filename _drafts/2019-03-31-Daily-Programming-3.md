@@ -1,8 +1,8 @@
 ---
 layout: posts
 title:  "[CodingTest] 일련의 숫자들 중 비어있는 값찾기"
-categories: [CodingTest, DailyProgramming]
-tags: [Javascript]
+categories: [CodingTest]
+tags: [Javascript, DailyProgramming]
 comments: true
 ---
 

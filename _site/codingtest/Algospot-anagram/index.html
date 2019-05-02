@@ -9,38 +9,38 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[CodingTest] 2019 카카오 신입 공채 1차 - 2번 실패율 문제 with Javascript - eveloper Dave</title>
-<meta name="description" content="오픈채팅방  문제 바로가기 링크  카카오의 설명 블로그나의 첫답안function solution(N, stages) {  let st = stages, stats = [];  for(let i=1;i&lt;N+1;i++){ // n    let selectedNumbers=0, obj = {};    st = st.filter((s)=&gt;{ // n * n      if(s == i) selectedNumbers++;      else return true;    });    obj.name = i;    obj.per = (st.length == 0 ? 1 : selectedNumbers/st.length);    stats.push(obj)  }  stats.sort((a,b)=&gt; a.per - b.per &gt;= 0 ? -1 : 1) // n^2 + logN  return stats.map(s =&gt; s.name) // -&gt; O(n^2)}">
+<!-- begin _includes/seo.html --><title>[CodingTest] Algospot - Anagram 문제 - eveloper Dave</title>
+<meta name="description" content="&lt;!– ## 설명각 문자열의 알파벳을 재배열하였을때 같은 단어가 되는 단어들.예시tab - batgithub - hbuitg">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko">
 <meta property="og:site_name" content="eveloper Dave">
-<meta property="og:title" content="[CodingTest] 2019 카카오 신입 공채 1차 - 2번 실패율 문제 with Javascript">
-<meta property="og:url" content="https://seunghyum.github.io/codingtest/kakao/Kakao-failure-rate/">
+<meta property="og:title" content="[CodingTest] Algospot - Anagram 문제">
+<meta property="og:url" content="https://seunghyum.github.io/codingtest/Algospot-anagram/">
 
 
-  <meta property="og:description" content="오픈채팅방  문제 바로가기 링크  카카오의 설명 블로그나의 첫답안function solution(N, stages) {  let st = stages, stats = [];  for(let i=1;i&lt;N+1;i++){ // n    let selectedNumbers=0, obj = {};    st = st.filter((s)=&gt;{ // n * n      if(s == i) selectedNumbers++;      else return true;    });    obj.name = i;    obj.per = (st.length == 0 ? 1 : selectedNumbers/st.length);    stats.push(obj)  }  stats.sort((a,b)=&gt; a.per - b.per &gt;= 0 ? -1 : 1) // n^2 + logN  return stats.map(s =&gt; s.name) // -&gt; O(n^2)}">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2019-04-10T00:00:00+09:00">
+  <meta property="og:description" content="&lt;!– ## 설명각 문자열의 알파벳을 재배열하였을때 같은 단어가 되는 단어들.예시tab - batgithub - hbuitg">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2019-03-21T00:00:00+09:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://seunghyum.github.io/codingtest/kakao/Kakao-failure-rate/">
+
+<link rel="canonical" href="https://seunghyum.github.io/codingtest/Algospot-anagram/">
 
 
 
@@ -177,17 +177,7 @@
     
       
       
-        
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/categories/#kakao" itemprop="item"><span itemprop="name">Kakao</span></a>
-          <meta itemprop="position" content="3" />
-        </li>
-        <span class="sep">/</span>
-      
-    
-      
-      
-        <li class="current">[CodingTest] 2019 카카오 신입 공채 1차 - 2번 실패율 문제 with Javascript</li>
+        <li class="current">[CodingTest] Algospot - Anagram 문제</li>
       
     
   </ol>
@@ -324,77 +314,165 @@
 
   <div class="archive">
     
-      <h1 id="page-title" class="page__title">[CodingTest] 2019 카카오 신입 공채 1차 - 2번 실패율 문제 with Javascript</h1>
+      <h1 id="page-title" class="page__title">[CodingTest] Algospot - Anagram 문제</h1>
     
     <br>
-<h2 id="오픈채팅방">오픈채팅방</h2>
-<ul>
-  <li><a href="https://www.welcomekakao.com/learn/courses/30/lessons/42889">문제 바로가기 링크</a></li>
-  <li><a href="http://tech.kakao.com/2018/09/21/kakao-blind-recruitment-for2019-round-1/">카카오의 설명 블로그</a>
-<br /></li>
-</ul>
+<!-- ## 설명
+각 문자열의 알파벳을 재배열하였을때 같은 단어가 되는 단어들.  
+<br>
+![Anagram - Wikipedia](https://upload.wikimedia.org/wikipedia/commons/3/33/Anagram_Listen_%3D_Silent.gif)
+### 예시
+tab - bat  
+github - hbuitg
 
-<h2 id="나의-첫답안">나의 첫답안</h2>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">N</span><span class="p">,</span> <span class="nx">stages</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kd">let</span> <span class="nx">st</span> <span class="o">=</span> <span class="nx">stages</span><span class="p">,</span> <span class="nx">stats</span> <span class="o">=</span> <span class="p">[];</span>
-  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">N</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">){</span> <span class="c1">// n</span>
-    <span class="kd">let</span> <span class="nx">selectedNumbers</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{};</span>
-    <span class="nx">st</span> <span class="o">=</span> <span class="nx">st</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">s</span><span class="p">)</span><span class="o">=&gt;</span><span class="p">{</span> <span class="c1">// n * n</span>
-      <span class="k">if</span><span class="p">(</span><span class="nx">s</span> <span class="o">==</span> <span class="nx">i</span><span class="p">)</span> <span class="nx">selectedNumbers</span><span class="o">++</span><span class="p">;</span>
-      <span class="k">else</span> <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
-    <span class="p">});</span>
-    <span class="nx">obj</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">i</span><span class="p">;</span>
-    <span class="nx">obj</span><span class="p">.</span><span class="nx">per</span> <span class="o">=</span> <span class="p">(</span><span class="nx">st</span><span class="p">.</span><span class="nx">length</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">?</span> <span class="mi">1</span> <span class="p">:</span> <span class="nx">selectedNumbers</span><span class="o">/</span><span class="nx">st</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
-    <span class="nx">stats</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span>
-  <span class="p">}</span>
-  <span class="nx">stats</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span><span class="o">=&gt;</span> <span class="nx">a</span><span class="p">.</span><span class="nx">per</span> <span class="o">-</span> <span class="nx">b</span><span class="p">.</span><span class="nx">per</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="p">?</span> <span class="o">-</span><span class="mi">1</span> <span class="p">:</span> <span class="mi">1</span><span class="p">)</span> <span class="c1">// n^2 + logN</span>
-  <span class="k">return</span> <span class="nx">stats</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">s</span> <span class="o">=&gt;</span> <span class="nx">s</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span> <span class="c1">// -&gt; O(n^2)</span>
-<span class="p">}</span>
-</code></pre></div></div>
+## 풀어본 문제
+- Algospot 문제
+- Baekjoon 문제
 
-<h2 id="나의-수정한-답안">나의 수정한 답안</h2>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">N</span><span class="p">,</span> <span class="nx">stages</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kd">let</span> <span class="nx">eaStats</span> <span class="o">=</span> <span class="p">{},</span> <span class="nx">perStats</span> <span class="o">=</span> <span class="p">[];</span>
+## Algospot 문제
+- [바로가기 링크](https://algospot.com/judge/problem/read/ANAGRAM)
 
-  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">el</span> <span class="k">of</span> <span class="nx">stages</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Array 인자값들의 갯수 통계를 내고 = easStats -&gt; n</span>
-    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">eaStats</span><span class="p">[</span><span class="nx">el</span><span class="p">])</span> <span class="nx">eaStats</span><span class="p">[</span><span class="nx">el</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="k">else</span> <span class="nx">eaStats</span><span class="p">[</span><span class="nx">el</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
-  <span class="p">}</span>
+## 예제 입력
 
-  <span class="kd">let</span> <span class="nx">stageUsers</span> <span class="o">=</span> <span class="nx">stages</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+```
+3
+weird wired
+apple angle
+apple elppa
+```
 
-  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">N</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">){</span> <span class="c1">// 갯수통계(eaStats)를 확률들의 통계(perStats)로 다시 변환하고 -&gt; 2n</span>
-    <span class="kd">let</span> <span class="nx">perStatsObj</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">eaStats</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="p">{</span>
-      <span class="nx">perStatsObj</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">i</span><span class="p">;</span>
-      <span class="nx">perStatsObj</span><span class="p">.</span><span class="nx">per</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-      <span class="nx">perStats</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">perStatsObj</span><span class="p">)</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-      <span class="nx">perStatsObj</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">i</span>
-      <span class="nx">perStatsObj</span><span class="p">.</span><span class="nx">per</span> <span class="o">=</span> <span class="nx">stageUsers</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">?</span> <span class="mi">1</span> <span class="p">:</span> <span class="nx">eaStats</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">/</span><span class="nx">stageUsers</span><span class="p">;</span>
-      <span class="nx">stageUsers</span> <span class="o">=</span> <span class="nx">stageUsers</span> <span class="o">-</span> <span class="nx">eaStats</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
-      <span class="nx">perStats</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">perStatsObj</span><span class="p">)</span>
+## 예제 출력
+
+```
+Yes
+No.
+Yes
+``` -->
+
+<h2 id="내가-작성한-답안">내가 작성한 답안</h2>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">v</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">inputs</span> <span class="o">=</span> <span class="nx">v</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">),</span> 
+        <span class="nx">inputsLength</span> <span class="o">=</span> <span class="nx">inputs</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">answer</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
+
+  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">inputsLength</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">elements</span> <span class="o">=</span> <span class="nx">inputs</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">split</span><span class="p">(</span><span class="s2">" "</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">elements</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="nx">elements</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="nx">answer</span> <span class="o">+=</span> <span class="s2">"No.</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+    <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">answer</span> <span class="o">+=</span> <span class="nx">elements</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">split</span><span class="p">(</span><span class="s2">""</span><span class="p">).</span><span class="nx">sort</span><span class="p">().</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">reducer</span><span class="p">)</span> <span class="o">==</span> <span class="nx">elements</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">split</span><span class="p">(</span><span class="s2">""</span><span class="p">).</span><span class="nx">sort</span><span class="p">().</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">accumulator</span><span class="p">,</span> <span class="nx">currentValue</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">accumulator</span> <span class="o">+</span> <span class="nx">currentValue</span><span class="p">)</span> <span class="p">?</span> <span class="s2">"YES</span><span class="se">\n</span><span class="s2">"</span> <span class="p">:</span> <span class="s2">"No.</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
     <span class="p">}</span>
   <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">answer</span>
+<span class="p">}</span>
 
-  <span class="nx">perStats</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span><span class="o">=&gt;</span> <span class="nx">a</span><span class="p">.</span><span class="nx">per</span> <span class="o">-</span> <span class="nx">b</span><span class="p">.</span><span class="nx">per</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="p">?</span> <span class="o">-</span><span class="mi">1</span> <span class="p">:</span> <span class="mi">1</span><span class="p">)</span> <span class="c1">// 확률들의 통계(perStats)로 다시 변환하고 -&gt; 2n + nlogN</span>
-  <span class="k">return</span> <span class="nx">perStats</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">s</span> <span class="o">=&gt;</span> <span class="nx">s</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span> <span class="c1">// -&gt; O(nlogN)</span>
+</code></pre></div></div>
+
+<h2 id="더-좋은-방식-찾기---onlogn-보다-낮은방법">더 좋은 방식 찾기 - O(NlogN) 보다 낮은방법</h2>
+
+<h2 id="baekjoon-문제---anagram-generater">Baekjoon 문제 - Anagram Generater</h2>
+<ul>
+  <li><a href="https://www.acmicpc.net/problem/6443">바로가기 링크</a></li>
+</ul>
+
+<!-- ## 입력값
+```
+3
+aabc
+aabcdd
+``` -->
+
+<h2 id="내가-작성한-답안-1">내가 작성한 답안</h2>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">v</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">inputs</span> <span class="o">=</span> <span class="nx">v</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">),</span> 
+        <span class="nx">inputsLength</span> <span class="o">=</span> <span class="nx">inputs</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">answers</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
+  
+  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">inputsLength</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// 여러줄의 단어들 반복</span>
+    <span class="kd">const</span> <span class="nx">strings</span> <span class="o">=</span> <span class="nx">inputs</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">split</span><span class="p">(</span><span class="s2">""</span><span class="p">),</span>
+          <span class="nx">stringsLength</span> <span class="o">=</span> <span class="nx">strings</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+    <span class="kd">let</span> <span class="nx">stringsStats</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">j</span><span class="o">&lt;</span><span class="nx">stringsLength</span><span class="p">;</span><span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// {a: 2, b:1, c: 1}</span>
+      <span class="k">if</span><span class="p">(</span><span class="nx">stringsStats</span><span class="p">[</span><span class="nx">strings</span><span class="p">[</span><span class="nx">j</span><span class="p">]])</span> <span class="nx">stringsStats</span><span class="p">[</span><span class="nx">strings</span><span class="p">[</span><span class="nx">j</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span>
+      <span class="k">else</span> <span class="nx">stringsStats</span><span class="p">[</span><span class="nx">strings</span><span class="p">[</span><span class="nx">j</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="p">}</span>
+
+    <span class="kd">let</span> <span class="nx">initArray</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span><span class="p">(</span><span class="nx">s</span> <span class="k">in</span> <span class="nx">stringsStats</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// [a,b,c]</span>
+      <span class="k">if</span><span class="p">(</span><span class="nx">stringsStats</span><span class="p">[</span><span class="nx">s</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="nx">initArray</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span>
+      <span class="k">else</span> <span class="k">continue</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="kd">let</span> <span class="nx">answer</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"initArray : "</span><span class="p">,</span> <span class="nx">initArray</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"stringsStats : "</span><span class="p">,</span> <span class="nx">stringsStats</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"reduceStrings : "</span><span class="p">,</span> <span class="nx">reduceStrings</span><span class="p">(</span><span class="nx">initArray</span><span class="p">,</span> <span class="nx">stringsStats</span><span class="p">,</span> <span class="nx">answer</span><span class="p">))</span>
+  <span class="p">}</span>
+  <span class="c1">// return answer</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">reduceStrings</span><span class="p">(</span><span class="nx">strings</span><span class="p">,</span> <span class="nx">stringsStats</span><span class="p">,</span> <span class="nx">answer</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">stringArray</span> <span class="o">=</span> <span class="p">[...</span><span class="nx">strings</span><span class="p">],</span>
+      <span class="nx">stats</span> <span class="o">=</span> <span class="p">{...</span><span class="nx">stringsStats</span><span class="p">};</span>
+
+  <span class="nx">stringArray</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">sa</span><span class="p">)</span><span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">newStringArray</span> <span class="o">=</span> <span class="p">[];</span> 
+    <span class="nx">answer</span> <span class="o">+=</span> <span class="nx">sa</span><span class="p">;</span>
+    <span class="nx">stats</span><span class="p">[</span><span class="nx">sa</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
+    
+    <span class="k">for</span><span class="p">(</span><span class="nx">s</span> <span class="k">in</span> <span class="nx">stats</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span><span class="p">(</span><span class="nx">stats</span><span class="p">[</span><span class="nx">s</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="nx">newStringArray</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"sa : "</span><span class="p">,</span> <span class="nx">sa</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"stringArray : "</span><span class="p">,</span> <span class="nx">stringArray</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"stats : "</span><span class="p">,</span> <span class="nx">stats</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"newStringArray : "</span><span class="p">,</span> <span class="nx">newStringArray</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"answer : "</span><span class="p">,</span> <span class="nx">answer</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"========="</span><span class="p">)</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">newStringArray</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="nx">reduceStrings</span><span class="p">(</span><span class="nx">newStringArray</span><span class="p">,</span> <span class="nx">stats</span><span class="p">,</span> <span class="nx">answer</span><span class="p">);</span>
+    <span class="k">else</span> <span class="p">(</span><span class="nx">answer</span> <span class="o">+=</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">);</span>
+  <span class="p">})</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h2 id="결과-비교">결과 비교</h2>
-<h4 class="text-center" style="width: 49%; display: inline-block; margin-bottom: 5px;"> 나의 첫답안 </h4>
-<h4 class="text-center" style="width: 49%; display: inline-block; margin-bottom: 5px;"> 나의 수정한 답안 </h4>
-<p><img style="width: 49%; display: inline-block;" src="/assets/images/kakao-failure-rate-1a-min.png" />
-<img style="width: 49%; display: inline-block;" src="/assets/images/kakao-failure-rate-2a-min.png" /></p>
+<h2 id="느낀점">느낀점</h2>
+<p>처음 anagram 문제를 접한것은 같이 js를 공부하던 친구가 회사면접에서 받은 질문에서 시작되었다.<br />
+막상 나도 “그때 나였더라면 제대로 풀 수 있었을까?” 라는 생각에 접하게되었다.<br />
+아마 Youtube에 올라온 구글 면접 예시 영상의 분위기 였을것 같다. <a href="https://www.youtube.com/watch?v=BF3FLDAzWxo">링크</a></p>
 
-<h2 id="공부해야할-자료">공부해야할 자료</h2>
-<p>sort 매서드는 merge sort라고 한다. <a href="https://www.quora.com/What-is-the-time-complexity-of-JavaScripts-sort-function">관련링크</a><br />
-다른 sort들의 특징과 장점을 봐야겠다.</p>
+<p>그다음 비슷한 문제가 어디있지 하며 찾은게 Algospot의 문제와 Backjoon 사이트의 문제였다.</p>
+
+<p>Algospot의 문제는 생각했을때 비교적 간단했다. 두 문자열이 주어지고 같은지 비교만 하면 되었다.<br />
+하지만 Backjoon 사이트의 아나그램 문제를 풀어보며 <strong><em>“내가 js를 잘 이해하고 있는건가?”</em></strong> 라는 생각이 들었다.</p>
+
+<p>Backjoon 사이트의 아나그램 문제는 <strong>하나의 문자열을 주고 그것에 해당하는 아나그램을 산출하라</strong>는 문제였다.<br />
+제한 조건은</p>
 <ul>
-  <li><a href="https://khan4019.github.io/front-end-Interview-Questions/sort.html">JS Interview Question</a></li>
-  <li><a href="https://dev.to/wangonya/sorting-algorithms-with-javascript-part-1-4aca">Sort Algorithms with Javascript</a></li>
+  <li>알파벳 순서대로 나열할것</li>
+  <li>대소문자 구분할것</li>
+  <li>입력받은 철자들 중 중복되는 철자들이 있을경우, 중복해서 출력할 수 있으나 하나만 출력하라. ex) google -&gt; ggoole이 하나만 출력</li>
 </ul>
+
+<h3 id="문자열-풀이방식">문자열 풀이방식</h3>
+<ol>
+  <li>받은 문자열을 array로 쪼개어 sorting하여 abc순으로 구성한다.</li>
+  <li>for문 재귀함수로 구성하여 n!로 문제를 해결</li>
+</ol>
+
+<p>이라고 생각했다. 하지만 이럴경우 중복되는 문자들이 있을때 적절하게 문제를 해결하지 못했다.<br />
+가령 [a,a,b,c]가 있을떄 첫번째 문자가 b가 나올경우 [a,a,c]가 남는다는 것이다.<br />
+a는 1개로 취급되어야하는데 2개로 취급된다는 것이다.</p>
+
+<p>내가 삽질을 하며 얻은 해결방법은</p>
+<ol>
+  <li>[a,a,b,c] 의 문자열을 루프를 돌때마다 하나씩 꺼내들고</li>
+  <li>{a:2, b:1, c:1}같은 형식의 객체로 루프를 돌때마다 문자열의 개수를 카운팅하고</li>
+  <li>카운팅한 객체들 중 0이 아닌 문자들을 배열에 담고[a,b,c]</li>
+  <li>1번을 다시 반복하며 배열에 문자가 하나도 없을때까지 반복한다.
+는 것이었다.</li>
+</ol>
+
+<p>하지만 이 루프를 돌며 반복하는 코드에서 스코프 문제가 발생했다.</p>
 
 <br>
 <br>
@@ -405,7 +483,7 @@
   
     <li>
       <a href="#2019">
-        <strong>2019</strong> <span class="taxonomy__count">16</span>
+        <strong>2019</strong> <span class="taxonomy__count">17</span>
       </a>
     </li>
   
@@ -494,7 +572,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/codingtest/dailyprogramming/Daily-Programming/" rel="permalink">[CodingTest] 벽안에 고인 빗물의 양
+        <a href="/codingtest/Daily-Programming/" rel="permalink">[CodingTest] 벽안에 고인 빗물의 양
 </a>
       
     </h2>
@@ -523,7 +601,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/codingtest/naver/Naver-Hackday-Test-1/" rel="permalink">[CodingTest] 2019 네이버 핵데이 코드테스트 문제1 with Javascript
+        <a href="/codingtest/Naver-Hackday-Test-1/" rel="permalink">[CodingTest] 2019 네이버 핵데이 코드테스트 문제1 with Javascript
 </a>
       
     </h2>
@@ -553,7 +631,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/codingtest/naver/Naver-Hackday-Test-3/" rel="permalink">[CodingTest] 2019 네이버 핵데이 코드테스트 문제3 with Javascript
+        <a href="/codingtest/Naver-Hackday-Test-3/" rel="permalink">[CodingTest] 2019 네이버 핵데이 코드테스트 문제3 with Javascript
 </a>
       
     </h2>
@@ -583,7 +661,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/codingtest/kakao/Kakao-failure-rate/" rel="permalink">[CodingTest] 2019 카카오 신입 공채 1차 - 2번 실패율 문제 with Javascript
+        <a href="/codingtest/Kakao-failure-rate/" rel="permalink">[CodingTest] 2019 카카오 신입 공채 1차 - 2번 실패율 문제 with Javascript
 </a>
       
     </h2>
@@ -698,7 +776,7 @@ if a &lt; b &lt; c :
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/codingtest/dailyprogramming/Daily-Programming-2/" rel="permalink">[CodingTest] i를 제외한 배열 요소들의 곱
+        <a href="/codingtest/Daily-Programming-2/" rel="permalink">[CodingTest] i를 제외한 배열 요소들의 곱
 </a>
       
     </h2>
@@ -763,7 +841,7 @@ if a &lt; b &lt; c :
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/codingtest/dailyprogramming/Daily-Programming-1/" rel="permalink">[CodingTest] 배열의 두 값을 합하여 k값 만들기
+        <a href="/codingtest/Daily-Programming-1/" rel="permalink">[CodingTest] 배열의 두 값을 합하여 k값 만들기
 </a>
       
     </h2>
@@ -773,7 +851,7 @@ if a &lt; b &lt; c :
 
 
 
-  4 분 소요
+  2 분 소요
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">문제
@@ -794,7 +872,7 @@ list라는 행렬과 k라는 자연수가 주어짐. list의 두 값을 합하�
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/codingtest/everydayprogramming/Every-Day-Programming-2/" rel="permalink">[CodingTest] 매일 프로그래밍 - 2019-03-26
+        <a href="/codingtest/Every-Day-Programming-2/" rel="permalink">[CodingTest] 매일 프로그래밍 - 2019-03-26
 </a>
       
     </h2>
@@ -824,7 +902,7 @@ list라는 행렬과 k라는 자연수가 주어짐. list의 두 값을 합하�
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/codingtest/everydayprogramming/Every-Day-Programming-1/" rel="permalink">[CodingTest] 매일 프로그래밍 - 피보나치 배열 2019-03-25
+        <a href="/codingtest/Every-Day-Programming-1/" rel="permalink">[CodingTest] 매일 프로그래밍 - 피보나치 배열 2019-03-25
 </a>
       
     </h2>
@@ -853,7 +931,7 @@ list라는 행렬과 k라는 자연수가 주어짐. list의 두 값을 합하�
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/codingtest/algospot/Algospot-anagram/" rel="permalink">[CodingTest] Algospot - Anagram 문제
+        <a href="/codingtest/Algospot-anagram/" rel="permalink">[CodingTest] Algospot - Anagram 문제
 </a>
       
     </h2>
@@ -912,6 +990,35 @@ function solution(record) {
   let accounts = [], events = [], answer = [];
 
     function setEn...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/Rectangle-empty-point/" rel="permalink">[CodingTest] 직사각형의 한점 좌표값 유추하기
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">문제
+
+</p>
   </article>
 </div>
 
@@ -1065,8 +1172,8 @@ function solution(record) {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://seunghyum.github.io/codingtest/kakao/Kakao-failure-rate/";  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = "/codingtest/kakao/Kakao-failure-rate"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      this.page.url = "https://seunghyum.github.io/codingtest/Algospot-anagram/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/codingtest/Algospot-anagram"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');
