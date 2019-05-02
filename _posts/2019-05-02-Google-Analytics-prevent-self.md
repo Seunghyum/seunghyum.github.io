@@ -24,7 +24,7 @@ comments: true
 1. 브라우저 확장프로그램
    - 설명 : 확장프로그램을 작동시켜 IP를 제외시킴.
    - 장점 : 가장 간단.
-   - 단점 : 반드시 extention을 작동시킨 이후에 홈페이지에 접근해야함. 모바일, 테블릿에서 쓰지 못할수 있음.
+   - 단점 : 모바일, 테블릿에서 쓰지 못할수 있음.
    - 추천 프로그램
      - [Google 웹로그 분석 차단 추가 기능(Google 제공)](https://chrome.google.com/webstore/detail/google-analytics-opt-out/fllaojicojecljbmefodhfapmkghcbnh/related?hl=ko)
      - [Block Yourself from Analytics](https://chrome.google.com/webstore/detail/block-yourself-from-analy/fadgflmigmogfionelcpalhohefbnehm?hl=ko)
