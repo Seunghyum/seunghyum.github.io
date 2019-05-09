@@ -2,7 +2,7 @@
 layout: posts
 title:  "[CodingTest] 벽안에 고인 빗물의 양"
 categories: [CodingTest]
-tags: [Javascript, BinarySearch, Set]
+tags: [DailyProgramming, Javascript, BinarySearch, Set]
 comments: true
 ---
 ## 문제
