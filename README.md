@@ -9,3 +9,6 @@
   - JEKYLL_ENV=production bundle exec jekyll serve  --livereload --draft
 - 빌드
   - JEKYLL_ENV=production bundle exec jekyll build
+
+## 배포 방식
+- 빌드 후 git commit & push
