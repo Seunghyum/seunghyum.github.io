@@ -329,7 +329,7 @@
     <br>
 <!-- https://drive.google.com/file/d/1ocHFdcRheMkTlRsOdNqLahxfhSesVnjT/view?usp=sharing -->
 
-<p>##느낀점</p>
+<h2 id="느낀점">느낀점</h2>
 
 <p>재귀함수 문제. 지문을 그대로 코드로 변경하면 풀 수 있는 문제였음. 재귀함수에서 break를 제대로 안해서 시간이 지체됨.</p>
 
@@ -346,16 +346,14 @@
   <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">s</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">){</span>
     <span class="k">if</span><span class="p">(</span><span class="nx">s</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">===</span> <span class="s2">"("</span><span class="p">)</span> <span class="nx">stats</span><span class="p">[</span><span class="s2">"("</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
     <span class="k">else</span> <span class="nx">stats</span><span class="p">[</span><span class="s2">")"</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
+
     <span class="k">if</span><span class="p">(</span><span class="nx">stats</span><span class="p">[</span><span class="s2">"("</span><span class="p">]</span> <span class="o">===</span> <span class="nx">stats</span><span class="p">[</span><span class="s2">")"</span><span class="p">])</span> <span class="p">{</span>
       <span class="kd">let</span> <span class="nx">u</span> <span class="o">=</span> <span class="nx">s</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span>
           <span class="nx">v</span> <span class="o">=</span> <span class="nx">s</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="nx">s</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="o">||</span> <span class="s2">""</span><span class="p">;</span>
-      <span class="k">if</span><span class="p">(</span><span class="nx">isRight</span><span class="p">(</span><span class="nx">u</span><span class="p">))</span> <span class="p">{</span>
-        <span class="nx">result</span> <span class="o">+=</span> <span class="nx">u</span> <span class="o">+</span> <span class="nx">filterText</span><span class="p">(</span><span class="nx">v</span><span class="p">)</span>
-      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="k">if</span><span class="p">(</span><span class="nx">v</span> <span class="o">!==</span> <span class="s2">""</span><span class="p">)</span> <span class="p">{</span>
-          <span class="nx">result</span> <span class="o">+=</span> <span class="s2">"("</span> <span class="o">+</span>  <span class="nx">filterText</span><span class="p">(</span><span class="nx">v</span><span class="p">)</span> <span class="o">+</span> <span class="s2">")"</span>
-        <span class="p">}</span>
-        <span class="nx">result</span> <span class="o">+=</span> <span class="nx">filterWrongString</span><span class="p">(</span><span class="nx">u</span><span class="p">)</span>
+      <span class="k">if</span><span class="p">(</span><span class="nx">isRight</span><span class="p">(</span><span class="nx">u</span><span class="p">))</span> <span class="nx">result</span> <span class="o">+=</span> <span class="nx">u</span> <span class="o">+</span> <span class="nx">filterText</span><span class="p">(</span><span class="nx">v</span><span class="p">)</span>
+      <span class="k">else</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">v</span> <span class="o">!==</span> <span class="s2">""</span><span class="p">)</span> <span class="nx">result</span> <span class="o">+=</span> <span class="s2">"("</span> <span class="o">+</span>  <span class="nx">filterText</span><span class="p">(</span><span class="nx">v</span><span class="p">)</span> <span class="o">+</span> <span class="s2">")"</span><span class="p">;</span>
+        <span class="nx">result</span> <span class="o">+=</span> <span class="nx">filterWrongString</span><span class="p">(</span><span class="nx">u</span><span class="p">);</span>
       <span class="p">}</span>
       <span class="k">break</span><span class="p">;</span>
     <span class="p">}</span>
@@ -364,15 +362,16 @@
 <span class="p">}</span>
   
 <span class="kd">function</span> <span class="nx">isRight</span><span class="p">(</span><span class="nx">u</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span><span class="p">(</span><span class="nx">u</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">")"</span><span class="p">)</span> <span class="k">return</span> <span class="kc">false</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">u</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">")"</span><span class="p">)</span> <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
   <span class="kd">let</span> <span class="nx">stats</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"("</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="s2">")"</span><span class="p">:</span><span class="mi">0</span><span class="p">};</span>
   <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">u</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">){</span>
     <span class="k">if</span><span class="p">(</span><span class="nx">u</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">===</span> <span class="s2">"("</span><span class="p">)</span> <span class="nx">stats</span><span class="p">[</span><span class="s2">"("</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
     <span class="k">else</span> <span class="nx">stats</span><span class="p">[</span><span class="s2">")"</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
   <span class="p">}</span>
-  <span class="k">if</span><span class="p">(</span><span class="nx">stats</span><span class="p">[</span><span class="s2">"("</span><span class="p">]</span> <span class="o">&lt;</span> <span class="nx">stats</span><span class="p">[</span><span class="s2">")"</span><span class="p">])</span> <span class="k">return</span> <span class="kc">false</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">stats</span><span class="p">[</span><span class="s2">"("</span><span class="p">]</span> <span class="o">&lt;</span> <span class="nx">stats</span><span class="p">[</span><span class="s2">")"</span><span class="p">])</span> <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
   <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
 <span class="p">}</span>
+
 <span class="kd">function</span> <span class="nx">filterWrongString</span><span class="p">(</span><span class="nx">u</span><span class="p">)</span> <span class="p">{</span>
   <span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="s2">""</span>
   <span class="k">if</span><span class="p">(</span><span class="nx">u</span><span class="p">.</span><span class="nx">length</span> <span class="o">!==</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
@@ -402,7 +401,7 @@
   
     <li>
       <a href="#2019">
-        <strong>2019</strong> <span class="taxonomy__count">19</span>
+        <strong>2019</strong> <span class="taxonomy__count">20</span>
       </a>
     </li>
   
@@ -505,6 +504,35 @@
   5 ways to exclude your own visits from Google Analytics
   How to exclude your own [dynamic] ip from Google Analytics
 
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/KaKao-Eat-Live/" rel="permalink">[CodingTest] 2019 카카오 신입 공채 1차 - 4번 무지의 먹방 라이브 문제 with Javascript
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">무지의 먹방 라이브
 
 </p>
   </article>

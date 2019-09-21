@@ -49,10 +49,11 @@ Brute Force 문제였다. Object Array로 풀수있는 방법 중 좋은 방식�
 
 <img src='/assets/images/posts/kakao/Eat-Live-solving-process1.png' style='max-width: 250px;'>
 
-정답들의 풀이 골격은
+내 정답들의 풀이 골격은 모두 다 해보는 Brute Force 알고리즘이다. 하지만 이렇게 하면 효율성 점수를 얻을 수 없다.
+
 1. food_times 배열을 값과 인덱스로 Object Array을 만들고
 2. 각 줄마다 값이 있는 것들만 측정해서 k값을 지워나가고
-3. k값을 
+3. k값이 0보다 클때 -1을 진행한다고 k=0이면 다음 요소로 넘어간다.
 
 <hr>
 
@@ -61,11 +62,11 @@ Brute Force 문제였다. Object Array로 풀수있는 방법 중 좋은 방식�
 ```python
 def solution(food_times, k):
     if sum(food_times) <= k: return -1
-    if len(food_times) > k: return k+1
+    if len(food_times) > k: return k+1ㅇ
     n = len(food_times)
     for i in range(n):
         food_times[i] = [food_times[i],i+1]
-    ft = sorted(food_times,key=lambda x:x[0])
+    ft = sorted(food_times,key=lambda x:x[0]) # 내림차순 정렬
     i,r=0,0
     while True:
         if k - (n-i)*(ft[i][0]-r) < 0:
@@ -82,6 +83,15 @@ def solution(food_times, k):
 
 <img src='/assets/images/posts/kakao/Eat-Live-result-python.png' style='max-width: 200px;'>
 
+### 주요 로직 설명
+
+- food_times를 내림차순으로 정렬하여 가장 먼저 다 먹을 음식들 기준으로 정렬한다. => ``` ft ```
+- ft를 순회하며(i += 1) 해당 시간만큼 남은 시간을 k(정전된시간)에 지속적으로 뺴준다. => ``` k -= (n-i)*(ft[i][0]-r) ```
+- r에는 축적되는 시간을 계속 저장해둔다. => ``` r += (ft[i][0]-r) ```
+
+<img src='/assets/images/posts/kakao/2019-04-30-KaKao-Eat-Live2.png' style='max-width: 500px;'>
+
+
 <hr>
 
 ## 파이썬 답안을 보고 수정한 자바스크립트 답안
@@ -96,7 +106,7 @@ function solution(food_times, k) {
     for(let i=0;n>i;i++) {
         food_times[i] = [food_times[i],i+1];
     }
-    let ft = food_times.sort((a, b) => a[0] - b[0]),
+    let ft = food_times.sort((a, b) => a[0] - b[0]), // 내림차순 정렬
         i = 0,
         r = 0;
     while(true) {
@@ -113,6 +123,7 @@ function solution(food_times, k) {
 ```
 
 ### 결과
+
 <img src='/assets/images/posts/kakao/Eat-Live-result-remake.png' style='max-width: 200px;'>
 
 <hr>

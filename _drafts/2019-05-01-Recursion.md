@@ -2,7 +2,7 @@
 layout: posts
 title:  "[Algorithm] 순환(Recursion) 알고리즘 공부"
 categories: [Algorithm]
-tags: [Recursion]
+tags: [Recursion, Java]
 comments: true
 ---
 
@@ -25,7 +25,7 @@ comments: true
 
 - 함수호출에 따른 [오버해드](https://ko.wikipedia.org/wiki/%EC%98%A4%EB%B2%84%ED%97%A4%EB%93%9C)가 있음. 그래서 반복문 보다 일반적으로 느림.
   - ex) 스택에 함수 / 매개변수 저장과 그에 따른 메모리 할당.
-- 종류처리에 오류가 있으면 시스템이 무한루프에 빠지게될수도 있음.
+- 종료처리에 오류가 있으면 시스템이 무한루프에 빠지게될수도 있음.
 
 ## 순환 알고리즘의 설계
 - 적어도 하나의 base case, 즉 순환되지 않고 종료되는 case가 있어야함. -> 무한루프 빠지지 않게.
