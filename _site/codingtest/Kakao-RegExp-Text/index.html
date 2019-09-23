@@ -9,38 +9,38 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[CodingTest] 2020 네이버 공채 코드테스트 문제 with Javascript - eveloper Dave</title>
-<meta name="description" content="2번```javascriptfunction solution(drum) {  let result = 0;  let currentPosition = {    x: 0,    y: 0  }">
+<!-- begin _includes/seo.html --><title>[CodingTest] 2020 카카오 신입 공채 1차 - 4번 정규표현식 문제 with Javascript - eveloper Dave</title>
+<meta name="description" content="">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko">
 <meta property="og:site_name" content="eveloper Dave">
-<meta property="og:title" content="[CodingTest] 2020 네이버 공채 코드테스트 문제 with Javascript">
-<meta property="og:url" content="https://seunghyum.github.io/codingtest/Naver-Offical-2020/">
+<meta property="og:title" content="[CodingTest] 2020 카카오 신입 공채 1차 - 4번 정규표현식 문제 with Javascript">
+<meta property="og:url" content="https://seunghyum.github.io/codingtest/Kakao-RegExp-Text/">
 
 
-  <meta property="og:description" content="2번```javascriptfunction solution(drum) {  let result = 0;  let currentPosition = {    x: 0,    y: 0  }">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2019-09-21T00:00:00+09:00">
+  <meta property="og:description" content="">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2019-09-20T00:00:00+09:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://seunghyum.github.io/codingtest/Naver-Offical-2020/">
+
+<link rel="canonical" href="https://seunghyum.github.io/codingtest/Kakao-RegExp-Text/">
 
 
 
@@ -177,7 +177,7 @@
     
       
       
-        <li class="current">[CodingTest] 2020 네이버 공채 코드테스트 문제 with Javascript</li>
+        <li class="current">[CodingTest] 2020 카카오 신입 공채 1차 - 4번 정규표현식 문제 with Javascript</li>
       
     
   </ol>
@@ -314,88 +314,46 @@
 
   <div class="archive">
     
-      <h1 id="page-title" class="page__title">[CodingTest] 2020 네이버 공채 코드테스트 문제 with Javascript</h1>
+      <h1 id="page-title" class="page__title">[CodingTest] 2020 카카오 신입 공채 1차 - 4번 정규표현식 문제 with Javascript</h1>
     
     <br>
-<p>2번</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">drum</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="kd">let</span> <span class="nx">currentPosition</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="na">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="na">y</span><span class="p">:</span> <span class="mi">0</span>
-  <span class="p">}</span>
+<!-- https://drive.google.com/file/d/1ocHFdcRheMkTlRsOdNqLahxfhSesVnjT/view?usp=sharing -->
 
-  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">x</span> <span class="o">&lt;</span> <span class="nx">drum</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">length</span><span class="p">;</span> <span class="nx">x</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">currentPosition</span><span class="p">.</span><span class="nx">x</span> <span class="o">=</span> <span class="nx">x</span><span class="p">;</span>
-    <span class="nx">currentPosition</span><span class="p">.</span><span class="nx">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="kd">let</span> <span class="nx">starCount</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">currentPosition</span><span class="p">.</span><span class="nx">x</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="nx">currentPosition</span><span class="p">.</span><span class="nx">y</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="k">return</span>
-    <span class="nx">loop</span><span class="p">:</span>
-      <span class="k">while</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">drum</span><span class="p">[</span><span class="nx">currentPosition</span><span class="p">.</span><span class="nx">y</span><span class="p">][</span><span class="nx">currentPosition</span><span class="p">.</span><span class="nx">x</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"#"</span><span class="p">)</span> <span class="nx">currentPosition</span><span class="p">.</span><span class="nx">y</span><span class="o">++</span><span class="p">;</span>
-        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">drum</span><span class="p">[</span><span class="nx">currentPosition</span><span class="p">.</span><span class="nx">y</span><span class="p">][</span><span class="nx">currentPosition</span><span class="p">.</span><span class="nx">x</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"&gt;"</span><span class="p">)</span> <span class="nx">currentPosition</span><span class="p">.</span><span class="nx">x</span><span class="o">++</span><span class="p">;</span>
-        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">drum</span><span class="p">[</span><span class="nx">currentPosition</span><span class="p">.</span><span class="nx">y</span><span class="p">][</span><span class="nx">currentPosition</span><span class="p">.</span><span class="nx">x</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"&lt;"</span><span class="p">)</span> <span class="nx">currentPosition</span><span class="p">.</span><span class="nx">x</span><span class="o">--</span><span class="p">;</span>
-        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">drum</span><span class="p">[</span><span class="nx">currentPosition</span><span class="p">.</span><span class="nx">y</span><span class="p">][</span><span class="nx">currentPosition</span><span class="p">.</span><span class="nx">x</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"*"</span><span class="p">)</span> <span class="p">{</span>
-          <span class="nx">starCount</span><span class="o">++</span><span class="p">;</span>
-          <span class="k">if</span> <span class="p">(</span><span class="nx">starCount</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="k">break</span> <span class="nx">loop</span><span class="p">;</span>
-          <span class="k">else</span> <span class="nx">currentPosition</span><span class="p">.</span><span class="nx">y</span><span class="o">++</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">currentPosition</span><span class="p">.</span><span class="nx">y</span> <span class="o">===</span> <span class="nx">drum</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
-          <span class="nx">result</span><span class="o">++</span><span class="p">;</span>
-          <span class="k">break</span> <span class="nx">loop</span><span class="p">;</span>
-        <span class="p">}</span>
+<h2 id="내가-작성한-답변">내가 작성한 답변</h2>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">words</span><span class="p">,</span> <span class="nx">queries</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">queries</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">reg</span><span class="p">,</span>
+        <span class="nx">q</span> <span class="o">=</span> <span class="nx">queries</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span>
+        <span class="nx">s</span> <span class="o">=</span> <span class="nx">q</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/</span><span class="se">\?</span><span class="sr">/g</span><span class="p">,</span><span class="s2">""</span><span class="p">);</span>
+
+    <span class="nx">result</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="nx">reg</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="s2">`</span><span class="p">${</span><span class="nx">s</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span> <span class="s2">"g"</span><span class="p">);</span>
+    
+    <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">j</span><span class="o">&lt;</span><span class="nx">words</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">let</span> <span class="nx">w</span> <span class="o">=</span> <span class="nx">words</span><span class="p">[</span><span class="nx">j</span><span class="p">];</span>
+
+      <span class="k">if</span><span class="p">(</span><span class="nx">w</span><span class="p">.</span><span class="nx">length</span> <span class="o">!==</span> <span class="nx">q</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+      <span class="k">if</span><span class="p">(</span><span class="nx">w</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="nx">reg</span><span class="p">))</span> <span class="p">{</span>
+        <span class="nx">result</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">+=</span><span class="mi">1</span><span class="p">;</span>
       <span class="p">}</span>
+    <span class="p">}</span>
   <span class="p">}</span>
-  <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+  <span class="k">return</span> <span class="nx">result</span>
 <span class="p">}</span>
-</code></pre></div></div>
 
-<p>3번 - 아는동생이 푼것</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">solution</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
-    <span class="n">answer</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">daegi</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">time</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
-    <span class="n">new_list</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="kd">let</span> <span class="nx">w</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"frodo"</span><span class="p">,</span> <span class="s2">"front"</span><span class="p">,</span> <span class="s2">"frost"</span><span class="p">,</span> <span class="s2">"frozen"</span><span class="p">,</span> <span class="s2">"frame"</span><span class="p">,</span> <span class="s2">"kakao"</span><span class="p">],</span>
+    <span class="nx">q</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"fro??"</span><span class="p">,</span> <span class="s2">"????o"</span><span class="p">,</span> <span class="s2">"fr???"</span><span class="p">,</span> <span class="s2">"fro???"</span><span class="p">,</span> <span class="s2">"pro?"</span><span class="p">,</span> <span class="s2">"?????"</span><span class="p">];</span>
     
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
-        <span class="n">new_data</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="n">strings</span> <span class="o">=</span> <span class="p">[</span><span class="s">'N'</span><span class="p">,</span> <span class="s">'time'</span><span class="p">,</span> <span class="s">'pages'</span><span class="p">]</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-            <span class="n">new_data</span><span class="p">[</span><span class="n">strings</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span> <span class="o">=</span> <span class="n">i</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
-        <span class="n">new_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_data</span><span class="p">)</span>
-        
-    <span class="n">success</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">empty_one</span> <span class="o">=</span> <span class="p">{</span><span class="s">'N'</span> <span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="s">'time'</span> <span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="s">'pages'</span> <span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">}</span>
-    <span class="n">present_one</span> <span class="o">=</span> <span class="n">empty_one</span>
-    
-    <span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span>
-        <span class="n">time</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">new_list</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
-            <span class="n">first</span> <span class="o">=</span> <span class="n">new_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-            <span class="c1"># 대기열에 추가
-</span>            <span class="k">if</span><span class="p">(</span><span class="n">time</span> <span class="o">==</span> <span class="n">first</span><span class="p">[</span><span class="s">'time'</span><span class="p">]):</span>
-                <span class="n">daegi</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">first</span><span class="p">)</span>
-                <span class="n">new_list</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-        <span class="c1"># 페이지순 정렬
-</span>        <span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">daegi</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
-            <span class="n">daegi</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">daegi</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">k</span><span class="p">:</span> <span class="n">k</span><span class="p">[</span><span class="s">'pages'</span><span class="p">])</span>
-            <span class="k">if</span><span class="p">(</span><span class="n">present_one</span><span class="p">[</span><span class="s">'N'</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-                <span class="n">present_one</span> <span class="o">=</span> <span class="n">daegi</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-                <span class="n">present_one</span><span class="p">[</span><span class="s">'end_time'</span><span class="p">]</span> <span class="o">=</span> <span class="n">time</span> <span class="o">+</span> <span class="n">present_one</span><span class="p">[</span><span class="s">'pages'</span><span class="p">]</span> <span class="o">-</span><span class="mi">1</span>
-                <span class="n">daegi</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-                
-        <span class="k">if</span><span class="p">(</span><span class="n">present_one</span><span class="p">[</span><span class="s">'N'</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-            <span class="k">continue</span>
-        <span class="k">elif</span><span class="p">(</span><span class="n">present_one</span><span class="p">[</span><span class="s">'end_time'</span><span class="p">]</span> <span class="o">==</span> <span class="n">time</span><span class="p">):</span>
-
-            <span class="n">success</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">present_one</span><span class="p">[</span><span class="s">'N'</span><span class="p">])</span>
-            <span class="n">present_one</span> <span class="o">=</span> <span class="n">empty_one</span>
-        <span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">success</span><span class="p">)</span> <span class="o">==</span> <span class="n">size</span><span class="p">):</span>
-            <span class="k">break</span>
-    <span class="n">answer</span> <span class="o">=</span> <span class="n">success</span>
-    <span class="k">return</span> <span class="n">answer</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`
+w = ["frodo", "front", "frost", "frozen", "frame", "kakao"], \n
+q = ["fro??", "????o", "fr???", "fro???", "pro?", "?????"] \n
+solution(w, q) -&gt; result : </span><span class="p">${</span><span class="nx">solution</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span> <span class="nx">q</span><span class="p">)}</span><span class="s2"> \n
+Must be [ 3, 4, 4, 1, 0, 5 ]. \n
+My answer is </span><span class="p">${</span><span class="nb">String</span><span class="p">(</span><span class="nx">solution</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span> <span class="nx">q</span><span class="p">))</span> <span class="o">==</span> <span class="nb">String</span><span class="p">([</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span> <span class="p">])</span> <span class="p">?</span> <span class="s2">"Right"</span> <span class="p">:</span> <span class="s2">"Wrong"</span><span class="p">}</span><span class="s2">
+`</span><span class="p">)</span>
 </code></pre></div></div>
 
 <br>
@@ -407,7 +365,7 @@
   
     <li>
       <a href="#2019">
-        <strong>2019</strong> <span class="taxonomy__count">21</span>
+        <strong>2019</strong> <span class="taxonomy__count">22</span>
       </a>
     </li>
   
@@ -434,7 +392,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/codingtest/Naver-Offical-2020/" rel="permalink">[CodingTest] 2020 네이버 공채 코드테스트 문제 with Javascript
+        <a href="/codingtest/Line-recruit-4/" rel="permalink">[CodingTest] 2020 라인 SW개발 DEVEL-UP 인턴십 코드테스트 4번
 </a>
       
     </h2>
@@ -447,14 +405,7 @@
   1 분 소요
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">2번
-```javascript
-function solution(drum) {
-  let result = 0;
-  let currentPosition = {
-    x: 0,
-    y: 0
-  }
+    <p class="archive__item-excerpt" itemprop="description">
 
 </p>
   </article>
@@ -470,7 +421,36 @@ function solution(drum) {
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/codingtest/kakao/Kakao-RegExp-Text/" rel="permalink">[CodingTest] 2020 카카오 신입 공채 1차 - 4번 정규표현식 문제 with Javascript
+        <a href="/codingtest/Line-recruit-1/" rel="permalink">[CodingTest] 2020 라인 SW개발 DEVEL-UP 인턴십 코드테스트 1번
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">1번 : 못품
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/Kakao-RegExp-Text/" rel="permalink">[CodingTest] 2020 카카오 신입 공채 1차 - 4번 정규표현식 문제 with Javascript
 </a>
       
     </h2>
@@ -499,7 +479,7 @@ function solution(drum) {
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/codingtest/kakao/Kakao-Text-Bracket/" rel="permalink">[CodingTest] 2020 카카오 신입 공채 1차 - 2번 괄호 문자열 정제 문제 with Javascript
+        <a href="/codingtest/Kakao-Text-Bracket/" rel="permalink">[CodingTest] 2020 카카오 신입 공채 1차 - 2번 괄호 문자열 정제 문제 with Javascript
 </a>
       
     </h2>
@@ -1219,8 +1199,8 @@ function solution(record) {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://seunghyum.github.io/codingtest/Naver-Offical-2020/";  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = "/codingtest/Naver-Offical-2020"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      this.page.url = "https://seunghyum.github.io/codingtest/Kakao-RegExp-Text/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/codingtest/Kakao-RegExp-Text"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');

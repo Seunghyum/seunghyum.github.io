@@ -1,8 +1,8 @@
 ---
 layout: posts
 title:  "[CodingTest] 2020 카카오 신입 공채 1차 - 2번 괄호 문자열 정제 문제 with Javascript"
-categories: [CodingTest, Kakao]
-tags: [Javascript, Kakao, Recursion]
+categories: [CodingTest]
+tags: [Javascript, Recursion]
 comments: true
 ---
 

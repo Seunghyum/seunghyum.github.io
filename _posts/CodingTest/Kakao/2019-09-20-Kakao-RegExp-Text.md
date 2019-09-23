@@ -1,8 +1,8 @@
 ---
 layout: posts
 title:  "[CodingTest] 2020 카카오 신입 공채 1차 - 4번 정규표현식 문제 with Javascript"
-categories: [CodingTest, Kakao]
-tags: [Javascript, Kakao]
+categories: [CodingTest]
+tags: [Javascript]
 comments: true
 ---
 

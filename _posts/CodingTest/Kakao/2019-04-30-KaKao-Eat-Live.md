@@ -2,7 +2,7 @@
 layout: posts
 title:  "[CodingTest] 2019 카카오 신입 공채 1차 - 4번 무지의 먹방 라이브 문제 with Javascript"
 categories: [CodingTest]
-tags: [Javascript, Kakao]
+tags: [Javascript]
 comments: true
 ---
 

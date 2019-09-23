@@ -2,7 +2,7 @@
 layout: posts
 title:  "[CodingTest] 2019 카카오 신입 공채 1차 - 1번 오픈채팅방 문제 with Javascript"
 categories: [CodingTest]
-tags: [Javascript, Kakao]
+tags: [Javascript]
 comments: true
 ---
 
