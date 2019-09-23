@@ -10,6 +10,8 @@ comments: true
 
 ## 5번 - Solved
 
+### 제출한 코드
+
 ```javascript
 process.stdin.setEncoding('utf8');
 process.stdin.on('data', data => {
@@ -36,4 +38,4 @@ process.stdin.on('data', data => {
 
 ### 소감
 
-조합 공식을 몰라서 팩토리얼 공식을 구글에서 찾아 팩토리얼로 품.
+팩토리얼 공식을 구글에서 찾아 팩토리얼로 품. 순열, 조합 문제를 코드로 처음 풀어봐서 개념 정리하고 접근 방법을 생각하는데 시간이 많이 듦.

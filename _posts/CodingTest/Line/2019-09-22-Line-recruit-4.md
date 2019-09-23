@@ -10,6 +10,8 @@ comments: true
 
 ## 4번 - Solved
 
+### 제출한 코드
+
 ```javascript
 process.stdin.setEncoding('utf8');
 process.stdin.on('data', data => {

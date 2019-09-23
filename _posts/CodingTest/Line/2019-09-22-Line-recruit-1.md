@@ -8,9 +8,9 @@ comments: true
 
 <!-- https://docs.google.com/document/d/1Agv0wWVtUVfxEsDiL2XNMTXW3VtOp4VdeJjA_V53BQQ/edit?usp=sharing -->
 
-## 1번 : Not Solved
+## 1번 : Solved
 
-### 제출한 답변
+### 제출한 코드
 
 ```javascript
 process.stdin.setEncoding('utf8');

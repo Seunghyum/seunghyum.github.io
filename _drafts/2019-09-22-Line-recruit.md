@@ -10,6 +10,8 @@ comments: true
 
 ## 2번 - 못품
 
+### 마지막까지 적은 답
+
 ```javascript
 process.stdin.setEncoding('utf8');
 process.stdin.on('data', data => {
@@ -92,26 +94,6 @@ process.stdin.on('data', data => {
   //         endTime = timeline[i][1] > endTime ? timeline[i][1] : endTime;
   //     }
   // }
-});
-```
-
-## 5번 - 품
-
-```javascript
-process.stdin.setEncoding('utf8');
-process.stdin.on('data', data => {
-  const n = data.split(/\n/),
-    a = n[0],
-    b = n[1],
-    field = a.split(" ").map(f => Number(f)),
-    position = b.split(" ").map(f => Number(f));
-  if (position[0] > field[0] || position[1] > field[1]) console.log("fail")
-  let answer = factorial(position[0] + position[1]) / (factorial(position[0]) * factorial(position[1]))
-  console.log(answer + "\n" + (position[0] + position[1]))
-
-  function factorial(n) {
-    return n ? n * factorial(n - 1) : 1;
-  }
 });
 ```
 
