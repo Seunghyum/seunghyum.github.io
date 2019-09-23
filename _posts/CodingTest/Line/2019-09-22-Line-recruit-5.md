@@ -1,6 +1,6 @@
 ---
 layout: posts
-title:  "[CodingTest] 2020 라인 SW개발 DEVEL-UP 인턴십 코드테스트 1번"
+title:  "[CodingTest] 2020 라인 SW개발 DEVEL-UP 인턴십 코드테스트 5번"
 categories: [CodingTest]
 tags: [Javascript, NaverHackDay]
 comments: true

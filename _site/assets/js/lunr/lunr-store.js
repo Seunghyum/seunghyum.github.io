@@ -114,7 +114,7 @@ var store = [{
         "tags": ["Javascript","NaverHackDay"],
         "url": "https://seunghyum.github.io/codingtest/Line-recruit-4/",
         "teaser":null},{
-        "title": "[CodingTest] 2020 라인 SW개발 DEVEL-UP 인턴십 코드테스트 1번",
+        "title": "[CodingTest] 2020 라인 SW개발 DEVEL-UP 인턴십 코드테스트 5번",
         "excerpt":"  5번 - Solved   process.stdin.setEncoding('utf8'); process.stdin.on('data', data =&gt; {   const n = data.split(/\\n/),     a = n[0],     b = n[1],     field = a.split(\" \").map(f =&gt; Number(f)),     position = b.split(\" \").map(f =&gt; Number(f));   if (position[0] &gt; field[0] || position[1] &gt; field[1]) console.log(\"fail\")   let answer = factorial(position[0] + position[1]) / (factorial(position[0]) * factorial(position[1]))    function factorial(n) {     return n ? n * factorial(n - 1) : 1;   }    console.log(answer + \"\\n\" + (position[0] + position[1])) });         소감   조합 공식을 몰라서 팩토리얼 공식을 구글에서 찾아 팩토리얼로 품.  ","categories": ["CodingTest"],
         "tags": ["Javascript","NaverHackDay"],
         "url": "https://seunghyum.github.io/codingtest/Line-recruit-5/",
