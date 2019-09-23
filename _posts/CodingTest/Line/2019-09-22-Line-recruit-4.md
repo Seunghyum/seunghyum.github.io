@@ -62,7 +62,6 @@ function solution(data) {
       maxLengthStartIndex=0;
 
   for (let i = 0; i < sits.length; i++) {
-    console.log("iiiiiii : ",i)
     if (sits[i] == "1") continue;
     else {
       let checkLength=0,
