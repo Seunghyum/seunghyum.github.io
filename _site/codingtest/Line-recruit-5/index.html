@@ -9,38 +9,38 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[GoogleAnalytics] 자기 자신의 활동기록 제외 (prevent recording myself) - eveloper Dave</title>
-<meta name="description" content="참고  5 ways to exclude your own visits from Google Analytics  How to exclude your own [dynamic] ip from Google Analytics">
+<!-- begin _includes/seo.html --><title>[CodingTest] 2020 라인 SW개발 DEVEL-UP 인턴십 코드테스트 1번 - eveloper Dave</title>
+<meta name="description" content="">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko">
 <meta property="og:site_name" content="eveloper Dave">
-<meta property="og:title" content="[GoogleAnalytics] 자기 자신의 활동기록 제외 (prevent recording myself)">
-<meta property="og:url" content="https://seunghyum.github.io/googleanalytics/Google-Analytics-prevent-self/">
+<meta property="og:title" content="[CodingTest] 2020 라인 SW개발 DEVEL-UP 인턴십 코드테스트 1번">
+<meta property="og:url" content="https://seunghyum.github.io/codingtest/Line-recruit-5/">
 
 
-  <meta property="og:description" content="참고  5 ways to exclude your own visits from Google Analytics  How to exclude your own [dynamic] ip from Google Analytics">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2019-05-02T00:00:00+09:00">
+  <meta property="og:description" content="">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2019-09-22T00:00:00+09:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://seunghyum.github.io/googleanalytics/Google-Analytics-prevent-self/">
+
+<link rel="canonical" href="https://seunghyum.github.io/codingtest/Line-recruit-5/">
 
 
 
@@ -169,7 +169,7 @@
       
         
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/categories/#googleanalytics" itemprop="item"><span itemprop="name">Googleanalytics</span></a>
+          <a href="/categories/#codingtest" itemprop="item"><span itemprop="name">Codingtest</span></a>
           <meta itemprop="position" content="2" />
         </li>
         <span class="sep">/</span>
@@ -177,7 +177,7 @@
     
       
       
-        <li class="current">[GoogleAnalytics] 자기 자신의 활동기록 제외 (prevent recording myself)</li>
+        <li class="current">[CodingTest] 2020 라인 SW개발 DEVEL-UP 인턴십 코드테스트 1번</li>
       
     
   </ol>
@@ -314,50 +314,39 @@
 
   <div class="archive">
     
-      <h1 id="page-title" class="page__title">[GoogleAnalytics] 자기 자신의 활동기록 제외 (prevent recording myself)</h1>
+      <h1 id="page-title" class="page__title">[CodingTest] 2020 라인 SW개발 DEVEL-UP 인턴십 코드테스트 1번</h1>
     
     <br>
-<h2 id="참고">참고</h2>
-<ul>
-  <li><a href="http://www.daniloaz.com/en/5-ways-to-exclude-your-own-visits-from-google-analytics/">5 ways to exclude your own visits from Google Analytics</a></li>
-  <li><a href="http://www.daniloaz.com/en/how-to-exclude-your-own-dynamic-ip-from-google-analytics/">How to exclude your own [dynamic] ip from Google Analytics</a></li>
-</ul>
+<!-- https://docs.google.com/document/d/1Agv0wWVtUVfxEsDiL2XNMTXW3VtOp4VdeJjA_V53BQQ/edit?usp=sharing -->
 
-<h2 id="괜찮은-방법들">괜찮은 방법들</h2>
-<ol>
-  <li>서버사이드나 백엔드 매서드
-    <ul>
-      <li>설명 : Dynamic DNS를 사용하여 IP를 제외. 과정이 복잡함. 회사에서 쓰기 적합.</li>
-      <li>장점 : 시스템으로 돌아감.</li>
-      <li>단점
-        <ul>
-          <li>복잡하다.</li>
-          <li>캐시를 사용설정 해놓으면 무의미. DDNS 설정을 한 이후에도 설정전에 사이트에 접속한적이 있다면 혹시라도 남아있을 캐시는 제거하는 것이 필요.</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Google Analytics 필터로 Public IP 제외
-    <ul>
-      <li>과정 : GA(Google Analytics) 대쉬보드 -&gt; 관리 클릭 -&gt; 보기의 필터 클릭 -&gt; 필터 추가</li>
-      <li>장점 : 고정 IP만 쓰는 장치 제외에 적합.</li>
-      <li>단점 : 유동 IP이면 무의미. (핸드폰, 노트북 등 네트워크 전용선을 쓰지 않고 옮겨다니며 와이파이를 쓰는 경우)</li>
-    </ul>
-  </li>
-  <li>브라우저 확장프로그램
-    <ul>
-      <li>설명 : 확장프로그램을 작동시켜 IP를 제외시킴.</li>
-      <li>장점 : 가장 간단.</li>
-      <li>단점 : 모바일, 테블릿에서 쓰지 못할수 있음.</li>
-      <li>추천 프로그램
-        <ul>
-          <li><a href="https://chrome.google.com/webstore/detail/google-analytics-opt-out/fllaojicojecljbmefodhfapmkghcbnh/related?hl=ko">Google 웹로그 분석 차단 추가 기능(Google 제공)</a></li>
-          <li><a href="https://chrome.google.com/webstore/detail/block-yourself-from-analy/fadgflmigmogfionelcpalhohefbnehm?hl=ko">Block Yourself from Analytics</a></li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ol>
+<h2 id="5번---solved">5번 - Solved</h2>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">process</span><span class="p">.</span><span class="nx">stdin</span><span class="p">.</span><span class="nx">setEncoding</span><span class="p">(</span><span class="s1">'utf8'</span><span class="p">);</span>
+<span class="nx">process</span><span class="p">.</span><span class="nx">stdin</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'data'</span><span class="p">,</span> <span class="nx">data</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">n</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="sr">/</span><span class="se">\n</span><span class="sr">/</span><span class="p">),</span>
+    <span class="nx">a</span> <span class="o">=</span> <span class="nx">n</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+    <span class="nx">b</span> <span class="o">=</span> <span class="nx">n</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+    <span class="nx">field</span> <span class="o">=</span> <span class="nx">a</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">" "</span><span class="p">).</span><span class="nx">map</span><span class="p">(</span><span class="nx">f</span> <span class="o">=&gt;</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">f</span><span class="p">)),</span>
+    <span class="nx">position</span> <span class="o">=</span> <span class="nx">b</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">" "</span><span class="p">).</span><span class="nx">map</span><span class="p">(</span><span class="nx">f</span> <span class="o">=&gt;</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">f</span><span class="p">));</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">position</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="nx">field</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">||</span> <span class="nx">position</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="nx">field</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"fail"</span><span class="p">)</span>
+  <span class="kd">let</span> <span class="nx">answer</span> <span class="o">=</span> <span class="nx">factorial</span><span class="p">(</span><span class="nx">position</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="nx">position</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="nx">factorial</span><span class="p">(</span><span class="nx">position</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">*</span> <span class="nx">factorial</span><span class="p">(</span><span class="nx">position</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+
+  <span class="kd">function</span> <span class="nx">factorial</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">n</span> <span class="p">?</span> <span class="nx">n</span> <span class="o">*</span> <span class="nx">factorial</span><span class="p">(</span><span class="nx">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">answer</span> <span class="o">+</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span> <span class="o">+</span> <span class="p">(</span><span class="nx">position</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="nx">position</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<center>
+<br />
+<img src="/assets/images/posts/Line/2020-Line-Recruit-5.png" style="max-width: 600px;" />
+</center>
+
+<h3 id="소감">소감</h3>
+
+<p>조합 공식을 몰라서 팩토리얼 공식을 구글에서 찾아 팩토리얼로 품.</p>
 
 <br>
 <br>
@@ -521,7 +510,7 @@
 
 
 
-  최대 1 분 소요
+  1 분 소요
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">
@@ -1231,8 +1220,8 @@ function solution(record) {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://seunghyum.github.io/googleanalytics/Google-Analytics-prevent-self/";  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = "/googleanalytics/Google-Analytics-prevent-self"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      this.page.url = "https://seunghyum.github.io/codingtest/Line-recruit-5/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/codingtest/Line-recruit-5"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');
