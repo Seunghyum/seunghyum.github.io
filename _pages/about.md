@@ -13,11 +13,19 @@ gallery_cancer:
   - url: /assets/images/about/Cancer/3.png
     image_path: /assets/images/about/Cancer/3.png
 
-gallery_fineDust:
-  - url: /assets/images/about/fineDust1.png
-    image_path: /assets/images/about/fineDust1.png
-  - url: /assets/images/about/fineDust2.png
-    image_path: /assets/images/about/fineDust2.png
+gallery_FineDust:
+  - url: /assets/images/about/FineDust/0.png
+    image_path: /assets/images/about/FineDust/0.png
+  - url: /assets/images/about/FineDust/1.png
+    image_path: /assets/images/about/FineDust/1.png
+  - url: /assets/images/about/FineDust/2.png
+    image_path: /assets/images/about/FineDust/2.png
+  - url: /assets/images/about/FineDust/3.png
+    image_path: /assets/images/about/FineDust/3.png
+  - url: /assets/images/about/FineDust/4.png
+    image_path: /assets/images/about/FineDust/4.png
+  - url: /assets/images/about/FineDust/5.png
+    image_path: /assets/images/about/FineDust/5.png
 
 gallery_DKU:
   - url: /assets/images/about/DKU/home5.png
@@ -160,7 +168,7 @@ gallery_Dankookie:
     - 실시간 미세먼지 데이터 : 공공데이터포털 실시간 미세먼지 API
     - 시각화 라이브러리 : D3.js, Billboard.js, chart.js, chartist.js
 
-{% include gallery id="gallery_fineDust" %}
+{% include gallery id="gallery_FineDust" %}
 
 <br>
 
