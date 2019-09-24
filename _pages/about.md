@@ -3,6 +3,32 @@ layout: archive
 permalink: /about/
 title: "About Developer Dave"
 author_profile: true
+gallery_cancer:
+  - url: /assets/images/about/cancer1.png
+    image_path: /assets/images/about/cancer1.png
+    alt: "지도화면"
+    title: "지도화면"
+  - url: /assets/images/about/cancer2.png
+    image_path: /assets/images/about/cancer2.png
+    alt: "시도 클릭시 지도화면"
+    title: "시도 클릭시 지도화면"
+  - url: /assets/images/about/cancer3.png
+    image_path: /assets/images/about/cancer3.png
+    alt: "시군구 클릭시 지도화면"
+    title: "시군구 클릭시 지도화면"
+  - url: /assets/images/about/cancer4.png
+    image_path: /assets/images/about/cancer4.png
+    alt: "데이터 조회 페이지"
+    title: "데이터 조회 페이지"
+gallery_fineDust:
+  - url: /assets/images/about/fineDust1.png
+    image_path: /assets/images/about/fineDust1.png
+    alt: "지도화면"
+    title: "지도화면"
+  - url: /assets/images/about/fineDust2.png
+    image_path: /assets/images/about/fineDust2.png
+    alt: "시도 클릭시 지도화면"
+    title: "시도 클릭시 지도화면"
 ---
 
 ## 학력
@@ -82,6 +108,10 @@ author_profile: true
     - 시각화 라이브러리 : D3.js, Billboard.js, chart.js, chartist.js
     - 국립암센터 IDC서버 설정 상 내부 Apach서버와 별도로 배포서버에 웹서버가 필요하여 익숙한 Nginx를 도입하게 되었음.
 
+
+{% include gallery id="gallery_cancer" layout="half" %}
+
+
   - ### <서울대학교산학협력단> 미세먼지 대기건강지수 웹 페이지 개발
     - 담당업무 : 풀스택 개발. 지도 위주의  데이터 시각화. [링크](https://ncrs.cancer.go.kr/csgis)
     - 백엔드 : Node.js
@@ -93,15 +123,7 @@ author_profile: true
     - 실시간 미세먼지 데이터 : 공공데이터포털 실시간 미세먼지 API
     - 시각화 라이브러리 : D3.js, Billboard.js, chart.js, chartist.js
 
-
-<!-- | <center>Company</center> | <center>Project</center> | <center>Role</center> | <center>Detail</center> |
-|:--------:|:--------:|:--------|:--------|
-| 서울시금천<br>직장맘지원센터 | 희망별빛 캠페인 페이지 | [Full Stack](#){: .btn .btn--danger} | 전체 담당. 간단한 원페이지 |
-| 한국백혈병<br>어린이재단 | 금천직장맘 홈페이지 | [Full Stack](#){: .btn .btn--danger} | 전체 담당. 커뮤니티 게시판 전반적인 기능 + 상담기능 + 관리자 페이지  |
-| 언론재단 | 뉴스트러스트 프로젝트 1차년도 웹 페이지 | [Full Stack](#){: .btn .btn--danger} | 데이터 가공 코어 개발은 시니어 개발자분이 담당. 기본적인 데이터 가공 + Read기능 위주의 홈페이지 |
-| 언론재단 | 뉴스트러스트 프로젝트 2차년도 웹 페이지 | [Frontend](#){: .btn .btn--info} | 데이터 가공 코어 개발은 시니어 개발자분이 담당. 가공한 데이터 시각화. Read 기능 위주의 홈페이지. 설문조사 페이지 제작 |
-| 서울대학교<br>산학협력단 | 미세먼지 대기건강지수 웹 페이지 | [Full Stack](#){: .btn .btn--danger} | 전체 담당. 지도 위주의  데이터 시각화 |
-| 국립암센터 | 암발생 지리정보 웹 페이지 | [Full Stack](#){: .btn .btn--danger} | 전체 담당. 지도 + 차트를 통한 데이터 시각화, 클라이언트의 IDC의 서버 세팅 규정에 따라 서버 세팅. <br> **배포 URL** : [https://ncrs.cancer.go.kr/csgis](https://ncrs.cancer.go.kr/csgis) | -->
+{% include gallery id="gallery_fineDust" %}
 
 <br>
 
