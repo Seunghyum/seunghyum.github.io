@@ -4,31 +4,20 @@ permalink: /about/
 title: "About Developer Dave"
 author_profile: true
 gallery_cancer:
-  - url: /assets/images/about/cancer1.png
-    image_path: /assets/images/about/cancer1.png
-    alt: "지도화면"
-    title: "지도화면"
-  - url: /assets/images/about/cancer2.png
-    image_path: /assets/images/about/cancer2.png
-    alt: "시도 클릭시 지도화면"
-    title: "시도 클릭시 지도화면"
-  - url: /assets/images/about/cancer3.png
-    image_path: /assets/images/about/cancer3.png
-    alt: "시군구 클릭시 지도화면"
-    title: "시군구 클릭시 지도화면"
-  - url: /assets/images/about/cancer4.png
-    image_path: /assets/images/about/cancer4.png
-    alt: "데이터 조회 페이지"
-    title: "데이터 조회 페이지"
+  - url: /assets/images/about/Cancer/0.png
+    image_path: /assets/images/about/Cancer/0.png
+  - url: /assets/images/about/Cancer/1.png
+    image_path: /assets/images/about/Cancer/1.png
+  - url: /assets/images/about/Cancer/2.png
+    image_path: /assets/images/about/Cancer/2.png
+  - url: /assets/images/about/Cancer/3.png
+    image_path: /assets/images/about/Cancer/3.png
+
 gallery_fineDust:
   - url: /assets/images/about/fineDust1.png
     image_path: /assets/images/about/fineDust1.png
-    alt: "지도화면"
-    title: "지도화면"
   - url: /assets/images/about/fineDust2.png
     image_path: /assets/images/about/fineDust2.png
-    alt: "시도 클릭시 지도화면"
-    title: "시도 클릭시 지도화면"
 
 gallery_DKU:
   - url: /assets/images/about/DKU/home5.png
@@ -103,7 +92,6 @@ gallery_Dankookie:
 - 사용해본 저장소 : Github, GitLab, BitBucket
 
 ## 협업툴 
-- 협업 툴
   - Slack, 잔디
   - Trello
   - Google (Drive, Hangout, Mail..)
@@ -187,7 +175,7 @@ gallery_Dankookie:
       - 지식 : MVC. 모델
       - Skill : Ruby On Rails, HTML&CSS, jQuery, MySQL, AWS EC2/S3, GitHub
     - 깃헙 주소 : [https://github.com/Seunghyum/Taxiple-backup](https://github.com/Seunghyum/Taxiple-backup)
-    - 
+
 <center>
   <img src="/assets/images/about/taxiple.jpg" style="max-width: 150px;" />
 </center>

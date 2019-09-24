@@ -7,6 +7,10 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-.image-popup {
+.image-popup img {
   border: 1px solid silver;
+}
+
+.third {
+  height: 100%;
 }
