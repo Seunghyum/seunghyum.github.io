@@ -82,7 +82,7 @@ author_profile: true
     - 시각화 라이브러리 : D3.js, Billboard.js, chart.js, chartist.js
     - 국립암센터 IDC서버 설정 상 내부 Apach서버와 별도로 배포서버에 웹서버가 필요하여 익숙한 Nginx를 도입하게 되었음.
 
-  - ### <서울대학교 산학협력단> 미세먼지 대기건강지수 웹 페이지 개발
+  - ### <서울대학교산학협력단> 미세먼지 대기건강지수 웹 페이지 개발
     - 담당업무 : 풀스택 개발. 지도 위주의  데이터 시각화. [링크](https://ncrs.cancer.go.kr/csgis)
     - 백엔드 : Node.js
     - 프론트엔드 : Vue.js
@@ -157,7 +157,7 @@ author_profile: true
         - <서울대학교산학협력단> 미세먼지 대기건강지수 웹 페이지
         - <국립암센터> 암발생 지리정보 웹 페이지
       - 깃헙 주소 : [https://github.com/Seunghyum/R-seoul_dust_map](https://github.com/Seunghyum/R-seoul_dust_map)
-    - 3) 본인이 공헌한 점 : 풀스택 개발.
+    - 본인이 공헌한 점 : 풀스택 개발.
     - 사용한 Skill 또는 지식 : Shiny app(R), HTML&CSS, jQuery, D3.js, SQLite, AWS EC2, Docker, Bitbucket
 
   - ### 단쿠키(단국대 커뮤니티)
@@ -169,6 +169,7 @@ author_profile: true
       - 지식 : Monorepo(Yarn workspace), AWS VPC, 
       - Skill : Node.js, Vue.js, Vuex, Yarn, HTML&CSS(SCSS), MongoDB
     - 서비스 주소 : [https://www.dankookie.com](https://www.dankookie.com)
+
   - ### 범죄지도
     - 토이 프로젝트
     - 진행기간 : 2019년
