@@ -8,7 +8,7 @@ comments: true
 
 <!-- https://docs.google.com/document/d/1Agv0wWVtUVfxEsDiL2XNMTXW3VtOp4VdeJjA_V53BQQ/edit?usp=sharing -->
 
-## 2번 - 못품
+## 2번 - Not Solved
 
 ### 마지막까지 적은 답
 
@@ -58,7 +58,7 @@ process.stdin.on('data', data => {
 
 <hr>
 
-## 3번 - 못품
+## 3번 - Not Solved
 
 ```javascript
 process.stdin.setEncoding('utf8');
@@ -91,7 +91,7 @@ process.stdin.on('data', data => {
 });
 ```
 
-## 6번 - X
+## 6번 - Not Solved
 
 ```javascript
 ```
