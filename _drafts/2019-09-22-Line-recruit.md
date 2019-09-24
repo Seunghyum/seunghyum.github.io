@@ -26,29 +26,23 @@ process.stdin.on('data', data => {
     else stats[numbers[i]] = 0
   }
 
-
   for (let i = 0; i < numbers.length; i++) {
     let v = 0;
     loop:
-      for (let j = 1; j < numbers.length - i; j++) {
-        if (i == 0 && numbers[0] == '0') continue;
-        console.log("aa : ", k - factorial(numbers.length - j))
-        k = k - factorial(numbers.length - j)
-        if (k) < 0) break loop;
-    else v++;
+    for (let j = 1; j < numbers.length - i; j++) {
+      if (i == 0 && numbers[0] == '0') continue;
+      k = k - factorial(numbers.length - j)
+      if (k) < 0) break loop;
+      else v++;
+    }
+    stats[i] = v
   }
-  stats[i] = v
-}
 
-console.log("stats : ", stats)
+  function factorial(n) {
+    return n ? n * factorial(n - 1) : 1;
+  }
 
-console.log("numbers : ", numbers)
-
-function factorial(n) {
-  return n ? n * factorial(n - 1) : 1;
-}
-
-// console.log(a + b);
+  // console.log(a + b);
 });
 ```
 
