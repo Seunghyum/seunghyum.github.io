@@ -29,6 +29,54 @@ gallery_fineDust:
     image_path: /assets/images/about/fineDust2.png
     alt: "시도 클릭시 지도화면"
     title: "시도 클릭시 지도화면"
+
+gallery_DKU:
+  - url: /assets/images/about/DKU/home5.png
+    image_path: /assets/images/about/DKU/home5.png
+  - url: /assets/images/about/DKU/detail_lecture.png
+    image_path: /assets/images/about/DKU/detail_lecture.png
+  - url: /assets/images/about/DKU/estimate_lecture.png
+    image_path: /assets/images/about/DKU/estimate_lecture.png
+  - url: /assets/images/about/DKU/list_post.png
+    image_path: /assets/images/about/DKU/list_post.png
+  - url: /assets/images/about/DKU/read_post.png
+    image_path: /assets/images/about/DKU/read_post.png
+  - url: /assets/images/about/DKU/write_post.png
+    image_path: /assets/images/about/DKU/write_post.png
+  - url: /assets/images/about/DKU/comment_post.png
+    image_path: /assets/images/about/DKU/comment_post.png
+  - url: /assets/images/about/DKU/search_inactus_book.png
+    image_path: /assets/images/about/DKU/search_inactus_book.png
+  - url: /assets/images/about/DKU/professor101_list.png
+    image_path: /assets/images/about/DKU/professor101_list.png
+  - url: /assets/images/about/DKU/professor101_list3.png
+    image_path: /assets/images/about/DKU/professor101_list3.png
+  - url: /assets/images/about/DKU/professor101_rank.png
+    image_path: /assets/images/about/DKU/professor101_rank.png
+  - url: /assets/images/about/DKU/booking.png
+    image_path: /assets/images/about/DKU/booking.png
+  - url: /assets/images/about/DKU/rehearsal-min.png
+    image_path: /assets/images/about/DKU/rehearsal-min.png
+
+gallery_Locker:
+  - url: /assets/images/about/Locker/0.png
+    image_path: /assets/images/about/Locker/0.png
+  - url: /assets/images/about/Locker/1.png
+    image_path: /assets/images/about/Locker/1.png
+  - url: /assets/images/about/Locker/2.png
+    image_path: /assets/images/about/Locker/2.png
+  - url: /assets/images/about/Locker/3.png
+    image_path: /assets/images/about/Locker/3.png
+  - url: /assets/images/about/Locker/4.png
+    image_path: /assets/images/about/Locker/4.png
+  - url: /assets/images/about/Locker/5.png
+    image_path: /assets/images/about/Locker/5.png
+
+gallery_Dankookie:
+  - url: /assets/images/about/Dankookie/home.png
+    image_path: /assets/images/about/Dankookie/home.png
+  - url: /assets/images/about/Dankookie/0.png
+    image_path: /assets/images/about/Dankookie/0.png
 ---
 
 ## 학력
@@ -39,6 +87,7 @@ gallery_fineDust:
 
 ## 기술 스택
 
+아래는 네이버 지원서 준비과정에서 알게된 스킬의 실력을 자가체크하는 기준입니다. 합리적이라고 생각하여 가져왔습니다
 > [초급](#){: .btn .btn--small .btn--success} 구체적으로는 잘 모르지만, 기본적인 지식과 경험은 가지고 있음<br>
 > [중급](#){: .btn .btn--small .btn--info} 중간 규모 프로그램 및 시스템을 개발할 수 있으며, 주요 이슈 트러블슈팅을 할 수 있을 정도로 내부구조에 대해 이해하고 있음<br>
 > [고급](#){: .btn .btn--small .btn--danger} 대규모 프로그램 및 시스템을 참고사항(책/인터넷) 없이 개발할 수 있으며, 일반적이지 않은 난해한 부분도 일부 참고를 통해 개발할 수 있음 
@@ -138,16 +187,10 @@ gallery_fineDust:
       - 지식 : MVC. 모델
       - Skill : Ruby On Rails, HTML&CSS, jQuery, MySQL, AWS EC2/S3, GitHub
     - 깃헙 주소 : [https://github.com/Seunghyum/Taxiple-backup](https://github.com/Seunghyum/Taxiple-backup)
-
-  - ### 단국대 커뮤니티 디쿠(DKU)
-    - 토이 프로젝트
-    - 진행기간 : 2016년
-    - 주요내용 : 단국대 커뮤니티 만들기 프로젝트. 강의평가, CRUD 게시판, 교수 인기투표, 학교 홈페이지 크롤링
-    - 본인이 공헌한 점 : 풀스택 개발.
-    - 사용한 Skill 또는 지식 : 
-      - 지식 : MVC 모델
-      - Skill : Ruby On Rails, HTML&CSS, jQuery, MySQL, AWS EC2/S3, GitHub
-    - 깃헙 주소 : [https://github.com/Seunghyum/Dku-dankook_community_service](https://github.com/Seunghyum/Dku-dankook_community_service)
+    - 
+<center>
+  <img src="/assets/images/about/taxiple.jpg" style="max-width: 150px;" />
+</center>
 
   - ### 수원도서관 크롤링
     - 토이 프로젝트
@@ -168,6 +211,20 @@ gallery_fineDust:
       - 지식 : MVC 모델, Queue
       - Skill : Ruby On Rails, HTML&CSS, jQuery, MySQL, AWS EC2/S3, GitHub
     - 깃헙 주소 : [https://github.com/Seunghyum/DKU-IBA-locker-booking-backup](https://github.com/Seunghyum/DKU-IBA-locker-booking-backup)
+
+{% include gallery id="gallery_Locker" %}
+
+  - ### 단국대 커뮤니티 디쿠(DKU)
+    - 토이 프로젝트
+    - 진행기간 : 2017년
+    - 주요내용 : 단국대 커뮤니티 만들기 프로젝트. 강의평가, CRUD 게시판, 교수 인기투표, 학교 홈페이지 크롤링
+    - 본인이 공헌한 점 : 풀스택 개발.
+    - 사용한 Skill 또는 지식 : 
+      - 지식 : MVC 모델
+      - Skill : Ruby On Rails, HTML&CSS, jQuery, MySQL, AWS EC2/S3, GitHub
+    - 깃헙 주소 : [https://github.com/Seunghyum/Dku-dankook_community_service](https://github.com/Seunghyum/Dku-dankook_community_service)
+
+{% include gallery id="gallery_DKU" %}
 
   - ### 서울시 미세먼지 지도시각화
     - 토이 프로젝트
@@ -191,6 +248,8 @@ gallery_fineDust:
       - 지식 : Monorepo(Yarn workspace), AWS VPC, 
       - Skill : Node.js, Vue.js, Vuex, Yarn, HTML&CSS(SCSS), MongoDB
     - 서비스 주소 : [https://www.dankookie.com](https://www.dankookie.com)
+
+{% include gallery id="gallery_Dankookie" %}
 
   - ### 범죄지도
     - 토이 프로젝트
