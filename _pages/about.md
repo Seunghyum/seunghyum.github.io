@@ -4,76 +4,76 @@ permalink: /about/
 title: "About Developer Dave"
 author_profile: true
 gallery_cancer:
-  - url: /assets/images/about/Cancer/0.png
-    image_path: /assets/images/about/Cancer/0.png
-  - url: /assets/images/about/Cancer/1.png
-    image_path: /assets/images/about/Cancer/1.png
-  - url: /assets/images/about/Cancer/2.png
-    image_path: /assets/images/about/Cancer/2.png
-  - url: /assets/images/about/Cancer/3.png
-    image_path: /assets/images/about/Cancer/3.png
+  - url: /assets/images/about/Cancer/0-min.png
+    image_path: /assets/images/about/Cancer/0-min.png
+  - url: /assets/images/about/Cancer/1-min.png
+    image_path: /assets/images/about/Cancer/1-min.png
+  - url: /assets/images/about/Cancer/2-min.png
+    image_path: /assets/images/about/Cancer/2-min.png
+  - url: /assets/images/about/Cancer/3-min.png
+    image_path: /assets/images/about/Cancer/3-min.png
 
 gallery_FineDust:
-  - url: /assets/images/about/FineDust/0.png
-    image_path: /assets/images/about/FineDust/0.png
-  - url: /assets/images/about/FineDust/1.png
-    image_path: /assets/images/about/FineDust/1.png
-  - url: /assets/images/about/FineDust/2.png
-    image_path: /assets/images/about/FineDust/2.png
-  - url: /assets/images/about/FineDust/3.png
-    image_path: /assets/images/about/FineDust/3.png
-  - url: /assets/images/about/FineDust/4.png
-    image_path: /assets/images/about/FineDust/4.png
-  - url: /assets/images/about/FineDust/5.png
-    image_path: /assets/images/about/FineDust/5.png
+  - url: /assets/images/about/FineDust/0-min.png
+    image_path: /assets/images/about/FineDust/0-min.png
+  - url: /assets/images/about/FineDust/1-min.png
+    image_path: /assets/images/about/FineDust/1-min.png
+  - url: /assets/images/about/FineDust/2-min.png
+    image_path: /assets/images/about/FineDust/2-min.png
+  - url: /assets/images/about/FineDust/3-min.png
+    image_path: /assets/images/about/FineDust/3-min.png
+  - url: /assets/images/about/FineDust/4-min.png
+    image_path: /assets/images/about/FineDust/4-min.png
+  - url: /assets/images/about/FineDust/5-min.png
+    image_path: /assets/images/about/FineDust/5-min.png
 
 gallery_DKU:
-  - url: /assets/images/about/DKU/home5.png
-    image_path: /assets/images/about/DKU/home5.png
-  - url: /assets/images/about/DKU/detail_lecture.png
-    image_path: /assets/images/about/DKU/detail_lecture.png
-  - url: /assets/images/about/DKU/estimate_lecture.png
-    image_path: /assets/images/about/DKU/estimate_lecture.png
-  - url: /assets/images/about/DKU/list_post.png
-    image_path: /assets/images/about/DKU/list_post.png
-  - url: /assets/images/about/DKU/read_post.png
-    image_path: /assets/images/about/DKU/read_post.png
-  - url: /assets/images/about/DKU/write_post.png
-    image_path: /assets/images/about/DKU/write_post.png
-  - url: /assets/images/about/DKU/comment_post.png
-    image_path: /assets/images/about/DKU/comment_post.png
-  - url: /assets/images/about/DKU/search_inactus_book.png
-    image_path: /assets/images/about/DKU/search_inactus_book.png
-  - url: /assets/images/about/DKU/professor101_list.png
-    image_path: /assets/images/about/DKU/professor101_list.png
-  - url: /assets/images/about/DKU/professor101_list3.png
-    image_path: /assets/images/about/DKU/professor101_list3.png
-  - url: /assets/images/about/DKU/professor101_rank.png
-    image_path: /assets/images/about/DKU/professor101_rank.png
-  - url: /assets/images/about/DKU/booking.png
-    image_path: /assets/images/about/DKU/booking.png
-  - url: /assets/images/about/DKU/rehearsal-min.png
-    image_path: /assets/images/about/DKU/rehearsal-min.png
+  - url: /assets/images/about/DKU/home5-min.png
+    image_path: /assets/images/about/DKU/home5-min.png
+  - url: /assets/images/about/DKU/detail_lecture-min.png
+    image_path: /assets/images/about/DKU/detail_lecture-min.png
+  - url: /assets/images/about/DKU/estimate_lecture-min.png
+    image_path: /assets/images/about/DKU/estimate_lecture-min.png
+  - url: /assets/images/about/DKU/list_post-min.png
+    image_path: /assets/images/about/DKU/list_post-min.png
+  - url: /assets/images/about/DKU/read_post-min.png
+    image_path: /assets/images/about/DKU/read_post-min.png
+  - url: /assets/images/about/DKU/write_post-min.png
+    image_path: /assets/images/about/DKU/write_post-min.png
+  - url: /assets/images/about/DKU/comment_post-min.png
+    image_path: /assets/images/about/DKU/comment_post-min.png
+  - url: /assets/images/about/DKU/search_inactus_book-min.png
+    image_path: /assets/images/about/DKU/search_inactus_book-min.png
+  - url: /assets/images/about/DKU/professor101_list-min.png
+    image_path: /assets/images/about/DKU/professor101_list-min.png
+  - url: /assets/images/about/DKU/professor101_list3-min.png
+    image_path: /assets/images/about/DKU/professor101_list3-min.png
+  - url: /assets/images/about/DKU/professor101_rank-min.png
+    image_path: /assets/images/about/DKU/professor101_rank-min.png
+  - url: /assets/images/about/DKU/booking-min.png
+    image_path: /assets/images/about/DKU/booking-min.png
+  - url: /assets/images/about/DKU/rehearsal-min-min.png
+    image_path: /assets/images/about/DKU/rehearsal-min-min.png
 
 gallery_Locker:
-  - url: /assets/images/about/Locker/0.png
-    image_path: /assets/images/about/Locker/0.png
-  - url: /assets/images/about/Locker/1.png
-    image_path: /assets/images/about/Locker/1.png
-  - url: /assets/images/about/Locker/2.png
-    image_path: /assets/images/about/Locker/2.png
-  - url: /assets/images/about/Locker/3.png
-    image_path: /assets/images/about/Locker/3.png
-  - url: /assets/images/about/Locker/4.png
-    image_path: /assets/images/about/Locker/4.png
-  - url: /assets/images/about/Locker/5.png
-    image_path: /assets/images/about/Locker/5.png
+  - url: /assets/images/about/Locker/0-min.png
+    image_path: /assets/images/about/Locker/0-min.png
+  - url: /assets/images/about/Locker/1-min.png
+    image_path: /assets/images/about/Locker/1-min.png
+  - url: /assets/images/about/Locker/2-min.png
+    image_path: /assets/images/about/Locker/2-min.png
+  - url: /assets/images/about/Locker/3-min.png
+    image_path: /assets/images/about/Locker/3-min.png
+  - url: /assets/images/about/Locker/4-min.png
+    image_path: /assets/images/about/Locker/4-min.png
+  - url: /assets/images/about/Locker/5-min.png
+    image_path: /assets/images/about/Locker/5-min.png
 
 gallery_Dankookie:
-  - url: /assets/images/about/Dankookie/home.png
-    image_path: /assets/images/about/Dankookie/home.png
-  - url: /assets/images/about/Dankookie/0.png
-    image_path: /assets/images/about/Dankookie/0.png
+  - url: /assets/images/about/Dankookie/home-min.png
+    image_path: /assets/images/about/Dankookie/home-min.png
+  - url: /assets/images/about/Dankookie/0-min.png
+    image_path: /assets/images/about/Dankookie/0-min.png
 ---
 
 ## 학력
@@ -185,7 +185,7 @@ gallery_Dankookie:
     - 깃헙 주소 : [https://github.com/Seunghyum/Taxiple-backup](https://github.com/Seunghyum/Taxiple-backup)
 
 <center>
-  <img src="/assets/images/about/taxiple.jpg" style="max-width: 150px;" />
+  <img src="/assets/images/about/taxiple-min.jpg" style="max-width: 150px;" />
 </center>
 
   - ### 수원도서관 크롤링
