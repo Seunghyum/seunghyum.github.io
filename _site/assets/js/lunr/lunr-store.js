@@ -138,4 +138,9 @@ var store = [{
         "excerpt":"문제 개념 : 정규표현식   내 답안   var lines = require('fs').readFileSync('/dev/stdin').toString().trim().split('\\n'); ​ var id = lines[0] var pw1 = lines[1] var pw2 = lines[2] ​ var checkId = /(?!.*\\s)(?=^[a-z0-9]{3,20}$)/ var checkPw = /((?=.*[a-z])|(?=.*[A-Z]))(?=.*[0-9])(?=.*[!@#$])(?!.*\\s)(?=^[a-zA-Z0-9!@#$]{8,20}$)/ ​ if(!checkId.test(id)) console.log('fail') else if(!checkPw.test(pw1)) console.log('fail') else if(pw1 !== pw2) console.log('fail') else console.log('pass')    ","categories": ["CodingTest"],
         "tags": ["Javascript","Goorm"],
         "url": "https://seunghyum.github.io/codingtest/Test-2/",
+        "teaser":null},{
+        "title": "[CodingTest] 휴먼스케이프 코딩 테스트 3번 - 피보나치 수열",
+        "excerpt":"문제 개념 : 피보나치 수열   내 답안 : 메모제이션 적용   // Run by Node.js ​ const readline = require(\"readline\"); const rl = readline.createInterface({   input: process.stdin,   output: process.stdout }); ​ ​ rl.on(\"line\", function(line) {   if(line==1) return console.log(1)   let memo = {0:0, 1:1, 2:1}      function fibonacci(n) {     if(n==0) return 0     if(!memo[n]) memo[n] = fibonacci(n-1) + fibonacci(n-2)     return memo[n]   } ​   function sum(obj) {     return Object.keys(obj).reduce((sum,key)=&gt;sum+obj[key]||0,0);   }   fibonacci(line)   console.log(sum(memo))   rl.close(); }).on(\"close\", function() {   process.exit(); });    ","categories": ["CodingTest"],
+        "tags": ["Javascript","Goorm"],
+        "url": "https://seunghyum.github.io/codingtest/Test-3/",
         "teaser":null}]
