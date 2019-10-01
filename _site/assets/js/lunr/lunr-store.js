@@ -129,8 +129,13 @@ var store = [{
         "tags": ["Skills"],
         "url": "https://seunghyum.github.io/javascript/Javascript-Skills/",
         "teaser":null},{
-        "title": "[CodingTest] 휴먼스케이프 코딩 테스트",
-        "excerpt":"문제 개념 : 윤년 내 답안   // Run by Node.js ​ const readline = require(\"readline\"); const rl = readline.createInterface({   input: process.stdin,   output: process.stdout }); ​ rl.on(\"line\", function(line) {   if (line%400 === 0) return console.log(\"Leap Year\")   else if (line%100 === 0) return console.log(\"Not Leap Year\")   else if (line%4 === 0) return console.log(\"Leap Year\")   else return console.log(\"Not Leap Year\")   rl.close(); }).on(\"close\", function() {   process.exit(); });    ","categories": ["CodingTest"],
+        "title": "[CodingTest] 휴먼스케이프 코딩 테스트 1번 - 윤년",
+        "excerpt":"문제 개념 : 윤년   내 답안   // Run by Node.js ​ const readline = require(\"readline\"); const rl = readline.createInterface({   input: process.stdin,   output: process.stdout }); ​ rl.on(\"line\", function(line) {   if (line%400 === 0) return console.log(\"Leap Year\")   else if (line%100 === 0) return console.log(\"Not Leap Year\")   else if (line%4 === 0) return console.log(\"Leap Year\")   else return console.log(\"Not Leap Year\")   rl.close(); }).on(\"close\", function() {   process.exit(); });    ","categories": ["CodingTest"],
         "tags": ["Javascript","Goorm"],
         "url": "https://seunghyum.github.io/codingtest/Test-1/",
+        "teaser":null},{
+        "title": "[CodingTest] 휴먼스케이프 코딩 테스트 2번 - 정규표현식",
+        "excerpt":"문제 개념 : 정규표현식   내 답안   var lines = require('fs').readFileSync('/dev/stdin').toString().trim().split('\\n'); ​ var id = lines[0] var pw1 = lines[1] var pw2 = lines[2] ​ var checkId = /(?!.*\\s)(?=^[a-z0-9]{3,20}$)/ var checkPw = /((?=.*[a-z])|(?=.*[A-Z]))(?=.*[0-9])(?=.*[!@#$])(?!.*\\s)(?=^[a-zA-Z0-9!@#$]{8,20}$)/ ​ if(!checkId.test(id)) console.log('fail') else if(!checkPw.test(pw1)) console.log('fail') else if(pw1 !== pw2) console.log('fail') else console.log('pass')    ","categories": ["CodingTest"],
+        "tags": ["Javascript","Goorm"],
+        "url": "https://seunghyum.github.io/codingtest/Test-2/",
         "teaser":null}]
