@@ -158,7 +158,7 @@ gallery_Dankookie:
     - 시각화 라이브러리 : D3.js, Billboard.js, chart.js, chartist.js
     - 기억에 남는 경험 :
       - 국립암센터 IDC서버 설정 상 내부 Apach서버와 별도로 배포서버에 웹서버가 필요하여 익숙한 Nginx를 도입하게 되었음.
-      - 서비스 개발초기에 백엔드, 프론트, 디비를 다 JS스택으로 구성함. 클라이언트의 요청에따라 개발후반에 Oracle 디비로 바꿔야했음. 그래서 ***기존의 MongoDB를 Oracle로, 백엔드 코드와 ORM을 다 마이그레이션함.***
+      - 서비스 개발초기에 백엔드, 프론트, 디비를 다 JS스택으로 구성함. 클라이언트의 요청에따라 개발후반에 Oracle 디비로 바꿔야했음. 그래서 ***기존의 MongoDB -> Oracle로, ODM([Mongoose](https://mongoosejs.com/)) -> ORM([node-oracledb](https://github.com/oracle/node-oracledb)), 백엔드 코드를 다 마이그레이션함.***
       - IDC에서 내부망을 제외한 아웃바운딩을 다 막아놔서 서버입고시 인터넷을 쓸 수 없음. 입고후에는 의존성 패키지, 라이브러리등을 다운 받지 못함. ***docker save, load를 통해 다른 컴퓨터에서 이미 빌드된 이미지를 gzip으로 배포서버에 옮기는 방식으로 개발함.*** 그래서 입고할 Red hat 서버에 docker, docker-compose 패키지만 설치하고 입고함.
 
 
