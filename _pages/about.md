@@ -152,16 +152,23 @@ gallery_Dankookie:
     - 프론트엔드 : Vue.js
     - DB : Oracle
     - OS : Red hat(CentOS 7)
-    - 웹서버 : Apache, Nginx
+    - 웹서버 : Apache(중앙서버), Nginx(배포서버)
     - 배포 : Docker
     - 지도 API : SGIS MAP API
     - PDF 다운로드 : Puppeteer
     - 실시간 미세먼지 데이터 : 공공데이터포털 실시간 미세먼지 API
     - 시각화 라이브러리 : D3.js, Billboard.js, chart.js, chartist.js
-    - 기억에 남는 경험 :
-      - 국립암센터 IDC서버 설정 상 내부 Apach서버와 별도로 배포서버에 웹서버가 필요하여 익숙한 Nginx를 도입하게 되었음.
-      - 서비스 개발초기에 백엔드, 프론트, 디비를 다 JS스택으로 구성함. 클라이언트의 요청에따라 개발후반에 Oracle 디비로 바꿔야했음. 그래서 ***기존의 MongoDB -> Oracle로, ODM([Mongoose](https://mongoosejs.com/)) -> ORM([node-oracledb](https://github.com/oracle/node-oracledb)), 백엔드 코드를 다 마이그레이션함.***
-      - IDC에서 내부망을 제외한 아웃바운딩을 다 막아놔서 서버입고시 인터넷을 쓸 수 없음. 입고후에는 의존성 패키지, 라이브러리등을 다운 받지 못함. ***docker save, load를 통해 다른 컴퓨터에서 이미 빌드된 이미지를 gzip으로 배포서버에 옮기는 방식으로 개발함.*** 그래서 입고할 Red hat 서버에 docker, docker-compose 패키지만 설치하고 입고함.
+    - <U>기억에 남는 경험</U> :
+      > ## 시스템 마이그레이션 
+      > 서비스 개발초기에 백엔드, 프론트, 디비를 다 JS스택으로 구성함. <br>
+      > 클라이언트의 요청에따라 개발후반에 Oracle 디비로 바꿔야했음. <br>
+      > 그래서 ***기존의 MongoDB -> Oracle로, ODM([Mongoose](https://mongoosejs.com/)) -> ORM([node-oracledb](https://github.com/oracle/node-oracledb)), 백엔드 코드를 다 마이그레이션함.***
+
+      > ## 폐쇠된 네트워크에서 Docker 도입
+      > IDC에서 내부망을 제외한 아웃바운딩을 다 막아놔서 서버입고시 인터넷을 쓸 수 없음. <br>
+      > 입고후에는 의존성 패키지, 라이브러리등을 다운 받지 못함. <br>
+      > ***docker save, load를 통해 다른 컴퓨터에서 이미 빌드된 이미지를 gzip으로 배포서버에 옮기는 방식으로 개발함.*** <br>
+      > 그래서 입고할 Red hat 서버에 docker, docker-compose 패키지만 설치하고 입고함.
 
 
 {% include gallery id="gallery_cancer" layout="half" %}
@@ -183,9 +190,25 @@ gallery_Dankookie:
     - 지도 API : Naver Map API
     - 실시간 미세먼지 데이터 : 공공데이터포털 실시간 미세먼지 API
     - 시각화 라이브러리 : D3.js, Billboard.js, chart.js, chartist.js
-    - 기억에 남는 문제해결 :
-      - 설문조사 페이지 제작 당시 서울대학생 계정으로 서비스 참여링크를 이메일을 보내야 했음. 모든 URI이 고유URI이어야 했음. 그래서 이메일 요청시 URI 파라미터 값으로 고유값을 주었음. 방법은 설문참여 신청시간과 이메일계정정보를 합친 문자열(ex - '2019.02.02.03:30test@snu.ac.kr') 유저마다 발급해주고 그것을 salt값(ex - 'abcde')으로 해싱하여 URI 쿼리값으로 주었음. 그리고 ***유저가 이메일에서 해당링크로 접속시 해싱값을 저장된 salt값('abcde')으로 다시 디코딩하여 유저가 가지고 있는 문자열('2019.02.02.03:30test@snu.ac.kr')과 같은지 확인 후 설문을 진행하도록 만듦***.
-      - 지도페이지 제작당시 251개의 시군구를 브라우저(IE)에서 한꺼번에 그리는 것에 성능이슈가 생김. 지도의 zoom이 10개 정도의 시군구만 보여줄때만 볼 수 있도록함. 데이터 역시 ***MongoDB의 Geospatial Query를 이용하여 화면에 화면에 나타나는 지역만 가져옴***. 화면 정중앙의 좌표값과 화면 가장자리까지의 거리값을 쿼리에 넣으면 컴퍼스로 원을 그려 해당 지역에 겹치는 지역의 GeoJson데이터 만 출력해줌. 그것을 MongoDB Aggregate로 데이터 값과 엮어서 가져옴.
+    - <U>기억에 남는 문제해결</U> :
+      > ## 설문조사 페이지 제작 당시 고유 URI 발급
+      > 문제상황 : 서울대학생 계정으로 서비스 참여링크를 이메일 전송. 
+      > 
+      > 문제의 필수조건 : 모든 URI이 고유URI이어야 했음. 또한 해킹이 불가능하게 육안으로 파악할 수 없는구조여야함.
+      > 
+      > 해결 방법 : <br>
+      > - 설문참여 신청시간과 이메일계정정보를 합친 문자열(ex - '2019.02.02.03:30test@snu.ac.kr')을 유저마다 발급. <br>
+      > - 그것을 salt값(ex - 'abcde')으로 해싱하여 URI 쿼리값 전송. <br>
+      > - ***유저가 이메일에서 해당링크로 접속시 해싱값을 저장된 salt값('abcde')으로 다시 디코딩하여 유저가 가지고 있는 문자열('2019.02.02.03:30test@snu.ac.kr')과 같은지 확인 후 설문을 진행하도록 개발***.
+
+      > ## 지도페이지 제작당시 성능이슈
+      > 문제상황 : 251개의 시군구를 브라우저(IE)에서 한꺼번에 그리는 것에 성능이슈가 생김. 
+      > 
+      > 해결 방법 : <br>
+      > - 지도의 zoom이 10개 정도의 시군구만 보여줄때만 시군구를 볼 수 있도록 제한함. <br>
+      > - 데이터 역시 ***MongoDB의 Geospatial Query를 이용하여 화면에 나타나는 지역만 가져옴***. <br>
+      > - 화면 정중앙의 좌표값과 화면 가장자리까지의 거리값을 쿼리에 넣으면 컴퍼스로 원을 그려 해당 지역에 겹치는 지역의 GeoJson데이터 만 출력해줌. <br>
+      > - 그것을 MongoDB Aggregate로 데이터 값과 엮어서 가져옴.
 
 {% include gallery id="gallery_FineDust" %}
 
