@@ -131,6 +131,9 @@ author:
     # - label: "Instagram"
     #   icon: "fab fa-fw fa-instagram"
     #   url: "https://instagram.com/"
+    - label: "https://www.linkedin.com/in/dave-11096614b/"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://github.com/Seunghyum"
 
 # Site Footer
 footer:

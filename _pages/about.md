@@ -14,10 +14,10 @@ gallery_cancer:
     image_path: /assets/images/about/Cancer/3-min.png
 
 gallery_FineDust:
+  - url: /assets/images/about/FineDust/presentation.jpeg
+    image_path: /assets/images/about/FineDust/presentation.jpeg
   - url: /assets/images/about/FineDust/0-min.png
     image_path: /assets/images/about/FineDust/0-min.png
-  - url: /assets/images/about/FineDust/1-min.png
-    image_path: /assets/images/about/FineDust/1-min.png
   - url: /assets/images/about/FineDust/2-min.png
     image_path: /assets/images/about/FineDust/2-min.png
   - url: /assets/images/about/FineDust/3-min.png
@@ -172,6 +172,7 @@ gallery_Dankookie:
       - 지도 위주의  데이터 시각화
       - 데이터 시각화 효용성을 측정하기 위한 설문조사 웹 페이지 개발
       - 유저의 현재위치(GPS)에 해당하는 데이터 값 출력
+      - 서울대학교 산악협력단의 요청으로 서울대 대학원에서 대학원생들과 교수님들을 대상으로 "인터렉티브 데이터 시각화"에 대한 발표를 진행함.
     - 백엔드 : Node.js
     - 프론트엔드 : Vue.js
     - DB : MongoDB
