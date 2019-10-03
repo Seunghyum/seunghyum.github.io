@@ -28,6 +28,8 @@ gallery_FineDust:
     image_path: /assets/images/about/FineDust/5-min.png
 
 gallery_DKU:
+  - url: /assets/images/about/DKU/login-min.png
+    image_path: /assets/images/about/DKU/login-min.png
   - url: /assets/images/about/DKU/home5-min.png
     image_path: /assets/images/about/DKU/home5-min.png
   - url: /assets/images/about/DKU/detail_lecture-min.png
@@ -48,8 +50,8 @@ gallery_DKU:
     image_path: /assets/images/about/DKU/professor101_rank-min.png
   - url: /assets/images/about/DKU/booking-min.png
     image_path: /assets/images/about/DKU/booking-min.png
-  - url: /assets/images/about/DKU/rehearsal-min-min.png
-    image_path: /assets/images/about/DKU/rehearsal-min-min.png
+  - url: /assets/images/about/DKU/rehearsal-min.jpg
+    image_path: /assets/images/about/DKU/rehearsal-min.jpg
 
 gallery_Locker:
   - url: /assets/images/about/Locker/0-min.png
@@ -166,7 +168,7 @@ gallery_Dankookie:
 
 
   - ### <서울대학교산학협력단> 미세먼지 대기건강지수 웹 페이지, 설문조사 웹 페이지 개발
-    - 서비스 주소 : 내부 검토중이라 아직 미공개.
+    - 서비스 주소 : 클라이언트 내부 검토중이라 아직 미공개.
     - 담당업무 : 
       - 풀스택 개발
       - 지도 위주의  데이터 시각화
@@ -182,7 +184,7 @@ gallery_Dankookie:
     - 실시간 미세먼지 데이터 : 공공데이터포털 실시간 미세먼지 API
     - 시각화 라이브러리 : D3.js, Billboard.js, chart.js, chartist.js
     - 기억에 남는 문제해결 :
-      - 설문조사 페이지 제작 당시 서울대학생 계정으로 서비스 참여링크를 이메일을 보내야 했음. 모든 URI이 고유URI이어야 했음. 그래서 이메일 요청시 URI 파라미터 값으로 고유값을 주었음. 방법은 설문참여 신청시간과 이메일계정정보를 합친 문자열(ex - '2019.02.02.03:30test@snu.ac.kr') 유저마다 발급해주고 그것을 salt값(ex - 'abcde')으로 해싱하여 URI 쿼리값으로 주었음. 그리고 ***유저가 이메일에서 해당링크로 접속시 해싱값을 salt값('abcde')으로 다시 디코딩하여 유저가 가지고 있는 문자열('2019.02.02.03:30test@snu.ac.kr')과 같은지 확인 후 설문을 진행하도록 만듦***.
+      - 설문조사 페이지 제작 당시 서울대학생 계정으로 서비스 참여링크를 이메일을 보내야 했음. 모든 URI이 고유URI이어야 했음. 그래서 이메일 요청시 URI 파라미터 값으로 고유값을 주었음. 방법은 설문참여 신청시간과 이메일계정정보를 합친 문자열(ex - '2019.02.02.03:30test@snu.ac.kr') 유저마다 발급해주고 그것을 salt값(ex - 'abcde')으로 해싱하여 URI 쿼리값으로 주었음. 그리고 ***유저가 이메일에서 해당링크로 접속시 해싱값을 저장된 salt값('abcde')으로 다시 디코딩하여 유저가 가지고 있는 문자열('2019.02.02.03:30test@snu.ac.kr')과 같은지 확인 후 설문을 진행하도록 만듦***.
       - 지도페이지 제작당시 251개의 시군구를 브라우저(IE)에서 한꺼번에 그리는 것에 성능이슈가 생김. 지도의 zoom이 10개 정도의 시군구만 보여줄때만 볼 수 있도록함. 데이터 역시 ***MongoDB의 Geospatial Query를 이용하여 화면에 화면에 나타나는 지역만 가져옴***. 화면 정중앙의 좌표값과 화면 가장자리까지의 거리값을 쿼리에 넣으면 컴퍼스로 원을 그려 해당 지역에 겹치는 지역의 GeoJson데이터 만 출력해줌. 그것을 MongoDB Aggregate로 데이터 값과 엮어서 가져옴.
 
 {% include gallery id="gallery_FineDust" %}
@@ -236,7 +238,13 @@ gallery_Dankookie:
   - ### 단국대 커뮤니티 디쿠(DKU)
     - 토이 프로젝트
     - 진행기간 : 2017년
-    - 주요내용 : 단국대 커뮤니티 만들기 프로젝트. 강의평가, CRUD 게시판, 교수 인기투표, 학교 홈페이지 크롤링
+    - 주요 내용 :단국대 커뮤니티 만들기 프로젝트. 
+    - 주요 기능 : 
+      - 강의평가
+      - CRUD 게시판
+      - 교수 인기투표
+      - 학교 홈페이지 크롤링(전화번호부)
+      - 수강신청 리허설
     - 성과 : Professor101 이라는 교수 인기투표 서비스는 학기초 수강신청 시기에 배포하여 좋아요 100여개 받음
     - 본인이 공헌한 점 : 풀스택 개발.
     - 사용한 Skill 또는 지식 : 
