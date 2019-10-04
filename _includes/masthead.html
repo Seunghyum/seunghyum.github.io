@@ -13,6 +13,9 @@
         {% endunless %}
         <a class="site-title" href="{{ '/' | relative_url }}">{{ site.masthead_title | default: site.title }}</a>
         <ul class="visible-links">
+          <li class="masthead__menu-item">
+            <a href="/data-visualization" title="{{ link.description }}" target="_blank">Data Lab</a>
+          </li>
           {%- for link in site.data.navigation.main -%}
             {%- if link.url contains '://' -%}
               {%- assign url = link.url -%}
