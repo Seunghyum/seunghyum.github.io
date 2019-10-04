@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>[Network] 네트워크 공부내용 정리 - eveloper Dave</title>
-<meta name="description" content="참고  책          그림으로 배우는 http &amp; network      http 완벽가이드        참고 사이트          그림으로 배우는 http &amp; network 정리글      http 완벽가이드 읽는법      zerocho 님 블로그 시리즈      wiki 백과(URI, URL, UDP)      ">
+<meta name="description" content="참고">
 
 
 
@@ -21,7 +21,7 @@
 <meta property="og:url" content="https://seunghyum.github.io/network/Network/">
 
 
-  <meta property="og:description" content="참고  책          그림으로 배우는 http &amp; network      http 완벽가이드        참고 사이트          그림으로 배우는 http &amp; network 정리글      http 완벽가이드 읽는법      zerocho 님 블로그 시리즈      wiki 백과(URI, URL, UDP)      ">
+  <meta property="og:description" content="참고">
 
 
 
@@ -121,6 +121,8 @@
         <a class="site-title" href="/">eveloper Dave</a>
         <ul class="visible-links"><li class="masthead__menu-item">
               <a href="/about" >About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/data-visualization" >Data Visualization</a>
             </li><li class="masthead__menu-item">
               <a href="/categories/" >Categories</a>
             </li><li class="masthead__menu-item">
@@ -322,6 +324,7 @@
     
     <br>
 <h2 id="참고">참고</h2>
+
 <ul>
   <li>책
     <ul>
@@ -344,6 +347,7 @@
 </ul>
 
 <h2 id="글-작성-로그-및-수정-계획">글 작성 로그 및 수정 계획</h2>
+
 <ul>
   <li>2019.04.06 그림으로 배우는 http &amp; network 정리글 블로그를 읽고 정리한 글
     <ul>
@@ -422,6 +426,11 @@ HTTP 데이터 -&gt; TCP 헤더 -&gt; IP 헤더 -&gt; Eternet 헤더</li>
   <li>클라이언트(웹브라우저)에서 서버까지 일련의 흐름을 결정하는 프로토콜</li>
   <li>HTTP자체는 잘 변하지 않음. 현재는 1997년 공개된 HTTP/1.1을 대부분 쓰고있음. 2.0이 탄생되었지만 표준화까지 시간이 오래걸림</li>
 </ul>
+
+<blockquote>
+  <p><a href="https://tobewiseys.tistory.com/72">HTTP 세션에 대한 설명</a>
+<a href="https://sdevstudy.tistory.com/27">쿠키와 세션</a></p>
+</blockquote>
 
 <h2 id="uri-url">URI, URL</h2>
 
@@ -553,12 +562,25 @@ TCP커넥션 종료
 
 <h2 id="http-상태-코드">HTTP 상태 코드</h2>
 
+<p>참고 : <a href="https://ko.wikipedia.org/wiki/HTTP_%EC%83%81%ED%83%9C_%EC%BD%94%EB%93%9C">위키백과 HTTP 상태코드</a></p>
 <ul>
   <li>1xx 정보</li>
   <li>2xx 성공(Success)</li>
   <li>3xx 리다이렉트(Redirection)</li>
-  <li>4xx 클라이언트 에러(Client Error)</li>
-  <li>5xx 서버 에러(Server Error)</li>
+  <li>4xx 클라이언트 에러(Client Error)
+    <ul>
+      <li>401(권한 없음): 이 요청은 인증이 필요하다. 서버는 로그인이 필요한 페이지에 대해 이 요청을 제공할 수 있다. 상태 코드 이름이 권한 없음(Unauthorized)으로 되어 있지만 실제 뜻은 인증 안됨(Unauthenticated)에 더 가깝다. ex) CORS에러</li>
+      <li>403(Forbidden, 금지됨): 서버가 요청을 거부하고 있다. 예를 들자면, 사용자가 리소스에 대한 필요 권한을 갖고 있지 않다. (401은 인증 실패, 403은 인가 실패라고 볼 수 있음)</li>
+      <li>404(Not Found, 찾을 수 없음): 서버가 요청한 페이지(Resource)를 찾을 수 없다. 예를 들어 서버에 존재하지 않는 페이지에 대한 요청이 있을 경우 서버는 이 코드를 제공한다.</li>
+    </ul>
+  </li>
+  <li>5xx 서버 에러(Server Error)
+    <ul>
+      <li>500(내부 서버 오류): 서버에 오류가 발생하여 요청을 수행할 수 없다.</li>
+      <li>501(구현되지 않음): 서버에 요청을 수행할 수 있는 기능이 없다. 예를 들어 서버가 요청 메소드를 인식하지 못할 때 이 코드를 표시한다.</li>
+      <li>502(Bad Gateway, 불량 게이트웨이): 서버가 게이트웨이나 프록시 역할을 하고 있거나 또는 업스트림 서버에서 잘못된 응답을 받았다.</li>
+    </ul>
+  </li>
 </ul>
 
 <h2 id="웹의-여러-애플리케이션">웹의 여러 애플리케이션</h2>
@@ -1069,19 +1091,7 @@ function solution(N, stages) {
     
     <p class="archive__item-excerpt" itemprop="description">참고
 
-  책
-    
-      그림으로 배우는 http &amp; network
-      http 완벽가이드
-
-
-    
-  
-  참고 사이트
-    
-      그림으로 배우는 http &amp; network 정리글
-      http 완벽가이드 읽는법
-      zero...</p>
+</p>
   </article>
 </div>
 
