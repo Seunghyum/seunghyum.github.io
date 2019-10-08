@@ -72,6 +72,12 @@ gallery_Dankookie:
     image_path: /assets/images/about/Dankookie/home-min.png
   - url: /assets/images/about/Dankookie/0-min.png
     image_path: /assets/images/about/Dankookie/0-min.png
+
+gallery_data_lab:
+  - url: /assets/images/about/Toy/finedust.png
+    image_path: /assets/images/about/Toy/finedust.png
+  - url: /assets/images/about/Toy/UEFA-tournament.png
+    image_path: /assets/images/about/Toy/UEFA-tournament.png
 ---
 
 ## 학력
@@ -311,6 +317,17 @@ gallery_Dankookie:
       - 지식 : AWS VPC
       - Skill : Node.js, React.js, Mobx, Parcel, Typescript, Express.js, MySQL, AWS VPC
     - 깃헙 주소 : [https://github.com/Seunghyum/CrimeMap](https://github.com/Seunghyum/CrimeMap)
+
+  - ### Data Lab
+    - 서비스 주소 : [https://seunghyum.github.io/data-visualization](https://seunghyum.github.io/data-visualization)
+    - 토이 프로젝트
+    - 진행기간 : 2019년~(진행중)
+    - 주요내용 : 공공데이터를 활용하여 이전에 활용했던 기술들을 아카이빙.
+    - 본인이 공헌한 점 : 풀스택
+    - 사용한 Skill : Vue.js, D3.js, GeoJson
+    - 깃헙 주소 : [https://github.com/Seunghyum/data-visualization](https://github.com/Seunghyum/data-visualization)
+
+{% include gallery id="gallery_data_lab" %}
 
 ## 외부 활동
 - 멋쟁이 사자처럼 4기 중앙운영진
