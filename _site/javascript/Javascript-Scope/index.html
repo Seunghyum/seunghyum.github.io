@@ -9,38 +9,38 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[CodingTest] 매일 프로그래밍 - 피보나치 배열 2019-03-25 - eveloper Dave</title>
-<meta name="description" content="">
+<!-- begin _includes/seo.html --><title>Javascript 개념 정리 - eveloper Dave</title>
+<meta name="description" content="알고리즘 공부를 하며 부족했던 개념을 다시 정리">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko">
 <meta property="og:site_name" content="eveloper Dave">
-<meta property="og:title" content="[CodingTest] 매일 프로그래밍 - 피보나치 배열 2019-03-25">
-<meta property="og:url" content="https://seunghyum.github.io/codingtest/Every-Day-Programming-1/">
+<meta property="og:title" content="Javascript 개념 정리">
+<meta property="og:url" content="https://seunghyum.github.io/javascript/Javascript-Scope/">
 
 
-  <meta property="og:description" content="">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2019-03-25T00:00:00+09:00">
+  <meta property="og:description" content="알고리즘 공부를 하며 부족했던 개념을 다시 정리">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2019-10-07T00:00:00+09:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://seunghyum.github.io/codingtest/Every-Day-Programming-1/">
+
+<link rel="canonical" href="https://seunghyum.github.io/javascript/Javascript-Scope/">
 
 
 
@@ -172,7 +172,7 @@
       
         
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/categories/#codingtest" itemprop="item"><span itemprop="name">Codingtest</span></a>
+          <a href="/categories/#javascript" itemprop="item"><span itemprop="name">Javascript</span></a>
           <meta itemprop="position" content="2" />
         </li>
         <span class="sep">/</span>
@@ -180,7 +180,7 @@
     
       
       
-        <li class="current">[CodingTest] 매일 프로그래밍 - 피보나치 배열 2019-03-25</li>
+        <li class="current">Javascript 개념 정리</li>
       
     
   </ol>
@@ -321,82 +321,121 @@
 
   <div class="archive">
     
-      <h1 id="page-title" class="page__title">[CodingTest] 매일 프로그래밍 - 피보나치 배열 2019-03-25</h1>
+      <h1 id="page-title" class="page__title">Javascript 개념 정리</h1>
     
     <br>
-<!-- ## 문제
-피보나치 배열은 0과 1로 시작하며, 다음 피보나치 수는 바로 앞의 두 피보나치 수의 합이 된다.  
-정수 N이 주어지면, N보다 작은 모든 짝수 피보나치 수의 합을 구하여라.  
-<br>
-<br>
-Fibonacci sequence starts with 0 and 1 where each fibonacci number is a sum of two previous fibonacci numbers. Given an integer N, find the sum of all even fibonacci numbers. -->
+<p>알고리즘 공부를 하며 부족했던 개념을 다시 정리</p>
 
-<!-- ## 예제
+<h2 id="함수-표현식의-장점">함수 표현식의 장점</h2>
+<ul>
+  <li>참고 : <a href="https://joshua1988.github.io/web-development/javascript/function-expressions-vs-declarations/">캠틴 판교님 블로그 - 함수 표현식 vs 함수 선언식</a>
+    <blockquote>
+      <p>함수 선언식과 달리 호이스팅에 영향안받음.
+클로져로 사용.
+콜백으로 사용(다른 함수의 인자로 넘길수 있음)</p>
+    </blockquote>
+  </li>
+</ul>
 
-Input: N = 12  
+<p>: <a href="https://github.com/airbnb/javascript#functions">AirBnb의 스타일가이드</a>에서는 함수 표현식을 쓰길 권함.</p>
 
-Output: 10 // 0, 1, 2, 3, 5, 8 중 짝수인 2 + 8 = 10. -->
+<h2 id="스코프">스코프</h2>
 
-<!-- ## 풀이
-A(n+1) = A(n) + A(n-1)
-1 = 1+0
-2 = 1+1 ***// 2^0***
-3 = 2+1 ***// 2^1 + 2^0 ***
-5 = 3 + 2 ***// 5 = (2+1) + 2 // 2^1 + 2^1 + 2^0***
-8 = 5 + 3 ***// 8 = (2+2+1) + (2+1) // 2^2 + 1 + 2^1 + 2^1 + 1***
-13 = 8 + 5 ***// 8 = (2+2+1 + 2+1) + (2+2+1) // 2^3 + 2^2 + 1***
-21
-34
-.
-.
-. -->
+<ul>
+  <li>참고 :
+    <ul>
+      <li>제로초님 블로그 <a href="https://www.zerocho.com/category/JavaScript/post/5740531574288ebc5f2ba97e">함수의 범위(scope)</a></li>
+      <li><a href="https://poiemaweb.com/js-closure">poiemaweb - 스코프</a></li>
+    </ul>
+  </li>
+</ul>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 처음 답</span>
-<span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span><span class="p">(</span><span class="nx">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="k">return</span> <span class="mi">0</span>
-  <span class="kd">let</span> <span class="nx">initN</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="nx">output</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">result</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<blockquote>
+  <p>변수의 유효범위. 
+스코프는 함수 호출이 아닌 함수 <strong>선언</strong>시 생성. -&gt; 렉시컬 스코핑(Lexical Scoping), 정적 스코핑
+C-family language는 블록레벨 스코프. Js는 함수 레벨 스코프</p>
+</blockquote>
 
-  <span class="k">while</span><span class="p">(</span><span class="nx">n</span> <span class="o">&gt;</span> <span class="nx">initN</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="nx">initN</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="p">{</span>
-    <span class="nx">output</span> <span class="o">=</span> <span class="nx">initN</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="nx">initN</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-    <span class="nx">initN</span> <span class="o">=</span> <span class="p">[</span><span class="nx">initN</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nx">output</span><span class="p">]</span>
-    <span class="k">if</span><span class="p">(</span><span class="nx">output</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="nx">result</span> <span class="o">+=</span> <span class="nx">output</span>
-  <span class="p">}</span>
-
-  <span class="k">return</span> <span class="nx">result</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="s1">'zero'</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nx">log</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">name</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="c1">// 수정 후</span>
-<span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span><span class="p">(</span><span class="nx">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="k">return</span> <span class="mi">0</span>
-  <span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">y</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-
-  <span class="k">while</span><span class="p">(</span><span class="nx">n</span> <span class="o">&gt;</span> <span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span><span class="p">(</span><span class="nx">x</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="nx">sum</span> <span class="o">+=</span> <span class="nx">x</span>
-    <span class="kd">let</span> <span class="nx">z</span> <span class="o">=</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span>
-    <span class="nx">x</span> <span class="o">=</span> <span class="nx">y</span>
-    <span class="nx">y</span> <span class="o">=</span> <span class="nx">z</span>
-  <span class="p">}</span>
-
-  <span class="k">return</span> <span class="nx">sum</span>
+<span class="kd">function</span> <span class="nx">wrapper</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">name</span> <span class="o">=</span> <span class="s1">'nero'</span><span class="p">;</span> <span class="c1">// 1번</span>
+  <span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="s1">'nero'</span><span class="p">;</span> <span class="c1">// 2번</span>
+  <span class="nx">log</span><span class="p">();</span>
 <span class="p">}</span>
+<span class="nx">wrapper</span><span class="p">();</span>
 </code></pre></div></div>
 
-<!-- ## 정답 - python
-```python
-int evenFibSum(int N) {
-  int sum = 0;
-  int x = 1;
-  int y = 2;
-  while (x <= N) {
-    if (x % 2 == 0) {
-      sum += x;
-    }
-    int z = x + y;
-    x = y;
-    y = z;
-  }
-  return sum;
-}
+<p>1번과 2번일때 결과가 다름.</p>
+
+<h2 id="실행-컨텍스트">실행 컨텍스트</h2>
+
+<ul>
+  <li>참고 :
+    <ul>
+      <li>제로초님 블로그 <a href="https://www.zerocho.com/category/JavaScript/post/5741d96d094da4986bc950a0">실행 컨텍스트</a> - 더 자세한 예시 참고</li>
+      <li>Poiemaweb <a href="https://poiemaweb.com/js-execution-context">실행 컨텍스트</a> - 실행 컨텍스트 그림설명 필독.</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>실행 컨텍스트는 실행 가능한 코드가 실행되기 위해 필요한 환경. 
+생성된 실행 컨텍스트는 실행 컨텍스트 스택에 쌓임. 
+실행 컨텍스트 스택은 LIFO(후입선출) 의 방식으로 관리됨</p>
+</blockquote>
+
+<ul>
+  <li>실행 컨텍스트는 3가지 객체를 가짐.
+    <ul>
+      <li>Variable Object
+        <ul>
+          <li>변수</li>
+          <li>매개변수(parameter)와 인수 정보(arguments)</li>
+          <li>함수 선언(함수 표현식은 제외)</li>
+        </ul>
+      </li>
+      <li>Scope Chain</li>
+      <li>this</li>
+    </ul>
+  </li>
+</ul>
+
+<ol>
+  <li>전역 컨텍스트 생성 -&gt; <strong>콜스택(실행 컨텍스트 스택)에 쌓임</strong></li>
+  <li><u>함수 호출</u> 시마다 컨텍스트 생성 -&gt; <strong>콜스택(실행 컨텍스트 스택)에 쌓임</strong></li>
+  <li>컨텍스트 생성 시 컨텍스트 안에 변수객체(arguments, variable), scope chain, this가 생성</li>
+  <li>컨텍스트 생성 후 <u>함수실행</u>. 사용되는 변수들은 변수 객체 안에서 값을 찾고, 없다면 스코프 체인을 따라 올라가며 찾음</li>
+  <li>함수 실행이 마무리되면 해당 컨텍스트는 소멸.(클로저 제외)  -&gt; <strong>콜스택(실행 컨텍스트 스택)에서 추출</strong></li>
+  <li>페이지가 종료되면 전역 컨텍스트가 소멸 -&gt; <strong>콜스택(실행 컨텍스트 스택)에서 추출</strong></li>
+</ol>
+
+<h2 id="활성객체">활성객체</h2>
+
+<blockquote>
+  <p>실행 컨텍스트가 생성되면 자바스크립트 엔진은 해당 컨텍스트에서 실행에 필요한 여러가지 정보를 담을 객체를 생성한다. 이를 활성객체라 한다.
+객체가 사용할 매개변수, 사용자가 정의한 변수 및 객체를 저장 한다.</p>
+</blockquote>
+
+<h2 id="클로저">클로저</h2>
+<ul>
+  <li>참고 : <a href="https://poiemaweb.com/js-closure">poiemaweb - 클로저</a>
+    <blockquote>
+      <dl>
+        <dt>클로저는 자신이 생성될 때의 환경(Lexical environment)을 기억하는 함수다</dt>
+        <dd>실행 컨텍스트의 관점에 설명하면, 내부함수가 유효한 상태에서 외부함수가 종료하여 외부함수의 실행 컨텍스트가 반환되어도, 외부함수 실행 컨텍스트 내의 활성 객체(Activation object)(변수, 함수 선언 등의 정보를 가지고 있다)는 내부함수에 의해 참조되는 한 유효하여 내부함수가 스코프 체인을 통해 참조할 수 있는 것을 의미한다.</dd>
+      </dl>
+    </blockquote>
+  </li>
+</ul>
+
+<!-- > 'IIFE(즉시 호출 함수 표현식) == 모듈 패턴' 을 이용한 비공개 변수 선언
+
+```javascript
+
 ``` -->
 
 <br>
@@ -651,7 +690,7 @@ int evenFibSum(int N) {
 
 
 
-  최대 1 분 소요
+  1 분 소요
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">
@@ -713,7 +752,7 @@ int evenFibSum(int N) {
 
 
 
-  1 분 소요
+  2 분 소요
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">무지의 먹방 라이브
@@ -742,7 +781,7 @@ int evenFibSum(int N) {
 
 
 
-  1 분 소요
+  2 분 소요
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">정의
@@ -830,7 +869,7 @@ int evenFibSum(int N) {
 
 
 
-  최대 1 분 소요
+  1 분 소요
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">문제3
@@ -898,7 +937,7 @@ function solution(N, stages) {
 
 
 
-  6 분 소요
+  5 분 소요
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">참고
@@ -1028,7 +1067,7 @@ if a &lt; b &lt; c :
 
 
 
-  2 분 소요
+  4 분 소요
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">문제
@@ -1349,8 +1388,8 @@ function solution(record) {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://seunghyum.github.io/codingtest/Every-Day-Programming-1/";  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = "/codingtest/Every-Day-Programming-1"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      this.page.url = "https://seunghyum.github.io/javascript/Javascript-Scope/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/javascript/Javascript-Scope"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');
