@@ -11,9 +11,9 @@ toc: true
 
 ## 함수 표현식의 장점
 - 참고 : [캠틴 판교님 블로그 - 함수 표현식 vs 함수 선언식](https://joshua1988.github.io/web-development/javascript/function-expressions-vs-declarations/)
-> 함수 선언식과 달리 호이스팅에 영향안받음.
-> 클로져로 사용.
-> 콜백으로 사용(다른 함수의 인자로 넘길수 있음)
+> - 함수 선언식과 달리 호이스팅에 영향안받음. 
+> - 클로져로 사용.
+> - 콜백으로 사용(다른 함수의 인자로 넘길수 있음)
 
 : [AirBnb의 스타일가이드](https://github.com/airbnb/javascript#functions)에서는 함수 표현식을 쓰길 권함.
 
@@ -23,9 +23,9 @@ toc: true
   - 제로초님 블로그 [함수의 범위(scope)](https://www.zerocho.com/category/JavaScript/post/5740531574288ebc5f2ba97e)
   - [poiemaweb - 스코프](https://poiemaweb.com/js-closure)
 
-> 변수의 유효범위. 
-> 스코프는 함수 호출이 아닌 함수 **선언**시 생성. -> 렉시컬 스코핑(Lexical Scoping), 정적 스코핑
-> C-family language는 블록레벨 스코프. Js는 함수 레벨 스코프
+> - 변수의 유효범위. 
+> - 스코프는 함수 호출이 아닌 함수 **선언**시 생성. -> 렉시컬 스코핑(Lexical Scoping), 정적 스코핑
+> - C-family language는 블록레벨 스코프. Js는 함수 레벨 스코프
 
 ```javascript
 var name = 'zero';
@@ -70,13 +70,65 @@ wrapper();
 
 ## 활성객체
 
-> 실행 컨텍스트가 생성되면 자바스크립트 엔진은 해당 컨텍스트에서 실행에 필요한 여러가지 정보를 담을 객체를 생성한다. 이를 활성객체라 한다.
-> 객체가 사용할 매개변수, 사용자가 정의한 변수 및 객체를 저장 한다.
+> - 실행 컨텍스트가 생성되면 자바스크립트 엔진은 해당 컨텍스트에서 실행에 필요한 여러가지 정보를 담을 객체를 생성한다. 이를 활성객체라 한다.
+> - 객체가 사용할 매개변수, 사용자가 정의한 변수 및 객체를 저장 한다.
 
 ## 클로저
+
 - 참고 : [poiemaweb - 클로저](https://poiemaweb.com/js-closure)
-> 클로저는 자신이 생성될 때의 환경(Lexical environment)을 기억하는 함수다
-: 실행 컨텍스트의 관점에 설명하면, 내부함수가 유효한 상태에서 외부함수가 종료하여 외부함수의 실행 컨텍스트가 반환되어도, 외부함수 실행 컨텍스트 내의 활성 객체(Activation object)(변수, 함수 선언 등의 정보를 가지고 있다)는 내부함수에 의해 참조되는 한 유효하여 내부함수가 스코프 체인을 통해 참조할 수 있는 것을 의미한다.
+
+> 클로저는 자신이 생성될 때의 환경(Lexical environment)을 기억하는 함수다. <br>
+> 실행 컨텍스트의 관점에 설명하면, 내부함수가 유효한 상태에서 외부함수가 종료하여 외부함수의 실행 컨텍스트가 반환되어도, 외부함수 실행 컨텍스트 내의 활성 객체(Activation object)(변수, 함수 선언 등의 정보를 가지고 있다)는 내부함수에 의해 참조되는 한 유효하여 내부함수가 스코프 체인을 통해 참조할 수 있는 것을 의미한다. <br><br>
+> 용도 :<br>
+> - 상태유지
+> - 전역변수 사용억제
+> - 정보은닉(private 키워드 흉내)
+
+```javascript
+//// 1번 
+var arr = [];
+
+for (var i = 0; i < 5; i++) {
+  arr[i] = function () {
+    return i;
+  };
+}
+
+for (var j = 0; j < arr.length; j++) {
+  console.log(arr[j]());
+}
+
+//// 2번
+var arr = [];
+
+for (var i = 0; i < 5; i++){
+  arr[i] = (function (id) { 
+    return function () {
+      return id; 
+    };
+  }(i)); 
+}
+
+for (var j = 0; j < arr.length; j++) {
+  console.log(arr[j]());
+}
+
+//// 3번
+const arr = [];
+
+for (let i = 0; i < 5; i++) {
+  arr[i] = function () {
+    return i;
+  };
+}
+
+for (let i = 0; i < arr.length; i++) {
+  console.log(arr[i]());
+}
+```
+
+1번 : 5 가 5번 출력
+2번,3번 : 1,2,3,4,5 가 출력
 
 <!-- > 'IIFE(즉시 호출 함수 표현식) == 모듈 패턴' 을 이용한 비공개 변수 선언
 

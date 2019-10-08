@@ -72,7 +72,7 @@ for (let i = 0; i < numbers.length; i++) {
 </center>
 <br>
 
-[Splice 매서드](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) (MDN 문서 참고)
+### [Splice 매서드](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
 : 배열의 기존 요소를 삭제 또는 교체하거나 새 요소를 추가하여 배열의 내용을 변경
 
 ```javascript
@@ -132,3 +132,17 @@ var removed = myFish.splice(-2, 1);
 // removed is ["mandarin"]
 ```
 
+### [fill 매서드](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/fill)
+
+: 배열의 startIndex 부터 endIndex까지 정적으로 채우기
+
+> arr.fill(value[, start[, end]])
+
+value
+: 배열을 채울 값.
+
+start Optional
+: 시작 인덱스, 기본 값은 0.
+
+end Optional
+: 끝 인덱스, 기본 값은 this.length.
