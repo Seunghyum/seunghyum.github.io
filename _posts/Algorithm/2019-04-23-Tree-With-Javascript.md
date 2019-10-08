@@ -122,37 +122,52 @@ console.log('=======End======')
 - 부등식 조합의 갯수를 구하시오.
 
 ```javascript
-const N = 11, numArray= [8,3,2,4,8,7,2,4,0,8,8];
+// const N = 11, inputNumbers= [8,3,2,4,8,7,2,4,0,8,8]; // 10
+// const N = 4, inputNumbers= [8,3,10,10];
+const N = 9, inputNumbers = [3,6,9,7,2,1,2,5,3] // 3
+
 
 let answer = 0;
 class Node {
-  constructor(data, count, left, right) {
+  constructor(data, count, allProcess, left, right) {
     this.data = data
     this.left = left
     this.right = right
+    this.isLeftStop = false // this.data가  음수일 경우 더이상 진행하지 않기 위해
+    this.isRightStop = false // this.data가  20초과일 경우 더이상 진행하지 않기 위해
     this.count = count
+    this.allProcess = allProcess
   }
 
   insert(value, c) {
     if(this.data == undefined) {
       this.data = value
       this.count = c
+      this.allProcess = 3
       return 
     }
 
-    if(this.left == undefined) {  
-      if(this.data - value >= 0) {
-        this.left = new Node(this.data-value, c)
-      }
-    } else {
-      this.left.insert(value, c)
+    if(this.isLeftStop == false) {
+      if(this.left == undefined) {  
+        if(this.data - value >= 0) {
+          this.left = new Node(this.data-value, c, this.allProcess + " - " + value)
+        } else {
+          this.isLeftStop = true
+        }
+      } else {
+        this.left.insert(value, c)
+      }  
     }
-    if(this.right == undefined) {
-      if(this.data + value <= 20) {
-        this.right = new Node(this.data+value, c)
+    if(this.isRightStop == false) {
+      if(this.right == undefined) {
+        if(this.data + value <= 20) {
+          this.right = new Node(this.data+value, c, this.allProcess + " + " + value)
+        } else {
+          this.isRightStop = true
+        }
+      } else {
+        this.right.insert(value, c)
       }
-    } else {
-      this.right.insert(value, c)
     }
   }
 
@@ -166,16 +181,16 @@ class Node {
     }
 
     if(this.count == N) {
-      console.log(this.data)
       answer++
+      console.log("this.allProcess : ", this.allProcess + " = " + this.data)
     }
   }
 }
 
 const tree = new Node()
 for(let i=0;i<N;i++) {
-  tree.insert(numArray[i], i+1)
+  tree.insert(inputNumbers[i], i+1)
 }
 tree.traverse()
-console.log('answer : ', answer)
+console.log("answer : ", answer)
 ```
