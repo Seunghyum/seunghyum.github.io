@@ -1,12 +1,77 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://seunghyum.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://seunghyum.github.io/" rel="alternate" type="text/html" /><updated>2019-10-09T20:32:34+09:00</updated><id>https://seunghyum.github.io/feed.xml</id><title type="html">eveloper Dave</title><subtitle>데이터 시각화에 관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">[Algorithm] 방법론 공부</title><link href="https://seunghyum.github.io/algorithm/Methodology/" rel="alternate" type="text/html" title="[Algorithm] 방법론 공부" /><published>2019-10-08T00:00:00+09:00</published><updated>2019-10-08T00:00:00+09:00</updated><id>https://seunghyum.github.io/algorithm/Methodology</id><content type="html" xml:base="https://seunghyum.github.io/algorithm/Methodology/">&lt;h2 id=&quot;메모제이션&quot;&gt;메모제이션&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://seunghyum.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://seunghyum.github.io/" rel="alternate" type="text/html" /><updated>2019-10-10T21:30:47+09:00</updated><id>https://seunghyum.github.io/feed.xml</id><title type="html">eveloper Dave</title><subtitle>데이터 시각화에 관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">[Algorithm] 방법론 공부</title><link href="https://seunghyum.github.io/algorithm/Methodology/" rel="alternate" type="text/html" title="[Algorithm] 방법론 공부" /><published>2019-10-08T00:00:00+09:00</published><updated>2019-10-08T00:00:00+09:00</updated><id>https://seunghyum.github.io/algorithm/Methodology</id><content type="html" xml:base="https://seunghyum.github.io/algorithm/Methodology/">&lt;h2 id=&quot;동적-프로그래밍dynamic-programming&quot;&gt;동적 프로그래밍(Dynamic Programming)&lt;/h2&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;동일한 계산을 반복할때 이전에 계산한 값을 메모리에 저장함으로써 동일한 계산의 반복 수행을 제거하여 프로그램의 실행 속도를 빠르게 하는 기술&lt;/p&gt;
+  &lt;p&gt;기억하기 프로그래밍이라고도 함. 기법으로는 메모제이션, 분할정복을 많이 씀.&lt;/p&gt;
 &lt;/blockquote&gt;
 
+&lt;h3 id=&quot;메모제이션memozation&quot;&gt;메모제이션(Memozation)&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;ul&gt;
+    &lt;li&gt;동일한 계산을 반복할때 이전에 계산한 값을 메모리에 저장함으로써 동일한 계산의 반복 수행을 제거하여 프로그램의 실행 속도를 빠르게 하는 기술&lt;/li&gt;
+    &lt;li&gt;하향식(Top-down) 계산법&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;분할-정복&quot;&gt;분할 정복&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;ul&gt;
+    &lt;li&gt;문제를 해결이 가능한 더 작은 문제로 분할. 그 다음 작은 문제를 먼저 해결하고 그 결과를 활용하여 전체 문제를 해결하는 방법.&lt;/li&gt;
+    &lt;li&gt;상향식(Bottom Up) 계산법&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;관련 글 : &lt;a href=&quot;http://seunghyum.github.io/codingtest/Fibonacci-Sequence&quot;&gt;피보나치 수열 글&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Algorithm" /><summary type="html">메모제이션</summary></entry><entry><title type="html">Javascript 개념 정리</title><link href="https://seunghyum.github.io/javascript/Javascript-Concept/" rel="alternate" type="text/html" title="Javascript 개념 정리" /><published>2019-10-07T00:00:00+09:00</published><updated>2019-10-07T00:00:00+09:00</updated><id>https://seunghyum.github.io/javascript/Javascript-Concept</id><content type="html" xml:base="https://seunghyum.github.io/javascript/Javascript-Concept/">&lt;p&gt;알고리즘 공부를 하며 부족했던 개념을 다시 정리&lt;/p&gt;
+  &lt;li&gt;관련글 :
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.zerocho.com/category/Algorithm/post/584b979a580277001862f182&quot;&gt;제로초님 - 동적 프로그래밍&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;관련 문제 :
+    &lt;ul&gt;
+      &lt;li&gt;이항계수 구하기&lt;/li&gt;
+      &lt;li&gt;최단경로의 플로이드 알고리즘&lt;/li&gt;
+      &lt;li&gt;최적화 문제&lt;/li&gt;
+      &lt;li&gt;외판원 문제&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;내가 작성한 글
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://seunghyum.github.io/codingtest/Fibonacci-Sequence&quot;&gt;피보나치 수열 글&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;그리디-알고리즘greedy-algorithm&quot;&gt;그리디 알고리즘(Greedy Algorithm)&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;현재 상태에서 가장 좋다고 판단되는 것부터 선택하여 나가는 방법. &lt;br /&gt;
+때로는 동적 프로그래밍 보다 그리디 알고리즘이 가장 효율적이고 간단할 때가 있기 때문에 알고리즘이 항상 최적인 해답을 주는지 확인이 필요함.&lt;br /&gt;
+동적 프로그래밍과 같이 쓰이며 서로 보완하는 개념&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;역추적-기법back-tracking&quot;&gt;역추적 기법(Back Tracking)&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;가능한 모든 방법을 빠짐없이 탐색하여 문제를 해결하는 방법. &lt;br /&gt;
+이 기법은 데이터의 양이 조금만 늘어나도 실행시간이 엄청나게 늘어나기 때문에 불필요한 탐색을 하지 않기 위해 가지치기 전략을 구사하여 실행시간을 줄여야 함.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;그래프-탐색-방법&quot;&gt;그래프 탐색 방법&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;깊이 우선 탐색(DFS - Depth First Search)&lt;/li&gt;
+  &lt;li&gt;너비 우선 탐색(BFS - Breadth First Search)&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Algorithm" /><summary type="html">동적 프로그래밍(Dynamic Programming)</summary></entry><entry><title type="html">Javascript 개념 정리</title><link href="https://seunghyum.github.io/javascript/Javascript-Concept/" rel="alternate" type="text/html" title="Javascript 개념 정리" /><published>2019-10-07T00:00:00+09:00</published><updated>2019-10-07T00:00:00+09:00</updated><id>https://seunghyum.github.io/javascript/Javascript-Concept</id><content type="html" xml:base="https://seunghyum.github.io/javascript/Javascript-Concept/">&lt;p&gt;알고리즘 공부를 하며 부족했던 개념을 다시 정리&lt;/p&gt;
 
 &lt;h2 id=&quot;함수-표현식의-장점&quot;&gt;함수 표현식의 장점&lt;/h2&gt;
 &lt;ul&gt;
@@ -284,7 +349,11 @@ F&lt;sub&gt;n+2&lt;/sub&gt; = F&lt;sub&gt;n+1&lt;/sub&gt; + F&lt;sub&gt;n&lt;/su
 
 &lt;h2 id=&quot;더-좋은-방법&quot;&gt;더 좋은 방법&lt;/h2&gt;
 
-&lt;p&gt;변수에 기억해두어서 공간 복잡도를 더 낮추는 방법&lt;/p&gt;
+&lt;p&gt;변수에 기억해두어서 공간 복잡도를 더 낮추는 방법.&lt;br /&gt;
+피보나치 수열을 재귀법으로 작성하면 많은 노드들이 중복되어 호출된다. &lt;br /&gt;
+예를 들어  Fibonacci(5)를 구한다고 했을 때, Fibonacci(3)은 두 번, Fibonacci(2)는 세 번이 호출된다.&lt;br /&gt;
+이들이 호출될 때마다 다시 계산할 필요는 없다. &lt;br /&gt;
+따라서 Fibonacci(N)를 캐시에 저장하고, 나중에 저장된 값을 사용하는 방식이 메모이제이션 방식이다.&lt;/p&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Run by Node.js&lt;/span&gt;
 &lt;span class=&quot;err&quot;&gt;​&lt;/span&gt;

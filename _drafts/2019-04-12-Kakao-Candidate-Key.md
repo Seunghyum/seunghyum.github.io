@@ -10,7 +10,9 @@ comments: true
 - [문제 바로가기 링크](https://www.welcomekakao.com/learn/courses/30/lessons/42890?language=javascript)
 - [카카오의 설명 블로그](http://tech.kakao.com/2018/09/21/kakao-blind-recruitment-for2019-round-1/)
 <br>
+
 ## 나의 답안
+
 ```javascript
 function solution(relation) {
     //1. for 문으로 object로 통계값 추출 + set으로 중복되는 값있는지 확인. 후보키 가능열을 열마다 체크
@@ -39,11 +41,13 @@ function solution(relation) {
 ```
 
 ## 알아야할 개념
+
 - 깊이 우선 검색(DFS - Deep-First-Search)
   - [정리글](https://gmlwjd9405.github.io/2018/08/14/algorithm-dfs.html)
 
 
 ## 다른사람의 답안 (bit를 이용한 연산)
+
 ```javascript
 function solution(relation) {
   const tuples = relation[0].length,
