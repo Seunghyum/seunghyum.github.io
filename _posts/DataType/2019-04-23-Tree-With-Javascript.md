@@ -13,7 +13,11 @@ toc: true
 
 ![트리 기본구조](/assets/images/tree-basic-structure.png)
 
-### 코드 - Binary Search Tree
+### Binary Search Tree
+
+> 루트노드를 기준으로 작은 값은 왼쪽노드, 큰값은 오른쪽 노드로 설정하는 방식
+
+#### 코드
 
 - 참고 : 
   - [HackerRank - with Java](https://www.youtube.com/watch?v=oSWTXtMglKE&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8&index=8&t=559s)
@@ -115,10 +119,10 @@ console.log('=======End======')
 
 ### 트리를 이용한 문제 예시
 
-행렬(numArray)과 그 행렬의 개수(N)이 주어질때
-- 행렬을 순서대로 +, - 등식으로 조합하여 결과값이 0이상 ~ 20이하로 값이 유지되고,
-- 최종 값 역시 0이상 ~ 20이하로 값이 되도록하는 
-- 부등식 조합의 갯수를 구하시오.
+- 행렬(numArray)과 그 행렬의 개수(N)이 주어질때
+  - 행렬을 순서대로 +, - 등식으로 조합하여 결과값이 0이상 ~ 20이하로 값이 유지되고,
+  - 최종 값 역시 0이상 ~ 20이하로 값이 되도록하는 
+  - 부등식 조합의 갯수를 구하시오.
 
 ```javascript
 // const N = 11, inputNumbers= [8,3,2,4,8,7,2,4,0,8,8]; // 10

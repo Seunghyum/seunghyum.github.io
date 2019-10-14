@@ -9,38 +9,38 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[CodingTest] 2020 라인 SW개발 DEVEL-UP 인턴십 코드테스트 1번 - eveloper Dave</title>
-<meta name="description" content="">
+<!-- begin _includes/seo.html --><title>[CodingTest] 2019-10-12 간단한 문제들(최대공약수, 최소공배수, 경우의 수) - eveloper Dave</title>
+<meta name="description" content="문제">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko">
 <meta property="og:site_name" content="eveloper Dave">
-<meta property="og:title" content="[CodingTest] 2020 라인 SW개발 DEVEL-UP 인턴십 코드테스트 1번">
-<meta property="og:url" content="https://seunghyum.github.io/codingtest/Line-recruit-1/">
+<meta property="og:title" content="[CodingTest] 2019-10-12 간단한 문제들(최대공약수, 최소공배수, 경우의 수)">
+<meta property="og:url" content="https://seunghyum.github.io/codingtest/SImple-2019.10.12/">
 
 
-  <meta property="og:description" content="">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2019-09-22T00:00:00+09:00">
+  <meta property="og:description" content="문제">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2019-10-12T00:00:00+09:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://seunghyum.github.io/codingtest/Line-recruit-1/">
+
+<link rel="canonical" href="https://seunghyum.github.io/codingtest/SImple-2019.10.12/">
 
 
 
@@ -180,7 +180,7 @@
     
       
       
-        <li class="current">[CodingTest] 2020 라인 SW개발 DEVEL-UP 인턴십 코드테스트 1번</li>
+        <li class="current">[CodingTest] 2019-10-12 간단한 문제들(최대공약수, 최소공배수, 경우의 수)</li>
       
     
   </ol>
@@ -321,84 +321,139 @@
 
   <div class="archive">
     
-      <h1 id="page-title" class="page__title">[CodingTest] 2020 라인 SW개발 DEVEL-UP 인턴십 코드테스트 1번</h1>
+      <h1 id="page-title" class="page__title">[CodingTest] 2019-10-12 간단한 문제들(최대공약수, 최소공배수, 경우의 수)</h1>
     
     <br>
-<!-- https://docs.google.com/document/d/1Agv0wWVtUVfxEsDiL2XNMTXW3VtOp4VdeJjA_V53BQQ/edit?usp=sharing -->
+<h2 id="문제">문제</h2>
 
-<h2 id="1번--solved">1번 : Solved</h2>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+주어진 행렬(arr)에서 가장 낮은 수를 찾아서 그 수를 제외한 행렬을 리턴하라
+*/</span>
 
-<h3 id="제출한-코드">제출한 코드</h3>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">process</span><span class="p">.</span><span class="nx">stdin</span><span class="p">.</span><span class="nx">setEncoding</span><span class="p">(</span><span class="s1">'utf8'</span><span class="p">);</span>
-<span class="nx">process</span><span class="p">.</span><span class="nx">stdin</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'data'</span><span class="p">,</span> <span class="nx">data</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="c1">// 인풋 데이터 정제</span>
-  <span class="kd">const</span> <span class="nx">n</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">" "</span><span class="p">),</span>
-    <span class="nx">tmp</span> <span class="o">=</span> <span class="nx">n</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">split</span><span class="p">(</span><span class="sr">/</span><span class="se">\n</span><span class="sr">/</span><span class="p">),</span>
-    <span class="nx">mesages</span> <span class="o">=</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">n</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
-    <span class="nx">consumers</span> <span class="o">=</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">tmp</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
-  <span class="nx">tmp</span><span class="p">.</span><span class="nx">shift</span><span class="p">()</span>
-  <span class="kd">const</span> <span class="nx">times</span> <span class="o">=</span> <span class="nx">tmp</span><span class="p">;</span>
-
-  <span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="nx">compare</span> <span class="o">=</span> <span class="p">[];</span>
-  
-  <span class="c1">// 로직 수행을 위한 데이터 정제</span>
-  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">consumers</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kd">let</span> <span class="nx">tmp</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="nx">tmp</span><span class="p">[</span><span class="s1">'index'</span><span class="p">]</span> <span class="o">=</span> <span class="nx">i</span>
-    <span class="nx">tmp</span><span class="p">[</span><span class="s1">'time'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="nx">compare</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">tmp</span><span class="p">)</span>
-  <span class="p">}</span>
-
-  <span class="c1">// 가장 낮은 time 값을 sort로 찾고 대기열의 숫자 추가</span>
-   <span class="c1">// A번</span>
-  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">times</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">compare</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">a</span><span class="p">.</span><span class="nx">time</span> <span class="o">-</span> <span class="nx">b</span><span class="p">.</span><span class="nx">time</span><span class="p">);</span> <span class="c1">// m * nlogn</span>
-    <span class="nx">compare</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">time</span> <span class="o">+=</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">times</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
-  <span class="p">}</span>
-
-  <span class="c1">// 최대값 추출</span>
-  <span class="nx">compare</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">b</span><span class="p">.</span><span class="nx">time</span> <span class="o">-</span> <span class="nx">a</span><span class="p">.</span><span class="nx">time</span><span class="p">);</span>  <span class="c1">//  nlogn</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">String</span><span class="p">(</span><span class="nx">compare</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">time</span><span class="p">))</span>
-<span class="p">});</span>
+<span class="c1">// 예시</span>
+<span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span> 
+<span class="nx">answer</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
 </code></pre></div></div>
 
-<h3 id="느낀점">느낀점</h3>
+<h2 id="정답">정답</h2>
 
-<p>객체 배열(Obect Array)과 정렬(sort)로 푸려고함. 시간복잡도 O(nlogn)
-<strong>A번</strong>에서 좀 더 효율적인 알고리즘을 만들 수 없었을까.
-js 반복문 for, reduce, forEach, map, some, every 매서드들의 용도 다시 공부함.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">answer</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="kd">let</span> <span class="nx">min</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">a</span> <span class="o">&gt;</span> <span class="nx">b</span> <span class="p">?</span> <span class="nx">b</span> <span class="p">:</span> <span class="nx">a</span><span class="p">)</span>
+  <span class="nx">arr</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span><span class="nx">i</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">if</span><span class="p">(</span><span class="nx">a</span> <span class="o">!==</span> <span class="nx">min</span><span class="p">)</span> <span class="nx">answer</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
+  <span class="p">})</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">answer</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+  <span class="k">return</span> <span class="nx">answer</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
-<ul>
-  <li>for : array에 대한 반복이 아닌 횟수 반복을 적용하고자할 때 사용.</li>
-  <li>reduce : 깔대기에 물을 들이 붙는 것처럼 축적된 값(accumulator)를 반환. 비교할때, 축적된 값을 뽑을때 사용.</li>
-  <li>forEach : 함수를 순회함. index를 볼 수 있음. for문을 대체가능</li>
-  <li>map : 함수를 순회하며 인자를 다른 인자로 맵핑해서 새로운 array를 반환.</li>
-  <li>some : 배열 안의 어떤 요소라도 주어진 판별 함수를 통과하는지 테스트합니다.</li>
-  <li>every : 모든 요소들이 조건을 만족시키는지 확인.</li>
-</ul>
+<hr />
 
-<h3 id="수정한-답">수정한 답</h3>
+<h2 id="문제-1">문제</h2>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1">// ...</span>
-  <span class="c1">// A번 수정</span>
-  <span class="c1">// 가장 낮은 time 값을 sort로 찾고 대기열의 숫자 추가</span>
-  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">times</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// n</span>
-    <span class="c1">// compare.sort((a, b) =&gt; a.time - b.time);</span>
-    <span class="c1">// compare[0].time += Number(times[i]);</span>
-    <span class="kd">const</span> <span class="nx">target</span> <span class="o">=</span> <span class="nx">compare</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">a</span><span class="p">.</span><span class="nx">time</span> <span class="o">&gt;</span> <span class="nx">b</span><span class="p">.</span><span class="nx">time</span> <span class="p">?</span> <span class="nx">b</span> <span class="p">:</span> <span class="nx">a</span><span class="p">)</span> <span class="c1">// n*m</span>
-    <span class="nx">compare</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">e</span> <span class="o">=&gt;</span> <span class="p">{</span>
-      <span class="k">if</span><span class="p">(</span><span class="nx">target</span><span class="p">.</span><span class="nx">index</span> <span class="o">===</span> <span class="nx">e</span><span class="p">.</span><span class="nx">index</span><span class="p">)</span> <span class="nx">e</span><span class="p">.</span><span class="nx">time</span> <span class="o">+=</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">times</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
-    <span class="p">})</span> <span class="c1">// n*2m</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+체육복 빌려주기
+옆사람에게만 체육복 빌려줄 수 있음.
+주어지는 인자는 n,lost,reserve
+n은 총 사람수
+lost는 체육복 없는 사람
+reserve는 체육복이 2개 있는 사람.
+나머지는 체육복 1개만 있는 사람들.
+*/</span>
+
+<span class="c1">//예시</span>
+<span class="nx">n</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="nx">lost</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="nx">reserve</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+
+<span class="nx">answer</span> <span class="o">=</span> <span class="mi">5</span>
+</code></pre></div></div>
+
+<h2 id="정답-1">정답</h2>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span> <span class="nx">lost</span><span class="p">,</span> <span class="nx">reserve</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">lostReserved</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Set</span><span class="p">()</span>
+  <span class="kd">let</span> <span class="nx">reserveSet</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Set</span><span class="p">(</span><span class="nx">reserve</span><span class="p">)</span>
+  <span class="nx">lost</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">l</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">lostReserved</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">l</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+      <span class="nx">lostReserved</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">l</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+  <span class="p">})</span>
+  <span class="kd">let</span> <span class="nx">noOfReserved</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="nx">reserve</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">ls</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">if</span><span class="p">(</span><span class="nx">lostReserved</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="nx">ls</span><span class="p">))</span> <span class="nx">noOfReserved</span><span class="o">++</span>
+  <span class="p">})</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">lost</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="nx">noOfReserved</span><span class="p">)</span> <span class="nx">noOfReserved</span> <span class="o">=</span> <span class="nx">lost</span><span class="p">.</span><span class="nx">length</span>
+  <span class="kd">let</span> <span class="nx">answer</span> <span class="o">=</span> <span class="nx">n</span> <span class="o">-</span> <span class="nx">lost</span><span class="p">.</span><span class="nx">length</span> <span class="o">+</span> <span class="nx">noOfReserved</span>
+  <span class="k">return</span> <span class="nx">answer</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="문제-2">문제</h2>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+  최대 공약수의 합 구하기
+  n = 12
+  [1,2,3,4,6,12] =&gt; 38
+*/</span>
+
+<span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="nx">n</span>
+  <span class="kd">let</span> <span class="nx">last</span>
+  <span class="kd">let</span> <span class="nx">answer</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;=</span><span class="nx">n</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span><span class="p">(</span><span class="nx">n</span><span class="o">%</span><span class="nx">i</span><span class="o">===</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+          <span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">n</span><span class="o">/</span><span class="nx">i</span>
+          <span class="k">if</span><span class="p">(</span><span class="nx">last</span> <span class="o">===</span> <span class="nx">a</span><span class="p">)</span> <span class="k">break</span>
+          <span class="nx">last</span> <span class="o">=</span> <span class="nx">i</span>
+          <span class="k">if</span><span class="p">(</span><span class="nx">i</span><span class="o">===</span><span class="nx">a</span><span class="p">)</span> <span class="k">return</span> <span class="nx">answer</span> <span class="o">+</span> <span class="nx">i</span>
+          <span class="nx">answer</span> <span class="o">+=</span> <span class="nx">i</span> <span class="o">+</span> <span class="nx">a</span>
+      <span class="p">}</span>
   <span class="p">}</span>
 
-  <span class="c1">// 최대값 추출</span>
-  <span class="c1">// compare.sort((a, b) =&gt; b.time - a.time);</span>
-  <span class="c1">// console.log(String(compare[0].time))</span>
-  <span class="kd">const</span> <span class="nx">answer</span> <span class="o">=</span> <span class="nx">compare</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">a</span><span class="p">.</span><span class="nx">time</span> <span class="o">&lt;</span><span class="nx">b</span><span class="p">.</span><span class="nx">time</span> <span class="p">?</span> <span class="nx">b</span> <span class="p">:</span> <span class="nx">a</span><span class="p">)</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">String</span><span class="p">(</span><span class="nx">answer</span><span class="p">.</span><span class="nx">time</span><span class="p">))</span>
-<span class="p">})</span>
+  <span class="k">return</span> <span class="nx">answer</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="문제-3">문제</h2>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+  두 수(n,m)의 최대공약수와 최소공배수 구하기
+
+  n = 1
+  m = 5
+  answer = [1, 10]
+*/</span>
+</code></pre></div></div>
+
+<h2 id="정답-2">정답</h2>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span> <span class="nx">m</span><span class="p">)</span> <span class="p">{</span>
+
+  <span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">n</span> <span class="o">&gt;</span> <span class="nx">m</span> <span class="p">?</span> <span class="nx">n</span> <span class="p">:</span> <span class="nx">m</span>
+  <span class="kd">let</span> <span class="nx">b</span> <span class="o">=</span> <span class="nx">n</span> <span class="o">&lt;</span> <span class="nx">m</span> <span class="p">?</span> <span class="nx">n</span> <span class="p">:</span> <span class="nx">m</span>
+
+  <span class="kd">let</span> <span class="nx">GCD</span>
+  <span class="kd">let</span> <span class="kd">set</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Set</span><span class="p">()</span>
+  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;=</span><span class="nx">b</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span><span class="p">(</span><span class="nx">b</span><span class="o">%</span><span class="nx">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+          <span class="kd">set</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="kd">set</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">s</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">if</span><span class="p">(</span><span class="nx">a</span><span class="o">%</span><span class="nx">s</span> <span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="nx">GCD</span> <span class="o">=</span> <span class="nx">s</span>
+  <span class="p">})</span>
+
+  <span class="kd">let</span> <span class="nx">LCM</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">a</span><span class="o">%</span><span class="nx">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="nx">LCM</span> <span class="o">=</span> <span class="nx">a</span>
+  <span class="k">else</span> <span class="nx">LCM</span> <span class="o">=</span> <span class="nx">a</span><span class="o">*</span><span class="nx">b</span><span class="o">/</span><span class="nx">GCD</span>
+
+  <span class="k">return</span> <span class="p">[</span><span class="nx">GCD</span><span class="p">,</span> <span class="nx">LCM</span><span class="p">]</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
 <br>
@@ -447,7 +502,7 @@ js 반복문 for, reduce, forEach, map, some, every 매서드들의 용도 다�
 
 
 
-  최대 1 분 소요
+  1 분 소요
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">문제
@@ -476,7 +531,7 @@ js 반복문 for, reduce, forEach, map, some, every 매서드들의 용도 다�
 
 
 
-  1 분 소요
+  최대 1 분 소요
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">동적 프로그래밍(Dynamic Programming)
@@ -1468,8 +1523,8 @@ function solution(record) {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://seunghyum.github.io/codingtest/Line-recruit-1/";  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = "/codingtest/Line-recruit-1"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      this.page.url = "https://seunghyum.github.io/codingtest/SImple-2019.10.12/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/codingtest/SImple-2019.10.12"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');

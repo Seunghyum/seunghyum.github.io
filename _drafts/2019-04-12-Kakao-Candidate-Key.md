@@ -37,6 +37,7 @@ function solution(relation) {
     console.log("answer : ", answer)
     //2. 1번의 후보키가능 열을 제외하고 (통계값이 2인) 각 열마다 중복되는 값이 있는 경우, 
     // 해당 튜플들의 다른 값들을 비교.   
+    
 }
 ```
 
@@ -95,63 +96,3 @@ const relation = [
 
 console.log(solution(relation));
 ```
-
-
-
-
-```javascript
-var Graph = (function() {
-  function Vertex(key) {
-    this.next = null;
-    this.arc = null;
-    this.key = key;
-    this.inTree = null;
-  }
-  function Arc(data, dest, capacity) {
-    this.nextArc = null;
-    this.destination = dest;
-    this.data = data;
-    this.capacity = capacity;
-    this.inTree = null;
-  }
-  function Graph() {
-    this.count = 0;
-    this.first = null;
-  }
-  Graph.prototype.insertVertex = function(key) {
-    var vertex = new Vertex(key);
-    var last = this.first;
-    if (last) {
-      while (last.next !== null) {
-        last = last.next;
-      }
-      last.next = vertex;
-    } else {
-      this.first = vertex;
-    }
-    this.count++;
-  };
-  
-  Graph.prototype.insertArc = function(data, fromKey, toKey, capacity) {
-    var from = this.first;
-    var to = this.first;
-    while (from && from.key !== fromKey) {
-      from = from.next;
-    }
-    while (to && to.key !== toKey) {
-      to = to.next;
-    }
-    if (!from || !to) return false;
-    var arc = new Arc(data, to, capacity);
-    var fromLast = from.arc;
-    if (fromLast) {
-      while (fromLast.nextArc != null) {
-        fromLast = fromLast.nextArc;
-      }
-      fromLast.nextArc = arc;
-    } else {
-      from.arc = arc;
-    }
-  };
-  return Graph;
-})();
