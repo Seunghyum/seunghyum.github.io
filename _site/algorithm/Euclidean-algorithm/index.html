@@ -491,6 +491,32 @@ GCD(270,192) = GCD(192,78) = GCD(78,36) = GCD(36,6) = GCD(6,0) = 6 <br />
   <span class="k">else</span>
     <span class="k">return</span> <span class="nx">gcd</span><span class="p">(</span><span class="nx">b</span><span class="p">,</span> <span class="p">(</span><span class="nx">a</span> <span class="o">%</span> <span class="nx">b</span><span class="p">));</span>
 <span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">gcd</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span> <span class="p">{</span><span class="k">return</span> <span class="nx">b</span> <span class="p">?</span> <span class="nx">gcd</span><span class="p">(</span><span class="nx">b</span><span class="p">,</span><span class="nx">a</span><span class="o">%</span><span class="nx">b</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">a</span><span class="p">)}</span>
+</code></pre></div></div>
+
+<h4 id="최소공배수lcm-least-common-multiple">최소공배수(LCM: Least Common Multiple)</h4>
+
+<blockquote>
+  <p>두 수(a,b) 중 어느 한수가 다른 한수의 약수가 아니면 <br />
+최소공배수 = 최대공배수 * a * b</p>
+</blockquote>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">LCM</span> <span class="o">=</span> <span class="nx">a</span><span class="o">*</span><span class="nx">b</span><span class="o">/</span><span class="nx">GCD</span>
+</code></pre></div></div>
+
+<h3 id="두-수nm의-최소공배수lcm-최대공약수gcd-구하기">두 수(n,m)의 최소공배수(LCM), 최대공약수(GCD) 구하기</h3>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">gcd</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span> <span class="p">{</span><span class="k">return</span> <span class="nx">b</span> <span class="p">?</span> <span class="nx">gcd</span><span class="p">(</span><span class="nx">b</span><span class="p">,</span><span class="nx">a</span><span class="o">%</span><span class="nx">b</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">a</span><span class="p">)}</span>
+
+<span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span> <span class="nx">m</span><span class="p">)</span> <span class="p">{</span>
+
+  <span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">n</span> <span class="o">&gt;</span> <span class="nx">m</span> <span class="p">?</span> <span class="nx">n</span> <span class="p">:</span> <span class="nx">m</span>
+  <span class="kd">let</span> <span class="nx">b</span> <span class="o">=</span> <span class="nx">n</span> <span class="o">&lt;</span> <span class="nx">m</span> <span class="p">?</span> <span class="nx">n</span> <span class="p">:</span> <span class="nx">m</span>
+  <span class="kd">let</span> <span class="nx">k</span> <span class="o">=</span> <span class="nx">gcd</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span>
+
+  <span class="k">return</span> <span class="p">[</span><span class="nx">k</span><span class="p">,</span> <span class="nx">a</span><span class="o">*</span><span class="nx">b</span><span class="o">/</span><span class="nx">k</span><span class="p">]</span>
+<span class="p">})</span>
 </code></pre></div></div>
 
 <br>
@@ -539,7 +565,7 @@ GCD(270,192) = GCD(192,78) = GCD(78,36) = GCD(36,6) = GCD(6,0) = 6 <br />
 
 
 
-  최대 1 분 소요
+  1 분 소요
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">문제

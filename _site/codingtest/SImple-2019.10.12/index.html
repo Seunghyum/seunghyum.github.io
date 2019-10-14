@@ -430,7 +430,7 @@ reserve는 체육복이 2개 있는 사람.
 */</span>
 </code></pre></div></div>
 
-<h2 id="정답-2">정답</h2>
+<h2 id="내-답안">내 답안</h2>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span> <span class="nx">m</span><span class="p">)</span> <span class="p">{</span>
 
@@ -454,6 +454,20 @@ reserve는 체육복이 2개 있는 사람.
 
   <span class="k">return</span> <span class="p">[</span><span class="nx">GCD</span><span class="p">,</span> <span class="nx">LCM</span><span class="p">]</span>
 <span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="더-좋은-답안">더 좋은 답안</h2>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">gcd</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span> <span class="p">{</span><span class="k">return</span> <span class="nx">b</span> <span class="p">?</span> <span class="nx">gcd</span><span class="p">(</span><span class="nx">b</span><span class="p">,</span><span class="nx">a</span><span class="o">%</span><span class="nx">b</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">a</span><span class="p">)}</span>
+
+<span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span> <span class="nx">m</span><span class="p">)</span> <span class="p">{</span>
+
+  <span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">n</span> <span class="o">&gt;</span> <span class="nx">m</span> <span class="p">?</span> <span class="nx">n</span> <span class="p">:</span> <span class="nx">m</span>
+  <span class="kd">let</span> <span class="nx">b</span> <span class="o">=</span> <span class="nx">n</span> <span class="o">&lt;</span> <span class="nx">m</span> <span class="p">?</span> <span class="nx">n</span> <span class="p">:</span> <span class="nx">m</span>
+  <span class="kd">let</span> <span class="nx">k</span> <span class="o">=</span> <span class="nx">gcd</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span>
+
+  <span class="k">return</span> <span class="p">[</span><span class="nx">k</span><span class="p">,</span> <span class="nx">a</span><span class="o">*</span><span class="nx">b</span><span class="o">/</span><span class="nx">k</span><span class="p">]</span>
+<span class="p">})</span>
 </code></pre></div></div>
 
 <br>

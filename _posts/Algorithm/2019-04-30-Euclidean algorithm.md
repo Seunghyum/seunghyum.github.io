@@ -154,4 +154,30 @@ function gcd(a, b) { // 단, a가 b보다 커야함.
   else
     return gcd(b, (a % b));
 }
+
+function gcd(a,b) {return b ? gcd(b,a%b) : Math.abs(a)}
+```
+
+#### 최소공배수(LCM: Least Common Multiple)
+
+> 두 수(a,b) 중 어느 한수가 다른 한수의 약수가 아니면 <br>
+> 최소공배수 = 최대공배수 * a * b
+
+```javascript
+let LCM = a*b/GCD
+```
+
+### 두 수(n,m)의 최소공배수(LCM), 최대공약수(GCD) 구하기
+
+```javascript
+function gcd(a,b) {return b ? gcd(b,a%b) : Math.abs(a)}
+
+function solution(n, m) {
+
+  let a = n > m ? n : m
+  let b = n < m ? n : m
+  let k = gcd(a,b)
+
+  return [k, a*b/k]
+})
 ```
