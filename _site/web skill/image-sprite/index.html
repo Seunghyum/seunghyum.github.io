@@ -9,38 +9,38 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Javascript Skills - eveloper Dave</title>
-<meta name="description" content=" 각 반복문의 용도 ">
+<!-- begin _includes/seo.html --><title>[Web Skill] CSS 이미지 스프라이트(Image Sprite) - eveloper Dave</title>
+<meta name="description" content="정의">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko">
 <meta property="og:site_name" content="eveloper Dave">
-<meta property="og:title" content="Javascript Skills">
-<meta property="og:url" content="https://seunghyum.github.io/javascript/Javascript-Skills/">
+<meta property="og:title" content="[Web Skill] CSS 이미지 스프라이트(Image Sprite)">
+<meta property="og:url" content="https://seunghyum.github.io/web%20skill/image-sprite/">
 
 
-  <meta property="og:description" content=" 각 반복문의 용도 ">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2019-09-24T00:00:00+09:00">
+  <meta property="og:description" content="정의">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2019-10-17T00:00:00+09:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://seunghyum.github.io/javascript/Javascript-Skills/">
+
+<link rel="canonical" href="https://seunghyum.github.io/web%20skill/image-sprite/">
 
 
 
@@ -172,7 +172,7 @@
       
         
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/categories/#javascript" itemprop="item"><span itemprop="name">Javascript</span></a>
+          <a href="/categories/#web-skill" itemprop="item"><span itemprop="name">Web skill</span></a>
           <meta itemprop="position" content="2" />
         </li>
         <span class="sep">/</span>
@@ -180,7 +180,7 @@
     
       
       
-        <li class="current">Javascript Skills</li>
+        <li class="current">[Web Skill] CSS 이미지 스프라이트(Image Sprite)</li>
       
     
   </ol>
@@ -321,163 +321,97 @@
 
   <div class="archive">
     
-      <h1 id="page-title" class="page__title">Javascript Skills</h1>
+      <h1 id="page-title" class="page__title">[Web Skill] CSS 이미지 스프라이트(Image Sprite)</h1>
     
     <br>
-<center>
-<h2> 각 반복문의 용도 </h2>
-</center>
-<p><br /></p>
+<h2 id="정의">정의</h2>
+
+<p>필요한 이미지를 여러번 호출하는 것이 아니라 하나의 이미지 파일을 받아 Background로 Position을 잡아주어 여러개의 이미지를 가져올 수 있게 하는 방법.</p>
 
 <ul>
-  <li>for : array에 대한 반복이 아닌 횟수 반복을 적용하고자할 때 사용.</li>
-  <li>reduce : 깔대기에 물을 들이 붙는 것처럼 축적된 값(accumulator)를 반환. 비교할때, 축적된 값을 뽑을때 사용.</li>
-  <li>forEach : 함수를 순회함. index를 볼 수 있음. for문을 대체가능</li>
-  <li>map : 함수를 순회하며 인자를 다른 인자로 맵핑해서 새로운 array를 반환.</li>
-  <li>some : 배열 안의 어떤 요소라도 주어진 판별 함수를 통과하는지 테스트합니다.</li>
-  <li>every : 모든 요소들이 조건을 만족시키는지 확인.</li>
-  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for … of</a>
+  <li>장점 :
     <ul>
-      <li>반복가능한 객체 (Array, Map, Set, String, TypedArray, arguments 객체 등을 포함)에 대해서 반복</li>
-      <li>[Symbol.iterator] 속성이 있는 모든 컬렉션 요소에 대해 이 방식으로 반복</li>
-      <li>각 개별 속성값에 대해 실행되는 문이 있는 사용자 정의 반복 후크를 호출하는 루프를 생성합니다.</li>
+      <li>HTTP 요청횟수를 줄여 웹페이지의 로딩 시간을 절약함.</li>
+      <li>하나의 이미지 파일만 관리하면 됨.</li>
     </ul>
   </li>
-  <li><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/for...in">for … in</a> : 객체의 모든 non-Symbol, enumerable properties을 반복합니다.</li>
+  <li>단점 : 이미지를 불러오기 위해선 해당이미지의 Position을 알아야함. CSS로 관리할 경우 클래스로 분리하여 관리하고 background-image 속성으로 가져오면 편하지만 SVG이미지로 관리를 위해서는 js코드를 모듈화해야함.</li>
 </ul>
+
+<h2 id="적용해보기">적용해보기</h2>
+
+<p>적용대상 : 나의 Data Lab 프로젝트 중 <a href="https://seunghyum.github.io/data-visualization/UEFAtournament">18/19 UEFA 챔피언스리그 결과</a></p>
+
+<p>변경 전 : 구단의 이미지 파일들을 각각 저장하여서 불러옴</p>
+
+<figure class="half ">
+  
+    
+      <a href="/assets/images/Image-sprite-before.png">
+        <img src="/assets/images/Image-sprite-before.png" alt="" />
+      </a>
+    
+  
+  
+</figure>
+
+<h3 id="기존-코드">기존 코드</h3>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nx">downSeedNameBox</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s1">'image'</span><span class="p">)</span>
+                  <span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'x'</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+                  <span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'y'</span><span class="p">,</span> <span class="nx">SeedNameBox</span><span class="p">.</span><span class="nx">margin</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+                  <span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'width'</span><span class="p">,</span> <span class="nx">SeedNameBox</span><span class="p">.</span><span class="nx">height</span> <span class="o">-</span> <span class="nx">SeedNameBox</span><span class="p">.</span><span class="nx">margin</span><span class="p">)</span>
+                  <span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'height'</span><span class="p">,</span> <span class="nx">SeedNameBox</span><span class="p">.</span><span class="nx">height</span> <span class="o">-</span> <span class="nx">SeedNameBox</span><span class="p">.</span><span class="nx">margin</span><span class="p">)</span>
+                  <span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'xlink:href'</span><span class="p">,</span> <span class="p">(</span><span class="nx">d</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">require</span><span class="p">(</span><span class="s2">`@/assets/images/UEFA/Clubs/</span><span class="p">${</span><span class="nx">d</span><span class="p">.</span><span class="nx">participant</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">name</span><span class="p">}</span><span class="s2">.png`</span><span class="p">))</span>
+</code></pre></div></div>
 
 <dl>
-  <dt>Nested 반복문에서 제어</dt>
-  <dd>Nested 반복문에서 break나 continue 걸고 바깥반복문으로 넘어가는 방법 : <strong>label</strong></dd>
+  <dt>문제점</dt>
+  <dd>토너먼트 내에서 여러번 이미지를 불러올 경우 이미지 역시 여러번 호출하고 있음.</dd>
 </dl>
 
+<p><br /><br /></p>
+
+<h3 id="개선-이후">개선 이후</h3>
+
 <ul>
-  <li><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/label">label</a> : 반복문(for문)안에서 사용가능.</li>
+  <li>전체 구단의 이미지들을 하나로 담은 파일을 만들고</li>
 </ul>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// MDN 예제를 가져옴.</span>
+<figure class="half ">
+  
+    
+      <a href="/assets/images/Image-sprite-after.png">
+        <img src="/assets/images/Image-sprite-after.png" alt="" />
+      </a>
+    
+  
+  
+</figure>
 
-<span class="c1">//// continue</span>
-<span class="kd">var</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">j</span><span class="p">;</span>
+<ul>
+  <li>해당 구단이미지의 position을 저장하여서 
+뿌려주는 방식으로 변경함</li>
+</ul>
 
-<span class="nl">loop1</span><span class="p">:</span>
-<span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>      <span class="c1">//첫번째 for문은 "loop1" 레이블을 붙였다.</span>
-   <span class="nl">loop2</span><span class="p">:</span>
-   <span class="k">for</span> <span class="p">(</span><span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>   <span class="c1">//두번째 for문은 "loop2" 레이블을 붙였다.</span>
-      <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">===</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="nx">j</span> <span class="o">===</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-         <span class="k">continue</span> <span class="nx">loop1</span><span class="p">;</span>
-      <span class="p">}</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'i = '</span> <span class="o">+</span> <span class="nx">i</span> <span class="o">+</span> <span class="s1">', j = '</span> <span class="o">+</span> <span class="nx">j</span><span class="p">);</span>
-   <span class="p">}</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">images</span><span class="p">:</span> <span class="p">{</span>
+  <span class="nl">Ajax</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nl">position</span><span class="p">:</span> <span class="s1">'5 5 70 70'</span>
+    <span class="c1">// ...</span>
+  <span class="p">},</span>
+  <span class="c1">//...</span>
 <span class="p">}</span>
 
-<span class="c1">// 출력 결과:</span>
-<span class="c1">//   "i = 0, j = 0"</span>
-<span class="c1">//   "i = 0, j = 1"</span>
-<span class="c1">//   "i = 0, j = 2"</span>
-<span class="c1">//   "i = 1, j = 0"</span>
-<span class="c1">//   "i = 2, j = 0"</span>
-<span class="c1">//   "i = 2, j = 1"</span>
-<span class="c1">//   "i = 2, j = 2"</span>
-<span class="c1">// 다음 두 경우를 어떻게 스킵하는지 주목 : "i = 1, j = 1", "i = 1, j = 2"</span>
-
-<span class="c1">//// break</span>
-<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">numbers</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nl">loop</span><span class="p">:</span>
-  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">numbers</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="nx">i</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">k</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">break</span> <span class="nx">loop</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<span class="nx">downSeedNameBox</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s1">'svg'</span><span class="p">)</span>
+              <span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'x'</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+              <span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'y'</span><span class="p">,</span> <span class="nx">SeedNameBox</span><span class="p">.</span><span class="nx">margin</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+              <span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'width'</span><span class="p">,</span> <span class="nx">SeedNameBox</span><span class="p">.</span><span class="nx">height</span> <span class="o">-</span> <span class="nx">SeedNameBox</span><span class="p">.</span><span class="nx">margin</span><span class="p">)</span>
+              <span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'height'</span><span class="p">,</span> <span class="nx">SeedNameBox</span><span class="p">.</span><span class="nx">height</span> <span class="o">-</span> <span class="nx">SeedNameBox</span><span class="p">.</span><span class="nx">margin</span><span class="p">)</span>
+              <span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'viewBox'</span><span class="p">,</span> <span class="p">(</span><span class="nx">d</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">images</span><span class="p">[</span><span class="nx">d</span><span class="p">.</span><span class="nx">participant</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">name</span><span class="p">].</span><span class="nx">position</span><span class="p">)</span> <span class="c1">// this.images['Ajax'].position</span>
+            <span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s1">'image'</span><span class="p">)</span>
+              <span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'xlink:href'</span><span class="p">,</span> <span class="nx">ClubsImage</span><span class="p">)</span>
 </code></pre></div></div>
-
-<hr />
-
-<p><br /></p>
-<center>
-<h2> 배열 중간에 요소 추가 및 삭제 </h2>
-</center>
-<p><br /></p>
-
-<h3 id="splice-매서드"><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/splice">Splice 매서드</a></h3>
-<p>: 배열의 기존 요소를 삭제 또는 교체하거나 새 요소를 추가하여 배열의 내용을 변경</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">array</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">start</span><span class="p">[,</span> <span class="nx">deleteCount</span><span class="p">[,</span> <span class="nx">item1</span><span class="p">[,</span> <span class="nx">item2</span><span class="p">[,</span> <span class="p">...]]]])</span>
-</code></pre></div></div>
-
-<h4 id="start">start</h4>
-
-<ul>
-  <li>배열의 변경을 시작할 인덱스</li>
-  <li>배열의 길이보다 큰 값이라면 실제 시작 인덱스는 배열의 길이로 설정됩니다.</li>
-  <li>음수인 경우 배열의 끝에서부터 요소를 세어나갑니다(원점 -1, 즉 -n이면 요소 끝의 n번째 요소를 가리키며 array.length - n번째 인덱스와 같음).</li>
-  <li>값의 절대값이 배열의 길이 보다 큰 경우 0으로 설정됩니다.</li>
-</ul>
-
-<h4 id="deletecount">deleteCount</h4>
-
-<ul>
-  <li>Optional</li>
-  <li>배열에서 제거할 요소의 수입니다.</li>
-  <li>deleteCount를 생략하거나 값이 array.length - start보다 크면 start부터의 모든 요소를 제거합니다.</li>
-  <li>deleteCount가 0 이하라면 어떤 요소도 제거하지 않습니다. 이 때는 최소한 하나의 새로운 요소를 지정해야 합니다.</li>
-</ul>
-
-<h4 id="item1-item2-">item1, item2, …</h4>
-
-<ul>
-  <li>Optional</li>
-  <li>배열에 추가할 요소입니다. 아무 요소도 지정하지 않으면 splice()는 요소를 제거하기만 합니다.</li>
-</ul>
-
-<h3 id="예제">예제</h3>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// # 하나도 제거하지 않고, 2번 인덱스에 "drum"과 "guitar" 추가섹션</span>
-<span class="kd">var</span> <span class="nx">myFish</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'angel'</span><span class="p">,</span> <span class="s1">'clown'</span><span class="p">,</span> <span class="s1">'mandarin'</span><span class="p">,</span> <span class="s1">'sturgeon'</span><span class="p">];</span>
-<span class="kd">var</span> <span class="nx">removed</span> <span class="o">=</span> <span class="nx">myFish</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">'drum'</span><span class="p">,</span> <span class="s1">'guitar'</span><span class="p">);</span>
-
-<span class="c1">// myFish is ["angel", "clown", "drum", "guitar", "mandarin", "sturgeon"] </span>
-<span class="c1">// removed is [], no elements removed</span>
-
-
-<span class="c1">// # 3번 인덱스에서 한 개 요소 제거섹션</span>
-<span class="kd">var</span> <span class="nx">myFish</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'angel'</span><span class="p">,</span> <span class="s1">'clown'</span><span class="p">,</span> <span class="s1">'drum'</span><span class="p">,</span> <span class="s1">'mandarin'</span><span class="p">,</span> <span class="s1">'sturgeon'</span><span class="p">];</span>
-<span class="kd">var</span> <span class="nx">removed</span> <span class="o">=</span> <span class="nx">myFish</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
-
-<span class="c1">// removed is ["mandarin"]</span>
-<span class="c1">// myFish is ["angel", "clown", "drum", "sturgeon"]</span>
-
-
-<span class="c1">// # 2번 인덱스에서 한 개 요소 제거하고 "trumpet" 추가섹션</span>
-<span class="kd">var</span> <span class="nx">myFish</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'angel'</span><span class="p">,</span> <span class="s1">'clown'</span><span class="p">,</span> <span class="s1">'drum'</span><span class="p">,</span> <span class="s1">'sturgeon'</span><span class="p">];</span>
-<span class="kd">var</span> <span class="nx">removed</span> <span class="o">=</span> <span class="nx">myFish</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">'trumpet'</span><span class="p">);</span>
-
-<span class="c1">// myFish is ["angel", "clown", "trumpet", "sturgeon"]</span>
-<span class="c1">// removed is ["drum"]</span>
-
-<span class="c1">// # -2번 인덱스에서 한 개 요소 제거섹션</span>
-<span class="kd">var</span> <span class="nx">myFish</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'angel'</span><span class="p">,</span> <span class="s1">'clown'</span><span class="p">,</span> <span class="s1">'mandarin'</span><span class="p">,</span> <span class="s1">'sturgeon'</span><span class="p">];</span>
-<span class="kd">var</span> <span class="nx">removed</span> <span class="o">=</span> <span class="nx">myFish</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
-
-<span class="c1">// myFish is ["angel", "clown", "sturgeon"] </span>
-<span class="c1">// removed is ["mandarin"]</span>
-</code></pre></div></div>
-
-<h3 id="fill-매서드"><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/fill">fill 매서드</a></h3>
-
-<p>: 배열의 startIndex 부터 endIndex까지 정적으로 채우기</p>
-
-<blockquote>
-  <p>arr.fill(value[, start[, end]])</p>
-</blockquote>
-
-<dl>
-  <dt>value</dt>
-  <dd>배열을 채울 값.</dd>
-  <dt>start Optional</dt>
-  <dd>시작 인덱스, 기본 값은 0.</dd>
-  <dt>end Optional</dt>
-  <dd>끝 인덱스, 기본 값은 this.length.</dd>
-</dl>
 
 <br>
 <br>
@@ -583,7 +517,7 @@
 
 
 
-  1 분 소요
+  최대 1 분 소요
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">동적 프로그래밍(Dynamic Programming)
@@ -1575,8 +1509,8 @@ function solution(record) {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://seunghyum.github.io/javascript/Javascript-Skills/";  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = "/javascript/Javascript-Skills"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      this.page.url = "https://seunghyum.github.io/web%20skill/image-sprite/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/web%20skill/image-sprite"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');
