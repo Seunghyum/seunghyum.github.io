@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://seunghyum.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://seunghyum.github.io/" rel="alternate" type="text/html" /><updated>2019-10-17T20:48:26+09:00</updated><id>https://seunghyum.github.io/feed.xml</id><title type="html">eveloper Dave</title><subtitle>데이터 시각화에 관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">[Web Skill] CSS 이미지 스프라이트(Image Sprite)</title><link href="https://seunghyum.github.io/web%20skill/image-sprite/" rel="alternate" type="text/html" title="[Web Skill] CSS 이미지 스프라이트(Image Sprite)" /><published>2019-10-17T00:00:00+09:00</published><updated>2019-10-17T00:00:00+09:00</updated><id>https://seunghyum.github.io/web%20skill/image-sprite</id><content type="html" xml:base="https://seunghyum.github.io/web%20skill/image-sprite/">&lt;h2 id=&quot;정의&quot;&gt;정의&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://seunghyum.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://seunghyum.github.io/" rel="alternate" type="text/html" /><updated>2019-10-18T00:32:11+09:00</updated><id>https://seunghyum.github.io/feed.xml</id><title type="html">eveloper Dave</title><subtitle>데이터 시각화에 관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">[Web Skill] 이미지 스프라이트(Image Sprite)</title><link href="https://seunghyum.github.io/web%20skill/image-sprite/" rel="alternate" type="text/html" title="[Web Skill] 이미지 스프라이트(Image Sprite)" /><published>2019-10-17T00:00:00+09:00</published><updated>2019-10-17T00:00:00+09:00</updated><id>https://seunghyum.github.io/web%20skill/image-sprite</id><content type="html" xml:base="https://seunghyum.github.io/web%20skill/image-sprite/">&lt;h2 id=&quot;정의&quot;&gt;정의&lt;/h2&gt;
 
 &lt;p&gt;필요한 이미지를 여러번 호출하는 것이 아니라 하나의 이미지 파일을 받아 Background로 Position을 잡아주어 여러개의 이미지를 가져올 수 있게 하는 방법.&lt;/p&gt;
 
@@ -9,7 +9,10 @@
       &lt;li&gt;하나의 이미지 파일만 관리하면 됨.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;단점 : 이미지를 불러오기 위해선 해당이미지의 Position을 알아야함. CSS로 관리할 경우 클래스로 분리하여 관리하고 background-image 속성으로 가져오면 편하지만 SVG이미지로 관리를 위해서는 js코드를 모듈화해야함.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;단점 : 이미지를 불러오기 위해선 해당이미지의 Position을 알아야함. CSS로 관리할 경우 클래스로 분리하여 관리하고 background-image 속성으로 가져오면 편하지만 SVG이미지로 관리를 위해서는 js코드를 모듈화해야함.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;관련링크 : &lt;a href=&quot;https://spritegen.website-performance.org/&quot;&gt;Image Sprite Online Generator&lt;/a&gt; Sprite 이미지, CSS 클래스도 만들어줌.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;적용해보기&quot;&gt;적용해보기&lt;/h2&gt;

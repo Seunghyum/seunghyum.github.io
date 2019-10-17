@@ -1,6 +1,6 @@
 ---
 layout: posts
-title:  "[Web Skill] CSS 이미지 스프라이트(Image Sprite)"
+title:  "[Web Skill] 이미지 스프라이트(Image Sprite)"
 categories: [Web Skill]
 tags: [Image Sprite]
 comments: true
@@ -22,6 +22,8 @@ gallery_Image-sprite-after:
   - 하나의 이미지 파일만 관리하면 됨.
 
 - 단점 : 이미지를 불러오기 위해선 해당이미지의 Position을 알아야함. CSS로 관리할 경우 클래스로 분리하여 관리하고 background-image 속성으로 가져오면 편하지만 SVG이미지로 관리를 위해서는 js코드를 모듈화해야함.
+
+- 관련링크 : [Image Sprite Online Generator](https://spritegen.website-performance.org/) Sprite 이미지, CSS 클래스도 만들어줌.
 
 ## 적용해보기
 
