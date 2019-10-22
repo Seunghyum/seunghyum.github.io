@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://seunghyum.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://seunghyum.github.io/" rel="alternate" type="text/html" /><updated>2019-10-22T17:52:38+09:00</updated><id>https://seunghyum.github.io/feed.xml</id><title type="html">eveloper Dave</title><subtitle>데이터 시각화에 관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">[WebRTC] 공부</title><link href="https://seunghyum.github.io/webrtc/WebRTC/" rel="alternate" type="text/html" title="[WebRTC] 공부" /><published>2019-10-22T00:00:00+09:00</published><updated>2019-10-22T00:00:00+09:00</updated><id>https://seunghyum.github.io/webrtc/WebRTC</id><content type="html" xml:base="https://seunghyum.github.io/webrtc/WebRTC/">&lt;h2 id=&quot;webrtc란&quot;&gt;WebRTC란?&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://seunghyum.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://seunghyum.github.io/" rel="alternate" type="text/html" /><updated>2019-10-22T18:34:23+09:00</updated><id>https://seunghyum.github.io/feed.xml</id><title type="html">eveloper Dave</title><subtitle>데이터 시각화에 관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">[WebRTC] 공부</title><link href="https://seunghyum.github.io/webrtc/WebRTC/" rel="alternate" type="text/html" title="[WebRTC] 공부" /><published>2019-10-22T00:00:00+09:00</published><updated>2019-10-22T00:00:00+09:00</updated><id>https://seunghyum.github.io/webrtc/WebRTC</id><content type="html" xml:base="https://seunghyum.github.io/webrtc/WebRTC/">&lt;h2 id=&quot;webrtc란&quot;&gt;WebRTC란?&lt;/h2&gt;
 
 &lt;p&gt;Peer to Peer(P2P - 1:1) 통신을 가능하게 해주는 웹기술. 하지만 현실세계에선 클라이언트 간에 통신은 NAT(Network Access Translator) gateway가 있어서(네트워크 라우터같은) 대비책(fallback)이 필요. 그래서 STUN과 TURN같은 Signaling Server 가 있음.&lt;/p&gt;
 
@@ -15,7 +15,7 @@ A에서 B로 직접적인 피어 투 피어 접속이 쉽게 동작 하지 않�
 
 &lt;h2 id=&quot;구조&quot;&gt;구조&lt;/h2&gt;
 
-&lt;figure class=&quot;half &quot;&gt;
+&lt;figure class=&quot; &quot;&gt;
   
     
       &lt;a href=&quot;/assets/images/posts/WebRTC/WebRTC_data_pathways.png&quot;&gt;
@@ -53,7 +53,7 @@ SDP는 미디어 자체라기 보다는 메타데이터라고 볼 수 있습니�
 &lt;p&gt;P2P는 1:1 방식에는 적합하나 1:N 통신으로는 부적합하다
 그래서 등장한 것이 SFU, MCU&lt;/p&gt;
 
-&lt;figure class=&quot;half &quot;&gt;
+&lt;figure class=&quot; &quot;&gt;
   
     
       &lt;a href=&quot;/assets/images/posts/WebRTC/p2p_vs_sfu_vs_mcu.png&quot;&gt;
@@ -95,6 +95,26 @@ SDP는 미디어 자체라기 보다는 메타데이터라고 볼 수 있습니�
   &lt;li&gt;&lt;a href=&quot;https://www.html5rocks.com/ko/tutorials/webrtc/basics/&quot;&gt;공식문서 한국어&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://codelabs.developers.google.com/codelabs/webrtc-web/#0&quot;&gt;따라하면서 배우는 튜토리얼&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://hacks.mozilla.or.kr/2013/08/webrtc-and-the-ocean-of-acronyms/&quot;&gt;기술약어 모음집&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;마치며&quot;&gt;마치며&lt;/h2&gt;
+
+&lt;p&gt;현재 다니고 있는 회사는 실시간성, P2P 서버스가 핵심가치라 WebRTC를 선택했다. 하지만 1:M 서비스로 나아가려면 WebRTC에서 벗어나야 할수도 있을 것 같다. 스트리밍 서비스 관련 글들을 보니 회사가 앞으로 해야할 고민들이 조금은 보이고 있는것 같다.&lt;/p&gt;
+
+&lt;figure class=&quot; &quot;&gt;
+  
+    
+      &lt;a href=&quot;/assets/images/posts/WebRTC/latency_format_and_protocols.png&quot;&gt;
+        &lt;img src=&quot;/assets/images/posts/WebRTC/latency_format_and_protocols.png&quot; alt=&quot;&quot; /&gt;
+      &lt;/a&gt;
+    
+  
+  
+&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.popit.kr/%eb%9d%bc%ec%9d%b4%eb%b8%8c-%eb%b9%84%eb%94%94%ec%98%a4-%ec%84%9c%eb%b9%84%ec%8a%a4-%ea%b5%ac%ec%b6%95%ec%9d%84-%ec%9c%84%ed%95%9c-%eb%85%b8%ed%95%98%ec%9a%b0-1%ed%9a%8c/&quot;&gt;라이브 비디오 서비스 구축을 위한 노하우 - 1편&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.popit.kr/%eb%9d%bc%ec%9d%b4%eb%b8%8c-%eb%b9%84%eb%94%94%ec%98%a4-%ec%84%9c%eb%b9%84%ec%8a%a4-%ea%b5%ac%ec%b6%95%ec%9d%84-%ec%9c%84%ed%95%9c-%eb%85%b8%ed%95%98%ec%9a%b0-2%ed%8e%b8/&quot;&gt;라이브 비디오 서비스 구축을 위한 노하우 - 2편&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="WebRTC" /><summary type="html">WebRTC란?</summary></entry><entry><title type="html">[Web Skill] 이미지 스프라이트(Image Sprite)</title><link href="https://seunghyum.github.io/web%20skill/image-sprite/" rel="alternate" type="text/html" title="[Web Skill] 이미지 스프라이트(Image Sprite)" /><published>2019-10-17T00:00:00+09:00</published><updated>2019-10-17T00:00:00+09:00</updated><id>https://seunghyum.github.io/web%20skill/image-sprite</id><content type="html" xml:base="https://seunghyum.github.io/web%20skill/image-sprite/">&lt;h2 id=&quot;정의&quot;&gt;정의&lt;/h2&gt;
 
 &lt;p&gt;필요한 이미지를 여러번 호출하는 것이 아니라 하나의 이미지 파일을 받아 Background로 Position을 잡아주어 여러개의 이미지를 가져올 수 있게 하는 방법.&lt;/p&gt;
