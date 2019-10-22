@@ -9,38 +9,38 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[CodingTest] 2019 카카오 신입 공채 1차 - 4번 무지의 먹방 라이브 문제 with Javascript - eveloper Dave</title>
-<meta name="description" content="무지의 먹방 라이브">
+<!-- begin _includes/seo.html --><title>[WebRTC] 공부 - eveloper Dave</title>
+<meta name="description" content="WebRTC란?">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko">
 <meta property="og:site_name" content="eveloper Dave">
-<meta property="og:title" content="[CodingTest] 2019 카카오 신입 공채 1차 - 4번 무지의 먹방 라이브 문제 with Javascript">
-<meta property="og:url" content="https://seunghyum.github.io/codingtest/KaKao-Eat-Live/">
+<meta property="og:title" content="[WebRTC] 공부">
+<meta property="og:url" content="https://seunghyum.github.io/webrtc/WebRTC/">
 
 
-  <meta property="og:description" content="무지의 먹방 라이브">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2019-04-30T00:00:00+09:00">
+  <meta property="og:description" content="WebRTC란?">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2019-10-22T00:00:00+09:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://seunghyum.github.io/codingtest/KaKao-Eat-Live/">
+
+<link rel="canonical" href="https://seunghyum.github.io/webrtc/WebRTC/">
 
 
 
@@ -172,7 +172,7 @@
       
         
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/categories/#codingtest" itemprop="item"><span itemprop="name">Codingtest</span></a>
+          <a href="/categories/#webrtc" itemprop="item"><span itemprop="name">Webrtc</span></a>
           <meta itemprop="position" content="2" />
         </li>
         <span class="sep">/</span>
@@ -180,7 +180,7 @@
     
       
       
-        <li class="current">[CodingTest] 2019 카카오 신입 공채 1차 - 4번 무지의 먹방 라이브 문제 with Javascript</li>
+        <li class="current">[WebRTC] 공부</li>
       
     
   </ol>
@@ -321,171 +321,107 @@
 
   <div class="archive">
     
-      <h1 id="page-title" class="page__title">[CodingTest] 2019 카카오 신입 공채 1차 - 4번 무지의 먹방 라이브 문제 with Javascript</h1>
+      <h1 id="page-title" class="page__title">[WebRTC] 공부</h1>
     
     <br>
-<h2 id="무지의-먹방-라이브">무지의 먹방 라이브</h2>
+<h2 id="webrtc란">WebRTC란?</h2>
 
+<p>Peer to Peer(P2P - 1:1) 통신을 가능하게 해주는 웹기술. 하지만 현실세계에선 클라이언트 간에 통신은 NAT(Network Access Translator) gateway가 있어서(네트워크 라우터같은) 대비책(fallback)이 필요. 그래서 STUN과 TURN같은 Signaling Server 가 있음.</p>
+
+<h2 id="iceinteractive-connectivity-establishment">ICE(Interactive Connectivity Establishment)</h2>
+
+<blockquote>
+  <p>ICE(Interactive Connectivity Establishment)는 웹 브라우저 간에 피어 투 피어 접속을 할 수 있게 해 주는 프레임워크입니다. <br />
+A에서 B로 직접적인 피어 투 피어 접속이 쉽게 동작 하지 않는데는 많은 이유가 있습니다. <br />
+공개된 접속을 막는 방화벽을 통과해야 하기도 하고, 공인 IP 주소를 갖지 않은 기기들에 유일한 주소를 부여해야 하며, 라우터가 직접적인 피어 투 피어 연결을 지원하지 않는 경우 서버를 통해 데이터를 중계 해야 할 수도 있습니다.<br />
+이러한 이유들을 해결하기 위해 ICE는 아래에 기술된 기술들을 사용합니다.<br />
+<br />
+<small>- <a href="http://hacks.mozilla.or.kr/2013/08/webrtc-and-the-ocean-of-acronyms/">WebRTC 기술 약어 모음집</a> 중에서 -</small></p>
+</blockquote>
+
+<h2 id="구조">구조</h2>
+
+<figure class="half ">
+  
+    
+      <a href="/assets/images/posts/WebRTC/WebRTC_data_pathways.png">
+        <img src="/assets/images/posts/WebRTC/WebRTC_data_pathways.png" alt="" />
+      </a>
+    
+  
+  
+</figure>
+
+<h2 id="stun-server">STUN Server</h2>
+
+<p>클라이언트간의 메타데이터 정보(코덱, 파일유형, 클라이언트 IP주소)를 교환해주기 위한 서버</p>
+
+<h2 id="turn-server">TURN Server</h2>
+
+<p>WebRTC를 통해 클라이언트 간 통신이 실패했을시 클라이언트에게 영상, 음성, 텍스트 등의 데이터 전달을 대신해주는 서버. Relay Server(방송서버) 역할을 함.</p>
+
+<h2 id="sdp-session-description-protocol">SDP (Session Description Protocol)</h2>
+
+<blockquote>
+  <p>연결된 멀티미디어 데이터의 해상도, 형식, 코덱, 암호화 방법 등등을 기술하는 표준으로써, 피어 투 피어로 연결된 서로 간에 전송될 데이터를 이해하는데 사용됩니다. <br />
+SDP는 미디어 자체라기 보다는 메타데이터라고 볼 수 있습니다
+<small>- <a href="http://hacks.mozilla.or.kr/2013/08/webrtc-and-the-ocean-of-acronyms/">WebRTC 기술 약어 모음집</a> 중에서 -</small></p>
+</blockquote>
+
+<h2 id="보안">보안</h2>
+
+<p>Siginaling Server는 아직 WebRTC 표준이 아님(2019.10.22 기준). HTTPS나 localhost에서 동작하지만 개발자가 알아서 해야함.</p>
+
+<h2 id="p2p-vs-sfu-vs-mcu">P2P vs SFU vs MCU</h2>
+
+<p>퍼옴 : <a href="https://blog.xenomity.com/P2P-vs-SFU-vs-MCU/">P2P vs SFU vs MCU</a></p>
+
+<p>P2P는 1:1 방식에는 적합하나 1:N 통신으로는 부적합하다
+그래서 등장한 것이 SFU, MCU</p>
+
+<figure class="half ">
+  
+    
+      <a href="/assets/images/posts/WebRTC/p2p_vs_sfu_vs_mcu.png">
+        <img src="/assets/images/posts/WebRTC/p2p_vs_sfu_vs_mcu.png" alt="" />
+      </a>
+    
+  
+  
+</figure>
+
+<h3 id="p2p-peer-to-peer">P2P (Peer to Peer)</h3>
+
+<p>중앙 서버 없이 종단 간 직접 연결 방식은 비용 측면에서 유리하나, 피어 수가 증가(mesh structure)할수록 시스템과 네트워크의 높은 capacity를 요구한다. 1:1 또는 소규모 미디어 교환에 적합하다.</p>
+
+<h3 id="sfu-selective-forwarding-unit">SFU (Selective Forwarding Unit)</h3>
+
+<p>중앙 서버를 통해 종단 간 미디어 트래픽을 중계하는 중앙 서버 방식으로, 각 피어 연결 할당 및 decrypt/encrypt 처리 비용 정도를 감수한다. 영상 방송과 같은 1:M(or minimum-N:M) 스트리밍 서비스 구조에 적합하다.</p>
+
+<h3 id="mcu-multi-point-control-unit">MCU (Multi-point Control Unit)</h3>
+
+<p>다수의 송출 미디어를 중앙 서버에서 혼합(muxing) 또는 가공(transcoding)하여 수신측으로 전달하는 중앙 서버 방식으로, 클라이언트와 네트워크의 부담이 현저히 줄어드는 반면 중앙 서버의 높은 컴퓨팅 파워가 요구된다.</p>
+
+<h3 id="결론">결론</h3>
+<p>: SFU가 더 좋다는 얘기가 많음.</p>
 <ul>
-  <li><a href="https://www.welcomekakao.com/learn/courses/30/lessons/42890?language=javascript">문제 바로가기 링크</a></li>
-  <li><a href="http://tech.kakao.com/2018/09/21/kakao-blind-recruitment-for2019-round-1/">카카오의 설명 블로그</a></li>
+  <li>MCU는 WebRTC의 최대 장점인 실시간성을 잡아먹음.</li>
+  <li>MCU는 decrypt/encrypt 과정에 비용이 많이 듦.</li>
+  <li>성능 측정해보니 Janus Gateway, Mediasoup이 좋음.(SFU)</li>
+  <li>참고한자료
+    <ul>
+      <li><a href="https://choisee02.tistory.com/33">주요 제품들의 성능을 체계적으로 비교분석한 글</a></li>
+      <li><a href="https://bloggeek.me/webrtc-multiparty-video-alternatives/">MCU와 SFU의 처리과정을 도식화하여 설명한 글</a></li>
+    </ul>
+  </li>
 </ul>
 
-<hr />
-
-<h2 id="나의-답안">나의 답안</h2>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">food_times</span><span class="p">,</span> <span class="nx">k</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span><span class="p">(</span><span class="nx">food_times</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="nx">k</span><span class="p">)</span> <span class="k">return</span> <span class="nx">k</span><span class="o">+</span><span class="mi">1</span>
-
-    <span class="kd">const</span> <span class="nx">val</span> <span class="o">=</span> <span class="nx">k</span> <span class="o">/</span> <span class="nx">food_times</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span>
-          <span class="nx">rest</span> <span class="o">=</span> <span class="nx">k</span> <span class="o">%</span> <span class="nx">food_times</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span>
-          <span class="nx">timesSum</span> <span class="o">=</span> <span class="nx">food_times</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">);</span>
-    
-    <span class="k">if</span><span class="p">(</span><span class="nx">timesSum</span> <span class="o">&lt;=</span> <span class="nx">k</span><span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-    
-    <span class="kd">let</span> <span class="nx">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">timesSum</span><span class="o">&gt;</span><span class="nx">i</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">const</span> <span class="nx">idx</span> <span class="o">=</span> <span class="nx">i</span><span class="o">%</span><span class="nx">food_times</span><span class="p">.</span><span class="nx">length</span>
-        <span class="k">if</span><span class="p">(</span><span class="nx">food_times</span><span class="p">[</span><span class="nx">idx</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">food_times</span><span class="p">[</span><span class="nx">idx</span><span class="p">]</span><span class="o">--</span>
-            <span class="nx">count</span><span class="o">++</span><span class="p">;</span>
-            <span class="k">if</span><span class="p">(</span><span class="nx">count</span> <span class="o">==</span> <span class="nx">k</span><span class="p">)</span> <span class="k">return</span> <span class="p">(</span><span class="nx">food_times</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="nx">idx</span><span class="o">+</span><span class="mi">2</span> <span class="p">?</span> <span class="nx">idx</span><span class="o">+</span><span class="mi">2</span> <span class="o">-</span> <span class="nx">food_times</span><span class="p">.</span><span class="nx">length</span> <span class="p">:</span> <span class="nx">idx</span><span class="o">+</span><span class="mi">2</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<h3 id="결과">결과</h3>
-
-<p><img src="/assets/images/posts/kakao/Eat-Live-result-my.png" style="max-width: 200px;" /></p>
-
-<h3 id="접근방식-및-아쉬웠던-점">접근방식 및 아쉬웠던 점.</h3>
-
-<p>좋은 참고 사이트 : <a href="https://boohyunsik.github.io/muzi/">참고사이트</a>
-Brute Force 문제였다. Object Array로 풀수있는 방법 중 좋은 방식을 생각하지 못했다. 루프를 진행하며 제외할수 있는 값을 계속 고려해서 루프를 돌았다. 그래서 불필요한 로직이 생겨버렸다.</p>
-
-<p><img src="/assets/images/posts/kakao/Eat-Live-solving-process1.png" style="max-width: 250px;" /></p>
-
-<p>내 정답들의 풀이 골격은 모두 다 해보는 Brute Force 알고리즘이다. 하지만 이렇게 하면 효율성 점수를 얻을 수 없다.</p>
-
-<ol>
-  <li>food_times 배열을 값과 인덱스로 Object Array을 만들고</li>
-  <li>각 줄마다 값이 있는 것들만 측정해서 k값을 지워나가고</li>
-  <li>k값이 0보다 클때 -1을 진행한다고 k=0이면 다음 요소로 넘어간다.</li>
-</ol>
-
-<hr />
-
-<h2 id="최고의-파이썬-답안">최고의 파이썬 답안</h2>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">solution</span><span class="p">(</span><span class="n">food_times</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
-    <span class="k">if</span> <span class="nb">sum</span><span class="p">(</span><span class="n">food_times</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">k</span><span class="p">:</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">food_times</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">k</span><span class="p">:</span> <span class="k">return</span> <span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="err">ㅇ</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">food_times</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-        <span class="n">food_times</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">food_times</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
-    <span class="n">ft</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">food_times</span><span class="p">,</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1"># 내림차순 정렬
-</span>    <span class="n">i</span><span class="p">,</span><span class="n">r</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
-    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">k</span> <span class="o">-</span> <span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">ft</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">r</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="k">break</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">k</span> <span class="o">-=</span> <span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">ft</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">r</span><span class="p">)</span>
-            <span class="n">r</span> <span class="o">+=</span> <span class="p">(</span><span class="n">ft</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">r</span><span class="p">)</span>
-            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="n">ft</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">ft</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">n</span><span class="p">],</span> <span class="n">key</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-    <span class="k">return</span> <span class="n">ft</span><span class="p">[</span><span class="n">k</span><span class="o">%</span><span class="nb">len</span><span class="p">(</span><span class="n">ft</span><span class="p">)][</span><span class="mi">1</span><span class="p">]</span>
-</code></pre></div></div>
-
-<h3 id="결과-1">결과</h3>
-
-<p><img src="/assets/images/posts/kakao/Eat-Live-result-python.png" style="max-width: 200px;" /></p>
-
-<h3 id="주요-로직-설명">주요 로직 설명</h3>
-
+<h3 id="참고자료">참고자료</h3>
 <ul>
-  <li>food_times를 내림차순으로 정렬하여 가장 먼저 다 먹을 음식들 기준으로 정렬한다. =&gt; <code class="highlighter-rouge">ft</code></li>
-  <li>ft를 순회하며(i += 1) 해당 시간만큼 남은 시간을 k(정전된시간)에 지속적으로 뺴준다. =&gt; <code class="highlighter-rouge">k -= (n-i)*(ft[i][0]-r)</code></li>
-  <li>r에는 축적되는 시간을 계속 저장해둔다. =&gt; <code class="highlighter-rouge">r += (ft[i][0]-r)</code></li>
+  <li><a href="https://www.html5rocks.com/ko/tutorials/webrtc/basics/">공식문서 한국어</a></li>
+  <li><a href="https://codelabs.developers.google.com/codelabs/webrtc-web/#0">따라하면서 배우는 튜토리얼</a></li>
+  <li><a href="http://hacks.mozilla.or.kr/2013/08/webrtc-and-the-ocean-of-acronyms/">기술약어 모음집</a></li>
 </ul>
-
-<p><img src="/assets/images/posts/kakao/2019-04-30-KaKao-Eat-Live2.png" style="max-width: 500px;" /></p>
-
-<hr />
-
-<h2 id="파이썬-답안을-보고-수정한-자바스크립트-답안">파이썬 답안을 보고 수정한 자바스크립트 답안</h2>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">food_times</span><span class="p">,</span> <span class="nx">k</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span><span class="p">(</span><span class="nx">food_times</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="nx">k</span><span class="p">)</span> <span class="k">return</span> <span class="nx">k</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
-    <span class="k">if</span><span class="p">(</span> <span class="nx">food_times</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="nx">k</span> <span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-
-    <span class="kd">const</span> <span class="nx">n</span> <span class="o">=</span> <span class="nx">food_times</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
-
-    <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">n</span><span class="o">&gt;</span><span class="nx">i</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">food_times</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="nx">food_times</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span><span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
-    <span class="p">}</span>
-    <span class="kd">let</span> <span class="nx">ft</span> <span class="o">=</span> <span class="nx">food_times</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="nx">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="c1">// 내림차순 정렬</span>
-        <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="nx">r</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">while</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span><span class="p">(</span> <span class="nx">k</span><span class="o">-</span><span class="p">(</span><span class="nx">n</span><span class="o">-</span><span class="nx">i</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="nx">ft</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="nx">r</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="p">)</span> <span class="k">break</span><span class="p">;</span>
-        <span class="k">else</span> <span class="p">{</span>
-            <span class="nx">k</span> <span class="o">-=</span> <span class="p">(</span><span class="nx">n</span><span class="o">-</span><span class="nx">i</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="nx">ft</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="nx">r</span><span class="p">);</span>
-            <span class="nx">r</span> <span class="o">+=</span> <span class="nx">ft</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="nx">r</span><span class="p">;</span>
-            <span class="nx">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-    <span class="nx">ft</span> <span class="o">=</span> <span class="nx">food_times</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span><span class="nx">n</span><span class="p">).</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="nx">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
-    <span class="k">return</span> <span class="nx">ft</span><span class="p">[</span><span class="nx">k</span><span class="o">%</span><span class="nx">ft</span><span class="p">.</span><span class="nx">length</span><span class="p">][</span><span class="mi">1</span><span class="p">];</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<h3 id="결과-2">결과</h3>
-
-<p><img src="/assets/images/posts/kakao/Eat-Live-result-remake.png" style="max-width: 200px;" /></p>
-
-<hr />
-
-<h2 id="좋은-자바스크립트-답안">좋은 자바스크립트 답안</h2>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">food_times</span><span class="p">,</span> <span class="nx">k</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kd">let</span> <span class="nx">copy</span> <span class="o">=</span> <span class="p">[],</span>
-      <span class="nx">total</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">food_times</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">total</span> <span class="o">+=</span> <span class="nx">food_times</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
-    <span class="nx">copy</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="na">val</span><span class="p">:</span> <span class="nx">food_times</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span> <span class="na">index</span><span class="p">:</span> <span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">};</span>
-  <span class="p">}</span>
-
-  <span class="k">if</span> <span class="p">(</span><span class="nx">total</span> <span class="o">&lt;=</span> <span class="nx">k</span><span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-
-  <span class="nx">copy</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">a</span><span class="p">.</span><span class="nx">val</span> <span class="o">===</span> <span class="nx">b</span><span class="p">.</span><span class="nx">val</span><span class="p">)</span> <span class="nx">a</span><span class="p">.</span><span class="nx">index</span> <span class="o">-</span> <span class="nx">b</span><span class="p">.</span><span class="nx">index</span><span class="p">;</span>
-    <span class="k">return</span> <span class="nx">a</span><span class="p">.</span><span class="nx">val</span> <span class="o">-</span> <span class="nx">b</span><span class="p">.</span><span class="nx">val</span><span class="p">;</span>
-  <span class="p">});</span>
-
-  <span class="kd">let</span> <span class="nx">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="kd">let</span> <span class="nx">sub</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-
-  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">copy</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">sub</span> <span class="o">=</span> <span class="p">(</span><span class="nx">copy</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">val</span> <span class="o">-</span> <span class="nx">sum</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="nx">copy</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="nx">i</span><span class="p">);</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">k</span> <span class="o">-</span> <span class="nx">sub</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nx">sum</span> <span class="o">+=</span> <span class="nx">copy</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">val</span> <span class="o">-</span> <span class="nx">sum</span><span class="p">;</span>
-      <span class="nx">k</span> <span class="o">-=</span> <span class="nx">sub</span><span class="p">;</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-      <span class="kd">let</span> <span class="nx">temp</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">k</span> <span class="o">/</span> <span class="p">(</span><span class="nx">copy</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="nx">i</span><span class="p">));</span>
-      <span class="nx">k</span> <span class="o">-=</span> <span class="nx">temp</span> <span class="o">*</span> <span class="p">(</span><span class="nx">copy</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="nx">i</span><span class="p">);</span>
-      <span class="nx">sum</span> <span class="o">+=</span> <span class="nx">temp</span><span class="p">;</span>
-      <span class="k">break</span><span class="p">;</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-
-  <span class="nx">copy</span> <span class="o">=</span> <span class="nx">copy</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">item</span> <span class="o">=&gt;</span> <span class="nx">item</span><span class="p">.</span><span class="nx">val</span> <span class="o">-</span> <span class="nx">sum</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">);</span>
-  <span class="nx">copy</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">a</span><span class="p">.</span><span class="nx">index</span> <span class="o">-</span> <span class="nx">b</span><span class="p">.</span><span class="nx">index</span><span class="p">;);</span>
-
-  <span class="k">return</span> <span class="nx">copy</span><span class="p">[</span><span class="nx">k</span><span class="p">].</span><span class="nx">index</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
 
 <br>
 <br>
@@ -533,7 +469,7 @@ Brute Force 문제였다. Object Array로 풀수있는 방법 중 좋은 방식�
 
 
 
-  2 분 소요
+  1 분 소요
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">WebRTC란?
@@ -620,7 +556,7 @@ Brute Force 문제였다. Object Array로 풀수있는 방법 중 좋은 방식�
 
 
 
-  1 분 소요
+  최대 1 분 소요
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">동적 프로그래밍(Dynamic Programming)
@@ -885,7 +821,7 @@ Brute Force 문제였다. Object Array로 풀수있는 방법 중 좋은 방식�
 
 
 
-  최대 1 분 소요
+  1 분 소요
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">
@@ -1612,8 +1548,8 @@ function solution(record) {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://seunghyum.github.io/codingtest/KaKao-Eat-Live/";  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = "/codingtest/KaKao-Eat-Live"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      this.page.url = "https://seunghyum.github.io/webrtc/WebRTC/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/webrtc/WebRTC"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');
