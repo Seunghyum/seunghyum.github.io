@@ -246,6 +246,10 @@
             <li><a href="https://github.com/Seunghyum" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> https://www.linkedin.com/in/dave-11096614b/</a></li>
           
         
+          
+            <li><a href="https://seunghyum.github.io/feed.xml" rel="nofollow noopener noreferrer"><i class="fa fa-rss-square" aria-hidden="true"></i> Feed URL</a></li>
+          
+        
       
 
       
@@ -399,85 +403,99 @@ HTTP 데이터 -&gt; TCP 헤더 -&gt; IP 헤더 -&gt; Eternet 헤더</li>
   <li>어느 누구도 길에대한 정확한 위치를 알고 있지 않음(물어물어 찾아감)</li>
   <li>네트워크에 존재하는 각 컴퓨터를 식별하기 위해 각각에 서로 다른 값을 할당한 것. <strong>각 기기에 할당되는 것이 아니라 기기에 장착된 각각의 네트워크용 하드웨어에 할당 됨.</strong> 즉, 복수의 네트워크하드웨어를 장착한 기기는 복수의 주소 할당.</li>
   <li>MAC(Media Access Control Address) 주소 :  IEEE에서 표준화된 LAN 방식의 기기는 모두 같은 형식의 주소를 사용하는데 이 주소를 가르킴. MAC주소를 사용하여 목적지를 찾아갈때는 ARP라는 프로토콜이 사용됨</li>
-  <li><u>IP주소는 변경가능하나, MAC주소는 변경불가.</u></li>
+  <li><u>IP주소는 변경가능하나, MAC주소는 변경불가.</u>
+```shell
+$ ipconfig</li>
 </ul>
 
-<h2 id="tcptransfer-control-protocol">TCP(Transfer Control Protocol)</h2>
+<p>이더넷 어댑터 이더넷:</p>
 
-<ul>
-  <li>신뢰성을 담당
-    <ul>
-      <li>바이트 스트림 서비스<br />
-: 큰 데이터를 보내기위에 TCP세그먼트라고 불리우는 단위 패킷으로 작개 분해하여 관리하는것. 대용량의 데이터를 보내기 쉽게 작게 분해하여 상대에게 보내고, 정확하게 도착했는지 확인하는 역할.</li>
-      <li>TCP Three way hand shaking (STN/ACK 플래그 사용)<br />
-: SYN으로 보내면 SYN/ACK 플래그로 패킷 수신한 사실을 전하면 ACK 플래그를 다시 보내 완료되었음을 전송. 도중에 끊키면 다시 반복</li>
-    </ul>
-  </li>
-</ul>
+<p>연결별 DNS 접미사. . . . :
+   링크-로컬 IPv6 주소 . . . . : fe80::c160:8c0f:cef4:7ce8%13
+   IPv4 주소 . . . . . . . . . : 192.168.1.1
+   서브넷 마스크 . . . . . . . : 255.255.248.0
+   기본 게이트웨이 . . . . . . : 192.168.0.1</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>위의 IPv4주소가 내 컴퓨터의 IP주소. 192.168.1까지가 네트워크 주소, 맨뒤의 1이 호스트 주소.
 
-<p><img src="/assets/images/3way_hand_shake.png" alt="TCP Three way hand shaking (STN/ACK 플래그 사용)" /></p>
+네트워크 주소란?
+: 공통적인 부분(중복이 되는 부분)
 
-<h2 id="dnsdomain-name-system">DNS(Domain Name System)</h2>
+호스트 주소란?
+: 식별할 수 있는 부분(중복이 없고 유일무이한)
 
-<p>: 도메인을 주면 IP주소를 반환해줌</p>
-
-<h2 id="http">HTTP</h2>
-
-<ul>
-  <li>클라이언트(웹브라우저)에서 서버까지 일련의 흐름을 결정하는 프로토콜</li>
-  <li>HTTP자체는 잘 변하지 않음. 현재는 1997년 공개된 HTTP/1.1을 대부분 쓰고있음. 2.0이 탄생되었지만 표준화까지 시간이 오래걸림</li>
-</ul>
-
-<blockquote>
-  <p><a href="https://tobewiseys.tistory.com/72">HTTP 세션에 대한 설명</a>
-<a href="https://sdevstudy.tistory.com/27">쿠키와 세션</a></p>
-</blockquote>
-
-<h2 id="uri-url">URI, URL</h2>
-
-<p>URI(Uniform Resource Identifiers)<br />
-스키마를 나타내는 리소스를 식별하기 위한 식별자.<br />
-스키마: 리소스를 얻기위한 수단에 이름을 붙이는 방법. (http, ftp, mailto, file, telnet 등).</p>
-
-<ul>
-  <li>Uniform
-    <ul>
-      <li>통일된(Uniformity) 서식을 결정하는 것. 여러가지 종류의 리소스 지정을 구별없이 같은 맥락에서 사용할 수 있게 한다. (응??) 또한, 새로운 스키마(http:와 ftp등) 도입을 용이하게 함</li>
-    </ul>
-  </li>
-  <li>Resource
-    <ul>
-      <li>식별가능한 모든 것. (도큐먼트 파일, 이미지, 서비스(ex. 오늘의 일기예보) 등 다른 것과 구별할 수 있는 것은 모두 리소스) 단일한 부분만 아니라 복수의 집합도 리소스임</li>
-    </ul>
-  </li>
-  <li>Identifier
-    <ul>
-      <li>식별자. 식별 가능한 것을 참조하는 오브젝트.</li>
-    </ul>
-  </li>
-</ul>
-
-<p>URI는 리소스를 식별하기 위해 문자열 전반을 나타내는데 비해</p>
-
-<p>URL은 리소스의 장소(네트워크상의 위치)를 나타낸다.</p>
-
-<p>URL은 URI의 서브셋이다. (URI = URL + URN)</p>
-
-<p><br /><br />
-URL 포맷<br /><br />
-<img src="/assets/images/URL_syntax.png" alt="URL_syntax" />
-<br /><br />
-URL 설명<br /><br />
-<img src="/assets/images/URL_explain.png" alt="URL_explain" />
-<br /><br />
-예시</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://user:pass@www.aaa.com:80/dir/index.html?uid=12#head1
 </code></pre></div></div>
-<p><br />
-예시 풀이</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  http://    user:pass   @www.aaa.com     :80     /dir/index.html    ?uid=12           #head1
+<p>예시 : 
+경기도 용인시 수지구 죽전동 A아파트 101동 1301호
+네트워크 주소 : 경기도 용인시 수지구 죽전동 A아파트 101동
+호스트 주소 : 1301호</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+IP는 32자리 2진수로 표현.
+</code></pre></div></div>
+<p>예시
+172.16.254.1
+| 172. | 16. | 254. | 1 |
+|—-|—-|—-|—-|
+| 10101100. | 00010000. |  11111110. | 00000001 |</p>
+<pre><code class="language-o">
+
+## TCP(Transfer Control Protocol)
+
+* 신뢰성을 담당
+  * 바이트 스트림 서비스  
+\: 큰 데이터를 보내기위에 TCP세그먼트라고 불리우는 단위 패킷으로 작개 분해하여 관리하는것. 대용량의 데이터를 보내기 쉽게 작게 분해하여 상대에게 보내고, 정확하게 도착했는지 확인하는 역할.
+  * TCP Three way hand shaking (STN/ACK 플래그 사용)  
+\: SYN으로 보내면 SYN/ACK 플래그로 패킷 수신한 사실을 전하면 ACK 플래그를 다시 보내 완료되었음을 전송. 도중에 끊키면 다시 반복
+
+![TCP Three way hand shaking (STN/ACK 플래그 사용)](/assets/images/3way_hand_shake.png)  
+
+## DNS(Domain Name System)
+
+: 도메인을 주면 IP주소를 반환해줌 
+
+## HTTP
+
+* 클라이언트(웹브라우저)에서 서버까지 일련의 흐름을 결정하는 프로토콜
+* HTTP자체는 잘 변하지 않음. 현재는 1997년 공개된 HTTP/1.1을 대부분 쓰고있음. 2.0이 탄생되었지만 표준화까지 시간이 오래걸림
+
+&gt; [HTTP 세션에 대한 설명](https://tobewiseys.tistory.com/72)
+&gt; [쿠키와 세션](https://sdevstudy.tistory.com/27)
+
+## URI, URL
+
+URI(Uniform Resource Identifiers)  
+스키마를 나타내는 리소스를 식별하기 위한 식별자.  
+스키마: 리소스를 얻기위한 수단에 이름을 붙이는 방법. (http, ftp, mailto, file, telnet 등).   
+
+
+* Uniform
+    * 통일된(Uniformity) 서식을 결정하는 것. 여러가지 종류의 리소스 지정을 구별없이 같은 맥락에서 사용할 수 있게 한다. (응??) 또한, 새로운 스키마(http:와 ftp등) 도입을 용이하게 함
+* Resource
+    * 식별가능한 모든 것. (도큐먼트 파일, 이미지, 서비스(ex. 오늘의 일기예보) 등 다른 것과 구별할 수 있는 것은 모두 리소스) 단일한 부분만 아니라 복수의 집합도 리소스임
+* Identifier
+    * 식별자. 식별 가능한 것을 참조하는 오브젝트. 
+
+URI는 리소스를 식별하기 위해 문자열 전반을 나타내는데 비해
+
+URL은 리소스의 장소(네트워크상의 위치)를 나타낸다.
+
+URL은 URI의 서브셋이다. (URI = URL + URN)
+
+&lt;br&gt;&lt;br&gt;
+URL 포맷&lt;br&gt;&lt;br&gt;
+![URL_syntax](/assets/images/URL_syntax.png)
+&lt;br&gt;&lt;br&gt;
+URL 설명&lt;br&gt;&lt;br&gt;
+![URL_explain](/assets/images/URL_explain.png)
+&lt;br&gt;&lt;br&gt;
+예시
+</code></pre>
+<p>http://user:pass@www.aaa.com:80/dir/index.html?uid=12#head1</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;br&gt;
+예시 풀이
+</code></pre></div></div>
+<p>http://    user:pass   @www.aaa.com     :80     /dir/index.html    ?uid=12           #head1
 스키마(http),   자격정보,       서버주소,      서버포트,     계층적파일경로,     쿼리문자열,     프래그먼트식별자(#head1)
-</code></pre></div></div>
+```</p>
 
 <ul>
   <li>스키마
@@ -1291,7 +1309,7 @@ function solution(N, stages) {
 
 
 
-  5 분 소요
+  6 분 소요
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">참고
