@@ -134,6 +134,9 @@ author:
     - label: "https://www.linkedin.com/in/dave-11096614b/"
       icon: "fab fa-fw fa-linkedin"
       url: "https://github.com/Seunghyum"
+    - label: "feed"
+      icon: "fab fa-fw fa-rss-square"
+      url: https://seunghyum.github.io/feed.xml
 
 # Site Footer
 footer:
