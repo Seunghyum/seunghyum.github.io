@@ -404,12 +404,28 @@ SQL문제가 나왔는데 더 좋은 답이 있는것 같아 나중에 기록해
 <span class="k">having</span> <span class="k">count</span><span class="p">(</span><span class="n">BUY</span><span class="p">)</span> <span class="o">=</span> <span class="mi">2</span>
 </code></pre></div></div>
 
-<p>이렇게 했을시 
-| user_id | ancestry |
-|:——–:|:——–:|
-| 6 | candy |
-| 6 | candy |
-인 데이터는 걸러내지 못함.</p>
+<p>이렇게 했을시</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">user_id</th>
+      <th style="text-align: center">ancestry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">6</td>
+      <td style="text-align: center">candy</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">6</td>
+      <td style="text-align: center">candy</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>인 데이터는 걸러내지 못함.</p>
 
 <h2 id="수정한-쿼리">수정한 쿼리</h2>
 
