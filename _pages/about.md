@@ -324,7 +324,7 @@ gallery_data_lab:
     - 진행기간 : 2019년~(진행중)
     - 주요내용 : 공공데이터를 활용하여 이전에 활용했던 기술들을 아카이빙.
     - 본인이 공헌한 점 : 풀스택
-    - 사용한 Skill : Vue.js, D3.js, GeoJson
+    - 사용한 Skill : Vue.js, D3.js, GeoJson, Image Sprite
     - 깃헙 주소 : [https://github.com/Seunghyum/data-visualization](https://github.com/Seunghyum/data-visualization)
 
 {% include gallery id="gallery_data_lab" %}
