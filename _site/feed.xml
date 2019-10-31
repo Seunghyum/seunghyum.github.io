@@ -1,13 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://seunghyum.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://seunghyum.github.io/" rel="alternate" type="text/html" /><updated>2019-10-31T16:58:53+09:00</updated><id>https://seunghyum.github.io/feed.xml</id><title type="html">eveloper Dave</title><subtitle>데이터 시각화에 관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">[ESlint &amp;amp; Prettier] 개발 관습 설정 in Visual Studio</title><link href="https://seunghyum.github.io/code%20config/Eslint-Prettier/" rel="alternate" type="text/html" title="[ESlint &amp; Prettier] 개발 관습 설정 in Visual Studio" /><published>2019-10-31T00:00:00+09:00</published><updated>2019-10-31T00:00:00+09:00</updated><id>https://seunghyum.github.io/code%20config/Eslint-Prettier</id><content type="html" xml:base="https://seunghyum.github.io/code%20config/Eslint-Prettier/">&lt;p&gt;회사 프로젝트를 작업하기 전 프론트엔드 개발자들 간의 코드 규칙을 Eslint와 Prettier 설정을 맞춰 관리해가는 방향을 정했다.&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://seunghyum.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://seunghyum.github.io/" rel="alternate" type="text/html" /><updated>2019-10-31T17:11:53+09:00</updated><id>https://seunghyum.github.io/feed.xml</id><title type="html">eveloper Dave</title><subtitle>데이터 시각화에 관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">[ESlint &amp;amp; Prettier] 개발 관습 설정 in Visual Studio</title><link href="https://seunghyum.github.io/code%20config/Eslint-Prettier/" rel="alternate" type="text/html" title="[ESlint &amp; Prettier] 개발 관습 설정 in Visual Studio" /><published>2019-10-31T00:00:00+09:00</published><updated>2019-10-31T00:00:00+09:00</updated><id>https://seunghyum.github.io/code%20config/Eslint-Prettier</id><content type="html" xml:base="https://seunghyum.github.io/code%20config/Eslint-Prettier/">&lt;p&gt;회사 프로젝트를 작업하기 전 프론트엔드 개발자들 간의 코드 규칙을 Eslint와 Prettier 설정을 맞춰 관리해가는 방향을 정했다.&lt;br /&gt;
 아직 협업을 할 경우는 없지만 미래에 인수인계 받거나 협업을 진행할 경우 코드관습이 달라 고생할 경우를 대비하기로 했다.&lt;br /&gt;&lt;br /&gt;
 설정은 작업을 진행하며 수정할 계획이다.&lt;/p&gt;
 
-&lt;h2 id=&quot;eslint-설정&quot;&gt;Eslint 설정&lt;/h2&gt;
+&lt;p&gt;핵심은 저장할때마다 Eslint기준에 맞게 prettier 패키지가 코드를 수정하게 하는 것이다.&lt;/p&gt;
+
+&lt;h2 id=&quot;eslint-설정&quot;&gt;ESlint 설정&lt;/h2&gt;
+
+&lt;p&gt;ESlint 설정을 위한 패키지 다운로드&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;npm i eslint eslint-config-prettier eslint-plugin-prettier eslint-plugin-vue &lt;span class=&quot;nt&quot;&gt;--save-dev&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;.eslintrc.json 파일&lt;/p&gt;
+&lt;p&gt;프로젝트 루트에 있는 .eslintrc.json 파일 설정&lt;/p&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;c1&quot;&gt;// 현재 eslintrc 파일을 기준으로 ESLint 규칙을 적용&lt;/span&gt;
@@ -46,11 +50,14 @@
 
 &lt;h2 id=&quot;visual-studio-설정&quot;&gt;Visual Studio 설정&lt;/h2&gt;
 
-&lt;p&gt;settings.json 파일&lt;/p&gt;
+&lt;p&gt;Window : ctr + shift + p &lt;br /&gt;
+Mac : cmd + shift + p &lt;br /&gt;
+settings.json 파일 검색 후 설정&lt;/p&gt;
 
 &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;....&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;editor.tabSize&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;eslint.autoFixOnSave&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;저장할때마다&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;js&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;코드&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;자동&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;수정&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;eslint.alwaysShowStatus&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;eslint.validate&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
     &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -66,7 +73,7 @@
       &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;autoFix&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
     &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;tslint.autoFixOnSave&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;tslint.autoFixOnSave&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;저장할때마다&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;typescript&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;코드&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;자동&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;수정&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;markdownlint.run&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;onSave&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;

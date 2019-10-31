@@ -10,13 +10,17 @@ comments: true
 아직 협업을 할 경우는 없지만 미래에 인수인계 받거나 협업을 진행할 경우 코드관습이 달라 고생할 경우를 대비하기로 했다.<br><br>
 설정은 작업을 진행하며 수정할 계획이다.
 
-## Eslint 설정
+핵심은 저장할때마다 Eslint기준에 맞게 prettier 패키지가 코드를 수정하게 하는 것이다.
+
+## ESlint 설정
+
+ESlint 설정을 위한 패키지 다운로드
 
 ```bash
 $ npm i eslint eslint-config-prettier eslint-plugin-prettier eslint-plugin-vue --save-dev
 ```
 
-.eslintrc.json 파일
+프로젝트 루트에 있는 .eslintrc.json 파일 설정
 
 ```javascript
 module.exports = {
@@ -56,12 +60,15 @@ module.exports = {
 
 ## Visual Studio 설정
 
-settings.json 파일
+Window : ctr + shift + p <br>
+Mac : cmd + shift + p <br>
+settings.json 파일 검색 후 설정
 
 ```json
 {
   //  ....
   "editor.tabSize": 2,
+  "eslint.autoFixOnSave": true, // 저장할때마다 js 코드 자동 수정
   "eslint.alwaysShowStatus": true,
   "eslint.validate": [
     {
@@ -77,7 +84,7 @@ settings.json 파일
       "autoFix": true
     }
   ],
-  "tslint.autoFixOnSave": true,
+  "tslint.autoFixOnSave": true, // 저장할때마다 typescript 코드 자동 수정
   "markdownlint.run": "onSave"
 }
 ```
