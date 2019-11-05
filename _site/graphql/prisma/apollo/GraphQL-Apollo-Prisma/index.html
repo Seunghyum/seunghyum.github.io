@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>GraphQL, Prisma, Apollo 공부 - eveloper Dave</title>
-<meta name="description" content="GraphQL? RESTful?: GrpahQL과 RESTful은 각각의 장단점이 있음.">
+<meta name="description" content="개념">
 
 
 
@@ -21,7 +21,7 @@
 <meta property="og:url" content="https://seunghyum.github.io/graphql/prisma/apollo/GraphQL-Apollo-Prisma/">
 
 
-  <meta property="og:description" content="GraphQL? RESTful?: GrpahQL과 RESTful은 각각의 장단점이 있음.">
+  <meta property="og:description" content="개념">
 
 
 
@@ -348,28 +348,6 @@
       <h1 id="page-title" class="page__title">GraphQL, Prisma, Apollo 공부</h1>
     
     <br>
-<h2 id="graphql-restful">GraphQL? RESTful?</h2>
-<p>: GrpahQL과 RESTful은 각각의 장단점이 있음.</p>
-
-<h3 id="graphql">GraphQL</h3>
-
-<ul>
-  <li>한번에 여러 요청들에 응답해야할때.
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/posts/:id
-</code></pre></div>    </div>
-  </li>
-  <li>대부분의 
-요청이 CRUD일때</li>
-</ul>
-
-<h3 id="restful">RESTful</h3>
-<ul>
-  <li>PDF, Excel File 전송같은 단순 Text로 처리되지 않는 요청이 있을때</li>
-  <li>요청의 구조가 다양하지 않고 정해져 있는경우.</li>
-</ul>
-
-<p>API서버 구축시 두 방법을 섞어쓰는 것은 품질을 떨어뜨릴 수 있음. 각각의 장점을 살릴수 있는 설계가 필요.</p>
-
 <h2 id="개념">개념</h2>
 
 <p><em>SQL(Structed Query Language)</em>은 <strong>데이터베이스 시스템</strong>에 저장된 데이터를 효율적으로 가져오는 것<br />
@@ -473,6 +451,24 @@ Prisma Client 덕분에, 리졸버 구현은 대부분의 경우 한두 줄로 �
   <li>Resolver : GQL은 언어일 뿐. 해당 리퀘스트를 어떻게 처리할 것인지를 자유롭게 설정. 텍스트 파일에서 읽어올 수도 있음.</li>
 </ul>
 
+<h2 id="graphql-restful">GraphQL? RESTful?</h2>
+<p>: GrpahQL과 RESTful은 각각의 장단점이 있음.</p>
+
+<h3 id="graphql">GraphQL</h3>
+
+<ul>
+  <li>한번에 여러 요청들에 응답해야할때.</li>
+  <li>대부분의 요청이 CRUD일때</li>
+</ul>
+
+<h3 id="restful">RESTful</h3>
+<ul>
+  <li>PDF, Excel File 전송같은 단순 Text로 처리되지 않는 요청이 있을때</li>
+  <li>요청의 구조가 다양하지 않고 정해져 있는경우.</li>
+</ul>
+
+<p>API서버 구축시 두 방법을 섞어쓰는 것은 품질을 떨어뜨릴 수 있음. 각각의 장점을 살릴수 있는 설계가 필요.</p>
+
 <h2 id="참고-자료">참고 자료</h2>
 
 <ul>
@@ -491,7 +487,7 @@ Prisma Client 덕분에, 리졸버 구현은 대부분의 경우 한두 줄로 �
   
     <li>
       <a href="#2019">
-        <strong>2019</strong> <span class="taxonomy__count">52</span>
+        <strong>2019</strong> <span class="taxonomy__count">38</span>
       </a>
     </li>
   
@@ -531,8 +527,7 @@ Prisma Client 덕분에, 리졸버 구현은 대부분의 경우 한두 줄로 �
   2 분 소요
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">GraphQL? RESTful?
-: GrpahQL과 RESTful은 각각의 장단점이 있음.
+    <p class="archive__item-excerpt" itemprop="description">개념
 
 </p>
   </article>
@@ -591,35 +586,6 @@ Prisma Client 덕분에, 리졸버 구현은 대부분의 경우 한두 줄로 �
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">문제
-
-</p>
-  </article>
-</div>
-
-      
-        
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/devops/Linux-Command/" rel="permalink">[DevOps] Linux Command 정리
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  최대 1 분 소요
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">리눅스 관리하며 썼었던 커맨드들 정리
 
 </p>
   </article>
@@ -930,37 +896,6 @@ SQL문제가 나왔는데 더 좋은 답이 있는것 같아 나중에 기록해
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/algorithm/Permutation/" rel="permalink">[Algorithm] 순열(Permutation) &amp; 조합(Combination) 공부
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  2 분 소요
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">
-  서로 다른 n개의 원소에서 r개를 중복없이 골라 순서에 상관있게 나열하는 것을 n개에서 r개를 택하는 순열이라고 한다
-
-
-</p>
-  </article>
-</div>
-
-      
-        
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
         <a href="/codingtest/Line-recruit-Preview/" rel="permalink">[CodingTest] 2020 라인 SW개발 DEVEL-UP 인턴십 코드테스트 Preview
 </a>
       
@@ -1077,71 +1012,6 @@ SQL문제가 나왔는데 더 좋은 답이 있는것 같아 나중에 기록해
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/codingtest/Line-recruit/" rel="permalink">[CodingTest] 2020 라인 SW개발 DEVEL-UP 인턴십 코드테스트
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  1 분 소요
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
-
-      
-        
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/codingtest/Naver-Offical-2020/" rel="permalink">[CodingTest] 2020 네이버 공채 코드테스트 문제 with Javascript
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  2 분 소요
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">2번
-```javascript
-function solution(drum) {
-  let result = 0;
-  let currentPosition = {
-    x: 0,
-    y: 0
-  }
-
-</p>
-  </article>
-</div>
-
-      
-        
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
         <a href="/codingtest/Kakao-RegExp-Text/" rel="permalink">[CodingTest] 2020 카카오 신입 공채 1차 - 4번 정규표현식 문제 with Javascript
 </a>
       
@@ -1200,35 +1070,6 @@ function solution(drum) {
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/elk/ELK_Stack/" rel="permalink">[ELK] 단쿠키 - ElasticSearch, Logstash, Kibana 설정하기
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  최대 1 분 소요
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">적용 배경
-
-</p>
-  </article>
-</div>
-
-      
-        
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
         <a href="/googleanalytics/Google-Analytics-prevent-self/" rel="permalink">[GoogleAnalytics] 자기 자신의 활동기록 제외 (prevent recording myself)
 </a>
       
@@ -1247,35 +1088,6 @@ function solution(drum) {
   5 ways to exclude your own visits from Google Analytics
   How to exclude your own [dynamic] ip from Google Analytics
 
-
-</p>
-  </article>
-</div>
-
-      
-        
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/algorithm/Recursion/" rel="permalink">[Algorithm] 순환(Recursion) 알고리즘 공부
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  최대 1 분 소요
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">참고
 
 </p>
   </article>
@@ -1407,62 +1219,6 @@ function solution(drum) {
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/data%20type/Graph-With-Javascript/" rel="permalink">[DataType] 그래프 구조
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  1 분 소요
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">그래프
-
-</p>
-  </article>
-</div>
-
-      
-        
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/codingtest/Daily-Programming-5/" rel="permalink">[CodingTest] 숫자값 인코딩 조합구하기
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  최대 1 분 소요
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">You are given an M by N matrix consisting of booleans that represents a board. Each True boolean represents a wall. Each False boolean represents a tile you ...</p>
-  </article>
-</div>
-
-      
-        
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
         <a href="/codingtest/Naver-Hackday-Test-1/" rel="permalink">[CodingTest] 2019 네이버 핵데이 코드테스트 문제1 with Javascript
 </a>
       
@@ -1478,36 +1234,6 @@ function solution(drum) {
     
     <p class="archive__item-excerpt" itemprop="description">문제1
 문제를 알려줄 수 없다는 답변 받음. github에서 네이버 핵데이 검색하면 나옴.
-
-</p>
-  </article>
-</div>
-
-      
-        
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/codingtest/Naver-Hackday-Test-2/" rel="permalink">[CodingTest] 2019 네이버 핵데이 코드테스트 문제2 with Javascript
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  최대 1 분 소요
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">문제2
-문제 받으면 작성할 예정.
 
 </p>
   </article>
@@ -1553,40 +1279,6 @@ function solution(drum) {
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/codingtest/kakao/Kakao-Candidate-Key/" rel="permalink">[CodingTest] 2019 카카오 신입 공채 1차 - 1번 오픈채팅방 문제 with Javascript
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  1 분 소요
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">후보키
-
-  문제 바로가기 링크
-  카카오의 설명 블로그
-
-
-
-</p>
-  </article>
-</div>
-
-      
-        
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
         <a href="/codingtest/Kakao-failure-rate/" rel="permalink">[CodingTest] 2019 카카오 신입 공채 1차 - 2번 실패율 문제 with Javascript
 </a>
       
@@ -1612,45 +1304,6 @@ function solution(N, stages) {
   let st = stages, stats = [];
   for(let i=1;i&lt;N+1;i++){ // n
     let selectedN...</p>
-  </article>
-</div>
-
-      
-        
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/codingtest/Daily-Programming-4/" rel="permalink">[CodingTest] 숫자값 인코딩 조합구하기
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  2 분 소요
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">문제
-알파벳의 인코딩 값을
-
- a = 1
- b = 2
- c = 3
- .
- .
- z = 26
- 
-으로 매핑.
-
-</p>
   </article>
 </div>
 
@@ -1729,36 +1382,6 @@ if a &lt; b &lt; c :
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/codingtest/Daily-Programming-3/" rel="permalink">[CodingTest] 일련의 숫자들 중 비어있는 값찾기
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  1 분 소요
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">문제
-이 문제는
-
-</p>
-  </article>
-</div>
-
-      
-        
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
         <a href="/codingtest/Daily-Programming-2/" rel="permalink">[CodingTest] i를 제외한 배열 요소들의 곱
 </a>
       
@@ -1775,38 +1398,6 @@ if a &lt; b &lt; c :
     <p class="archive__item-excerpt" itemprop="description">문제
 정수 배열이 주어지면 인덱스 i에 해당하는 값 이외의 모든 값들의 곱인 배열을 구하여라.
 보너스 : 나눗셈을 안쓰고 풀기
-
-</p>
-  </article>
-</div>
-
-      
-        
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/big%20o/Big-O/" rel="permalink">Big O
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  최대 1 분 소요
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">Big O
-
-  CheetSheet
-  CheetSheet
 
 </p>
   </article>
@@ -1872,38 +1463,6 @@ if a &lt; b &lt; c :
     <p class="archive__item-excerpt" itemprop="description">문제
 list라는 행렬과 k라는 자연수가 주어짐. list의 두 값을 합하여 k값을 만들 수 있으면 true, 없으면 false를 리턴해라.
 보너스 : 한줄 표기
-
-</p>
-  </article>
-</div>
-
-      
-        
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/sorting%20algorithms/Sorting-Algorithms/" rel="permalink">Sorting Algorithms
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  최대 1 분 소요
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">읽고 정리해야하는 기사
-
-  링크
-
 
 </p>
   </article>

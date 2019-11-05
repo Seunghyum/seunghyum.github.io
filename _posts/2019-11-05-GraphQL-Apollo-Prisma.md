@@ -6,24 +6,6 @@ tags: [GraphQL, Prisma, Apollo]
 comments: true
 ---
 
-## GraphQL? RESTful?
-: GrpahQL과 RESTful은 각각의 장단점이 있음.
-
-### GraphQL
-
-- 한번에 여러 요청들에 응답해야할때.
-  ```
-  /posts/:id
-  ```
-- 대부분의 
-요청이 CRUD일때
-
-### RESTful
-- PDF, Excel File 전송같은 단순 Text로 처리되지 않는 요청이 있을때
-- 요청의 구조가 다양하지 않고 정해져 있는경우.
-
-API서버 구축시 두 방법을 섞어쓰는 것은 품질을 떨어뜨릴 수 있음. 각각의 장점을 살릴수 있는 설계가 필요.
-
 ## 개념
 
 *SQL(Structed Query Language)*은 **데이터베이스 시스템**에 저장된 데이터를 효율적으로 가져오는 것<br>
@@ -93,6 +75,21 @@ Prisma 장점 정리 - [퍼옴](https://medium.com/labelstore/prisma%EB%A1%9C-gr
 
 - Query : 어떤 Request를 받을 건지
 - Resolver : GQL은 언어일 뿐. 해당 리퀘스트를 어떻게 처리할 것인지를 자유롭게 설정. 텍스트 파일에서 읽어올 수도 있음.
+
+## GraphQL? RESTful?
+: GrpahQL과 RESTful은 각각의 장단점이 있음.
+
+### GraphQL
+
+- 한번에 여러 요청들에 응답해야할때.
+- 대부분의 요청이 CRUD일때
+
+### RESTful
+- PDF, Excel File 전송같은 단순 Text로 처리되지 않는 요청이 있을때
+- 요청의 구조가 다양하지 않고 정해져 있는경우.
+
+API서버 구축시 두 방법을 섞어쓰는 것은 품질을 떨어뜨릴 수 있음. 각각의 장점을 살릴수 있는 설계가 필요.
+
 
 ## 참고 자료
 
