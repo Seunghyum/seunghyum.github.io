@@ -4,13 +4,11 @@
 
 ## 명령어
 - 로컬 서버 띄우기
-  - yarn dev
+  - yarn dev (JEKYLL_ENV=production bundle exec jekyll serve  --livereload --draft)
   - bundle exec jekyll serve --draft # 초안을 같이 표시한다.
   - bundle exec jekyll serve --livereload # 수정마다 새로고침된다.
-  - JEKYLL_ENV=production bundle exec jekyll serve  --livereload --draft
 - 빌드
-  - yarn build
-  - JEKYLL_ENV=production bundle exec jekyll build
+  - yarn build (JEKYLL_ENV=production bundle exec jekyll build)
 
 ## 배포 방식
 - 빌드 후 git commit & push
