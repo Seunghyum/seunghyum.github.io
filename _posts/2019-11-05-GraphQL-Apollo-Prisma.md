@@ -42,7 +42,7 @@ API서버 구축시 두 방법을 섞어쓰는 것은 품질을 떨어뜨릴 수
 - NoSQL DB나 RDB 상관 없이 사용가능. *프로그래밍 언어일 뿐이니까!*
 - 사용가능한 아키텍처 - [자세한 설명](https://www.tutorialspoint.com/graphql/graphql_architecture.htm)
   - GraphQL server with connected database
-  - GraphQL server that integrates existing systems -> 
+  - GraphQL server that integrates existing systems
   - Hybrid approach
 
 ## 문법
@@ -104,7 +104,8 @@ Prisma 장점 정리 - [퍼옴](https://medium.com/labelstore/prisma%EB%A1%9C-gr
 - [Prisma로 GraphQL을 쉽게 도입하기](https://medium.com/labelstore/prisma%EB%A1%9C-graphql%EC%9D%84-%EC%89%BD%EA%B2%8C-%EB%8F%84%EC%9E%85%ED%95%98%EA%B8%B0-fa64dcf63382)
 - [REST와 이별할 때 생각해야 하는 것들](https://www.slideshare.net/Kivol/graphql-in-action-rest)
 
-## 더 읽고 정리()
+## 더 읽고 정리
 
 - [Our learnings from adopting GraphQL](https://medium.com/netflix-techblog/our-learnings-from-adopting-graphql-f099de39ae5f)
 - [GraphQL Search Indexing](https://medium.com/netflix-techblog/graphql-search-indexing-334c92e0d8d5)
+
