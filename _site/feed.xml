@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://seunghyum.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://seunghyum.github.io/" rel="alternate" type="text/html" /><updated>2019-11-09T00:15:59+09:00</updated><id>https://seunghyum.github.io/feed.xml</id><title type="html">eveloper Dave</title><subtitle>데이터 시각화에 관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">[Methodology] CDD(Component Driven Development) - 테스트(2/2)</title><link href="https://seunghyum.github.io/frontend/methodology/CDD-2/" rel="alternate" type="text/html" title="[Methodology] CDD(Component Driven Development) - 테스트(2/2)" /><published>2019-11-09T00:00:00+09:00</published><updated>2019-11-09T00:00:00+09:00</updated><id>https://seunghyum.github.io/frontend/methodology/CDD-2</id><content type="html" xml:base="https://seunghyum.github.io/frontend/methodology/CDD-2/">&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://seunghyum.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://seunghyum.github.io/" rel="alternate" type="text/html" /><updated>2019-11-09T00:19:21+09:00</updated><id>https://seunghyum.github.io/feed.xml</id><title type="html">eveloper Dave</title><subtitle>데이터 시각화에 관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">[Methodology] CDD(Component Driven Development) - 테스트(2/2)</title><link href="https://seunghyum.github.io/frontend/methodology/CDD-2/" rel="alternate" type="text/html" title="[Methodology] CDD(Component Driven Development) - 테스트(2/2)" /><published>2019-11-09T00:00:00+09:00</published><updated>2019-11-09T00:00:00+09:00</updated><id>https://seunghyum.github.io/frontend/methodology/CDD-2</id><content type="html" xml:base="https://seunghyum.github.io/frontend/methodology/CDD-2/">&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
 
 &lt;p&gt;회사 프로젝트 중 어드민 페이지를 Element UI 기반으로 만들기로 했다. 연습삼아 몇개의 컴포넌트, 뷰를 storybook으로 엮어보며 효용성을 확인해보았다.&lt;/p&gt;
 
@@ -9,19 +9,13 @@
 &lt;h2 id=&quot;결론&quot;&gt;결론&lt;/h2&gt;
 
 &lt;p&gt;페이지 단위 개발이 아닌 컴포넌트 단위 개발을 css 커스텀부터 깊게 들어가는 환경이라면 좋을 것 같다. 
-하지만 나처럼 css 프레임워크가 이미 있는 단계라면 오버 엔지니어링이 될 것 같다. 
+하지만 나처럼 css 프레임워크가 이미 있는 단계라면 오버 엔지니어링이 될 것 같다. &lt;strong&gt;커스텀이 많을 때만 사용하도록 하자.&lt;/strong&gt;
 차다리 커스텀 UI 컴포넌트들만 &lt;a href=&quot;https://bit.dev/&quot;&gt;Bit&lt;/a&gt;같은 컴포넌트 공유 플랫폼에 등록하여 관리하는 것이 더 좋을 듯 하다.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;디자이너와의 협업 : 굳이 Storybook을 디자이너와 협업용으로 쓸 필요는 많이 없을 것 같다. 외부 css 프레임워크를 쓰고 있다면 오버 엔지니어링일 수 있다.&lt;/li&gt;
   &lt;li&gt;UI 단위 테스트 : 사용해보지는 않았지만 화면 크기 단위로 시각테스트를 해볼 수 있음. jest같은 툴도 적용하기 좋게 되어 있음.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&quot;setting-for-local&quot;&gt;Setting for local&lt;/h2&gt;
-
-&lt;div class=&quot;language-s highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yarn&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yarn&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;serve&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;tip-for-storybook&quot;&gt;Tip for Storybook&lt;/h2&gt;
 
