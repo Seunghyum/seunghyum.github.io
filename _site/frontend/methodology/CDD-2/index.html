@@ -9,38 +9,38 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Javascript 개념 정리 - eveloper Dave</title>
-<meta name="description" content="알고리즘 공부를 하며 부족했던 개념을 다시 정리">
+<!-- begin _includes/seo.html --><title>[Methodology] CDD(Component Driven Development) - 테스트(2/2) - eveloper Dave</title>
+<meta name="description" content="Intro">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko">
 <meta property="og:site_name" content="eveloper Dave">
-<meta property="og:title" content="Javascript 개념 정리">
-<meta property="og:url" content="https://seunghyum.github.io/javascript/Javascript-Concept/">
+<meta property="og:title" content="[Methodology] CDD(Component Driven Development) - 테스트(2/2)">
+<meta property="og:url" content="https://seunghyum.github.io/frontend/methodology/CDD-2/">
 
 
-  <meta property="og:description" content="알고리즘 공부를 하며 부족했던 개념을 다시 정리">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2019-10-07T00:00:00+09:00">
+  <meta property="og:description" content="Intro">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2019-11-09T00:00:00+09:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://seunghyum.github.io/javascript/Javascript-Concept/">
+
+<link rel="canonical" href="https://seunghyum.github.io/frontend/methodology/CDD-2/">
 
 
 
@@ -172,7 +172,7 @@
       
         
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/categories/#javascript" itemprop="item"><span itemprop="name">Javascript</span></a>
+          <a href="/categories/#frontend" itemprop="item"><span itemprop="name">Frontend</span></a>
           <meta itemprop="position" content="2" />
         </li>
         <span class="sep">/</span>
@@ -180,7 +180,17 @@
     
       
       
-        <li class="current">Javascript 개념 정리</li>
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/categories/#methodology" itemprop="item"><span itemprop="name">Methodology</span></a>
+          <meta itemprop="position" content="3" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">[Methodology] CDD(Component Driven Development) - 테스트(2/2)</li>
       
     
   </ol>
@@ -325,178 +335,69 @@
 
   <div class="archive">
     
-      <h1 id="page-title" class="page__title">Javascript 개념 정리</h1>
+      <h1 id="page-title" class="page__title">[Methodology] CDD(Component Driven Development) - 테스트(2/2)</h1>
     
     <br>
-<p>알고리즘 공부를 하며 부족했던 개념을 다시 정리</p>
+<h2 id="intro">Intro</h2>
 
-<h2 id="함수-표현식의-장점">함수 표현식의 장점</h2>
+<p>회사 프로젝트 중 어드민 페이지를 Element UI 기반으로 만들기로 했다. 연습삼아 몇개의 컴포넌트, 뷰를 storybook으로 엮어보며 효용성을 확인해보았다.</p>
+
+<h2 id="repo">Repo</h2>
+
+<p><a href="https://github.com/Seunghyum/storybook-test">Storybook-test</a> : vue-admin-template with storybook. test for storybook.</p>
+
+<h2 id="결론">결론</h2>
+
+<p>페이지 단위 개발이 아닌 컴포넌트 단위 개발을 css 커스텀부터 깊게 들어가는 환경이라면 좋을 것 같다. 
+하지만 나처럼 css 프레임워크가 이미 있는 단계라면 오버 엔지니어링이 될 것 같다. 
+차다리 커스텀 UI 컴포넌트들만 <a href="https://bit.dev/">Bit</a>같은 컴포넌트 공유 플랫폼에 등록하여 관리하는 것이 더 좋을 듯 하다.</p>
+
 <ul>
-  <li>참고 : <a href="https://joshua1988.github.io/web-development/javascript/function-expressions-vs-declarations/">캠틴 판교님 블로그 - 함수 표현식 vs 함수 선언식</a>
-    <blockquote>
-      <ul>
-        <li>함수 선언식과 달리 호이스팅에 영향안받음.</li>
-        <li>클로져로 사용.</li>
-        <li>콜백으로 사용(다른 함수의 인자로 넘길수 있음)</li>
-      </ul>
-    </blockquote>
-  </li>
+  <li>디자이너와의 협업 : 굳이 Storybook을 디자이너와 협업용으로 쓸 필요는 많이 없을 것 같다. 외부 css 프레임워크를 쓰고 있다면 오버 엔지니어링일 수 있다.</li>
+  <li>UI 단위 테스트 : 사용해보지는 않았지만 화면 크기 단위로 시각테스트를 해볼 수 있음. jest같은 툴도 적용하기 좋게 되어 있음.</li>
 </ul>
 
-<p>: <a href="https://github.com/airbnb/javascript#functions">AirBnb의 스타일가이드</a>에서는 함수 표현식을 쓰길 권함.</p>
+<h2 id="setting-for-local">Setting for local</h2>
 
-<h2 id="스코프">스코프</h2>
+<div class="language-s highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">$</span><span class="w"> </span><span class="n">yarn</span><span class="w">
+</span><span class="o">$</span><span class="w"> </span><span class="n">yarn</span><span class="w"> </span><span class="n">serve</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="tip-for-storybook">Tip for Storybook</h2>
+
+<p>: 기본적으로 다 문서에 나오는 얘기들. 그중 삽질 안하는 Tip</p>
 
 <ul>
-  <li>참고 :
+  <li>Storybook으로 띄우는 로컬은 루트 프로젝트와는 asset 설정(외부 라이브러리 css&amp;js..), 웹팩 설정등이 별도이다. 프로젝트를 루트와 동일하게 띄우려면 .storybook/plugin.js의 ElementUi 처럼 가져와야함.</li>
+  <li>.storbook 폴더안에 webpack.config.js 설정을 root의 웹팩 설정(여기선 vue.config.js) 와 동일하게 해주어야함.
     <ul>
-      <li>제로초님 블로그 <a href="https://www.zerocho.com/category/JavaScript/post/5740531574288ebc5f2ba97e">함수의 범위(scope)</a></li>
-      <li><a href="https://poiemaweb.com/js-closure">poiemaweb - 스코프</a></li>
+      <li>예를들어 ‘@’ 경로라던지, vue-loader, css-loader 등의 컴파일 설정이라든지.</li>
     </ul>
   </li>
 </ul>
 
-<blockquote>
-  <ul>
-    <li>변수의 유효범위.</li>
-    <li>스코프는 함수 호출이 아닌 함수 <strong>선언</strong>시 생성. -&gt; 렉시컬 스코핑(Lexical Scoping), 정적 스코핑</li>
-    <li>C-family language는 블록레벨 스코프. Js는 함수 레벨 스코프</li>
-  </ul>
-</blockquote>
+<h2 id="알게된-점">알게된 점</h2>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="s1">'zero'</span><span class="p">;</span>
-<span class="kd">function</span> <span class="nx">log</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">name</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="kd">function</span> <span class="nx">wrapper</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">name</span> <span class="o">=</span> <span class="s1">'nero'</span><span class="p">;</span> <span class="c1">// 1번</span>
-  <span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="s1">'nero'</span><span class="p">;</span> <span class="c1">// 2번</span>
-  <span class="nx">log</span><span class="p">();</span>
-<span class="p">}</span>
-<span class="nx">wrapper</span><span class="p">();</span>
-</code></pre></div></div>
-
-<p>1번과 2번일때 결과가 다름.</p>
-
-<h2 id="실행-컨텍스트">실행 컨텍스트</h2>
+<h3 id="ui-컴포넌트">UI 컴포넌트</h3>
 
 <ul>
-  <li>참고 :
-    <ul>
-      <li>제로초님 블로그 <a href="https://www.zerocho.com/category/JavaScript/post/5741d96d094da4986bc950a0">실행 컨텍스트</a> - 더 자세한 예시 참고</li>
-      <li>Poiemaweb <a href="https://poiemaweb.com/js-execution-context">실행 컨텍스트</a> - 실행 컨텍스트 그림설명 필독.</li>
-    </ul>
-  </li>
+  <li>Element-ui 처럼 css 프레임워크가 있는 경우, Storybook은 css 프레임워크가 제공하지 않는 커스텀한 UI 컴퍼넌트를 대상으로만 해야함.(ex - <a href="https://ui.toast.com/">Toast UI</a>의 다양한 컴포넌트들, Datepicker)</li>
+  <li>이외의 기초적인 UI 컴퍼넌트(버튼, 모달 등)들은 커스텀이 많지 않을 경우 오버 엔지니어링일 수 있음.</li>
+  <li>컬러같은 디테일들은 확인들은 제플린 같은 툴로 확인하는게 더 나아보임.</li>
 </ul>
 
-<blockquote>
-  <p>실행 컨텍스트는 실행 가능한 코드가 실행되기 위해 필요한 환경. 
-생성된 실행 컨텍스트는 실행 컨텍스트 스택에 쌓임. 
-실행 컨텍스트 스택은 LIFO(후입선출) 의 방식으로 관리됨</p>
-</blockquote>
+<h3 id="스태틱-뷰404에러-스태틱페이지들">스태틱 뷰(404에러, 스태틱페이지들)</h3>
 
 <ul>
-  <li>실행 컨텍스트는 3가지 객체를 가짐.
-    <ul>
-      <li>Variable Object
-        <ul>
-          <li>변수</li>
-          <li>매개변수(parameter)와 인수 정보(arguments)</li>
-          <li>함수 선언(함수 표현식은 제외)</li>
-        </ul>
-      </li>
-      <li>Scope Chain</li>
-      <li>this</li>
-    </ul>
-  </li>
+  <li>오버 엔지니어링 : 페이지를 쉽게 확인할 수 있지만 꼭 Storybook으로 컴파일하지 않아도 확인할 방법은 얼마든지 있음.</li>
 </ul>
 
-<ol>
-  <li>전역 컨텍스트 생성 -&gt; <strong>콜스택(실행 컨텍스트 스택)에 쌓임</strong></li>
-  <li><u>함수 호출</u> 시마다 컨텍스트 생성 -&gt; <strong>콜스택(실행 컨텍스트 스택)에 쌓임</strong></li>
-  <li>컨텍스트 생성 시 컨텍스트 안에 변수객체(arguments, variable), scope chain, this가 생성</li>
-  <li>컨텍스트 생성 후 <u>함수실행</u>. 사용되는 변수들은 변수 객체 안에서 값을 찾고, 없다면 스코프 체인을 따라 올라가며 찾음</li>
-  <li>함수 실행이 마무리되면 해당 컨텍스트는 소멸.(클로저 제외)  -&gt; <strong>콜스택(실행 컨텍스트 스택)에서 추출</strong></li>
-  <li>페이지가 종료되면 전역 컨텍스트가 소멸 -&gt; <strong>콜스택(실행 컨텍스트 스택)에서 추출</strong></li>
-</ol>
-
-<h2 id="활성객체">활성객체</h2>
-
-<blockquote>
-  <ul>
-    <li>실행 컨텍스트가 생성되면 자바스크립트 엔진은 해당 컨텍스트에서 실행에 필요한 여러가지 정보를 담을 객체를 생성한다. 이를 활성객체라 한다.</li>
-    <li>객체가 사용할 매개변수, 사용자가 정의한 변수 및 객체를 저장 한다.</li>
-  </ul>
-</blockquote>
-
-<h2 id="클로저">클로저</h2>
+<h2 id="참고문서">참고문서</h2>
 
 <ul>
-  <li>참고 : <a href="https://poiemaweb.com/js-closure">poiemaweb - 클로저</a></li>
+  <li><a href="https://www.learnstorybook.com/intro-to-storybook/vue/en/get-started/">Storybook for Vue tutorial</a></li>
+  <li><a href="https://storybook.js.org/docs/basics/writing-stories">Storybook document</a></li>
 </ul>
-
-<blockquote>
-  <p>클로저는 자신이 생성될 때의 환경(Lexical environment)을 기억하는 함수다. <br />
-실행 컨텍스트의 관점에 설명하면, 내부함수가 유효한 상태에서 외부함수가 종료하여 외부함수의 실행 컨텍스트가 반환되어도, 외부함수 실행 컨텍스트 내의 활성 객체(Activation object)(변수, 함수 선언 등의 정보를 가지고 있다)는 내부함수에 의해 참조되는 한 유효하여 내부함수가 스코프 체인을 통해 참조할 수 있는 것을 의미한다. <br /><br />
-용도 :<br /></p>
-  <ul>
-    <li>상태유지</li>
-    <li>전역변수 사용억제</li>
-    <li>정보은닉(private 키워드 흉내)</li>
-  </ul>
-</blockquote>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//// 1번 </span>
-<span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[];</span>
-
-<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nx">i</span><span class="p">;</span>
-  <span class="p">};</span>
-<span class="p">}</span>
-
-<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="nx">j</span><span class="p">]());</span>
-<span class="p">}</span>
-
-<span class="c1">//// 2번</span>
-<span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[];</span>
-
-<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
-  <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">id</span><span class="p">)</span> <span class="p">{</span> 
-    <span class="k">return</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-      <span class="k">return</span> <span class="nx">id</span><span class="p">;</span> 
-    <span class="p">};</span>
-  <span class="p">}(</span><span class="nx">i</span><span class="p">));</span> 
-<span class="p">}</span>
-
-<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="nx">j</span><span class="p">]());</span>
-<span class="p">}</span>
-
-<span class="c1">//// 3번</span>
-<span class="kd">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[];</span>
-
-<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nx">i</span><span class="p">;</span>
-  <span class="p">};</span>
-<span class="p">}</span>
-
-<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]());</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>1번 : 5 가 5번 출력
-2번,3번 : 1,2,3,4,5 가 출력</p>
-
-<!-- > 'IIFE(즉시 호출 함수 표현식) == 모듈 패턴' 을 이용한 비공개 변수 선언
-
-```javascript
-
-``` -->
 
 <br>
 <br>
@@ -660,7 +561,7 @@
 
 
 
-  최대 1 분 소요
+  1 분 소요
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">문제
@@ -864,7 +765,7 @@ SQL문제가 나왔는데 더 좋은 답이 있는것 같아 나중에 기록해
 
 
 
-  1 분 소요
+  최대 1 분 소요
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">동적 프로그래밍(Dynamic Programming)
@@ -1856,8 +1757,8 @@ function solution(record) {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://seunghyum.github.io/javascript/Javascript-Concept/";  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = "/javascript/Javascript-Concept"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      this.page.url = "https://seunghyum.github.io/frontend/methodology/CDD-2/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/frontend/methodology/CDD-2"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');
