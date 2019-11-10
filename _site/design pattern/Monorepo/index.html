@@ -9,38 +9,38 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[ESlint &amp; Prettier] 개발 관습 설정 in Visual Studio - eveloper Dave</title>
-<meta name="description" content="회사 프로젝트를 작업하기 전 프론트엔드 개발자들 간의 코드 규칙을 Eslint와 Prettier 설정을 맞춰 관리해가는 방향을 정했다.아직 협업을 할 경우는 없지만 미래에 인수인계 받거나 협업을 진행할 경우 코드관습이 달라 고생할 경우를 대비하기로 했다.설정은 작업을 진행하며 수정할 계획이다.">
+<!-- begin _includes/seo.html --><title>[Design Pattern] Monorepo 공부 - eveloper Dave</title>
+<meta name="description" content="결론">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko">
 <meta property="og:site_name" content="eveloper Dave">
-<meta property="og:title" content="[ESlint &amp; Prettier] 개발 관습 설정 in Visual Studio">
-<meta property="og:url" content="https://seunghyum.github.io/code%20config/Eslint-Prettier/">
+<meta property="og:title" content="[Design Pattern] Monorepo 공부">
+<meta property="og:url" content="https://seunghyum.github.io/design%20pattern/Monorepo/">
 
 
-  <meta property="og:description" content="회사 프로젝트를 작업하기 전 프론트엔드 개발자들 간의 코드 규칙을 Eslint와 Prettier 설정을 맞춰 관리해가는 방향을 정했다.아직 협업을 할 경우는 없지만 미래에 인수인계 받거나 협업을 진행할 경우 코드관습이 달라 고생할 경우를 대비하기로 했다.설정은 작업을 진행하며 수정할 계획이다.">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2019-10-31T00:00:00+09:00">
+  <meta property="og:description" content="결론">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2019-11-10T00:00:00+09:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://seunghyum.github.io/code%20config/Eslint-Prettier/">
+
+<link rel="canonical" href="https://seunghyum.github.io/design%20pattern/Monorepo/">
 
 
 
@@ -172,7 +172,7 @@
       
         
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/categories/#code-config" itemprop="item"><span itemprop="name">Code config</span></a>
+          <a href="/categories/#design-pattern" itemprop="item"><span itemprop="name">Design pattern</span></a>
           <meta itemprop="position" content="2" />
         </li>
         <span class="sep">/</span>
@@ -180,7 +180,7 @@
     
       
       
-        <li class="current">[ESlint & Prettier] 개발 관습 설정 in Visual Studio</li>
+        <li class="current">[Design Pattern] Monorepo 공부</li>
       
     
   </ol>
@@ -325,94 +325,107 @@
 
   <div class="archive">
     
-      <h1 id="page-title" class="page__title">[ESlint & Prettier] 개발 관습 설정 in Visual Studio</h1>
+      <h1 id="page-title" class="page__title">[Design Pattern] Monorepo 공부</h1>
     
     <br>
-<p>회사 프로젝트를 작업하기 전 프론트엔드 개발자들 간의 코드 규칙을 Eslint와 Prettier 설정을 맞춰 관리해가는 방향을 정했다.<br />
-아직 협업을 할 경우는 없지만 미래에 인수인계 받거나 협업을 진행할 경우 코드관습이 달라 고생할 경우를 대비하기로 했다.<br /><br />
-설정은 작업을 진행하며 수정할 계획이다.</p>
+<h2 id="결론">결론</h2>
 
-<p>핵심은 저장할때마다 Eslint기준에 맞게 prettier 패키지가 코드를 수정하게 하는 것이다.</p>
-
-<h2 id="eslint-설정">ESlint 설정</h2>
-
-<p>ESlint 설정을 위한 패키지 다운로드</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>npm i eslint eslint-config-prettier eslint-plugin-prettier eslint-plugin-vue <span class="nt">--save-dev</span>
-</code></pre></div></div>
-
-<p>프로젝트 루트에 있는 .eslintrc.json 파일 설정</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="c1">// 현재 eslintrc 파일을 기준으로 ESLint 규칙을 적용</span>
-  <span class="na">root</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="c1">// 추가적인 규칙들을 적용</span>
-  <span class="na">extends</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s1">'eslint:recommended'</span><span class="p">,</span>
-    <span class="s1">'plugin:vue/essential'</span><span class="p">,</span>
-    <span class="s1">'prettier'</span><span class="p">,</span>
-    <span class="s1">'plugin:prettier/recommended'</span><span class="p">,</span>
-  <span class="p">],</span>
-  <span class="c1">// 코드 정리 플러그인 추가</span>
-  <span class="na">plugins</span><span class="p">:</span> <span class="p">[</span><span class="s1">'prettier'</span><span class="p">],</span>
-  <span class="c1">// 사용자 편의 규칙 추가</span>
-  <span class="na">rules</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s1">'prettier/prettier'</span><span class="p">:</span> <span class="p">[</span>
-      <span class="s1">'error'</span><span class="p">,</span>
-      <span class="c1">// 아래 규칙들은 개인 선호에 따라 prettier 문법 적용</span>
-      <span class="c1">// https://prettier.io/docs/en/options.html</span>
-      <span class="p">{</span>
-        <span class="na">singleQuote</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="na">semi</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="na">useTabs</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="na">tabWidth</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-        <span class="na">endOfLine</span><span class="p">:</span> <span class="s1">'auto'</span><span class="p">,</span>
-        <span class="na">trailingComma</span><span class="p">:</span> <span class="s1">'all'</span><span class="p">,</span>
-        <span class="na">printWidth</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
-        <span class="na">bracketSpacing</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="na">arrowParens</span><span class="p">:</span> <span class="s1">'avoid'</span><span class="p">,</span>
-      <span class="p">},</span>
-    <span class="p">],</span>
-    <span class="s1">'no-console'</span><span class="p">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NODE_ENV</span> <span class="o">===</span> <span class="s1">'production'</span> <span class="p">?</span> <span class="s1">'error'</span> <span class="p">:</span> <span class="s1">'off'</span><span class="p">,</span>
-  <span class="p">},</span>
-<span class="p">};</span>
-</code></pre></div></div>
-
-<h2 id="visual-studio-설정">Visual Studio 설정</h2>
-
-<p>Window : ctr + shift + p <br />
-Mac : cmd + shift + p <br />
-settings.json 파일 검색 후 설정</p>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="err">//</span><span class="w">  </span><span class="err">....</span><span class="w">
-  </span><span class="s2">"editor.tabSize"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"eslint.autoFixOnSave"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">저장할때마다</span><span class="w"> </span><span class="err">js</span><span class="w"> </span><span class="err">코드</span><span class="w"> </span><span class="err">자동</span><span class="w"> </span><span class="err">수정</span><span class="w">
-  </span><span class="s2">"eslint.alwaysShowStatus"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"eslint.validate"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vue"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"autoFix"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"javascript"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"autoFix"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"javascriptreact"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"autoFix"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">],</span><span class="w">
-  </span><span class="s2">"tslint.autoFixOnSave"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">저장할때마다</span><span class="w"> </span><span class="err">typescript</span><span class="w"> </span><span class="err">코드</span><span class="w"> </span><span class="err">자동</span><span class="w"> </span><span class="err">수정</span><span class="w">
-  </span><span class="s2">"markdownlint.run"</span><span class="p">:</span><span class="w"> </span><span class="s2">"onSave"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
-
-<h2 id="참고">참고</h2>
+<p>결론부터 적자면 Monorepo는 아래의 경우에 써야할 것 같다.</p>
 
 <ul>
-  <li><a href="https://gwonsungjun.github.io/articles/2018-06/vscodeSetting">VSCode 환경 설정 및 기초 사용법</a></li>
-  <li><a href="https://joshua1988.github.io/web-development/vuejs/boost-productivity/">Vue.js 개발 생산성을 높여주는 도구 3가지</a></li>
+  <li>독립 API로 만들기 어려운, 프로젝트 간 중복되는 공통모듈이 있을 경우</li>
+  <li>Micro 독립 서비스일 경우</li>
+</ul>
+
+<p>글 하단의 “언제 쓰면 안될까?” 역시 중요하다.</p>
+
+<h2 id="개념">개념</h2>
+
+<blockquote>
+  <p>다양한 모듈을 여러 레포지토리에서 관리하지 않고 하나의 레포지토리에서 관리하는 디자인 패턴. <br />
+대표적인 툴 : Lerna, Yarn Workspace</p>
+</blockquote>
+
+<h2 id="장점">장점</h2>
+
+<ul>
+  <li>프로젝트간 공유해야할 기능 모듈 및 라이브러리들을 쉽게 공유할 수 있다.</li>
+  <li>
+    <p>모든 변경은 단일 원자 단위로 간주 및 검토 할수 있다.</p>
+
+    <h3 id="프로젝트간-공유해야할-기능-모듈-및-라이브러리들을-쉽게-공유할-수-있다">프로젝트간 공유해야할 기능 모듈 및 라이브러리들을 쉽게 공유할 수 있다.</h3>
+
+    <p>가령 모바일과 데스크탑 프로젝트가 별개로 존재할때 이 둘이 사용하는 회원관리 로직은 동일할 것이다. <br />
+예를들어 REST API에 회원가입 요청은</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST /v1/user
+</code></pre></div>    </div>
+
+    <p>로 요청을 보내고 받은 응답을 관리하고 상태관리를 하는 방식도 동일할 것이다.<br />
+각자의 레포지토리에서 이 둘이 공통으로 사용하는 기능을 모듈화하고 공유하는 작업은 복잡할 수 있다. <br />
+모노레포는 이러한 설계를 쉽게 설정할 수 있다. <br />
+쉽게 공유하고 공통으로 관리할 수 있다는 것은 곧 <strong>모듈화 리팩토링이 저렴해진다</strong>는 장점 또한 있다고 할 수 있다.</p>
+
+    <h3 id="모든-변경은-단일-원자-단위로-간주-및-검토-할수-있다">모든 변경은 단일 원자 단위로 간주 및 검토 할수 있다.</h3>
+
+    <p>다시말해 모든 이슈들은 Monorepo에서 검토 할수 있다.<br />
+가령 프론트엔드 프로젝트와 백엔드 서버 프로젝트가 따로 존재할때, 각각의 이슈, 버전 등의 관리를 하나의 레포지토리에서 할 수 있다.<br />
+또한 위의 구조에서 두 서비스를 연동해서 빌드, 테스트, 배포 프로세스를 한번에 진행하기 위해서는 따로 작업해야할 것들이 많아진다.<br />
+하지만 Monorepo에서는 한번에 처리할 수 있다.</p>
+  </li>
+</ul>
+
+<h2 id="단점">단점</h2>
+
+<ul>
+  <li>러닝커브</li>
+  <li>초기 세팅이 다소 복잡함</li>
+</ul>
+
+<h2 id="언제-써야할까">언제 써야할까?</h2>
+
+<ul>
+  <li>공통으로 쓰는 모듈들이 많을 경우. <small>ex) 모바일 웹과 데스크탑 웹을 따로 만들경우</small></li>
+  <li>Micro 독립 서비스일 경우 -&gt; 이슈관리, 버전관리, 배포 및 테스트 관리를 한곳에서 할수 있다.</li>
+</ul>
+
+<h2 id="언제-쓰면-안될까">언제 쓰면 안될까?</h2>
+
+<p>: Mono Repo를 쓰지 말아야할 경우 = Multiple Repo로 관리해야할 경우<br /></p>
+
+<p>참고 : <small><a href="https://www.drmaciver.com/2016/10/why-you-should-use-a-single-repository-for-all-your-companys-projects/">Why you should use a single repository for all your company’s projects</a></small></p>
+
+<ul>
+  <li>프로젝트 전체 혹은 부분적으로 오픈소스 프로젝트일 경우.</li>
+  <li>SI 작업같은 클라이언트 마다 다른 프로젝트일 경우. 저작권을 고객에게 넘겨야하는 경우.</li>
+  <li>리눅스 커널같이 1.5억 줄 이상의 큰 프로젝트일 경우. 단일 프로젝트에서만 동작해야하는 경우.</li>
+  <li>기존에 만들어 놓은 다중레포(Multiple Repo) 구조가 CI/CD 등에 맞게 설계되어 있고 단일레포(Monorepo)로의 마이그레이션 비용이 엄청 큰 경우.</li>
+</ul>
+
+<h2 id="공부-배경과-그에-따른-결론">공부 배경과 그에 따른 결론</h2>
+
+<p>회사 프로젝트를 초기부터 빌드해야하는데 어떻게 디자인할지 조사하다가 정리하게 되었다. <br />
+프로젝트의 상황은 이렇다<br /></p>
+
+<ul>
+  <li>내가 만들어야할 프로젝트는 기존의 비슷한 프로젝트가 이미 하나 있음.</li>
+  <li>버전을 업하며 리팩토링을 할 예정이지만 관리비용을 줄이기 위해 비슷하게 가야함.</li>
+</ul>
+
+<p>기존의 회사의 프로젝트들의 상황은 이렇다.</p>
+
+<ul>
+  <li>다중 프로젝트들로 이미 마들어졌고 그에 따른 CI/CD 구조가 정립되어 있다. -&gt; 마이그레이션 비용이 클 수 있다.</li>
+  <li>내가 만들 프로젝트가 이미 다중 레포로 만들어진 백엔드 서버에 따라 개발되어야 함.</li>
+</ul>
+
+<p>위의 상황들은 모노레포로 얻을 수 있는 단일성이 없기 때문에 다중 레포로 관리해야할 것 같다.</p>
+
+<h2 id="참고-자료">참고 자료</h2>
+
+<ul>
+  <li><a href="https://yarnpkg.com/blog/2017/08/02/introducing-workspaces/">Workspaces in Yarn</a></li>
+  <li><a href="https://www.drmaciver.com/2016/10/why-you-should-use-a-single-repository-for-all-your-companys-projects/">Why you should use a single repository for all your company’s projects</a></li>
 </ul>
 
 <br>
@@ -606,7 +619,7 @@ settings.json 파일 검색 후 설정</p>
 
 
 
-  최대 1 분 소요
+  1 분 소요
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">문제
@@ -1802,8 +1815,8 @@ function solution(record) {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://seunghyum.github.io/code%20config/Eslint-Prettier/";  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = "/code%20config/Eslint-Prettier"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      this.page.url = "https://seunghyum.github.io/design%20pattern/Monorepo/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/design%20pattern/Monorepo"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');
