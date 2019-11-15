@@ -352,18 +352,20 @@
 
 <p>: GrpahQL과 RESTful은 각각의 장단점이 있음.</p>
 
-<h3 id="graphql">GraphQL</h3>
-
-<ul>
-  <li>한번에 여러 요청들에 응답해야할때.</li>
-  <li>대부분의 요청이 CRUD일때</li>
-</ul>
-
 <h3 id="restful">RESTful</h3>
 
 <ul>
   <li>PDF, Excel File 전송같은 단순 Text로 처리되지 않는 요청이 있을때</li>
   <li>요청의 구조가 다양하지 않고 정해져 있는경우.</li>
+  <li>API명세서가 제대로 안됨(대부분의 회사들이 아예 없거나 업데이트가 안됨)</li>
+</ul>
+
+<h3 id="graphql">GraphQL</h3>
+
+<ul>
+  <li>한번에 여러 요청들에 응답해야할때.</li>
+  <li>대부분의 요청이 CRUD일때</li>
+  <li>API명세서를 만들 필요가 없음</li>
 </ul>
 
 <p>API서버 구축시 두 방법을 섞어쓰는 것은 품질을 떨어뜨릴 수 있음. 각각의 장점을 살릴수 있는 설계가 필요.</p>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://seunghyum.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://seunghyum.github.io/" rel="alternate" type="text/html" /><updated>2019-11-10T15:58:05+09:00</updated><id>https://seunghyum.github.io/feed.xml</id><title type="html">eveloper Dave</title><subtitle>데이터 시각화에 관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">[Design Pattern] Monorepo 공부</title><link href="https://seunghyum.github.io/design%20pattern/Monorepo/" rel="alternate" type="text/html" title="[Design Pattern] Monorepo 공부" /><published>2019-11-10T00:00:00+09:00</published><updated>2019-11-10T00:00:00+09:00</updated><id>https://seunghyum.github.io/design%20pattern/Monorepo</id><content type="html" xml:base="https://seunghyum.github.io/design%20pattern/Monorepo/">&lt;h2 id=&quot;결론&quot;&gt;결론&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://seunghyum.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://seunghyum.github.io/" rel="alternate" type="text/html" /><updated>2019-11-15T13:51:29+09:00</updated><id>https://seunghyum.github.io/feed.xml</id><title type="html">eveloper Dave</title><subtitle>데이터 시각화에 관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">[Design Pattern] Monorepo 공부</title><link href="https://seunghyum.github.io/design%20pattern/Monorepo/" rel="alternate" type="text/html" title="[Design Pattern] Monorepo 공부" /><published>2019-11-10T00:00:00+09:00</published><updated>2019-11-10T00:00:00+09:00</updated><id>https://seunghyum.github.io/design%20pattern/Monorepo</id><content type="html" xml:base="https://seunghyum.github.io/design%20pattern/Monorepo/">&lt;h2 id=&quot;결론&quot;&gt;결론&lt;/h2&gt;
 
 &lt;p&gt;결론부터 적자면 Monorepo는 아래의 경우에 써야할 것 같다.&lt;/p&gt;
 
@@ -239,18 +239,20 @@
 
 &lt;p&gt;: GrpahQL과 RESTful은 각각의 장단점이 있음.&lt;/p&gt;
 
-&lt;h3 id=&quot;graphql&quot;&gt;GraphQL&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;한번에 여러 요청들에 응답해야할때.&lt;/li&gt;
-  &lt;li&gt;대부분의 요청이 CRUD일때&lt;/li&gt;
-&lt;/ul&gt;
-
 &lt;h3 id=&quot;restful&quot;&gt;RESTful&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;PDF, Excel File 전송같은 단순 Text로 처리되지 않는 요청이 있을때&lt;/li&gt;
   &lt;li&gt;요청의 구조가 다양하지 않고 정해져 있는경우.&lt;/li&gt;
+  &lt;li&gt;API명세서가 제대로 안됨(대부분의 회사들이 아예 없거나 업데이트가 안됨)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;graphql&quot;&gt;GraphQL&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;한번에 여러 요청들에 응답해야할때.&lt;/li&gt;
+  &lt;li&gt;대부분의 요청이 CRUD일때&lt;/li&gt;
+  &lt;li&gt;API명세서를 만들 필요가 없음&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;API서버 구축시 두 방법을 섞어쓰는 것은 품질을 떨어뜨릴 수 있음. 각각의 장점을 살릴수 있는 설계가 필요.&lt;/p&gt;
