@@ -9,38 +9,38 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[GoogleAnalytics] 자기 자신의 활동기록 제외 (prevent recording myself) - eveloper Dave</title>
-<meta name="description" content="참고  5 ways to exclude your own visits from Google Analytics  How to exclude your own [dynamic] ip from Google Analytics">
+<!-- begin _includes/seo.html --><title>[Git] Git Command 정리 - eveloper Dave</title>
+<meta name="description" content="Git 시스템 이해하기">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko">
 <meta property="og:site_name" content="eveloper Dave">
-<meta property="og:title" content="[GoogleAnalytics] 자기 자신의 활동기록 제외 (prevent recording myself)">
-<meta property="og:url" content="https://seunghyum.github.io/googleanalytics/Google-Analytics-prevent-self/">
+<meta property="og:title" content="[Git] Git Command 정리">
+<meta property="og:url" content="https://seunghyum.github.io/git/Git-Command/">
 
 
-  <meta property="og:description" content="참고  5 ways to exclude your own visits from Google Analytics  How to exclude your own [dynamic] ip from Google Analytics">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2019-05-02T00:00:00+09:00">
+  <meta property="og:description" content="Git 시스템 이해하기">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2019-11-24T00:00:00+09:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://seunghyum.github.io/googleanalytics/Google-Analytics-prevent-self/">
+
+<link rel="canonical" href="https://seunghyum.github.io/git/Git-Command/">
 
 
 
@@ -172,7 +172,7 @@
       
         
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/categories/#googleanalytics" itemprop="item"><span itemprop="name">Googleanalytics</span></a>
+          <a href="/categories/#git" itemprop="item"><span itemprop="name">Git</span></a>
           <meta itemprop="position" content="2" />
         </li>
         <span class="sep">/</span>
@@ -180,7 +180,7 @@
     
       
       
-        <li class="current">[GoogleAnalytics] 자기 자신의 활동기록 제외 (prevent recording myself)</li>
+        <li class="current">[Git] Git Command 정리</li>
       
     
   </ol>
@@ -325,50 +325,190 @@
 
   <div class="archive">
     
-      <h1 id="page-title" class="page__title">[GoogleAnalytics] 자기 자신의 활동기록 제외 (prevent recording myself)</h1>
+      <h1 id="page-title" class="page__title">[Git] Git Command 정리</h1>
     
     <br>
-<h2 id="참고">참고</h2>
+<h2 id="git-시스템-이해하기">Git 시스템 이해하기</h2>
+
+<blockquote>
+  <p>모든 깃 히스토리는 <code class="highlighter-rouge">$ git init</code>을 한 로컬에서 .git 폴더에서 관리됨. <br />
+Git의 주목적은 프로젝트의 스냅샷을 지속적으로 저장하는 것이다. 트리 세 개를 사용해 더 나은 상태로 관리한다.</p>
+</blockquote>
+
+<p>펌 : <a href="https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-Reset-%EB%AA%85%ED%99%95%ED%9E%88-%EC%95%8C%EA%B3%A0-%EA%B0%80%EA%B8%B0#_git_reset">7.7 Git 도구 - Reset 명확히 알고 가기</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>트리</th>
+      <th>역할</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HEAD</td>
+      <td>마지막 커밋 스냅샷, 다음 커밋의 부모 커밋</td>
+    </tr>
+    <tr>
+      <td>Index</td>
+      <td>다음에 커밋할 스냅샷</td>
+    </tr>
+    <tr>
+      <td>Working Directory</td>
+      <td>샌드박스. 지금 작업하고 있는 위치</td>
+    </tr>
+  </tbody>
+</table>
+
+<figure class=" ">
+  
+    
+      <a href="/assets/images/posts/git_three_tree.png">
+        <img src="/assets/images/posts/git_three_tree.png" alt="" />
+      </a>
+    
+  
+  
+</figure>
+
+<h3 id="세-개의-트리">세 개의 트리</h3>
+
+<p>Git을 서로 다른 세 트리를 관리하는 컨텐츠 관리자로 생각하면 reset 과 checkout 을 좀 더 쉽게 이해할 수 있다. 여기서 “트리” 란 실제로는 “파일의 묶음” 이다. 자료구조의 트리가 아니다 (세 트리 중 Index는 트리도 아니지만, 이해를 쉽게 하려고 일단 트리라고 한다).</p>
+
+<p>Git은 일반적으로 세 가지 트리를 관리하는 시스템이다.</p>
+
+<h3 id="head">HEAD</h3>
+
+<p>HEAD는 현재 브랜치를 가리키는 포인터이며, 브랜치는 브랜치에 담긴 커밋 중 가장 마지막 커밋을 가리킨다. 지금의 HEAD가 가리키는 커밋은 바로 다음 커밋의 부모가 된다. 단순하게 생각하면 HEAD는 <em>현재 브랜치 마지막 커밋의 스냅샷</em>이다.</p>
+
+<h3 id="index">Index</h3>
+
+<p>Index는 바로 다음에 커밋할 것들이다. 이미 앞에서 우리는 이런 개념을 “Staging Area” 라고 배운 바 있다. “Staging Area” 는 사용자가 git commit 명령을 실행했을 때 Git이 처리할 것들이 있는 곳이다.</p>
+
+<p>먼저 Index는 Working Directory에서 마지막으로 Checkout 한 브랜치의 파일 목록과 파일 내용으로 채워진다. 이후 파일 변경작업을 하고 변경한 내용으로 Index를 업데이트 할 수 있다. 이렇게 업데이트 하고 git commit 명령을 실행하면 Index는 새 커밋으로 변환된다.</p>
+
+<p>Index는 엄밀히 말해 트리구조는 아니다. 사실 Index는 평평한 구조로 구현되어 있다. 여기에서는 쉽게 이해할 수 있도록 그냥 트리라고 설명한다.</p>
+
+<h3 id="working-directory">Working Directory</h3>
+
+<p>마지막으로 Working Directory를 살펴보자. 위의 두 트리는 파일과 그 내용을 효율적인 형태로 .git 디렉토리에 저장한다. 하지만, 사람이 알아보기 어렵다. Working Directory는 실제 파일로 존재한다. 바로 눈에 보이기 때문에 사용자가 편집하기 수월하다. Working Directory는 샌드박스로 생각하자. 커밋하기 전에는 Index(Staging Area)에 올려놓고 얼마든지 변경할 수 있다.</p>
+
+<hr />
+
+<h3 id="revert-vs-reset">Revert vs Reset</h3>
+
 <ul>
-  <li><a href="http://www.daniloaz.com/en/5-ways-to-exclude-your-own-visits-from-google-analytics/">5 ways to exclude your own visits from Google Analytics</a></li>
-  <li><a href="http://www.daniloaz.com/en/how-to-exclude-your-own-dynamic-ip-from-google-analytics/">How to exclude your own [dynamic] ip from Google Analytics</a></li>
+  <li>git revert : cherry-pick의 반대. 해당 커밋을 되돌리는 커밋을 새로 생성한다. - <a href="https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-%EA%B3%A0%EA%B8%89-Merge#_reverse_commit">예제</a></li>
+  <li>git reset –hard <code class="highlighter-rouge">&lt;이전 커밋&gt;</code>
+    <ul>
+      <li>HEAD의 브랜치를 지정한 위치로 옮긴다.</li>
+      <li>index를 HEAD의 내용으로 바꾼다.</li>
+      <li>
+        <dl>
+          <dt>working directory를 index의 내용으로 완전히 바꾼다.</dt>
+          <dd>이전 커밋으로 내용을 완전히 바꿀때는 reset을 쓴다. 하지만 해당 커밋이 다른 사람들과 공유하고 있는 히스토리이라면 안쓰는게 좋다. <a href="https://git-scm.com/book/ko/v2/Git-%EB%B8%8C%EB%9E%9C%EC%B9%98-Rebase-%ED%95%98%EA%B8%B0#_rebase_peril">rebase의 위험성</a> 참고.</dd>
+        </dl>
+      </li>
+    </ul>
+  </li>
 </ul>
 
-<h2 id="괜찮은-방법들">괜찮은 방법들</h2>
+<hr />
+
+<h2 id="rebase의-활용">Rebase의 활용</h2>
+
+<ul>
+  <li>커밋 메시지만 수정하기</li>
+  <li>커밋 메시지들 병합하기</li>
+  <li>병합하기 (아래의 병합 전략 - <strong>Merge vs Rebase 참고</strong>)</li>
+</ul>
+
+<h3 id="커밋-메시지만-수정하기">커밋 메시지만 수정하기</h3>
+
+<p><a href="https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-%ED%9E%88%EC%8A%A4%ED%86%A0%EB%A6%AC-%EB%8B%A8%EC%9E%A5%ED%95%98%EA%B8%B0#_changing_multiple">참고</a></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git rebase -i HEAD~3
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pick f7f3f6d changed my name a bit
+pick 310154e updated README formatting and added blame
+pick a5f4a0d added cat-file
+
+# Rebase 710f0f8..a5f4a0d onto 710f0f8
+#
+# Commands:
+#  p, pick = use commit
+#  r, reword = use commit, but edit the commit message
+#  e, edit = use commit, but stop for amending
+#  s, squash = use commit, but meld into previous commit
+#  f, fixup = like "squash", but discard this commit's log message
+#  x, exec = run command (the rest of the line) using shell
+#
+# These lines can be re-ordered; they are executed from top to bottom.
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+#
+# However, if you remove everything, the rebase will be aborted.
+#
+# Note that empty commits are commented out
+</code></pre></div></div>
+
 <ol>
-  <li>서버사이드나 백엔드 매서드
-    <ul>
-      <li>설명 : Dynamic DNS를 사용하여 IP를 제외. 과정이 복잡함. 회사에서 쓰기 적합.</li>
-      <li>장점 : 시스템으로 돌아감.</li>
-      <li>단점
-        <ul>
-          <li>복잡하다.</li>
-          <li>캐시를 사용설정 해놓으면 무의미. DDNS 설정을 한 이후에도 설정전에 사이트에 접속한적이 있다면 혹시라도 남아있을 캐시는 제거하는 것이 필요.</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Google Analytics 필터로 Public IP 제외
-    <ul>
-      <li>과정 : GA(Google Analytics) 대쉬보드 -&gt; 관리 클릭 -&gt; 보기의 필터 클릭 -&gt; 필터 추가</li>
-      <li>장점 : 고정 IP만 쓰는 장치 제외에 적합.</li>
-      <li>단점 : 유동 IP이면 무의미. (핸드폰, 노트북 등 네트워크 전용선을 쓰지 않고 옮겨다니며 와이파이를 쓰는 경우)</li>
-    </ul>
-  </li>
-  <li>브라우저 확장프로그램
-    <ul>
-      <li>설명 : 확장프로그램을 작동시켜 IP를 제외시킴.</li>
-      <li>장점 : 가장 간단.</li>
-      <li>단점 : 모바일, 테블릿에서 쓰지 못할수 있음.</li>
-      <li>추천 프로그램
-        <ul>
-          <li><a href="https://chrome.google.com/webstore/detail/google-analytics-opt-out/fllaojicojecljbmefodhfapmkghcbnh/related?hl=ko">Google 웹로그 분석 차단 추가 기능(Google 제공)</a></li>
-          <li><a href="https://chrome.google.com/webstore/detail/block-yourself-from-analy/fadgflmigmogfionelcpalhohefbnehm?hl=ko">Block Yourself from Analytics</a></li>
-        </ul>
-      </li>
-    </ul>
-  </li>
+  <li>수정할 커밋들만 pick -&gt; edit으로 수정.</li>
+  <li><code class="highlighter-rouge">commit --amend</code> 으로 커밋 내용을 수정</li>
+  <li><code class="highlighter-rouge">rebase --continue</code>으로 다음 edit설정한 커밋으로 넘어감.</li>
 </ol>
+
+<h3 id="커밋-메시지들-병합하기">커밋 메시지들 병합하기</h3>
+
+<p>위의 예제에서 수정할 커밋들만 <code class="highlighter-rouge">pick</code> -&gt; <code class="highlighter-rouge">squash</code> or <code class="highlighter-rouge">fixup</code>으로 수정.</p>
+
+<h2 id="병합-전략---merge-vs-rebase">병합 전략 - Merge vs Rebase</h2>
+
+<figure class=" ">
+  
+    
+      <a href="/assets/images/posts/git_merge_vs_rebase.png">
+        <img src="/assets/images/posts/git_merge_vs_rebase.png" alt="" />
+      </a>
+    
+  
+  
+</figure>
+
+<h3 id="merge">Merge</h3>
+
+<blockquote>
+  <p>Merge 브랜치에서 사용하는 전략은 각 브랜치의 마지막 커밋 두 개와 공통 조상의 총 3개의 커밋을 이용하는 3-way merge를 수행하여 새로운 커밋을 만들어내는 것입니다. - <a href="https://velog.io/@godori/Git-Rebase">Git Rebase 활용하기</a></p>
+</blockquote>
+
+<h3 id="rebase">Rebase</h3>
+
+<blockquote>
+  <p>연속해서 <code class="highlighter-rouge">git cherry-pick</code> 하는 효과. base를 병합하고자하는 브랜치의 커밋들로 채우고, 그 이후 나의 커밋들을 그 위에 올려놓는 형태.</p>
+</blockquote>
+
+<hr />
+
+<h2 id="rebase-vs-stash">Rebase vs Stash</h2>
+
+<p>Rebase : 커밋한 것들을 기준으로 작업함.
+Stash : add 하기 전의 변경사항들을 대상으로 함.</p>
+
+<hr />
+
+<h2 id="커맨드-정리">커맨드 정리</h2>
+
+<ul>
+  <li>git shortlog : 한줄짜리 로그</li>
+  <li>git blame : 파일의 각 코드 줄마다 누가 언제 커밋을 했는지 히스토리 추적</li>
+  <li>git show <code class="highlighter-rouge">&lt;commit-id&gt;</code> :  commit-id에 해당하는 커밋 정보를 확인함. 생략시 HEAD의 가장 최신 커밋을 확인함</li>
+  <li>git cherry-pick : 원하는 커밋만 가져오기 - <a href="https://git-scm.com/book/ko/v2/Appendix-C%3A-Git-%EB%AA%85%EB%A0%B9%EC%96%B4-Patch-%ED%95%98%EA%B8%B0">참고</a></li>
+  <li>git format-patch <code class="highlighter-rouge">&lt;commit-id&gt;</code> : 여러 커밋을 patch파일로 만들기(주로 오픈소스 관리자(Committer)에게 이메일로 주고 패치해달라고 할 때 사용한다고 함.)</li>
+  <li>git am : patch 파일을 적용할때 사용함.</li>
+  <li>git fetch : 원격 저장소의 데이터를 로컬에 가져오기만 하기.</li>
+  <li>git pull : <code class="highlighter-rouge">git fetch</code> + <code class="highlighter-rouge">git merge</code></li>
+  <li>git stash : tracking(이미 커밋한 파일들)중인 파일들의 변경사항들을 임시 저장할 수 있음.</li>
+</ul>
 
 <br>
 <br>
@@ -590,7 +730,7 @@
 
 
 
-  최대 1 분 소요
+  1 분 소요
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">문제
@@ -794,7 +934,7 @@ SQL문제가 나왔는데 더 좋은 답이 있는것 같아 나중에 기록해
 
 
 
-  1 분 소요
+  최대 1 분 소요
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">동적 프로그래밍(Dynamic Programming)
@@ -1059,7 +1199,7 @@ SQL문제가 나왔는데 더 좋은 답이 있는것 같아 나중에 기록해
 
 
 
-  최대 1 분 소요
+  1 분 소요
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">
@@ -1786,8 +1926,8 @@ function solution(record) {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://seunghyum.github.io/googleanalytics/Google-Analytics-prevent-self/";  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = "/googleanalytics/Google-Analytics-prevent-self"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      this.page.url = "https://seunghyum.github.io/git/Git-Command/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/git/Git-Command"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');
