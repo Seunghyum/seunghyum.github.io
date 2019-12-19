@@ -80,13 +80,9 @@ gallery_data_lab:
     image_path: /assets/images/about/Toy/UEFA-tournament.png
 ---
 
-## 학력
-- 태장고등학교 2008/02 ~ 2010/02 졸업
-- 단국대학교 2014/02 ~ 2020/02 졸업예정
-
 <br>
 
-## 기술 스택
+# 기술 스택
 
 아래는 네이버 지원서 준비과정에서 알게된 스킬체크 기준입니다. 합리적이라고 생각하여 가져왔습니다
 > [초급](#){: .btn .btn--small .btn--success} 구체적으로는 잘 모르지만, 기본적인 지식과 경험은 가지고 있음<br>
@@ -97,24 +93,34 @@ gallery_data_lab:
 - 프론트엔드 : [jQuery](#){: .btn .btn--small .btn--info} [HTML(Pug)&CSS](#){: .btn .btn--small .btn--info} [SASS(SCSS)](#){: .btn .btn--small .btn--info}
 - 프론트엔드 프레임워크 : [Vue.js](#){: .btn .btn--small .btn--info} [React.js](#){: .btn .btn--small .btn--success}
 - 데이터베이스 : [MySQL](#){: .btn .btn--small .btn--info} [MongoDB](#){: .btn .btn--small .btn--info} [Oracle](#){: .btn .btn--small .btn--success}
-- 운영체제 : [Ubuntu](#){: .btn .btn--small .btn--info} [RedHat](#){: .btn .btn--small .btn--success}
+- 운영체제 : [Ubuntu](#){: .btn .btn--small .btn--info} [Centos](#){: .btn .btn--small .btn--success}
 - 웹서버 : [Nginx](#){: .btn .btn--small .btn--info} [Apache](#){: .btn .btn--small .btn--success}
-- etc : [Docker](#){: .btn .btn--small .btn--info} [AWS(EC2, S3, RDB, Elastic Beanstalk)](#){: .btn .btn--small .btn--info}
-- 익숙한 라이브러리 : [D3.js](#){: .btn .btn--small .btn--info} [Puppeteer](#){: .btn .btn--small .btn--info} [Naver Map API](#){: .btn .btn--small .btn--info} [SGIS MAP API](#){: .btn .btn--small .btn--info}
+- 인프라 : [Docker](#){: .btn .btn--small .btn--info} [AWS(EC2, S3, RDB, Elastic Beanstalk)](#){: .btn .btn--small .btn--info}
+- etc : [Storybook](#){: .btn .btn--small .btn--success} [Vardaccio](#){: .btn .btn--small .btn--success}
+- 라이브러리 : [D3.js](#){: .btn .btn--small .btn--info} [Puppeteer](#){: .btn .btn--small .btn--info} [Naver Map API](#){: .btn .btn--small .btn--info} [SGIS MAP API](#){: .btn .btn--small .btn--info}
 - 사용해본 저장소 : Github, GitLab, BitBucket
 
-## 협업툴 
-  - Slack, 잔디
+<hr>
+
+# 협업툴 
+
+  - Slack, 잔디, Teams
   - Trello
   - Google (Drive, Hangout, Mail..)
   - JIRA, Confluence, Notion
 
-<br>
+<hr>
 
-## 경력
+# 경력
+
 - **[Slowalk](https://www.slowalk.co.kr/)** 개발자 근무 2016/06 ~ 2019/4 퇴사
+- **[Virnect](https://virnect.com/)** 개발자 근무 2019/10 ~
 
-  ### 담당 프로젝트
+<hr>
+
+# 담당 프로젝트 & 업무
+  
+## in Slowalk
 
   - ### <한국백혈병어린이재단> 희망별빛 캠페인 원페이지 제작
     - 담당업무 : 풀스택 개발. 간단한 원페이지의 소개 + 행사관련 내용 이메일 발송기능
@@ -216,7 +222,28 @@ gallery_data_lab:
       > - 화면 정중앙의 좌표값과 화면 가장자리까지의 거리값을 쿼리에 넣으면 컴퍼스로 원을 그려 해당 지역에 겹치는 지역의 GeoJson데이터 만 출력해줌. <br>
       > - 그것을 MongoDB Aggregate로 데이터 값과 엮어서 가져옴.
 
-{% include gallery id="gallery_FineDust" %}
+  {% include gallery id="gallery_FineDust" %}
+
+## in Virnect
+
+- 작업내용
+  - 프론트엔드 개발자 가이드라인 작성.
+  - Workflow를 개선할 수 있는 툴로 Storybook(Vue.js) 적용 아이디어 제시.
+    > 마이크로 서비스들 간의 기능 & UI 컴포넌트 모듈화를 위해 아이디어를 제시했고 데모서비스를 만들어서 구성원들에게 시연함.<br>
+    > - 시연 : [github-page](https://seunghyum.github.io/VirnectStorybookTest/?path=/story/*)<br>
+    > - 발표 내용 : [VirnectStorybookTest](https://github.com/Seunghyum/VirnectStorybookTest) README 페이지 참고<br>
+    > - 처음엔 Storybook을 UI 명세서 역할로, [bit](https://bit.dev/)을 도입하여 컴포넌트 공유를 하려고함. [Notion 정리 내용 참고](https://www.notion.so/davemoon/Storybook-Bit-95358959770c4d568d42e08c976183b7) <br>
+    > - 하지만 기능 모듈(ex - ID, Password form validate)을 공유하기엔 부적합하다고 생각하여 verdaccio로 모든 모듈들(UI 컴포넌트 & 기능 모듈)을 관리하고 prefix name space로 관리하는 것으로 설계함.
+  - 협업 아키텍처 설계 : 구축형 Private NPM Registry - [Verdaccio](https://github.com/verdaccio/verdaccio)
+    > - [Notion 내용 참고](https://www.notion.so/davemoon/Workflow-9208a770012643c5b404376927d313e2)
+    > - 구축형 Private NPM Registry인 Verdaccio를 통해 별도의 비용없이 사내 개발서버에 Verdaccio를 구축하여 코드를 사내망에서만 관리할 수 있게 아이디어를 제시.
+    > - 실제 아키텍처에 반영함.
+- 그밖의 활동
+  - 점심에 샐러드 먹으며 개발하는 Salad Study 라는 그룹을 만듦.
+    - 오픈소스 기여해보기
+    - 사내 작업내용 코드리뷰
+    - [샐러드 주문 자동화 프로젝트 with Puppeteer](https://github.com/Seunghyum/VirnectSaladOrder)
+
 
 <br>
 
@@ -331,4 +358,9 @@ gallery_data_lab:
 
 ## 외부 활동
 - 멋쟁이 사자처럼 4기 중앙운영진
+
+# 학력
+- 태장고등학교 2008/02 ~ 2010/02 졸업
+- 단국대학교 2014/02 ~ 2020/02 졸업예정
+
 
