@@ -1,4 +1,275 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://seunghyum.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://seunghyum.github.io/" rel="alternate" type="text/html" /><updated>2019-12-19T22:19:43+09:00</updated><id>https://seunghyum.github.io/feed.xml</id><title type="html">eveloper Dave</title><subtitle>데이터 시각화에 관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">[Git] Git Command 정리</title><link href="https://seunghyum.github.io/git/Git-Command/" rel="alternate" type="text/html" title="[Git] Git Command 정리" /><published>2019-11-24T00:00:00+09:00</published><updated>2019-11-24T00:00:00+09:00</updated><id>https://seunghyum.github.io/git/Git-Command</id><content type="html" xml:base="https://seunghyum.github.io/git/Git-Command/">&lt;h2 id=&quot;git-시스템-이해하기&quot;&gt;Git 시스템 이해하기&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://seunghyum.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://seunghyum.github.io/" rel="alternate" type="text/html" /><updated>2019-12-24T17:48:21+09:00</updated><id>https://seunghyum.github.io/feed.xml</id><title type="html">eveloper Dave</title><subtitle>데이터 시각화에 관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">[Workflow] 프론트엔드 개발조직을 위한 워크플로 설계</title><link href="https://seunghyum.github.io/workflow/Workflow-Design-for-frontend/" rel="alternate" type="text/html" title="[Workflow] 프론트엔드 개발조직을 위한 워크플로 설계" /><published>2019-12-24T00:00:00+09:00</published><updated>2019-12-24T00:00:00+09:00</updated><id>https://seunghyum.github.io/workflow/Workflow-Design-for-frontend</id><content type="html" xml:base="https://seunghyum.github.io/workflow/Workflow-Design-for-frontend/">&lt;blockquote&gt;
+  &lt;h2 id=&quot;작성-배경&quot;&gt;작성 배경&lt;/h2&gt;
+
+  &lt;p&gt;회사의 작업구조를 &lt;strong&gt;페이지 중심 개발&lt;/strong&gt;에서 &lt;strong&gt;UI 컴포넌트 중심 개발&lt;/strong&gt;로 변경하면서 Workflow를 개선할만한 환경을 구성해야했다.&lt;br /&gt;
+폐쇄망 기반에서 개발자간 UI 명세서 역할을 할 수 있는 &lt;a href=&quot;https://storybook.js.org/&quot;&gt;Storybook&lt;/a&gt;과&lt;br /&gt;
+그것을 공유할 &lt;a href=&quot;https://github.com/verdaccio/verdaccio&quot;&gt;Verdaccio&lt;/a&gt;라는 구축형 NPM Private Registry를 도입하면 좋겠다는 생각에 아래의 내용을 팀에 제안했다.&lt;br /&gt;
+또한 기존의 프로젝트 중심에서 Task중심으로 업무프로세스를 변화하여 애자일에 적합하게 Workflow를 구성해보았다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;ui-컴포넌트-모듈관리--storybook&quot;&gt;UI 컴포넌트 모듈관리 : Storybook&lt;/h1&gt;
+
+&lt;figure&gt;
+  &lt;a href=&quot;/assets/images/posts/workflow/design-system-contents.jpg&quot; style=&quot;margin:auto;&quot;&gt;
+    &lt;img src=&quot;/assets/images/posts/workflow/design-system-contents.jpg&quot; style=&quot;max-width: 400px;border:none;&quot; /&gt;
+  &lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;시연 : &lt;a href=&quot;https://seunghyum.github.io/VirnectStorybookTest/?path=/story/*&quot;&gt;스토리북 시연&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;설명
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://ant.design/docs/react/introduce&quot;&gt;Ant&lt;/a&gt;, &lt;a href=&quot;https://material.io/components/&quot;&gt;materialize&lt;/a&gt; 같은 사이트처럼 문서 기능(UI 컴포넌트 개발 명세서)&lt;/li&gt;
+      &lt;li&gt;회귀 테스트 가능(ex- 디바이스 크기별 체크가능 / 중국어, 영어등 외국어 일경우 UI 변화도 체크가능 등등)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;목표&quot;&gt;목표&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Page기반 → UI 컴포넌트 기반으로 전환 과정에서 개발 &amp;amp; 디자인 Work flow 개선
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;구조도&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;figure&gt;
+  &lt;a href=&quot;/assets/images/posts/workflow/Workflow__-_Storybook__Verdaccio.png&quot; style=&quot;margin:auto;&quot;&gt;
+    &lt;img src=&quot;/assets/images/posts/workflow/Workflow__-_Storybook__Verdaccio.png&quot; style=&quot;border:none;&quot; /&gt;
+  &lt;/a&gt;
+&lt;/figure&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;구조도 상세 설명&lt;/strong&gt;
+        &lt;ul&gt;
+          &lt;li&gt;프로젝트 중심 → Task 중심&lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;div style=&quot;text-align:center;&quot;&gt;
+  &lt;b&gt;작업과정&lt;/b&gt;
+&lt;/div&gt;
+
+        &lt;figure&gt;
+  &lt;a href=&quot;/assets/images/posts/workflow/work_process.png&quot; style=&quot;margin:auto;&quot;&gt;
+  &lt;img src=&quot;/assets/images/posts/workflow/work_process.png&quot; style=&quot;max-width: 500px; border:none;&quot; /&gt;
+  &lt;/a&gt;
+&lt;/figure&gt;
+        &lt;hr /&gt;
+        &lt;div style=&quot;text-align:center;&quot;&gt;
+  &lt;b&gt;공유 과정&lt;/b&gt;
+&lt;/div&gt;
+
+        &lt;figure&gt;
+  &lt;a href=&quot;/assets/images/posts/workflow/work_process2.png&quot; style=&quot;margin:auto;&quot;&gt;
+  &lt;img src=&quot;/assets/images/posts/workflow/work_process2.png&quot; style=&quot;max-width: 500px; border:none;&quot; /&gt;
+  &lt;/a&gt;
+&lt;/figure&gt;
+      &lt;/li&gt;
+      &lt;li&gt;쓰임세
+        &lt;ul&gt;
+          &lt;li&gt;개발 : 공통 디자인 컴포넌트 관리, UI 컴포넌트 명세서&lt;/li&gt;
+          &lt;li&gt;디자인 : 실제 웹 상에서의 시각 테스트(Storybook)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;h2 id=&quot;장점&quot;&gt;장점&lt;/h2&gt;
+
+    &lt;p&gt;단, 디자인 / 개발 파트의 효용성을 계속 생각하며 &lt;strong&gt;고도화&lt;/strong&gt;해야 함.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;회귀 테스트(모바일, 태블릿, 데스크탑 화면 조정 가능)
+        &lt;ul&gt;
+          &lt;li&gt;함께 쓰면 좋은 크롬 확장프로그램 : chrome toogle device topbar, stylebot, colorpick eyeDroper&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;디자인적인 효용성
+        &lt;ul&gt;
+          &lt;li&gt;실제 웹에선 어떻게 나오는지를 확인할 수 있음. → 하지만 실제 구현 페이지에서는 다르게 보일 수 있음. 결국은 실제 서비스 페이지에서 확인해야함.&lt;/li&gt;
+          &lt;li&gt;해당 UI를 마음대로 값을 조정하여 변수들을 체크해볼 수 있음.&lt;/li&gt;
+          &lt;li&gt;국제화 표준값을 변경해보며 UI 확인이 가능.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;개발적인 효용성
+        &lt;ul&gt;
+          &lt;li&gt;UI 코드 명세서(어떻게 생겼고 어떻게 사용해야하는지)&lt;/li&gt;
+          &lt;li&gt;단위 테스트에 적합(인터렉티브한 UI에 한해서만 해야함.)&lt;/li&gt;
+          &lt;li&gt;프로젝트 중심 → Task 중심으로 조금은 바꿀 수 있음. 스프린트도 가능.&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;figure&gt;
+  &lt;a href=&quot;/assets/images/posts/workflow/Task_.png&quot; style=&quot;margin:auto;&quot;&gt;
+  &lt;img src=&quot;/assets/images/posts/workflow/Task_.png&quot; style=&quot;max-width: 500px; border:none;&quot; /&gt;
+  &lt;/a&gt;
+&lt;/figure&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;위험성&quot;&gt;위험성&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;디자인 파트&lt;/em&gt;&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;제플린같은 디자인 툴을 사용하는 편이 더 나을 때가 많음. 실제 웹에서 어떻게 구현되는가를 컴포넌트별로 체크할때만 효용성이 있음.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;개발 파트&lt;/em&gt;&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;오버 엔지니어링 : 단위테스트가 필요없을 정도로 마이너한 일들은 명세서의 역할만 할 정도로 개발. → &lt;strong&gt;모듈화가 필요할때마다 개발 구성원 모두가 검토하는 프로세스가 필요함&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;개발기한 → 지금은 UI 컴포넌트 개발과 프론트앤드 기능개발을 병렬적으로 해야함.&lt;/li&gt;
+      &lt;li&gt;아래의 그림처럼 운영하는 웹 어플리케이션들에서 막상 공유되는것이 없거나 적을 경&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div style=&quot;width: 49%; display:inline-block; text-algin: center;&quot;&gt;
+  &lt;figure&gt;
+  &lt;a href=&quot;/assets/images/posts/workflow/danger_point.png&quot; style=&quot;margin:auto;&quot;&gt;
+  &lt;img src=&quot;/assets/images/posts/workflow/danger_point.png&quot; style=&quot;height: 85%; border:none;&quot; /&gt;
+  &lt;/a&gt;
+  &lt;/figure&gt;
+  &lt;p&gt;
+    [모듈화 위험 있음]
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;width: 49%; display:inline-block; text-algin: center;&quot;&gt;
+  &lt;figure&gt;
+  &lt;a href=&quot;/assets/images/posts/workflow/design-system-contents.jpg&quot; style=&quot;margin:auto;&quot;&gt;
+  &lt;img src=&quot;/assets/images/posts/workflow/design-system-contents.jpg&quot; style=&quot;border:none;&quot; /&gt;
+  &lt;/a&gt;
+  &lt;/figure&gt;
+  &lt;p&gt;
+    [모듈화 적합]
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;계획&quot;&gt;계획&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;개발 구성원들이 다 바빠서 실제 활용은 내년 예상.&lt;/li&gt;
+  &lt;li&gt;일단 구조부터 만들기. - 승현&lt;/li&gt;
+  &lt;li&gt;xxxx&lt;a href=&quot;http://virnect.github.io&quot;&gt;.github.io&lt;/a&gt; 에 Storybook 배포&lt;/li&gt;
+  &lt;li&gt;디자인에 맞춰서 도입이 필요 없을 경우엔 Skip.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;기능-모듈-공유--verdaccio&quot;&gt;기능 모듈 공유 : Verdaccio&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;기능 모듈 공유 : &lt;a href=&quot;https://github.com/verdaccio/verdaccio&quot;&gt;Verdaccio&lt;/a&gt; (구축형 NPM Private to 개발서버)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure&gt;
+&lt;a href=&quot;/assets/images/posts/workflow/Workflow__-_Storybook__Verdaccio.png&quot; style=&quot;margin:auto;&quot;&gt;
+&lt;img src=&quot;/assets/images/posts/workflow/Workflow__-_Storybook__Verdaccio.png&quot; style=&quot;max-height: 300px; border:none;&quot; /&gt;
+&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;설명&quot;&gt;설명&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;npm install 시에 &lt;a href=&quot;https://registry.npmjs.org/&quot;&gt;https://registry.npmjs.org&lt;/a&gt; 에서 기본적으로 패키지를 가져옴.&lt;/li&gt;
+  &lt;li&gt;이것을 개발 서버에 구축형(Verdaccio)으로 만든다.&lt;/li&gt;
+  &lt;li&gt;UI 컴포넌트, 기능 모듈을 각각 1개씩 레포를 만든다. 각 레포는 Mono 레포의 구조로 모듈들을 관리한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;시연&quot;&gt;시연&lt;/h2&gt;
+
+&lt;h3 id=&quot;ui-컴포넌트-공유&quot;&gt;UI 컴포넌트 공유&lt;/h3&gt;
+
+&lt;figure&gt;
+&lt;a href=&quot;/assets/images/posts/workflow/Verdaccio_Storybook_Case_1.png&quot; style=&quot;margin:auto;&quot;&gt;
+&lt;img src=&quot;/assets/images/posts/workflow/Verdaccio_Storybook_Case_1.png&quot; style=&quot;border:none;&quot; /&gt;
+&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;도입의-장점&quot;&gt;도입의 장점&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;작업 구조의 변화
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;프로젝트 중심&lt;/strong&gt;으로 개발자 개인이 하나씩 맡아서 돌아가는 구조를 &lt;strong&gt;Task 중심&lt;/strong&gt;으로 바꿀 수 있지 않을까. → 코드 퀄리티, 개인의 업무 과중 해소.&lt;/li&gt;
+      &lt;li&gt;ex) A개발자는 프로젝트  a와 b 라는 인풋이 주어질 경우 c라는 결과물만 나오는 기능 작업&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;참고자료&quot;&gt;참고자료&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.zerocho.com/category/NodeJS/post/58285e4840a6d700184ebd87&quot;&gt;NPM 명령어&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;scaffolding-module-개발&quot;&gt;Scaffolding module 개발&lt;/h1&gt;
+
+&lt;h2 id=&quot;도입-이유&quot;&gt;도입 이유&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;SI 작업은 울며 겨자먹기식이나 회사 전체 프로젝트가 SI 작업 때문에 진도가 잘 안나감.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;기능모듈--ui-컴포넌트-모듈과의-차이점&quot;&gt;기능모듈 &amp;amp; UI 컴포넌트 모듈과의 차이점&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;기능모듈과 UI 컴포넌트 모듈을 &lt;strong&gt;포함할수도, 포함하지 않을 수도 있음.&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Scaffold의 목적은 “SI 작업 비용을 최소화하는 코드 템플릿”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure&gt;
+&lt;a href=&quot;/assets/images/posts/workflow/scaffold_modules.png&quot; style=&quot;margin:auto;&quot;&gt;
+&lt;img src=&quot;/assets/images/posts/workflow/scaffold_modules.png&quot; style=&quot;max-width: 500px; border:none;&quot; /&gt;
+&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;scaffolding-module-설명&quot;&gt;Scaffolding Module 설명&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Scaffolding 용어
+    &lt;ul&gt;
+      &lt;li&gt;네이버 어학사전 - (공사장에서 안전을 위해 외부로 설치하는) 뼈대&lt;/li&gt;
+      &lt;li&gt;Stackoverflow - Scaffolding generally refers to a &lt;strong&gt;quickly set up skeleton for an app&lt;/strong&gt;.&lt;/li&gt;
+      &lt;li&gt;다음 검색 - 컴퓨터 용어에서 스캐폴딩은 데이터베이스의 각 테이블에 대한 웹 페이지를 자동으로 생성하는 Dynamic Data 요소를 말합니다. 자동 생성된 웹 페이지를 통해 각 테이블에 대해 만들기, 읽기, 업데이트 및 삭제(CRUD) 작업을 수행할 수 있습니다. 스캐폴딩은 페이지 템플릿, 엔터티 페이지 템플릿, 필드 페이지 템플릿 및 필터 템플릿으로 구성됩니다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Rails의 Scaffolding은 간단한 명령어로 Model, View, Controller등 모든 구성요소(파일구조, 코드)를 알아서 만들어 줌.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure&gt;
+&lt;a href=&quot;/assets/images/posts/workflow/1_1_xbp-fx7Dz7B90Ijlsw6Q.png&quot; style=&quot;margin:auto;&quot;&gt;
+&lt;img src=&quot;/assets/images/posts/workflow/1_1_xbp-fx7Dz7B90Ijlsw6Q.png&quot; style=&quot;border:none;&quot; /&gt;
+&lt;/a&gt;
+&lt;/figure&gt;
+&lt;ul&gt;
+  &lt;li&gt;이처럼 SI 프로젝트에서 공유될만한 것들을 scaffolding Module로 빼서 개발하는 것이 목표.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure&gt;
+&lt;a href=&quot;/assets/images/posts/workflow/scaffold_modules_all.png&quot; style=&quot;margin:auto;&quot;&gt;
+&lt;img src=&quot;/assets/images/posts/workflow/scaffold_modules_all.png&quot; style=&quot;border:none;&quot; /&gt;
+&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;도입-이후-장점&quot;&gt;도입 이후 장점&lt;/h2&gt;
+
+&lt;p&gt;SI 작업에 드는 비용 감소. 작업시간 단축.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;a href=&quot;/assets/images/posts/workflow/scaffold_modules_eff.png&quot; style=&quot;margin:auto;&quot;&gt;
+&lt;img src=&quot;/assets/images/posts/workflow/scaffold_modules_eff.png&quot; style=&quot;max-width: 300px;border:none;&quot; /&gt;
+&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;도입-이후-위험성&quot;&gt;도입 이후 위험성&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;모듈화 작업에 들어가는 폼이 많을 수 있음. → 모듈화 이슈는 서브 챕터에서 공유&lt;/li&gt;
+  &lt;li&gt;모듈에 맞춰서 고객의 요청을 미리 제한할 수 있어야함. ex - 기획, 디자인시 모듈에 맞게끔 유도해야할 수 있음&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Workflow" /><summary type="html">작성 배경 회사의 작업구조를 페이지 중심 개발에서 UI 컴포넌트 중심 개발로 변경하면서 Workflow를 개선할만한 환경을 구성해야했다. 폐쇄망 기반에서 개발자간 UI 명세서 역할을 할 수 있는 Storybook과 그것을 공유할 Verdaccio라는 구축형 NPM Private Registry를 도입하면 좋겠다는 생각에 아래의 내용을 팀에 제안했다. 또한 기존의 프로젝트 중심에서 Task중심으로 업무프로세스를 변화하여 애자일에 적합하게 Workflow를 구성해보았다.</summary></entry><entry><title type="html">[Git] Git Command 정리</title><link href="https://seunghyum.github.io/git/Git-Command/" rel="alternate" type="text/html" title="[Git] Git Command 정리" /><published>2019-11-24T00:00:00+09:00</published><updated>2019-11-24T00:00:00+09:00</updated><id>https://seunghyum.github.io/git/Git-Command</id><content type="html" xml:base="https://seunghyum.github.io/git/Git-Command/">&lt;h2 id=&quot;git-시스템-이해하기&quot;&gt;Git 시스템 이해하기&lt;/h2&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;모든 깃 히스토리는 &lt;code class=&quot;highlighter-rouge&quot;&gt;$ git init&lt;/code&gt;을 한 로컬에서 .git 폴더에서 관리됨. &lt;br /&gt;
@@ -872,108 +1143,4 @@ y : w와 h 중 작은값&lt;/p&gt;
 &lt;h2 id=&quot;설명-1&quot;&gt;설명&lt;/h2&gt;
 
 &lt;p&gt;w == h 일 경우만 대각선에 포함되는 사각형이 하나.&lt;br /&gt;
-나머지의 경우는 대각선의 개수가 x + y - 1 이다. 대각선까지의 개수는 기본이 x의 개수. 추가되는 접점에서의 사각형은 y - 1(맨 마지막 접점의 경우 끝 모서리여서 추가되는 사각형이 없다).&lt;/p&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><summary type="html">문제</summary></entry><entry><title type="html">[CodingTest] 2019-10-26 SQL문제</title><link href="https://seunghyum.github.io/codingtest/SQL/" rel="alternate" type="text/html" title="[CodingTest] 2019-10-26 SQL문제" /><published>2019-10-26T00:00:00+09:00</published><updated>2019-10-26T00:00:00+09:00</updated><id>https://seunghyum.github.io/codingtest/SQL</id><content type="html" xml:base="https://seunghyum.github.io/codingtest/SQL/">&lt;p&gt;공부겸 코딩테스트 사이트에서 토요일 오전 10시에 백엔드 포지션 테스트를 해준다기에 참여해봤다.&lt;br /&gt;
-SQL문제가 나왔는데 더 좋은 답이 있는것 같아 나중에 기록해두고 수정해보기로 한다.&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
-&lt;p&gt;Users 테이블의 ‘rice’, ‘candy’를 모두 구매한 유저를 찾는 쿼리를 만들어라. &lt;br /&gt;
-결과값은 user_id를 내림차순으로 반환해라.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;user_id&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;ancestry&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;rice&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;chocolate&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;candy&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;cake&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;cigar&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;rice&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;candy&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;cake&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;candy&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;cake&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;6&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;candy&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;6&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;candy&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&quot;처음에-짠-쿼리&quot;&gt;처음에 짠 쿼리&lt;/h2&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BUY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NAME&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;USERS&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NAME&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;IN&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'rice'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'candy'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;GROUP&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;BY&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;USER_ID&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;having&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BUY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이렇게 했을시&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;user_id&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;ancestry&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;6&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;candy&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;6&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;candy&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;인 데이터는 걸러내지 못함.&lt;/p&gt;
-
-&lt;h2 id=&quot;수정한-쿼리&quot;&gt;수정한 쿼리&lt;/h2&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;USER_ID&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;DISTINCT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;USER_ID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NAME&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;USERS&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NAME&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;IN&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'rice'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'candy'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;GROUP&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;BY&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;USER_ID&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;having&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NAME&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><summary type="html">공부겸 코딩테스트 사이트에서 토요일 오전 10시에 백엔드 포지션 테스트를 해준다기에 참여해봤다. SQL문제가 나왔는데 더 좋은 답이 있는것 같아 나중에 기록해두고 수정해보기로 한다.</summary></entry></feed>
+나머지의 경우는 대각선의 개수가 x + y - 1 이다. 대각선까지의 개수는 기본이 x의 개수. 추가되는 접점에서의 사각형은 y - 1(맨 마지막 접점의 경우 끝 모서리여서 추가되는 사각형이 없다).&lt;/p&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><summary type="html">문제</summary></entry></feed>
