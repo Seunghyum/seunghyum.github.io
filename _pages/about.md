@@ -96,7 +96,7 @@ gallery_data_lab:
 - 운영체제 : [Ubuntu](#){: .btn .btn--small .btn--info} [Centos](#){: .btn .btn--small .btn--success}
 - 웹서버 : [Nginx](#){: .btn .btn--small .btn--info} [Apache](#){: .btn .btn--small .btn--success}
 - 인프라 : [Docker](#){: .btn .btn--small .btn--info} [AWS(EC2, S3, RDB, Elastic Beanstalk)](#){: .btn .btn--small .btn--info}
-- etc : [Storybook](#){: .btn .btn--small .btn--success} [Vardaccio](#){: .btn .btn--small .btn--success}
+- etc : [Storybook](#){: .btn .btn--small .btn--success}
 - 라이브러리 : [D3.js](#){: .btn .btn--small .btn--info} [Puppeteer](#){: .btn .btn--small .btn--info} [Naver Map API](#){: .btn .btn--small .btn--info} [SGIS MAP API](#){: .btn .btn--small .btn--info}
 - 사용해본 저장소 : Github, GitLab, BitBucket
 
