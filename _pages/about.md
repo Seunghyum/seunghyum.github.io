@@ -129,7 +129,7 @@ gallery_data_lab:
     - DB : MySQL 
     - 웹서버 : Nginx
     - 이미지 저장소 : AWS S3
-    - 배포 : AWS Elastic Beanstalk
+    - infra : AWS Elastic Beanstalk
 
   - ### <서울시금천직장맘지원센터> 금천직장맘 홈페이지 개발
     - 담당업무 : 풀스택 개발
@@ -139,7 +139,7 @@ gallery_data_lab:
     - DB : MySQL 
     - 웹서버 : Nginx
     - 이미지 저장소 : AWS S3
-    - 배포 : AWS ElasticBeanstalk
+    - infra : AWS ElasticBeanstalk
 
   - ### <언론재단> 뉴스트러스트 프로젝트 
     - 담당업무 : 
@@ -151,7 +151,7 @@ gallery_data_lab:
     - 프론트엔드 : Jquery, HTML&CSS
     - DB : MongoDB
     - 웹서버 : Nginx
-    - 배포 : Docker
+    - infra : Docker
     - 시각화 라이브러리 : D3.js
 
   - ### <국립암센터> 암발생 지리정보 서비스
@@ -165,7 +165,7 @@ gallery_data_lab:
     - DB : Oracle
     - OS : Red hat(CentOS 7)
     - 웹서버 : Apache(중앙서버), Nginx(배포서버)
-    - 배포 : Docker
+    - infra : Docker
     - 지도 API : SGIS MAP API
     - PDF 다운로드 : Puppeteer
     - 실시간 미세먼지 데이터 : 공공데이터포털 실시간 미세먼지 API
@@ -198,7 +198,7 @@ gallery_data_lab:
     - 프론트엔드 : Vue.js
     - DB : MongoDB
     - 웹서버 : Nginx
-    - 배포 : Docker
+    - infra : Docker
     - 지도 API : Naver Map API
     - 실시간 미세먼지 데이터 : 공공데이터포털 실시간 미세먼지 API
     - 시각화 라이브러리 : D3.js, Billboard.js, chart.js, chartist.js
