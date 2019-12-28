@@ -1,4 +1,107 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://seunghyum.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://seunghyum.github.io/" rel="alternate" type="text/html" /><updated>2019-12-28T19:32:18+09:00</updated><id>https://seunghyum.github.io/feed.xml</id><title type="html">eveloper Dave</title><subtitle>데이터 시각화에 관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">[Workflow] 프론트엔드 개발조직을 위한 워크플로 설계</title><link href="https://seunghyum.github.io/workflow/Workflow-Design-for-frontend/" rel="alternate" type="text/html" title="[Workflow] 프론트엔드 개발조직을 위한 워크플로 설계" /><published>2019-12-24T00:00:00+09:00</published><updated>2019-12-24T00:00:00+09:00</updated><id>https://seunghyum.github.io/workflow/Workflow-Design-for-frontend</id><content type="html" xml:base="https://seunghyum.github.io/workflow/Workflow-Design-for-frontend/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://seunghyum.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://seunghyum.github.io/" rel="alternate" type="text/html" /><updated>2019-12-28T19:40:39+09:00</updated><id>https://seunghyum.github.io/feed.xml</id><title type="html">eveloper Dave</title><subtitle>데이터 시각화에 관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">[Tutorial] Storybook과 Bit을 활용한 UI 컴포넌트 관리(Workflow)</title><link href="https://seunghyum.github.io/frontend/tutorial/workflow/Storybook-bit-simulation/" rel="alternate" type="text/html" title="[Tutorial] Storybook과 Bit을 활용한 UI 컴포넌트 관리(Workflow)" /><published>2019-12-27T00:00:00+09:00</published><updated>2019-12-27T00:00:00+09:00</updated><id>https://seunghyum.github.io/frontend/tutorial/workflow/Storybook-bit-simulation</id><content type="html" xml:base="https://seunghyum.github.io/frontend/tutorial/workflow/Storybook-bit-simulation/">&lt;p&gt;회사에서 프론트엔드 개발원칙을 SFC(Single File Component)에서 UI 컴포넌트를 기준으로 CDD(Component Driven Development)를 진행하려고 한다.&lt;br /&gt;
+그래서 체계적으로 관리하기위해 &lt;a href=&quot;https://storybook.js.org/&quot;&gt;Storybook&lt;/a&gt;과 &lt;a href=&quot;http://bit.dev/&quot;&gt;Bit&lt;/a&gt;을 도입해보고자 한다.&lt;br /&gt;
+각각의 역할은&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Storybook : UI 컴포넌트 모음 레포, UI 컴포넌트 명세서&lt;/li&gt;
+  &lt;li&gt;Bit : UI 컴포넌트 공유. 개별 컴포넌트 단위 관리(import, export, version) Cloud
+이다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;다시말해 Storybook 은 UI 컴포넌트 단위로 만들어 놓고, Bit은 개별 컴포넌트를 공유하는 클라우드의 역할을 한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;시연해볼-구조&quot;&gt;시연해볼 구조&lt;/h2&gt;
+&lt;figure&gt;
+  &lt;a href=&quot;/assets/images/posts/workflow/workflow_bit.dev.png&quot; style=&quot;margin:auto;&quot;&gt;
+  &lt;img src=&quot;/assets/images/posts/workflow/workflow_bit.dev.png&quot; style=&quot;max-width:600px;&quot; /&gt;
+  &lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;setting--start&quot;&gt;Setting &amp;amp; Start&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ yarn
+$ yarn storybook
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;work-flow-시연&quot;&gt;Work Flow 시연&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;대상 Bit 레포 &lt;a href=&quot;https://bit.dev/seunghyum/virnect-test&quot;&gt;주소&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Export 해볼 레포 &lt;a href=&quot;https://github.com/Seunghyum/virnect-storybook-bit-test&quot;&gt;주소&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Import는 로컬에서&lt;/li&gt;
+  &lt;li&gt;Bit 계정에 로그인하지 않고 CLI만 설치하면 가져다 쓸 수 있음. Bit으로 Export 만 로그인 필요.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;1-storybook-시연&quot;&gt;1. Storybook 시연&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ yarn storybook
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;2-bit-시연&quot;&gt;2. Bit 시연&lt;/h2&gt;
+
+&lt;h3 id=&quot;export-to-bit&quot;&gt;Export to Bit&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Bit의 컬렉션과 컴포넌트 설명 : &lt;a href=&quot;https://bit.dev/seunghyum/virnect-test&quot;&gt;주소&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;로그인&lt;/li&gt;
+  &lt;li&gt;Storybook 레포지토리(여기)에서 Bit cloud로 export할 대상 컴포넌트를 아래의 명령어로 추가
+    &lt;ul&gt;
+      &lt;li&gt;추가시 파일내에서 Import한 것들도 추가해주어야함.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ bit add &amp;lt;Bit에 추가할 대상 컴포넌트 path&amp;gt; --id &amp;lt;컴포넌트 이름 설정&amp;gt;
+
+ // 예시
+ $ bit add ./src/components/Button/Button.vue --id virnect-button
+ $ bit add src/utils/color.js
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;태그 입력
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ bit tag --all 1.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;상태 확인
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ bit status
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;푸시
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ bit export &amp;lt;유저명&amp;gt;.&amp;lt;컬렉션 이름&amp;gt;
+
+ // 예시
+ $ bit export seunghyum.virnect-test
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;import-from-bit&quot;&gt;import from Bit&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;로컬 프로젝트 만들기
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  $ vue create test-storybook-bit
+  $ cd test-storybook-bit
+  $ yarn
+  $ yarn serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Bit에서 필요한 컴포넌트만 가져오기
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ bit import &amp;lt;유저명&amp;gt;.&amp;lt;컬렉션명&amp;gt;/&amp;lt;컴포넌트 이름&amp;gt;
+
+ // 예시
+ $ bit import seunghyum.virnect-test/virnect-button
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;node_modules 파일안의 @bit 폴더에 저장됨.&lt;/li&gt;
+  &lt;li&gt;import 콜렉션이름 from ‘@bit/…‘으로 가져와 쓸 수 있음.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;참고&quot;&gt;참고&lt;/h2&gt;
+
+&lt;p&gt;UI 컴포넌트 참고 사이트 : https://bit.dev/lusaxweb&lt;/p&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Frontend" /><category term="Tutorial" /><category term="Workflow" /><summary type="html">회사에서 프론트엔드 개발원칙을 SFC(Single File Component)에서 UI 컴포넌트를 기준으로 CDD(Component Driven Development)를 진행하려고 한다. 그래서 체계적으로 관리하기위해 Storybook과 Bit을 도입해보고자 한다. 각각의 역할은 Storybook : UI 컴포넌트 모음 레포, UI 컴포넌트 명세서 Bit : UI 컴포넌트 공유. 개별 컴포넌트 단위 관리(import, export, version) Cloud 이다.</summary></entry><entry><title type="html">[Workflow] 프론트엔드 개발조직을 위한 워크플로 설계</title><link href="https://seunghyum.github.io/workflow/Workflow-Design-for-frontend/" rel="alternate" type="text/html" title="[Workflow] 프론트엔드 개발조직을 위한 워크플로 설계" /><published>2019-12-24T00:00:00+09:00</published><updated>2019-12-24T00:00:00+09:00</updated><id>https://seunghyum.github.io/workflow/Workflow-Design-for-frontend</id><content type="html" xml:base="https://seunghyum.github.io/workflow/Workflow-Design-for-frontend/">&lt;blockquote&gt;
   &lt;h2 id=&quot;작성-배경&quot;&gt;작성 배경&lt;/h2&gt;
 
   &lt;p&gt;회사의 작업구조를 &lt;strong&gt;페이지 중심 개발&lt;/strong&gt;에서 &lt;strong&gt;UI 컴포넌트 중심 개발&lt;/strong&gt;로 변경하면서 Workflow를 개선할만한 환경을 구성해야했다.&lt;br /&gt;
@@ -449,110 +552,7 @@ Stash : add 하기 전의 변경사항들을 대상으로 함.&lt;/p&gt;
   &lt;li&gt;git fetch : 원격 저장소의 데이터를 로컬에 가져오기만 하기.&lt;/li&gt;
   &lt;li&gt;git pull : &lt;code class=&quot;highlighter-rouge&quot;&gt;git fetch&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;git merge&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;git stash : tracking(이미 커밋한 파일들)중인 파일들의 변경사항들을 임시 저장할 수 있음.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Git Command" /><summary type="html">Git 시스템 이해하기</summary></entry><entry><title type="html">[Tutorial] Storybook과 Bit을 활용한 UI 컴포넌트 관리(Workflow)</title><link href="https://seunghyum.github.io/frontend/tutorial/workflow/Storybook-bit-simulation/" rel="alternate" type="text/html" title="[Tutorial] Storybook과 Bit을 활용한 UI 컴포넌트 관리(Workflow)" /><published>2019-11-15T00:00:00+09:00</published><updated>2019-11-15T00:00:00+09:00</updated><id>https://seunghyum.github.io/frontend/tutorial/workflow/Storybook-bit-simulation</id><content type="html" xml:base="https://seunghyum.github.io/frontend/tutorial/workflow/Storybook-bit-simulation/">&lt;p&gt;회사에서 프론트엔드 개발원칙을 SFC(Single File Component)에서 UI 컴포넌트를 기준으로 CDD(Component Driven Development)를 진행하려고 한다.&lt;br /&gt;
-그래서 체계적으로 관리하기위해 &lt;a href=&quot;https://storybook.js.org/&quot;&gt;Storybook&lt;/a&gt;과 &lt;a href=&quot;http://bit.dev/&quot;&gt;Bit&lt;/a&gt;을 도입해보고자 한다.&lt;br /&gt;
-각각의 역할은&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Storybook : UI 컴포넌트 모음 레포, UI 컴포넌트 명세서&lt;/li&gt;
-  &lt;li&gt;Bit : UI 컴포넌트 공유. 개별 컴포넌트 단위 관리(import, export, version) Cloud
-이다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;다시말해 Storybook 은 UI 컴포넌트 단위로 만들어 놓고, Bit은 개별 컴포넌트를 공유하는 클라우드의 역할을 한다.&lt;/p&gt;
-
-&lt;h2 id=&quot;시연해볼-구조&quot;&gt;시연해볼 구조&lt;/h2&gt;
-&lt;figure&gt;
-  &lt;a href=&quot;/assets/images/posts/workflow/workflow_bit.dev.png&quot; style=&quot;margin:auto;&quot;&gt;
-  &lt;img src=&quot;/assets/images/posts/workflow/workflow_bit.dev.png&quot; style=&quot;max-width:600px;&quot; /&gt;
-  &lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;h2 id=&quot;setting--start&quot;&gt;Setting &amp;amp; Start&lt;/h2&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ yarn
-$ yarn storybook
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;work-flow-시연&quot;&gt;Work Flow 시연&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;대상 Bit 레포 &lt;a href=&quot;https://bit.dev/seunghyum/virnect-test&quot;&gt;주소&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Export 해볼 레포 &lt;a href=&quot;https://github.com/Seunghyum/virnect-storybook-bit-test&quot;&gt;주소&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Import는 로컬에서&lt;/li&gt;
-  &lt;li&gt;Bit 계정에 로그인하지 않고 CLI만 설치하면 가져다 쓸 수 있음. Bit으로 Export 만 로그인 필요.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;1-storybook-시연&quot;&gt;1. Storybook 시연&lt;/h2&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ yarn storybook
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;2-bit-시연&quot;&gt;2. Bit 시연&lt;/h2&gt;
-
-&lt;h3 id=&quot;export-to-bit&quot;&gt;Export to Bit&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Bit의 컬렉션과 컴포넌트 설명 : &lt;a href=&quot;https://bit.dev/seunghyum/virnect-test&quot;&gt;주소&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;로그인&lt;/li&gt;
-  &lt;li&gt;Storybook 레포지토리(여기)에서 Bit cloud로 export할 대상 컴포넌트를 아래의 명령어로 추가
-    &lt;ul&gt;
-      &lt;li&gt;추가시 파일내에서 Import한 것들도 추가해주어야함.&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ bit add &amp;lt;Bit에 추가할 대상 컴포넌트 path&amp;gt; --id &amp;lt;컴포넌트 이름 설정&amp;gt;
-
- // 예시
- $ bit add ./src/components/Button/Button.vue --id virnect-button
- $ bit add src/utils/color.js
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;태그 입력
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ bit tag --all 1.0.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;상태 확인
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ bit status
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;푸시
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ bit export &amp;lt;유저명&amp;gt;.&amp;lt;컬렉션 이름&amp;gt;
-
- // 예시
- $ bit export seunghyum.virnect-test
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;import-from-bit&quot;&gt;import from Bit&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;로컬 프로젝트 만들기
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  $ vue create test-storybook-bit
-  $ cd test-storybook-bit
-  $ yarn
-  $ yarn serve
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Bit에서 필요한 컴포넌트만 가져오기
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ bit import &amp;lt;유저명&amp;gt;.&amp;lt;컬렉션명&amp;gt;/&amp;lt;컴포넌트 이름&amp;gt;
-
- // 예시
- $ bit import seunghyum.virnect-test/virnect-button
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;node_modules 파일안의 @bit 폴더에 저장됨.&lt;/li&gt;
-  &lt;li&gt;import 콜렉션이름 from ‘@bit/…‘으로 가져와 쓸 수 있음.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;참고&quot;&gt;참고&lt;/h2&gt;
-
-&lt;p&gt;UI 컴포넌트 참고 사이트 : https://bit.dev/lusaxweb&lt;/p&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Frontend" /><category term="Tutorial" /><category term="Workflow" /><summary type="html">회사에서 프론트엔드 개발원칙을 SFC(Single File Component)에서 UI 컴포넌트를 기준으로 CDD(Component Driven Development)를 진행하려고 한다. 그래서 체계적으로 관리하기위해 Storybook과 Bit을 도입해보고자 한다. 각각의 역할은 Storybook : UI 컴포넌트 모음 레포, UI 컴포넌트 명세서 Bit : UI 컴포넌트 공유. 개별 컴포넌트 단위 관리(import, export, version) Cloud 이다.</summary></entry><entry><title type="html">[Design Pattern] Monorepo 공부</title><link href="https://seunghyum.github.io/design%20pattern/Monorepo/" rel="alternate" type="text/html" title="[Design Pattern] Monorepo 공부" /><published>2019-11-10T00:00:00+09:00</published><updated>2019-11-10T00:00:00+09:00</updated><id>https://seunghyum.github.io/design%20pattern/Monorepo</id><content type="html" xml:base="https://seunghyum.github.io/design%20pattern/Monorepo/">&lt;h2 id=&quot;결론&quot;&gt;결론&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Git Command" /><summary type="html">Git 시스템 이해하기</summary></entry><entry><title type="html">[Design Pattern] Monorepo 공부</title><link href="https://seunghyum.github.io/design%20pattern/Monorepo/" rel="alternate" type="text/html" title="[Design Pattern] Monorepo 공부" /><published>2019-11-10T00:00:00+09:00</published><updated>2019-11-10T00:00:00+09:00</updated><id>https://seunghyum.github.io/design%20pattern/Monorepo</id><content type="html" xml:base="https://seunghyum.github.io/design%20pattern/Monorepo/">&lt;h2 id=&quot;결론&quot;&gt;결론&lt;/h2&gt;
 
 &lt;p&gt;결론부터 적자면 Monorepo는 아래의 경우에 써야할 것 같다.&lt;/p&gt;
 
