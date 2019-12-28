@@ -6,8 +6,8 @@ tags: [Frontend, Tutorial, Workflow]
 comments: true
 
 gallery_1:
-  - url: /assets/images/posts/Storybook__Bit.dev.png
-    image_path: /assets/images/posts/Storybook__Bit.dev.png
+  - url: /assets/images/posts/workflow/workflow_bit.dev.png
+    image_path: /assets/images/posts/workflow/workflow_bit.dev.png
 ---
 
 회사에서 프론트엔드 개발원칙을 SFC(Single File Component)에서 UI 컴포넌트를 기준으로 CDD(Component Driven Development)를 진행하려고 한다.<br>
@@ -20,8 +20,11 @@ gallery_1:
 다시말해 Storybook 은 UI 컴포넌트 단위로 만들어 놓고, Bit은 개별 컴포넌트를 공유하는 클라우드의 역할을 한다.
 
 ## 시연해볼 구조
-
-{% include gallery id="gallery_1"%}
+<figure>
+  <a href="/assets/images/posts/workflow/workflow_bit.dev.png" style="margin:auto;">
+  <img src="/assets/images/posts/workflow/workflow_bit.dev.png" style="max-width:600px;">
+  </a>
+</figure>
 
 ## Setting & Start
 
