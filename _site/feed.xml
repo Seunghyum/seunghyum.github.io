@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://seunghyum.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://seunghyum.github.io/" rel="alternate" type="text/html" /><updated>2019-12-28T19:40:39+09:00</updated><id>https://seunghyum.github.io/feed.xml</id><title type="html">eveloper Dave</title><subtitle>데이터 시각화에 관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">[Tutorial] Storybook과 Bit을 활용한 UI 컴포넌트 관리(Workflow)</title><link href="https://seunghyum.github.io/frontend/tutorial/workflow/Storybook-bit-simulation/" rel="alternate" type="text/html" title="[Tutorial] Storybook과 Bit을 활용한 UI 컴포넌트 관리(Workflow)" /><published>2019-12-27T00:00:00+09:00</published><updated>2019-12-27T00:00:00+09:00</updated><id>https://seunghyum.github.io/frontend/tutorial/workflow/Storybook-bit-simulation</id><content type="html" xml:base="https://seunghyum.github.io/frontend/tutorial/workflow/Storybook-bit-simulation/">&lt;p&gt;회사에서 프론트엔드 개발원칙을 SFC(Single File Component)에서 UI 컴포넌트를 기준으로 CDD(Component Driven Development)를 진행하려고 한다.&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://seunghyum.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://seunghyum.github.io/" rel="alternate" type="text/html" /><updated>2019-12-28T20:06:45+09:00</updated><id>https://seunghyum.github.io/feed.xml</id><title type="html">eveloper Dave</title><subtitle>데이터 시각화에 관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">[Tutorial] Storybook과 Bit을 활용한 UI 컴포넌트 관리(Workflow)</title><link href="https://seunghyum.github.io/frontend/tutorial/workflow/Storybook-bit-simulation/" rel="alternate" type="text/html" title="[Tutorial] Storybook과 Bit을 활용한 UI 컴포넌트 관리(Workflow)" /><published>2019-12-27T00:00:00+09:00</published><updated>2019-12-27T00:00:00+09:00</updated><id>https://seunghyum.github.io/frontend/tutorial/workflow/Storybook-bit-simulation</id><content type="html" xml:base="https://seunghyum.github.io/frontend/tutorial/workflow/Storybook-bit-simulation/">&lt;p&gt;회사에서 프론트엔드 개발원칙을 SFC(Single File Component)에서 UI 컴포넌트를 기준으로 CDD(Component Driven Development)를 진행하려고 한다.&lt;br /&gt;
 그래서 체계적으로 관리하기위해 &lt;a href=&quot;https://storybook.js.org/&quot;&gt;Storybook&lt;/a&gt;과 &lt;a href=&quot;http://bit.dev/&quot;&gt;Bit&lt;/a&gt;을 도입해보고자 한다.&lt;br /&gt;
 각각의 역할은&lt;/p&gt;
 &lt;ul&gt;
@@ -101,7 +101,68 @@ $ yarn storybook
 
 &lt;h2 id=&quot;참고&quot;&gt;참고&lt;/h2&gt;
 
-&lt;p&gt;UI 컴포넌트 참고 사이트 : https://bit.dev/lusaxweb&lt;/p&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Frontend" /><category term="Tutorial" /><category term="Workflow" /><summary type="html">회사에서 프론트엔드 개발원칙을 SFC(Single File Component)에서 UI 컴포넌트를 기준으로 CDD(Component Driven Development)를 진행하려고 한다. 그래서 체계적으로 관리하기위해 Storybook과 Bit을 도입해보고자 한다. 각각의 역할은 Storybook : UI 컴포넌트 모음 레포, UI 컴포넌트 명세서 Bit : UI 컴포넌트 공유. 개별 컴포넌트 단위 관리(import, export, version) Cloud 이다.</summary></entry><entry><title type="html">[Workflow] 프론트엔드 개발조직을 위한 워크플로 설계</title><link href="https://seunghyum.github.io/workflow/Workflow-Design-for-frontend/" rel="alternate" type="text/html" title="[Workflow] 프론트엔드 개발조직을 위한 워크플로 설계" /><published>2019-12-24T00:00:00+09:00</published><updated>2019-12-24T00:00:00+09:00</updated><id>https://seunghyum.github.io/workflow/Workflow-Design-for-frontend</id><content type="html" xml:base="https://seunghyum.github.io/workflow/Workflow-Design-for-frontend/">&lt;blockquote&gt;
+&lt;p&gt;UI 컴포넌트 참고 사이트 : https://bit.dev/lusaxweb&lt;/p&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Frontend" /><category term="Tutorial" /><category term="Workflow" /><summary type="html">회사에서 프론트엔드 개발원칙을 SFC(Single File Component)에서 UI 컴포넌트를 기준으로 CDD(Component Driven Development)를 진행하려고 한다. 그래서 체계적으로 관리하기위해 Storybook과 Bit을 도입해보고자 한다. 각각의 역할은 Storybook : UI 컴포넌트 모음 레포, UI 컴포넌트 명세서 Bit : UI 컴포넌트 공유. 개별 컴포넌트 단위 관리(import, export, version) Cloud 이다.</summary></entry><entry><title type="html">[Scaffold] Scaffold Module 개발</title><link href="https://seunghyum.github.io/scaffold/Scafflod-Modules/" rel="alternate" type="text/html" title="[Scaffold] Scaffold Module 개발" /><published>2019-12-27T00:00:00+09:00</published><updated>2019-12-27T00:00:00+09:00</updated><id>https://seunghyum.github.io/scaffold/Scafflod-Modules</id><content type="html" xml:base="https://seunghyum.github.io/scaffold/Scafflod-Modules/">&lt;h2 id=&quot;도입-이유&quot;&gt;도입 이유&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;SI 작업은 울며 겨자먹기식이나 회사 전체 프로젝트가 SI 작업 때문에 진도가 잘 안나감.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;scaffolding-module-설명&quot;&gt;Scaffolding Module 설명&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Scaffolding 용어
+    &lt;ul&gt;
+      &lt;li&gt;네이버 어학사전 - (공사장에서 안전을 위해 외부로 설치하는) 뼈대&lt;/li&gt;
+      &lt;li&gt;Stackoverflow - Scaffolding generally refers to a &lt;strong&gt;quickly set up skeleton for an app&lt;/strong&gt;.&lt;/li&gt;
+      &lt;li&gt;다음 검색 - 컴퓨터 용어에서 스캐폴딩은 데이터베이스의 각 테이블에 대한 웹 페이지를 자동으로 생성하는 Dynamic Data 요소를 말합니다. 자동 생성된 웹 페이지를 통해 각 테이블에 대해 만들기, 읽기, 업데이트 및 삭제(CRUD) 작업을 수행할 수 있습니다. 스캐폴딩은 페이지 템플릿, 엔터티 페이지 템플릿, 필드 페이지 템플릿 및 필터 템플릿으로 구성됩니다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Rails의 Scaffolding은 간단한 명령어로 Model, View, Controller등 모든 구성요소(파일구조, 코드)를 알아서 만들어 줌.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure&gt;
+&lt;a href=&quot;/assets/images/posts/workflow/1_1_xbp-fx7Dz7B90Ijlsw6Q.png&quot; style=&quot;margin:auto;&quot;&gt;
+&lt;img src=&quot;/assets/images/posts/workflow/1_1_xbp-fx7Dz7B90Ijlsw6Q.png&quot; style=&quot;border:none;&quot; /&gt;
+&lt;/a&gt;
+&lt;/figure&gt;
+&lt;ul&gt;
+  &lt;li&gt;이처럼 SI 프로젝트에서 공유될만한 것들을 scaffolding Module로 빼서 개발하는 것이 목표.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;기능모듈--ui-컴포넌트-모듈과의-차이점&quot;&gt;기능모듈 &amp;amp; UI 컴포넌트 모듈과의 차이점&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;프로젝트마다 기능모듈과 UI 컴포넌트 모듈을 &lt;strong&gt;포함할수도, 포함하지 않을 수도 있음.&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Scaffold의 목적은 “SI 작업 비용을 최소화하는 코드 템플릿”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure&gt;
+&lt;a href=&quot;/assets/images/posts/workflow/scaffold_modules.png&quot; style=&quot;margin:auto;&quot;&gt;
+&lt;img src=&quot;/assets/images/posts/workflow/scaffold_modules.png&quot; style=&quot;max-width: 500px; border:none;&quot; /&gt;
+&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+&lt;a href=&quot;/assets/images/posts/workflow/scaffold_modules_all.png&quot; style=&quot;margin:auto;&quot;&gt;
+&lt;img src=&quot;/assets/images/posts/workflow/scaffold_modules_all.png&quot; style=&quot;border:none;&quot; /&gt;
+&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;도입-이후-장점&quot;&gt;도입 이후 장점&lt;/h2&gt;
+
+&lt;p&gt;SI 작업에 드는 비용 감소. 작업시간 단축.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;a href=&quot;/assets/images/posts/workflow/scaffold_modules_eff.png&quot; style=&quot;margin:auto;&quot;&gt;
+&lt;img src=&quot;/assets/images/posts/workflow/scaffold_modules_eff.png&quot; style=&quot;max-width: 300px;border:none;&quot; /&gt;
+&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;도입-이후-위험성&quot;&gt;도입 이후 위험성&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;모듈화 작업에 들어가는 폼이 많을 수 있음. → 모듈화 이슈는 서브 챕터에서 공유&lt;/li&gt;
+  &lt;li&gt;모듈에 맞춰서 고객의 요청을 미리 제한할 수 있어야함. ex - 기획, 디자인시 모듈에 맞게끔 유도해야할 수 있음&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Scaffold" /><summary type="html">도입 이유</summary></entry><entry><title type="html">[Workflow] 프론트엔드 개발조직을 위한 워크플로 설계</title><link href="https://seunghyum.github.io/workflow/Workflow-Design-for-frontend/" rel="alternate" type="text/html" title="[Workflow] 프론트엔드 개발조직을 위한 워크플로 설계" /><published>2019-12-24T00:00:00+09:00</published><updated>2019-12-24T00:00:00+09:00</updated><id>https://seunghyum.github.io/workflow/Workflow-Design-for-frontend</id><content type="html" xml:base="https://seunghyum.github.io/workflow/Workflow-Design-for-frontend/">&lt;blockquote&gt;
   &lt;h2 id=&quot;작성-배경&quot;&gt;작성 배경&lt;/h2&gt;
 
   &lt;p&gt;회사의 작업구조를 &lt;strong&gt;페이지 중심 개발&lt;/strong&gt;에서 &lt;strong&gt;UI 컴포넌트 중심 개발&lt;/strong&gt;로 변경하면서 Workflow를 개선할만한 환경을 구성해야했다.&lt;br /&gt;
@@ -306,72 +367,6 @@ $ yarn storybook
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.zerocho.com/category/NodeJS/post/58285e4840a6d700184ebd87&quot;&gt;NPM 명령어&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;scaffolding-module-개발&quot;&gt;Scaffolding module 개발&lt;/h1&gt;
-
-&lt;h2 id=&quot;도입-이유&quot;&gt;도입 이유&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;SI 작업은 울며 겨자먹기식이나 회사 전체 프로젝트가 SI 작업 때문에 진도가 잘 안나감.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;기능모듈--ui-컴포넌트-모듈과의-차이점&quot;&gt;기능모듈 &amp;amp; UI 컴포넌트 모듈과의 차이점&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;기능모듈과 UI 컴포넌트 모듈을 &lt;strong&gt;포함할수도, 포함하지 않을 수도 있음.&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Scaffold의 목적은 “SI 작업 비용을 최소화하는 코드 템플릿”&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure&gt;
-&lt;a href=&quot;/assets/images/posts/workflow/scaffold_modules.png&quot; style=&quot;margin:auto;&quot;&gt;
-&lt;img src=&quot;/assets/images/posts/workflow/scaffold_modules.png&quot; style=&quot;max-width: 500px; border:none;&quot; /&gt;
-&lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;h2 id=&quot;scaffolding-module-설명&quot;&gt;Scaffolding Module 설명&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Scaffolding 용어
-    &lt;ul&gt;
-      &lt;li&gt;네이버 어학사전 - (공사장에서 안전을 위해 외부로 설치하는) 뼈대&lt;/li&gt;
-      &lt;li&gt;Stackoverflow - Scaffolding generally refers to a &lt;strong&gt;quickly set up skeleton for an app&lt;/strong&gt;.&lt;/li&gt;
-      &lt;li&gt;다음 검색 - 컴퓨터 용어에서 스캐폴딩은 데이터베이스의 각 테이블에 대한 웹 페이지를 자동으로 생성하는 Dynamic Data 요소를 말합니다. 자동 생성된 웹 페이지를 통해 각 테이블에 대해 만들기, 읽기, 업데이트 및 삭제(CRUD) 작업을 수행할 수 있습니다. 스캐폴딩은 페이지 템플릿, 엔터티 페이지 템플릿, 필드 페이지 템플릿 및 필터 템플릿으로 구성됩니다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Rails의 Scaffolding은 간단한 명령어로 Model, View, Controller등 모든 구성요소(파일구조, 코드)를 알아서 만들어 줌.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure&gt;
-&lt;a href=&quot;/assets/images/posts/workflow/1_1_xbp-fx7Dz7B90Ijlsw6Q.png&quot; style=&quot;margin:auto;&quot;&gt;
-&lt;img src=&quot;/assets/images/posts/workflow/1_1_xbp-fx7Dz7B90Ijlsw6Q.png&quot; style=&quot;border:none;&quot; /&gt;
-&lt;/a&gt;
-&lt;/figure&gt;
-&lt;ul&gt;
-  &lt;li&gt;이처럼 SI 프로젝트에서 공유될만한 것들을 scaffolding Module로 빼서 개발하는 것이 목표.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure&gt;
-&lt;a href=&quot;/assets/images/posts/workflow/scaffold_modules_all.png&quot; style=&quot;margin:auto;&quot;&gt;
-&lt;img src=&quot;/assets/images/posts/workflow/scaffold_modules_all.png&quot; style=&quot;border:none;&quot; /&gt;
-&lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;h2 id=&quot;도입-이후-장점&quot;&gt;도입 이후 장점&lt;/h2&gt;
-
-&lt;p&gt;SI 작업에 드는 비용 감소. 작업시간 단축.&lt;/p&gt;
-
-&lt;figure&gt;
-&lt;a href=&quot;/assets/images/posts/workflow/scaffold_modules_eff.png&quot; style=&quot;margin:auto;&quot;&gt;
-&lt;img src=&quot;/assets/images/posts/workflow/scaffold_modules_eff.png&quot; style=&quot;max-width: 300px;border:none;&quot; /&gt;
-&lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;h2 id=&quot;도입-이후-위험성&quot;&gt;도입 이후 위험성&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;모듈화 작업에 들어가는 폼이 많을 수 있음. → 모듈화 이슈는 서브 챕터에서 공유&lt;/li&gt;
-  &lt;li&gt;모듈에 맞춰서 고객의 요청을 미리 제한할 수 있어야함. ex - 기획, 디자인시 모듈에 맞게끔 유도해야할 수 있음&lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Workflow" /><summary type="html">작성 배경 회사의 작업구조를 페이지 중심 개발에서 UI 컴포넌트 중심 개발로 변경하면서 Workflow를 개선할만한 환경을 구성해야했다. 폐쇄망 기반에서 개발자간 UI 명세서 역할을 할 수 있는 Storybook과 그것을 공유할 Verdaccio라는 구축형 NPM Private Registry를 도입하면 좋겠다는 생각에 아래의 내용을 팀에 제안했다. 또한 기존의 프로젝트 중심에서 Task중심으로 업무프로세스를 변화하여 애자일에 적합하게 Workflow를 구성해보았다.</summary></entry><entry><title type="html">[Git] Git Command 정리</title><link href="https://seunghyum.github.io/git/Git-Command/" rel="alternate" type="text/html" title="[Git] Git Command 정리" /><published>2019-11-24T00:00:00+09:00</published><updated>2019-11-24T00:00:00+09:00</updated><id>https://seunghyum.github.io/git/Git-Command</id><content type="html" xml:base="https://seunghyum.github.io/git/Git-Command/">&lt;h2 id=&quot;git-시스템-이해하기&quot;&gt;Git 시스템 이해하기&lt;/h2&gt;
 
 &lt;blockquote&gt;
@@ -1100,89 +1095,4 @@ Prisma Client 덕분에, 리졸버 구현은 대부분의 경우 한두 줄로 �
     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><category term="Combination" /><summary type="html">문제</summary></entry><entry><title type="html">[ESlint &amp;amp; Prettier] 개발 관습 설정 in Visual Studio</title><link href="https://seunghyum.github.io/code%20config/Eslint-Prettier/" rel="alternate" type="text/html" title="[ESlint &amp; Prettier] 개발 관습 설정 in Visual Studio" /><published>2019-10-31T00:00:00+09:00</published><updated>2019-10-31T00:00:00+09:00</updated><id>https://seunghyum.github.io/code%20config/Eslint-Prettier</id><content type="html" xml:base="https://seunghyum.github.io/code%20config/Eslint-Prettier/">&lt;p&gt;회사 프로젝트를 작업하기 전 프론트엔드 개발자들 간의 코드 규칙을 Eslint와 Prettier 설정을 맞춰 관리해가는 방향을 정했다.&lt;br /&gt;
-아직 협업을 할 경우는 없지만 미래에 인수인계 받거나 협업을 진행할 경우 코드관습이 달라 고생할 경우를 대비하기로 했다.&lt;br /&gt;&lt;br /&gt;
-설정은 작업을 진행하며 수정할 계획이다.&lt;/p&gt;
-
-&lt;p&gt;핵심은 저장할때마다 Eslint기준에 맞게 prettier 패키지가 코드를 수정하게 하는 것이다.&lt;/p&gt;
-
-&lt;h2 id=&quot;eslint-설정&quot;&gt;ESlint 설정&lt;/h2&gt;
-
-&lt;p&gt;ESlint 설정을 위한 패키지 다운로드&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;npm i eslint eslint-config-prettier eslint-plugin-prettier eslint-plugin-vue &lt;span class=&quot;nt&quot;&gt;--save-dev&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;프로젝트 루트에 있는 .eslintrc.json 파일 설정&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;// 현재 eslintrc 파일을 기준으로 ESLint 규칙을 적용&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;// 추가적인 규칙들을 적용&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;extends&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-    &lt;span class=&quot;s1&quot;&gt;'eslint:recommended'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;s1&quot;&gt;'plugin:vue/essential'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;s1&quot;&gt;'prettier'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;s1&quot;&gt;'plugin:prettier/recommended'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;// 코드 정리 플러그인 추가&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'prettier'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;// 사용자 편의 규칙 추가&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;rules&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;s1&quot;&gt;'prettier/prettier'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-      &lt;span class=&quot;s1&quot;&gt;'error'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;c1&quot;&gt;// 아래 규칙들은 개인 선호에 따라 prettier 문법 적용&lt;/span&gt;
-      &lt;span class=&quot;c1&quot;&gt;// https://prettier.io/docs/en/options.html&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;singleQuote&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;semi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;useTabs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;tabWidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;endOfLine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'auto'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;trailingComma&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'all'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;printWidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;bracketSpacing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;arrowParens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'avoid'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-    &lt;span class=&quot;s1&quot;&gt;'no-console'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;NODE_ENV&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'production'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'error'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'off'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;visual-studio-설정&quot;&gt;Visual Studio 설정&lt;/h2&gt;
-
-&lt;p&gt;Window : ctr + shift + p &lt;br /&gt;
-Mac : cmd + shift + p &lt;br /&gt;
-settings.json 파일 검색 후 설정&lt;/p&gt;
-
-&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;....&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;editor.tabSize&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;eslint.autoFixOnSave&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;저장할때마다&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;js&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;코드&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;자동&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;수정&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;eslint.alwaysShowStatus&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;eslint.validate&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;language&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;vue&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;autoFix&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;language&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;javascript&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;autoFix&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;language&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;javascriptreact&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;autoFix&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;tslint.autoFixOnSave&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;저장할때마다&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;typescript&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;코드&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;자동&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;수정&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;markdownlint.run&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;onSave&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;참고&quot;&gt;참고&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://gwonsungjun.github.io/articles/2018-06/vscodeSetting&quot;&gt;VSCode 환경 설정 및 기초 사용법&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://joshua1988.github.io/web-development/vuejs/boost-productivity/&quot;&gt;Vue.js 개발 생산성을 높여주는 도구 3가지&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="ESlint" /><category term="Prettier" /><category term="Visual Studio" /><summary type="html">회사 프로젝트를 작업하기 전 프론트엔드 개발자들 간의 코드 규칙을 Eslint와 Prettier 설정을 맞춰 관리해가는 방향을 정했다. 아직 협업을 할 경우는 없지만 미래에 인수인계 받거나 협업을 진행할 경우 코드관습이 달라 고생할 경우를 대비하기로 했다. 설정은 작업을 진행하며 수정할 계획이다.</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><category term="Combination" /><summary type="html">문제</summary></entry></feed>
