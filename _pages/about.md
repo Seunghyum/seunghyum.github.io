@@ -323,6 +323,12 @@ gallery_data_lab:
     - 본인이 공헌한 점 : 풀스택 개발.
     - 사용한 Skill 또는 지식 : Shiny App(R), HTML&CSS, jQuery, D3.js, SQLite, AWS EC2, Docker, Bitbucket
 
+  - ### Shapefile to Geojson
+    - SGIS에서 받은 지도데이터(.shp)를 웹에서 표현가능한 geojson, topojson으로 변경하는 작업 내용 방식 정리
+    - 진행기간 : 2018년
+      - 깃헙 주소 : [https://github.com/Seunghyum/SGIS-shpToGeojson](https://github.com/Seunghyum/SGIS-shpToGeojson)
+    - 사용한 Skill : topojson, geojson, shpfile, sgis, ogr2ogr, geo2topo
+
   - ### 단쿠키(단국대 커뮤니티)
     - 서비스 주소 : [https://www.dankookie.com](https://www.dankookie.com)
     - 운영중인 서비스
@@ -351,10 +357,17 @@ gallery_data_lab:
     - 진행기간 : 2019년~(진행중)
     - 주요내용 : 공공데이터를 활용하여 이전에 활용했던 기술들을 아카이빙.
     - 본인이 공헌한 점 : 풀스택
-    - 사용한 Skill : Vue.js, D3.js, GeoJson, Image Sprite
+    - 사용한 Skill : D3.js, GeoJson, Image Sprite
     - 깃헙 주소 : [https://github.com/Seunghyum/data-visualization](https://github.com/Seunghyum/data-visualization)
 
 {% include gallery id="gallery_data_lab" %}
+
+  - ### 블로그 이력서 PDF 출력
+    - 생계형 프로젝트
+    - 진행기간 : 2019년 9월
+    - 주요내용 : 블로그에 적은 이력서를 원페이지 PDF 파일로 출력. puppeteer로 출력시 PDF파일이 10mb가 넘어 compressing을 위해 Ghostscript를 도입.
+    - 사용한 라이브러리 : Puppeteer, Ghostscript
+    - 깃헙 주소 : [https://github.com/Seunghyum/onePagePDFDownload-Puppeteer-Ghostscript](https://github.com/Seunghyum/onePagePDFDownload-Puppeteer-Ghostscript)
 
 ## 외부 활동
 - 멋쟁이 사자처럼 4기 중앙운영진
