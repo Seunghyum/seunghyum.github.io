@@ -113,16 +113,23 @@ gallery_data_lab:
 
 # 경력
 
-- **[Slowalk](https://www.slowalk.co.kr/)** 개발자 근무 2016/06 ~ 2019/4 퇴사
-- **[Virnect](https://virnect.com/)** 개발자 근무 2019/10 ~
+<ul>
+  <li>
+    <a href="https://www.slowalk.co.kr/"><span class="big-tag">Slowalk</span></a> 풀스택 개발자 근무 2016/06 ~ 2019/4 퇴사
+  </li>
+  <li>
+    <a href="https://virnect.com/"><span class="big-tag purple">Virnect&nbsp;</span></a> 웹 클라이언트 개발자 근무 2019/10 ~
+  </li>
+</ul>
 
-<hr>
+<br>
 
 # 담당 프로젝트 & 업무
   
-## in Slowalk
+<h2>in Slowalk <span class="big-tag">Slowalk</span></h2>
 
-  - ### <한국백혈병어린이재단> 희망별빛 캠페인 원페이지 제작
+  <!-- - ### <한국백혈병어린이재단> 희망별빛 캠페인 원페이지 제작  -->
+  - <h3> [한국백혈병어린이재단] 희망별빛 캠페인 원페이지 제작 <span class="big-tag">Slowalk</span></h3>
     - 담당업무 : 풀스택 개발. 간단한 원페이지의 소개 + 행사관련 내용 이메일 발송기능
     - 백엔드 : Ruby on Rails
     - 프론트엔드 : Jquery, HTML&CSS
@@ -131,7 +138,7 @@ gallery_data_lab:
     - 이미지 저장소 : AWS S3
     - infra : AWS Elastic Beanstalk
 
-  - ### <서울시금천직장맘지원센터> 금천직장맘 홈페이지 개발
+  - <h3> [서울시금천직장맘지원센터] 금천직장맘 홈페이지 개발 <span class="big-tag">Slowalk</span></h3>
     - 담당업무 : 풀스택 개발
     - 주요기능 : 상담 게시판 페이지, 관리자 페이지
     - 백엔드 : Ruby on Rails
@@ -141,7 +148,7 @@ gallery_data_lab:
     - 이미지 저장소 : AWS S3
     - infra : AWS ElasticBeanstalk
 
-  - ### <언론재단> 뉴스트러스트 프로젝트 
+  - <h3> [언론재단] 뉴스트러스트 프로젝트 <span class="big-tag">Slowalk</span></h3>
     - 담당업무 : 
       - 기초적인 데이터 가공
       - Read기능 위주의 홈페이지 제작
@@ -154,7 +161,7 @@ gallery_data_lab:
     - infra : Docker
     - 시각화 라이브러리 : D3.js
 
-  - ### <국립암센터> 암발생 지리정보 서비스
+  - <h3> [국립암센터] 암발생 지리정보 서비스 <span class="big-tag">Slowalk</span></h3>
     - 서비스 주소 : [http://ncrs.cancer.go.kr/csgis](http://ncrs.cancer.go.kr/csgis)
     - 담당업무 : 
       - 풀스택 개발
@@ -185,8 +192,7 @@ gallery_data_lab:
 
 {% include gallery id="gallery_cancer" layout="half" %}
 
-
-  - ### <서울대학교산학협력단> 미세먼지 대기건강지수 웹 페이지, 설문조사 웹 페이지 개발
+  - <h3> [서울대학교산학협력단] 미세먼지 대기건강지수 웹 페이지, 설문조사 웹 페이지 개발 <span class="big-tag">Slowalk</span></h3>
     - 서비스 주소 : 클라이언트 내부 검토중이라 아직 미공개.
     - 담당업무 : 
       - 풀스택 개발
@@ -224,7 +230,9 @@ gallery_data_lab:
 
   {% include gallery id="gallery_FineDust" %}
 
-## in Virnect
+<hr>
+
+<h2>in Virnect <span class="big-tag purple">Virnect</span></h2>
 
 - 작업내용
   - 프론트엔드 개발자 가이드라인 작성.
@@ -244,8 +252,8 @@ gallery_data_lab:
     - 사내 작업내용 코드리뷰
     - [샐러드 주문 자동화 프로젝트 with Puppeteer](https://github.com/Seunghyum/VirnectSaladOrder)
 
-
 <br>
+<hr>
 
 ## 개인프로젝트 
 
