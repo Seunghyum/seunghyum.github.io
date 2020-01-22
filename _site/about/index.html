@@ -354,16 +354,60 @@
 
 <ul>
   <li>
-    <a href="https://www.slowalk.co.kr/"><span class="big-tag">Slowalk</span></a> 풀스택 개발자 근무 2016/06 ~ 2019/4 퇴사
+    <a href="https://virnect.com/"><span class="big-tag purple">Virnect&nbsp;</span></a> 웹 클라이언트 개발자 근무 2019/10 ~
   </li>
   <li>
-    <a href="https://virnect.com/"><span class="big-tag purple">Virnect&nbsp;</span></a> 웹 클라이언트 개발자 근무 2019/10 ~
+    <a href="https://www.slowalk.co.kr/"><span class="big-tag">Slowalk</span></a> 풀스택 개발자 근무 2016/06 ~ 2019/4 퇴사
   </li>
 </ul>
 
 <p><br /></p>
 
 <h1 id="담당-프로젝트--업무">담당 프로젝트 &amp; 업무</h1>
+
+<h2>in Virnect <span class="big-tag purple">Virnect</span></h2>
+
+<ul>
+  <li>작업내용
+    <ul>
+      <li>프론트엔드 개발자 가이드라인 작성.</li>
+      <li>Workflow를 개선할 수 있는 툴로 Storybook(Vue.js) 적용 아이디어 제시.
+        <blockquote>
+          <p>마이크로 서비스들 간의 기능 &amp; UI 컴포넌트 모듈화를 위해 아이디어를 제시했고 데모서비스를 만들어서 구성원들에게 시연함.<br /></p>
+          <ul>
+            <li>시연 : <a href="https://seunghyum.github.io/VirnectStorybookTest/?path=/story/*">github-page</a><br /></li>
+            <li>발표 내용 : <a href="https://github.com/Seunghyum/VirnectStorybookTest">VirnectStorybookTest</a> README 페이지 참고<br /></li>
+            <li>처음엔 Storybook을 UI 명세서 역할로, <a href="https://bit.dev/">bit</a>을 도입하여 컴포넌트 공유를 하려고함. <a href="https://www.notion.so/davemoon/Storybook-Bit-95358959770c4d568d42e08c976183b7">Notion 정리 내용 참고</a> <br /></li>
+            <li>하지만 기능 모듈(ex - ID, Password form validate)을 공유하기엔 부적합하다고 생각하여 verdaccio로 모든 모듈들(UI 컴포넌트 &amp; 기능 모듈)을 관리하고 prefix name space로 관리하는 것으로 설계함.</li>
+          </ul>
+        </blockquote>
+      </li>
+      <li>협업 아키텍처 설계 : 구축형 Private NPM Registry - <a href="https://github.com/verdaccio/verdaccio">Verdaccio</a>
+        <blockquote>
+          <ul>
+            <li><a href="https://www.notion.so/davemoon/Workflow-9208a770012643c5b404376927d313e2">Notion 내용 참고</a></li>
+            <li>구축형 Private NPM Registry인 Verdaccio를 통해 별도의 비용없이 사내 개발서버에 Verdaccio를 구축하여 코드를 사내망에서만 관리할 수 있게 아이디어를 제시.</li>
+            <li>실제 아키텍처에 반영함.</li>
+          </ul>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>그밖의 활동
+    <ul>
+      <li>점심에 샐러드 먹으며 개발하는 Salad Study 라는 그룹을 만듦.
+        <ul>
+          <li>오픈소스 기여해보기</li>
+          <li>사내 작업내용 코드리뷰</li>
+          <li><a href="https://github.com/Seunghyum/VirnectSaladOrder">샐러드 주문 자동화 프로젝트 with Puppeteer</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+<hr />
 
 <h2>in Slowalk <span class="big-tag">Slowalk</span></h2>
 
@@ -504,21 +548,18 @@
       <li>infra : Docker</li>
       <li>지도 API : Naver Map API</li>
       <li>실시간 미세먼지 데이터 : 공공데이터포털 실시간 미세먼지 API</li>
-      <li>시각화 라이브러리 : D3.js, Billboard.js, chart.js, chartist.js</li>
-      <li><u>기억에 남는 문제해결</u> :
-        <blockquote>
-          <h2 id="설문조사-페이지-제작-당시-고유-uri-발급">설문조사 페이지 제작 당시 고유 URI 발급</h2>
-          <p>문제상황 : 서울대학생 계정으로 서비스 참여링크를 이메일 전송.</p>
-
-          <p>문제의 필수조건 : 모든 URI이 고유URI이어야 했음. 또한 해킹이 불가능하게 육안으로 파악할 수 없는구조여야함.</p>
-
-          <p>해결 방법 : <br /></p>
-          <ul>
-            <li>설문참여 신청시간과 이메일계정정보를 합친 문자열(ex - ‘2019.02.02.03:30test@snu.ac.kr’)을 유저마다 발급. <br /></li>
-            <li>그것을 salt값(ex - ‘abcde’)으로 해싱하여 URI 쿼리값 전송. <br /></li>
-            <li><strong><em>유저가 이메일에서 해당링크로 접속시 해싱값을 저장된 salt값(‘abcde’)으로 다시 디코딩하여 유저가 가지고 있는 문자열(‘2019.02.02.03:30test@snu.ac.kr’)과 같은지 확인 후 설문을 진행하도록 개발</em></strong>.</li>
-          </ul>
-        </blockquote>
+      <li>
+        <p>시각화 라이브러리 : D3.js, Billboard.js, chart.js, chartist.js
+<!-- - <U>기억에 남는 문제해결</U> : -->
+<!-- > ## 설문조사 페이지 제작 당시 고유 URI 발급 -->
+<!-- > 문제상황 : 서울대학생 계정으로 서비스 참여링크를 이메일 전송.  -->
+<!-- >  -->
+<!-- > 문제의 필수조건 : 모든 URI이 고유URI이어야 했음. 또한 해킹이 불가능하게 육안으로 파악할 수 없는구조여야함. -->
+<!-- >  -->
+<!-- > 해결 방법 : <br> -->
+<!-- > - 설문참여 신청시간과 이메일계정정보를 합친 문자열(ex - '2019.02.02.03:30test@snu.ac.kr')을 유저마다 발급. <br> -->
+<!-- > - 그것을 salt값(ex - 'abcde')으로 해싱하여 URI 쿼리값 전송. <br> -->
+<!-- > - ***유저가 이메일에서 해당링크로 접속시 해싱값을 저장된 salt값('abcde')으로 다시 디코딩하여 유저가 가지고 있는 문자열('2019.02.02.03:30test@snu.ac.kr')과 같은지 확인 후 설문을 진행하도록 개발***. --></p>
 
         <blockquote>
           <h2 id="지도페이지-제작당시-성능이슈">지도페이지 제작당시 성능이슈</h2>
@@ -577,49 +618,6 @@
   
   
 </figure>
-
-<hr />
-
-<h2>in Virnect <span class="big-tag purple">Virnect</span></h2>
-
-<ul>
-  <li>작업내용
-    <ul>
-      <li>프론트엔드 개발자 가이드라인 작성.</li>
-      <li>Workflow를 개선할 수 있는 툴로 Storybook(Vue.js) 적용 아이디어 제시.
-        <blockquote>
-          <p>마이크로 서비스들 간의 기능 &amp; UI 컴포넌트 모듈화를 위해 아이디어를 제시했고 데모서비스를 만들어서 구성원들에게 시연함.<br /></p>
-          <ul>
-            <li>시연 : <a href="https://seunghyum.github.io/VirnectStorybookTest/?path=/story/*">github-page</a><br /></li>
-            <li>발표 내용 : <a href="https://github.com/Seunghyum/VirnectStorybookTest">VirnectStorybookTest</a> README 페이지 참고<br /></li>
-            <li>처음엔 Storybook을 UI 명세서 역할로, <a href="https://bit.dev/">bit</a>을 도입하여 컴포넌트 공유를 하려고함. <a href="https://www.notion.so/davemoon/Storybook-Bit-95358959770c4d568d42e08c976183b7">Notion 정리 내용 참고</a> <br /></li>
-            <li>하지만 기능 모듈(ex - ID, Password form validate)을 공유하기엔 부적합하다고 생각하여 verdaccio로 모든 모듈들(UI 컴포넌트 &amp; 기능 모듈)을 관리하고 prefix name space로 관리하는 것으로 설계함.</li>
-          </ul>
-        </blockquote>
-      </li>
-      <li>협업 아키텍처 설계 : 구축형 Private NPM Registry - <a href="https://github.com/verdaccio/verdaccio">Verdaccio</a>
-        <blockquote>
-          <ul>
-            <li><a href="https://www.notion.so/davemoon/Workflow-9208a770012643c5b404376927d313e2">Notion 내용 참고</a></li>
-            <li>구축형 Private NPM Registry인 Verdaccio를 통해 별도의 비용없이 사내 개발서버에 Verdaccio를 구축하여 코드를 사내망에서만 관리할 수 있게 아이디어를 제시.</li>
-            <li>실제 아키텍처에 반영함.</li>
-          </ul>
-        </blockquote>
-      </li>
-    </ul>
-  </li>
-  <li>그밖의 활동
-    <ul>
-      <li>점심에 샐러드 먹으며 개발하는 Salad Study 라는 그룹을 만듦.
-        <ul>
-          <li>오픈소스 기여해보기</li>
-          <li>사내 작업내용 코드리뷰</li>
-          <li><a href="https://github.com/Seunghyum/VirnectSaladOrder">샐러드 주문 자동화 프로젝트 with Puppeteer</a></li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
 
 <p><br /></p>
 <hr />
