@@ -13,13 +13,15 @@
   -webkit-animation: swing 1s;
   -o-animation: swing 1s;
   animation: swing 1s ;
+  font-weight: 700;
   &.orange {
-    background-color: #F95;
-    color: #ffffff;
+    color: #F95;
   }
   &.purple {
-    background-color: #6503F8;
-    color: #ffffff;
+    color: #6503F8;
+  }
+  &.red {
+    color: #EB1D1E;
   }
 }
 

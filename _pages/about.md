@@ -78,6 +78,14 @@ gallery_data_lab:
     image_path: /assets/images/about/Toy/finedust.png
   - url: /assets/images/about/Toy/UEFA-tournament.png
     image_path: /assets/images/about/Toy/UEFA-tournament.png
+
+gallery_ChatApp:
+  - url: /assets/images/about/ChatApp/intro.png
+    image_path: /assets/images/about/ChatApp/intro.png
+  - url: /assets/images/about/ChatApp/chatPage.png
+    image_path: /assets/images/about/ChatApp/chatPage.png
+  - url: /assets/images/about/ChatApp/chatTest.png
+    image_path: /assets/images/about/ChatApp/chatTest.png
 ---
 
 <br>
@@ -111,9 +119,14 @@ gallery_data_lab:
 
 <hr>
 
+<div class="new-page"></div>
+
 # 경력
 
 <ul>
+  <li>
+    <a href="https://www.slowalk.co.kr/"><span class="big-tag red">Rsupport</span></a> 프론트엔드 개발자 근무 2020/02 ~
+  </li>
   <li>
     <a href="https://virnect.com/"><span class="big-tag purple">Virnect&nbsp;</span></a> 웹 클라이언트 개발자 근무 2019/10 ~
   </li>
@@ -257,66 +270,58 @@ gallery_data_lab:
 
 ## 개인프로젝트 
 
-  - ### 택시 공유서비스 Taxiple
-    - 창업 & 경진대회
-    - 진행기간 : 2016년
-    - 주요내용 : 
-      - 택시 카풀 서비스
-      - 단국대 창업지원 동아리
-      - 채팅기능, 매칭 기능
-      - 개발파트 2명, 디자인 1명이서 개발함.
-    - 성과 : 멋쟁이사자처럼 내부 해커톤 100개 팀중 10위. 
+  - ### 공개 채팅앱 개발
+    - 진행기간 : 2020
+    - 주요내용 : 수습기간 테스트로 socket.io를 활용하여 공개 채팅방 형태의 채팅앱을 만들어 봄.
     - 본인이 공헌한 점 : 풀스택 개발.
-    - 사용한 Skill 또는 지식 : 
-      - 지식 : MVC. 모델
-      - Skill : Ruby On Rails, HTML&CSS, jQuery, MySQL, AWS EC2/S3, GitHub
-    - 깃헙 주소 : [https://github.com/Seunghyum/Taxiple-backup](https://github.com/Seunghyum/Taxiple-backup)
-
-<center>
-  <img src="/assets/images/about/taxiple-min.jpg" style="max-width: 150px;" />
-</center>
-
-  - ### 수원도서관 크롤링
-    - 토이 프로젝트
-    - 진행기간 : 2017년
-    - 주요내용 : 수원도서관 자료 크롤링
-    - 본인이 공헌한 점 : 풀스택 개발.
-    - 사용한 Skill 또는 지식 : 
-      - 지식 : MVC 모델
-      - Skill : Ruby On Rails, HTML&CSS, jQuery, MySQL, AWS EC2, GitHub
-    - 깃헙 주소 : [https://github.com/Seunghyum/Crawler-Suwon_library](https://github.com/Seunghyum/Crawler-Suwon_library)
-
-  - ### 단국대 국제학부 사물함 & 중고책 온라인 예약서비스
-    - 운영했던 서비스
-    - 진행기간 : 2017년
-    - 주요내용 : 단국대 국제학부 사물함 & 중고책 온라인 예약서비스. 자리예약 기능. 
-    - 성과 : 국제학부 200여명 대상으로 실제 서비스 함.
-    - 본인이 공헌한 점 : 풀스택 개발.
-    - 사용한 Skill 또는 지식 : 
-      - 지식 : MVC 모델, Queue
-      - Skill : Ruby On Rails, HTML&CSS, jQuery, MySQL, AWS EC2/S3, GitHub
-    - 깃헙 주소 : [https://github.com/Seunghyum/DKU-IBA-locker-booking-backup](https://github.com/Seunghyum/DKU-IBA-locker-booking-backup)
-
-{% include gallery id="gallery_Locker" %}
-
-  - ### 단국대 커뮤니티 디쿠(DKU)
-    - 토이 프로젝트
-    - 진행기간 : 2017년
-    - 주요 내용 :단국대 커뮤니티 만들기 프로젝트. 
     - 주요 기능 : 
-      - 강의평가
-      - CRUD 게시판
-      - 교수 인기투표
-      - 학교 홈페이지 크롤링(전화번호부)
-      - 수강신청 리허설
-    - 성과 : Professor101 이라는 교수 인기투표 서비스는 학기초 수강신청 시기에 배포하여 좋아요 100여개 받음
-    - 본인이 공헌한 점 : 풀스택 개발.
-    - 사용한 Skill 또는 지식 : 
-      - 지식 : MVC 모델
-      - Skill : Ruby On Rails, HTML&CSS, jQuery, MySQL, AWS EC2/S3, GitHub
-    - 깃헙 주소 : [https://github.com/Seunghyum/Dku-dankook_community_service](https://github.com/Seunghyum/Dku-dankook_community_service)
+      - 채팅창 들어오고 나갈때 상태 메세지
+      - 동일한 유저가 반복해서 말할때 프로필 이미지 출력하지 않음.
+      - 채팅에 참여한 계정은 동일한 계정으로 들어오지 못하게 막음.
+      - 계정을 직접 만들어서 채팅방에 참여할 수 있게 함.
+      - 채팅창에 참여중인 유저들을 채팅방 목록과 상단 헤더에 노출. 참여중인 인원들 표시
+      - 채팅방에 참여중인 인원들의 프로필을 마우스 호버시 계정의 정보를 노출 - 아이디, 상태 메세지
+    - 사용한 Skill 또는 지식
+      - Frontend : React.js, socket.io-client, Storybook
+      - Backend : node.js(express), socket.io
 
-{% include gallery id="gallery_DKU" %}
+  {% include gallery id="gallery_ChatApp" %}
+
+  - ### 세운상가 네트워크 맵 프로젝트 - 기능 개선
+    - 진행기간 : 2020
+    - 서비스 주소 : 아직 일반 공개가 안됨.
+    - 주요내용 : 세운상가의 네트워크 데이터를 D3를 이용하여 네트워크 맵으로 표현한 프로젝트. 프리랜서로 진행한 프로젝트
+    - 본인이 공헌한 점 : sigma.js로 되어있던 코드를 D3.js로 바꿈.
+    - 사용한 Skill 또는 지식
+      - Skill : D3.js
+
+  <!-- - ### 범죄지도
+    - 토이 프로젝트
+    - 진행기간 : 2019년~(진행중)
+    - 주요내용 : 공공데이터를 활용하여 범죄 통계를 지도 시각화하는 프로젝트.
+    - 본인이 공헌한 점 : 프론트엔드 개발
+    - 사용한 Skill 또는 지식 : 
+      - 지식 : AWS VPC
+      - Skill : Node.js, React.js, Mobx, Parcel, Typescript, Express.js, MySQL, AWS VPC
+    - 깃헙 주소 : [https://github.com/Seunghyum/CrimeMap](https://github.com/Seunghyum/CrimeMap) -->
+
+  - ### Data Lab
+    - 서비스 주소 : [https://seunghyum.github.io/data-visualization](https://seunghyum.github.io/data-visualization)
+    - 토이 프로젝트
+    - 진행기간 : 2019년~(진행중)
+    - 주요내용 : 공공데이터를 활용하여 이전에 활용했던 기술들을 아카이빙.
+    - 본인이 공헌한 점 : 풀스택
+    - 사용한 Skill : D3.js, GeoJson, Image Sprite
+    - 깃헙 주소 : [https://github.com/Seunghyum/data-visualization](https://github.com/Seunghyum/data-visualization)
+
+{% include gallery id="gallery_data_lab" %}
+
+  - ### 블로그 이력서 PDF 출력
+    - 생계형 프로젝트
+    - 진행기간 : 2019년 9월
+    - 주요내용 : 블로그에 적은 이력서를 원페이지 PDF 파일로 출력. puppeteer로 출력시 PDF파일이 10mb가 넘어 compressing을 위해 Ghostscript를 도입.
+    - 사용한 라이브러리 : Puppeteer, Ghostscript
+    - 깃헙 주소 : [https://github.com/Seunghyum/onePagePDFDownload-Puppeteer-Ghostscript](https://github.com/Seunghyum/onePagePDFDownload-Puppeteer-Ghostscript)
 
   - ### 서울시 미세먼지 지도시각화
     - R ShinyApp 웹서비스 퍼포먼스 테스트용 토이 프로젝트
@@ -349,33 +354,66 @@ gallery_data_lab:
 
 {% include gallery id="gallery_Dankookie" %}
 
-  - ### 범죄지도
+  - ### 단국대 커뮤니티 디쿠(DKU)
     - 토이 프로젝트
-    - 진행기간 : 2019년~(진행중)
-    - 주요내용 : 공공데이터를 활용하여 범죄 통계를 지도 시각화하는 프로젝트.
-    - 본인이 공헌한 점 : 프론트엔드 개발
+    - 진행기간 : 2017년
+    - 주요 내용 :단국대 커뮤니티 만들기 프로젝트. 
+    - 주요 기능 : 
+      - 강의평가
+      - CRUD 게시판
+      - 교수 인기투표
+      - 학교 홈페이지 크롤링(전화번호부)
+      - 수강신청 리허설
+    - 성과 : Professor101 이라는 교수 인기투표 서비스는 학기초 수강신청 시기에 배포하여 좋아요 100여개 받음
+    - 본인이 공헌한 점 : 풀스택 개발.
     - 사용한 Skill 또는 지식 : 
-      - 지식 : AWS VPC
-      - Skill : Node.js, React.js, Mobx, Parcel, Typescript, Express.js, MySQL, AWS VPC
-    - 깃헙 주소 : [https://github.com/Seunghyum/CrimeMap](https://github.com/Seunghyum/CrimeMap)
+      - 지식 : MVC 모델
+      - Skill : Ruby On Rails, HTML&CSS, jQuery, MySQL, AWS EC2/S3, GitHub
+    - 깃헙 주소 : [https://github.com/Seunghyum/Dku-dankook_community_service](https://github.com/Seunghyum/Dku-dankook_community_service)
 
-  - ### Data Lab
-    - 서비스 주소 : [https://seunghyum.github.io/data-visualization](https://seunghyum.github.io/data-visualization)
+{% include gallery id="gallery_DKU" %}
+
+  - ### 단국대 국제학부 사물함 & 중고책 온라인 예약서비스
+    - 운영했던 서비스
+    - 진행기간 : 2017년
+    - 주요내용 : 단국대 국제학부 사물함 & 중고책 온라인 예약서비스. 자리예약 기능. 
+    - 성과 : 국제학부 200여명 대상으로 실제 서비스 함.
+    - 본인이 공헌한 점 : 풀스택 개발.
+    - 사용한 Skill 또는 지식 : 
+      - 지식 : MVC 모델, Queue
+      - Skill : Ruby On Rails, HTML&CSS, jQuery, MySQL, AWS EC2/S3, GitHub
+    - 깃헙 주소 : [https://github.com/Seunghyum/DKU-IBA-locker-booking-backup](https://github.com/Seunghyum/DKU-IBA-locker-booking-backup)
+
+{% include gallery id="gallery_Locker" %}
+
+  - ### 수원도서관 크롤링
     - 토이 프로젝트
-    - 진행기간 : 2019년~(진행중)
-    - 주요내용 : 공공데이터를 활용하여 이전에 활용했던 기술들을 아카이빙.
-    - 본인이 공헌한 점 : 풀스택
-    - 사용한 Skill : D3.js, GeoJson, Image Sprite
-    - 깃헙 주소 : [https://github.com/Seunghyum/data-visualization](https://github.com/Seunghyum/data-visualization)
+    - 진행기간 : 2017년
+    - 주요내용 : 수원도서관 자료 크롤링
+    - 본인이 공헌한 점 : 풀스택 개발.
+    - 사용한 Skill 또는 지식 : 
+      - 지식 : MVC 모델
+      - Skill : Ruby On Rails, HTML&CSS, jQuery, MySQL, AWS EC2, GitHub
+    - 깃헙 주소 : [https://github.com/Seunghyum/Crawler-Suwon_library](https://github.com/Seunghyum/Crawler-Suwon_library)
 
-{% include gallery id="gallery_data_lab" %}
+  - ### 택시 공유서비스 Taxiple
+    - 창업 & 경진대회
+    - 진행기간 : 2016년
+    - 주요내용 : 
+      - 택시 카풀 서비스
+      - 단국대 창업지원 동아리
+      - 채팅기능, 매칭 기능
+      - 개발파트 2명, 디자인 1명이서 개발함.
+    - 성과 : 멋쟁이사자처럼 내부 해커톤 100개 팀중 10위. 
+    - 본인이 공헌한 점 : 풀스택 개발.
+    - 사용한 Skill 또는 지식 : 
+      - 지식 : MVC. 모델
+      - Skill : Ruby On Rails, HTML&CSS, jQuery, MySQL, AWS EC2/S3, GitHub
+    - 깃헙 주소 : [https://github.com/Seunghyum/Taxiple-backup](https://github.com/Seunghyum/Taxiple-backup)
 
-  - ### 블로그 이력서 PDF 출력
-    - 생계형 프로젝트
-    - 진행기간 : 2019년 9월
-    - 주요내용 : 블로그에 적은 이력서를 원페이지 PDF 파일로 출력. puppeteer로 출력시 PDF파일이 10mb가 넘어 compressing을 위해 Ghostscript를 도입.
-    - 사용한 라이브러리 : Puppeteer, Ghostscript
-    - 깃헙 주소 : [https://github.com/Seunghyum/onePagePDFDownload-Puppeteer-Ghostscript](https://github.com/Seunghyum/onePagePDFDownload-Puppeteer-Ghostscript)
+<center>
+  <img src="/assets/images/about/taxiple-min.jpg" style="max-width: 150px;" />
+</center>
 
 ## 외부 활동
 - 멋쟁이 사자처럼 4기 중앙운영진
