@@ -139,6 +139,16 @@ gallery_ChatApp:
 
 # 담당 프로젝트 & 업무
 
+- 작업내용
+  - Lighthouse를 활용한 모든 웹페이지 성능측정 스크립트 작업 [Github 링크](https://github.com/Seunghyum/lighthouse-report-script)
+  - 퍼포먼스 향상을 위한 React Lazy Load Component 개발 - [Github 링크](https://github.com/Seunghyum/react-lazy-load-wrapper)
+  - 렌더링 속도 향상을 위한 에셋 분석툴 도입 제안(Webpack Bundle Analyzer)
+  - 수습과제 채팅앱 개발 by Socket.io - [Github 링크](https://github.com/Seunghyum/react-chat-app)
+
+<h2>in RSUPPORT <span class="big-tag red">RSUPPORT</span></h2>
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/s7kdRx1EfElf5O" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/ssusere2c254/presentation-after-intern" title="presentation after intern" target="_blank">presentation after intern</a> </strong> from <strong><a href="https://www.slideshare.net/ssusere2c254" target="_blank">승현 문</a></strong> </div>
+
 <h2>in Virnect <span class="big-tag purple">Virnect</span></h2>
 
 - 작업내용
@@ -420,6 +430,4 @@ gallery_ChatApp:
 
 # 학력
 - 태장고등학교 2008/02 ~ 2010/02 졸업
-- 단국대학교 2014/02 ~ 2020/02 졸업예정
-
-
+- 단국대학교 2014/02 ~ 2020/07 졸업예정
