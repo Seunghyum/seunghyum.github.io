@@ -139,19 +139,23 @@ gallery_ChatApp:
 
 # 담당 프로젝트 & 업무
 
-- 작업내용
+<h2>in RSUPPORT <span class="big-tag red">RSUPPORT</span></h2>
+
+### 작업내용
+
   - Lighthouse를 활용한 모든 웹페이지 성능측정 스크립트 작업 [Github 링크](https://github.com/Seunghyum/lighthouse-report-script)
   - 퍼포먼스 향상을 위한 React Lazy Load Component 개발 - [Github 링크](https://github.com/Seunghyum/react-lazy-load-wrapper)
   - 렌더링 속도 향상을 위한 에셋 분석툴 도입 제안(Webpack Bundle Analyzer)
   - 수습과제 채팅앱 개발 by Socket.io - [Github 링크](https://github.com/Seunghyum/react-chat-app)
 
-<h2>in RSUPPORT <span class="big-tag red">RSUPPORT</span></h2>
-
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/s7kdRx1EfElf5O" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/ssusere2c254/presentation-after-intern" title="presentation after intern" target="_blank">presentation after intern</a> </strong> from <strong><a href="https://www.slideshare.net/ssusere2c254" target="_blank">승현 문</a></strong> </div>
+
+<hr style="border-top: 1px dashed silver">
 
 <h2>in Virnect <span class="big-tag purple">Virnect</span></h2>
 
-- 작업내용
+### 작업내용
+
   - 프론트엔드 개발자 가이드라인 작성.
   - Workflow를 개선할 수 있는 툴로 Storybook(Vue.js) 적용 아이디어 제시.
     > 마이크로 서비스들 간의 기능 & UI 컴포넌트 모듈화를 위해 아이디어를 제시했고 데모서비스를 만들어서 구성원들에게 시연함.<br>
@@ -170,7 +174,9 @@ gallery_ChatApp:
     - [샐러드 주문 자동화 프로젝트 with Puppeteer](https://github.com/Seunghyum/VirnectSaladOrder)
 
 <br>
-<hr>
+
+<hr style="border-top: 1px dashed silver">
+
 <h2>in Slowalk <span class="big-tag">Slowalk</span></h2>
 
   <!-- - ### <한국백혈병어린이재단> 희망별빛 캠페인 원페이지 제작  -->
