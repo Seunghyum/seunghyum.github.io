@@ -13,9 +13,6 @@
         {% endunless %}
         <a class="site-title" href="{{ '/' | relative_url }}">{{ site.masthead_title | default: site.title }}</a>
         <ul class="visible-links">
-          <li class="masthead__menu-item">
-            <a href="/data-visualization" title="{{ link.description }}" target="_blank">Data Lab</a>
-          </li>
           {%- for link in site.data.navigation.main -%}
             {%- if link.url contains '://' -%}
               {%- assign url = link.url -%}
@@ -26,6 +23,9 @@
               <a href="{{ url }}" {% if link.description %}title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
             </li>
           {%- endfor -%}
+          <li class="masthead__menu-item">
+            <a href="/mine-sweeper" title="{{ link.description }}" target="_blank">Mine Sweeper 😝</a>
+          </li>
         </ul>
         {% if site.search == true %}
         <button class="search__toggle" type="button">

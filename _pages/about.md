@@ -97,16 +97,15 @@ gallery_ChatApp:
 > [중급](#){: .btn .btn--small .btn--info} 중간 규모 프로그램 및 시스템을 개발할 수 있으며, 주요 이슈 트러블슈팅을 할 수 있을 정도로 내부구조에 대해 이해하고 있음<br>
 > [고급](#){: .btn .btn--small .btn--danger} 대규모 프로그램 및 시스템을 참고사항(책/인터넷) 없이 개발할 수 있으며, 일반적이지 않은 난해한 부분도 일부 참고를 통해 개발할 수 있음 
 
-- 백엔드 : [Node.js](#){: .btn .btn--small .btn--info} [Ruby on Rails](#){: .btn .btn--small .btn--info} [R](#){: .btn .btn--small .btn--success} [Python](#){: .btn .btn--small .btn--success}
-- 프론트엔드 : [jQuery](#){: .btn .btn--small .btn--info} [HTML(Pug)&CSS](#){: .btn .btn--small .btn--info} [SASS(SCSS)](#){: .btn .btn--small .btn--info}
-- 프론트엔드 프레임워크 : [Vue.js](#){: .btn .btn--small .btn--info} [React.js](#){: .btn .btn--small .btn--success}
-- 데이터베이스 : [MySQL](#){: .btn .btn--small .btn--info} [MongoDB](#){: .btn .btn--small .btn--info} [Oracle](#){: .btn .btn--small .btn--success}
-- 운영체제 : [Ubuntu](#){: .btn .btn--small .btn--info} [Centos](#){: .btn .btn--small .btn--success}
-- 웹서버 : [Nginx](#){: .btn .btn--small .btn--info} [Apache](#){: .btn .btn--small .btn--success}
-- 인프라 : [Docker](#){: .btn .btn--small .btn--info} [AWS(EC2, S3, RDB, Elastic Beanstalk)](#){: .btn .btn--small .btn--info}
-- etc : [Storybook](#){: .btn .btn--small .btn--success}
-- 라이브러리 : [D3.js](#){: .btn .btn--small .btn--info} [Puppeteer](#){: .btn .btn--small .btn--info} [Naver Map API](#){: .btn .btn--small .btn--info} [SGIS MAP API](#){: .btn .btn--small .btn--info}
-- 사용해본 저장소 : Github, GitLab, BitBucket
+- Language : [Node.js](#){: .btn .btn--small .btn--info} [Ruby on Rails](#){: .btn .btn--small .btn--info} [R](#){: .btn .btn--small .btn--success} [Python](#){: .btn .btn--small .btn--success}
+- Frontend : [jQuery](#){: .btn .btn--small .btn--info} [HTML(Pug)&CSS](#){: .btn .btn--small .btn--info} [SASS(SCSS)](#){: .btn .btn--small .btn--info}
+  - Framework : [Vue.js](#){: .btn .btn--small .btn--info} [React.js](#){: .btn .btn--small .btn--info}
+  - State Store : [Mobx](#){: .btn .btn--small .btn--success} [Redux](#){: .btn .btn--small .btn--success} [Vuex](#){: .btn .btn--small .btn--info}
+- Database : [MySQL](#){: .btn .btn--small .btn--info} [MongoDB](#){: .btn .btn--small .btn--info} [Oracle](#){: .btn .btn--small .btn--success}
+- OS : [Ubuntu](#){: .btn .btn--small .btn--info} [Centos](#){: .btn .btn--small .btn--success}
+- WebServer : [Nginx](#){: .btn .btn--small .btn--info} [Apache](#){: .btn .btn--small .btn--success}
+- Infra : [Docker](#){: .btn .btn--small .btn--info} [AWS(EC2, S3, RDB, Elastic Beanstalk)](#){: .btn .btn--small .btn--info}
+- Library : [D3.js](#){: .btn .btn--small .btn--info} [Puppeteer](#){: .btn .btn--small .btn--info} [Naver Map API](#){: .btn .btn--small .btn--info} [SGIS MAP API](#){: .btn .btn--small .btn--info} [Storybook](#){: .btn .btn--small .btn--success}
 
 <hr>
 
@@ -125,7 +124,7 @@ gallery_ChatApp:
 
 <ul>
   <li>
-    <a href="https://www.slowalk.co.kr/"><span class="big-tag red">Rsupport</span></a> 프론트엔드 개발자 근무 2020/02 ~
+    <a href="https://www.slowalk.co.kr/"><span class="big-tag red">Rsupport</span></a> 프론트엔드 개발자 근무 2020/02 ~ 2020/07
   </li>
   <li>
     <a href="https://virnect.com/"><span class="big-tag purple">Virnect&nbsp;</span></a> 웹 클라이언트 개발자 근무 2019/10 ~
