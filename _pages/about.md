@@ -74,8 +74,10 @@ gallery_Dankookie:
     image_path: /assets/images/about/Dankookie/0-min.png
 
 gallery_data_lab:
-  - url: /assets/images/about/Toy/finedust.png
-    image_path: /assets/images/about/Toy/finedust.png
+  - url: /assets/images/about/Toy/finedust-1.png
+    image_path: /assets/images/about/Toy/finedust-1.png
+  - url: /assets/images/about/Toy/finedust-2.png
+    image_path: /assets/images/about/Toy/finedust-2.png
   - url: /assets/images/about/Toy/UEFA-tournament.png
     image_path: /assets/images/about/Toy/UEFA-tournament.png
 
