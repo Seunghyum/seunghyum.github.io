@@ -86,6 +86,21 @@ gallery_ChatApp:
     image_path: /assets/images/about/ChatApp/chatPage.png
   - url: /assets/images/about/ChatApp/chatTest.png
     image_path: /assets/images/about/ChatApp/chatTest.png
+gallery_Mine:
+  - url: /assets/images/about/Toy/mine-sweeper-1.png
+    image_path: /assets/images/about/Toy/mine-sweeper-1.png
+  - url: /assets/images/about/Toy/mine-sweeper-2.png
+    image_path: /assets/images/about/Toy/mine-sweeper-2.png
+gallery_Pethroom:
+  - url: /assets/images/about/Pethroom/pethroom-0.png
+    image_path: /assets/images/about/Pethroom/pethroom-0.png
+  - url: /assets/images/about/Pethroom/pethroom-1.jpg
+    image_path: /assets/images/about/Pethroom/pethroom-1.jpg
+  - url: /assets/images/about/Pethroom/pethroom-2.png
+    image_path: /assets/images/about/Pethroom/pethroom-2.png
+  - url: /assets/images/about/Pethroom/pethroom-3.png
+    image_path: /assets/images/about/Pethroom/pethroom-3.png
+    
 ---
 
 <br>
@@ -97,15 +112,15 @@ gallery_ChatApp:
 > [중급](#){: .btn .btn--small .btn--info} 중간 규모 프로그램 및 시스템을 개발할 수 있으며, 주요 이슈 트러블슈팅을 할 수 있을 정도로 내부구조에 대해 이해하고 있음<br>
 > [고급](#){: .btn .btn--small .btn--danger} 대규모 프로그램 및 시스템을 참고사항(책/인터넷) 없이 개발할 수 있으며, 일반적이지 않은 난해한 부분도 일부 참고를 통해 개발할 수 있음 
 
-- Language : [Javascript](#){: .btn .btn--small .btn--info} [Node.js](#){: .btn .btn--small .btn--info} [Typescript](#){: .btn .btn--small .btn--success} [Ruby on Rails](#){: .btn .btn--small .btn--info} [R](#){: .btn .btn--small .btn--success} [Python](#){: .btn .btn--small .btn--success}
+- Language : [Javascript](#){: .btn .btn--small .btn--info} [Node.js](#){: .btn .btn--small .btn--info} [Ruby on Rails](#){: .btn .btn--small .btn--info} [Typescript](#){: .btn .btn--small .btn--success} [R](#){: .btn .btn--small .btn--success} [Python](#){: .btn .btn--small .btn--success}
 - Frontend : [jQuery](#){: .btn .btn--small .btn--info} [HTML(Pug)&CSS](#){: .btn .btn--small .btn--info} [SASS(SCSS)](#){: .btn .btn--small .btn--info}
   - Framework : [Vue.js](#){: .btn .btn--small .btn--info} [React.js](#){: .btn .btn--small .btn--info}
-  - State Store : [Vuex](#){: .btn .btn--small .btn--info} [Mobx](#){: .btn .btn--small .btn--success} [Redux](#){: .btn .btn--small .btn--success}
+  - State Store : [Vuex](#){: .btn .btn--small .btn--info}  [Redux](#){: .btn .btn--small .btn--info} [Mobx](#){: .btn .btn--small .btn--success}
 - Database : [MySQL](#){: .btn .btn--small .btn--info} [MongoDB](#){: .btn .btn--small .btn--info} [Oracle](#){: .btn .btn--small .btn--success}
 - OS : [Ubuntu](#){: .btn .btn--small .btn--info} [Centos](#){: .btn .btn--small .btn--success}
 - WebServer : [Nginx](#){: .btn .btn--small .btn--info} [Apache](#){: .btn .btn--small .btn--success}
 - Infra : [Docker](#){: .btn .btn--small .btn--info} [AWS(EC2, S3, RDB, Elastic Beanstalk)](#){: .btn .btn--small .btn--info}
-- Library : [D3.js](#){: .btn .btn--small .btn--info} [Puppeteer](#){: .btn .btn--small .btn--info} [Naver Map API](#){: .btn .btn--small .btn--info} [SGIS MAP API](#){: .btn .btn--small .btn--info} [Storybook](#){: .btn .btn--small .btn--success}
+- Library : [D3.js](#){: .btn .btn--small .btn--info} [Puppeteer](#){: .btn .btn--small .btn--info} [Naver Map API](#){: .btn .btn--small .btn--info} [SGIS MAP API](#){: .btn .btn--small .btn--info} [Storybook](#){: .btn .btn--small .btn--info}
 
 <hr>
 
@@ -124,6 +139,9 @@ gallery_ChatApp:
 
 <ul>
   <li>
+    <a href="https://www.bmsmile.com/"><span class="big-tag orange">BMSMILE</span></a> 풀스택 개발자 근무 2020/07 ~ 
+  </li>
+  <li>
     <a href="https://www.slowalk.co.kr/"><span class="big-tag red">Rsupport</span></a> 프론트엔드 개발자 근무 2020/02 ~ 2020/07
   </li>
   <li>
@@ -136,7 +154,37 @@ gallery_ChatApp:
 
 <br>
 
+
 # 담당 프로젝트 & 업무
+
+<h2>in BMSMILE <span class="big-tag orange">BMSMILE</span></h2>
+
+### 작업내용
+
+  - <h3>Pethroom(페스룸) - 반려동물 브랜드 쇼핑몰</h3>
+    - 설명: 멤버십, 혜택 등 재구매 고객을 확보하는데 특화된 커머스 서비스
+    - 담당업무 : 리뉴얼 웹 사이트 프론트엔드 개발 전담, 웹뷰 제작
+    - 기술 스택 : React.js(Hooks), Redux, Storybook, Cloudfront, Route53
+    - 기능 & 페이지
+      - 계정 & 인증(Firebase)
+      - 홈
+      - 스토어
+      - 멤버십
+      - 마이페이지
+      - 설정
+      - 장바구니
+      - 반려동물 조회/등록/수정/삭제
+      - 체험단 •쿠폰 •포인트
+      - 주소 관리(Daum Address API)
+      - 주문 & 결제 
+      - 주문 관리
+      - 리뷰
+      - 고객센터
+      - 약관
+      - 미션
+    {% include gallery id="gallery_Pethroom" layout="half" %}
+
+  - [브랜드 페이지 워드프레스 작업](https://www.slowalk.co.kr/)
 
 <h2>in RSUPPORT <span class="big-tag red">RSUPPORT</span></h2>
 
@@ -285,20 +333,22 @@ gallery_ChatApp:
 
 ## 개인프로젝트 
 
+  - ### 지뢰찾기 웹게임
+    - [서비스 주소](https://seunghyum.github.io/mine-sweeper/)
+    - [깃헙 주소](https://github.com/Seunghyum/mine-sweeper)
+    - 진행기간 : 2020
+    - 사용한 Skill 또는 지식
+      - Frontend : Typescript, React.js, Mobx
+
+  {% include gallery id="gallery_Mine" %}
+
   - ### 공개 채팅앱 개발
     - 진행기간 : 2020
-    - 주요내용 : Rsupport 수습기간 테스트로 socket.io를 활용하여 공개 채팅방 형태의 채팅앱을 만들어 봄.
-    - 본인이 공헌한 점 : 풀스택 개발.
+    - 본인이 공헌한 점 : 풀스택 개발
     - 주요 기능 : 
       - 채팅창 들어오고 나갈때 상태 메세지
-      - 동일한 유저가 반복해서 말할때 프로필 이미지 출력하지 않음.
-      - 채팅에 참여한 계정은 동일한 계정으로 들어오지 못하게 막음.
-      - 계정을 직접 만들어서 채팅방에 참여할 수 있게 함.
-      - 채팅창에 참여중인 유저들을 채팅방 목록과 상단 헤더에 노출. 참여중인 인원들 표시
-      - 채팅방에 참여중인 인원들의 프로필을 마우스 호버시 계정의 정보를 노출 - 아이디, 상태 메세지
     - 사용한 Skill 또는 지식
-      - Frontend : React.js, socket.io-client, Storybook
-      - Backend : node.js(express), socket.io
+      - Frontend : React.js, Mobx
 
   {% include gallery id="gallery_ChatApp" %}
 
