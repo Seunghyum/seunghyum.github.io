@@ -114,15 +114,16 @@ gallery_Pethroom:
 > [중급](#){: .btn .btn--small .btn--info} 중간 규모 프로그램 및 시스템을 개발할 수 있으며, 주요 이슈 트러블슈팅을 할 수 있을 정도로 내부구조에 대해 이해하고 있음<br>
 > [고급](#){: .btn .btn--small .btn--danger} 대규모 프로그램 및 시스템을 참고사항(책/인터넷) 없이 개발할 수 있으며, 일반적이지 않은 난해한 부분도 일부 참고를 통해 개발할 수 있음 
 
-- Language : [Javascript](#){: .btn .btn--small .btn--info} [Node.js](#){: .btn .btn--small .btn--info} [Ruby on Rails](#){: .btn .btn--small .btn--info} [Typescript](#){: .btn .btn--small .btn--success} [R](#){: .btn .btn--small .btn--success} [Python](#){: .btn .btn--small .btn--success}
+- Language : [Javascript](#){: .btn .btn--small .btn--info} [Node.js](#){: .btn .btn--small .btn--success} [Ruby on Rails](#){: .btn .btn--small .btn--success} [Typescript](#){: .btn .btn--small .btn--success} [R](#){: .btn .btn--small .btn--success} [Python](#){: .btn .btn--small .btn--success}
 - Frontend : [jQuery](#){: .btn .btn--small .btn--info} [HTML(Pug)&CSS](#){: .btn .btn--small .btn--info} [SASS(SCSS)](#){: .btn .btn--small .btn--info}
-  - Framework : [Vue.js](#){: .btn .btn--small .btn--info} [React.js](#){: .btn .btn--small .btn--info}
+  - JS Framework : [Vue.js](#){: .btn .btn--small .btn--info} [React.js](#){: .btn .btn--small .btn--info} 
   - State Store : [Vuex](#){: .btn .btn--small .btn--info}  [Redux](#){: .btn .btn--small .btn--info} [Mobx](#){: .btn .btn--small .btn--success}
-- Database : [MySQL](#){: .btn .btn--small .btn--info} [MongoDB](#){: .btn .btn--small .btn--info} [Oracle](#){: .btn .btn--small .btn--success}
-- OS : [Ubuntu](#){: .btn .btn--small .btn--info} [Centos](#){: .btn .btn--small .btn--success}
+  - Data Visaulize : [D3.js](#){: .btn .btn--small .btn--info}
+  - ETC : [Puppeteer](#){: .btn .btn--small .btn--info} [Naver Map API](#){: .btn .btn--small .btn--info} [SGIS MAP API](#){: .btn .btn--small .btn--info} [Storybook](#){: .btn .btn--small .btn--info}
+- Database : [MongoDB](#){: .btn .btn--small .btn--info} [MySQL](#){: .btn .btn--small .btn--success} [Oracle](#){: .btn .btn--small .btn--success}
+- OS : [Ubuntu](#){: .btn .btn--small .btn--success} [Centos](#){: .btn .btn--small .btn--success}
 - WebServer : [Nginx](#){: .btn .btn--small .btn--info} [Apache](#){: .btn .btn--small .btn--success}
-- Infra : [Docker](#){: .btn .btn--small .btn--info} [AWS(EC2, S3, RDB, Elastic Beanstalk)](#){: .btn .btn--small .btn--info}
-- Library : [D3.js](#){: .btn .btn--small .btn--info} [Puppeteer](#){: .btn .btn--small .btn--info} [Naver Map API](#){: .btn .btn--small .btn--info} [SGIS MAP API](#){: .btn .btn--small .btn--info} [Storybook](#){: .btn .btn--small .btn--info}
+- Infra : [Docker](#){: .btn .btn--small .btn--success} [AWS(EC2, S3, RDB, Elastic Beanstalk)](#){: .btn .btn--small .btn--success}
 
 <hr>
 
@@ -139,20 +140,54 @@ gallery_Pethroom:
 
 # 경력
 
-<ul>
-  <li>
-    <a href="https://www.bmsmile.com/"><span class="big-tag orange">BMSMILE</span></a> 풀스택 개발자 근무 2020/07 ~ 
-  </li>
-  <li>
-    <a href="https://www.slowalk.co.kr/"><span class="big-tag red">Rsupport</span></a> 프론트엔드 개발자 근무 2020/02 ~ 2020/07
-  </li>
-  <li>
-    <a href="https://virnect.com/"><span class="big-tag purple">Virnect&nbsp;</span></a> 웹 클라이언트 개발자 근무 2019/10 ~ 2020/02
-  </li>
-  <li>
-    <a href="https://www.slowalk.co.kr/"><span class="big-tag">Slowalk</span></a> 풀스택 개발자 근무 2016/06 ~ 2019/4 퇴사
-  </li>
-</ul>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        <a href="https://www.bmsmile.com/"><span class="big-tag orange">BMSMILE</span></a>
+      </td>
+      <td>
+        웹 프론트엔드 개발자 근무
+      </td>
+      <td>
+        2020/07 ~ 2020/12
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://www.slowalk.co.kr/"><span class="big-tag red">Rsupport</span></a>
+      </td>
+      <td>
+        웹 프론트엔드 개발자 근무
+      </td>
+      <td>
+        2020/02 ~ 2020/07
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://virnect.com/"><span class="big-tag purple">Virnect</span></a>
+      </td>
+      <td>
+        웹 프론트엔드 개발자 근무
+      </td>
+      <td>
+        2019/10 ~ 2020/02
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://www.slowalk.co.kr/"><span class="big-tag">Slowalk</span></a>
+      </td>
+      <td>
+        웹 풀스택 개발자 근무
+      </td>
+      <td>
+        2016/06 ~ 2019/04
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 <br>
 
