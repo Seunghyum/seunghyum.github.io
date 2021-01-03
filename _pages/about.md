@@ -114,14 +114,14 @@ gallery_Pethroom:
 > [중급](#){: .btn .btn--small .btn--info} 중간 규모 프로그램 및 시스템을 개발할 수 있으며, 주요 이슈 트러블슈팅을 할 수 있을 정도로 내부구조에 대해 이해하고 있음<br>
 > [고급](#){: .btn .btn--small .btn--danger} 대규모 프로그램 및 시스템을 참고사항(책/인터넷) 없이 개발할 수 있으며, 일반적이지 않은 난해한 부분도 일부 참고를 통해 개발할 수 있음 
 
-- Language : [Javascript](#){: .btn .btn--small .btn--info} [Node.js](#){: .btn .btn--small .btn--success} [Ruby on Rails](#){: .btn .btn--small .btn--success} [Typescript](#){: .btn .btn--small .btn--success} [R](#){: .btn .btn--small .btn--success} [Python](#){: .btn .btn--small .btn--success}
+- Language : [Javascript](#){: .btn .btn--small .btn--info} [Node.js](#){: .btn .btn--small .btn--success} [Ruby](#){: .btn .btn--small .btn--success} [Typescript](#){: .btn .btn--small .btn--success} [R](#){: .btn .btn--small .btn--success} [Python](#){: .btn .btn--small .btn--success}
 - Frontend : [jQuery](#){: .btn .btn--small .btn--info} [HTML(Pug)&CSS](#){: .btn .btn--small .btn--info} [SASS(SCSS)](#){: .btn .btn--small .btn--info}
   - JS Framework : [Vue.js](#){: .btn .btn--small .btn--info} [React.js](#){: .btn .btn--small .btn--info} 
   - State Store : [Vuex](#){: .btn .btn--small .btn--info}  [Redux](#){: .btn .btn--small .btn--info} [Mobx](#){: .btn .btn--small .btn--success}
   - Data Visaulize : [D3.js](#){: .btn .btn--small .btn--info}
   - ETC : [Puppeteer](#){: .btn .btn--small .btn--info} [Naver Map API](#){: .btn .btn--small .btn--info} [SGIS MAP API](#){: .btn .btn--small .btn--info} [Storybook](#){: .btn .btn--small .btn--info}
-- Database : [MongoDB](#){: .btn .btn--small .btn--info} [MySQL](#){: .btn .btn--small .btn--success} [Oracle](#){: .btn .btn--small .btn--success}
-- OS : [Ubuntu](#){: .btn .btn--small .btn--success} [Centos](#){: .btn .btn--small .btn--success}
+- Database : [MongoDB](#){: .btn .btn--small .btn--info} [MySQL](#){: .btn .btn--small .btn--success}
+- OS : [Ubuntu](#){: .btn .btn--small .btn--success}
 - WebServer : [Nginx](#){: .btn .btn--small .btn--info} [Apache](#){: .btn .btn--small .btn--success}
 - Infra : [Docker](#){: .btn .btn--small .btn--success} [AWS(EC2, S3, RDB, Elastic Beanstalk)](#){: .btn .btn--small .btn--success}
 
