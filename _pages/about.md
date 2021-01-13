@@ -98,11 +98,30 @@ gallery_Pethroom:
     image_path: /assets/images/about/Pethroom/pethroom-0.png
   - url: /assets/images/about/Pethroom/pethroom-1.jpg
     image_path: /assets/images/about/Pethroom/pethroom-1.jpg
-  - url: /assets/images/about/Pethroom/pethroom-2.png
-    image_path: /assets/images/about/Pethroom/pethroom-2.png
   - url: /assets/images/about/Pethroom/pethroom-3.png
     image_path: /assets/images/about/Pethroom/pethroom-3.png
-    
+  - url: /assets/images/about/Pethroom/pethroom-2.png
+    image_path: /assets/images/about/Pethroom/pethroom-2.png
+gallery_Workflow:
+  - url: /assets/images/about/Workflow/Workflow-Storybook-Bit.png
+    image_path: /assets/images/about/Workflow/Workflow-Storybook-Bit.png
+  - url: /assets/images/about/Workflow/work-process.png
+    image_path: /assets/images/about/Workflow/work-process.png
+  - url: /assets/images/about/Workflow/share-process.png
+    image_path: /assets/images/about/Workflow/share-process.png
+  - url: /assets/images/about/Workflow/verdaccio.png
+    image_path: /assets/images/about/Workflow/verdaccio.png
+  - url: /assets/images/about/Workflow/efficiency1.png
+    image_path: /assets/images/about/Workflow/efficiency1.png
+  - url: /assets/images/about/Workflow/efficiency2.png
+    image_path: /assets/images/about/Workflow/efficiency2.png
+gallery_Sewun:
+  - url: /assets/images/about/Sewun/networkmap1.png
+    image_path: /assets/images/about/Sewun/networkmap1.png
+  - url: /assets/images/about/Sewun/networkmap2.png
+    image_path: /assets/images/about/Sewun/networkmap2.png
+  - url: /assets/images/about/Sewun/networkmap3.png
+    image_path: /assets/images/about/Sewun/networkmap3.png
 ---
 
 <br>
@@ -219,7 +238,7 @@ gallery_Pethroom:
       - 고객센터
       - 약관
       - 미션
-    {% include gallery id="gallery_Pethroom" layout="half" %}
+    {% include gallery id="gallery_Pethroom" %}
 
   - [브랜드 페이지 워드프레스 작업](https://www.slowalk.co.kr/)
 
@@ -240,22 +259,37 @@ gallery_Pethroom:
 
 ### 작업내용
 
-  - 프론트엔드 개발자 가이드라인 작성.
-  - Workflow를 개선할 수 있는 툴로 Storybook(Vue.js) 적용 아이디어 제시.
-    > 마이크로 서비스들 간의 기능 & UI 컴포넌트 모듈화를 위해 아이디어를 제시했고 데모서비스를 만들어서 구성원들에게 시연함.<br>
-    > - 시연 : [github-page](https://seunghyum.github.io/VirnectStorybookTest/?path=/story/*)<br>
+- 클라우드 서비스 어드민 페이지 작업
+- Notion에 프론트엔드 개발자 가이드라인 작성. 작업자들간 공유할 컨벤션, 작업방식을 문서화 함.
+- <u>새로운 Workflow 설계</u>
+
+### 새로운 Workflow 설계 
+    
+  - 직접 작성한 노션 글 : [Workflow 설계](https://www.notion.so/Workflow-9208a770012643c5b404376927d313e2) 👈 ***읽어주시면 감사하겠습니다*** 🙏
+  - 문제상황 : SI 작업들을 담당 작업자들이 각자 개발함. 공통된 부분들을 공유하지 않아 비효율성이 발생.
+  - 해결 방법 : Scaffolding 모듈과 컴포넌트 공유 Workflow를 설계 함.
+    - 직접 작성한 관련 글
+      - [Workflow 설계](https://www.notion.so/Workflow-9208a770012643c5b404376927d313e2)
+      - [[Workflow] 프론트엔드 개발조직을 위한 워크플로 설계](https://seunghyum.github.io/workflow/Workflow-Design-for-frontend/#)
+      - [[Scaffold] Scaffold Module 개발](https://seunghyum.github.io/scaffold/Scafflod-Modules/)
+      - [[Tutorial] Storybook과 Bit을 활용한 UI 컴포넌트 관리(Workflow)](https://seunghyum.github.io/frontend/tutorial/workflow/Storybook-bit-simulation/#)
+      - [[Methodology] CDD(Component Driven Development) - 계획(1/2)](https://seunghyum.github.io/frontend/methodology/CDD/#)
+      - [[Methodology] CDD(Component Driven Development) - 테스트(2/2)](https://seunghyum.github.io/frontend/methodology/CDD-2/)
+  - UI 컴포넌트 & 기능모듈 공유 : Vardaccio
+  - UI 컴포넌트 명세서 : Storybook
+  - 상세 스토리 
+    > SI 작업들을 담당 작업자들이 각자 개발함. 공통된 부분들을 공유하지 않아 비효율성이 나타남.
+    > 이 문제를 해결하기 위해 새로운 Workflow 아이디어 제시.
+    > 데모서비스를 만들어서 구성원들에게 시연함.<br>
+    > - 시연 : [데모용 Storybook](https://seunghyum.github.io/VirnectStorybookTest/?path=/story/*)<br>
     > - 발표 내용 : [VirnectStorybookTest](https://github.com/Seunghyum/VirnectStorybookTest) README 페이지 참고<br>
     > - 처음엔 Storybook을 UI 명세서 역할로, [bit](https://bit.dev/)을 도입하여 컴포넌트 공유를 하려고함. [Notion 정리 내용 참고](https://www.notion.so/davemoon/Storybook-Bit-95358959770c4d568d42e08c976183b7) <br>
-    > - 하지만 기능 모듈(ex - ID, Password form validate)을 공유하기엔 부적합하다고 생각하여 verdaccio로 모든 모듈들(UI 컴포넌트 & 기능 모듈)을 관리하고 prefix name space로 관리하는 것으로 설계함.
-  - 협업 아키텍처 설계 : 구축형 Private NPM Registry - [Verdaccio](https://github.com/verdaccio/verdaccio)
+    > - 하지만 기능 모듈(ex - ID, Password form validate)을 공유하기엔 부적합하다고 생각하여 구축형 Private NPM Registry [Verdaccio](https://github.com/verdaccio/verdaccio)로 모든 모듈들(UI 컴포넌트 & 기능 모듈)을 관리하고 prefix name space로 관리하는 것으로 설계함.
     > - [Notion 내용 참고](https://www.notion.so/davemoon/Workflow-9208a770012643c5b404376927d313e2)
     > - 구축형 Private NPM Registry인 Verdaccio를 통해 별도의 비용없이 사내 개발서버에 Verdaccio를 구축하여 코드를 사내망에서만 관리할 수 있게 아이디어를 제시.
-    > - 실제 아키텍처에 반영함.
-- 그밖의 활동
-  - 점심에 샐러드 먹으며 개발하는 Salad Study 라는 그룹을 만듦.
-    - 오픈소스 기여해보기
-    - 사내 작업내용 코드리뷰
-    - [샐러드 주문 자동화 프로젝트 with Puppeteer](https://github.com/Seunghyum/VirnectSaladOrder)
+    > - 전동료에게 문의해보니 2021년 현재 실제 아키텍처에 반영됐다고 함. 🎉🎉
+
+    {% include gallery id="gallery_Workflow" %}
 
 <br>
 
@@ -398,15 +432,7 @@ gallery_Pethroom:
     - 사용한 Skill 또는 지식
       - Skill : D3.js
 
-  <!-- - ### 범죄지도
-    - 토이 프로젝트
-    - 진행기간 : 2019년~(진행중)
-    - 주요내용 : 공공데이터를 활용하여 범죄 통계를 지도 시각화하는 프로젝트.
-    - 본인이 공헌한 점 : 프론트엔드 개발
-    - 사용한 Skill 또는 지식 : 
-      - 지식 : AWS VPC
-      - Skill : Node.js, React.js, Mobx, Parcel, Typescript, Express.js, MySQL, AWS VPC
-    - 깃헙 주소 : [https://github.com/Seunghyum/CrimeMap](https://github.com/Seunghyum/CrimeMap) -->
+  {% include gallery id="gallery_Sewun" %}
 
   - ### Data Lab
     - 서비스 주소 : [https://seunghyum.github.io/data-visualization](https://seunghyum.github.io/data-visualization)

@@ -447,7 +447,7 @@
   </li>
 </ul>
 
-<figure class="half ">
+<figure class="third ">
   
     
       <a href="/assets/images/about/Pethroom/pethroom-0.png">
@@ -462,14 +462,14 @@
     
   
     
-      <a href="/assets/images/about/Pethroom/pethroom-2.png">
-        <img src="/assets/images/about/Pethroom/pethroom-2.png" alt="" />
+      <a href="/assets/images/about/Pethroom/pethroom-3.png">
+        <img src="/assets/images/about/Pethroom/pethroom-3.png" alt="" />
       </a>
     
   
     
-      <a href="/assets/images/about/Pethroom/pethroom-3.png">
-        <img src="/assets/images/about/Pethroom/pethroom-3.png" alt="" />
+      <a href="/assets/images/about/Pethroom/pethroom-2.png">
+        <img src="/assets/images/about/Pethroom/pethroom-2.png" alt="" />
       </a>
     
   
@@ -501,39 +501,90 @@
 <h3 id="작업내용-2">작업내용</h3>
 
 <ul>
-  <li>프론트엔드 개발자 가이드라인 작성.</li>
-  <li>Workflow를 개선할 수 있는 툴로 Storybook(Vue.js) 적용 아이디어 제시.
-    <blockquote>
-      <p>마이크로 서비스들 간의 기능 &amp; UI 컴포넌트 모듈화를 위해 아이디어를 제시했고 데모서비스를 만들어서 구성원들에게 시연함.<br /></p>
-      <ul>
-        <li>시연 : <a href="https://seunghyum.github.io/VirnectStorybookTest/?path=/story/*">github-page</a><br /></li>
-        <li>발표 내용 : <a href="https://github.com/Seunghyum/VirnectStorybookTest">VirnectStorybookTest</a> README 페이지 참고<br /></li>
-        <li>처음엔 Storybook을 UI 명세서 역할로, <a href="https://bit.dev/">bit</a>을 도입하여 컴포넌트 공유를 하려고함. <a href="https://www.notion.so/davemoon/Storybook-Bit-95358959770c4d568d42e08c976183b7">Notion 정리 내용 참고</a> <br /></li>
-        <li>하지만 기능 모듈(ex - ID, Password form validate)을 공유하기엔 부적합하다고 생각하여 verdaccio로 모든 모듈들(UI 컴포넌트 &amp; 기능 모듈)을 관리하고 prefix name space로 관리하는 것으로 설계함.</li>
-      </ul>
-    </blockquote>
-  </li>
-  <li>협업 아키텍처 설계 : 구축형 Private NPM Registry - <a href="https://github.com/verdaccio/verdaccio">Verdaccio</a>
-    <blockquote>
-      <ul>
-        <li><a href="https://www.notion.so/davemoon/Workflow-9208a770012643c5b404376927d313e2">Notion 내용 참고</a></li>
-        <li>구축형 Private NPM Registry인 Verdaccio를 통해 별도의 비용없이 사내 개발서버에 Verdaccio를 구축하여 코드를 사내망에서만 관리할 수 있게 아이디어를 제시.</li>
-        <li>실제 아키텍처에 반영함.</li>
-      </ul>
-    </blockquote>
-  </li>
-  <li>그밖의 활동
+  <li>클라우드 서비스 어드민 페이지 작업</li>
+  <li>Notion에 프론트엔드 개발자 가이드라인 작성. 작업자들간 공유할 컨벤션, 작업방식을 문서화 함.</li>
+  <li><u>새로운 Workflow 설계</u></li>
+</ul>
+
+<h3 id="새로운-workflow-설계">새로운 Workflow 설계</h3>
+
+<ul>
+  <li>직접 작성한 노션 글 : <a href="https://www.notion.so/Workflow-9208a770012643c5b404376927d313e2">Workflow 설계</a> 👈 <strong><em>읽어주시면 감사하겠습니다</em></strong> 🙏</li>
+  <li>문제상황 : SI 작업들을 담당 작업자들이 각자 개발함. 공통된 부분들을 공유하지 않아 비효율성이 발생.</li>
+  <li>해결 방법 : Scaffolding 모듈과 컴포넌트 공유 Workflow를 설계 함.
     <ul>
-      <li>점심에 샐러드 먹으며 개발하는 Salad Study 라는 그룹을 만듦.
+      <li>직접 작성한 관련 글
         <ul>
-          <li>오픈소스 기여해보기</li>
-          <li>사내 작업내용 코드리뷰</li>
-          <li><a href="https://github.com/Seunghyum/VirnectSaladOrder">샐러드 주문 자동화 프로젝트 with Puppeteer</a></li>
+          <li><a href="https://www.notion.so/Workflow-9208a770012643c5b404376927d313e2">Workflow 설계</a></li>
+          <li><a href="https://seunghyum.github.io/workflow/Workflow-Design-for-frontend/#">[Workflow] 프론트엔드 개발조직을 위한 워크플로 설계</a></li>
+          <li><a href="https://seunghyum.github.io/scaffold/Scafflod-Modules/">[Scaffold] Scaffold Module 개발</a></li>
+          <li><a href="https://seunghyum.github.io/frontend/tutorial/workflow/Storybook-bit-simulation/#">[Tutorial] Storybook과 Bit을 활용한 UI 컴포넌트 관리(Workflow)</a></li>
+          <li><a href="https://seunghyum.github.io/frontend/methodology/CDD/#">[Methodology] CDD(Component Driven Development) - 계획(1/2)</a></li>
+          <li><a href="https://seunghyum.github.io/frontend/methodology/CDD-2/">[Methodology] CDD(Component Driven Development) - 테스트(2/2)</a></li>
         </ul>
       </li>
     </ul>
   </li>
+  <li>UI 컴포넌트 &amp; 기능모듈 공유 : Vardaccio</li>
+  <li>UI 컴포넌트 명세서 : Storybook</li>
+  <li>상세 스토리
+    <blockquote>
+      <p>SI 작업들을 담당 작업자들이 각자 개발함. 공통된 부분들을 공유하지 않아 비효율성이 나타남.
+이 문제를 해결하기 위해 새로운 Workflow 아이디어 제시.
+데모서비스를 만들어서 구성원들에게 시연함.<br /></p>
+      <ul>
+        <li>시연 : <a href="https://seunghyum.github.io/VirnectStorybookTest/?path=/story/*">데모용 Storybook</a><br /></li>
+        <li>발표 내용 : <a href="https://github.com/Seunghyum/VirnectStorybookTest">VirnectStorybookTest</a> README 페이지 참고<br /></li>
+        <li>처음엔 Storybook을 UI 명세서 역할로, <a href="https://bit.dev/">bit</a>을 도입하여 컴포넌트 공유를 하려고함. <a href="https://www.notion.so/davemoon/Storybook-Bit-95358959770c4d568d42e08c976183b7">Notion 정리 내용 참고</a> <br /></li>
+        <li>하지만 기능 모듈(ex - ID, Password form validate)을 공유하기엔 부적합하다고 생각하여 구축형 Private NPM Registry <a href="https://github.com/verdaccio/verdaccio">Verdaccio</a>로 모든 모듈들(UI 컴포넌트 &amp; 기능 모듈)을 관리하고 prefix name space로 관리하는 것으로 설계함.</li>
+        <li><a href="https://www.notion.so/davemoon/Workflow-9208a770012643c5b404376927d313e2">Notion 내용 참고</a></li>
+        <li>구축형 Private NPM Registry인 Verdaccio를 통해 별도의 비용없이 사내 개발서버에 Verdaccio를 구축하여 코드를 사내망에서만 관리할 수 있게 아이디어를 제시.</li>
+        <li>전동료에게 문의해보니 2021년 현재 실제 아키텍처에 반영됐다고 함. 🎉🎉</li>
+      </ul>
+    </blockquote>
+  </li>
 </ul>
+
+<figure class="third ">
+  
+    
+      <a href="/assets/images/about/Workflow/Workflow-Storybook-Bit.png">
+        <img src="/assets/images/about/Workflow/Workflow-Storybook-Bit.png" alt="" />
+      </a>
+    
+  
+    
+      <a href="/assets/images/about/Workflow/work-process.png">
+        <img src="/assets/images/about/Workflow/work-process.png" alt="" />
+      </a>
+    
+  
+    
+      <a href="/assets/images/about/Workflow/share-process.png">
+        <img src="/assets/images/about/Workflow/share-process.png" alt="" />
+      </a>
+    
+  
+    
+      <a href="/assets/images/about/Workflow/verdaccio.png">
+        <img src="/assets/images/about/Workflow/verdaccio.png" alt="" />
+      </a>
+    
+  
+    
+      <a href="/assets/images/about/Workflow/efficiency1.png">
+        <img src="/assets/images/about/Workflow/efficiency1.png" alt="" />
+      </a>
+    
+  
+    
+      <a href="/assets/images/about/Workflow/efficiency2.png">
+        <img src="/assets/images/about/Workflow/efficiency2.png" alt="" />
+      </a>
+    
+  
+  
+</figure>
 
 <p><br /></p>
 
@@ -848,15 +899,28 @@
   </li>
 </ul>
 
-<p><!-- - ### 범죄지도
-    - 토이 프로젝트
-    - 진행기간 : 2019년~(진행중)
-    - 주요내용 : 공공데이터를 활용하여 범죄 통계를 지도 시각화하는 프로젝트.
-    - 본인이 공헌한 점 : 프론트엔드 개발
-    - 사용한 Skill 또는 지식 : 
-      - 지식 : AWS VPC
-      - Skill : Node.js, React.js, Mobx, Parcel, Typescript, Express.js, MySQL, AWS VPC
-    - 깃헙 주소 : [https://github.com/Seunghyum/CrimeMap](https://github.com/Seunghyum/CrimeMap) --></p>
+<figure class="third ">
+  
+    
+      <a href="/assets/images/about/Sewun/networkmap1.png">
+        <img src="/assets/images/about/Sewun/networkmap1.png" alt="" />
+      </a>
+    
+  
+    
+      <a href="/assets/images/about/Sewun/networkmap2.png">
+        <img src="/assets/images/about/Sewun/networkmap2.png" alt="" />
+      </a>
+    
+  
+    
+      <a href="/assets/images/about/Sewun/networkmap3.png">
+        <img src="/assets/images/about/Sewun/networkmap3.png" alt="" />
+      </a>
+    
+  
+  
+</figure>
 
 <ul>
   <li>
