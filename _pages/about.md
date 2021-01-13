@@ -119,7 +119,7 @@ gallery_Pethroom:
   - JS Framework : [Vue.js](#){: .btn .btn--small .btn--info} [React.js](#){: .btn .btn--small .btn--info} 
   - State Store : [Vuex](#){: .btn .btn--small .btn--info}  [Redux](#){: .btn .btn--small .btn--info} [Mobx](#){: .btn .btn--small .btn--success}
   - Data Visaulize : [D3.js](#){: .btn .btn--small .btn--info}
-  - ETC : [Puppeteer](#){: .btn .btn--small .btn--info} [Naver Map API](#){: .btn .btn--small .btn--info} [SGIS MAP API](#){: .btn .btn--small .btn--info} [Storybook](#){: .btn .btn--small .btn--info}
+  - ETC : [Puppeteer](#){: .btn .btn--small .btn--info} [Naver Map API](#){: .btn .btn--small .btn--info} [SGIS MAP API](#){: .btn .btn--small .btn--info} [Storybook](#){: .btn .btn--small .btn--info} [Styled-Components](#){: .btn .btn--small .btn--success}
 - Database : [MongoDB](#){: .btn .btn--small .btn--info} [MySQL](#){: .btn .btn--small .btn--success}
 - OS : [Ubuntu](#){: .btn .btn--small .btn--success}
 - WebServer : [Nginx](#){: .btn .btn--small .btn--info} [Apache](#){: .btn .btn--small .btn--success}
@@ -385,7 +385,8 @@ gallery_Pethroom:
     - 주요 기능 : 
       - 채팅창 들어오고 나갈때 상태 메세지
     - 사용한 Skill 또는 지식
-      - Frontend : React.js, Mobx
+      - Frontend : React.js, Mobx, Socket.io-client
+      - Backend : Node.js, Socket.io
 
   {% include gallery id="gallery_ChatApp" %}
 
