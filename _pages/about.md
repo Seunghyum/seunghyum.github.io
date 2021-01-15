@@ -138,7 +138,7 @@ gallery_Sewun:
   - JS Framework : [Vue.js](#){: .btn .btn--small .btn--info} [React.js](#){: .btn .btn--small .btn--info} 
   - State Store : [Vuex](#){: .btn .btn--small .btn--info}  [Redux](#){: .btn .btn--small .btn--info} [Mobx](#){: .btn .btn--small .btn--success}
   - Data Visaulize : [D3.js](#){: .btn .btn--small .btn--info}
-  - ETC : [Puppeteer](#){: .btn .btn--small .btn--info} [Naver Map API](#){: .btn .btn--small .btn--info} [SGIS MAP API](#){: .btn .btn--small .btn--info} [Storybook](#){: .btn .btn--small .btn--info} [Styled-Components](#){: .btn .btn--small .btn--success}
+  - ETC : [Puppeteer](#){: .btn .btn--small .btn--info} [Naver Map API](#){: .btn .btn--small .btn--info} [SGIS MAP API](#){: .btn .btn--small .btn--info} [Storybook](#){: .btn .btn--small .btn--info} [Styled-Components](#){: .btn .btn--small .btn--success} [Socket.io](#){: .btn .btn--small .btn--success}
 - Database : [MongoDB](#){: .btn .btn--small .btn--info} [MySQL](#){: .btn .btn--small .btn--success}
 - OS : [Ubuntu](#){: .btn .btn--small .btn--success}
 - WebServer : [Nginx](#){: .btn .btn--small .btn--info} [Apache](#){: .btn .btn--small .btn--success}
@@ -435,12 +435,13 @@ gallery_Sewun:
   {% include gallery id="gallery_Sewun" %}
 
   - ### Data Lab
-    - 서비스 주소 : [https://seunghyum.github.io/data-visualization](https://seunghyum.github.io/data-visualization)
+    - 서비스 주소 : [https://seunghyum.github.io/data-visualization](https://seunghyum.github.io/data-visualization/finedust/sd)
     - 토이 프로젝트
     - 진행기간 : 2019년~(진행중)
     - 주요내용 : 공공데이터를 활용하여 이전에 활용했던 기술들을 아카이빙.
     - 본인이 공헌한 점 : 풀스택
     - 사용한 Skill : D3.js, GeoJson, Image Sprite
+    - 관련 내용 : [SGIS에서 받은 지도데이터(.shp)를 geojson으로 변경하는 작업](https://github.com/Seunghyum/SGIS-shpToGeojson)
     - 깃헙 주소 : [https://github.com/Seunghyum/data-visualization](https://github.com/Seunghyum/data-visualization)
 
 {% include gallery id="gallery_data_lab" %}
