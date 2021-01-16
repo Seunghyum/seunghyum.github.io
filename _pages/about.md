@@ -250,7 +250,8 @@ gallery_Sewun:
   - 퍼포먼스 향상을 위한 React Lazy Load Component 개발 - [Github 링크](https://github.com/Seunghyum/react-lazy-load-wrapper)
   - 렌더링 속도 향상을 위한 에셋 분석툴 도입 제안(Webpack Bundle Analyzer)
   - 수습과제 채팅앱 개발 by Socket.io - [Github 링크](https://github.com/Seunghyum/react-chat-app)
-
+  - 회사 서비스 관련 기술 공부하며 작성한 블로그 글 : [[WebRTC] 공부](https://seunghyum.github.io/webrtc/WebRTC/#)
+  - 수습 발표
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/s7kdRx1EfElf5O" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/ssusere2c254/presentation-after-intern" title="presentation after intern" target="_blank">presentation after intern</a> </strong> from <strong><a href="https://www.slideshare.net/ssusere2c254" target="_blank">승현 문</a></strong> </div>
 
 <hr style="border-top: 1px dashed silverd">
