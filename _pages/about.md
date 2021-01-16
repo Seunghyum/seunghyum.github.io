@@ -220,9 +220,9 @@ gallery_Sewun:
   - <h3>Pethroom(페스룸) - 반려동물 브랜드 쇼핑몰</h3>
     - 설명: 멤버십, 혜택 등 재구매 고객을 확보하는데 특화된 커머스 서비스
     - 담당업무 : 리뉴얼 웹 사이트 프론트엔드 개발 전담, 웹뷰 제작
-    - 기술 스택 : React.js(Hooks), Redux, Storybook, Cloudfront, Route53
+    - 기술 스택 : React.js(Hooks), Redux, Redux-Saga, Storybook, Cloudfront, Route53, Styled-Components, Firebase Auth
     - 기능 & 페이지
-      - 계정 & 인증(Firebase)
+      - 계정 & 인증(Firebase Auth)
       - 홈
       - 스토어
       - 멤버십
@@ -231,8 +231,8 @@ gallery_Sewun:
       - 장바구니
       - 반려동물 조회/등록/수정/삭제
       - 체험단 •쿠폰 •포인트
-      - 주소 관리(Daum Address API)
-      - 주문 & 결제 
+      - 주소 관리 (Daum Address API)
+      - 주문 & 결제(INICIS) 
       - 주문 관리
       - 리뷰
       - 고객센터
