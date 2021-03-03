@@ -122,6 +122,9 @@ gallery_Sewun:
     image_path: /assets/images/about/Sewun/networkmap2.png
   - url: /assets/images/about/Sewun/networkmap3.png
     image_path: /assets/images/about/Sewun/networkmap3.png
+gallery_infinite_scroll:
+  - url: /assets/images/about/infinite-scroll.gif
+    image_path: /assets/images/about/infinite-scroll.gif
 ---
 
 <br>
@@ -136,9 +139,11 @@ gallery_Sewun:
 - Language : [Javascript](#){: .btn .btn--small .btn--info} [Node.js](#){: .btn .btn--small .btn--success} [Ruby](#){: .btn .btn--small .btn--success} [Typescript](#){: .btn .btn--small .btn--success} [R](#){: .btn .btn--small .btn--success} [Python](#){: .btn .btn--small .btn--success}
 - Frontend : [jQuery](#){: .btn .btn--small .btn--info} [HTML(Pug)&CSS](#){: .btn .btn--small .btn--info} [SASS(SCSS)](#){: .btn .btn--small .btn--info}
   - JS Framework : [Vue.js](#){: .btn .btn--small .btn--info} [React.js](#){: .btn .btn--small .btn--info} 
-  - State Store : [Vuex](#){: .btn .btn--small .btn--info}  [Redux](#){: .btn .btn--small .btn--info} [Mobx](#){: .btn .btn--small .btn--success}
+  - State Management : [Vuex](#){: .btn .btn--small .btn--info}  [Redux](#){: .btn .btn--small .btn--info} [Mobx](#){: .btn .btn--small .btn--success} 
+  - Data synchronization & management lib : [React-Query](#){: .btn .btn--small .btn--success} 
   - Data Visaulize : [D3.js](#){: .btn .btn--small .btn--info}
-  - Test Lib : [Jest](#){: .btn .btn--small .btn--success} [Jest-DOM](#){: .btn .btn--small .btn--success}
+  - Test Lib : [Jest](#){: .btn .btn--small .btn--success} [react-testing-library](#){: .btn .btn--small .btn--success}
+  - Bundler : [Webpack](#){: .btn .btn--small .btn--info} [Parcel](#){: .btn .btn--small .btn--success} [Snowpack](#){: .btn .btn--small .btn--success}
   - ETC : [Puppeteer](#){: .btn .btn--small .btn--info} [Naver Map API](#){: .btn .btn--small .btn--info} [SGIS MAP API](#){: .btn .btn--small .btn--info} [Storybook](#){: .btn .btn--small .btn--info} [Styled-Components](#){: .btn .btn--small .btn--success} [Socket.io](#){: .btn .btn--small .btn--success}
 - Database : [MongoDB](#){: .btn .btn--small .btn--info} [MySQL](#){: .btn .btn--small .btn--success}
 - OS : [Ubuntu](#){: .btn .btn--small .btn--success}
@@ -406,12 +411,27 @@ gallery_Sewun:
 
 ## 개인프로젝트 
 
+  - ### TDD-BDD-case-study
+    - 진행기간 : 2021
+    - [서비스 주소](https://seunghyum.github.io/TDD-BDD-case-study/)
+    - [깃헙 주소](https://github.com/Seunghyum/TDD-BDD-case-study)
+    - 내용 : TDD, BDD를 공부해보며 infinite 스크롤 개발에 적용
+    - 사용한 Skill 또는 지식
+      - TDD & BDD
+      - Js framework : React
+      - Data synchronization & management lib : React-Query
+      - Test lib : Jest, Jest-Dom, testing-library/react
+      - Bundler : Webpack
+      - Web API : IntersectionObserver, Fetch
+      - Style : Styled-component
+      - Formatting : ESlint & TSlint, Prettier, Husky
+      - CI/CD Tool : Travis CI, Coveralls
+  {% include gallery id="gallery_infinite_scroll" %}
   - ### 지뢰찾기 웹게임
     - [서비스 주소](https://seunghyum.github.io/mine-sweeper/)
     - [깃헙 주소](https://github.com/Seunghyum/mine-sweeper)
     - 진행기간 : 2020
-    - 사용한 Skill 또는 지식
-      - Frontend : Typescript, React.js, Mobx
+    - 사용한 Skill 또는 지식 : Typescript, React.js, Mobx
 
   {% include gallery id="gallery_Mine" %}
 
