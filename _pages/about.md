@@ -142,7 +142,9 @@ gallery_infinite_scroll:
   - State Management : [Vuex](#){: .btn .btn--small .btn--info}  [Redux](#){: .btn .btn--small .btn--info} [Mobx](#){: .btn .btn--small .btn--success} 
   - Data synchronization & management lib : [React-Query](#){: .btn .btn--small .btn--success} 
   - Data Visaulize : [D3.js](#){: .btn .btn--small .btn--info}
-  - Test Lib : [Jest](#){: .btn .btn--small .btn--success} [react-testing-library](#){: .btn .btn--small .btn--success}
+  - Test
+    - Unit Test Lib : [Jest](#){: .btn .btn--small .btn--success} [react-testing-library](#){: .btn .btn--small .btn--success}
+    - E2E Test Lib : [Cypress](#){: .btn .btn--small .btn--success}
   - Bundler : [Webpack](#){: .btn .btn--small .btn--info} [Parcel](#){: .btn .btn--small .btn--success} [Snowpack](#){: .btn .btn--small .btn--success}
   - ETC : [Puppeteer](#){: .btn .btn--small .btn--info} [Naver Map API](#){: .btn .btn--small .btn--info} [SGIS MAP API](#){: .btn .btn--small .btn--info} [Storybook](#){: .btn .btn--small .btn--info} [Styled-Components](#){: .btn .btn--small .btn--success} [Socket.io](#){: .btn .btn--small .btn--success}
 - Database : [MongoDB](#){: .btn .btn--small .btn--info} [MySQL](#){: .btn .btn--small .btn--success}
@@ -415,12 +417,14 @@ gallery_infinite_scroll:
     - 진행기간 : 2021
     - [서비스 주소](https://seunghyum.github.io/TDD-BDD-case-study/)
     - [깃헙 주소](https://github.com/Seunghyum/TDD-BDD-case-study)
-    - 내용 : TDD, BDD를 공부해보며 infinite 스크롤 개발에 적용
+    - 내용 : TDD, BDD를 공부해보며 infinite 스크롤 개발에 적용. README에 내용 작성
     - 사용한 Skill 또는 지식
       - TDD & BDD
       - Js framework : React
       - Data synchronization & management lib : React-Query
-      - Test lib : Jest, Jest-Dom, testing-library/react
+      - Test lib
+        - Unit Test : Jest, Jest-Dom, testing-library/react
+        - E2E Test : Cypress(E2E)
       - Bundler : Webpack
       - Web API : IntersectionObserver, Fetch
       - Style : Styled-component
