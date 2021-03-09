@@ -228,7 +228,7 @@ gallery_infinite_scroll:
   - <h3>Pethroom(페스룸) - 반려동물 브랜드 쇼핑몰</h3>
     - 설명: 멤버십, 혜택 등 재구매 고객을 확보하는데 특화된 커머스 서비스
     - 담당업무 : 리뉴얼 웹 사이트 프론트엔드 개발 전담, 웹뷰 제작
-    - 기술 스택 : React.js(Hooks), Redux, Redux-Saga, Storybook, Cloudfront, Route53, Styled-Components, Firebase Auth
+    - 기술 스택 : React.js(Hooks), Redux, Redux-Saga, Storybook, Cloudfront, Route53, Styled-Components, Firebase Auth, Webpack
     - 기능 & 페이지
       - 계정 & 인증(Firebase Auth)
       - 홈
@@ -253,10 +253,10 @@ gallery_infinite_scroll:
 <h2>in RSUPPORT <span class="big-tag red">RSUPPORT</span></h2>
 
 ### 작업내용
-
-  - Lighthouse를 활용한 모든 웹페이지 성능측정 스크립트 작업 [Github 링크](https://github.com/Seunghyum/lighthouse-report-script)
-  - 퍼포먼스 향상을 위한 React Lazy Load Component 개발 - [Github 링크](https://github.com/Seunghyum/react-lazy-load-wrapper)
-  - 렌더링 속도 향상을 위한 에셋 분석툴 도입 제안(Webpack Bundle Analyzer)
+  - Reemote Meeting 유지보수
+    - Reemote Meeting 퍼포먼스 향상을 위한 React Lazy Load Component 개발 [Github 링크](https://github.com/Seunghyum/react-lazy-load-wrapper)
+    - Lighthouse를 활용한 모든 웹페이지 성능측정 스크립트 작업 [Github 링크](https://github.com/Seunghyum/lighthouse-report-script)
+    - 렌더링 속도 향상을 위한 에셋 분석툴 도입 제안(Webpack Bundle Analyzer)
   - 수습과제 채팅앱 개발 by Socket.io - [Github 링크](https://github.com/Seunghyum/react-chat-app)
   - 회사 서비스 관련 기술 공부하며 작성한 블로그 글 : [[WebRTC] 공부](https://seunghyum.github.io/webrtc/WebRTC/#)
   - 수습 발표
@@ -267,10 +267,12 @@ gallery_infinite_scroll:
 <h2>in Virnect <span class="big-tag purple">Virnect</span></h2>
 
 ### 작업내용
-
-- 클라우드 서비스 어드민 페이지 작업
+- 클라우드용 서비스 프론트엔드 개발
+- 새로운 워크 플로우 제안 - https://www.notion.so/Workflow-9208a770012643c5b404376927d313e2
+  - vardaccio 를 이용한 private npm registry  구축. 
+  - vardaccio를 활용하여 기능 모듈, UI 컴포넌트 공유
+  - storybook을 개발 명세서로 활용.
 - Notion에 프론트엔드 개발자 가이드라인 작성. 작업자들간 공유할 컨벤션, 작업방식을 문서화 함.
-- <u>새로운 Workflow 설계</u>
 
 ### 새로운 Workflow 설계 
     
@@ -318,7 +320,12 @@ gallery_infinite_scroll:
 
   - <h3> [서울시금천직장맘지원센터] 금천직장맘 홈페이지 개발 <span class="big-tag">Slowalk</span></h3>
     - 담당업무 : 풀스택 개발
-    - 주요기능 : 상담 게시판 페이지, 관리자 페이지
+    - 주요내용
+      - 관리자(상담사)와 고민있는 직장맘들을 위한 상담 서비스
+      - 관리자 페이지 (회원관리, 배너 관리, 문의 & 답변 관리, 알림 이메일)
+      - 게시판 기능(CRUD), 댓글 기능
+      - 회원 관리(로그인, 회원가입, 비밀번호 찾기, 아이디 찾기)
+      - Static 페이지들(서비스 소개, 상담사 소개 ...)
     - 백엔드 : Ruby on Rails
     - 프론트엔드 : Jquery, HTML&CSS
     - DB : MySQL 
@@ -334,6 +341,7 @@ gallery_infinite_scroll:
       - 정답셋 데이터 생성을 위한 설문조사 형태의 페이지 제작
     - 백엔드 : Ruby on Rails
     - 프론트엔드 : Jquery, HTML&CSS
+    - Bundler : Webpack
     - DB : MongoDB
     - 웹서버 : Nginx
     - infra : Docker
@@ -343,7 +351,7 @@ gallery_infinite_scroll:
     - 서비스 주소 : [http://ncrs.cancer.go.kr/csgis](http://ncrs.cancer.go.kr/csgis)
     - 담당업무 : 
       - 풀스택 개발
-      - 지도와 차트를 통한 데이터 시각화
+      - 지도기반 데이터 시각화와 차트를 통한 대시보드 개발
       - 클라이언트의 IDC의 서버세팅규정에 따라 서버 세팅(RedHat)
     - 백엔드 : Node.js
     - 프론트엔드 : Vue.js
@@ -351,6 +359,7 @@ gallery_infinite_scroll:
     - OS : Red hat(CentOS 7)
     - 웹서버 : Apache(중앙서버), Nginx(배포서버)
     - infra : Docker
+    - Bundler : Webpack
     - 지도 API : SGIS MAP API
     - PDF 다운로드 : Puppeteer
     - 실시간 미세먼지 데이터 : 공공데이터포털 실시간 미세먼지 API
@@ -372,12 +381,12 @@ gallery_infinite_scroll:
 
   - <h3> [서울대학교산학협력단] 미세먼지 대기건강지수 웹 페이지, 설문조사 웹 페이지 개발 <span class="big-tag">Slowalk</span></h3>
     - 서비스 주소 : 클라이언트 내부 검토중이라 아직 미공개.
-    - 담당업무 : 
-      - 풀스택 개발
-      - 지도 위주의  데이터 시각화
+    - 담당업무 :
+      - 지도기반 데이터 시각화와 차트를 통한 대시보드 개발
       - 데이터 시각화 효용성을 측정하기 위한 설문조사 웹 페이지 개발
       - 유저의 현재위치(GPS)에 해당하는 데이터 값 출력
-      - 서울대학교 산악협력단의 요청으로 서울대 대학원에서 대학원생들과 교수님들을 대상으로 "인터렉티브 데이터 시각화"에 대한 발표를 진행함.
+      - 서울대학교 산악협력단의 요청으로 서울대 대학원에서 대학원생들과 교수님들을 대상으로 “인터렉티브 데이터 시각화”에 대한 발표를 진행함.
+      - 시각화의 효용성에 대한 설문조사 웹 페이지 개발
     - 백엔드 : Node.js
     - 프론트엔드 : Vue.js
     - DB : MongoDB
@@ -455,6 +464,7 @@ gallery_infinite_scroll:
     - 서비스 주소 : 아직 일반 공개가 안됨.
     - 주요내용 : 세운상가의 네트워크 데이터를 D3를 이용하여 네트워크 맵으로 표현한 프로젝트. 프리랜서로 진행한 프로젝트
     - 본인이 공헌한 점 : sigma.js로 되어있던 코드를 D3.js로 바꿈.
+    - 기능 추가 - 메뉴, 노드 포커싱 등
     - 사용한 Skill 또는 지식
       - Skill : D3.js
 
@@ -519,7 +529,7 @@ gallery_infinite_scroll:
       - CRUD 게시판
       - 교수 인기투표
       - 학교 홈페이지 크롤링(전화번호부)
-      - 수강신청 리허설
+      - 수강신청 리허설 - 수강신청기간 전 수강신청을 연습해볼 수 있는 페이지 개발. 수강신청 페이지의 assets들을 그대로 따와서 클론 페이지를 개발하여 배포함.
     - 성과 : Professor101 이라는 교수 인기투표 서비스는 학기초 수강신청 시기에 배포하여 좋아요 100여개 받음
     - 본인이 공헌한 점 : 풀스택 개발.
     - 사용한 Skill 또는 지식 : 
@@ -534,7 +544,7 @@ gallery_infinite_scroll:
     - 진행기간 : 2017년
     - 주요내용 : 단국대 국제학부 사물함 & 중고책 온라인 예약서비스. 자리예약 기능. 
     - 성과 : 국제학부 200여명 대상으로 실제 서비스 함.
-    - 본인이 공헌한 점 : 풀스택 개발.
+    - 본인이 공헌한 점 : 풀스택 개발. 오프라인으로 받는 학과사물함 접수, 중고전공서적 판매를 온라인으로 옮김. 학생회와 협업하여 실제 국제학부 200여명 대상으로 실제 서비스 함.
     - 사용한 Skill 또는 지식 : 
       - 지식 : MVC 모델, Queue
       - Skill : Ruby On Rails, HTML&CSS, jQuery, MySQL, AWS EC2/S3, GitHub
