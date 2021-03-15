@@ -125,6 +125,11 @@ gallery_Sewun:
 gallery_infinite_scroll:
   - url: /assets/images/about/infinite-scroll.gif
     image_path: /assets/images/about/infinite-scroll.gif
+gallery_interactive_creadit_card:
+  - url: /assets/images/about/interactive-credit-card-form-cvv.gif
+    image_path: /assets/images/about/interactive-credit-card-form-cvv.gif
+  - url: /assets/images/about/interactive-credit-card-form-number.gif
+    image_path: /assets/images/about/interactive-credit-card-form-number.gif
 ---
 
 <br>
@@ -421,6 +426,17 @@ gallery_infinite_scroll:
 <hr>
 
 ## 개인프로젝트 
+
+  - ### 인터렉티브 신용카드 결제 폼
+    - 진행기간 : 2021
+    - [서비스 주소](https://seunghyum.github.io/interactive-credit-card-form/)
+    - [깃헙 주소](https://github.com/Seunghyum/interactive-credit-card-form)
+    - 내용 : 인터렉티브 신용카드 결제 폼 구현
+    - 사용한 Skill 또는 지식
+      - Js framework : React(Hooks)
+      - Bundler : Webpack
+      - Formatting : ESlint, Prettier, Husky
+  {% include gallery id="gallery_interactive_creadit_card" %}
 
   - ### TDD-BDD-case-study
     - 진행기간 : 2021
