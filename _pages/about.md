@@ -233,7 +233,7 @@ gallery_interactive_creadit_card:
   - <h3>Pethroom(페스룸) - 반려동물 브랜드 쇼핑몰</h3>
     - 설명: 멤버십, 혜택 등 재구매 고객을 확보하는데 특화된 커머스 서비스
     - 담당업무 : 리뉴얼 웹 사이트 프론트엔드 개발 전담, 웹뷰 제작
-    - 기술 스택 : React.js(Hooks), Redux, Redux-Saga, Storybook, Cloudfront, Route53, Styled-Components, Firebase Auth, Webpack
+    - 기술 스택 : Typescript, React.js(Hooks), Redux, Redux-Saga, Storybook, Cloudfront, Route53, Styled-Components, Firebase Auth, Webpack
     - 기능 & 페이지
       - 계정 & 인증(Firebase Auth)
       - 홈
@@ -313,7 +313,6 @@ gallery_interactive_creadit_card:
 
 <h2>in Slowalk <span class="big-tag">Slowalk</span></h2>
 
-  <!-- - ### <한국백혈병어린이재단> 희망별빛 캠페인 원페이지 제작  -->
   - <h3> [한국백혈병어린이재단] 희망별빛 캠페인 원페이지 제작 <span class="big-tag">Slowalk</span></h3>
     - 담당업무 : 풀스택 개발. 간단한 원페이지의 소개 + 행사관련 내용 이메일 발송기능
     - 백엔드 : Ruby on Rails
