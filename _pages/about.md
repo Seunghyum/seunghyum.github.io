@@ -143,7 +143,7 @@ gallery_interactive_creadit_card:
 
 - Language : [Javascript](#){: .btn .btn--small .btn--info} [Node.js](#){: .btn .btn--small .btn--success} [Ruby](#){: .btn .btn--small .btn--success} [Typescript](#){: .btn .btn--small .btn--success} [R](#){: .btn .btn--small .btn--success} [Python](#){: .btn .btn--small .btn--success}
 - Frontend : [jQuery](#){: .btn .btn--small .btn--info} [HTML(Pug)&CSS](#){: .btn .btn--small .btn--info} [SASS(SCSS)](#){: .btn .btn--small .btn--info}
-  - JS Framework : [Vue.js](#){: .btn .btn--small .btn--info} [React.js](#){: .btn .btn--small .btn--info} 
+  - JS Library : [Vue.js](#){: .btn .btn--small .btn--info} [React.js](#){: .btn .btn--small .btn--info} 
   - State Management : [Vuex](#){: .btn .btn--small .btn--info}  [Redux](#){: .btn .btn--small .btn--info} [Mobx](#){: .btn .btn--small .btn--success} 
   - Data synchronization & management lib : [React-Query](#){: .btn .btn--small .btn--success} 
   - Data Visaulize : [D3.js](#){: .btn .btn--small .btn--info}
@@ -176,10 +176,21 @@ gallery_interactive_creadit_card:
   <tbody>
     <tr>
       <td>
-        <a href="https://www.bmsmile.com/"><span class="big-tag orange">BMSMILE</span></a>
+        <a href="https://www.zigbang.com/"><span class="big-tag orange">Zigbang</span></a>
       </td>
       <td>
-        웹 프론트엔드 개발자 근무
+        프론트엔드 개발자
+      </td>
+      <td>
+        2021/05 ~
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://www.bmsmile.com/"><span class="big-tag black">BMSMILE</span></a>
+      </td>
+      <td>
+        웹 프론트엔드 개발자
       </td>
       <td>
         2020/07 ~ 2020/12
@@ -190,7 +201,7 @@ gallery_interactive_creadit_card:
         <a href="https://www.slowalk.co.kr/"><span class="big-tag red">Rsupport</span></a>
       </td>
       <td>
-        웹 프론트엔드 개발자 근무
+        웹 프론트엔드 개발자
       </td>
       <td>
         2020/02 ~ 2020/07
@@ -201,7 +212,7 @@ gallery_interactive_creadit_card:
         <a href="https://virnect.com/"><span class="big-tag purple">Virnect</span></a>
       </td>
       <td>
-        웹 프론트엔드 개발자 근무
+        웹 프론트엔드 개발자
       </td>
       <td>
         2019/10 ~ 2020/02
@@ -212,7 +223,7 @@ gallery_interactive_creadit_card:
         <a href="https://www.slowalk.co.kr/"><span class="big-tag">Slowalk</span></a>
       </td>
       <td>
-        웹 풀스택 개발자 근무
+        웹 풀스택 개발자
       </td>
       <td>
         2016/06 ~ 2019/04
@@ -226,7 +237,24 @@ gallery_interactive_creadit_card:
 
 # 담당 프로젝트 & 업무
 
-<h2>in BMSMILE <span class="big-tag orange">BMSMILE</span></h2>
+<h2>in Zigbang <span class="big-tag orange">Zigbang</span></h2>
+
+### 작업내용
+
+  - <h3>ZAMS - 사용자 행동 로그 관리 시스템</h3>
+    - 설명 : 블로그 글 참고 - [직방이 사용자 행동 로그를 관리하는 방법. ZAMS](https://medium.com/zigbang/%EC%A7%81%EB%B0%A9%EC%9D%B4-%EC%82%AC%EC%9A%A9%EC%9E%90-%ED%96%89%EB%8F%99-%EB%A1%9C%EA%B7%B8%EB%A5%BC-%EA%B4%80%EB%A6%AC%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95-zams-801c49cf0ad1)
+    - 담당업무 : 관리 시스템 페이지, 리포트
+    - 기술 스택 : Nodejs(Typescript), MongoDB, React(Typescript), Apolo, React-DnD, Handlebar
+
+  - <h3>E2E 테스트 도입</h3>
+    - 설명 : 직방 앱 안드로이드 & IOS 앱 E2E 테스트 도입
+    - 담당업무 : 테스트 케이스 추가 및 기기 대응, 리포트 & 알림 개발
+    - 기술 스택 : Nodejs(Typescript), WDIO, Appium, Selenium(GRID 4)
+    - 테스트 커버리지
+      - 딥링크
+      - 로그인
+
+<h2>in BMSMILE <span class="big-tag black">BMSMILE</span></h2>
 
 ### 작업내용
 
@@ -426,13 +454,31 @@ gallery_interactive_creadit_card:
 
 ## 개인프로젝트 
 
+  - ### 연예인 사진 NFT 온라인 응모 플랫폼
+    - 진행기간 : 2022
+    - 서비스 주소 : 아직 일반 공개가 안됨.
+    - 내용 : 연예인의 사진을 NFT로 만들어서 응모할 수 있는 플랫폼 작업
+    - 사용한 Skill 또는 지식
+      - Language : Typescript
+      - JS Library : React v18(Hooks), Next.js, React-Query
+      - Formatting : ESlint, Prettier, Husky
+      - UI Library : Material
+    - 기능
+      - 반응형 웹
+      - 서비스 페이지
+      - 관리자 페이지
+      - 로그인 & 로그아웃(카카오)
+      - 가상화폐(Klayton) 지갑 연결 (Kaikas - chrome extension)
+      - 응모 기능
+
   - ### 인터렉티브 신용카드 결제 폼
     - 진행기간 : 2021
     - [서비스 주소](https://seunghyum.github.io/interactive-credit-card-form/)
     - [깃헙 주소](https://github.com/Seunghyum/interactive-credit-card-form)
     - 내용 : 인터렉티브 신용카드 결제 폼 구현
     - 사용한 Skill 또는 지식
-      - Js framework : React(Hooks)
+      - Language : Typescript
+      - JS Library : React(Hooks)
       - Bundler : Webpack
       - Formatting : ESlint, Prettier, Husky
   {% include gallery id="gallery_interactive_creadit_card" %}
@@ -444,7 +490,8 @@ gallery_interactive_creadit_card:
     - 내용 : TDD, BDD를 공부해보며 infinite 스크롤 개발에 적용. README에 내용 작성
     - 사용한 Skill 또는 지식
       - TDD & BDD
-      - Js framework : React
+      - Language : Typescript
+      - JS Library : React(Hooks)
       - Data synchronization & management lib : React-Query
       - Test lib
         - Unit Test : Jest, Jest-Dom, testing-library/react
@@ -459,7 +506,7 @@ gallery_interactive_creadit_card:
     - [서비스 주소](https://seunghyum.github.io/mine-sweeper/)
     - [깃헙 주소](https://github.com/Seunghyum/mine-sweeper)
     - 진행기간 : 2020
-    - 사용한 Skill 또는 지식 : Typescript, React.js, Mobx
+    - 사용한 Skill 또는 지식 : Typescript, React(Hooks), Mobx
 
   {% include gallery id="gallery_Mine" %}
 
