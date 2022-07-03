@@ -141,21 +141,22 @@ gallery_interactive_creadit_card:
 > [중급](#){: .btn .btn--small .btn--info} 중간 규모 프로그램 및 시스템을 개발할 수 있으며, 주요 이슈 트러블슈팅을 할 수 있을 정도로 내부구조에 대해 이해하고 있음<br>
 > [고급](#){: .btn .btn--small .btn--danger} 대규모 프로그램 및 시스템을 참고사항(책/인터넷) 없이 개발할 수 있으며, 일반적이지 않은 난해한 부분도 일부 참고를 통해 개발할 수 있음 
 
-- Language : [Javascript](#){: .btn .btn--small .btn--info} [Node.js](#){: .btn .btn--small .btn--success} [Ruby](#){: .btn .btn--small .btn--success} [Typescript](#){: .btn .btn--small .btn--success} [R](#){: .btn .btn--small .btn--success} [Python](#){: .btn .btn--small .btn--success}
-- Frontend : [jQuery](#){: .btn .btn--small .btn--info} [HTML(Pug)&CSS](#){: .btn .btn--small .btn--info} [SASS(SCSS)](#){: .btn .btn--small .btn--info}
-  - JS Library : [Vue.js](#){: .btn .btn--small .btn--info} [React.js](#){: .btn .btn--small .btn--info} 
-  - State Management : [Vuex](#){: .btn .btn--small .btn--info}  [Redux](#){: .btn .btn--small .btn--info} [Mobx](#){: .btn .btn--small .btn--success} 
-  - Data synchronization & management lib : [React-Query](#){: .btn .btn--small .btn--success} 
+- Language : [Javascript](#){: .btn .btn--small .btn--info} [Typescript](#){: .btn .btn--small .btn--info} [Node.js](#){: .btn .btn--small .btn--info} [Ruby](#){: .btn .btn--small .btn--success} [R](#){: .btn .btn--small .btn--success} [Python](#){: .btn .btn--small .btn--success}
+- Frontend
+  - JS Library : [React.js](#){: .btn .btn--small .btn--info} [Vue.js](#){: .btn .btn--small .btn--info} [jQuery](#){: .btn .btn--small .btn--info}
+  - State Management : [Redux](#){: .btn .btn--small .btn--info} [Vuex](#){: .btn .btn--small .btn--info} [Recoil](#){: .btn .btn--small .btn--info} [Mobx](#){: .btn .btn--small .btn--success}
+  - Data synchronization & management lib : [React-Query](#){: .btn .btn--small .btn--info} [Apollo-Client](#){: .btn .btn--small .btn--info}
+  - HTML&CSS : [SASS(SCSS)](#){: .btn .btn--small .btn--info} [Template Engine(pug, handlebars)](#){: .btn .btn--small .btn--info} [Styled-Components](#){: .btn .btn--small .btn--info} [Emotion](#){: .btn .btn--small .btn--info}
   - Data Visaulize : [D3.js](#){: .btn .btn--small .btn--info}
   - Test
     - Unit Test Lib : [Jest](#){: .btn .btn--small .btn--success} [react-testing-library](#){: .btn .btn--small .btn--success}
-    - E2E Test Lib : [Cypress](#){: .btn .btn--small .btn--success}
-  - Bundler : [Webpack](#){: .btn .btn--small .btn--info} [Parcel](#){: .btn .btn--small .btn--success} [Snowpack](#){: .btn .btn--small .btn--success}
-  - ETC : [Puppeteer](#){: .btn .btn--small .btn--info} [Naver Map API](#){: .btn .btn--small .btn--info} [SGIS MAP API](#){: .btn .btn--small .btn--info} [Storybook](#){: .btn .btn--small .btn--info} [Styled-Components](#){: .btn .btn--small .btn--success} [Socket.io](#){: .btn .btn--small .btn--success}
+    - E2E Test Lib : [Appium](#){: .btn .btn--small .btn--info} [Cypress](#){: .btn .btn--small .btn--success}
+  - Bundler : [Webpack](#){: .btn .btn--small .btn--info} [Parcel](#){: .btn .btn--small .btn--success} [Vite](#){: .btn .btn--small .btn--success}
+  - ETC : [Puppeteer](#){: .btn .btn--small .btn--info} [Naver Map API](#){: .btn .btn--small .btn--info} [SGIS MAP API](#){: .btn .btn--small .btn--info} [Storybook](#){: .btn .btn--small .btn--info} [Socket.io](#){: .btn .btn--small .btn--success}
 - Database : [MongoDB](#){: .btn .btn--small .btn--info} [MySQL](#){: .btn .btn--small .btn--success}
-- OS : [Ubuntu](#){: .btn .btn--small .btn--success}
 - WebServer : [Nginx](#){: .btn .btn--small .btn--info} [Apache](#){: .btn .btn--small .btn--success}
-- Infra : [Docker](#){: .btn .btn--small .btn--success} [AWS(EC2, S3, RDB, Elastic Beanstalk)](#){: .btn .btn--small .btn--success}
+- CI/CD :  [Azure pipeline](#){: .btn .btn--small .btn--success} [Serverless(Lambda scheduled cron)](#){: .btn .btn--small .btn--success} 
+- Infra : [Docker](#){: .btn .btn--small .btn--success} [AWS(EC2, S3, RDB, Elastic Beanstalk)](#){: .btn .btn--small .btn--success} [Verdacio](#){: .btn .btn--small .btn--success}
 
 <hr>
 
@@ -244,7 +245,7 @@ gallery_interactive_creadit_card:
   - <h3>ZAMS - 사용자 행동 로그 관리 시스템</h3>
     - 설명 : 블로그 글 참고 - [직방이 사용자 행동 로그를 관리하는 방법. ZAMS](https://medium.com/zigbang/%EC%A7%81%EB%B0%A9%EC%9D%B4-%EC%82%AC%EC%9A%A9%EC%9E%90-%ED%96%89%EB%8F%99-%EB%A1%9C%EA%B7%B8%EB%A5%BC-%EA%B4%80%EB%A6%AC%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95-zams-801c49cf0ad1)
     - 담당업무 : 관리 시스템 페이지, 리포트
-    - 기술 스택 : Nodejs(Typescript), MongoDB, React(Typescript), Apolo, React-DnD, Handlebar
+    - 기술 스택 : Nodejs(Typescript), MongoDB, React(Typescript), Apollo, React-DnD, Handlebar
 
   - <h3>E2E 테스트 도입</h3>
     - 설명 : 직방 앱 안드로이드 & IOS 앱 E2E 테스트 도입
@@ -461,7 +462,7 @@ gallery_interactive_creadit_card:
     - 사용한 Skill 또는 지식
       - Language : Typescript
       - JS Library : React v18(Hooks), Next.js, React-Query
-      - Formatting : ESlint, Prettier, Husky
+      - Code Formatting : ESlint, Prettier, Husky
       - UI Library : Material
     - 기능
       - 반응형 웹
