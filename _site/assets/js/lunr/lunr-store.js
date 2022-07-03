@@ -230,7 +230,7 @@ var store = [{
         "url": "https://seunghyum.github.io/frontend/tutorial/workflow/Storybook-bit-simulation/",
         "teaser":null},{
         "title": "직방이 사용자 행동 로그를 관리하는 방법. ZAMS",
-        "excerpt":"직방에서 작성했던 블로그 글을 공유합니다.   직방이 사용자 행동 로그를 관리하는 방법. ZAMS  ","categories": ["Log Manage"],
+        "excerpt":"직방에서 작성했던 블로그 글을 공유합니다.   직방이 사용자 행동 로그를 관리하는 방법. ZAMS  ","categories": ["LogManage"],
         "tags": ["Log Manage"],
-        "url": "https://seunghyum.github.io/log%20manage/ZAMS/",
+        "url": "https://seunghyum.github.io/logmanage/ZAMS/",
         "teaser":null}]

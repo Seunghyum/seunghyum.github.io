@@ -9,38 +9,38 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[CodingTest] 2019-10-12 간단한 문제들(최대공약수, 최소공배수, 경우의 수) - eveloper Dave</title>
-<meta name="description" content="문제">
+<!-- begin _includes/seo.html --><title>직방이 사용자 행동 로그를 관리하는 방법. ZAMS - eveloper Dave</title>
+<meta name="description" content="직방에서 작성했던 블로그 글을 공유합니다.">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko">
 <meta property="og:site_name" content="eveloper Dave">
-<meta property="og:title" content="[CodingTest] 2019-10-12 간단한 문제들(최대공약수, 최소공배수, 경우의 수)">
-<meta property="og:url" content="https://seunghyum.github.io/codingtest/SImple-2019.10.12/">
+<meta property="og:title" content="직방이 사용자 행동 로그를 관리하는 방법. ZAMS">
+<meta property="og:url" content="https://seunghyum.github.io/logmanage/ZAMS/">
 
 
-  <meta property="og:description" content="문제">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2019-10-12T00:00:00+09:00">
+  <meta property="og:description" content="직방에서 작성했던 블로그 글을 공유합니다.">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2022-01-05T00:00:00+09:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://seunghyum.github.io/codingtest/SImple-2019.10.12/">
+
+<link rel="canonical" href="https://seunghyum.github.io/logmanage/ZAMS/">
 
 
 
@@ -174,7 +174,7 @@
       
         
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/categories/#codingtest" itemprop="item"><span itemprop="name">Codingtest</span></a>
+          <a href="/categories/#logmanage" itemprop="item"><span itemprop="name">Logmanage</span></a>
           <meta itemprop="position" content="2" />
         </li>
         <span class="sep">/</span>
@@ -182,7 +182,7 @@
     
       
       
-        <li class="current">[CodingTest] 2019-10-12 간단한 문제들(최대공약수, 최소공배수, 경우의 수)</li>
+        <li class="current">직방이 사용자 행동 로그를 관리하는 방법. ZAMS</li>
       
     
   </ol>
@@ -327,154 +327,12 @@
 
   <div class="archive">
     
-      <h1 id="page-title" class="page__title">[CodingTest] 2019-10-12 간단한 문제들(최대공약수, 최소공배수, 경우의 수)</h1>
+      <h1 id="page-title" class="page__title">직방이 사용자 행동 로그를 관리하는 방법. ZAMS</h1>
     
     <br>
-<h2 id="문제">문제</h2>
+<p>직방에서 작성했던 블로그 글을 공유합니다.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
-주어진 행렬(arr)에서 가장 낮은 수를 찾아서 그 수를 제외한 행렬을 리턴하라
-*/</span>
-
-<span class="c1">// 예시</span>
-<span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span> 
-<span class="nx">answer</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
-</code></pre></div></div>
-
-<h2 id="정답">정답</h2>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kd">let</span> <span class="nx">answer</span> <span class="o">=</span> <span class="p">[];</span>
-  <span class="kd">let</span> <span class="nx">min</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">a</span> <span class="o">&gt;</span> <span class="nx">b</span> <span class="p">?</span> <span class="nx">b</span> <span class="p">:</span> <span class="nx">a</span><span class="p">)</span>
-  <span class="nx">arr</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span><span class="nx">i</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-      <span class="k">if</span><span class="p">(</span><span class="nx">a</span> <span class="o">!==</span> <span class="nx">min</span><span class="p">)</span> <span class="nx">answer</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
-  <span class="p">})</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">answer</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-  <span class="k">return</span> <span class="nx">answer</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<hr />
-
-<h2 id="문제-1">문제</h2>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
-체육복 빌려주기
-옆사람에게만 체육복 빌려줄 수 있음.
-주어지는 인자는 n,lost,reserve
-n은 총 사람수
-lost는 체육복 없는 사람
-reserve는 체육복이 2개 있는 사람.
-나머지는 체육복 1개만 있는 사람들.
-*/</span>
-
-<span class="c1">//예시</span>
-<span class="nx">n</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="nx">lost</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
-<span class="nx">reserve</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
-
-<span class="nx">answer</span> <span class="o">=</span> <span class="mi">5</span>
-</code></pre></div></div>
-
-<h2 id="정답-1">정답</h2>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span> <span class="nx">lost</span><span class="p">,</span> <span class="nx">reserve</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kd">let</span> <span class="nx">lostReserved</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Set</span><span class="p">()</span>
-  <span class="kd">let</span> <span class="nx">reserveSet</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Set</span><span class="p">(</span><span class="nx">reserve</span><span class="p">)</span>
-  <span class="nx">lost</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">l</span> <span class="o">=&gt;</span> <span class="p">{</span>
-      <span class="nx">lostReserved</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">l</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-      <span class="nx">lostReserved</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">l</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-  <span class="p">})</span>
-  <span class="kd">let</span> <span class="nx">noOfReserved</span> <span class="o">=</span> <span class="mi">0</span>
-  <span class="nx">reserve</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">ls</span> <span class="o">=&gt;</span> <span class="p">{</span>
-      <span class="k">if</span><span class="p">(</span><span class="nx">lostReserved</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="nx">ls</span><span class="p">))</span> <span class="nx">noOfReserved</span><span class="o">++</span>
-  <span class="p">})</span>
-  <span class="k">if</span><span class="p">(</span><span class="nx">lost</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="nx">noOfReserved</span><span class="p">)</span> <span class="nx">noOfReserved</span> <span class="o">=</span> <span class="nx">lost</span><span class="p">.</span><span class="nx">length</span>
-  <span class="kd">let</span> <span class="nx">answer</span> <span class="o">=</span> <span class="nx">n</span> <span class="o">-</span> <span class="nx">lost</span><span class="p">.</span><span class="nx">length</span> <span class="o">+</span> <span class="nx">noOfReserved</span>
-  <span class="k">return</span> <span class="nx">answer</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<hr />
-
-<h2 id="문제-2">문제</h2>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
-  최대 공약수의 합 구하기
-  n = 12
-  [1,2,3,4,6,12] =&gt; 38
-*/</span>
-
-<span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span><span class="p">(</span><span class="nx">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="nx">n</span>
-  <span class="kd">let</span> <span class="nx">last</span>
-  <span class="kd">let</span> <span class="nx">answer</span> <span class="o">=</span> <span class="mi">0</span>
-  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;=</span><span class="nx">n</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">if</span><span class="p">(</span><span class="nx">n</span><span class="o">%</span><span class="nx">i</span><span class="o">===</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-          <span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">n</span><span class="o">/</span><span class="nx">i</span>
-          <span class="k">if</span><span class="p">(</span><span class="nx">last</span> <span class="o">===</span> <span class="nx">a</span><span class="p">)</span> <span class="k">break</span>
-          <span class="nx">last</span> <span class="o">=</span> <span class="nx">i</span>
-          <span class="k">if</span><span class="p">(</span><span class="nx">i</span><span class="o">===</span><span class="nx">a</span><span class="p">)</span> <span class="k">return</span> <span class="nx">answer</span> <span class="o">+</span> <span class="nx">i</span>
-          <span class="nx">answer</span> <span class="o">+=</span> <span class="nx">i</span> <span class="o">+</span> <span class="nx">a</span>
-      <span class="p">}</span>
-  <span class="p">}</span>
-
-  <span class="k">return</span> <span class="nx">answer</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<hr />
-
-<h2 id="문제-3">문제</h2>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
-  두 수(n,m)의 최대공약수와 최소공배수 구하기
-
-  n = 1
-  m = 5
-  answer = [1, 10]
-*/</span>
-</code></pre></div></div>
-
-<h2 id="내-답안">내 답안</h2>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span> <span class="nx">m</span><span class="p">)</span> <span class="p">{</span>
-
-  <span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">n</span> <span class="o">&gt;</span> <span class="nx">m</span> <span class="p">?</span> <span class="nx">n</span> <span class="p">:</span> <span class="nx">m</span>
-  <span class="kd">let</span> <span class="nx">b</span> <span class="o">=</span> <span class="nx">n</span> <span class="o">&lt;</span> <span class="nx">m</span> <span class="p">?</span> <span class="nx">n</span> <span class="p">:</span> <span class="nx">m</span>
-
-  <span class="kd">let</span> <span class="nx">GCD</span>
-  <span class="kd">let</span> <span class="kd">set</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Set</span><span class="p">()</span>
-  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;=</span><span class="nx">b</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">if</span><span class="p">(</span><span class="nx">b</span><span class="o">%</span><span class="nx">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-          <span class="kd">set</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
-      <span class="p">}</span>
-  <span class="p">}</span>
-  <span class="kd">set</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">s</span> <span class="o">=&gt;</span> <span class="p">{</span>
-      <span class="k">if</span><span class="p">(</span><span class="nx">a</span><span class="o">%</span><span class="nx">s</span> <span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="nx">GCD</span> <span class="o">=</span> <span class="nx">s</span>
-  <span class="p">})</span>
-
-  <span class="kd">let</span> <span class="nx">LCM</span>
-  <span class="k">if</span><span class="p">(</span><span class="nx">a</span><span class="o">%</span><span class="nx">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="nx">LCM</span> <span class="o">=</span> <span class="nx">a</span>
-  <span class="k">else</span> <span class="nx">LCM</span> <span class="o">=</span> <span class="nx">a</span><span class="o">*</span><span class="nx">b</span><span class="o">/</span><span class="nx">GCD</span>
-
-  <span class="k">return</span> <span class="p">[</span><span class="nx">GCD</span><span class="p">,</span> <span class="nx">LCM</span><span class="p">]</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<h2 id="더-좋은-답안">더 좋은 답안</h2>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">gcd</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span> <span class="p">{</span><span class="k">return</span> <span class="nx">b</span> <span class="p">?</span> <span class="nx">gcd</span><span class="p">(</span><span class="nx">b</span><span class="p">,</span><span class="nx">a</span><span class="o">%</span><span class="nx">b</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">a</span><span class="p">)}</span>
-
-<span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span> <span class="nx">m</span><span class="p">)</span> <span class="p">{</span>
-
-  <span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">n</span> <span class="o">&gt;</span> <span class="nx">m</span> <span class="p">?</span> <span class="nx">n</span> <span class="p">:</span> <span class="nx">m</span>
-  <span class="kd">let</span> <span class="nx">b</span> <span class="o">=</span> <span class="nx">n</span> <span class="o">&lt;</span> <span class="nx">m</span> <span class="p">?</span> <span class="nx">n</span> <span class="p">:</span> <span class="nx">m</span>
-  <span class="kd">let</span> <span class="nx">k</span> <span class="o">=</span> <span class="nx">gcd</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span>
-
-  <span class="k">return</span> <span class="p">[</span><span class="nx">k</span><span class="p">,</span> <span class="nx">a</span><span class="o">*</span><span class="nx">b</span><span class="o">/</span><span class="nx">k</span><span class="p">]</span>
-<span class="p">})</span>
-</code></pre></div></div>
+<p><a href="https://medium.com/zigbang/%EC%A7%81%EB%B0%A9%EC%9D%B4-%EC%82%AC%EC%9A%A9%EC%9E%90-%ED%96%89%EB%8F%99-%EB%A1%9C%EA%B7%B8%EB%A5%BC-%EA%B4%80%EB%A6%AC%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95-zams-801c49cf0ad1">직방이 사용자 행동 로그를 관리하는 방법. ZAMS</a></p>
 
 <br>
 <br>
@@ -830,7 +688,7 @@ reserve는 체육복이 2개 있는 사람.
 
 
 
-  최대 1 분 소요
+  1 분 소요
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">문제
@@ -2026,8 +1884,8 @@ function solution(record) {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://seunghyum.github.io/codingtest/SImple-2019.10.12/";  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = "/codingtest/SImple-2019.10.12"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      this.page.url = "https://seunghyum.github.io/logmanage/ZAMS/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/logmanage/ZAMS"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');
