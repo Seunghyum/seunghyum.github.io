@@ -1,4 +1,67 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://seunghyum.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://seunghyum.github.io/" rel="alternate" type="text/html" /><updated>2022-05-02T13:01:52+09:00</updated><id>https://seunghyum.github.io/feed.xml</id><title type="html">eveloper Dave</title><subtitle>데이터 시각화에 관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">[Tutorial] Storybook과 Bit을 활용한 UI 컴포넌트 관리(Workflow)</title><link href="https://seunghyum.github.io/frontend/tutorial/workflow/Storybook-bit-simulation/" rel="alternate" type="text/html" title="[Tutorial] Storybook과 Bit을 활용한 UI 컴포넌트 관리(Workflow)" /><published>2019-12-27T00:00:00+09:00</published><updated>2019-12-27T00:00:00+09:00</updated><id>https://seunghyum.github.io/frontend/tutorial/workflow/Storybook-bit-simulation</id><content type="html" xml:base="https://seunghyum.github.io/frontend/tutorial/workflow/Storybook-bit-simulation/">&lt;p&gt;회사에서 프론트엔드 개발원칙을 SFC(Single File Component)에서 UI 컴포넌트를 기준으로 CDD(Component Driven Development)를 진행하려고 한다.&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://seunghyum.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://seunghyum.github.io/" rel="alternate" type="text/html" /><updated>2022-07-03T10:21:28+09:00</updated><id>https://seunghyum.github.io/feed.xml</id><title type="html">eveloper Dave</title><subtitle>데이터 시각화에 관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">직방이 사용자 행동 로그를 관리하는 방법. ZAMS</title><link href="https://seunghyum.github.io/log%20manage/ZAMS/" rel="alternate" type="text/html" title="직방이 사용자 행동 로그를 관리하는 방법. ZAMS" /><published>2022-01-05T00:00:00+09:00</published><updated>2022-01-05T00:00:00+09:00</updated><id>https://seunghyum.github.io/log%20manage/ZAMS</id><content type="html" xml:base="https://seunghyum.github.io/log%20manage/ZAMS/">&lt;p&gt;직방에서 작성했던 블로그 글을 공유합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/zigbang/%EC%A7%81%EB%B0%A9%EC%9D%B4-%EC%82%AC%EC%9A%A9%EC%9E%90-%ED%96%89%EB%8F%99-%EB%A1%9C%EA%B7%B8%EB%A5%BC-%EA%B4%80%EB%A6%AC%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95-zams-801c49cf0ad1&quot;&gt;직방이 사용자 행동 로그를 관리하는 방법. ZAMS&lt;/a&gt;&lt;/p&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Log Manage" /><summary type="html">직방에서 작성했던 블로그 글을 공유합니다.</summary></entry><entry><title type="html">[Scaffold] Scaffold Module 개발</title><link href="https://seunghyum.github.io/scaffold/Scafflod-Modules/" rel="alternate" type="text/html" title="[Scaffold] Scaffold Module 개발" /><published>2019-12-27T00:00:00+09:00</published><updated>2019-12-27T00:00:00+09:00</updated><id>https://seunghyum.github.io/scaffold/Scafflod-Modules</id><content type="html" xml:base="https://seunghyum.github.io/scaffold/Scafflod-Modules/">&lt;h2 id=&quot;도입-이유&quot;&gt;도입 이유&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;SI 작업은 울며 겨자먹기식이나 회사 전체 프로젝트가 SI 작업 때문에 진도가 잘 안나감.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;scaffolding-module-설명&quot;&gt;Scaffolding Module 설명&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Scaffolding 용어
+    &lt;ul&gt;
+      &lt;li&gt;네이버 어학사전 - (공사장에서 안전을 위해 외부로 설치하는) 뼈대&lt;/li&gt;
+      &lt;li&gt;Stackoverflow - Scaffolding generally refers to a &lt;strong&gt;quickly set up skeleton for an app&lt;/strong&gt;.&lt;/li&gt;
+      &lt;li&gt;다음 검색 - 컴퓨터 용어에서 스캐폴딩은 데이터베이스의 각 테이블에 대한 웹 페이지를 자동으로 생성하는 Dynamic Data 요소를 말합니다. 자동 생성된 웹 페이지를 통해 각 테이블에 대해 만들기, 읽기, 업데이트 및 삭제(CRUD) 작업을 수행할 수 있습니다. 스캐폴딩은 페이지 템플릿, 엔터티 페이지 템플릿, 필드 페이지 템플릿 및 필터 템플릿으로 구성됩니다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Rails의 Scaffolding은 간단한 명령어로 Model, View, Controller등 모든 구성요소(파일구조, 코드)를 알아서 만들어 줌.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure&gt;
+&lt;a href=&quot;/assets/images/posts/workflow/1_1_xbp-fx7Dz7B90Ijlsw6Q.png&quot; style=&quot;margin:auto;&quot;&gt;
+&lt;img src=&quot;/assets/images/posts/workflow/1_1_xbp-fx7Dz7B90Ijlsw6Q.png&quot; style=&quot;border:none;&quot; /&gt;
+&lt;/a&gt;
+&lt;/figure&gt;
+&lt;ul&gt;
+  &lt;li&gt;이처럼 SI 프로젝트에서 공유될만한 것들을 scaffolding Module로 빼서 개발하는 것이 목표.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;기능모듈--ui-컴포넌트-모듈과의-차이점&quot;&gt;기능모듈 &amp;amp; UI 컴포넌트 모듈과의 차이점&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;프로젝트마다 기능모듈과 UI 컴포넌트 모듈을 &lt;strong&gt;포함할수도, 포함하지 않을 수도 있음.&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Scaffold의 목적은 “SI 작업 비용을 최소화하는 코드 템플릿”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure&gt;
+&lt;a href=&quot;/assets/images/posts/workflow/scaffold_modules.png&quot; style=&quot;margin:auto;&quot;&gt;
+&lt;img src=&quot;/assets/images/posts/workflow/scaffold_modules.png&quot; style=&quot;max-width: 500px; border:none;&quot; /&gt;
+&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+&lt;a href=&quot;/assets/images/posts/workflow/scaffold_modules_all.png&quot; style=&quot;margin:auto;&quot;&gt;
+&lt;img src=&quot;/assets/images/posts/workflow/scaffold_modules_all.png&quot; style=&quot;border:none;&quot; /&gt;
+&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;도입-이후-장점&quot;&gt;도입 이후 장점&lt;/h2&gt;
+
+&lt;p&gt;SI 작업에 드는 비용 감소. 작업시간 단축.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;a href=&quot;/assets/images/posts/workflow/scaffold_modules_eff.png&quot; style=&quot;margin:auto;&quot;&gt;
+&lt;img src=&quot;/assets/images/posts/workflow/scaffold_modules_eff.png&quot; style=&quot;max-width: 300px;border:none;&quot; /&gt;
+&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;도입-이후-위험성&quot;&gt;도입 이후 위험성&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;모듈화 작업에 들어가는 폼이 많을 수 있음. → 모듈화 이슈는 서브 챕터에서 공유&lt;/li&gt;
+  &lt;li&gt;모듈에 맞춰서 고객의 요청을 미리 제한할 수 있어야함. ex - 기획, 디자인시 모듈에 맞게끔 유도해야할 수 있음&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Scaffold" /><summary type="html">도입 이유</summary></entry><entry><title type="html">[Tutorial] Storybook과 Bit을 활용한 UI 컴포넌트 관리(Workflow)</title><link href="https://seunghyum.github.io/frontend/tutorial/workflow/Storybook-bit-simulation/" rel="alternate" type="text/html" title="[Tutorial] Storybook과 Bit을 활용한 UI 컴포넌트 관리(Workflow)" /><published>2019-12-27T00:00:00+09:00</published><updated>2019-12-27T00:00:00+09:00</updated><id>https://seunghyum.github.io/frontend/tutorial/workflow/Storybook-bit-simulation</id><content type="html" xml:base="https://seunghyum.github.io/frontend/tutorial/workflow/Storybook-bit-simulation/">&lt;p&gt;회사에서 프론트엔드 개발원칙을 SFC(Single File Component)에서 UI 컴포넌트를 기준으로 CDD(Component Driven Development)를 진행하려고 한다.&lt;br /&gt;
 그래서 체계적으로 관리하기위해 &lt;a href=&quot;https://storybook.js.org/&quot;&gt;Storybook&lt;/a&gt;과 &lt;a href=&quot;http://bit.dev/&quot;&gt;Bit&lt;/a&gt;을 도입해보고자 한다.&lt;br /&gt;
 각각의 역할은&lt;/p&gt;
 &lt;ul&gt;
@@ -101,68 +164,7 @@ $ yarn storybook
 
 &lt;h2 id=&quot;참고&quot;&gt;참고&lt;/h2&gt;
 
-&lt;p&gt;UI 컴포넌트 참고 사이트 : https://bit.dev/lusaxweb&lt;/p&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Frontend" /><category term="Tutorial" /><category term="Workflow" /><summary type="html">회사에서 프론트엔드 개발원칙을 SFC(Single File Component)에서 UI 컴포넌트를 기준으로 CDD(Component Driven Development)를 진행하려고 한다. 그래서 체계적으로 관리하기위해 Storybook과 Bit을 도입해보고자 한다. 각각의 역할은 Storybook : UI 컴포넌트 모음 레포, UI 컴포넌트 명세서 Bit : UI 컴포넌트 공유. 개별 컴포넌트 단위 관리(import, export, version) Cloud 이다.</summary></entry><entry><title type="html">[Scaffold] Scaffold Module 개발</title><link href="https://seunghyum.github.io/scaffold/Scafflod-Modules/" rel="alternate" type="text/html" title="[Scaffold] Scaffold Module 개발" /><published>2019-12-27T00:00:00+09:00</published><updated>2019-12-27T00:00:00+09:00</updated><id>https://seunghyum.github.io/scaffold/Scafflod-Modules</id><content type="html" xml:base="https://seunghyum.github.io/scaffold/Scafflod-Modules/">&lt;h2 id=&quot;도입-이유&quot;&gt;도입 이유&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;SI 작업은 울며 겨자먹기식이나 회사 전체 프로젝트가 SI 작업 때문에 진도가 잘 안나감.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;scaffolding-module-설명&quot;&gt;Scaffolding Module 설명&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Scaffolding 용어
-    &lt;ul&gt;
-      &lt;li&gt;네이버 어학사전 - (공사장에서 안전을 위해 외부로 설치하는) 뼈대&lt;/li&gt;
-      &lt;li&gt;Stackoverflow - Scaffolding generally refers to a &lt;strong&gt;quickly set up skeleton for an app&lt;/strong&gt;.&lt;/li&gt;
-      &lt;li&gt;다음 검색 - 컴퓨터 용어에서 스캐폴딩은 데이터베이스의 각 테이블에 대한 웹 페이지를 자동으로 생성하는 Dynamic Data 요소를 말합니다. 자동 생성된 웹 페이지를 통해 각 테이블에 대해 만들기, 읽기, 업데이트 및 삭제(CRUD) 작업을 수행할 수 있습니다. 스캐폴딩은 페이지 템플릿, 엔터티 페이지 템플릿, 필드 페이지 템플릿 및 필터 템플릿으로 구성됩니다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Rails의 Scaffolding은 간단한 명령어로 Model, View, Controller등 모든 구성요소(파일구조, 코드)를 알아서 만들어 줌.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure&gt;
-&lt;a href=&quot;/assets/images/posts/workflow/1_1_xbp-fx7Dz7B90Ijlsw6Q.png&quot; style=&quot;margin:auto;&quot;&gt;
-&lt;img src=&quot;/assets/images/posts/workflow/1_1_xbp-fx7Dz7B90Ijlsw6Q.png&quot; style=&quot;border:none;&quot; /&gt;
-&lt;/a&gt;
-&lt;/figure&gt;
-&lt;ul&gt;
-  &lt;li&gt;이처럼 SI 프로젝트에서 공유될만한 것들을 scaffolding Module로 빼서 개발하는 것이 목표.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;기능모듈--ui-컴포넌트-모듈과의-차이점&quot;&gt;기능모듈 &amp;amp; UI 컴포넌트 모듈과의 차이점&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;프로젝트마다 기능모듈과 UI 컴포넌트 모듈을 &lt;strong&gt;포함할수도, 포함하지 않을 수도 있음.&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Scaffold의 목적은 “SI 작업 비용을 최소화하는 코드 템플릿”&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure&gt;
-&lt;a href=&quot;/assets/images/posts/workflow/scaffold_modules.png&quot; style=&quot;margin:auto;&quot;&gt;
-&lt;img src=&quot;/assets/images/posts/workflow/scaffold_modules.png&quot; style=&quot;max-width: 500px; border:none;&quot; /&gt;
-&lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;figure&gt;
-&lt;a href=&quot;/assets/images/posts/workflow/scaffold_modules_all.png&quot; style=&quot;margin:auto;&quot;&gt;
-&lt;img src=&quot;/assets/images/posts/workflow/scaffold_modules_all.png&quot; style=&quot;border:none;&quot; /&gt;
-&lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;h2 id=&quot;도입-이후-장점&quot;&gt;도입 이후 장점&lt;/h2&gt;
-
-&lt;p&gt;SI 작업에 드는 비용 감소. 작업시간 단축.&lt;/p&gt;
-
-&lt;figure&gt;
-&lt;a href=&quot;/assets/images/posts/workflow/scaffold_modules_eff.png&quot; style=&quot;margin:auto;&quot;&gt;
-&lt;img src=&quot;/assets/images/posts/workflow/scaffold_modules_eff.png&quot; style=&quot;max-width: 300px;border:none;&quot; /&gt;
-&lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;h2 id=&quot;도입-이후-위험성&quot;&gt;도입 이후 위험성&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;모듈화 작업에 들어가는 폼이 많을 수 있음. → 모듈화 이슈는 서브 챕터에서 공유&lt;/li&gt;
-  &lt;li&gt;모듈에 맞춰서 고객의 요청을 미리 제한할 수 있어야함. ex - 기획, 디자인시 모듈에 맞게끔 유도해야할 수 있음&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Scaffold" /><summary type="html">도입 이유</summary></entry><entry><title type="html">[Workflow] 프론트엔드 개발조직을 위한 워크플로 설계</title><link href="https://seunghyum.github.io/workflow/Workflow-Design-for-frontend/" rel="alternate" type="text/html" title="[Workflow] 프론트엔드 개발조직을 위한 워크플로 설계" /><published>2019-12-24T00:00:00+09:00</published><updated>2019-12-24T00:00:00+09:00</updated><id>https://seunghyum.github.io/workflow/Workflow-Design-for-frontend</id><content type="html" xml:base="https://seunghyum.github.io/workflow/Workflow-Design-for-frontend/">&lt;blockquote&gt;
+&lt;p&gt;UI 컴포넌트 참고 사이트 : https://bit.dev/lusaxweb&lt;/p&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Frontend" /><category term="Tutorial" /><category term="Workflow" /><summary type="html">회사에서 프론트엔드 개발원칙을 SFC(Single File Component)에서 UI 컴포넌트를 기준으로 CDD(Component Driven Development)를 진행하려고 한다. 그래서 체계적으로 관리하기위해 Storybook과 Bit을 도입해보고자 한다. 각각의 역할은 Storybook : UI 컴포넌트 모음 레포, UI 컴포넌트 명세서 Bit : UI 컴포넌트 공유. 개별 컴포넌트 단위 관리(import, export, version) Cloud 이다.</summary></entry><entry><title type="html">[Workflow] 프론트엔드 개발조직을 위한 워크플로 설계</title><link href="https://seunghyum.github.io/workflow/Workflow-Design-for-frontend/" rel="alternate" type="text/html" title="[Workflow] 프론트엔드 개발조직을 위한 워크플로 설계" /><published>2019-12-24T00:00:00+09:00</published><updated>2019-12-24T00:00:00+09:00</updated><id>https://seunghyum.github.io/workflow/Workflow-Design-for-frontend</id><content type="html" xml:base="https://seunghyum.github.io/workflow/Workflow-Design-for-frontend/">&lt;blockquote&gt;
   &lt;h2 id=&quot;작성-배경&quot;&gt;작성 배경&lt;/h2&gt;
 
   &lt;p&gt;회사의 작업구조를 &lt;strong&gt;페이지 중심 개발&lt;/strong&gt;에서 &lt;strong&gt;UI 컴포넌트 중심 개발&lt;/strong&gt;로 변경하면서 Workflow를 개선할만한 환경을 구성해야했다.&lt;br /&gt;
@@ -1007,92 +1009,4 @@ Prisma Client 덕분에, 리졸버 구현은 대부분의 경우 한두 줄로 �
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
 &lt;span class=&quot;nx&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;yellow_hat&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;headgear&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;blue_sunglasses&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;eyewear&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;green_turban&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;headgear&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;crow_mask&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;face&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;blue_sunglasses&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;face&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;smoky_makeup&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;face&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 24&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><category term="Combination" /><summary type="html">문제</summary></entry><entry><title type="html">[CodingTest] Combination(조합) 문제풀이 1</title><link href="https://seunghyum.github.io/codingtest/Combination-1/" rel="alternate" type="text/html" title="[CodingTest] Combination(조합) 문제풀이 1" /><published>2019-11-03T00:00:00+09:00</published><updated>2019-11-03T00:00:00+09:00</updated><id>https://seunghyum.github.io/codingtest/Combination-1</id><content type="html" xml:base="https://seunghyum.github.io/codingtest/Combination-1/">&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;주어진 숫자(nums) 중 3개의 수를 더했을 때,&lt;/li&gt;
-  &lt;li&gt;소수가 되는 경우의 개수를 구하시오.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;입출력 예시&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;nums&lt;/th&gt;
-      &lt;th&gt;Result&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;[1,2,3,4]&lt;/td&gt;
-      &lt;td&gt;1&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;[1,2,7,6,4]&lt;/td&gt;
-      &lt;td&gt;4&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&quot;작성한-답&quot;&gt;작성한 답&lt;/h2&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;combinationOfSet&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-
-  &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getCombination&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;initialStuff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;initialStuff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;combinationOfSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;initialStuff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;getCombination&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;initialStuff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;concat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;getCombination&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]);&lt;/span&gt;
-
-  &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;isPrime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sqrt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;answer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;combinationOfSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;multiply&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reduce&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isPrime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;multiply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;answer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;answer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;참고한-자료&quot;&gt;참고한 자료&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/40200089/number-prime-test-in-javascript&quot;&gt;Number prime test in Javascript&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.ibm.com/developerworks/community/blogs/hazem/entry/javascript_getting_all_possible_combinations?lang=en&quot;&gt;Getting All Possible Combinations&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;배운점&quot;&gt;배운점&lt;/h2&gt;
-
-&lt;p&gt;: 소수를 구하는 방식&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/5811151/why-do-we-check-up-to-the-square-root-of-a-prime-number-to-determine-if-it-is-pr&quot;&gt;Stack Overflow관련 글 링크&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;만일 n이 소수가 아니고, n이 a와 b로 구성된다면 아래와 같다.&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;n = a * b
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;만약 a와 b 둘다 n의 제곱근 보다 크다면, a * b는 n보다 크다.&lt;br /&gt;
-따라서 적어도 둘중 하나는 반드시 n의 제곱근보다 작거나 같아야한다. &lt;br /&gt;
-그리고 만약 n의 제곱근보다 작거나 같은 수를 못구한다면 그 수는 소수이다.
-&lt;br /&gt;&lt;br /&gt;
-코드로 나타내면 아래와 같다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;isPrime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sqrt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Javascript" /><category term="Combination" /><summary type="html">문제</summary></entry></feed>
