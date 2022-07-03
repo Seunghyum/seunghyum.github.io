@@ -337,8 +337,9 @@
       <li>Data Visaulize : <a href="#" class="btn btn--small btn--info">D3.js</a></li>
       <li>Test
         <ul>
+          <li>Test Tool : <a href="#" class="btn btn--small btn--info">Cucumber(Gherkin)</a> for BDD(Behaviour-Driven Development)</li>
           <li>Unit Test Lib : <a href="#" class="btn btn--small btn--success">Jest</a> <a href="#" class="btn btn--small btn--success">react-testing-library</a></li>
-          <li>E2E Test Lib : <a href="#" class="btn btn--small btn--info">Appium</a> <a href="#" class="btn btn--small btn--success">Cypress</a></li>
+          <li>E2E Test Lib : <a href="#" class="btn btn--small btn--info">Appium</a> <a href="#" class="btn btn--small btn--success">Cypress</a> <a href="#" class="btn btn--small btn--success">Playwright</a></li>
         </ul>
       </li>
       <li>Bundler : <a href="#" class="btn btn--small btn--info">Webpack</a> <a href="#" class="btn btn--small btn--success">Parcel</a> <a href="#" class="btn btn--small btn--success">Vite</a></li>
@@ -347,8 +348,8 @@
   </li>
   <li>Database : <a href="#" class="btn btn--small btn--info">MongoDB</a> <a href="#" class="btn btn--small btn--success">MySQL</a></li>
   <li>WebServer : <a href="#" class="btn btn--small btn--info">Nginx</a> <a href="#" class="btn btn--small btn--success">Apache</a></li>
-  <li>CI/CD :  <a href="#" class="btn btn--small btn--success">Azure pipeline</a> <a href="#" class="btn btn--small btn--success">Serverless(Lambda scheduled cron)</a></li>
-  <li>Infra : <a href="#" class="btn btn--small btn--success">Docker</a> <a href="#" class="btn btn--small btn--success">AWS(EC2, S3, RDB, Elastic Beanstalk)</a> <a href="#" class="btn btn--small btn--success">Verdacio</a></li>
+  <li>CI/CD :  <a href="#" class="btn btn--small btn--success">Azure Pipeline</a> <a href="#" class="btn btn--small btn--success">Serverless</a></li>
+  <li>Infra : <a href="#" class="btn btn--small btn--success">Docker</a> <a href="#" class="btn btn--small btn--success">AWS</a> <a href="#" class="btn btn--small btn--success">Verdacio</a></li>
 </ul>
 
 <hr />
@@ -441,8 +442,16 @@
     <h3>ZAMS - 사용자 행동 로그 관리 시스템</h3>
     <ul>
       <li>설명 : 블로그 글 참고 - <a href="https://medium.com/zigbang/%EC%A7%81%EB%B0%A9%EC%9D%B4-%EC%82%AC%EC%9A%A9%EC%9E%90-%ED%96%89%EB%8F%99-%EB%A1%9C%EA%B7%B8%EB%A5%BC-%EA%B4%80%EB%A6%AC%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95-zams-801c49cf0ad1">직방이 사용자 행동 로그를 관리하는 방법. ZAMS</a></li>
-      <li>담당업무 : 관리 시스템 페이지, 리포트</li>
-      <li>기술 스택 : Nodejs(Typescript), MongoDB, React(Typescript), Apollo, React-DnD, Handlebar</li>
+      <li>담당업무 : 관리 시스템 페이지, 리포트&amp;슬랙알림</li>
+      <li>기술 스택 :
+        <ul>
+          <li>프론트엔드 : Typescript, React Hooks, Apollo-Client, React-DnD, Handlebar</li>
+          <li>백엔드 : Nodejs,</li>
+          <li>Database : MongoDB</li>
+          <li>Test : Jest, Playwright</li>
+          <li>ETC : Serverless(Lambda scheduled cron), Slack API</li>
+        </ul>
+      </li>
     </ul>
   </li>
   <li>
@@ -450,7 +459,20 @@
     <ul>
       <li>설명 : 직방 앱 안드로이드 &amp; IOS 앱 E2E 테스트 도입</li>
       <li>담당업무 : 테스트 케이스 추가 및 기기 대응, 리포트 &amp; 알림 개발</li>
-      <li>기술 스택 : Nodejs(Typescript), WDIO, Appium, Selenium(GRID 4)</li>
+      <li>기술 스택 :
+        <ul>
+          <li>Langage: Nodejs(Typescript), Cucumber(Gherkin)</li>
+          <li>Test 원칙 : BDD(Behaviour-Driven Development)</li>
+          <li>Test Framework: WDIO, Appium, Selenium GRID 4</li>
+          <li>Test Infra: Selenium GRID 4</li>
+        </ul>
+      </li>
+      <li>테스트 디바이스
+        <ul>
+          <li>Android 실기기 &amp; 에뮬레이터</li>
+          <li>IOS 실기기 &amp; 에뮬레이터</li>
+        </ul>
+      </li>
       <li>테스트 커버리지
         <ul>
           <li>딥링크</li>
