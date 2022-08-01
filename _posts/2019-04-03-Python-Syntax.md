@@ -21,7 +21,7 @@ if a < b < c :
 
 ## Slice operater
 ### 특징
-문자열, tuples, dictionaries, lists 에 모두 적용가능.
+문자열, [tuples](https://www.scaler.com/topics/python/tuples-in-python/), dictionaries, lists 에 모두 적용가능.
 <pre>
 [start:end]
 
