@@ -143,8 +143,9 @@ gallery_interactive_creadit_card:
 
 - Language : [Javascript](#){: .btn .btn--small .btn--info} [Typescript](#){: .btn .btn--small .btn--info} [Node.js](#){: .btn .btn--small .btn--info} [Ruby](#){: .btn .btn--small .btn--success} [R](#){: .btn .btn--small .btn--success} [Python](#){: .btn .btn--small .btn--success}
 - Frontend
+  - Cross platform : [React Native](#){: .btn .btn--small .btn--info}
   - JS Library : [React.js](#){: .btn .btn--small .btn--info} [Vue.js](#){: .btn .btn--small .btn--info} [jQuery](#){: .btn .btn--small .btn--info}
-  - State Management : [Redux](#){: .btn .btn--small .btn--info} [Vuex](#){: .btn .btn--small .btn--info} [Recoil](#){: .btn .btn--small .btn--info} [Mobx](#){: .btn .btn--small .btn--success}
+  - State management : [Redux](#){: .btn .btn--small .btn--info} [Vuex](#){: .btn .btn--small .btn--info} [Recoil](#){: .btn .btn--small .btn--info} [Mobx](#){: .btn .btn--small .btn--success}
   - Data synchronization & management lib : [React-Query](#){: .btn .btn--small .btn--info} [Apollo-Client](#){: .btn .btn--small .btn--info}
   - HTML&CSS : [SASS(SCSS)](#){: .btn .btn--small .btn--info} [Template Engine(pug, handlebars)](#){: .btn .btn--small .btn--info} [Styled-Components](#){: .btn .btn--small .btn--info} [Emotion](#){: .btn .btn--small .btn--info}
   - Data Visaulize : [D3.js](#){: .btn .btn--small .btn--info}
@@ -243,12 +244,17 @@ gallery_interactive_creadit_card:
 
 ### 작업내용
 
+  - <h3>직방 원룸/오피스텔/빌라</h3>
+    - 담당업무 : 서비스 유지 & 보수
+    - 기술 스택 :
+      - 프론트엔드 : Typescript, React Native
+
   - <h3>ZAMS - 사용자 행동 로그 관리 시스템</h3>
     - 설명 : 블로그 글 참고 - [직방이 사용자 행동 로그를 관리하는 방법. ZAMS](https://medium.com/zigbang/%EC%A7%81%EB%B0%A9%EC%9D%B4-%EC%82%AC%EC%9A%A9%EC%9E%90-%ED%96%89%EB%8F%99-%EB%A1%9C%EA%B7%B8%EB%A5%BC-%EA%B4%80%EB%A6%AC%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95-zams-801c49cf0ad1)
-    - 담당업무 : 관리 시스템 페이지, 리포트&슬랙알림
+    - 담당업무 : 관리 시스템 페이지, 리포트 & 슬랙알림
     - 기술 스택 :
       - 프론트엔드 : Typescript, React Hooks, Apollo-Client, React-DnD, Handlebar
-      - 백엔드 : Nodejs, 
+      - 백엔드 : Node.js, 
       - Database : MongoDB
       - Test : Jest, Playwright
       - ETC : Serverless(Lambda scheduled cron), Slack API
@@ -257,7 +263,7 @@ gallery_interactive_creadit_card:
     - 설명 : 직방 앱 안드로이드 & IOS 앱 E2E 테스트 도입
     - 담당업무 : 테스트 케이스 추가 및 기기 대응, 리포트 & 알림 개발
     - 기술 스택 : 
-      - Langage: Nodejs(Typescript), Cucumber(Gherkin)
+      - Langage: Node.js(Typescript), Cucumber(Gherkin)
       - Test 원칙 : BDD(Behaviour-Driven Development)
       - Test Framework: WDIO, Appium, Selenium GRID 4
       - Test Infra: Selenium GRID 4
