@@ -143,16 +143,16 @@ gallery_interactive_creadit_card:
 
 - Language : [Javascript](#){: .btn .btn--small .btn--info} [Typescript](#){: .btn .btn--small .btn--info} [Node.js](#){: .btn .btn--small .btn--info} [Ruby](#){: .btn .btn--small .btn--success} [R](#){: .btn .btn--small .btn--success} [Python](#){: .btn .btn--small .btn--success}
 - Frontend
-  - Cross platform : [React Native](#){: .btn .btn--small .btn--info}
+  - Cross platform : [React Native](#){: .btn .btn--small .btn--success}
   - JS Library : [React.js](#){: .btn .btn--small .btn--info} [Vue.js](#){: .btn .btn--small .btn--info} [jQuery](#){: .btn .btn--small .btn--info}
   - State management : [Redux](#){: .btn .btn--small .btn--info} [Vuex](#){: .btn .btn--small .btn--info} [Recoil](#){: .btn .btn--small .btn--info} [Mobx](#){: .btn .btn--small .btn--success}
   - Data synchronization & management lib : [React-Query](#){: .btn .btn--small .btn--info} [Apollo-Client](#){: .btn .btn--small .btn--info}
   - HTML&CSS : [SASS(SCSS)](#){: .btn .btn--small .btn--info} [Template Engine(pug, handlebars)](#){: .btn .btn--small .btn--info} [Styled-Components](#){: .btn .btn--small .btn--info} [Emotion](#){: .btn .btn--small .btn--info}
   - Data Visaulize : [D3.js](#){: .btn .btn--small .btn--info}
   - Test
-    - Test Tool : [Cucumber(Gherkin)](#){: .btn .btn--small .btn--info} for BDD(Behaviour-Driven Development)
-    - Unit Test Lib : [Jest](#){: .btn .btn--small .btn--success} [react-testing-library](#){: .btn .btn--small .btn--success}
-    - E2E Test Lib : [Appium](#){: .btn .btn--small .btn--info} [Cypress](#){: .btn .btn--small .btn--success} [Playwright](#){: .btn .btn--small .btn--success}
+    - Test Tool : [Cucumber(Gherkin)](#){: .btn .btn--small .btn--success} for BDD(Behaviour-Driven Development)
+    - Unit Test Lib : [Jest](#){: .btn .btn--small .btn--info}
+    - E2E Test Lib : [Appium](#){: .btn .btn--small .btn--success} [Cypress](#){: .btn .btn--small .btn--success} [Playwright](#){: .btn .btn--small .btn--success}
   - Bundler : [Webpack](#){: .btn .btn--small .btn--info} [Parcel](#){: .btn .btn--small .btn--success} [Vite](#){: .btn .btn--small .btn--success}
   - ETC : [Puppeteer](#){: .btn .btn--small .btn--info} [Naver Map API](#){: .btn .btn--small .btn--info} [SGIS MAP API](#){: .btn .btn--small .btn--info} [Storybook](#){: .btn .btn--small .btn--info} [Socket.io](#){: .btn .btn--small .btn--success}
 - Database : [MongoDB](#){: .btn .btn--small .btn--info} [MySQL](#){: .btn .btn--small .btn--success}
@@ -260,6 +260,20 @@ gallery_interactive_creadit_card:
       - ETC : Serverless(Lambda scheduled cron), Slack API
 
   - <h3>E2E 테스트 도입</h3>
+    - 설명 : 직방 앱 안드로이드 & IOS 앱 E2E 테스트 도입
+    - 담당업무 : 테스트 케이스 추가 및 기기 대응, 리포트 & 알림 개발
+    - 기술 스택 : 
+      - Langage: Node.js(Typescript), Cucumber(Gherkin)
+      - Test 원칙 : BDD(Behaviour-Driven Development)
+      - Test Framework: WDIO, Appium, Selenium GRID 4
+      - Test Infra: Selenium GRID 4
+    - 테스트 디바이스
+      - Android 실기기 & 에뮬레이터
+      - IOS 실기기 & 에뮬레이터
+    - 테스트 커버리지
+      - 딥링크
+      - 로그인
+  - <h3>D3 차트 개발</h3>
     - 설명 : 직방 앱 안드로이드 & IOS 앱 E2E 테스트 도입
     - 담당업무 : 테스트 케이스 추가 및 기기 대응, 리포트 & 알림 개발
     - 기술 스택 : 

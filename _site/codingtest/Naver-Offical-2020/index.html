@@ -1,0 +1,2584 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.15.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[CodingTest] 2020 네이버 공채 코드테스트 문제 with Javascript - eveloper Dave</title>
+<meta name="description" content="2번```javascriptfunction solution(drum) {  let result = 0;  let currentPosition = {    x: 0,    y: 0  }">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko">
+<meta property="og:site_name" content="eveloper Dave">
+<meta property="og:title" content="[CodingTest] 2020 네이버 공채 코드테스트 문제 with Javascript">
+<meta property="og:url" content="https://seunghyum.github.io/codingtest/Naver-Offical-2020/">
+
+
+  <meta property="og:description" content="2번```javascriptfunction solution(drum) {  let result = 0;  let currentPosition = {    x: 0,    y: 0  }">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2019-09-21T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://seunghyum.github.io/codingtest/Naver-Offical-2020/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Moon Seung Hyun",
+      "url": "https://seunghyum.github.io",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="eveloper Dave Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--posts">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/header-d-logo.png" alt=""></a>
+        
+        <a class="site-title" href="/">eveloper Dave</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about" >About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/data-visualization" >Data Lab</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/" >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >Tags</a>
+            </li><li class="masthead__menu-item">
+            <a href="/mine-sweeper" title="" target="_blank">Mine Sweeper 😝</a>
+          </li>
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="https://seunghyum.github.io/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/categories/#codingtest" itemprop="item"><span itemprop="name">Codingtest</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">[CodingTest] 2020 네이버 공채 코드테스트 문제 with Javascript</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar text-center">
+      
+
+      
+        <img src="/assets/images/dave-profile.png" alt="Moon Seung Hyun" itemprop="image">
+      
+      <!-- <img src="/assets/images/profile_image_sidebar.png" alt="Moon Seung Hyun" itemprop="image">
+      <img src="/assets/images/profile_image.png" alt="Moon Seung Hyun" itemprop="image"> -->
+    </div>
+  
+
+  <div class="author__content">
+    <div class="text-center">
+      <!-- 
+        <h3 class="author__name" itemprop="name">Moon Seung Hyun</h3>
+        <p class="author__name" itemprop="name">Dave</p>
+       -->
+    </div>
+    
+      <p class="author__bio text-center" itemprop="description">
+        
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls text-center social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Suwon, Republic of Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:antmgu@gmail.com" rel="nofollow noopener noreferrer"><i class="far fa-fw fa-envelope" aria-hidden="true"></i> antmgu@gmail.com</a></li>
+          
+        
+          
+            <li><a href="https://github.com/Seunghyum" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> https://github.com/Seunghyum</a></li>
+          
+        
+          
+            <li><a href="https://github.com/Seunghyum" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> https://www.linkedin.com/in/dave-11096614b/</a></li>
+          
+        
+          
+            <li><a href="https://seunghyum.github.io/feed.xml" rel="nofollow noopener noreferrer"><i class="fa fa-rss-square" aria-hidden="true"></i> Feed URL</a></li>
+          
+        
+      
+
+      
+
+      <!-- 
+        <li>
+          <a href="mailto:antmgu@gmail.com">
+            <meta itemprop="email" content="antmgu@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> 이메일
+          </a>
+        </li>
+       -->
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title">[CodingTest] 2020 네이버 공채 코드테스트 문제 with Javascript</h1>
+    
+    <br>
+<p>2번</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">drum</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">currentPosition</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="na">y</span><span class="p">:</span> <span class="mi">0</span>
+  <span class="p">}</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">x</span> <span class="o">&lt;</span> <span class="nx">drum</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">length</span><span class="p">;</span> <span class="nx">x</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">currentPosition</span><span class="p">.</span><span class="nx">x</span> <span class="o">=</span> <span class="nx">x</span><span class="p">;</span>
+    <span class="nx">currentPosition</span><span class="p">.</span><span class="nx">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kd">let</span> <span class="nx">starCount</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">currentPosition</span><span class="p">.</span><span class="nx">x</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="nx">currentPosition</span><span class="p">.</span><span class="nx">y</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="k">return</span>
+    <span class="nx">loop</span><span class="p">:</span>
+      <span class="k">while</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">drum</span><span class="p">[</span><span class="nx">currentPosition</span><span class="p">.</span><span class="nx">y</span><span class="p">][</span><span class="nx">currentPosition</span><span class="p">.</span><span class="nx">x</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"#"</span><span class="p">)</span> <span class="nx">currentPosition</span><span class="p">.</span><span class="nx">y</span><span class="o">++</span><span class="p">;</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">drum</span><span class="p">[</span><span class="nx">currentPosition</span><span class="p">.</span><span class="nx">y</span><span class="p">][</span><span class="nx">currentPosition</span><span class="p">.</span><span class="nx">x</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"&gt;"</span><span class="p">)</span> <span class="nx">currentPosition</span><span class="p">.</span><span class="nx">x</span><span class="o">++</span><span class="p">;</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">drum</span><span class="p">[</span><span class="nx">currentPosition</span><span class="p">.</span><span class="nx">y</span><span class="p">][</span><span class="nx">currentPosition</span><span class="p">.</span><span class="nx">x</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"&lt;"</span><span class="p">)</span> <span class="nx">currentPosition</span><span class="p">.</span><span class="nx">x</span><span class="o">--</span><span class="p">;</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">drum</span><span class="p">[</span><span class="nx">currentPosition</span><span class="p">.</span><span class="nx">y</span><span class="p">][</span><span class="nx">currentPosition</span><span class="p">.</span><span class="nx">x</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"*"</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">starCount</span><span class="o">++</span><span class="p">;</span>
+          <span class="k">if</span> <span class="p">(</span><span class="nx">starCount</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="k">break</span> <span class="nx">loop</span><span class="p">;</span>
+          <span class="k">else</span> <span class="nx">currentPosition</span><span class="p">.</span><span class="nx">y</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">currentPosition</span><span class="p">.</span><span class="nx">y</span> <span class="o">===</span> <span class="nx">drum</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">result</span><span class="o">++</span><span class="p">;</span>
+          <span class="k">break</span> <span class="nx">loop</span><span class="p">;</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>3번 - 아는동생이 푼것</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">solution</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="n">answer</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">daegi</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">time</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="n">new_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+        <span class="n">new_data</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">strings</span> <span class="o">=</span> <span class="p">[</span><span class="s">'N'</span><span class="p">,</span> <span class="s">'time'</span><span class="p">,</span> <span class="s">'pages'</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+            <span class="n">new_data</span><span class="p">[</span><span class="n">strings</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span> <span class="o">=</span> <span class="n">i</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+        <span class="n">new_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_data</span><span class="p">)</span>
+        
+    <span class="n">success</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">empty_one</span> <span class="o">=</span> <span class="p">{</span><span class="s">'N'</span> <span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="s">'time'</span> <span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="s">'pages'</span> <span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">}</span>
+    <span class="n">present_one</span> <span class="o">=</span> <span class="n">empty_one</span>
+    
+    <span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">time</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">new_list</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+            <span class="n">first</span> <span class="o">=</span> <span class="n">new_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="c1"># 대기열에 추가
+</span>            <span class="k">if</span><span class="p">(</span><span class="n">time</span> <span class="o">==</span> <span class="n">first</span><span class="p">[</span><span class="s">'time'</span><span class="p">]):</span>
+                <span class="n">daegi</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">first</span><span class="p">)</span>
+                <span class="n">new_list</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="c1"># 페이지순 정렬
+</span>        <span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">daegi</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+            <span class="n">daegi</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">daegi</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">k</span><span class="p">:</span> <span class="n">k</span><span class="p">[</span><span class="s">'pages'</span><span class="p">])</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">present_one</span><span class="p">[</span><span class="s">'N'</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+                <span class="n">present_one</span> <span class="o">=</span> <span class="n">daegi</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">present_one</span><span class="p">[</span><span class="s">'end_time'</span><span class="p">]</span> <span class="o">=</span> <span class="n">time</span> <span class="o">+</span> <span class="n">present_one</span><span class="p">[</span><span class="s">'pages'</span><span class="p">]</span> <span class="o">-</span><span class="mi">1</span>
+                <span class="n">daegi</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+                
+        <span class="k">if</span><span class="p">(</span><span class="n">present_one</span><span class="p">[</span><span class="s">'N'</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+            <span class="k">continue</span>
+        <span class="k">elif</span><span class="p">(</span><span class="n">present_one</span><span class="p">[</span><span class="s">'end_time'</span><span class="p">]</span> <span class="o">==</span> <span class="n">time</span><span class="p">):</span>
+
+            <span class="n">success</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">present_one</span><span class="p">[</span><span class="s">'N'</span><span class="p">])</span>
+            <span class="n">present_one</span> <span class="o">=</span> <span class="n">empty_one</span>
+        <span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">success</span><span class="p">)</span> <span class="o">==</span> <span class="n">size</span><span class="p">):</span>
+            <span class="k">break</span>
+    <span class="n">answer</span> <span class="o">=</span> <span class="n">success</span>
+    <span class="k">return</span> <span class="n">answer</span>
+</code></pre></div></div>
+
+<p>3번 공부하고 다시 작성한 답변</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">time</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nx">wait</span> <span class="o">=</span> <span class="p">[],</span>
+      <span class="nx">answer</span> <span class="o">=</span> <span class="p">[],</span>
+      <span class="nx">new_data</span> <span class="o">=</span> <span class="p">[];</span>
+
+  <span class="nx">data</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">d</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">new_data</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span><span class="na">N</span><span class="p">:</span><span class="nx">d</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="na">reqTime</span><span class="p">:</span> <span class="nx">d</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="na">page</span><span class="p">:</span> <span class="nx">d</span><span class="p">[</span><span class="mi">2</span><span class="p">]})</span>
+  <span class="p">})</span>
+
+  <span class="k">while</span><span class="p">(</span><span class="kc">true</span><span class="p">){</span>
+    <span class="c1">// 대기열과 기존 데이터 정리</span>
+    <span class="nl">loop2</span><span class="p">:</span>
+      <span class="k">while</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">new_data</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">if</span><span class="p">(</span><span class="nx">new_data</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">reqTime</span> <span class="o">&lt;=</span> <span class="nx">time</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">wait</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">new_data</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="nx">new_data</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span>
+          <span class="p">}</span> 
+          <span class="k">else</span> <span class="nx">time</span><span class="o">++</span><span class="p">;</span>
+
+          <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">new_data</span><span class="p">[</span><span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span> <span class="k">break</span> <span class="nx">loop2</span><span class="p">;</span> <span class="c1">// 정렬할 데이터가 1개밖에 없을 시</span>
+          <span class="k">if</span><span class="p">(</span><span class="nx">new_data</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">reqTime</span> <span class="o">&gt;</span> <span class="nx">time</span><span class="p">)</span> <span class="k">break</span> <span class="nx">loop2</span><span class="p">;</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+      
+    <span class="c1">// 대기열 정렬</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">wait</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">)</span> <span class="nx">wait</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">a</span><span class="p">.</span><span class="nx">page</span> <span class="o">-</span> <span class="nx">b</span><span class="p">.</span><span class="nx">page</span><span class="p">)</span>
+    
+    <span class="k">if</span><span class="p">(</span><span class="nx">wait</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="p">{</span>
+      <span class="nx">time</span> <span class="o">+=</span> <span class="nx">wait</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">page</span>
+      <span class="nx">answer</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">wait</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">N</span><span class="p">)</span>
+      <span class="nx">wait</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span>
+    <span class="p">}</span>
+    
+    <span class="k">if</span><span class="p">(</span><span class="nx">new_data</span><span class="p">.</span><span class="nx">length</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nx">wait</span><span class="p">.</span><span class="nx">length</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">answer</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">wait</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">N</span><span class="p">)</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="c1">// console.log("final answer : ", answer)</span>
+  <span class="k">return</span> <span class="nx">answer</span>
+<span class="p">}</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`
+input : [[1, 0, 5],[2, 2, 2],[3, 3, 1],[4, 4, 1],[5, 10, 2]] \n
+Result Must be [1,3,4,2,5] 
+My answer is [</span><span class="p">${</span><span class="nx">solution</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">],[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])}</span><span class="s2">]
+`</span><span class="p">)</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`
+input : [[1, 0, 5],[2, 2, 2],[3, 3, 1],[4, 4, 1],[5, 10, 2]] \n
+Result Must be [1,3,2,4,5] 
+My answer is [</span><span class="p">${</span><span class="nx">solution</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">],[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])}</span><span class="s2">]
+`</span><span class="p">)</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`
+input : [[1, 2, 10], [2, 5, 8], [3, 6, 9], [4, 20, 6], [5, 25, 5]] \n
+Result Must be [1,2,4,5,3] 
+My answer is [</span><span class="p">${</span><span class="nx">solution</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">5</span><span class="p">]])}</span><span class="s2">]
+`</span><span class="p">)</span>
+</code></pre></div></div>
+
+<br>
+<br>
+<br>
+<br>
+<ul class="taxonomy__index">
+  
+  
+    <li>
+      <a href="#2022">
+        <strong>2022</strong> <span class="taxonomy__count">2</span>
+      </a>
+    </li>
+  
+    <li>
+      <a href="#2021">
+        <strong>2021</strong> <span class="taxonomy__count">1</span>
+      </a>
+    </li>
+  
+    <li>
+      <a href="#2019">
+        <strong>2019</strong> <span class="taxonomy__count">60</span>
+      </a>
+    </li>
+  
+    <li>
+      <a href="#2018">
+        <strong>2018</strong> <span class="taxonomy__count">1</span>
+      </a>
+    </li>
+  
+</ul>
+
+
+
+  <section id="2022" class="taxonomy__section">
+    <h2 class="archive__subtitle">2022</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/d3.js/D3-Chart/" rel="permalink">D3.js 차트 개발 Hands on lab
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">직방 기술지원팀 기술공유 세미나 중 D3.js를 소개한 내용입니다
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/logmanage/ZAMS/" rel="permalink">직방이 사용자 행동 로그를 관리하는 방법. ZAMS
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">직방에서 작성했던 블로그 글을 공유합니다.
+
+</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
+  <section id="2021" class="taxonomy__section">
+    <h2 class="archive__subtitle">2021</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/test/TDD-BDD-case-study/" rel="permalink">[Test] TDD BDD Case Study
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">TDD / BDD를 적용해보며 공부.
+
+</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
+  <section id="2019" class="taxonomy__section">
+    <h2 class="archive__subtitle">2019</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/frontend/tutorial/workflow/Storybook-bit-simulation/" rel="permalink">[Tutorial] Storybook과 Bit을 활용한 UI 컴포넌트 관리(Workflow)
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">회사에서 프론트엔드 개발원칙을 SFC(Single File Component)에서 UI 컴포넌트를 기준으로 CDD(Component Driven Development)를 진행하려고 한다.
+그래서 체계적으로 관리하기위해 Storybook과 Bit을 도입해보고자 한다.
+각각의 역할은
+...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/scaffold/Scafflod-Modules/" rel="permalink">[Scaffold] Scaffold Module 개발
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">도입 이유
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/python/Python-Study/" rel="permalink">[Python] Django 공부 정리
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">객체와 인스턴스의 차이
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/workflow/Workflow-Design-for-frontend/" rel="permalink">[Workflow] 프론트엔드 개발조직을 위한 워크플로 설계
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+  작성 배경
+
+  회사의 작업구조를 페이지 중심 개발에서 UI 컴포넌트 중심 개발로 변경하면서 Workflow를 개선할만한 환경을 구성해야했다.
+폐쇄망 기반에서 개발자간 UI 명세서 역할을 할 수 있는 Storybook과
+그것을 공유할 Verdaccio라는 구축형 NPM Pri...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/git/Git-Command/" rel="permalink">[Git] Git Command 정리
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Git 시스템 이해하기
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/design%20pattern/Monorepo/" rel="permalink">[Design Pattern] Monorepo 공부
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">결론
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/frontend/methodology/CDD-2/" rel="permalink">[Methodology] CDD(Component Driven Development) - 테스트(2/2)
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Intro
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/frontend/methodology/CDD/" rel="permalink">[Methodology] CDD(Component Driven Development) - 계획(1/2)
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">CDD(Component Driven Development)란?
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/graphql/prisma/apollo/GraphQL-Apollo-Prisma/" rel="permalink">GraphQL, Prisma, Apollo 공부
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">GraphQL? RESTful?
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/Combination-2/" rel="permalink">[CodingTest] Combination(조합) 문제풀이 2
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">문제
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/Combination-1/" rel="permalink">[CodingTest] Combination(조합) 문제풀이 1
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">문제
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/devops/Linux-Command/" rel="permalink">[DevOps] Linux Command 정리
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">리눅스 관리하며 썼었던 커맨드들 정리
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/code%20config/Eslint-Prettier/" rel="permalink">[ESlint &amp; Prettier] 개발 관습 설정 in Visual Studio
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">회사 프로젝트를 작업하기 전 프론트엔드 개발자들 간의 코드 규칙을 Eslint와 Prettier 설정을 맞춰 관리해가는 방향을 정했다.
+아직 협업을 할 경우는 없지만 미래에 인수인계 받거나 협업을 진행할 경우 코드관습이 달라 고생할 경우를 대비하기로 했다.
+설정은 작업을 진행하며 ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/Test/" rel="permalink">[CodingTest] 2019-10-26 모눈종이의 대각선에 위치한 1x1을 제외한 총 1x1의 개수
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">문제
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/SQL/" rel="permalink">[CodingTest] 2019-10-26 SQL문제
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">공부겸 코딩테스트 사이트에서 토요일 오전 10시에 백엔드 포지션 테스트를 해준다기에 참여해봤다.
+SQL문제가 나왔는데 더 좋은 답이 있는것 같아 나중에 기록해두고 수정해보기로 한다.
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/webrtc/WebRTC/" rel="permalink">[WebRTC] 공부
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">WebRTC란?
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/web%20skill/image-sprite/" rel="permalink">[Web Skill] 이미지 스프라이트(Image Sprite)
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">정의
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/SImple-2019.10.12/" rel="permalink">[CodingTest] 2019-10-12 간단한 문제들(최대공약수, 최소공배수, 경우의 수)
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">문제
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/algorithm/Methodology/" rel="permalink">[Algorithm] 방법론 공부
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">동적 프로그래밍(Dynamic Programming)
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/javascript/Javascript-Concept/" rel="permalink">Javascript 개념 정리
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">알고리즘 공부를 하며 부족했던 개념을 다시 정리
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/Fibonacci-Sequence/" rel="permalink">[CodingTest] 피보나치 수열
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">문제 : 피보나치 수열
+제 1항부터 입력한 자연수(N)까지의 피보나치 수열 항들의 합을 구하여라.
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/javascript/Javascript-Skills/" rel="permalink">Javascript Skills
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+ 각 반복문의 용도 
+
+
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/algorithm/Permutation/" rel="permalink">[Algorithm] 순열(Permutation) &amp; 조합(Combination) 공부
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+  서로 다른 n개의 원소에서 r개를 중복없이 골라 순서에 상관있게 나열하는 것을 n개에서 r개를 택하는 순열이라고 한다
+
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/Line-recruit-Preview/" rel="permalink">[CodingTest] 2020 라인 SW개발 DEVEL-UP 인턴십 코드테스트 Preview
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/Line-recruit-5/" rel="permalink">[CodingTest] 2020 라인 SW개발 DEVEL-UP 인턴십 코드테스트 5번
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/Line-recruit-4/" rel="permalink">[CodingTest] 2020 라인 SW개발 DEVEL-UP 인턴십 코드테스트 4번
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/Line-recruit-1/" rel="permalink">[CodingTest] 2020 라인 SW개발 DEVEL-UP 인턴십 코드테스트 1번
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/Line-recruit/" rel="permalink">[CodingTest] 2020 라인 SW개발 DEVEL-UP 인턴십 코드테스트
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/Naver-Offical-2020/" rel="permalink">[CodingTest] 2020 네이버 공채 코드테스트 문제 with Javascript
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">2번
+```javascript
+function solution(drum) {
+  let result = 0;
+  let currentPosition = {
+    x: 0,
+    y: 0
+  }
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/Kakao-RegExp-Text/" rel="permalink">[CodingTest] 2020 카카오 신입 공채 1차 - 4번 정규표현식 문제 with Javascript
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/Kakao-Text-Bracket/" rel="permalink">[CodingTest] 2020 카카오 신입 공채 1차 - 2번 괄호 문자열 정제 문제 with Javascript
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/elk/ELK_Stack/" rel="permalink">[ELK] 단쿠키 - ElasticSearch, Logstash, Kibana 설정하기
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">적용 배경
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/googleanalytics/Google-Analytics-prevent-self/" rel="permalink">[GoogleAnalytics] 자기 자신의 활동기록 제외 (prevent recording myself)
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">참고
+
+  5 ways to exclude your own visits from Google Analytics
+  How to exclude your own [dynamic] ip from Google Analytics
+
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/algorithm/Recursion/" rel="permalink">[Algorithm] 순환(Recursion) 알고리즘 공부
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">참고
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/KaKao-Eat-Live/" rel="permalink">[CodingTest] 2019 카카오 신입 공채 1차 - 4번 무지의 먹방 라이브 문제 with Javascript
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">무지의 먹방 라이브
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/algorithm/Euclidean-algorithm/" rel="permalink">[Algorithm] 유클리드 호제법(최대공약수 구하기) 공부
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">정의
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/Daily-Programming/" rel="permalink">[CodingTest] 벽안에 고인 빗물의 양
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">문제
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/data%20type/Tree-With-Javascript/" rel="permalink">[DataType] 트리 구조
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">트리
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/data%20type/Graph-With-Javascript/" rel="permalink">[DataType] 그래프 구조
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">그래프
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/Daily-Programming-5/" rel="permalink">[CodingTest] 숫자값 인코딩 조합구하기
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">You are given an M by N matrix consisting of booleans that represents a board. Each True boolean represents a wall. Each False boolean represents a tile you ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/Naver-Hackday-Test-1/" rel="permalink">[CodingTest] 2019 네이버 핵데이 코드테스트 문제1 with Javascript
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">문제1
+문제를 알려줄 수 없다는 답변 받음. github에서 네이버 핵데이 검색하면 나옴.
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/Naver-Hackday-Test-2/" rel="permalink">[CodingTest] 2019 네이버 핵데이 코드테스트 문제2 with Javascript
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">문제2
+문제 받으면 작성할 예정.
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/Naver-Hackday-Test-3/" rel="permalink">[CodingTest] 2019 네이버 핵데이 코드테스트 문제3 with Javascript
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">문제3
+문제를 알려줄 수 없다는 답변 받음. github에서 네이버 핵데이 검색하면 나옴.
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/kakao/Kakao-Candidate-Key/" rel="permalink">[CodingTest] 2019 카카오 신입 공채 1차 - 1번 오픈채팅방 문제 with Javascript
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">후보키
+
+  문제 바로가기 링크
+  카카오의 설명 블로그
+
+
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/Kakao-failure-rate/" rel="permalink">[CodingTest] 2019 카카오 신입 공채 1차 - 2번 실패율 문제 with Javascript
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">오픈채팅방
+
+  문제 바로가기 링크
+  카카오의 설명 블로그
+
+
+
+나의 첫답안
+function solution(N, stages) {
+  let st = stages, stats = [];
+  for(let i=1;i&lt;N+1;i++){ // n
+    let selectedN...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/Daily-Programming-4/" rel="permalink">[CodingTest] 숫자값 인코딩 조합구하기
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">문제
+알파벳의 인코딩 값을
+
+ a = 1
+ b = 2
+ c = 3
+ .
+ .
+ z = 26
+ 
+으로 매핑.
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/network/Network/" rel="permalink">[Network] 네트워크 공부내용 정리
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  6 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">참고
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/python/syntax/Python-Syntax/" rel="permalink">[Syntax] 새로 알게된 파이썬 문법 정리
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">chaning comparison
+파이썬은 chaning comparison이라는 신기한 문법이 있다. 참고
+if a &lt; b and b &lt; c :
+  (...)
+
+라는 구문이
+if a &lt; b &lt; c :
+  (...)
+
+으로 연산된다. 직관적인 문법이 인상적. ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/Daily-Programming-3/" rel="permalink">[CodingTest] 일련의 숫자들 중 비어있는 값찾기
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">문제
+이 문제는
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/Daily-Programming-2/" rel="permalink">[CodingTest] i를 제외한 배열 요소들의 곱
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">문제
+정수 배열이 주어지면 인덱스 i에 해당하는 값 이외의 모든 값들의 곱인 배열을 구하여라.
+보너스 : 나눗셈을 안쓰고 풀기
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/big%20o/Big-O/" rel="permalink">Big O
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Big O
+
+  CheetSheet
+  CheetSheet
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/data%20type/Map-Set/" rel="permalink">[DataType] Map &amp; Set
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Set vs Array - 관련기사
+
+  Set
+    
+      유일값들의 배열이 필요할때(distinct)
+      집합의 개념이 필요할때(차집합, 교집합 등등 자체 메서드들이 많음.)
+      index가 필요 없을때
+      Array에서 중복값을 없앨때 =&gt; ...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/Daily-Programming-1/" rel="permalink">[CodingTest] 배열의 두 값을 합하여 k값 만들기
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">문제
+list라는 행렬과 k라는 자연수가 주어짐. list의 두 값을 합하여 k값을 만들 수 있으면 true, 없으면 false를 리턴해라.
+보너스 : 한줄 표기
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/sorting%20algorithms/Sorting-Algorithms/" rel="permalink">Sorting Algorithms
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">읽고 정리해야하는 기사
+
+  링크
+
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/Every-Day-Programming-2/" rel="permalink">[CodingTest] 매일 프로그래밍 - 2019-03-26
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">문제
+정수 배열(int array)가 주어지면 가장 큰 이어지는 원소들의 합을 구하시오. 단, 시간복잡도는 O(n).
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/Every-Day-Programming-1/" rel="permalink">[CodingTest] 매일 프로그래밍 - 피보나치 배열 2019-03-25
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/Algospot-anagram/" rel="permalink">[CodingTest] Algospot - Anagram 문제
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">&lt;!– ## 설명
+각 문자열의 알파벳을 재배열하였을때 같은 단어가 되는 단어들.
+
+
+예시
+tab - bat
+github - hbuitg
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/Kakao-open-chatting-room/" rel="permalink">[CodingTest] 2019 카카오 신입 공채 1차 - 1번 오픈채팅방 문제 with Javascript
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">오픈채팅방
+
+  문제 바로가기 링크
+  카카오의 설명 블로그
+
+    나의 답안
+    ```javascript
+function solution(record) {
+  let accounts = [], events = [], answer = [];
+
+    function setEn...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/Rectangle-empty-point/" rel="permalink">[CodingTest] 직사각형의 한점 좌표값 유추하기
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">문제
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/codingtest/star-box/" rel="permalink">[CodingTest] 별(*) 박스 만들기
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">문제 설명
+
+  별(*) 박스 만들기
+  입력값 a(rows)와 b(cols)에 해당하는 별박스 만들기
+
+
+</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
+  <section id="2018" class="taxonomy__section">
+    <h2 class="archive__subtitle">2018</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/dataprocessing/SGIS-shpToGeojson/" rel="permalink">SGIS-shpToGeojson
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">SGIS에서 받은 지도데이터(.shp)를 geojson으로 변경하는 작업 내용
+
+</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
+
+  </div>
+</div>
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/Seunghyum" rel="nofollow noopener noreferrer"><i class="Seunghyum" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2022 Moon Seung Hyun. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script data-search-pseudo-elements defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-65881210-5']);
+  
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://seunghyum.github.io/codingtest/Naver-Offical-2020/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/codingtest/Naver-Offical-2020"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://seunghyum.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+  </body>
+</html>
