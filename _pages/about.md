@@ -249,7 +249,7 @@ gallery_interactive_creadit_card:
     - 기술 스택 :
       - 프론트엔드 : Typescript, React Native
 
-  - <h3>ZAMS - 사용자 행동 로그 관리 시스템</h3>
+  - <h3>ZAMS - 사용자 행동 로그 관리 시스템 in FE지원팀</h3>
     - 설명 : 블로그 글 참고 - [직방이 사용자 행동 로그를 관리하는 방법. ZAMS](https://medium.com/zigbang/%EC%A7%81%EB%B0%A9%EC%9D%B4-%EC%82%AC%EC%9A%A9%EC%9E%90-%ED%96%89%EB%8F%99-%EB%A1%9C%EA%B7%B8%EB%A5%BC-%EA%B4%80%EB%A6%AC%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95-zams-801c49cf0ad1)
     - 담당업무 : 관리 시스템 페이지, 리포트 & 슬랙알림
     - 기술 스택 :
@@ -259,7 +259,7 @@ gallery_interactive_creadit_card:
       - Test : Jest, Playwright
       - ETC : Serverless(Lambda scheduled cron), Slack API
 
-  - <h3>E2E 테스트 도입</h3>
+  - <h3>E2E 테스트 도입 in FE지원팀</h3>
     - 설명 : 직방 앱 안드로이드 & IOS 앱 E2E 테스트 도입
     - 담당업무 : 테스트 케이스 추가 및 기기 대응, 리포트 & 알림 개발
     - 기술 스택 : 
@@ -273,20 +273,15 @@ gallery_interactive_creadit_card:
     - 테스트 커버리지
       - 딥링크
       - 로그인
-  - <h3>D3 차트 개발</h3>
-    - 설명 : 직방 앱 안드로이드 & IOS 앱 E2E 테스트 도입
-    - 담당업무 : 테스트 케이스 추가 및 기기 대응, 리포트 & 알림 개발
-    - 기술 스택 : 
-      - Langage: Node.js(Typescript), Cucumber(Gherkin)
-      - Test 원칙 : BDD(Behaviour-Driven Development)
-      - Test Framework: WDIO, Appium, Selenium GRID 4
-      - Test Infra: Selenium GRID 4
-    - 테스트 디바이스
-      - Android 실기기 & 에뮬레이터
-      - IOS 실기기 & 에뮬레이터
-    - 테스트 커버리지
-      - 딥링크
-      - 로그인
+  - <h3>D3 차트 개발 in FE지원팀</h3>
+    - 설명 : 직방앱에 들어가는 차트 개발
+    - 관련 블로그 글 : [D3.js 차트 개발 Hands on lab](https://seunghyum.github.io/d3.js/D3-Chart)
+    - 담당업무 : 다른 프로젝트의 차트를 마이그레이션 & 커스텀. 다수의 리팩토링 작업 진행
+      - js -> typescript 리팩토링
+      - 클라이언트에서의 차트 데이터 표준화 작업을 백엔드로 이전
+      - 각 지표들(ex - x축, y축 기준 등)을 커스텀
+      - 다양한 차트를 연동 (Line chart + Area chart + Bar plot chart + scatter chart)
+    - 기술 스택 : Typescript, D3.js
 
 <h2>in BMSMILE <span class="big-tag black">BMSMILE</span></h2>
 
