@@ -3,6 +3,12 @@ layout: archive
 permalink: /about/
 title: "About Developer Dave"
 author_profile: true
+gallery_zigbang_chart:
+  - url: /assets/images/about/Zigbang/chart_type1.png
+    image_path: /assets/images/about/Zigbang/chart_type1.png
+  - url: /assets/images/about/Zigbang/chart_type2.png
+    image_path: /assets/images/about/Zigbang/chart_type2.png
+
 gallery_cancer:
   - url: /assets/images/about/Cancer/0-min.png
     image_path: /assets/images/about/Cancer/0-min.png
@@ -282,6 +288,8 @@ gallery_interactive_creadit_card:
       - 각 지표들(ex - x축, y축 기준 등)을 커스텀
       - 다양한 차트를 연동 (Line chart + Area chart + Bar plot chart + scatter chart)
     - 기술 스택 : Typescript, D3.js
+
+{% include gallery id="gallery_zigbang_chart" layout="half" %}
 
 <h2>in BMSMILE <span class="big-tag black">BMSMILE</span></h2>
 
