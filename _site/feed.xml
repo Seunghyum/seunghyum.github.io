@@ -1,4 +1,231 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://seunghyum.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://seunghyum.github.io/" rel="alternate" type="text/html" /><updated>2023-02-16T18:18:42+09:00</updated><id>https://seunghyum.github.io/feed.xml</id><title type="html">eveloper Dave</title><subtitle>데이터 시각화에 관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">D3.js 차트 개발 Hands on lab</title><link href="https://seunghyum.github.io/d3.js/D3-Chart/" rel="alternate" type="text/html" title="D3.js 차트 개발 Hands on lab" /><published>2022-11-11T00:00:00+09:00</published><updated>2022-11-11T00:00:00+09:00</updated><id>https://seunghyum.github.io/d3.js/D3-Chart</id><content type="html" xml:base="https://seunghyum.github.io/d3.js/D3-Chart/">&lt;p&gt;직방 기술지원팀 기술공유 세미나 중 D3.js를 소개한 내용입니다&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://seunghyum.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://seunghyum.github.io/" rel="alternate" type="text/html" /><updated>2023-02-16T18:40:34+09:00</updated><id>https://seunghyum.github.io/feed.xml</id><title type="html">eveloper Dave</title><subtitle>데이터 시각화에 관심이 많은 개발자입니다.</subtitle><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><entry><title type="html">Flutter 맛보기 1</title><link href="https://seunghyum.github.io/logmanage/Flutter-begin-1/" rel="alternate" type="text/html" title="Flutter 맛보기 1" /><published>2023-01-03T00:00:00+09:00</published><updated>2023-01-03T00:00:00+09:00</updated><id>https://seunghyum.github.io/logmanage/Flutter-begin-1</id><content type="html" xml:base="https://seunghyum.github.io/logmanage/Flutter-begin-1/">&lt;p&gt;직방 기술지원팀 기술공유 세미나 중 플러터를 소개한 내용입니다&lt;/p&gt;
+
+&lt;h2 id=&quot;flutter&quot;&gt;Flutter&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Dart 기반. typescript와 문법적으로 유사.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.flutter.dev/development/tools/sdk/release-notes/supported-platforms#supported-platforms&quot;&gt;크로스 플랫폼 프레임워크 (데스크탑 앱, 웹, 모바일 앱)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;다른-크로스-플랫폼과-뭐가-다른가&quot;&gt;다른 크로스 플랫폼과 뭐가 다른가?&lt;/h2&gt;
+
+&lt;h3 id=&quot;렌더링-방식이-가벼움&quot;&gt;렌더링 방식이 가벼움&lt;/h3&gt;
+
+&lt;p&gt;웹뷰, RN 같은 자바스크립트 기반 크로스 플랫폼들은 &lt;strong&gt;자바스크립트 브릿지&lt;/strong&gt;를 사용.&lt;/p&gt;
+
+&lt;figure class=&quot; &quot;&gt;
+  
+    
+      &lt;a href=&quot;/assets/images/posts/2023-01-03-Flutter-begin-1/rendering.png&quot;&gt;
+        &lt;img src=&quot;/assets/images/posts/2023-01-03-Flutter-begin-1/rendering.png&quot; alt=&quot;&quot; /&gt;
+      &lt;/a&gt;
+    
+  
+  
+&lt;/figure&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;플러터는 &lt;strong&gt;자체 렌더링 엔진 &lt;a href=&quot;https://landroid.tistory.com/14&quot;&gt;Skia&lt;/a&gt;(C, C++)&lt;/strong&gt;를 통해 중간과정 없이 캔버스를 렌더링. 자바스크립트 브릿지 필요 없다&lt;/p&gt;
+
+&lt;p&gt;실제 웹의 경우 개발자 도구로 보면 canvas 태그 하나 있다고 함.&lt;/p&gt;
+
+&lt;figure class=&quot; &quot;&gt;
+  
+    
+      &lt;a href=&quot;/assets/images/posts/2023-01-03-Flutter-begin-1/js-vs-flutter.png&quot;&gt;
+        &lt;img src=&quot;/assets/images/posts/2023-01-03-Flutter-begin-1/js-vs-flutter.png&quot; alt=&quot;&quot; /&gt;
+      &lt;/a&gt;
+    
+  
+  
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;컴파일-방식--jit-와-aot-모두-지원&quot;&gt;컴파일 방식 : JIT 와 AOT 모두 지원&lt;/h3&gt;
+
+&lt;p&gt;환경에 따라 유연하게 컴파일 가능.&lt;/p&gt;
+
+&lt;p&gt;JIT(just-in-time) 컴파일과 AOT(ahead-of-time)컴파일을 모두 지원&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;개발모드는 JIT 컴파일&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;핫 리로드(hot reload)&lt;/strong&gt;를 지원&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;프로덕션 모드는 AOT 컴파일&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;다트 코드를 그에 맞는 네이티브 코드로 바꿔줘서 플러터가 모두에게 빠르게 동작하며 플러터 전체 프레임워크의 대부분을 다트로 구현 가능. 자바스크립트 브릿지를 피할 수 있게 함.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;그 밖에도 다트는 js로 컴파일되어 브라우저에서도 실행 가능하다고 함.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;언어-개발팀과-프레임워크-개발팀이-협업&quot;&gt;언어 개발팀과 프레임워크 개발팀이 협업&lt;/h3&gt;
+
+&lt;p&gt;다 구글 꺼.&lt;/p&gt;
+
+&lt;p&gt;Dart(Language) 개발팀과 Flutter(framework) 개발팀이 긴밀히 협업&lt;/p&gt;
+
+&lt;p&gt;RN - ts 아무 협업이 없음 😭&lt;/p&gt;
+
+&lt;p&gt;Flutter에서 언어적으로 필요한 것이 있을 때 Dart가 도와줄 수 있음. 반대도 성립한다고 함.&lt;/p&gt;
+
+&lt;p&gt;→ 그만큼 언어, 플랫폼의 지원이 빠를 수 있다고 함.&lt;/p&gt;
+
+&lt;h3 id=&quot;자체-그래픽엔진&quot;&gt;자체 그래픽엔진&lt;/h3&gt;
+
+&lt;p&gt;Skia 라는 그래픽 엔진으로 렌더링&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;OS 고유의 UI를 사용할 수 없다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;그래픽 엔진위에서 돌아가기 때문에 모든 픽셀을 수정할 수 있다고 함.&lt;/p&gt;
+
+&lt;p&gt;애니메이션, 커스텀 UI를 이용하여 브랜드만의 UI를 만들 수 있다고 함. - TikTalk&lt;/p&gt;
+
+&lt;p&gt;OS 고유의 스타일을 카피한 라이브러리가 있긴 함.(cupertino - ios style widget)&lt;/p&gt;
+
+&lt;p&gt;기본 설정은 materialize UI. 커스터마이징에 시간이 좀 든다고 함.&lt;/p&gt;
+
+&lt;h2 id=&quot;flutter의-핵심-widget&quot;&gt;Flutter의 핵심 Widget&lt;/h2&gt;
+
+&lt;p&gt;Icon, UI 컴포넌트, 이미지 등 모든 것이 위젯으로 제공됨.&lt;/p&gt;
+
+&lt;p&gt;위젯을 조합하여 화면을 만듦.&lt;/p&gt;
+
+&lt;p&gt;680개 이상의 위젯들이 있음.&lt;/p&gt;
+
+&lt;p&gt;UI 배치(레이아웃), 애니메이션, 스타일 또한 위젯으로 개발. 이미 만들어진 위젯들을 잘 찾아 쓰는것이 중요.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://fluttergems.dev/widget-library-ui-framework/&quot;&gt;디자인 관련 라이브러리들&lt;/a&gt;(Material design, cupertino design(iOS))도 많음.&lt;/p&gt;
+
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;AddCartButton&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;StatelessWidget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+ &lt;span class=&quot;c1&quot;&gt;//...클래스 멤버&lt;/span&gt;
+ &lt;span class=&quot;c1&quot;&gt;// Button을 다른 위젯으로 감싸서, 즉 위젯을 조합해 커스텀 위젯을 만든다.&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;override&lt;/span&gt;
+ &lt;span class=&quot;nx&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// AddToCartButton을 중앙으로 정렬하는 위젯&lt;/span&gt;
+   &lt;span class=&quot;nx&quot;&gt;child&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Button&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 텍스트를 전달하는 새 커스텀 컴포넌트를 만든다.&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;child&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Add to Cart'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;build() 매서드처럼 라이프 사이클 매서드들이 존재.&lt;/p&gt;
+
+&lt;p&gt;Stateful 위젯과 Stateless 위젯을 조합하여 화면을 제작.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;위젯 트리&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot; &quot;&gt;
+  
+    
+      &lt;a href=&quot;/assets/images/posts/2023-01-03-Flutter-begin-1/widget-tree.png&quot;&gt;
+        &lt;img src=&quot;/assets/images/posts/2023-01-03-Flutter-begin-1/widget-tree.png&quot; alt=&quot;&quot; /&gt;
+      &lt;/a&gt;
+    
+  
+  
+&lt;/figure&gt;
+
+&lt;p&gt;부모 위젯의 상태가 바뀌면 그 위젯과 하위 위젯들 모두 다시 그리는 방식. 복잡한 위젯은 상태 변화에 따라 퍼포먼스 이슈가 있을수도…?&lt;/p&gt;
+
+&lt;h2 id=&quot;그-밖의-장점에-대한-경험자의-글&quot;&gt;그 밖의 장점에 대한 경험자의 글&lt;/h2&gt;
+
+&lt;p&gt;2021.11에 작성한 &lt;strong&gt;&lt;a href=&quot;https://d2.naver.com/helloworld/3384599&quot;&gt;지식iN 앱을 Flutter로 개발하는 이유&lt;/a&gt; 중에서….&lt;/strong&gt;&lt;/p&gt;
+
+&lt;figure class=&quot; &quot;&gt;
+  
+    
+      &lt;a href=&quot;/assets/images/posts/2023-01-03-Flutter-begin-1/naver-jisikin.png&quot;&gt;
+        &lt;img src=&quot;/assets/images/posts/2023-01-03-Flutter-begin-1/naver-jisikin.png&quot; alt=&quot;&quot; /&gt;
+      &lt;/a&gt;
+    
+  
+  
+&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;빌드 : 빠르다.&lt;/li&gt;
+  &lt;li&gt;렌더링 : 속도 괜찮고, 부드럽게 잘 실행된다&lt;/li&gt;
+  &lt;li&gt;개발툴 : 디버깅, 리팩터링, 가독성 향상 등의 유용한 기능이 기본으로 탑재되어 있어서 편리하게 작업할 수 있었다.&lt;/li&gt;
+  &lt;li&gt;테스트 : 유닛 테스트, 위젯 테스트, 융합 테스트(intergation test) 3단계로 나눠서 테스트할 수 있게 되어 있어서 괜찮았다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;자세한 내용은 위 링크에서…&lt;/p&gt;
+
+&lt;h2 id=&quot;체감&quot;&gt;체감&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;좋은 개발경험 : vscode extiontion이 잘되어 있음. vscode에 디버깅 패널, 프로파일 패널등을 제공. 앱도 vscode GUI로 실행 가능. 자동완성 기능 역시 좋음.&lt;/li&gt;
+  &lt;li&gt;dart가 typescript와 유사하여 실제로 금방 익힐 수 있음. 오랜만에 함수형 프로그래밍(React hooks)만 하다가 클래스형 프로그래밍 하니까 뭔가 새로움.&lt;/li&gt;
+  &lt;li&gt;다트, 플러터 모두 공식문서들이 너무 잘 되어 있음. 특히 다트는 구몬 푸는 수준으로 잘 되어 있음.&lt;/li&gt;
+  &lt;li&gt;lint 규칙 설정이 너무 간단. esconfig, prettier 등의 작업들로 빡치는 일이 없음. 프로젝트 세팅이 간편.&lt;/li&gt;
+  &lt;li&gt;xcode GUI로 개발하면 볼 수 있는 형태의 코드들이 많았다. 앱 개발자들은 쉽게 할듯…?&lt;/li&gt;
+  &lt;li&gt;위젯안에 엄청나게 많은 속성, 매서드들이 있어서 익숙해지려면 많이 써봐야할 것 같음. onTap등의 인터렉션에 대한 속성들도 이미 다 제공함.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot; &quot;&gt;
+  
+    
+      &lt;a href=&quot;/assets/images/posts/2023-01-03-Flutter-begin-1/code.png&quot;&gt;
+        &lt;img src=&quot;/assets/images/posts/2023-01-03-Flutter-begin-1/code.png&quot; alt=&quot;&quot; /&gt;
+      &lt;/a&gt;
+    
+  
+  
+&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;플러터 역시 lock 파일로 라이브러리 패키지들을 관리. 라이브러리의 호환되는 버전의 range를 설정할 수 있다는 것이 있지만 나머지는 npm의 호환 문제와 비슷해 보임. 잘 모름&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;앞으로&quot;&gt;앞으로&lt;/h2&gt;
+
+&lt;p&gt;전역 상태 관리, 위젯간의 상태 공유 등은 모름. → 플러터 아키텍처 공부하면 알 수 있을 것 같음.&lt;/p&gt;
+
+&lt;figure class=&quot; &quot;&gt;
+  
+    
+      &lt;a href=&quot;/assets/images/posts/2023-01-03-Flutter-begin-1/forward.png&quot;&gt;
+        &lt;img src=&quot;/assets/images/posts/2023-01-03-Flutter-begin-1/forward.png&quot; alt=&quot;&quot; /&gt;
+      &lt;/a&gt;
+    
+  
+  
+&lt;/figure&gt;
+
+&lt;p&gt;앱의 MVVM 구조를 제대로 맛볼 수 있지 않을까…&lt;/p&gt;
+
+&lt;h2 id=&quot;관련링크&quot;&gt;관련링크&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;공식문서
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/flutterdev&quot;&gt;futter 공식문서 공부 영상 유튜브 재생목록&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://flutter-ko.dev/docs/get-started/flutter-for/react-native-devs&quot;&gt;React Native 개발자를 위한 Flutter&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://flutter-ko.dev/docs/get-started/flutter-for/web-devs&quot;&gt;Flutter for web developers&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://flutter-ko.dev/docs/reference/widgets&quot;&gt;위젯 목록&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://pub.dev/&quot;&gt;다트, 플러터 라이브러리 검색&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://brunch.co.kr/@myner/5&quot;&gt;플러터 렌더링 원리에 대한 좋은 글&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://d2.naver.com/helloworld/3384599&quot;&gt;지식iN 앱을 Flutter로 개발하는 이유&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://tv.naver.com/v/29721159&quot;&gt;Flutter를 위한 BLoC 아키텍쳐&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;BLOC 패턴을 사용한 Flutter 프로젝트 아키텍쳐 설계 -&lt;/strong&gt; 영화 리스트 앱 만들기
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://booiljung.github.io/technical_articles/flutter/state_management/architecture_your_flutter_project_using_bloc_pattern.html&quot;&gt;https://booiljung.github.io/technical_articles/flutter/state_management/architecture_your_flutter_project_using_bloc_pattern.html&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/SAGARSURI/MyMovies&quot;&gt;https://github.com/SAGARSURI/MyMovies&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://landroid.tistory.com/14&quot;&gt;[Flutter] Skia가 뭐지?&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Log Manage" /><summary type="html">직방 기술지원팀 기술공유 세미나 중 플러터를 소개한 내용입니다</summary></entry><entry><title type="html">D3.js 차트 개발 Hands on lab</title><link href="https://seunghyum.github.io/d3.js/D3-Chart/" rel="alternate" type="text/html" title="D3.js 차트 개발 Hands on lab" /><published>2022-11-11T00:00:00+09:00</published><updated>2022-11-11T00:00:00+09:00</updated><id>https://seunghyum.github.io/d3.js/D3-Chart</id><content type="html" xml:base="https://seunghyum.github.io/d3.js/D3-Chart/">&lt;p&gt;직방 기술지원팀 기술공유 세미나 중 D3.js를 소개한 내용입니다&lt;/p&gt;
 
 &lt;h1 id=&quot;introduce&quot;&gt;Introduce&lt;/h1&gt;
 
@@ -1184,146 +1411,4 @@ Stash : add 하기 전의 변경사항들을 대상으로 함.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://velog.io/@yesdoing/%EB%B2%88%EC%97%AD-Component-Driven-Development-udjzqwqgay&quot;&gt;[번역] - Component-Driven Development&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://blog.hichroma.com/the-crucial-tool-for-modern-frontend-engineers-fb849b06187a&quot;&gt;UI component explorers — your new favorite tool&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Methodology" /><summary type="html">CDD(Component Driven Development)란?</summary></entry><entry><title type="html">GraphQL, Prisma, Apollo 공부</title><link href="https://seunghyum.github.io/graphql/prisma/apollo/GraphQL-Apollo-Prisma/" rel="alternate" type="text/html" title="GraphQL, Prisma, Apollo 공부" /><published>2019-11-05T00:00:00+09:00</published><updated>2019-11-05T00:00:00+09:00</updated><id>https://seunghyum.github.io/graphql/prisma/apollo/GraphQL-Apollo-Prisma</id><content type="html" xml:base="https://seunghyum.github.io/graphql/prisma/apollo/GraphQL-Apollo-Prisma/">&lt;h2 id=&quot;graphql-restful&quot;&gt;GraphQL? RESTful?&lt;/h2&gt;
-
-&lt;p&gt;: GrpahQL과 RESTful은 각각의 장단점이 있음.&lt;/p&gt;
-
-&lt;h3 id=&quot;restful&quot;&gt;RESTful&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;PDF, Excel File 전송같은 단순 Text로 처리되지 않는 요청이 있을때&lt;/li&gt;
-  &lt;li&gt;요청의 구조가 다양하지 않고 정해져 있는경우.&lt;/li&gt;
-  &lt;li&gt;API명세서가 제대로 안됨(대부분의 회사들이 아예 없거나 업데이트가 안됨)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;graphql&quot;&gt;GraphQL&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;한번에 여러 요청들에 응답해야할때.&lt;/li&gt;
-  &lt;li&gt;대부분의 요청이 CRUD일때&lt;/li&gt;
-  &lt;li&gt;API명세서를 만들 필요가 없음&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;API서버 구축시 두 방법을 섞어쓰는 것은 품질을 떨어뜨릴 수 있음. 각각의 장점을 살릴수 있는 설계가 필요.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;개념&quot;&gt;개념&lt;/h2&gt;
-
-&lt;p&gt;&lt;em&gt;SQL(Structed Query Language)&lt;/em&gt;은 &lt;strong&gt;데이터베이스 시스템&lt;/strong&gt;에 저장된 데이터를 효율적으로 가져오는 것&lt;br /&gt;
-&lt;em&gt;GQL(Graph Query Language)&lt;/em&gt;은 &lt;strong&gt;웹 클라이언트&lt;/strong&gt;가 데이터를 서버로 부터 효율적으로 가져오는 것&lt;/p&gt;
-
-&lt;h2 id=&quot;특징&quot;&gt;특징&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;하나의 Endpoint를 사용
-    &lt;ul&gt;
-      &lt;li&gt;HTTP요청 횟수 감소 : RESTful은 원하는 리소스를 종류별로 다른 Endpoint에서 호출해야할 경우가 많음. 반면 &lt;strong&gt;GraphQL은 하나의 Endpoint&lt;/strong&gt;에서 원하는 리소스를 모두 담아 요청하는 것이 가능.&lt;/li&gt;
-      &lt;li&gt;HTTP응답의 size 감소 : 필요한 부분만 요청할수 있음. Under-Fetching, Over-Fetching 해결&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;인트로스펙션(introspection) 비용감소
-    &lt;ul&gt;
-      &lt;li&gt;: 쿼리용 IDE를 만등어줘서 API 명세서를 따로 안만들어도 됨. 기존에는 API 명세서를 만들어 프론트엔드 개발자와 백엔드 개발자가 소통해야 했음.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;요청할때 사용한 Query문에 따라 응답의 구조가 달라짐.&lt;/li&gt;
-  &lt;li&gt;어떠한 프로토콜(TCP/UDP, Websocket) 에서도 사용가능. &lt;em&gt;프로그래밍 언어일 뿐이니까!&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;NoSQL DB나 RDB 상관 없이 사용가능. &lt;em&gt;프로그래밍 언어일 뿐이니까!&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;사용가능한 아키텍처 - &lt;a href=&quot;https://www.tutorialspoint.com/graphql/graphql_architecture.htm&quot;&gt;자세한 설명&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;GraphQL server with connected database&lt;/li&gt;
-      &lt;li&gt;GraphQL server that integrates existing systems&lt;/li&gt;
-      &lt;li&gt;Hybrid approach&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;문법&quot;&gt;문법&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;작업 유형
-    &lt;ul&gt;
-      &lt;li&gt;Query: 데이터를 받아옴(GET)
-        &lt;ul&gt;
-          &lt;li&gt;여러 query 요청은 내부에서 병렬로 수행됨&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Mutation: 데이터를 생성(Post), 수정(PUT, PATCH), 삭제(DELETE)
-        &lt;ul&gt;
-          &lt;li&gt;여러 mutation 요청은 내부에서 직렬(차례대)로 수행됨. 따라서 2개의 mutation 요청을 보냈을때 2번째 요청이 수행되지 않았다면 첫번째 요청은 수행됐다는 것. … &lt;a href=&quot;https://graphql.org/learn/queries/#multiple-fields-in-mutations&quot;&gt;Multiple Fields In Mutations&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Subscription: 웹소켓을 사용해 실시간 양방향 통신 구현&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;구조&quot;&gt;구조&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Query : 어떤 Request를 받을 건지&lt;/li&gt;
-  &lt;li&gt;Resolver : GQL은 언어일 뿐. 해당 리퀘스트를 어떻게 처리할 것인지를 자유롭게 설정. 텍스트 파일에서 읽어올 수도 있음.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;실제-사용&quot;&gt;실제 사용&lt;/h2&gt;
-
-&lt;p&gt;: Graphql은 단지 언어 일뿐. 클라이언트와 서버 사이드에서 사용하려면 보조해주는 라이브러리가 필요.&lt;/p&gt;
-
-&lt;h3 id=&quot;클라이언트쪽에서-사용하려면&quot;&gt;클라이언트쪽에서 사용하려면&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://relay.dev/&quot;&gt;릴레이(Relay)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.apollographql.com/&quot;&gt;아폴로(Apollo GraphQL)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;둘 중 하나 선택. Apollo가 현재상황에선 더 쓰기 편함.
-&lt;br /&gt;&lt;br /&gt;
-&lt;small&gt;내부적으로 DFS(Deep First Search)로 로직이 수행되어서 Graph QL이 된것 같다고함.. &lt;a href=&quot;https://tech.kakao.com/2019/08/01/graphql-basic/&quot;&gt;Kakao Tech&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;서버쪽에서-사용하려면&quot;&gt;서버쪽에서 사용하려면&lt;/h3&gt;
-
-&lt;p&gt;3가지 방법이 있다.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;리졸버에서 SQL을 직접 다루는것&lt;/li&gt;
-  &lt;li&gt;ORM으로 다루는 것&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.prisma.io/with-graphql/&quot;&gt;Prisma&lt;/a&gt; 사용. (동작방식은 ORM과 비슷)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;1번&lt;/strong&gt;의 단점은 쿼리가 보통 단순 스트링으로 전달되기 때문에 개발환경 차원에서 쿼리를 검사하기 까다로움.&lt;br /&gt;
-&lt;strong&gt;2번&lt;/strong&gt;은 단점이 있다기 보다는 &lt;strong&gt;3번&lt;/strong&gt; 선택지가 더 좋은 방법인 듯 함.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Prisma는 쿼리 리졸빙을 처리해주는 편리한 데이터 접근 계층을 제공하여 상기한 문제를 해결해줍니다. &lt;br /&gt;
-Prisma를 사용하면, 서버로 들어온 쿼리를 Prisma에 전달하고, Prisma는 이를 받아 실제 데이터베이스에 맞추어 쿼리를 리졸브하는 식으로 리졸버를 구현하게 됩니다. &lt;br /&gt;
-Prisma Client 덕분에, 리졸버 구현은 대부분의 경우 한두 줄로 구현이 가능할 정도로 간단명료한 과정입니다.&lt;br /&gt;
-&lt;small&gt;velog 님 블로그 - &lt;a href=&quot;https://velog.io/@cadenzah/graphql-node-05-database&quot;&gt;GraphQL - Node Tutorial - 05. Adding a Database&lt;/a&gt;&lt;/small&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;center&gt;api 서버에 Prisma Client가 있고 따로 Prisma Server가 데이터베이스 앞단에서 데이터베이스를 관리함. &lt;/center&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Prisma 장점 정리 - &lt;a href=&quot;https://medium.com/labelstore/prisma%EB%A1%9C-graphql%EC%9D%84-%EC%89%BD%EA%B2%8C-%EB%8F%84%EC%9E%85%ED%95%98%EA%B8%B0-fa64dcf63382&quot;&gt;퍼옴&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;GraphQL 형식의 데이터모델만 작성하면 사용하는 언어와 DBMS에 구애받지 않고, ORM 클라이언트와 모델, 그리고 Data Schema 가 자동으로 생성된다.&lt;/li&gt;
-  &lt;li&gt;GraphQL 형식의 DataModel을 정의하면 Prisma가 알아서 사용하고있는 DBMS와 언어의 종류에 맞게 실제 DB 배포부터, 클라이언트와 모델 그리고 타입정의까지 자동으로 만들어 제공해 줍니다.&lt;/li&gt;
-  &lt;li&gt;자체 어드민 페이지를 제공하여 쉬운 데이터 운용이 가능하다. (비개발자도 손쉽게 쓸 수 있을 정도.)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;참고-자료&quot;&gt;참고 자료&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.tutorialspoint.com/graphql&quot;&gt;TutorialsPoint&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.holaxprogramming.com/2018/01/20/graphql-vs-restful-api/&quot;&gt;GraphQL과 RESTful API&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://tech.kakao.com/2019/08/01/graphql-basic/&quot;&gt;Kakao Tech&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://medium.com/labelstore/prisma%EB%A1%9C-graphql%EC%9D%84-%EC%89%BD%EA%B2%8C-%EB%8F%84%EC%9E%85%ED%95%98%EA%B8%B0-fa64dcf63382&quot;&gt;Prisma로 GraphQL을 쉽게 도입하기&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.slideshare.net/Kivol/graphql-in-action-rest&quot;&gt;REST와 이별할 때 생각해야 하는 것들&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;더-읽고-정리&quot;&gt;더 읽고 정리&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://medium.com/netflix-techblog/our-learnings-from-adopting-graphql-f099de39ae5f&quot;&gt;Our learnings from adopting GraphQL&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://medium.com/netflix-techblog/graphql-search-indexing-334c92e0d8d5&quot;&gt;GraphQL Search Indexing&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="GraphQL" /><category term="Prisma" /><category term="Apollo" /><summary type="html">GraphQL? RESTful?</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Moon Seung Hyun</name><email>antmgu@gmail.com</email></author><category term="Methodology" /><summary type="html">CDD(Component Driven Development)란?</summary></entry></feed>
