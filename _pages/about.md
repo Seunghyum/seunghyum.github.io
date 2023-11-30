@@ -250,48 +250,41 @@ gallery_interactive_creadit_card:
 
 # 담당 프로젝트 & 업무
 
-<h2>in Zigbang <span class="big-tag orange">Zigbang</span></h2>
+<h2><span class="big-tag orange">Zigbang</span></h2>
 
-### 작업내용
-
-- <h3>직방 원룸/오피스텔/빌라 in 서비스개발팀</h3>
-    - 담당업무 : 서비스 유지 & 보수
-    - 기술 스택 :
-      - 프론트엔드 : Typescript, React Native
-
-- <h3>E2E 테스트 도입 in FE지원팀</h3>
-    - 설명 : 직방 앱 안드로이드 & IOS 앱 E2E 테스트 도입. 서비스 개발팀에서 시연했던 프로젝트를 지원팀으로 이동하며 담당 업무로 바뀜.
-    - 담당업무 : 테스트 시나리오 개발 및 기기 대응, 리포트 & 알림 개발
-    - 기술 스택 :
-      - Langage: Node.js(Typescript), Cucumber(Gherkin)
-      - Test 원칙 : BDD(Behaviour-Driven Development)
-      - Test lib: WDIO, Appium
-      - Test Infra: Browserstack
-    - 테스트 디바이스
-      - Android 실기기 & 에뮬레이터
-      - IOS 실기기 & 에뮬레이터
-    - 테스트 커버리지 (전체 기능들 중 약 60%)
-      - 딥링크
-      - 로그인/회원가입/탈퇴 (이메일, Google, Kakao, Facebook)
-      - 아파트 문의하기
-      - 지도 검증
-      - 필터 검증
-      - 리스트 페이지 매물 갯수 검증
-      - 지킴중개
-      - 헛걸음 보상제
-      - ...등등
-    - 효용성
-      - preview 단계에서 버그 발견
-      - rn 버전업 작업에서 사용. QA 인력은 마지막 검증에만 사용.
 - <h3>ZAMS - 사용자 행동 로그 관리 시스템 in FE지원팀</h3>
-    - 직방 기술블로그 글 참고 : [직방이 사용자 행동 로그를 관리하는 방법. ZAMS](https://medium.com/zigbang/%EC%A7%81%EB%B0%A9%EC%9D%B4-%EC%82%AC%EC%9A%A9%EC%9E%90-%ED%96%89%EB%8F%99-%EB%A1%9C%EA%B7%B8%EB%A5%BC-%EA%B4%80%EB%A6%AC%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95-zams-801c49cf0ad1)
-    - 담당업무 : 관리 시스템 페이지, 리포트 & 슬랙알림
-    - 기술 스택 :
-      - 프론트엔드 : Typescript, React Hooks, Apollo-Client, React-DnD, Handlebar
-      - 백엔드 : Node.js,
-      - Database : MongoDB
-      - Test : Jest, Playwright
-      - ETC : Serverless(Lambda scheduled cron), Slack API
+  - 직방 기술블로그 글 참고 : [직방이 사용자 행동 로그를 관리하는 방법. ZAMS](https://medium.com/zigbang/%EC%A7%81%EB%B0%A9%EC%9D%B4-%EC%82%AC%EC%9A%A9%EC%9E%90-%ED%96%89%EB%8F%99-%EB%A1%9C%EA%B7%B8%EB%A5%BC-%EA%B4%80%EB%A6%AC%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95-zams-801c49cf0ad1)
+  - 담당업무 : 관리 시스템 페이지, 리포트 & 슬랙알림
+  - 기술 스택 :
+    - 프론트엔드 : Typescript, React Hooks, Apollo-Client, React-DnD, Handlebar
+    - 백엔드 : Node.js,
+    - Database : MongoDB
+    - Test : Jest, Playwright
+    - ETC : Serverless(Lambda scheduled cron), Slack API
+- <h3>E2E 테스트 도입 in FE지원팀</h3>
+  - 설명 : 직방 앱 안드로이드 & IOS 앱 E2E 테스트 도입. 서비스 개발팀에서 시연했던 프로젝트를 지원팀으로 이동하며 담당 업무로 바뀜.
+  - 담당업무 : 테스트 시나리오 개발 및 기기 대응, 리포트 & 알림 개발
+  - 기술 스택 :
+    - Langage: Node.js(Typescript), Cucumber(Gherkin)
+    - Test 원칙 : BDD(Behaviour-Driven Development)
+    - Test lib: WDIO, Appium
+    - Test Infra: Browserstack
+  - 테스트 디바이스
+    - Android 실기기 & 에뮬레이터
+    - IOS 실기기 & 에뮬레이터
+  - 테스트 커버리지 (전체 기능들 중 약 60%)
+    - 딥링크
+    - 로그인/회원가입/탈퇴 (이메일, Google, Kakao, Facebook)
+    - 아파트 문의하기
+    - 지도 검증
+    - 필터 검증
+    - 리스트 페이지 매물 갯수 검증
+    - 지킴중개
+    - 헛걸음 보상제
+    - ...등등
+  - 효용성
+    - preview 단계에서 버그 발견
+    - rn 버전업 작업에서 사용. QA 인력은 마지막 검증에만 사용.
 - <h3>기술공유 in FE지원팀</h3>
   - [React 18 소개](https://drive.google.com/file/d/1Iq_h74wirSVv03y9AHmUIrP_eMKpoN5m/view?usp=drive_link)
   - [Typescript 5.0 미리보기](https://drive.google.com/file/d/1WPZGLI7_zt_a9T6-oRhBq0PjVEY4IQCH/view?usp=drive_link)
@@ -299,20 +292,25 @@ gallery_interactive_creadit_card:
   - [Flutter 맛보기 2](https://drive.google.com/file/d/1cCpcTtHL5Xq6rkS73qxoAmakkiP81IMv/view?usp=drive_link)
   - [차트 개발 D3 맛보기](https://drive.google.com/file/d/1g0f1UuNR4TJ9ByiW2ruxRM0l0y4kUYUL/view?usp=drive_link)
 - <h3>D3 차트 개발 in FE지원팀</h3>
-    - 설명 : 직방앱에 들어가는 차트 개발
-    - 관련 블로그 글 : [D3.js 차트 개발 Hands on lab](https://seunghyum.github.io/d3.js/D3-Chart)
-    - 담당업무 : 다른 프로젝트의 차트를 마이그레이션 & 커스텀. 다수의 리팩토링 작업 진행
-      - js ➡️ typescript 리팩토링
-      - 다양한 차트를 연동 (Line chart + Area chart + Bar plot chart + scatter chart)
-      - [텍스트 데이터 정규화에 대한 unit 테스트 작성(jest)](https://gist.github.com/Seunghyum/d5df08223b2c4709e50b2e8e5cef9f5b)
-      - 기획자들이 스토리북에 API를 조회해가며 테스트 해볼 수 있게 세팅
-    - 기술 스택 : Typescript, D3.js, Storybook, Jest
+  - 설명 : 직방앱에 들어가는 차트 개발
+  - 관련 블로그 글 : [D3.js 차트 개발 Hands on lab](https://seunghyum.github.io/d3.js/D3-Chart)
+  - 담당업무 : 다른 프로젝트의 차트를 마이그레이션 & 커스텀. 다수의 리팩토링 작업 진행
+    - js ➡️ typescript 리팩토링
+    - 다양한 차트를 연동 (Line chart + Area chart + Bar plot chart + scatter chart)
+    - [텍스트 데이터 정규화에 대한 unit 테스트 작성(jest)](https://gist.github.com/Seunghyum/d5df08223b2c4709e50b2e8e5cef9f5b)
+    - 기획자들이 스토리북에 API를 조회해가며 테스트 해볼 수 있게 세팅
+  - 기술 스택 : Typescript, D3.js, Storybook, Jest
 
 {% include gallery id="gallery_zigbang_chart" layout="half" %}
 
-<h2>in BMSMILE <span class="big-tag black">BMSMILE</span></h2>
+- <h3>직방 원룸/오피스텔/빌라 in 서비스개발팀(4 Month)</h3>
+  - 담당업무 : 서비스 유지 & 보수
+  - 기술 스택 :
+    - 프론트엔드 : Typescript, React Native
 
-### 작업내용
+<hr>
+
+<h2><span class="big-tag black">BMSMILE</span></h2>
 
 - <h3>Pethroom(페스룸) - 반려동물 브랜드 쇼핑몰</h3>
     - 설명: 멤버십, 혜택 등 재구매 고객을 확보하는데 특화된 커머스 서비스
@@ -339,9 +337,7 @@ gallery_interactive_creadit_card:
 
 - [브랜드 페이지 워드프레스 작업](https://www.slowalk.co.kr/)
 
-<h2>in RSUPPORT <span class="big-tag red">RSUPPORT</span></h2>
-
-### 작업내용
+<h2><span class="big-tag red">RSUPPORT</span></h2>
 
 - Reemote Meeting 유지보수
   - Reemote Meeting 퍼포먼스 향상을 위한 React Lazy Load Component 개발 [Github 링크](https://github.com/Seunghyum/react-lazy-load-wrapper)
@@ -355,9 +351,7 @@ gallery_interactive_creadit_card:
 
 <hr style="border-top: 1px dashed silverd">
 
-<h2>in Virnect <span class="big-tag purple">Virnect</span></h2>
-
-### 작업내용
+<h2><span class="big-tag purple">Virnect</span></h2>
 
 - 클라우드용 서비스 프론트엔드 개발
 - 새로운 워크 플로우 제안 - <https://www.notion.so/Workflow-9208a770012643c5b404376927d313e2>
@@ -398,7 +392,7 @@ gallery_interactive_creadit_card:
 
 <hr style="border-top: 1px dashed silverd">
 
-<h2>in Slowalk <span class="big-tag">Slowalk</span></h2>
+<h2><span class="big-tag">Slowalk</span></h2>
 
 - <h3> [한국백혈병어린이재단] 희망별빛 캠페인 원페이지 제작 <span class="big-tag">Slowalk</span></h3>
     - 담당업무 : 풀스택 개발. 간단한 원페이지의 소개 + 행사관련 내용 이메일 발송기능
