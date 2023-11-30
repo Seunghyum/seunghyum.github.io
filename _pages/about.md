@@ -196,7 +196,7 @@ gallery_interactive_creadit_card:
         프론트엔드 개발자
       </td>
       <td>
-        2021/05 ~
+        2021/05 ~ 2023/12 (2년 7개월)
       </td>
     </tr>
     <tr>
@@ -207,7 +207,7 @@ gallery_interactive_creadit_card:
         웹 프론트엔드 개발자
       </td>
       <td>
-        2020/07 ~ 2020/12
+        2020/07 ~ 2020/12 (5개월)
       </td>
     </tr>
     <tr>
@@ -218,7 +218,7 @@ gallery_interactive_creadit_card:
         웹 프론트엔드 개발자
       </td>
       <td>
-        2020/02 ~ 2020/07
+        2020/02 ~ 2020/07 (5개월)
       </td>
     </tr>
     <tr>
@@ -240,7 +240,7 @@ gallery_interactive_creadit_card:
         웹 풀스택 개발자
       </td>
       <td>
-        2016/06 ~ 2019/04
+        2016/06 ~ 2019/04 (2년 10개월)
       </td>
     </tr>
   </tbody>
