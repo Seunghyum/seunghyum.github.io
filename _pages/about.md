@@ -254,13 +254,18 @@ gallery_interactive_creadit_card:
 
 - <h3>ZAMS - 사용자 행동 로그 관리 시스템 in FE지원팀</h3>
   - 직방 기술블로그 글 참고 : [직방이 사용자 행동 로그를 관리하는 방법. ZAMS](https://medium.com/zigbang/%EC%A7%81%EB%B0%A9%EC%9D%B4-%EC%82%AC%EC%9A%A9%EC%9E%90-%ED%96%89%EB%8F%99-%EB%A1%9C%EA%B7%B8%EB%A5%BC-%EA%B4%80%EB%A6%AC%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95-zams-801c49cf0ad1)
-  - 담당업무 : 관리 시스템 페이지, 리포트 & 슬랙알림
+  - 담당업무 : 관리 시스템 페이지 & 일부 API 개발, 리포트 & 슬랙알림
   - 기술 스택 :
     - 프론트엔드 : Typescript, React Hooks, Apollo-Client, React-DnD, Handlebar
     - 백엔드 : Node.js,
     - Database : MongoDB
     - Test : Jest, Playwright
     - ETC : Serverless(Lambda scheduled cron), Slack API
+  - 효용성
+    - 관리 비용 감소 : 기존에 엑셀로 관리하던 것을 사용자로그 관리 전용 툴을 이용함으로써 보다 체계적으로 관리 가능.
+    - 의사소통 비용 감소 : 엑셀보다 정돈된 UI를 통해 소통. 개발 담당자를 등록하고 슬랙 알림으로 작업을 요청할 수 있어서 추가적인 소통 비용 감소.
+    - 버그 가능성 감소 : 데이터 분석팀, 기획팀에서 파라미터를 등록하고 개발자는 해당 파라미터를 설계 타입에 맞게 불러와야하기 때문에(타입 강제성으로) 정확한 작업이 가능.
+
 - <h3>E2E 테스트 도입 in FE지원팀</h3>
   - 설명 : 직방 앱 안드로이드 & IOS 앱 E2E 테스트 도입. 서비스 개발팀에서 시연했던 프로젝트를 지원팀으로 이동하며 담당 업무로 바뀜.
   - 담당업무 : 테스트 시나리오 개발 및 기기 대응, 리포트 & 알림 개발
@@ -272,25 +277,26 @@ gallery_interactive_creadit_card:
   - 테스트 디바이스
     - Android 실기기 & 에뮬레이터
     - IOS 실기기 & 에뮬레이터
-  - 테스트 커버리지 (전체 기능들 중 약 60%)
-    - 딥링크
-    - 로그인/회원가입/탈퇴 (이메일, Google, Kakao, Facebook)
-    - 아파트 문의하기
+  - 테스트 커버리지 (전체 기능들 중 약 60% 이상)
+    - [🎥 딥링크](https://drive.google.com/file/d/1t2jyWNyT-mCA857UbGG7dFAverso-XGP/view?usp=drive_link)
+    - 로그인/회원가입/탈퇴 ([🎥 이메일](https://drive.google.com/file/d/1Rosy4KDkgtIkorGTsphBdR8Um836zxsz/view?usp=drive_link), [🎥 Google](https://drive.google.com/file/d/1ysV9-pSdp7nPO-DlPTLTjs909h3lTko5/view?usp=drive_link), [🎥 Kakao](https://drive.google.com/file/d/1_9U9TESPnkGOuIH9pHu5QkaobNAQsN7O/view?usp=drive_link), Facebook)
+    - [🎥 아파트 문의하기](https://drive.google.com/file/d/1cOnBmhWxAq1io0Ga16oB1G9ZgHlbNwAT/view?usp=drive_link)
     - 지도 검증
-    - 필터 검증
-    - 리스트 페이지 매물 갯수 검증
+    - [🎥 필터 검증](https://drive.google.com/file/d/1hywwgvKvfQqIF6FnRH7Fi_qHmrBXpQ99/view?usp=drive_link)
+    - [🎥 리스트 페이지 매물 갯수 검증](https://drive.google.com/file/d/1hQ_ealziitNP-QStCE1B2XHRxTRG6A0J/view?usp=drive_link)
     - 지킴중개
-    - 헛걸음 보상제
+    - [🎥 헛걸음 보상제](https://drive.google.com/file/d/1op51jY_5MCVs7C2XpsEmn6Ds8l1YZ1it/view?usp=drive_link)
     - ...등등
   - 효용성
     - preview 단계에서 버그 발견
     - rn 버전업 작업에서 사용. QA 인력은 마지막 검증에만 사용.
+
 - <h3>기술공유 in FE지원팀</h3>
-  - [React 18 소개](https://drive.google.com/file/d/1Iq_h74wirSVv03y9AHmUIrP_eMKpoN5m/view?usp=drive_link)
-  - [Typescript 5.0 미리보기](https://drive.google.com/file/d/1WPZGLI7_zt_a9T6-oRhBq0PjVEY4IQCH/view?usp=drive_link)
-  - [Flutter 맛보기 1](https://drive.google.com/file/d/1ghdWgg1g-GXXNU9v9V5zrbeqLO8RHsMJ/view?usp=drive_link)
-  - [Flutter 맛보기 2](https://drive.google.com/file/d/1cCpcTtHL5Xq6rkS73qxoAmakkiP81IMv/view?usp=drive_link)
-  - [차트 개발 D3 맛보기](https://drive.google.com/file/d/1g0f1UuNR4TJ9ByiW2ruxRM0l0y4kUYUL/view?usp=drive_link)
+  - [📄 React 18 소개](https://drive.google.com/file/d/1Iq_h74wirSVv03y9AHmUIrP_eMKpoN5m/view?usp=drive_link)
+  - [📄 Typescript 5.0 미리보기](https://drive.google.com/file/d/1WPZGLI7_zt_a9T6-oRhBq0PjVEY4IQCH/view?usp=drive_link)
+  - [📄 Flutter 맛보기 1](https://drive.google.com/file/d/1ghdWgg1g-GXXNU9v9V5zrbeqLO8RHsMJ/view?usp=drive_link)
+  - [📄 Flutter 맛보기 2](https://drive.google.com/file/d/1cCpcTtHL5Xq6rkS73qxoAmakkiP81IMv/view?usp=drive_link)
+  - [📄 차트 개발 D3 맛보기](https://drive.google.com/file/d/1g0f1UuNR4TJ9ByiW2ruxRM0l0y4kUYUL/view?usp=drive_link)
 - <h3>D3 차트 개발 in FE지원팀</h3>
   - 설명 : 직방앱에 들어가는 차트 개발
   - 관련 블로그 글 : [D3.js 차트 개발 Hands on lab](https://seunghyum.github.io/d3.js/D3-Chart)
@@ -303,10 +309,10 @@ gallery_interactive_creadit_card:
 
 {% include gallery id="gallery_zigbang_chart" layout="half" %}
 
-- <h3>직방 원룸/오피스텔/빌라 in 서비스개발팀(4 Month)</h3>
+<!-- - <h3>직방 원룸/오피스텔/빌라 in 서비스개발팀(4 Month)</h3>
   - 담당업무 : 서비스 유지 & 보수
   - 기술 스택 :
-    - 프론트엔드 : Typescript, React Native
+    - 프론트엔드 : Typescript, React Native -->
 
 <hr>
 
