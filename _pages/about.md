@@ -253,7 +253,7 @@ gallery_interactive_creadit_card:
 <h2><span class="big-tag orange">Zigbang</span></h2>
 
 - <h3>ZAMS - 사용자 행동 로그 관리 시스템 in FE지원팀</h3>
-  - 직방 기술블로그 글 참고 : [직방이 사용자 행동 로그를 관리하는 방법. ZAMS](https://medium.com/zigbang/%EC%A7%81%EB%B0%A9%EC%9D%B4-%EC%82%AC%EC%9A%A9%EC%9E%90-%ED%96%89%EB%8F%99-%EB%A1%9C%EA%B7%B8%EB%A5%BC-%EA%B4%80%EB%A6%AC%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95-zams-801c49cf0ad1)
+  - 직방 기술블로그 글 참고 : [직방이 사용자 행동 로그를 관리하는 방법. ZAMS](https://medium.com/zigbang/%EC%A7%81%EB%B0%A9%EC%9D%B4-%EC%82%AC%EC%9A%A9%EC%9E%90-%ED%96%89%EB%8F%99-%EB%A1%9C%EA%B7%B8%EB%A5%BC-%EA%B4%80%EB%A6%AC%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95-zams-801c49cf0ad1){:target="_blank"}
   - 담당업무 : 관리 시스템 페이지 & 일부 API 개발, 리포트 & 슬랙알림
   - 기술 스택 :
     - 프론트엔드 : Typescript, React Hooks, Apollo-Client, React-DnD, Handlebar
@@ -278,32 +278,32 @@ gallery_interactive_creadit_card:
     - Android 실기기 & 에뮬레이터
     - IOS 실기기 & 에뮬레이터
   - 테스트 커버리지 (전체 기능들 중 약 60% 이상)
-    - [🎥 딥링크](https://drive.google.com/file/d/1t2jyWNyT-mCA857UbGG7dFAverso-XGP/view?usp=drive_link)
-    - 로그인/회원가입/탈퇴 ([🎥 이메일](https://drive.google.com/file/d/1Rosy4KDkgtIkorGTsphBdR8Um836zxsz/view?usp=drive_link), [🎥 Google](https://drive.google.com/file/d/1ysV9-pSdp7nPO-DlPTLTjs909h3lTko5/view?usp=drive_link), [🎥 Kakao](https://drive.google.com/file/d/1_9U9TESPnkGOuIH9pHu5QkaobNAQsN7O/view?usp=drive_link), Facebook)
-    - [🎥 아파트 문의하기](https://drive.google.com/file/d/1cOnBmhWxAq1io0Ga16oB1G9ZgHlbNwAT/view?usp=drive_link)
+    - [🎥 딥링크](https://drive.google.com/file/d/1t2jyWNyT-mCA857UbGG7dFAverso-XGP/view?usp=drive_link){:target="_blank"}
+    - 로그인/회원가입/탈퇴 ([🎥 이메일](https://drive.google.com/file/d/1Rosy4KDkgtIkorGTsphBdR8Um836zxsz/view?usp=drive_link){:target="_blank"}, [🎥 Google](https://drive.google.com/file/d/1ysV9-pSdp7nPO-DlPTLTjs909h3lTko5/view?usp=drive_link){:target="_blank"}, [🎥 Kakao](https://drive.google.com/file/d/1_9U9TESPnkGOuIH9pHu5QkaobNAQsN7O/view?usp=drive_link){:target="_blank"}, Facebook)
+    - [🎥 아파트 문의하기](https://drive.google.com/file/d/1cOnBmhWxAq1io0Ga16oB1G9ZgHlbNwAT/view?usp=drive_link){:target="_blank"}
     - 지도 검증
-    - [🎥 필터 검증](https://drive.google.com/file/d/1hywwgvKvfQqIF6FnRH7Fi_qHmrBXpQ99/view?usp=drive_link)
-    - [🎥 리스트 페이지 매물 갯수 검증](https://drive.google.com/file/d/1hQ_ealziitNP-QStCE1B2XHRxTRG6A0J/view?usp=drive_link)
+    - [🎥 필터 검증](https://drive.google.com/file/d/1hywwgvKvfQqIF6FnRH7Fi_qHmrBXpQ99/view?usp=drive_link){:target="_blank"}
+    - [🎥 리스트 페이지 매물 갯수 검증](https://drive.google.com/file/d/1hQ_ealziitNP-QStCE1B2XHRxTRG6A0J/view?usp=drive_link){:target="_blank"}
     - 지킴중개
-    - [🎥 헛걸음 보상제](https://drive.google.com/file/d/1op51jY_5MCVs7C2XpsEmn6Ds8l1YZ1it/view?usp=drive_link)
+    - [🎥 헛걸음 보상제](https://drive.google.com/file/d/1op51jY_5MCVs7C2XpsEmn6Ds8l1YZ1it/view?usp=drive_link){:target="_blank"}
     - ...등등
   - 효용성
     - preview 단계에서 버그 발견
     - rn 버전업 작업에서 사용. QA 인력은 마지막 검증에만 사용.
 
 - <h3>기술공유 in FE지원팀</h3>
-  - [📄 React 18 소개](https://drive.google.com/file/d/1Iq_h74wirSVv03y9AHmUIrP_eMKpoN5m/view?usp=drive_link)
-  - [📄 Typescript 5.0 미리보기](https://drive.google.com/file/d/1WPZGLI7_zt_a9T6-oRhBq0PjVEY4IQCH/view?usp=drive_link)
-  - [📄 Flutter 맛보기 1](https://drive.google.com/file/d/1ghdWgg1g-GXXNU9v9V5zrbeqLO8RHsMJ/view?usp=drive_link)
-  - [📄 Flutter 맛보기 2](https://drive.google.com/file/d/1cCpcTtHL5Xq6rkS73qxoAmakkiP81IMv/view?usp=drive_link)
-  - [📄 차트 개발 D3 맛보기](https://drive.google.com/file/d/1g0f1UuNR4TJ9ByiW2ruxRM0l0y4kUYUL/view?usp=drive_link)
+  - [📄 React 18 소개](https://drive.google.com/file/d/1Iq_h74wirSVv03y9AHmUIrP_eMKpoN5m/view?usp=drive_link){:target="_blank"}
+  - [📄 Typescript 5.0 미리보기](https://drive.google.com/file/d/1WPZGLI7_zt_a9T6-oRhBq0PjVEY4IQCH/view?usp=drive_link){:target="_blank"}
+  - [📄 Flutter 맛보기 1](https://drive.google.com/file/d/1ghdWgg1g-GXXNU9v9V5zrbeqLO8RHsMJ/view?usp=drive_link){:target="_blank"}
+  - [📄 Flutter 맛보기 2](https://drive.google.com/file/d/1cCpcTtHL5Xq6rkS73qxoAmakkiP81IMv/view?usp=drive_link){:target="_blank"}
+  - [📄 차트 개발 D3 맛보기](https://drive.google.com/file/d/1g0f1UuNR4TJ9ByiW2ruxRM0l0y4kUYUL/view?usp=drive_link){:target="_blank"}
 - <h3>D3 차트 개발 in FE지원팀</h3>
   - 설명 : 직방앱에 들어가는 차트 개발
-  - 관련 블로그 글 : [D3.js 차트 개발 Hands on lab](https://seunghyum.github.io/d3.js/D3-Chart)
+  - 관련 블로그 글 : [D3.js 차트 개발 Hands on lab](https://seunghyum.github.io/d3.js/D3-Chart){:target="_blank"}
   - 담당업무 : 다른 프로젝트의 차트를 마이그레이션 & 커스텀. 다수의 리팩토링 작업 진행
     - js ➡️ typescript 리팩토링
     - 다양한 차트를 연동 (Line chart + Area chart + Bar plot chart + scatter chart)
-    - [텍스트 데이터 정규화에 대한 unit 테스트 작성(jest)](https://gist.github.com/Seunghyum/d5df08223b2c4709e50b2e8e5cef9f5b)
+    - [텍스트 데이터 정규화에 대한 unit 테스트 작성(jest)](https://gist.github.com/Seunghyum/d5df08223b2c4709e50b2e8e5cef9f5b){:target="_blank"}
     - 기획자들이 스토리북에 API를 조회해가며 테스트 해볼 수 있게 세팅
   - 기술 스택 : Typescript, D3.js, Storybook, Jest
 
@@ -346,11 +346,11 @@ gallery_interactive_creadit_card:
 <h2><span class="big-tag red">RSUPPORT</span></h2>
 
 - Reemote Meeting 유지보수
-  - Reemote Meeting 퍼포먼스 향상을 위한 React Lazy Load Component 개발 [Github 링크](https://github.com/Seunghyum/react-lazy-load-wrapper)
-  - Lighthouse를 활용한 모든 웹페이지 성능측정 스크립트 작업 [Github 링크](https://github.com/Seunghyum/lighthouse-report-script)
+  - Reemote Meeting 퍼포먼스 향상을 위한 React Lazy Load Component 개발 [Github 링크](https://github.com/Seunghyum/react-lazy-load-wrapper){:target="_blank"}
+  - Lighthouse를 활용한 모든 웹페이지 성능측정 스크립트 작업 [Github 링크](https://github.com/Seunghyum/lighthouse-report-script){:target="_blank"}
   - 렌더링 속도 향상을 위한 에셋 분석툴 도입 제안(Webpack Bundle Analyzer)
-- 수습과제 채팅앱 개발 by Socket.io - [Github 링크](https://github.com/Seunghyum/react-chat-app)
-- 회사 서비스 관련 기술 공부하며 작성한 블로그 글 : [[WebRTC] 공부](https://seunghyum.github.io/webrtc/WebRTC/#)
+- 수습과제 채팅앱 개발 by Socket.io - [Github 링크](https://github.com/Seunghyum/react-chat-app){:target="_blank"}
+- 회사 서비스 관련 기술 공부하며 작성한 블로그 글 : [[WebRTC] 공부](https://seunghyum.github.io/webrtc/WebRTC/#){:target="_blank"}
 - 수습 발표
 
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/s7kdRx1EfElf5O" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/ssusere2c254/presentation-after-intern" title="presentation after intern" target="_blank">presentation after intern</a> </strong> from <strong><a href="https://www.slideshare.net/ssusere2c254" target="_blank">승현 문</a></strong> </div>
@@ -368,16 +368,16 @@ gallery_interactive_creadit_card:
 
 ### 새로운 Workflow 설계
 
-- 직접 작성한 노션 글 : [Workflow 설계](https://www.notion.so/Workflow-9208a770012643c5b404376927d313e2) 👈 ***읽어주시면 감사하겠습니다*** 🙏
+- 직접 작성한 노션 글 : [Workflow 설계](https://www.notion.so/Workflow-9208a770012643c5b404376927d313e2){:target="_blank"} 👈 ***읽어주시면 감사하겠습니다*** 🙏
 - 문제상황 : SI 작업들을 담당 작업자들이 각자 개발함. 공통된 부분들을 공유하지 않아 비효율성이 발생.
 - 해결 방법 : Scaffolding 모듈과 컴포넌트 공유 Workflow를 설계 함.
   - 직접 작성한 관련 글
-    - [Workflow 설계](https://www.notion.so/Workflow-9208a770012643c5b404376927d313e2)
-    - [[Workflow] 프론트엔드 개발조직을 위한 워크플로 설계](https://seunghyum.github.io/workflow/Workflow-Design-for-frontend/#)
-    - [[Scaffold] Scaffold Module 개발](https://seunghyum.github.io/scaffold/Scafflod-Modules/)
-    - [[Tutorial] Storybook과 Bit을 활용한 UI 컴포넌트 관리(Workflow)](https://seunghyum.github.io/frontend/tutorial/workflow/Storybook-bit-simulation/#)
-    - [[Methodology] CDD(Component Driven Development) - 계획(1/2)](https://seunghyum.github.io/frontend/methodology/CDD/#)
-    - [[Methodology] CDD(Component Driven Development) - 테스트(2/2)](https://seunghyum.github.io/frontend/methodology/CDD-2/)
+    - [Workflow 설계](https://www.notion.so/Workflow-9208a770012643c5b404376927d313e2){:target="_blank"}
+    - [[Workflow] 프론트엔드 개발조직을 위한 워크플로 설계](https://seunghyum.github.io/workflow/Workflow-Design-for-frontend/#){:target="_blank"}
+    - [[Scaffold] Scaffold Module 개발](https://seunghyum.github.io/scaffold/Scafflod-Modules/){:target="_blank"}
+    - [[Tutorial] Storybook과 Bit을 활용한 UI 컴포넌트 관리(Workflow)](https://seunghyum.github.io/frontend/tutorial/workflow/Storybook-bit-simulation/#){:target="_blank"}
+    - [[Methodology] CDD(Component Driven Development) - 계획(1/2)](https://seunghyum.github.io/frontend/methodology/CDD/#){:target="_blank"}
+    - [[Methodology] CDD(Component Driven Development) - 테스트(2/2)](https://seunghyum.github.io/frontend/methodology/CDD-2/){:target="_blank"}
 - UI 컴포넌트 & 기능모듈 공유 : Vardaccio
 - UI 컴포넌트 명세서 : Storybook
 - 상세 스토리
